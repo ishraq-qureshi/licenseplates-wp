@@ -63,3 +63,7 @@ wp-content/resources/*.zip
 .DS_Store
 Thumbs.db
 *.swp
+
+# === Local task-tracking files (not shared via git) ===
+CLAUDE.md
+DEPLOYMENT_LOG.md

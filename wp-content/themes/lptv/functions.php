@@ -252,3 +252,14 @@ add_filter( 'woocommerce_email_order_items_args', function ( $args ) {
     $args['image_size'] = array( 300, 300 );
     return $args;
 } );
+
+// Strip WooCommerce's default colored header bar/heading from the admin "New Order"
+// email only - it's redesigned as a plain manufacturing work order sheet.
+add_filter( 'woocommerce_email_styles', function ( $css, $email ) {
+    if ( $email && 'new_order' === $email->id ) {
+        $css .= "\n#template_header { background-color: transparent !important; padding: 0 !important; border: 0 !important; }\n";
+        $css .= "#template_header h1, #template_header h1 a { display: none !important; }\n";
+        $css .= "#template_header_image { display: none !important; }\n";
+    }
+    return $css;
+}, 10, 2 );
