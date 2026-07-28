@@ -1,0 +1,242 @@
+{
+  "src/apps/filters-rules-builder/index-legacy.ts": {
+    "file": "apps/filters-rules-builder/index-legacy.BWAJv11a.js",
+    "name": "apps/filters-rules-builder/index",
+    "src": "src/apps/filters-rules-builder/index-legacy.ts",
+    "isEntry": true
+  },
+  "src/apps/filters-rules-builder/index.ts": {
+    "file": "apps/filters-rules-builder/index.CMa0sbdk.js",
+    "name": "apps/filters-rules-builder/index",
+    "src": "src/apps/filters-rules-builder/index.ts",
+    "isEntry": true,
+    "css": [
+      "css/index.D2j9Tia5.css"
+    ]
+  },
+  "src/vanilla/edit-feed/index-legacy.ts": {
+    "file": "vanilla\\edit-feed/index-legacy.BQXEHeDM.js",
+    "name": "vanilla\\edit-feed/index",
+    "src": "src/vanilla/edit-feed/index-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "src/vanilla/edit-feed/style-legacy.scss"
+    ]
+  },
+  "src/vanilla/edit-feed/index.ts": {
+    "file": "vanilla\\edit-feed/index.CPKoFUPL.js",
+    "name": "vanilla\\edit-feed/index",
+    "src": "src/vanilla/edit-feed/index.ts",
+    "isEntry": true,
+    "css": [
+      "css/vanilla/edit-feed/style.D7iDJgY-.css"
+    ]
+  },
+  "src/vanilla/edit-feed/style-legacy.scss": {
+    "file": "vanilla\\edit-feed/style.scss-legacy.CYJD_mAM.js",
+    "name": "vanilla\\edit-feed/style.scss",
+    "src": "src/vanilla/edit-feed/style-legacy.scss",
+    "isEntry": true
+  },
+  "src/vanilla/edit-feed/style.scss": {
+    "file": "css/vanilla/edit-feed/style.D7iDJgY-.css",
+    "src": "src/vanilla/edit-feed/style.scss",
+    "isEntry": true
+  },
+  "src/vanilla/export-import-tools/index-legacy.ts": {
+    "file": "vanilla\\export-import-tools/index-legacy.l-Kvb1PG.js",
+    "name": "vanilla\\export-import-tools/index",
+    "src": "src/vanilla/export-import-tools/index-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "src/vanilla/export-import-tools/style-legacy.scss"
+    ]
+  },
+  "src/vanilla/export-import-tools/index.ts": {
+    "file": "vanilla\\export-import-tools/index.dDIijf_L.js",
+    "name": "vanilla\\export-import-tools/index",
+    "src": "src/vanilla/export-import-tools/index.ts",
+    "isEntry": true,
+    "css": [
+      "css/vanilla/export-import-tools/style.m4KFnMOM.css"
+    ]
+  },
+  "src/vanilla/export-import-tools/style-legacy.scss": {
+    "file": "vanilla\\export-import-tools/style.scss-legacy.BWo5nvXv.js",
+    "name": "vanilla\\export-import-tools/style.scss",
+    "src": "src/vanilla/export-import-tools/style-legacy.scss",
+    "isEntry": true
+  },
+  "src/vanilla/export-import-tools/style.scss": {
+    "file": "css/vanilla/export-import-tools/style.m4KFnMOM.css",
+    "src": "src/vanilla/export-import-tools/style.scss",
+    "isEntry": true
+  },
+  "src/vanilla/field-mapping/index-legacy.ts": {
+    "file": "vanilla\\field-mapping/index-legacy.CO66LcBa.js",
+    "name": "vanilla\\field-mapping/index",
+    "src": "src/vanilla/field-mapping/index-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "src/vanilla/field-mapping/style-legacy.scss"
+    ]
+  },
+  "src/vanilla/field-mapping/index.ts": {
+    "file": "vanilla\\field-mapping/index.Cku8OS1s.js",
+    "name": "vanilla\\field-mapping/index",
+    "src": "src/vanilla/field-mapping/index.ts",
+    "isEntry": true,
+    "css": [
+      "css/vanilla/field-mapping/style.BazMgEhl.css"
+    ]
+  },
+  "src/vanilla/field-mapping/style-legacy.scss": {
+    "file": "vanilla\\field-mapping/style.scss-legacy.C7GLHoaF.js",
+    "name": "vanilla\\field-mapping/style.scss",
+    "src": "src/vanilla/field-mapping/style-legacy.scss",
+    "isEntry": true
+  },
+  "src/vanilla/field-mapping/style.scss": {
+    "file": "css/vanilla/field-mapping/style.BazMgEhl.css",
+    "src": "src/vanilla/field-mapping/style.scss",
+    "isEntry": true
+  },
+  "src/vanilla/index-legacy.ts": {
+    "file": "vanilla/index-legacy.C45nyapA.js",
+    "name": "vanilla/index",
+    "src": "src/vanilla/index-legacy.ts",
+    "isEntry": true
+  },
+  "src/vanilla/index.ts": {
+    "file": "vanilla/index.C43F4SU4.js",
+    "name": "vanilla/index",
+    "src": "src/vanilla/index.ts",
+    "isEntry": true,
+    "css": [
+      "css/index.Vz3GE3QM.css"
+    ]
+  },
+  "src/vanilla/manage-feeds/index-legacy.ts": {
+    "file": "vanilla\\manage-feeds/index-legacy.B_FTCmZL.js",
+    "name": "vanilla\\manage-feeds/index",
+    "src": "src/vanilla/manage-feeds/index-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "src/vanilla/manage-feeds/style-legacy.scss"
+    ]
+  },
+  "src/vanilla/manage-feeds/index.ts": {
+    "file": "vanilla\\manage-feeds/index.CLjpadKt.js",
+    "name": "vanilla\\manage-feeds/index",
+    "src": "src/vanilla/manage-feeds/index.ts",
+    "isEntry": true,
+    "css": [
+      "css/vanilla/manage-feeds/style.ro9YRqB9.css"
+    ]
+  },
+  "src/vanilla/manage-feeds/style-legacy.scss": {
+    "file": "vanilla\\manage-feeds/style.scss-legacy.FEGptKsn.js",
+    "name": "vanilla\\manage-feeds/style.scss",
+    "src": "src/vanilla/manage-feeds/style-legacy.scss",
+    "isEntry": true
+  },
+  "src/vanilla/manage-feeds/style.scss": {
+    "file": "css/vanilla/manage-feeds/style.ro9YRqB9.css",
+    "src": "src/vanilla/manage-feeds/style.scss",
+    "isEntry": true
+  },
+  "src/vanilla/notices/drawer-legacy.ts": {
+    "file": "vanilla\\notices/drawer-legacy.emUWq9g1.js",
+    "name": "vanilla\\notices/drawer",
+    "src": "src/vanilla/notices/drawer-legacy.ts",
+    "isEntry": true
+  },
+  "src/vanilla/notices/drawer.ts": {
+    "file": "vanilla\\notices/drawer.BanUXkiu.js",
+    "name": "vanilla\\notices/drawer",
+    "src": "src/vanilla/notices/drawer.ts",
+    "isEntry": true
+  },
+  "src/vanilla/notices/header-icon-legacy.ts": {
+    "file": "vanilla\\notices/header-icon-legacy.C_1R8Qp-.js",
+    "name": "vanilla\\notices/header-icon",
+    "src": "src/vanilla/notices/header-icon-legacy.ts",
+    "isEntry": true
+  },
+  "src/vanilla/notices/header-icon.ts": {
+    "file": "vanilla\\notices/header-icon.Bj9Al0lH.js",
+    "name": "vanilla\\notices/header-icon",
+    "src": "src/vanilla/notices/header-icon.ts",
+    "isEntry": true
+  },
+  "src/vanilla/notices/index-legacy.ts": {
+    "file": "vanilla\\notices/index-legacy.CIutoPSR.js",
+    "name": "vanilla\\notices/index",
+    "src": "src/vanilla/notices/index-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "src/vanilla/notices/style-legacy.scss",
+      "src/vanilla/notices/drawer-legacy.ts",
+      "src/vanilla/notices/header-icon-legacy.ts"
+    ]
+  },
+  "src/vanilla/notices/index.ts": {
+    "file": "vanilla\\notices/index.Cy4xbBvE.js",
+    "name": "vanilla\\notices/index",
+    "src": "src/vanilla/notices/index.ts",
+    "isEntry": true,
+    "imports": [
+      "src/vanilla/notices/drawer.ts",
+      "src/vanilla/notices/header-icon.ts"
+    ],
+    "css": [
+      "css/vanilla/notices/style.DW-XHh8a.css"
+    ]
+  },
+  "src/vanilla/notices/style-legacy.scss": {
+    "file": "vanilla\\notices/style.scss-legacy.CuQ5LUVl.js",
+    "name": "vanilla\\notices/style.scss",
+    "src": "src/vanilla/notices/style-legacy.scss",
+    "isEntry": true
+  },
+  "src/vanilla/notices/style.scss": {
+    "file": "css/vanilla/notices/style.DW-XHh8a.css",
+    "src": "src/vanilla/notices/style.scss",
+    "isEntry": true
+  },
+  "src/vanilla/upsell/index-legacy.ts": {
+    "file": "vanilla\\upsell/index-legacy.uubSjVto.js",
+    "name": "vanilla\\upsell/index",
+    "src": "src/vanilla/upsell/index-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "src/vanilla/upsell/style-legacy.scss"
+    ]
+  },
+  "src/vanilla/upsell/index.ts": {
+    "file": "vanilla\\upsell/index.N5ZBP55l.js",
+    "name": "vanilla\\upsell/index",
+    "src": "src/vanilla/upsell/index.ts",
+    "isEntry": true,
+    "css": [
+      "css/vanilla/upsell/style.6peDWRDu.css"
+    ]
+  },
+  "src/vanilla/upsell/style-legacy.scss": {
+    "file": "vanilla\\upsell/style.scss-legacy.DAXEeqxI.js",
+    "name": "vanilla\\upsell/style.scss",
+    "src": "src/vanilla/upsell/style-legacy.scss",
+    "isEntry": true
+  },
+  "src/vanilla/upsell/style.scss": {
+    "file": "css/vanilla/upsell/style.6peDWRDu.css",
+    "src": "src/vanilla/upsell/style.scss",
+    "isEntry": true
+  },
+  "vite/legacy-polyfills-legacy": {
+    "file": "polyfills-legacy.U4ugnhD2.js",
+    "name": "polyfills",
+    "src": "vite/legacy-polyfills-legacy",
+    "isEntry": true
+  }
+}

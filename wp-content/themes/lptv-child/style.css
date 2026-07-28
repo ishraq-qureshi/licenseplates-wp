@@ -1,0 +1,382 @@
+/*
+CTC Separate Stylesheet
+Updated: 2026-02-12 02:48:37
+Theme Name: LPTV Child
+Theme URI: http://licenseplates.local/
+Template: lptv
+Author: Genetech Solutions
+Author URI: http://licenseplates.local/
+Description: LPTV
+Tags: LPTV
+Version: 7.0.1770882517
+*/
+/* body {
+    font-display: swap !important;
+} */
+
+/* Product page universal plate holder dropsown style */
+body .productWrap .imgSlide .plateHolderBox .plateHolderInner .selectted select{max-width: 280px;}
+body { content-visibility: visible; }
+/* Banner image hoepage styling */
+body main section.banner-section figure.hero-image, 
+body main section.banner-section figure.hero-image img { width: 100% !important;  height: 100% !important; }
+body main section.banner-section figure.hero-image {  position: absolute; top: 0px;  z-index: -1; }
+body main section.banner-section {  position: relative; }
+
+/* licences images styles */
+body .license-plates-image img {object-fit: cover;  min-height: 242px; 
+object-position: center; }
+
+
+.descriptionWrap .woocommerce-tabs .panel , .hmaboutWrap .scrollBox{ max-height: max-content !important; }
+.Abotus-content {  display: flex;  gap: 20px; }
+.Abotus-content .main-content {  flex: 1; }
+.Abotus-content .video-container {  flex: 0 0 560px; }
+.Abotus-content { flex-direction: row-reverse; }
+.Abotus-content .video-container img#MRCstaticYTimage {  width: 100%;   object-fit: cover; }
+.Abotus-content .video-container div#MRCembedwrapper {  overflow: hidden; }
+.Abotus-content .video-container img#MRCplaybutton {
+    margin: auto;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important; width: 70px; }
+.hmaboutWrap .Abotus-content { margin-right: 0px;  column-gap: 20px; max-width: 100%; overflow: visible; padding-left: 0px !important;}
+.Abotus-content .video-container img#MRCplaybutton, .Abotus-content .video-container img#MRCstaticYTimage { z-index: 99 !important; }
+header .header.sticky-sec {  z-index: 999; }
+#MRCstaticYTimage { transition: none !important; transform: none !important; }
+a:hover #MRCstaticYTimage {  transform: none !important; }
+
+
+.innerBnner .title,
+.bannerWrap .title {
+  opacity: 0;
+  transform: skew(-10deg) translateY(10px);
+  transition: all .3s ease;
+  transition-delay: 0.3s !important;
+}
+
+.page-loaded .innerBnner .title,
+.page-loaded .bannerWrap .title {
+  opacity: 1;
+transform: skew(0deg) translateY(0); }
+
+/* [data-wpr-lazyrender] {  content-visibility: auto; } */
+/* Force iOS Safari to render all content */
+/* .lazy-render,
+.wpb_row,
+.vc_row,
+.footer-widgets, */
+/* Target the specific classes you mentioned */
+/* .questionWrap, .receiveWrap, .differenceWrap, .descriptionWrap, .common-sec {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    isolation: isolate;
+}
+img, iframe, video {
+    content-visibility: visible !important;
+}  */
+
+div#wpcf7-f108-o1 form.wpcf7-form { text-align: center;  text-align: -webkit-center; }
+.woocommerce-order-received .shop_table.order_details img { margin: 20px 0px 0px;  display: block; }
+.footer .share-a-sale-box {  padding: 0px !important; }
+.footer .share-a-sale-box .share-a-sale-icon img { width: 121px !important;  max-width: 90%; }
+
+
+/* Cart page styling */
+.wooWrap .woocommerce table.shop_table td.product-thumbnail { padding: 3px; min-width: 140px; }
+.wooWrap .woocommerce table.shop_table td.product-thumbnail a, 
+.wooWrap .woocommerce table.shop_table td.product-thumbnail a img { width: 100%; display: inline-block; }
+.wooWrap .woocommerce table.shop_table td.product-quantity { min-width: 55px; }
+
+
+
+/* responsive styling */
+@media (max-width: 1200px) {
+
+  .Abotus-content .video-container {
+    flex: 0 0 450px;
+  }
+
+  #MRCembedwrapper,
+  #MRCiframecode,
+  #MRCyoutubeiframe,
+  #MRCstaticYTimage {
+    width: 450px !important;
+  }
+
+  #MRCyoutubeiframe {
+    height: 253px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .Abotus-content {
+    align-items: flex-start;
+  }
+
+  .Abotus-content .video-container {
+    flex: 0 0 380px;
+    position: sticky;
+    top: 20px;
+  }
+
+  #MRCembedwrapper,
+  #MRCiframecode,
+  #MRCyoutubeiframe,
+  #MRCstaticYTimage {
+    width: 380px !important;
+  }
+
+  #MRCyoutubeiframe {
+    height: 214px !important;
+  }
+
+  .Abotus-content .video-container img#MRCplaybutton {
+    width: 60px;
+  }
+
+.wooWrap .woocommerce table.shop_table td.product-thumbnail { padding: 3px; min-width: 120px; }
+.wooWrap .woocommerce table.shop_table td.product-quantity { min-width: 110px; }
+
+}
+
+@media (max-width: 980px) {
+
+  .Abotus-content {
+    flex-direction: column-reverse;
+  }
+
+  .Abotus-content .video-container {
+    position: static;
+    width: 100%;
+    flex: unset;
+  }
+
+  #MRCembedwrapper,
+  #MRCiframecode,
+  #MRCyoutubeiframe,
+  #MRCstaticYTimage {
+    width: 100% !important;
+  }
+
+  #MRCyoutubeiframe {
+    height: 320px !important;
+  }
+
+  .Abotus-content .video-container img#MRCplaybutton {
+    width: 70px;
+  }
+
+  .hmaboutWrap .Abotus-content {  flex-direction: column; }
+  .hmaboutWrap .Abotus-content .main-content {  order: 2; }
+  .Abotus-content .video-container {  order: 1; }
+  .Abotus-content .Full-width-content {  order: 3; } 
+  .hmaboutWrap .Abotus-content .main-content > div p {  padding: 0px; }
+  .hmaboutWrap .Abotus-content .main-content > div { display: flex;  flex-direction: column;  gap: 20px; }
+
+}
+@media(max-width: 769px){
+.wooWrap .woocommerce table.shop_table td.product-thumbnail { padding: 20px; display: block !important; width: 100%;}
+.wooWrap .woocommerce table.shop_table td.product-thumbnail a { text-align: center; }
+.wooWrap .woocommerce table.shop_table td.product-thumbnail a img { max-width: 185px; }
+.cartWrap .woocommerce table.shop_table td.product-name { width: 100%; }
+.cartWrap .woocommerce table.shop_table td.product-name dl.variation { display: grid;  grid-template-columns: 1fr 1fr; margin-top: 10px; grid-auto-flow: row; }
+
+
+}
+
+@media(max-width: 768px){
+body main section.banner-section figure.hero-image img {   object-position: right; }
+body main section.banner-section figure.hero-image:after {content: "";width: 100%;height: 100%;display: inline-block;position: absolute;z-index: 1;/* background: #000000; */background: linear-gradient(
+28deg, rgba(0, 0, 0, 1) 0%, rgb(255 255 255 / 0%) 113%);left: 0;top: 0;} 
+body .license-plates-image img {  min-height: 210px; }
+.hmaboutWrap .Abotus-content { padding-left: 0px !important; }
+
+}
+
+@media(max-width: 600px){
+body main section.banner-section figure.hero-image img { object-position: 93%;}
+} 
+
+@media(max-width: 520px){
+body main section.banner-section figure.hero-image img {  object-position: 90% ; }
+} 
+
+@media (max-width: 420px) {
+    body main section.banner-section figure.hero-image img {  object-position: 85% ; }
+    .hmcatWrap.hmcat2Wrap .titleBox .cat_title, .hmcatWrap .titleBox .cat_title { font-size: 16px; line-height: 1.3em; }
+    .hmcatWrap.hmcat2Wrap .colorBox .catimageBox .license-plates-custom img {  min-height: 72px;  object-fit: contain;  object-position: center; }
+    body .license-plates-image img { min-height: 170px; }
+
+}
+
+@media (max-width: 380px) {
+    body main section.banner-section figure.hero-image img {  object-position: 84% ; }
+    .hmcatWrap.hmcat2Wrap .colorBox .catimageBox .license-plates-custom img {  min-height: 72px; object-position: center; }
+    .hmcatWrap.hmcat2Wrap .titleBox .cat_title, .hmcatWrap .titleBox .cat_title {font-size: 14px; }
+
+}
+
+
+
+/* new styles fro product single page black section */
+
+
+/* Base container */
+body.single.single-product .descriptionWrap {
+    background-color: #f1f1f1;
+}
+
+/* Shared selector group */
+body.single.single-product .descriptionWrap :is(
+    p.modelText,
+    p.modelText span,
+    .wc-tabs-wrapper #tab-description,
+    .wc-tabs-wrapper #tab-description *,
+    .wc-tabs-wrapper #tab-additional_information,
+    .wc-tabs-wrapper #tab-additional_information *,
+    .bottomBox,
+    .bottomBox *
+) {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+/* Fix legacy tags */
+body.single.single-product .descriptionWrap font {
+    font: inherit !important;
+    color: inherit !important;
+}
+
+/* List spacing */
+body.single.single-product .descriptionWrap li {
+    margin-bottom: 8px;
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+    body.single.single-product .descriptionWrap :is(
+        p.modelText,
+        p.modelText span,
+        .wc-tabs-wrapper #tab-description,
+        .wc-tabs-wrapper #tab-description *,
+        .wc-tabs-wrapper #tab-additional_information,
+        .wc-tabs-wrapper #tab-additional_information *,
+        .bottomBox,
+        .bottomBox *
+    ) {
+        font-size: 16px;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    body.single.single-product .descriptionWrap :is(
+        p.modelText,
+        p.modelText span,
+        .wc-tabs-wrapper #tab-description,
+        .wc-tabs-wrapper #tab-description *,
+        .wc-tabs-wrapper #tab-additional_information,
+        .wc-tabs-wrapper #tab-additional_information *,
+        .bottomBox,
+        .bottomBox *
+    ) {
+        font-size: 15px;
+    }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+    body.single.single-product .descriptionWrap :is(
+        p.modelText,
+        p.modelText span,
+        .wc-tabs-wrapper #tab-description,
+        .wc-tabs-wrapper #tab-description *,
+        .wc-tabs-wrapper #tab-additional_information,
+        .wc-tabs-wrapper #tab-additional_information *,
+        .bottomBox,
+        .bottomBox *
+    ) {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/* #########################################################
+  -----------  Homepage Banner section Style --------------
+  ######################################################### */
+
+
+
+body .Hp-banner-section .lptv-text-container h1.main-heading  mark {color: #fff !important;/* box-shadow: 0px 4px 24px 0px #00000026; */}
+body .Hp-banner-section .lptv-text-container h1.main-heading { font-style: normal !important; font-family: anton; font-weight: 500; text-align: center; display: inline-block; margin-bottom: 8px; letter-spacing: 0%; }
+body .Hp-banner-section .lptv-text-container h1.main-heading  mark.has-white-color {font-size: 53px;line-height: 1.1em;letter-spacing: 8%;padding: 0px 0px;}
+body .Hp-banner-section .lptv-text-container h1.main-heading mark.has-cyan-bluish-gray-color {font-size: 76px;line-height: 1em;}
+body .Hp-banner-section .lptv-text-container h1.main-heading  mark.has-inline-color.has-pale-cyan-blue-color {font-size: 94.9px;line-height: 1em;}
+body .Hp-banner-section .group.positionBox { display: flex; flex-direction: row; justify-content: flex-start; gap: 59px; }
+body .Hp-banner-section { position: relative; }
+body main section.Hp-banner-section .image-250 { position: absolute; max-width: 100px; left: 10px; top: 10px; }
+body main section.Hp-banner-section .lptv-sample-contiainer figure.wp-block-image.size-full { max-width: 256px !important;  margin-bottom: 0px; }
+body .Hp-banner-section p#Premier-Source-text { text-transform: uppercase; font-family: Antonio; font-weight: 700; font-style: Bold; font-size: 20.78px; line-height: 100%; text-align: center; text-transform: uppercase; display: inline-block; padding: 8px 13px; color: #000; background-color: #fff; margin-bottom: 14px; border-radius: 4px; letter-spacing: 13%; box-shadow: 0px 0px 12.65px 0px #00000073; }
+body .Hp-banner-section .lptv-text-container .trustText {font-family: Antonio;font-weight: 700;font-style: normal;font-size: 24.06px;line-height: 100%;letter-spacing: 12%;text-align: center;text-transform: uppercase;position: relative;}
+body .Hp-banner-section  .lptv-text-container > div { display: flex; flex-direction: column; align-items: center; }
+body .Hp-banner-section .lptv-text-container .trustText::before {  content: " "; width: 100px; height: 30px; background: url("http://licenseplates.local/wp-content/uploads/arrows-before.png") center / contain no-repeat; display: inline-block; position: absolute; left: -110px; top: 0px; z-index: 9; }
+body .Hp-banner-section .lptv-text-container .trustText::after { content: " "; width: 100px; height: 30px;
+    background: url("http://licenseplates.local/wp-content/uploads/arrows-after.png") center / contain no-repeat;
+    display: inline-block; position: absolute; right: -110px; top: 0px; z-index: 9; }
+body .Hp-banner-section  figure.hero-image figcaption { display: none; }
+body .Hp-banner-section  .lptv-sample-contiainer > div { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; gap: 22px; }
+body main section.Hp-banner-section figure#mobile-image img { display: none; }
+body main section.Hp-banner-section figure#desktop-image img { display: block; }
+body .Hp-banner-section .lptv-text-container #Premier-Source-text::after, body .Hp-banner-section .lptv-text-container #Premier-Source-text::before{content: none; }
+
+@media (max-width:1024px){
+
+    body .Hp-banner-section .group.positionBox {flex-direction: row;gap: 22px;}
+    body .Hp-banner-section .lptv-text-container h1.main-heading mark.has-cyan-bluish-gray-color {font-size: 52px; }
+    body .Hp-banner-section .lptv-text-container h1.main-heading mark.has-white-color { font-size: 36px; }
+    body .Hp-banner-section .lptv-text-container h1.main-heading mark.has-inline-color.has-pale-cyan-blue-color {font-size: 65px;}
+    body .Hp-banner-section .lptv-text-container .trustText {font-size: 16px; }
+    body .Hp-banner-section .lptv-text-container .trustText::after, body .Hp-banner-section .lptv-text-container .trustText::before {width: 65px;height: 13px;}
+    body .Hp-banner-section .lptv-text-container .trustText::before {left: -80px  }
+    body .Hp-banner-section .lptv-text-container .trustText::after {right: -80px  }
+    body .Hp-banner-section p#Premier-Source-text { font-size: 14px; letter-spacing: 14%;  }
+    body main section.Hp-banner-section .lptv-sample-contiainer figure.wp-block-image.size-full {max-width: 164px !important; }
+    body section.Hp-banner-section .lptv-sample-contiainer > div { gap: 10px;}
+    body main section.Hp-banner-section .image-250 { width: 65px; }
+}
+
+@media (max-width:768px){
+body main section.Hp-banner-section .lptv-sample-contiainer {display: none; }
+body main section.Hp-banner-section  .licenseplate-container.lptv-text-container {width: 100%  }
+body main section.Hp-banner-section figure#desktop-image img {display: none;}
+body main section.Hp-banner-section figure#mobile-image img {object-position: center;display: block;}
+body main section.Hp-banner-section figure#mobile-image::after { background: linear-gradient(28deg, rgb(0 0 0 / 0%) 0%, rgb(255 255 255 / 0%) 113%); }
+
+ }
+
+@media (max-width:480px){
+
+    body section.Hp-banner-section .lptv-text-container h1.main-heading mark.has-cyan-bluish-gray-color {font-size: 42px; }
+    body section.Hp-banner-section .lptv-text-container h1.main-heading mark.has-white-color { font-size: 26px; }
+    body section.Hp-banner-section .lptv-text-container h1.main-heading mark.has-inline-color.has-pale-cyan-blue-color {font-size: 52px;}
+}
+
+
+@media (max-width:380px){
+
+    body section.Hp-banner-section .lptv-text-container h1.main-heading mark.has-cyan-bluish-gray-color {font-size: 35px; }
+    body section.Hp-banner-section .lptv-text-container h1.main-heading mark.has-white-color { font-size: 19px; }
+    body section.Hp-banner-section .lptv-text-container h1.main-heading mark.has-inline-color.has-pale-cyan-blue-color {font-size: 43px;}
+}
+
+
+
+

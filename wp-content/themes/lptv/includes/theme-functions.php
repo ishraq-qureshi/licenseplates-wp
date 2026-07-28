@@ -1,0 +1,1648 @@
+<?php
+function lptv_customize_register( $wp_customize ) {
+
+    // Add a section for the logos
+    $wp_customize->add_section( 'lptv_logo_options', array(
+        'title'    => __( 'Logo Options', 'lptv' ),
+        'priority' => 30,
+    ) );
+
+    // Add setting for primary logo
+    $wp_customize->add_setting( 'lptv_primary_logo', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
+
+    // Add control for primary logo
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lptv_primary_logo', array(
+        'label'    => __( 'Primary Logo', 'lptv' ),
+        'section'  => 'lptv_logo_options',
+        'settings' => 'lptv_primary_logo',
+    ) ) );
+
+    // Add setting for secondary logo
+    $wp_customize->add_setting( 'lptv_secondary_logo', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
+
+    // Add control for secondary logo
+    $wp_customize->add_control( new WP_Customize_Image_control( $wp_customize, 'lptv_secondary_logo', array(
+        'label'    => __( 'Secondary Logo', 'lptv' ),
+        'section'  => 'lptv_logo_options',
+        'settings' => 'lptv_secondary_logo',
+    ) ) );
+
+    // Add section for Blog and Single Post Banner options
+    $wp_customize->add_section( 'lptv_banner_options', array(
+        'title'    => __( 'Banner Background Options', 'lptv' ),
+        'priority' => 40,
+    ) );
+
+    // Add setting for Blog Index Banner
+    $wp_customize->add_setting( 'lptv_blog_index_banner', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
+
+    // Add control for Blog Index Banner
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lptv_blog_index_banner', array(
+        'label'    => __( 'Blog Index Banner Background', 'lptv' ),
+        'section'  => 'lptv_banner_options',
+        'settings' => 'lptv_blog_index_banner',
+    ) ) );
+
+    // Add setting for Single Post Banner
+    $wp_customize->add_setting( 'lptv_single_post_banner', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
+
+    // Add control for Single Post Banner
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lptv_single_post_banner', array(
+        'label'    => __( 'Single Post Banner Background', 'lptv' ),
+        'section'  => 'lptv_banner_options',
+        'settings' => 'lptv_single_post_banner',
+    ) ) );
+
+     // Add section for WooCommerce Background Options
+    $wp_customize->add_section( 'lptv_woocommerce_background_options', array(
+        'title'    => __( 'WooCommerce Background Options', 'lptv' ),
+        'priority' => 50, // Adjust priority as needed
+    ) );
+
+    // Add setting for WooCommerce Shop Page Background
+    $wp_customize->add_setting( 'lptv_woocommerce_shop_background', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
+
+    // Add control for WooCommerce Shop Page Background
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lptv_woocommerce_shop_background', array(
+        'label'    => __( 'Shop Page Background', 'lptv' ),
+        'section'  => 'lptv_woocommerce_background_options',
+        'settings' => 'lptv_woocommerce_shop_background',
+    ) ) );
+
+    // Add setting for WooCommerce Single Product Background
+    $wp_customize->add_setting( 'lptv_woocommerce_single_product_background', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
+
+    // Add control for WooCommerce Single Product Background
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lptv_woocommerce_single_product_background', array(
+        'label'    => __( 'Single Product Background', 'lptv' ),
+        'section'  => 'lptv_woocommerce_background_options',
+        'settings' => 'lptv_woocommerce_single_product_background',
+    ) ) );
+
+    // Add a section for typography
+    $wp_customize->add_section( 'custom_typography' , array(
+        'title'    => __( 'Typography', 'lptv' ),
+        'priority' => 30,
+    ) );
+
+    // Dynamically get fonts from the fonts folder
+    $available_fonts = get_available_fonts();
+
+    // Font Family Setting
+    $wp_customize->add_setting( 'font_family_setting' , array(
+        'default'    => 'Barlow Regular', // Adjust the default if needed
+        'transport'  => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'font_family_control', array(
+        'label'      => __( 'Font Family', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_family_setting',
+        'type'       => 'select',
+        'choices'    => $available_fonts, // Dynamically loaded fonts
+    ) );
+
+    // Font Size for Different Screens (Bootstrap breakpoints)
+    $wp_customize->add_setting( 'font_size_xs', array(
+        'default'   => '14', // Default font size for extra small screens
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'font_size_xs_control', array(
+        'label'      => __( 'Font Size (xs - <576px)', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_size_xs',
+        'type'       => 'number',
+    ));
+
+    $wp_customize->add_setting( 'font_size_sm', array(
+        'default'   => '16', // Default font size for small screens
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'font_size_sm_control', array(
+        'label'      => __( 'Font Size (sm - ≥576px)', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_size_sm',
+        'type'       => 'number',
+    ));
+
+    $wp_customize->add_setting( 'font_size_md', array(
+        'default'   => '18', // Default font size for medium screens
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'font_size_md_control', array(
+        'label'      => __( 'Font Size (md - ≥768px)', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_size_md',
+        'type'       => 'number',
+    ));
+
+    $wp_customize->add_setting( 'font_size_lg', array(
+        'default'   => '20', // Default font size for large screens
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'font_size_lg_control', array(
+        'label'      => __( 'Font Size (lg - ≥992px)', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_size_lg',
+        'type'       => 'number',
+    ));
+
+    $wp_customize->add_setting( 'font_size_xl', array(
+        'default'   => '22', // Default font size for extra-large screens
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'font_size_xl_control', array(
+        'label'      => __( 'Font Size (xl - ≥1200px)', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_size_xl',
+        'type'       => 'number',
+    ));
+
+    $wp_customize->add_setting( 'font_size_xxl', array(
+        'default'   => '24', // Default font size for extra-extra-large screens
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'font_size_xxl_control', array(
+        'label'      => __( 'Font Size (xxl - ≥1440px)', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_size_xxl',
+        'type'       => 'number',
+    ));
+
+
+     // Adding font family and font size for H1 to H6 for different screen sizes
+    $headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
+    foreach ($headings as $heading) {
+
+        // Font Family Setting
+        $wp_customize->add_setting( "font_family_{$heading}_setting", array(
+            'default'   => 'Barlow Regular', // Adjust default if needed
+            'transport' => 'refresh',
+        ));
+        $wp_customize->add_control( "font_family_{$heading}_control", array(
+            'label'      => __( ucfirst($heading) . ' Font Family', 'lptv' ),
+            'section'    => 'custom_typography',
+            'settings'   => "font_family_{$heading}_setting",
+            'type'       => 'select',
+            'choices'    => $available_fonts, // Use the dynamically loaded fonts
+        ));
+
+        // XS Font Size
+        $wp_customize->add_setting( "font_size_{$heading}_xs", array(
+            'default'   => '28', // Default font size for extra small screens
+            'transport' => 'refresh',
+        ));
+        $wp_customize->add_control( "font_size_{$heading}_xs_control", array(
+            'label'      => __( ucfirst($heading) . ' Font Size (xs - <576px)', 'lptv' ),
+            'section'    => 'custom_typography',
+            'settings'   => "font_size_{$heading}_xs",
+            'type'       => 'number',
+        ));
+
+        // SM Font Size
+        $wp_customize->add_setting( "font_size_{$heading}_sm", array(
+            'default'   => '32', // Default font size for small screens
+            'transport' => 'refresh',
+        ));
+        $wp_customize->add_control( "font_size_{$heading}_sm_control", array(
+            'label'      => __( ucfirst($heading) . ' Font Size (sm - ≥576px)', 'lptv' ),
+            'section'    => 'custom_typography',
+            'settings'   => "font_size_{$heading}_sm",
+            'type'       => 'number',
+        ));
+
+        // MD Font Size
+        $wp_customize->add_setting( "font_size_{$heading}_md", array(
+            'default'   => '36', // Default font size for medium screens
+            'transport' => 'refresh',
+        ));
+        $wp_customize->add_control( "font_size_{$heading}_md_control", array(
+            'label'      => __( ucfirst($heading) . ' Font Size (md - ≥768px)', 'lptv' ),
+            'section'    => 'custom_typography',
+            'settings'   => "font_size_{$heading}_md",
+            'type'       => 'number',
+        ));
+
+        // LG Font Size
+        $wp_customize->add_setting( "font_size_{$heading}_lg", array(
+            'default'   => '40', // Default font size for large screens
+            'transport' => 'refresh',
+        ));
+        $wp_customize->add_control( "font_size_{$heading}_lg_control", array(
+            'label'      => __( ucfirst($heading) . ' Font Size (lg - ≥992px)', 'lptv' ),
+            'section'    => 'custom_typography',
+            'settings'   => "font_size_{$heading}_lg",
+            'type'       => 'number',
+        ));
+
+        // XL Font Size
+        $wp_customize->add_setting( "font_size_{$heading}_xl", array(
+            'default'   => '44', // Default font size for extra-large screens
+            'transport' => 'refresh',
+        ));
+        $wp_customize->add_control( "font_size_{$heading}_xl_control", array(
+            'label'      => __( ucfirst($heading) . ' Font Size (xl - ≥1200px)', 'lptv' ),
+            'section'    => 'custom_typography',
+            'settings'   => "font_size_{$heading}_xl",
+            'type'       => 'number',
+        ));
+
+        // XXL Font Size
+        $wp_customize->add_setting( "font_size_{$heading}_xxl", array(
+            'default'   => '48', // Default font size for extra-large screens
+            'transport' => 'refresh',
+        ));
+        $wp_customize->add_control( "font_size_{$heading}_xxl_control", array(
+            'label'      => __( ucfirst($heading) . ' Font Size (xxl - ≥1440px)', 'lptv' ),
+            'section'    => 'custom_typography',
+            'settings'   => "font_size_{$heading}_xxl",
+            'type'       => 'number',
+        ));
+    }
+
+    // Body Text Color
+    $wp_customize->add_setting( 'lptv_body_text_color', array(
+        'default'   => '#000000', // default body text color
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lptv_body_text_color_control', array(
+        'label'    => __( 'Body Text Color', 'lptv' ),
+        'section'  => 'colors',
+        'settings' => 'lptv_body_text_color',
+    ) ) );
+
+    // Anchor Tag Color
+    $wp_customize->add_setting( 'lptv_a_text_color', array(
+        'default'   => '#0000EE', // default link color
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lptv_a_text_color_control', array(
+        'label'    => __( 'Link Color', 'lptv' ),
+        'section'  => 'colors',
+        'settings' => 'lptv_a_text_color',
+    ) ) );
+
+    // Anchor Tag Hover Color
+    $wp_customize->add_setting( 'lptv_a_hover_color', array(
+        'default'   => '#FF0000', // default hover color
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lptv_a_hover_color_control', array(
+        'label'    => __( 'Link Hover Color', 'lptv' ),
+        'section'  => 'colors',
+        'settings' => 'lptv_a_hover_color',
+    ) ) );
+
+    // Heading Colors (h1 to h6)
+    for ( $i = 1; $i <= 6; $i++ ) {
+        $wp_customize->add_setting( "lptv_h{$i}_color", array(
+            'default'   => '#000000', // default heading color
+            'transport' => 'refresh',
+        ) );
+
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "lptv_h{$i}_color_control", array(
+            'label'    => sprintf( __( 'Heading H%d Color', 'lptv' ), $i ),
+            'section'  => 'colors',
+            'settings' => "lptv_h{$i}_color",
+        ) ) );
+    }
+
+    // Font Family for <th> tag
+    $wp_customize->add_setting( 'font_family_th_setting', array(
+        'default'   => 'Arial, sans-serif',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'font_family_th_control', array(
+        'label'      => __( 'Table Header (th) Font Family', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_family_th_setting',
+        'type'       => 'select',
+        'choices'    => $available_fonts,
+    ));
+
+    // Font Family for <b> and <strong> tags
+    $wp_customize->add_setting( 'font_family_b_strong_setting', array(
+        'default'   => 'Arial, sans-serif',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'font_family_b_strong_control', array(
+        'label'      => __( 'Bold (b, strong) Font Family', 'lptv' ),
+        'section'    => 'custom_typography',
+        'settings'   => 'font_family_b_strong_setting',
+        'type'       => 'select',
+        'choices'    => $available_fonts,
+    ));  
+}
+add_action( 'customize_register', 'lptv_customize_register' );
+
+// typography start
+function get_available_fonts() {
+    $fonts = array();
+    $font_dir = get_template_directory() . '/fonts/';
+
+    if (is_dir($font_dir)) {
+        $files = scandir($font_dir);
+
+        foreach ($files as $file) {
+            // Only process font files with valid extensions
+            if (preg_match('/\.(woff|woff2|ttf|eot)$/', $file)) {
+                // Extract the font name and variation from the filename (e.g., Barlow-Regular)
+                $font_name = str_replace(array('.woff', '.woff2', '.ttf', '.eot'), '', $file);
+
+                // Replace hyphens with spaces for readability and capitalize the font name
+                $formatted_font_name = ucwords(str_replace('-', ' ', $font_name));
+
+                // Add the font name to both the key and value of the array for proper Customizer usage
+                if (!in_array($formatted_font_name, $fonts)) {
+                    $fonts[$formatted_font_name] = $formatted_font_name; // Both key and value are the formatted font name
+                }
+            }
+        }
+    }
+    return $fonts;
+}
+// Apply selected font family and sizes based on media queries for body and h1-h6
+function custom_theme_fonts_css() {
+    // Get the selected font family from the Customizer for body
+    $font_family = get_theme_mod('font_family_setting', 'Barlow Regular'); // Default font family for body
+    
+    // Get the selected font sizes for body for different screen sizes
+    $font_size_xs = get_theme_mod('font_size_xs', '14');
+    $font_size_sm = get_theme_mod('font_size_sm', '16');
+    $font_size_md = get_theme_mod('font_size_md', '18');
+    $font_size_lg = get_theme_mod('font_size_lg', '20');
+    $font_size_xl = get_theme_mod('font_size_xl', '22');
+    $font_size_xxl = get_theme_mod('font_size_xxl', '24');
+
+    // Get the font family and sizes for h1 to h6
+    $headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    $heading_css = '';
+
+    foreach ($headings as $heading) {
+        // Get the selected font family for each heading from Customizer
+        $heading_font_family = get_theme_mod("font_family_{$heading}_setting", 'Barlow Regular');
+        
+        // Get the selected font sizes for each heading at different screen sizes
+        $heading_font_size_xs = get_theme_mod("font_size_{$heading}_xs", '28');
+        $heading_font_size_sm = get_theme_mod("font_size_{$heading}_sm", '32');
+        $heading_font_size_md = get_theme_mod("font_size_{$heading}_md", '36');
+        $heading_font_size_lg = get_theme_mod("font_size_{$heading}_lg", '40');
+        $heading_font_size_xl = get_theme_mod("font_size_{$heading}_xl", '44');
+        $heading_font_size_xxl = get_theme_mod("font_size_{$heading}_xxl", '48');
+
+        // Apply font family and size styles for each heading
+        $heading_css .= "{$heading} { font-family: '$heading_font_family'; }";
+
+        // Extra Small (xs: <576px)
+        $heading_css .= "@media (max-width: 575.98px) { {$heading} { font-size: {$heading_font_size_xs}px; } }";
+
+        // Small (sm: ≥576px)
+        $heading_css .= "@media (min-width: 576px) and (max-width: 767.98px) { {$heading} { font-size: {$heading_font_size_sm}px; } }";
+
+        // Medium (md: ≥768px)
+        $heading_css .= "@media (min-width: 768px) and (max-width: 991.98px) { {$heading} { font-size: {$heading_font_size_md}px; } }";
+
+        // Large (lg: ≥992px)
+        $heading_css .= "@media (min-width: 992px) and (max-width: 1199.98px) { {$heading} { font-size: {$heading_font_size_lg}px; } }";
+
+        // Extra Large (xl: ≥1200px)
+        $heading_css .= "@media (min-width: 1200px) { {$heading} { font-size: {$heading_font_size_xl}px; } }";
+        
+        // Extra Extra Large (xxl: ≥1440px)
+        $heading_css .= "@media (min-width: 1440px) { {$heading} { font-size: {$heading_font_size_xxl}px; } }";
+    }
+
+    // Output the CSS for body and headings
+    echo '<style>';
+    echo "body { font-family: '$font_family'; }"; // Apply the selected font family for body
+    
+    // Media queries for body font sizes
+    echo "@media (max-width: 575.98px) { body { font-size: {$font_size_xs}px; } }";
+    echo "@media (min-width: 576px) and (max-width: 767.98px) { body { font-size: {$font_size_sm}px; } }";
+    echo "@media (min-width: 768px) and (max-width: 991.98px) { body { font-size: {$font_size_md}px; } }";
+    echo "@media (min-width: 992px) and (max-width: 1199.98px) { body { font-size: {$font_size_lg}px; } }";
+    echo "@media (min-width: 1200px) { body { font-size: {$font_size_xl}px; } }";
+    echo "@media (min-width: 1440px) { body { font-size: {$font_size_xxl}px; } }";
+
+    // Output the heading-specific CSS
+    echo $heading_css;
+
+    echo '</style>';
+}
+add_action( 'wp_head', 'custom_theme_fonts_css' );
+
+// th, b / strong
+function lptv_typography_css() {
+    // Get customizer values
+    $body_font_family = get_theme_mod( 'font_family_setting', 'Barlow Regular' );
+    $th_font_family = get_theme_mod( 'font_family_th_setting', 'Arial, sans-serif' );
+    $b_strong_font_family = get_theme_mod( 'font_family_b_strong_setting', 'Arial, sans-serif' );
+
+    // Create the custom CSS content
+    $custom_css = "
+        body {
+            font-family: {$body_font_family};
+        }
+        th {
+            font-family: {$th_font_family};
+        }
+        b, strong {
+            font-family: {$b_strong_font_family};
+        }
+    ";
+
+    // Output the CSS in the head
+    echo '<style type="text/css">' . $custom_css . '</style>';
+}
+add_action( 'wp_head', 'lptv_typography_css' );
+
+// color start
+function lptv_custom_colors_css() {
+    // Get the color settings from the customizer
+    $body_color = get_theme_mod( 'lptv_body_text_color', '#000000' );
+    $a_color = get_theme_mod( 'lptv_a_text_color', '#0000EE' );
+    $a_hover_color = get_theme_mod( 'lptv_a_hover_color', '#FF0000' );
+
+    // Get the heading colors
+    $heading_colors = array();
+    for ( $i = 1; $i <= 6; $i++ ) {
+        $heading_colors[$i] = get_theme_mod( "lptv_h{$i}_color", '#000000' );
+    }
+
+    ?>
+    <style type="text/css">
+        body {
+            color: <?php echo esc_attr( $body_color ); ?>;
+        }
+        a {
+            color: <?php echo esc_attr( $a_color ); ?>;
+        }
+        a:hover {
+            color: <?php echo esc_attr( $a_hover_color ); ?>;
+        }
+        <?php for ( $i = 1; $i <= 6; $i++ ) : ?>
+            h<?php echo $i; ?> {
+                color: <?php echo esc_attr( $heading_colors[$i] ); ?>;
+            }
+        <?php endfor; ?>
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'lptv_custom_colors_css' );
+
+
+
+// other functions
+//cf7 remove auto p and br
+add_filter('wpcf7_autop_or_not', '__return_false');
+//remove empty p globally 
+remove_filter('the_content', 'wpautop');
+// For featured image support
+add_theme_support( 'post-thumbnails' );
+add_theme_support('wp-block-styles', false);
+
+// for changing style.css version in every edit
+add_action( 'wp_enqueue_scripts', function () {
+    wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/style.css?v=01132026' , [], ''); 
+} );
+
+// remove pagination redirection for number 1 pagination
+add_filter('paginate_links', function($link) {
+    $pos = strpos($link, 'page/1/');
+    if($pos !== false) {
+        $link = substr($link, 0, $pos);
+    }
+    return $link;
+}); 
+
+// Adding excerpt for page
+add_post_type_support( 'page', 'excerpt' );
+
+// home blog support
+function lptv_hack_wp_title_for_home($title) {
+    if ( empty( $title ) && ( is_home() || is_front_page() ) ) {
+        $title = ' ';
+    }
+    return $title;
+}
+add_filter( 'wp_title', 'lptv_hack_wp_title_for_home' );
+
+// remove editor menu
+function lptv_remove_editor_menu() {
+    remove_action('admin_menu', '_add_themes_utility_last', 101);
+}
+add_action('_admin_menu', 'lptv_remove_editor_menu', 1);
+
+// for menu shortcode
+function lptv_print_menu_shortcode($atts, $content = null) {
+    extract(shortcode_atts(array( 'name' => null, ), $atts));
+    return wp_nav_menu(array('menu' => $name, 'echo' => false));
+}
+add_shortcode('menu', 'lptv_print_menu_shortcode');
+
+// shortcode support in menu description 
+add_filter('wp_nav_menu_items', 'do_shortcode');
+function lptv_prefix_nav_description( $item_output, $item, $depth, $args ) {
+    if ( !empty( $item->description ) ) {
+        $item_output = str_replace( $args->link_after.'</a>', '</a>'.$item->description.''.$args->link_after, $item_output );
+    }
+    return $item_output;
+}
+add_filter('walker_nav_menu_start_el', 'lptv_prefix_nav_description', 10, 4);
+add_filter('walker_nav_menu_start_el', function($item_output, $item) {
+    if (!is_object($item) || !isset($item->object)) {
+        return $item_output;
+    }
+    if ($item->ID === 829) {
+        $item_output = do_shortcode($item->description);
+    }
+    return $item_output;
+}, 20, 2);
+
+// admin menu ordering 
+function lptv_custom_menu_order($menu_ord) {
+    if (!$menu_ord) return true;
+    return array(
+        'index.php', // this represents the dashboard link
+        'edit.php?post_type=section', // this is a custom post type menu
+        'edit.php?post_type=quick_repeats',// this is a custom post type menu
+        'edit.php', // this is the default POST admin menu 
+        'edit.php?post_type=page', // this is the default page menu
+        'edit.php?post_type=product',// this is a custom post type menu
+        'edit.php?post_type=team',// this is a custom post type menu
+        'edit.php?post_type=location',// this is a custom post type menu
+    );
+}
+add_filter('custom_menu_order', 'lptv_custom_menu_order');
+add_filter('menu_order', 'lptv_custom_menu_order');
+
+// remove gutenberg css
+function lptv_remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+} 
+add_action( 'wp_enqueue_scripts', 'lptv_remove_wp_block_library_css', 100 ); 
+
+// add admin css
+add_action( 'admin_enqueue_scripts', 'lptv_load_admin_styles' );
+function lptv_load_admin_styles() {
+    wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/css/admin.css', [], false, 'all' );
+}
+ 
+// custom excerpt with length
+function excerpt($limit) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    } 
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+    return $excerpt;
+}
+ 
+function content($limit) {
+    $content = explode(' ', get_the_content(), $limit);
+    if (count($content)>=$limit) {
+        array_pop($content);
+        $content = implode(" ",$content).'...';
+    } else {
+        $content = implode(" ",$content);
+    } 
+    $content = preg_replace('/[.+]/','', $content);
+    $content = apply_filters('the_content', $content); 
+    $content = str_replace(']]>', ']]>', $content);
+    return $content;
+} // add this code for to get the excerpt echo excerpt(10); 
+ 
+// for svg Support
+function lptv_add_svg_to_upload_mimes( $upload_mimes ) {
+    $upload_mimes['svg'] = 'image/svg+xml';
+    $upload_mimes['svgz'] = 'image/svg+xml';
+    return $upload_mimes;
+}
+add_filter( 'upload_mimes', 'lptv_add_svg_to_upload_mimes', 10, 1 );
+
+// Enable vCard Upload  
+function be_enable_vcard_upload( $mime_types ){
+  $mime_types['vcf'] = 'text/vcard';
+  return $mime_types;
+}
+add_filter('upload_mimes', 'be_enable_vcard_upload' );  
+
+// body class for different browser - cross browser fixing
+function lptv_browser_body_class($classes) {
+    // Add a body class for inner pages 
+    if (! is_front_page()) {
+        $classes[] = 'inner';
+    }
+    return $classes;
+}
+add_filter('body_class','lptv_browser_body_class');
+
+// Login View
+function lptv_wp_custom_login_css() {
+    wp_register_style('login_css', get_template_directory_uri() . '/css/login.css');
+    wp_enqueue_style('login_css');
+}
+add_action('login_head', 'lptv_wp_custom_login_css');
+
+function lptv_login_logo_url() {
+    return home_url();
+}
+add_filter('login_headerurl', 'lptv_login_logo_url');
+
+function lptv_login_logo_url_title() {
+    return 'Visit the Site!';
+}
+add_filter('login_headertext', 'lptv_login_logo_url_title');
+
+// login js
+function enqueue_custom_login_script() {
+    wp_enqueue_script('custom-login-js', get_stylesheet_directory_uri() . '/js/custom-login.js', array(), '1.0.0', true);
+}
+
+add_action('login_enqueue_scripts', 'enqueue_custom_login_script');
+
+
+// Add Lightbox for Gallery & Image Block
+function lptv_gallery_lightbox_register_assets() {
+    wp_register_style( 'baguettebox-css', get_template_directory_uri() . '/css/baguetteBox.min.css', [], '1.11.1' );
+    wp_register_script( 'baguettebox', get_template_directory_uri() . '/js/baguetteBox.min.js', [], '1.11.1', true );
+
+    $baguettebox_selector = apply_filters('baguettebox_selector', '.wp-block-gallery,:not(.wp-block-gallery)>.wp-block-image,.wp-block-media-text__media,.gallery,.wp-block-coblocks-gallery-masonry,.wp-block-coblocks-gallery-stacked,.wp-block-coblocks-gallery-collage,.wp-block-coblocks-gallery-offset,.wp-block-coblocks-gallery-stacked,.gallery-with-pop');
+    $baguettebox_filter = apply_filters('baguettebox_filter', '/.+\.(gif|jpe?g|png|webp|svg|avif|heif|heic|tif?f|)($|\?)/i');
+
+    wp_add_inline_script( 'baguettebox', 'window.addEventListener("load", function() {baguetteBox.run("' . $baguettebox_selector . '",{captions:function(t){var e=t.parentElement.classList.contains("wp-block-image")||t.parentElement.classList.contains("wp-block-media-text__media")?t.parentElement.querySelector("figcaption"):t.parentElement.parentElement.querySelector("figcaption,dd");return!!e&&e.innerHTML},filter:' . $baguettebox_filter . '});});' );
+}
+add_action( 'wp_enqueue_scripts', 'lptv_gallery_lightbox_register_assets' );
+
+function lptv_gallery_lightbox_enqueue_assets() {
+    if ( has_block( 'core/gallery' ) || has_block( 'core/image' ) || has_block( 'core/media-text' ) || get_post_gallery() || has_block('coblocks/gallery-masonry') || has_block('coblocks/gallery-stacked') || has_block('coblocks/gallery-collage') || has_block('coblocks/gallery-offset') || has_block('coblocks/gallery-stacked') ) {
+        wp_enqueue_script( 'baguettebox' );
+        wp_enqueue_style( 'baguettebox-css' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'lptv_gallery_lightbox_enqueue_assets' );
+
+// Image Optimize
+/*function lptv_get_optimized_image($imageURL, $imageSize = array(300, 300)) {
+
+    $imageId = attachment_url_to_postid($imageURL);
+    if($imageId !== 0) {
+        $imageData = wp_get_attachment_image_src($imageId, $imageSize);
+        if(($imageData != false) && is_array($imageData)) {
+            if($imageData[3] == false) {
+                $imagePath = get_attached_file($imageId);
+                $editor = wp_get_image_editor($imagePath, array());
+                if(!is_wp_error($editor)) {
+                    $resizedImage = $editor->resize($imageSize[0], $imageSize[1], true);
+                    if(!is_wp_error($resizedImage)) {
+                        $resizedImage = $editor->save($editor->generate_filename());
+                        if(!is_wp_error($resizedImage)) {
+                            $images = wp_get_attachment_metadata($imageId);
+                            $images['sizes'][$imageSize[0].'x'.$imageSize[1]] = array(
+                                'file' => $resizedImage['file'],
+                                'width' => $imageSize[0],
+                                'height' => $imageSize[1]
+                            );
+                            wp_update_attachment_metadata($imageId, $images);
+                            
+                            $resizedImage = explode('public_html/', $resizedImage['path']);
+                            return 'https://'.$resizedImage[1];
+                        }
+                    }
+                }
+            }
+            return $imageData[0];
+        }
+    }
+    return $imageURL;
+}*/  
+
+// Woocommerce Functions
+add_theme_support( 'woocommerce' );
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+if ( class_exists( 'WooCommerce' ) ) {  
+
+
+    // Add Video URL Meta Box to Product Data Section start
+    function add_video_url_and_thumbnail_fields() {
+        woocommerce_wp_text_input( 
+            array( 
+                'id'          => '_product_video_url', 
+                'label'       => __( 'Product Video URL', 'woocommerce' ), 
+                'placeholder' => 'Enter video URL (YouTube, Vimeo, etc.)',
+                'desc_tip'    => 'true',
+                'description' => __( 'Enter the full video URL for the product gallery.', 'woocommerce' ) 
+            )
+        );
+
+        woocommerce_wp_text_input( 
+            array( 
+                'id'          => '_product_video_thumbnail', 
+                'label'       => __( 'Video Thumbnail Image URL', 'woocommerce' ), 
+                'placeholder' => 'Enter thumbnail image URL for video',
+                'desc_tip'    => 'true',
+                'description' => __( 'Enter the image URL to use as the thumbnail for the video.', 'woocommerce' ) 
+            )
+        );
+    }
+    add_action( 'woocommerce_product_options_general_product_data', 'add_video_url_and_thumbnail_fields' );
+
+    // Save the Video URL and Thumbnail Image Meta Data
+    function save_video_url_and_thumbnail_fields( $post_id ) {
+        $video_url = isset( $_POST['_product_video_url'] ) ? sanitize_text_field( $_POST['_product_video_url'] ) : '';
+        $thumbnail_url = isset( $_POST['_product_video_thumbnail'] ) ? sanitize_text_field( $_POST['_product_video_thumbnail'] ) : '';
+
+        update_post_meta( $post_id, '_product_video_url', $video_url );
+        update_post_meta( $post_id, '_product_video_thumbnail', $thumbnail_url );
+    }
+    add_action( 'woocommerce_process_product_meta', 'save_video_url_and_thumbnail_fields' );
+
+    // Add Video Thumbnail to the Product Gallery
+    function add_video_thumbnail_to_gallery() {
+        global $product;
+
+        // Ensure we're in the correct product context
+        if ( ! is_a( $product, 'WC_Product' ) ) {
+            return;
+        }
+
+        // Get the current product ID
+        $product_id = $product->get_id();
+        
+        // Fetch the video URL and thumbnail URL from the post meta
+        $video_url = get_post_meta( $product_id, '_product_video_url', true );
+        $thumbnail_url = get_post_meta( $product_id, '_product_video_thumbnail', true );
+
+        // Check if the thumbnail URL exists for debugging purposes
+        if ( empty( $thumbnail_url ) ) {
+            error_log( 'Thumbnail URL is empty for product ID: ' . $product_id );
+            return; // Exit early if no thumbnail URL is provided
+        }
+
+        // Output the video thumbnail only if both the video URL and thumbnail URL are set
+        if ( ! empty( $video_url ) && ! empty( $thumbnail_url ) ) {
+            echo '<div class="woocommerce-product-gallery__image wc-product-gallery-slide has-video">';
+            echo '<a href="' . esc_url( $video_url ) . '" class="video-thumb" data-video-url="' . esc_url( $video_url ) . '">';
+            echo '<img src="' . esc_url( $thumbnail_url ) . '" alt="Video Thumbnail" /><div class="product-img"></div>';
+            echo '</a>';
+            echo '</div>';
+        } else {
+            error_log( 'Either the video URL or thumbnail URL is empty for product ID ' . $product_id );
+        }
+    }
+    add_action( 'woocommerce_product_thumbnails', 'add_video_thumbnail_to_gallery', 25 );  
+
+    // product count
+    add_filter( 'woocommerce_add_to_cart_fragments', 'lptv_woo_add_to_cart_fragment' );
+    function lptv_woo_add_to_cart_fragment( $fragments ) {
+        global $woocommerce;
+        $fragments['.cart-count-contents'] = '<sup class="cart-count-contents"> ' . $woocommerce->cart->cart_contents_count . '</sup>';
+        return $fragments;
+    }
+
+    add_filter( 'woocommerce_add_to_cart_fragments', 'lptv_add_to_cart_fragment' );
+    function lptv_add_to_cart_fragment( $fragments ) {
+        global $woocommerce;
+        $fragments['.misha-cart'] = '<sup class="misha-cart">' . $woocommerce->cart->cart_contents_count . '</sup>';
+        return $fragments;
+    }
+
+    add_filter( 'use_block_editor_for_post_type', 'lptv_activate_gutenberg_product', 10, 2 );
+    function lptv_activate_gutenberg_product( $can_edit, $post_type ) {
+        if ( $post_type == 'product' ) {
+            $can_edit = true;
+        }
+        return $can_edit;
+    }
+    
+    // Filer WooCommerce Flexslider options - Add Navigation Arrows
+    add_filter( 'woocommerce_single_product_carousel_options', 'lptv_update_woo_flexslider_options' );   
+    function lptv_update_woo_flexslider_options( $options ) {
+        $options['directionNav'] = true;
+        return $options;
+    }
+
+    // Custom meta field for Product start
+    add_action( 'woocommerce_product_options_advanced', 'lptv_woo_cl_add_custom_general_fields', 10, 0);
+    add_action( 'woocommerce_process_product_meta', 'lptv_woo_cl_add_custom_general_fields_save', 10, 1);
+
+    function lptv_woo_cl_add_custom_general_fields() {
+        global $woocommerce, $post; ?>
+        <h2><b>Custom Label</b></h2>
+        <hr style="display: block;margin-top: 1em;margin-bottom: 1em;margin-left: auto;margin-right: auto;border-style: inset;color: black; border-width: 2px;">
+        <?php
+        woocommerce_wp_text_input(
+            array(
+                'id' => '_woo_custom_label_text',
+                'label' => 'Custom Label',
+                'placeholder' => '',
+                'desc_tip' => 'true',
+                'description' => "Custom Label for this product.",
+            )
+        );
+    }
+
+    function lptv_woo_cl_add_custom_general_fields_save( $post_id ) {
+        $woo_custom_label_image = $_POST['_woo_custom_label_text'];
+        update_post_meta($post_id, '_woo_custom_label_text', esc_attr($woo_custom_label_image));
+    }
+
+    // add custom badge to archive and single product
+    remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
+    remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
+
+    add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_custom_badge_product', 10);
+    add_action('woocommerce_before_single_product_summary', 'woocommerce_custom_badge_product', 10);
+
+    function woocommerce_custom_badge_product() {
+        global $product;
+        $woo_custom_label_text = get_post_meta($product->get_id(), '_woo_custom_label_text', true);
+        if (!empty($woo_custom_label_text)) {
+            echo '<div class="pro-badge"><span class="oncustom">'.$woo_custom_label_text.'</span></div>';
+        } elseif ($product->is_on_sale()) {
+            echo '<div class="pro-badge"><span class="onsale">Sale!</span></div>';
+        }
+    }
+
+    // if need to show the badge in any custom code, place this code there under array 
+    /*<!---?php
+    $woo_custom_label_text = get_post_meta($post->ID, '_woo_custom_label_text', true);  
+    if (!empty($woo_custom_label_text)) {
+        echo '<div class="pro-badge"><span class="oncustom">'.$woo_custom_label_text.'</span></div>';
+    } ?---!>*/
+    
+    // Custom meta field for Product end
+
+    /* AJAX add to cart for variable product js and php added */
+    function lptv_ajax_add_to_cart_script() {
+        wp_enqueue_script( 'add-to-cart-variation', get_template_directory_uri() . '/js/add-to-cart-variation.js', array('jquery'), '', true );    
+    }
+    add_action( 'wp_enqueue_scripts', 'lptv_ajax_add_to_cart_script', 99 );
+    
+    add_action( 'wp_ajax_lptv_woocommerce_add_to_cart_variable_rc', 'lptv_woocommerce_add_to_cart_variable_rc_callback' );
+    add_action( 'wp_ajax_nopriv_lptv_woocommerce_add_to_cart_variable_rc', 'lptv_woocommerce_add_to_cart_variable_rc_callback' );
+
+    function lptv_woocommerce_add_to_cart_variable_rc_callback() {
+        ob_start();
+        $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', absint( $_POST['product_id'] ) );
+        $quantity = empty( $_POST['quantity'] ) ? 1 : apply_filters( 'woocommerce_stock_amount', $_POST['quantity'] );
+        $variation_id = $_POST['variation_id'];     
+
+        $cart_item_data = $_POST;
+        unset($cart_item_data['quantity']);
+        
+        $variation = array();
+
+        foreach ($cart_item_data as $key => $value) {
+            if (preg_match("/^attribute*/", $key)) {
+                $variation[$key] = $value;
+            }
+        }
+        
+        foreach ($variation as $key=>$value) { $variation[$key] = stripslashes($value); }
+        $passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity );
+    
+        if ($passed_validation && WC()->cart->add_to_cart( $product_id, $quantity, $variation_id, $variation, $cart_item_data ) ) {
+            do_action( 'woocommerce_ajax_added_to_cart', $product_id );
+            if ( get_option( 'woocommerce_cart_redirect_after_add' ) == 'yes' ) {
+                wc_add_to_cart_message( $product_id );
+            }
+            global $woocommerce;
+            $items = $woocommerce->cart->get_cart();
+            wc_setcookie( 'woocommerce_items_in_cart', count( $items ) );
+            wc_setcookie( 'woocommerce_cart_hash', md5( json_encode( $items ) ) );
+            do_action( 'woocommerce_set_cart_cookies', true );
+            // Return fragments
+            WC_AJAX::get_refreshed_fragments();     
+        } else {
+            // If there was an error adding to the cart, redirect to the product page to show any errors
+            $data = array(
+                'error' => true,
+                'product_url' => apply_filters( 'woocommerce_cart_redirect_after_error', get_permalink( $product_id ), $product_id )
+            );
+            wp_send_json_error( $data );
+        }
+    }
+
+    // Add Video URL Meta Box to Product Data Section end 
+
+    /* Product ajax search */
+    add_action( 'wp_ajax_nopriv_lptv_ajax_product_search', 'lptv_ajax_product_search' );
+    add_action( 'wp_ajax_lptv_ajax_product_search', 'lptv_ajax_product_search' );
+
+    function lptv_ajax_product_search() {
+        $itemcat = $_REQUEST['itemcat'];
+        $output = '';
+
+        $args = array();
+        $args['post_type'] = 'product';
+        $args['post_status'] = 'publish';
+        $args['posts_per_page'] = -1;
+        if ($itemcat != 'all') {
+            $args['product_cat'] = $itemcat;
+        }
+
+        $product_data = new WP_Query($args);
+
+        if ($product_data->have_posts()) : while ($product_data->have_posts()) : $product_data->the_post(); 
+            $output .= '<li><a href="'.esc_url(get_the_permalink(get_the_ID())).'">'.esc_attr(get_the_title(get_the_ID())).'</a></li>';
+        endwhile; endif;
+        wp_reset_postdata();
+
+        echo json_encode( array( 'products' => $output ) );
+
+        die();
+    }
+}
+
+// custom search for specific post type 
+function lptv_template_chooser($template) {
+    global $wp_query;   
+    $post_type = get_query_var('post_type');   
+    if( $wp_query->is_search && $post_type == 'team' ) {
+        return locate_template('archive.php');  //  redirect to archive-search.php
+    } elseif( $wp_query->is_search && $post_type == 'location' ) {
+        return locate_template('archive.php');  //  redirect to archive-search.php
+    }   
+    return $template;   
+}
+add_filter('template_include', 'lptv_template_chooser'); 
+
+// most viewed post
+function lptv_set_post_views($postID) {
+    $countKey = 'post_views_count';
+    $count = get_post_meta($postID, $countKey, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $countKey);
+        add_post_meta($postID, $countKey, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $countKey, $count);
+    }
+}
+
+ 
+// comment-disable start First, this will disable support for comments and trackbacks in post types
+
+function lptv_disable_comments_post_types_support() {
+   $post_types = get_post_types();
+   foreach ($post_types as $post_type) {
+      if(post_type_supports($post_type, 'comments')) {
+         remove_post_type_support($post_type, 'comments');
+         remove_post_type_support($post_type, 'trackbacks');
+      }
+   }
+}
+add_action('admin_init', 'lptv_disable_comments_post_types_support');
+
+// Then close any comments open comments on the front-end just in case
+function lptv_disable_comments_status() {
+   return false;
+}
+add_filter('comments_open', 'lptv_disable_comments_status', 20, 2);
+add_filter('pings_open', 'lptv_disable_comments_status', 20, 2);
+
+// Remove comments metabox from dashboard
+function lptv_disable_comments_dashboard() {
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); 
+}
+add_action('admin_init', 'lptv_disable_comments_dashboard');
+
+// Remove comments links from admin bar
+function lptv_disable_comments_admin_bar() {
+    if (is_admin_bar_showing()) {
+        remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60); 
+    } 
+}
+add_action('init', 'lptv_disable_comments_admin_bar'); 
+
+// comment-disable end
+
+// Map code - Only load if mapWrap is present
+function custom_leaflet_map() {
+    // Get the upload directory
+    $upload_dir = wp_upload_dir();
+    // Generate the full URL to the image dynamically
+    $marker_icon_url = $upload_dir['baseurl'] . '/cypress-chase-location.png'; // Adjust the path if needed
+
+    ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the mapWrap class exists on the page before loading the entire map script
+            if (document.querySelector('.mapWrap')) {
+                console.log("MapWrap class found. Loading map script...");
+
+                // Now load the full map initialization script
+                if (document.getElementById('custom-map')) {
+                    console.log("Custom map container found. Initializing map...");
+
+                    // Initialize the map and set view to the desired coordinates, disabling scroll zoom
+                    var map = L.map('custom-map', {
+                        scrollWheelZoom: false // Disable zoom on scroll
+                    }).setView([26.1637537, -80.215619], 13); // Adjust zoom to fit all points // center point
+
+                    // Add map tiles with a custom color scheme (gray theme)
+                    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                        attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+                        subdomains: 'abcd',
+                        maxZoom: 19
+                    }).addTo(map);
+
+                    // Define a custom marker icon with dynamic PHP URL
+                    var customIcon = L.icon({
+                        iconUrl: '<?php echo esc_url($marker_icon_url); ?>', // Dynamic URL generated with PHP
+                        iconSize: [53, 73], // Adjust icon size
+                        iconAnchor: [22, 94], // Adjust anchor point
+                        popupAnchor: [-3, -76] // Adjust popup position
+                    });
+
+                    // Add the first custom marker (Cypress Chase)
+                    var marker1 = L.marker([26.1637537, -80.215619], {icon: customIcon}).addTo(map);
+                    marker1.bindPopup("<label style='font-size: 16px; font-weight: bold;'>Cypress Chase</label><br>3070 NW 48th Terrace <br/>Lauderdale Lakes, FL 33313");
+
+                    // Add the second custom marker (Example Location 2)
+                    var marker2 = L.marker([26.171837, -80.196190], {icon: customIcon}).addTo(map);
+                    marker2.bindPopup("<label style='font-size: 16px; font-weight: bold;'>Location 2</label><br>Some address here");
+
+                    // Add the third custom marker (Example Location 3)
+                    var marker3 = L.marker([26.150728, -80.231194], {icon: customIcon}).addTo(map);
+                    marker3.bindPopup("<label style='font-size: 16px; font-weight: bold;'>Location 3</label><br>Another address here");
+
+                    console.log("Map markers loaded successfully.");
+                } else {
+                    //console.error("Custom map container not found.");
+                }
+            } else {
+                //console.error("MapWrap class not found. Skipping map load.");
+            }
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'custom_leaflet_map');
+
+// map code end // use this html where needed <div id="custom-map" style="width: 100%; height: 640px;"></div> 
+
+// new theme needed
+function custom_order_status_form() {
+    ob_start();
+    ?>
+    <form method="post">
+        <input type="email" name="email" id="email" placeholder="Email Address" required>        
+        <input type="text" name="order_number" id="order_number" placeholder="Order Number" required>        
+        <button type="submit" name="check_order_status" class="btnbx">Check Status</button>
+    </form>
+    <?php
+    
+    if (isset($_POST['check_order_status'])) {
+        $email = sanitize_email($_POST['email']);
+        $order_number = sanitize_text_field($_POST['order_number']);
+        
+        $order = wc_get_order($order_number);
+        
+        if ($order && $order->get_billing_email() === $email) {
+            echo '<p class="stutus">Order Status: <span>' . wc_get_order_status_name($order->get_status()) . '</span></p>';
+        } else {
+            echo '<p>Order not found or email does not match.</p>';
+        }
+    }
+    
+    return ob_get_clean();
+}
+add_shortcode('order_status_form', 'custom_order_status_form');
+
+// Show Search Field Before wc-orders-filter
+add_action('admin_footer', function() {
+    $screen = get_current_screen();
+
+    // Ensure we are on the WooCommerce Orders Page
+    if ($screen && $screen->id === 'woocommerce_page_wc-orders') {
+        ?>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                function insertOrderSearchBox() {
+                    let tableNav = document.querySelector('.tablenav.top');
+
+                    if (tableNav && !document.getElementById('order_id_search_container')) {
+                        let searchContainer = document.createElement('div');
+                        searchContainer.setAttribute('id', 'order_id_search_container');
+                        searchContainer.style.display = "inline-flex";
+                        searchContainer.style.alignItems = "center";
+                        searchContainer.style.gap = "10px";
+                        searchContainer.style.marginLeft = "10px"; // Adjust for spacing
+                        
+                        let searchBox = document.createElement('input');
+                        searchBox.setAttribute('type', 'number');
+                        searchBox.setAttribute('id', 'order_id_search');
+                        searchBox.setAttribute('placeholder', 'Enter Order ID');
+                        searchBox.style.padding = "5px";
+                        searchBox.style.height = "30px";
+                        searchBox.style.border = "1px solid #ccc";
+                        searchBox.style.borderRadius = "5px";
+
+                        let searchButton = document.createElement('button');
+                        searchButton.innerText = "Go to Order";
+                        searchButton.classList.add('button', 'button-primary');
+
+                        // Prevent form submission when pressing Enter
+                        searchBox.addEventListener("keypress", function(event) {
+                            if (event.key === "Enter") {
+                                event.preventDefault();
+                                searchButton.click(); // Simulate button click
+                            }
+                        });
+
+                        // Redirect to Edit Order Page (Fix for form submission issue)
+                        searchButton.addEventListener("click", function(event) {
+                            event.preventDefault(); // Prevent form submission
+                            let orderId = document.getElementById('order_id_search').value.trim();
+                            if (orderId) {
+                                let editUrl = "<?php echo admin_url('post.php?post='); ?>" + orderId + "&action=edit";
+                                window.location.href = editUrl;
+                            } else {
+                                alert("Please enter a valid Order ID.");
+                            }
+                        });
+
+                        // Append elements to container
+                        searchContainer.appendChild(searchBox);
+                        searchContainer.appendChild(searchButton);
+
+                        // Insert the search field inside tablenav.top
+                        let bulkActions = tableNav.querySelector('.bulkactions');
+                        if (bulkActions) {
+                            bulkActions.parentNode.insertBefore(searchContainer, bulkActions.nextSibling);
+                        } else {
+                            tableNav.appendChild(searchContainer);
+                        }
+                    }
+                }
+
+                // Run the function after a slight delay for dynamic content loading
+                setTimeout(insertOrderSearchBox, 1500);
+            });
+        </script>
+        <?php
+    }
+});
+
+
+// generate menu category tree
+if (!function_exists('render_category_tree_v2')) {
+    function render_category_tree_v2($parent_id)
+    {
+        // get cache file path
+        $upload_dir = wp_upload_dir();
+        $cache_dir = $upload_dir['basedir'] . '/category-cache/';
+        $cache_file = $cache_dir . 'category_tree_' . $parent_id . '.html';
+        
+        $category_slugs = array(
+            'european-plates' => 1,
+            'canadian-license-plates' => 4,
+            'clearance' => 12,
+            'custom-fun-plates' => 14,
+            'flag-plates-oval-id' => 8,
+            'gcc-plates' => 3,
+            'international-plates' => 2,
+            'military-plates' => 6,
+            'motorcycle-plates' => 5,
+            'auto-brand-plates' => 11,
+            'nautical-plates' => 7,
+            'promotional-plates' => 10,
+            'religious-plates' => 13,
+            'sport-hobby-plates' => 9,
+            'usa-state-plates' => 0,
+        );
+
+        // create cache directory if it doesn't exist
+        if (!file_exists($cache_dir)) {
+            wp_mkdir_p($cache_dir);
+        }
+        
+        // check if cache file exists and is still valid (24 hours)
+        if (file_exists($cache_file) && (time() - filemtime($cache_file)) < 86400) {
+            // return cached content
+            error_log('Category Tree Cache: Using cached content for parent_id ' . $parent_id . ' from file: ' . basename($cache_file));
+            echo file_get_contents($cache_file);
+            return;
+        }
+        
+        // generate fresh content
+        error_log('Category Tree Cache: Generating fresh content for parent_id ' . $parent_id . ' - cache file ' . (file_exists($cache_file) ? 'expired' : 'not found'));
+        ob_start();
+        
+        // first get all categories at once
+        $all_terms = get_terms([
+            'taxonomy' => 'product_cat',
+            'hide_empty' => false,
+            'orderby' => 'name',
+            'order' => 'ASC',
+            'hierarchical' => true
+        ]);
+
+        if (empty($all_terms) || is_wp_error($all_terms)) {
+            return;
+        }
+
+        // get product counts for all categories in one query
+        $term_counts = get_term_product_counts();
+
+        // if building from root level, sort first-level categories under the given parent
+        // get only first-level categories under the specified parent
+        $first_level_terms = array_filter($all_terms, function ($term) use ($parent_id) {
+            return $term->parent == $parent_id;
+        });
+        
+        // debug: log found categories
+        error_log('Category Tree Debug: Found ' . count($first_level_terms) . ' categories for parent_id ' . $parent_id);
+        foreach ($first_level_terms as $term) {
+            error_log('Category Tree Debug: Found category: ' . $term->name . ' (slug: ' . $term->slug . ')');
+        }
+            
+        // sort first-level categories according to category_slugs order
+        usort($first_level_terms, function($a, $b) use ($category_slugs) {
+            $order_a = isset($category_slugs[$a->slug]) ? $category_slugs[$a->slug] : 999;
+            $order_b = isset($category_slugs[$b->slug]) ? $category_slugs[$b->slug] : 999;
+            error_log('Category Tree Debug: Comparing ' . $a->slug . ' (order: ' . $order_a . ') vs ' . $b->slug . ' (order: ' . $order_b . ')');
+            return $order_a - $order_b;
+        });
+
+        // build tree for each sorted first-level category
+        echo '<ul class="sub-menu">';
+        foreach ($first_level_terms as $term) {
+                // skip if term has no products (including children)
+                if (!category_has_products_recursive($term->term_id, $all_terms, $term_counts)) {
+                    continue;
+                }
+                $class_name = 'cat-' . sanitize_title($term->name);
+                echo '<li class="' . esc_attr($class_name) . '">';
+                echo '<a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a>';
+                
+                // build children for this top-level category
+                echo build_category_branch($all_terms, $term->term_id, $term_counts);
+                
+                echo '</li>';
+            }
+        echo '</ul>';
+        
+        // get the generated content
+        $content = ob_get_contents();
+        ob_end_clean();
+        
+        // save to cache file
+        file_put_contents($cache_file, $content);
+        error_log('Category Tree Cache: Fresh content saved to cache file: ' . basename($cache_file) . ' (Size: ' . strlen($content) . ' bytes)');
+        
+        // output the content
+        echo $content;
+    }
+}
+
+// helper function to get product counts for all terms in one query
+if (!function_exists('get_term_product_counts')) {
+    function get_term_product_counts()
+    {
+        global $wpdb;
+
+        $query = "
+        SELECT tt.term_id, COUNT(DISTINCT tr.object_id) as count
+        FROM {$wpdb->term_relationships} tr
+        INNER JOIN {$wpdb->term_taxonomy} tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
+        INNER JOIN {$wpdb->posts} p ON tr.object_id = p.ID
+        WHERE tt.taxonomy = 'product_cat'
+        AND p.post_type = 'product'
+        AND p.post_status = 'publish'
+        GROUP BY tt.term_id
+    ";
+
+        $results = $wpdb->get_results($query);
+
+        $counts = [];
+        foreach ($results as $row) {
+            $counts[$row->term_id] = $row->count;
+        }
+
+        return $counts;
+    }
+}
+
+// helper function to check if category or its descendants have products
+if (!function_exists('category_has_products_recursive')) {
+    function category_has_products_recursive($term_id, $all_terms, $term_counts) {
+        // check if current category has products
+        if (isset($term_counts[$term_id]) && $term_counts[$term_id] > 0) {
+            return true;
+        }
+        
+        // check if any child categories have products
+        $children = array_filter($all_terms, function ($term) use ($term_id) {
+            return $term->parent == $term_id;
+        });
+        
+        foreach ($children as $child) {
+            if (category_has_products_recursive($child->term_id, $all_terms, $term_counts)) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+}
+
+
+// helper function to build the category tree
+if (!function_exists('build_category_branch')) {
+    function build_category_branch($all_terms, $parent_id, $term_counts)
+    {
+        $output = '';
+        $children = array_filter($all_terms, function ($term) use ($parent_id) {
+            return $term->parent == $parent_id;
+        });
+
+        if (!empty($children)) {
+            $output .= '';
+            $nonEmptyChildren = 0;
+
+            foreach ($children as $term) {
+
+                // skip if term has no products (including children)
+                if (!category_has_products_recursive($term->term_id, $all_terms, $term_counts)) {
+                    continue;
+                }
+
+                $class_name = 'cat-' . sanitize_title($term->name);
+                $output .= '<li class="' . esc_attr($class_name) . '">';
+                $output .= '<a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a>';
+
+                $output .= build_category_branch($all_terms, $term->term_id, $term_counts);
+
+                $output .= '</li>';
+                $nonEmptyChildren++;
+            }
+
+            
+            if ($nonEmptyChildren > 0) {
+                $output = '<ul class="sub-menu">'.$output.'</ul>';
+            }
+
+        }
+
+        return $output;
+    }
+}
+
+// helper function to clear category tree cache
+if (!function_exists('clear_category_tree_cache')) {
+    function clear_category_tree_cache() {
+        $upload_dir = wp_upload_dir();
+        $cache_dir = $upload_dir['basedir'] . '/category-cache/';
+        
+        if (is_dir($cache_dir)) {
+            $files = glob($cache_dir . '*.html');
+            $cleared_count = 0;
+            foreach ($files as $file) {
+                if (is_file($file)) {
+                    unlink($file);
+                    $cleared_count++;
+                }
+            }
+            if ($cleared_count > 0) {
+                error_log('Category Tree Cache: Cleared ' . $cleared_count . ' cache file(s)');
+            }
+        }
+    }
+}
+
+// clear cache when categories are created, updated, or deleted
+add_action('create_product_cat', 'clear_category_tree_cache');
+add_action('edit_product_cat', 'clear_category_tree_cache');
+add_action('delete_product_cat', 'clear_category_tree_cache');
+
+// excerpt for shop schema 
+function plates_custom_excerpts($limit) {
+	return wp_trim_words(get_the_content(), $limit,);
+}
+
+/**
+ * Insert Organization Schema Markup using WooCommerce settings
+ */
+function add_woocommerce_organization_schema() {
+       
+        $store_name = get_bloginfo( 'name' );
+        $store_url = home_url( '/' );
+        
+        $country = WC()->countries->get_base_country();
+        $address = array(
+            'street'   => WC()->countries->get_base_address(),
+            'locality' => WC()->countries->get_base_city(),
+            'region'   => WC()->countries->get_base_state(),
+            'postcode' => WC()->countries->get_base_postcode(),
+            'country'  => WC()->countries->countries[ $country ] ?? '',
+        );
+        
+        $schema = array(
+            '@context'    => 'https://schema.org',
+            '@type'       => 'Organization',
+            'name'        => esc_html( $store_name ),
+            'url'         => esc_url( $store_url ),
+            'logo'        => home_url('/wp-content/uploads/logo.svg'),
+            'email'       => '8d29401cebd3@yopmail.com',
+            'telephone'   => '+1-954-485-0995',
+            //'openingHours'=> ["Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"],
+            'address'     => array(
+                '@type'           => 'PostalAddress',
+                'streetAddress'    => esc_html( $address['street'] ),
+                'addressLocality'  => esc_html( $address['locality'] ),
+                'addressRegion'    => esc_html( $address['region'] ),
+                'postalCode'       => esc_html( $address['postcode'] ),
+                'addressCountry'  => esc_html( $address['country'] ),
+            ),
+            'sameAs'      => array(
+                'https://www.facebook.com/lptvcustomplates/',
+                'https://twitter.com/platemeister',
+                'https://www.tiktok.com/@license_plates.tv',
+                'https://www.youtube.com/@lptv-licenseplates',
+                'https://www.instagram.com/licenseplates.tv/',
+                'https://www.linkedin.com/company/27062744'
+            ),
+        );
+
+        echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) . '</script>';
+}
+
+add_action( 'wp_head', 'add_woocommerce_organization_schema' );
+
+/**
+ * Force image alt text from media library
+ * @author Aleksey
+ * @date 2025-06-17
+ */
+add_filter( 'render_block_core/image', 'force_image_alt_from_media_library', 10, 2 );
+function force_image_alt_from_media_library( $block_content, $block ) {
+
+    if ( isset( $block['attrs']['id'] ) && empty( $block['attrs']['alt'] ) ) {
+        $alt_text = get_post_meta( $block['attrs']['id'], '_wp_attachment_image_alt', true );
+        if ( $alt_text ) {
+            $block_content = str_replace( '<img ', '<img alt="' . esc_attr( $alt_text ) . '" ', $block_content );
+        }
+    }
+    return $block_content;
+}
+
+// resort products alphabetical, but with numbers are the last
+add_action( 'pre_get_posts', 'custom_woocommerce_product_sorting' );
+function custom_woocommerce_product_sorting( $query ) {
+    // Check if it's the main WooCommerce shop query and not in the admin
+    if ( ! is_admin() && $query->is_main_query() && ( is_shop() || is_product_category() || is_product_tag() ) ) {
+        
+        // Remove any existing sorting
+        remove_action( 'pre_get_posts', 'custom_woocommerce_product_sorting' );
+        
+        // Set the orderby to title
+        $query->set( 'orderby', 'title' );
+        $query->set( 'order', 'ASC' );
+        
+        add_filter( 'posts_clauses', 'custom_product_sorting_with_meta', 10, 2 );
+    }
+}
+
+// function custom_sort_by_title_number_prefix( $clauses, $query ) {
+//     global $wpdb;
+
+//     // Check if we are on the right query
+//     if ( $query->is_main_query() && ( is_shop() || is_product_category() || is_product_tag() ) ) {
+//         // This clause tells WordPress to sort by a calculated value:
+//         // If the title starts with a number, return 1, else return 0.
+//         // Then, within those groups, sort by the actual title.
+//         $clauses['orderby'] = "
+//             CASE 
+//                 WHEN {$wpdb->posts}.post_title REGEXP '^[0-9]' THEN 1 
+//                 ELSE 0 
+//             END ASC,
+//             {$wpdb->posts}.post_title ASC
+//         ";
+//     }
+//     return $clauses;
+// }
+
+function custom_product_sorting_with_meta( $clauses, $query ) {
+    global $wpdb;
+    
+    if ( $query->is_main_query() && ( is_shop() || is_product_category() || is_product_tag() ) ) {
+        $clauses['join'] .= " LEFT JOIN {$wpdb->postmeta} AS sort_meta ON {$wpdb->posts}.ID = sort_meta.post_id AND sort_meta.meta_key = '_plate_products_sort_order'";
+        
+        $clauses['orderby'] = "
+            CASE 
+                WHEN sort_meta.meta_value IS NOT NULL AND sort_meta.meta_value != '' THEN 0
+                ELSE 1
+            END ASC,
+            CASE 
+                WHEN sort_meta.meta_value IS NOT NULL AND sort_meta.meta_value != '' THEN CAST(sort_meta.meta_value AS SIGNED)
+                ELSE 0
+            END ASC,
+            CASE 
+                WHEN {$wpdb->posts}.post_title REGEXP '^[0-9]' THEN 1 
+                ELSE 0 
+            END ASC,
+            {$wpdb->posts}.post_title ASC
+        ";
+    }
+    return $clauses;
+}
+add_filter( 'woocommerce_checkout_fields', 'custom_change_order_notes_label' );
+
+function custom_change_order_notes_label( $fields ) {
+    if ( isset( $fields['order']['order_comments'] ) ) {
+        $fields['order']['order_comments']['label'] = 'Additional Instructions';
+        $fields['order']['order_comments']['placeholder'] = '';
+    }
+    return $fields;
+}
+
+// always show free shipping message on cart
+add_action( 'woocommerce_before_shipping_calculator', 'lptv_custom_shipping_message_before' );
+function lptv_custom_shipping_message_before() {
+    if ( ! is_cart() ) {
+        return;
+    }
+    
+    echo '<div class="lptv-free-shipping-message">Free shipping to all USA addresses</div>';
+}
+
+// hide shipping details but keep row visible on cart page
+add_action( 'wp_head', 'lptv_hide_cart_shipping_details' );
+function lptv_hide_cart_shipping_details() {
+    if ( ! is_cart() ) {
+        return;
+    }
+    ?>
+    <style>
+        .woocommerce-cart .woocommerce-shipping-destination,
+        .woocommerce-cart .shipping-calculator-button,
+        .woocommerce-cart .woocommerce-shipping-methods {
+            display: none !important;
+        }
+    </style>
+    <?php
+}
+
+/**
+ * Get unique parent product_cat IDs for a product at a given ancestor depth.
+ *
+ * @param int $product_id
+ * @param int $level 1 = immediate parent, 2 = grandparent, ... 
+ *                   If the chain is shorter, it returns the highest available.
+ * @return int[] Array of unique term_ids at that level
+ */
+function wc_get_parent_cat_ids_at_level( $product_id, $level = 1 ) {
+    $out   = [];
+    $terms = wp_get_post_terms( $product_id, 'product_cat', [ 'fields' => 'ids' ] );
+    if ( is_wp_error( $terms ) || empty( $terms ) ) return $out;
+
+    foreach ( $terms as $tid ) {
+        $anc = get_ancestors( $tid, 'product_cat' ); // closest parent first
+        if ( empty( $anc ) ) {
+            continue; // no parent - skip or push 0 if you prefer
+        }
+        // pick the requested level, or the highest available if shorter
+        $idx = min( $level - 1, count( $anc ) - 1 );
+        $target_id = (int) $anc[ $idx ];
+        $out[ $target_id ] = $target_id; // de-dupe
+    }
+    return array_values( $out );
+}
+
+
+

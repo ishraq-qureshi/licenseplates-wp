@@ -1,0 +1,246 @@
+<?php
+
+/**
+ * The template for displaying product content in the single-product.php template
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/content-single-product.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 3.6.0
+ */
+
+defined('ABSPATH') || exit;
+
+global $product;
+$font1 = $product->get_meta('_plate_font1', true);
+$legendURL = '/wp-content/resources/images/legends/legend' . $font1 . '.png';
+
+// chekc if we need to show plate holders
+// suppose we show it for custom plates, if not - need to tweak it
+$plate_template_id = $product->get_meta('_plate_template_id', true);
+$show_plate_holders = false;
+if ($plate_template_id) {
+
+    // pull products from category plate holders
+    $plate_holders = get_posts(array(
+        'post_type' => 'product',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => 'plate-holders',
+            ),
+        ),
+    ));
+
+    if (count($plate_holders) > 0) {
+        $show_plate_holders = true;
+    }
+
+    // compile array of wooommerce products with category plate holders
+    $plateHolders = array();
+    foreach ($plate_holders as $plate_holder) {
+        $p = wc_get_product($plate_holder->ID);
+        $plateHolders[] = array(
+            'id' => $plate_holder->ID,
+            'title' => $plate_holder->post_title,
+            'price' => $p->get_price(),
+        );
+    }
+}
+
+/**
+ * Hook: woocommerce_before_single_product.
+ *
+ * @hooked woocommerce_output_all_notices - 10
+ */
+do_action('woocommerce_before_single_product');
+
+if (post_password_required()) {
+    echo get_the_password_form(); // WPCS: XSS ok.
+    return;
+} ?>
+
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
+
+    <!--releaseWrap-->
+    <div class="productWrap">
+        <div class="container">
+            <div class="bgimageBox">
+                <div class="bg_image_overlay"></div>
+                <!-- <h2 class="secTitle line">
+                    <//?php 
+                    $terms = get_the_terms( get_the_ID(), 'product_cat' );
+                    if ( $terms && ! is_wp_error( $terms ) ) {
+                        if ( ! empty( $terms ) ) {
+                            echo $terms[0]->name;
+                        } 
+                    } ?>  
+                </h2> -->
+                <h2 class="topTitle">German License Plate Munich (Home Of Bmw)</h2>
+                <h4>Issued from january 1994 with free state and date decals</h4>
+                <p>Embossed with your custom number</p>
+            </div>
+            <div class="colorBox">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12 imgSlide">
+                        <div class="gallaryBox">
+                            <?php
+                            /**
+                             * Hook: woocommerce_before_single_product_summary.
+                             *
+                             * @hooked woocommerce_show_product_sale_flash - 10
+                             * @hooked woocommerce_show_product_images - 20
+                             */
+                            do_action('woocommerce_before_single_product_summary');
+                            ?>
+                        </div>
+
+
+                        <!-- add frame product here -->
+                        <?php if ($show_plate_holders): ?>
+                            <div class="plateHolderBox">
+                                <div class="plateHolderInner">
+                                    <div class="" style="border-bottom: 1px solid #ccc; padding-bottom: 5px;margin-bottom: 10px;">
+                                        <span class="">Universal Plate Holder</span>
+                                    </div>
+                                    <div class="plateHolder" style="margin-bottom: 20px;">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/universalplateholder.gif" style="" />
+                                        <div class="" style="margin:10px 0 5px 0">Please choose</div>
+                                        <div class="selectted">
+                                            <select id="plateHolderSelect" name="plateHolderSelect">
+                                                <option value="">None</option>
+                                                <?php foreach ($plateHolders as $plateHolder) { ?>
+                                                    <option value="<?php echo $plateHolder['id']; ?>"><?php echo $plateHolder['title']; ?> ( +<?php echo wc_price($plateHolder['price']); ?> )</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+                    </div> <!-- gallaryBox -->
+
+                    <div class="col-lg-8 col-sm-12 contentBox">
+                        <div class="title-innr">
+                            <div class="freeBox">
+                                <?php echo do_shortcode('[post type="content" id="1912"]'); ?>
+                            </div>
+                        </div>
+
+                        <div class="priceBox">
+                            <h1 class="productTitle">Customize your <span>plate</span></h1>
+                            <?php
+
+                            if ($product) {
+                                if ($product->get_type() == "simple" && $product->is_purchasable() && $product->is_in_stock() && ! $product->is_sold_individually()) {
+                                    $html = '<form action="' . esc_url($product->add_to_cart_url()) . '" class="simple_cart_form cart" method="post" enctype="multipart/form-data">';
+                                    $html .= woocommerce_quantity_input(array(), $product, false);
+
+                                    $html .= '<button type="submit" data-quantity="1" data-product_id="' . $product->get_id() . '" class="button product_type_simple add_to_cart_button ajax_add_to_cart buyBtn elementor-button">Add to Cart</button>';
+                                    $html .= '</form>';
+
+                                    $html .= '<script type="text/javascript">
+                                        jQuery(function($) { 
+                                            // handle quantity change
+                                            $("form.simple_cart_form").on("change", "input.qty", function() { 
+                                                $(this.form).find("[data-quantity]").attr("data-quantity", this.value); 
+                                            });
+                                            // remove added to cart message
+                                            jQuery(document.body).on("adding_to_cart", function() { 
+                                                jQuery("a.added_to_cart").remove(); 
+                                            }); 
+                                        });
+                                    </script>';
+
+                                    echo $html;
+                                } else {
+                                    woocommerce_template_single_add_to_cart();
+                                }
+                            } ?>
+
+                            <h3><?php woocommerce_template_single_price(); ?></h3>
+
+                        </div>
+
+
+                        <div class="fontBox">
+                            <div class="authenticBpx">
+                                <div class="bgimageBox">
+                                    <div class="bg_image_overlay"></div>
+                                    <h3 class="fontTitle">Authentic Font Legend</h3>
+                                </div>
+                                <div class="imageBox">
+                                    <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/authentic-font-legend.svg"> -->
+                                    <img src="<?php echo $legendURL; ?>" style="width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tabWrap descriptionWrap">
+        <div class="container">
+            <?php woocommerce_output_product_data_tabs(); ?>
+            <div class="row bottomBox">
+                <div class="col-md-6 col-sm-6 col-12 leftBox">
+                    <?php if (get_field('model_name')) {
+                        $fValue1 = get_field('model_name');
+                        if ($fValue1) { ?>
+                            <p class="modelText">
+                                <span>Model:</span> <?php the_field('model_name'); ?>
+                            </p>
+                    <?php  }
+                    } ?>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-12 rightBox">
+                    <div class="btnBox">
+                        <a class="dbtn" href="<?php echo get_permalink(wc_get_page_id('shop')); ?>">Return to Product List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php echo do_shortcode('[post type="content" id="696"]'); ?>
+
+    <div class="formWrap receiveWrap">
+        <div class="container">
+            <div class="bgBox">
+                <div class="wp-block-group__inner-container">
+                    <?php echo do_shortcode('[post type="content" id="1209"]'); ?>
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-12 textBox">
+                            <?php echo do_shortcode('[post type="content" id="813"]'); ?>
+                        </div>
+                        <div class="col-xl-5 col-lg-12 buttonBox">
+                            <?php echo do_shortcode('[contact-form-7 id="9c3fa00" title="Sign-UP to Receive Form"]'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="formWrap questionWrap">
+        <div class="container">
+            <?php echo do_shortcode('[post type="content" id="825"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="1c1d715" title="Have Questions? We\'re Here To Help Form"]'); ?>
+        </div>
+    </div>
+
+</div>

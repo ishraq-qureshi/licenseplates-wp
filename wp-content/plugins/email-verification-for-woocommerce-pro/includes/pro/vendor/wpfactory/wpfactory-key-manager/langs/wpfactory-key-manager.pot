@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-19T23:49:31+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: wpfactory-key-manager\n"
+
+#: includes/class-wpfkm-api-access-method-option.php:124
+msgid "API access method"
+msgstr ""
+
+#: includes/class-wpfkm-api-access-method-option.php:135
+msgid "The preferred way for accessing WPFactory API. If something goes wrong, change it."
+msgstr ""
+
+#: includes/class-wpfkm-plugins-updater.php:123
+msgid "License is valid."
+msgstr ""
+
+#: includes/class-wpfkm-plugins-updater.php:129
+#: includes/class-wpfkm-plugins-updater.php:235
+#: includes/class-wpfkm-site-key-manager.php:376
+msgid "Key"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:217
+msgid "Site URL"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:249
+#: includes/class-wpfkm-site-key-manager.php:323
+msgid "Plugin"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:249
+#: includes/class-wpfkm-site-key-manager.php:348
+msgid "Theme"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:262
+msgid "%s key"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:271
+#: includes/class-wpfkm-site-key-manager.php:332
+#: includes/class-wpfkm-site-key-manager.php:357
+msgid "Set key"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:273
+msgid "Set this key for all items"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:274
+msgid "Useful for the &quot;All Plugins Access&quot; users."
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:275
+msgid "Are you sure?"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:311
+msgid "WPFactory Key Manager"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:315
+msgid "WPFactory items"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:338
+#: includes/class-wpfkm-site-key-manager.php:363
+msgid "Check key"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:374
+msgid "Type"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:375
+msgid "Item"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:377
+msgid "Actions"
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:388
+msgid "You have no items from %s installed."
+msgstr ""
+
+#: includes/class-wpfkm-site-key-manager.php:400
+msgid "Update item list manually"
+msgstr ""
+
+#: includes/wpfkm-site-key-functions.php:102
+msgid "No key set."
+msgstr ""
+
+#: includes/wpfkm-site-key-functions.php:103
+msgid "To get the key, please visit <a target=\"_blank\" href=\"%s\">your account page at %s</a>."
+msgstr ""
+
+#: includes/wpfkm-site-key-functions.php:106
+msgid "No response from server. Please <a href=\"%s\">try again</a> later."
+msgstr ""
+
+#: includes/wpfkm-site-key-functions.php:108
+msgid "Server error. Please <a href=\"%s\">try again</a> later."
+msgstr ""
+
+#: includes/wpfkm-site-key-functions.php:112
+msgid "Error: Unexpected error."
+msgstr ""

@@ -1,0 +1,2007 @@
+# Copyright (C) 2024 OPMC Australia Pty Ltd
+# This file is distributed under the GPL v3.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Anti Fraud 5.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-anti-"
+"fraud\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-12T19:53:45+05:30\n"
+"PO-Revision-Date: 2024-03-28 15:50+0530\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: woocommerce-anti-fraud\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"Language: fa\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-anti-fraud.php
+msgid "WooCommerce Anti Fraud"
+msgstr "مبارزه با تقلب ووکامرس"
+
+#. Plugin URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://woocommerce.com/products/woocommerce-anti-fraud/"
+msgstr "https://woocommerce.com/products/woocommerce-anti-fraud/"
+
+#. Description of the plugin
+#: woocommerce-anti-fraud.php
+msgid ""
+"Advanced fraud and card attack protection for WooCommerce, with risk scoring, "
+"rule-based controls, checkout protection, and tools to help merchants detect, "
+"prevent, and respond to suspicious activity."
+msgstr ""
+"با استفاده از مجموعه ای از قوانین امتیازدهی پیشرفته، به هر یک از تراکنش های "
+"خود امتیاز دهید، تقلب های احتمالی را بررسی کنید."
+
+#. Author of the plugin
+#: woocommerce-anti-fraud.php
+msgid "OPMC Australia Pty Ltd"
+msgstr "OPMC استرالیا Pty Ltd"
+
+#. Author URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://opmc.biz/"
+msgstr "https://opmc.biz/"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:29
+msgid "Anti Fraud - Admin Notice"
+msgstr "ضد کلاهبرداری - اطلاعیه مدیر"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:30
+msgid "Admin notification about an order."
+msgstr "اطلاع رسانی مدیر در مورد یک سفارش"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:50
+#: anti-fraud-core/class-wc-af-admin-email.php:51
+msgid "Fraud notification for order #{order_id}"
+msgstr "اعلان کلاهبرداری برای سفارش #{order_id}"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:349
+msgid "Antifraud paypal verification"
+msgstr "تایید پی پال ضد کلاهبرداری"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:354
+msgid "Check pending order fraud risk score"
+msgstr "امتیاز خطر تقلب در سفارش در انتظار را بررسی کنید"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:388
+#: anti-fraud-core/class-wc-af-score-helper.php:490
+#: anti-fraud-core/class-wc-af-score-helper.php:624
+#: anti-fraud-core/class-wc-af-score-helper.php:626
+#: anti-fraud-core/class-wc-af-score-helper.php:629
+#: anti-fraud-core/class-wc-af-score-helper.php:672
+#: anti-fraud-core/class-wc-af-score-helper.php:674
+#: anti-fraud-core/class-wc-af-score-helper.php:677
+msgid "Fraud check done."
+msgstr "بررسی تقلب انجام شد"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:19
+msgid "MaxMind Risk Score"
+msgstr "امتیاز ریسک MaxMind"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Hide details"
+msgstr "پنهان کردن جزئیات"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Show fraud risk details"
+msgstr "جزئیات خطر کلاهبرداری را نشان دهید"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:19
+msgid "Fraud Risk"
+msgstr "خطر تقلب"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:135
+msgid "This order is currently in queue for a fraud check."
+msgstr "این سفارش در حال حاضر در صف بررسی تقلب است."
+
+#: anti-fraud-core/class-wc-af-meta-box.php:136
+msgid "Cancel fraud check queue"
+msgstr "لغو صف چک تقلب"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:141
+msgid "Calculate Fraud Risk"
+msgstr "محاسبه ریسک تقلب"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:25
+msgid "Anti Fraud - PayPal verification"
+msgstr "ضد کلاهبرداری - تأیید پی پال"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:26
+msgid "Notice about PayPal verification."
+msgstr "اطلاعیه در مورد تأیید پی پال"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:47
+msgid "PayPal Verification notification of order #{order_id}"
+msgstr "اعلان تأیید پی پال از سفارش شماره {order_id}"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:28
+msgid "No fraud checking has been done on this order yet."
+msgstr "هنوز هیچ بررسی تقلبی در این سفارش انجام نشده است."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:33
+#: anti-fraud-core/class-wc-af-settings.php:2006
+#: templates/dashboard.php:37
+#: templates/dashboard.php:210
+#: templates/dashboard.php:500
+msgid "Low Risk"
+msgstr "ریسک کم"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:43
+#: anti-fraud-core/class-wc-af-settings.php:2007
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "Medium Risk"
+msgstr "ریسک متوسط"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:47
+#: anti-fraud-core/class-wc-af-settings.php:2008
+#: templates/dashboard.php:39
+#: templates/dashboard.php:500
+msgid "High Risk"
+msgstr "ریسک بالا"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:187
+#: anti-fraud-core/class-wc-af-score-helper.php:229
+#: woocommerce-anti-fraud.php:1280
+msgid "Order fraud checks skipped due to whitelisted email."
+msgstr ""
+"سفارش چک‌های تقلب به دلیل ایمیل‌هایی که در لیست سفید قرار گرفته‌اند رد شدند."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:197
+#: woocommerce-anti-fraud.php:1300
+msgid "Order fraud checks skipped due to whitelisted customer IPs."
+msgstr "بررسی های تقلب سفارش به دلیل IP های مشتری در لیست سفید حذف شد."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:210
+#: woocommerce-anti-fraud.php:1325
+msgid "Order fraud checks skipped due to whitelisted user role."
+msgstr "به دلیل نقش کاربر در لیست سفید، بررسی‌های تقلب سفارش رد شد."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:220
+#: woocommerce-anti-fraud.php:1347
+msgid "Order fraud checks skipped due to whitelisted payment method."
+msgstr "به دلیل روش پرداخت در لیست سفید، چک‌های کلاهبرداری را نادیده بگیرید."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:239
+msgid "Order fraud checks skipped due to user verified from Trust Swiftly."
+msgstr "به دلیل تأیید کاربر از Trust Swiftly، بررسی‌های تقلب سفارش رد شد."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:427
+msgid "User Email is Whitelisted."
+msgstr "ایمیل کاربر در لیست سفید قرار دارد."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:491
+msgid "Payment method "
+msgstr "روش پرداخت"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:548
+msgid "Max order limit reched from same IP."
+msgstr "حداکثر محدودیت سفارش از همان IP دریافت شد."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:588
+msgid "Max Order Limit between time reached."
+msgstr "حداکثر محدودیت سفارش بین زمان رسیدن."
+
+#: anti-fraud-core/class-wc-af-settings.php:40
+#: includes/class-wc-af-privacy.php:11 woocommerce-anti-fraud.php:54
+#: woocommerce-anti-fraud.php:55
+msgid "Anti Fraud"
+msgstr "ضد تقلب"
+
+#: anti-fraud-core/class-wc-af-settings.php:90
+#: anti-fraud-core/class-wc-af-settings.php:1003
+#: anti-fraud-core/tamplate-admin-settings-page.php:15
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+#: anti-fraud-core/class-wc-af-settings.php:91
+msgid "Rules"
+msgstr "قوانین"
+
+#: anti-fraud-core/class-wc-af-settings.php:92
+msgid "Blacklist Settings"
+msgstr "تنظیمات لیست سیاه"
+
+#: anti-fraud-core/class-wc-af-settings.php:93
+msgid "Email Alerts"
+msgstr "هشدارهای ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:94
+#: anti-fraud-core/class-wc-af-settings.php:892
+msgid "Paypal Settings"
+msgstr "تنظیمات پی پال"
+
+#: anti-fraud-core/class-wc-af-settings.php:95
+msgid "MinFraud Settings"
+msgstr "تنظیمات MinFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:96
+msgid "MinFraud Insights Settings"
+msgstr "تنظیمات بینش MinFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:97
+msgid "MinFraud Factors Settings"
+msgstr "تنظیمات MinFraud Factors"
+
+#: anti-fraud-core/class-wc-af-settings.php:98
+#: anti-fraud-core/class-wc-af-settings.php:229
+msgid "Trust Swiftly Settings"
+msgstr "به تنظیمات سریع اعتماد کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:99
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:100
+msgid "Need Support?"
+msgstr "نیاز به پشتیبانی دارید؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:231
+msgid ""
+"<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target="
+"\"_blank\" >Trust Swiftly</a> is a paid, external service that uses AI to "
+"verify the identity and payment of a customer. By using <a href=\"https://"
+"thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust "
+"Swiftly</a> you can decrease fraud by automatically verifying their "
+"information and later use the data to win any dispute cases. To sign up for "
+"Trust Swiftly, click this link: <a href=\"https://thrive.zohopublic.com/aref/"
+"G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trustswiftly.com</a><hr/>"
+msgstr ""
+"<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target="
+"\"_blank\" >Trust Swiftly</a> یک سرویس خارجی و پولی است که از هوش مصنوعی "
+"برای تأیید هویت و پرداخت استفاده می‌کند. مشتری. با استفاده از <a href="
+"\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank"
+"\" >Trust Swiftly</a> می‌توانید با تأیید خودکار اطلاعات آنها، کلاهبرداری را "
+"کاهش دهید و بعداً از داده‌ها برای در هر پرونده اختلاف پیروز شوید برای ثبت نام "
+"در Trust Swiftly، روی این پیوند کلیک کنید: <a href=\"https://thrive."
+"zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trusswiftly."
+"com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:236
+msgid "Trust Swiftly Enable/Disable"
+msgstr "به سرعت فعال/غیرفعال کنید اعتماد کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:239
+msgid "Enable Trust Swiftly"
+msgstr "Trust Swiftly را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:244
+msgid "API Key"
+msgstr "کلید ای پی ای"
+
+#: anti-fraud-core/class-wc-af-settings.php:253
+msgid "Base URL"
+msgstr "URL پایه"
+
+#: anti-fraud-core/class-wc-af-settings.php:256
+msgid ""
+"Enter in your Trust Swiftly site URL i.e https://example.trustswiftly.com"
+msgstr ""
+"آدرس سایت Trust Swiftly خود را وارد کنید، یعنی https://example.trustswiftly."
+"com"
+
+#: anti-fraud-core/class-wc-af-settings.php:262
+msgid "Verification Method"
+msgstr "روش تایید"
+
+#: anti-fraud-core/class-wc-af-settings.php:273
+msgid "Verification Template"
+msgstr "الگوی تایید"
+
+#: anti-fraud-core/class-wc-af-settings.php:278
+msgid ""
+"Select a verification method defined such as ID and Selfie. A Verification "
+"Template should be set on Trust Swiftly."
+msgstr ""
+"یک روش تأیید تعریف شده مانند ID و Selfie را انتخاب کنید. یک الگوی تأیید باید "
+"روی Trust Swiftly تنظیم شود."
+
+#: anti-fraud-core/class-wc-af-settings.php:284
+msgid "When To Verify"
+msgstr "زمان تأیید"
+
+#: anti-fraud-core/class-wc-af-settings.php:289
+msgid "Select when customers should verify their identity."
+msgstr "انتخاب کنید که مشتریان چه زمانی هویت خود را تأیید کنند."
+
+#: anti-fraud-core/class-wc-af-settings.php:295
+msgid "Select Threshold Weight"
+msgstr "وزن آستانه را انتخاب کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:300
+msgid ""
+"If the risk score exceed threshold value which is set here, then the "
+"customer needs to be verified with Trust Swiftly."
+msgstr ""
+"اگر امتیاز ریسک از مقدار آستانه ای که در اینجا تعیین شده است بیشتر شود، "
+"مشتری باید با Trust Swiftly تأیید شود."
+
+#: anti-fraud-core/class-wc-af-settings.php:325
+#: anti-fraud-core/class-wc-af-settings.php:446
+#: anti-fraud-core/class-wc-af-settings.php:519
+msgid "MaxMind minFraud Settings"
+msgstr "تنظیمات MaxMind minFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:327
+#: anti-fraud-core/class-wc-af-settings.php:448
+#: anti-fraud-core/class-wc-af-settings.php:521
+msgid ""
+"<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind "
+"minFraud</a> is a paid, external service that uses machine learning to "
+"detect potential fraud transactions. By using <a href=\"https://maxmind.pxf."
+"io/qnvxGg\" target=\"_blank\" >minFraud</a> you can potentially detect more "
+"fraudulent transactions.<br/>To sign up to MaxMind minFraud, click this "
+"link: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://"
+"maxmind.com</a><hr/>"
+msgstr ""
+"<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind "
+"minFraud</a> یک سرویس پولی و خارجی است که از یادگیری ماشین برای شناسایی "
+"تراکنش‌های کلاهبرداری احتمالی استفاده می‌کند. با استفاده از <a href=\"https://"
+"maxmind.pxf.io/qnvxGg\" target=\"_blank\" >minFraud</a> می‌توانید تراکنش‌های "
+"جعلی بیشتری را شناسایی کنید.<br/>برای ثبت نام در MaxMind minFraud، روی این "
+"پیوند: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://"
+"maxmind.com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:332
+#: anti-fraud-core/class-wc-af-settings.php:452
+#: anti-fraud-core/class-wc-af-settings.php:525
+#: anti-fraud-core/class-wc-af-settings.php:898
+msgid "Enable/Disable"
+msgstr "فعال غیرفعال"
+
+#: anti-fraud-core/class-wc-af-settings.php:335
+msgid "Enable MaxMind minFraud Integration"
+msgstr "MaxMind minFraud Integration را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:340
+msgid "Device Tracking"
+msgstr "ردیابی دستگاه"
+
+#: anti-fraud-core/class-wc-af-settings.php:343
+msgid ""
+"Detect if a person uses the same device but changes proxies while they are "
+"placing multiple orders from your website"
+msgstr ""
+"تشخیص دهید که آیا شخصی از یک دستگاه استفاده می کند اما در حالی که چندین "
+"سفارش را از وب سایت شما انجام می دهد، پروکسی ها را تغییر می دهد"
+
+#: anti-fraud-core/class-wc-af-settings.php:349
+msgid "MaxMind Account ID"
+msgstr "شناسه حساب MaxMind"
+
+#: anti-fraud-core/class-wc-af-settings.php:351
+msgid ""
+"Enter your MaxMind account ID here.  If you don&apos;t have an account, "
+"please sign up at <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank"
+"\">https://maxmind.com</a>."
+msgstr ""
+"شناسه حساب MaxMind خود را در اینجا وارد کنید. اگر حساب ندارید، لطفاً در <a "
+"href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind."
+"com</a> ثبت نام کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:356
+msgid "MaxMind License Key"
+msgstr "کلید مجوز MaxMind"
+
+#: anti-fraud-core/class-wc-af-settings.php:358
+msgid "Enter the license key provided by MaxMind here."
+msgstr "کلید مجوز ارائه شده توسط MaxMind را در اینجا وارد کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:364
+msgid "Does IP Address Match Location?"
+msgstr "آیا آدرس IP با موقعیت مکانی مطابقت دارد؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:369
+msgid ""
+"Enable it to identify that customer's physical location matches the location "
+"provided by IP address."
+msgstr ""
+"آن را فعال کنید تا مشخص کند مکان فیزیکی مشتری با مکان ارائه شده توسط آدرس IP "
+"مطابقت دارد."
+
+#: anti-fraud-core/class-wc-af-settings.php:373
+#: anti-fraud-core/class-wc-af-settings.php:1398
+#: anti-fraud-core/class-wc-af-settings.php:1437
+#: anti-fraud-core/class-wc-af-settings.php:1469
+#: anti-fraud-core/class-wc-af-settings.php:1493
+#: anti-fraud-core/class-wc-af-settings.php:1515
+#: anti-fraud-core/class-wc-af-settings.php:1556
+#: anti-fraud-core/class-wc-af-settings.php:1606
+#: anti-fraud-core/class-wc-af-settings.php:1628
+#: anti-fraud-core/class-wc-af-settings.php:1675
+#: anti-fraud-core/class-wc-af-settings.php:1729
+#: anti-fraud-core/class-wc-af-settings.php:1764
+#: anti-fraud-core/class-wc-af-settings.php:1796
+msgid "Rule Weight"
+msgstr "وزن قانون"
+
+#: anti-fraud-core/class-wc-af-settings.php:392
+#: anti-fraud-core/class-wc-af-settings.php:465
+#: anti-fraud-core/class-wc-af-settings.php:538
+msgid "Threshold Settings"
+msgstr "تنظیمات آستانه"
+
+#: anti-fraud-core/class-wc-af-settings.php:399
+msgid "Threshold minFraud Risk Score"
+msgstr "امتیاز ریسک حداقل تقلب"
+
+#: anti-fraud-core/class-wc-af-settings.php:401
+#: anti-fraud-core/class-wc-af-settings.php:474
+#: anti-fraud-core/class-wc-af-settings.php:547
+msgid ""
+"If the risk score returned by the minFraud system exceeds this number, the "
+"transaction will be considered potentially fraudulent and will contribute to "
+"the overall fraud score calculation.  If the risk score from minFraud is "
+"lower than this threshold, it will not contribute to the overall fraud score."
+msgstr ""
+"اگر امتیاز ریسک بازگردانده شده توسط سیستم minFraud از این عدد بیشتر شود، "
+"تراکنش به طور بالقوه تقلبی تلقی می شود و به محاسبه امتیاز کلی تقلب کمک می "
+"کند. اگر امتیاز ریسک ناشی از minFraud کمتر از این آستانه باشد، به نمره کلی "
+"تقلب کمکی نخواهد کرد."
+
+#: anti-fraud-core/class-wc-af-settings.php:414
+msgid "minFraud Rule Weight"
+msgstr "وزن قانون minFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:417
+#: anti-fraud-core/class-wc-af-settings.php:490
+#: anti-fraud-core/class-wc-af-settings.php:563
+msgid ""
+"If the minFraud risk score exceeds the threshold set above, this weight will "
+"be applied to the overall risk score.  By adjusting this, you can balance "
+"the minFraud value against the other rules-based calculations in the plugin."
+msgstr ""
+"اگر امتیاز ریسک minFraud از آستانه تعیین شده در بالا فراتر رود، این وزن برای "
+"نمره ریسک کلی اعمال می شود. با تنظیم این، می توانید مقدار minFraud را در "
+"مقابل سایر محاسبات مبتنی بر قوانین در افزونه متعادل کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:455
+msgid "Enable MaxMind minFraud Insights Integration"
+msgstr "MaxMind minFraud Insights Integration را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:472
+msgid "Threshold minFraud Insights Risk Score"
+msgstr "آستانه امتیاز ریسک بینش‌های فریبکاری"
+
+#: anti-fraud-core/class-wc-af-settings.php:487
+msgid "minFraud Insights Rule Weight"
+msgstr "وزن قانون MinFraud Insights"
+
+#: anti-fraud-core/class-wc-af-settings.php:528
+msgid "Enable MaxMind minFraud Factors Integration"
+msgstr "MaxMind minFraud Factors Integration را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:545
+msgid "Threshold minFraud Factors Risk Score"
+msgstr "امتیاز ریسک فاکتورهای حداقل فریب"
+
+#: anti-fraud-core/class-wc-af-settings.php:560
+msgid "minFraud Factors Rule Weight"
+msgstr "minFraud Factors Rule Weight"
+
+#: anti-fraud-core/class-wc-af-settings.php:592
+msgid "Support for the Anti-Fraud Plugin"
+msgstr "پشتیبانی از پلاگین ضد کلاهبرداری"
+
+#: anti-fraud-core/class-wc-af-settings.php:598
+msgid "Facing an Issue with the plugin?"
+msgstr "با مشکلی در افزونه مواجه هستید؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:599
+msgid "Contact Our Support"
+msgstr "با پشتیبانی ما تماس بگیرید"
+
+#: anti-fraud-core/class-wc-af-settings.php:601
+msgid ""
+"If you have any issues or feedback about Anti-Fraud plugin, we would love to "
+"here from you!"
+msgstr ""
+"اگر شما هر گونه مشکل یا بازخوردی در مورد پلاگین ضد کلاهبرداری دارید، خوشحال "
+"می شویم از شما در اینجا صحبت کنیم!"
+
+#: anti-fraud-core/class-wc-af-settings.php:607
+msgid "Love our Plugin?"
+msgstr "افزونه ما را دوست دارید؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:609
+msgid "Leave Us a Review!"
+msgstr "نظر ما را بنویسید"
+
+#: anti-fraud-core/class-wc-af-settings.php:611
+msgid "Your positive reviews are always encouraging!"
+msgstr "نظرات مثبت شما همیشه دلگرم کننده است!"
+
+#: anti-fraud-core/class-wc-af-settings.php:635
+msgid "Google reCAPTCHA Settings"
+msgstr "تنظیمات Google reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:637
+msgid ""
+"Click <a href=\"https://www.google.com/recaptcha/admin\" target=\"_blank"
+"\">here</a> to register.\n"
+"\t\t\t\t\t\t\t\tActivating reCAPTCHA will enable the service on your "
+"Checkout page, which is an effective means of reducing spam orders, "
+"particularly from velocity attacks ie. where spammers try multiple credit "
+"cards to test their validity.   If you continue to experience a high volume "
+"of spam orders after enabling this setting, please contact our Support team "
+"(<a href=\"mailto:support@opmc.biz\" target=\"_top\">support@opmc.biz</a>) ."
+"<hr/>"
+msgstr ""
+"\"برای ثبت نام <a href=\"https://www.google.com/recaptcha/admin\" target="
+"\"_blank\">اینجا</a> را کلیک کنید.\n"
+"\t\t\t\t\t\t\t\t فعال‌سازی reCAPTCHA سرویس را در صفحه پرداخت شما فعال می‌کند، "
+"که وسیله‌ای مؤثر برای کاهش سفارش‌های هرزنامه است، به‌ویژه از حملات سرعت. جایی "
+"که ارسال کنندگان هرزنامه چندین کارت اعتباری را امتحان می کنند تا اعتبار آنها "
+"را آزمایش کنند. اگر پس از فعال کردن این تنظیم همچنان حجم بالایی از سفارش‌های "
+"هرزنامه را تجربه می‌کنید، لطفاً با تیم پشتیبانی ما تماس بگیرید (<a href="
+"\"\"mailto:support@opmc.biz\"\" target=\"\"_top\"\">support@opmc.biz</a> ) ."
+"<hr/>\""
+
+#: anti-fraud-core/class-wc-af-settings.php:646
+msgid "Enable reCAPTCHA"
+msgstr "reCAPTCHA را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:650
+msgid "Enable reCAPTCHA on checkout page<br/>"
+msgstr "فعال کردن reCAPTCHA در صفحه تسویه حساب<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:655
+msgid "Enable v2 reCAPTCHA"
+msgstr "v2 reCAPTCHA را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:659
+msgid "Enable v2 reCAPTCHA<br/>"
+msgstr "v2 reCAPTCHA<br/> را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:665
+msgid "Enable v3 reCAPTCHA"
+msgstr "v3 reCAPTCHA را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:669
+msgid "Enable v3 reCAPTCHA<br/>"
+msgstr "v3 reCAPTCHA<br/> را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:675
+msgid "v2 Site Key"
+msgstr "v2 کلید سایت"
+
+#: anti-fraud-core/class-wc-af-settings.php:678
+msgid "Enter v2 Site Key"
+msgstr "v2 Site Key را وارد کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:684
+msgid "v2 Secret Key"
+msgstr "v2 کلید مخفی"
+
+#: anti-fraud-core/class-wc-af-settings.php:687
+msgid "Enter v2 Secret Key"
+msgstr "v2 Secret Key را وارد کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:693
+msgid "v3 Site Key"
+msgstr "v3 کلید سایت"
+
+#: anti-fraud-core/class-wc-af-settings.php:696
+msgid "Enter v3 Site Key"
+msgstr "v3 Site Key را وارد کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:702
+msgid "v3 Secret Key"
+msgstr "v3 کلید مخفی"
+
+#: anti-fraud-core/class-wc-af-settings.php:705
+msgid "Enter v3 Secret Key"
+msgstr "v3 Secret Key را وارد کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:741
+msgid "Alerts"
+msgstr "هشدارها"
+
+#: anti-fraud-core/class-wc-af-settings.php:743
+msgid "Get alerts about suspected fraudulent activities <hr/>"
+msgstr "در مورد فعالیت های مشکوک به کلاهبرداری <hr/> هشدار دریافت کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:747
+msgid "Activate Email Alerts for Admin"
+msgstr "هشدارهای ایمیل برای ادمین را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:752
+msgid ""
+"Enable to receive fraud alerts on admin email address when risk-score "
+"exceeds value set in Email Notification Score."
+msgstr ""
+"زمانی که امتیاز ریسک از مقدار تعیین شده در امتیاز اعلان ایمیل بیشتر شود، "
+"دریافت هشدارهای تقلب در آدرس ایمیل سرپرست را فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:756
+msgid "Additional Address(es) to Notify"
+msgstr "آدرس(های) اضافی برای اطلاع رسانی"
+
+#: anti-fraud-core/class-wc-af-settings.php:759
+msgid ""
+"Add additional email address(es) you want to be notified upon exceeding Risk-"
+"score. Press “Comma”, TAB or ENTER button for the next entry."
+msgstr ""
+"آدرس(های) ایمیل دیگری را اضافه کنید که می خواهید در صورت افزایش امتیاز ریسک "
+"به آنها اطلاع داده شود. برای ورودی بعدی دکمه \"کاما\"، TAB یا ENTER را فشار "
+"دهید."
+
+#: anti-fraud-core/class-wc-af-settings.php:766
+msgid "Email Notification Score"
+msgstr "امتیاز اعلان ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:770
+msgid ""
+"Risk scores that meet or exceed this value will trigger email alerts to your "
+"specified email addresses."
+msgstr ""
+"امتیازهای ریسکی که این مقدار را برآورده می‌کنند یا از آن فراتر می‌روند، "
+"هشدارهای ایمیلی را به آدرس‌های ایمیل مشخص‌شده شما راه‌اندازی می‌کنند."
+
+#: anti-fraud-core/class-wc-af-settings.php:795
+msgid "Blacklist"
+msgstr "لیست سیاه"
+
+#: anti-fraud-core/class-wc-af-settings.php:797
+msgid ""
+"WooCommerce Anti-Fraud allows you to create a list of email addresses as "
+"well as a list of IP addresses that will always be marked as potential fraud "
+"transactions."
+msgstr ""
+"WooCommerce Anti-Fraud به شما امکان می دهد لیستی از آدرس های ایمیل و همچنین "
+"لیستی از آدرس های IP ایجاد کنید که همیشه به عنوان تراکنش های احتمالی "
+"کلاهبرداری علامت گذاری می شوند."
+
+#: anti-fraud-core/class-wc-af-settings.php:802
+msgid "Email Blacklisting"
+msgstr "لیست سیاه ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:812
+msgid "Email Blacklist"
+msgstr "لیست سیاه ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:817
+msgid ""
+"Enable the email blacklist function to block emails captured by WooCommerce "
+"Anti-fraud rules."
+msgstr ""
+"عملکرد لیست سیاه ایمیل را برای مسدود کردن ایمیل های گرفته شده توسط قوانین ضد "
+"کلاهبرداری WooCommerce فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:822
+msgid "Automatic Blacklisting"
+msgstr "لیست سیاه خودکار"
+
+#: anti-fraud-core/class-wc-af-settings.php:827
+msgid ""
+"Add email addresses of orders reported with a high risk of fraud to "
+"blacklist automatically."
+msgstr ""
+"آدرس های ایمیل سفارش های گزارش شده با ریسک بالای تقلب را به صورت خودکار به "
+"لیست سیاه اضافه کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:832
+msgid "Blocked Email Addresses"
+msgstr "آدرس های ایمیل مسدود شده"
+
+#: anti-fraud-core/class-wc-af-settings.php:835
+msgid ""
+"The email addresses listed in the text area will be considered unsafe. You "
+"can also add or remove emails manually here. Type “,” or press TAB/ENTER "
+"button for the next entry. Please add emails in bulk separating them by "
+"either comma or space."
+msgstr ""
+"آدرس‌های ایمیل فهرست‌شده در قسمت متن ناامن تلقی می‌شوند. همچنین می توانید ایمیل "
+"ها را به صورت دستی در اینجا اضافه یا حذف کنید. تایپ کنید، یا دکمه TAB/ENTER "
+"را برای ورودی بعدی فشار دهید. لطفاً ایمیل ها را به صورت انبوه اضافه کنید و "
+"آنها را با کاما یا فاصله از هم جدا کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:843
+msgid "IP Blacklisting"
+msgstr "لیست سیاه IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:853
+msgid "IP Blacklist"
+msgstr "لیست سیاه IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:857
+msgid "Enable the IP blacklist function"
+msgstr "تابع لیست سیاه IP را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:858
+msgid ""
+"Enable the IP blacklist function to block IP addresses with high risk of "
+"frauds."
+msgstr ""
+"عملکرد لیست سیاه IP را برای مسدود کردن آدرس های IP با خطر تقلب بالا فعال "
+"کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:863
+msgid "Blocked IP Addresses"
+msgstr "آدرس های IP مسدود شده"
+
+#: anti-fraud-core/class-wc-af-settings.php:866
+msgid ""
+"The IP addresses listed in the text area will be considered unsafe.  You can "
+"also add or remove IP addresses manually here. Type “,” or press TAB/ENTER "
+"button for the next entry. Please add IPs in bulk separating them by either "
+"comma or space."
+msgstr ""
+"آدرس های IP فهرست شده در قسمت متن ناامن در نظر گرفته می شوند. همچنین می "
+"توانید آدرس های IP را به صورت دستی در اینجا اضافه یا حذف کنید. تایپ کنید، یا "
+"دکمه TAB/ENTER را برای ورودی بعدی فشار دهید. لطفاً IP ها را به صورت انبوه "
+"اضافه کنید و آنها را با کاما یا فاصله از هم جدا کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:894
+msgid ""
+"These settings are specific to Paypal Payment Gateway. This means, when the "
+"customer use their Paypal account for making payment for their orders, then "
+"these rules come into action.<hr/>"
+msgstr ""
+"این تنظیمات مخصوص درگاه پرداخت پی پال است. این بدان معناست که وقتی مشتری از "
+"حساب پی پال خود برای پرداخت سفارشات خود استفاده می کند، این قوانین وارد عمل "
+"می شوند.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:902
+msgid "Select to enable Paypal verification"
+msgstr "برای فعال کردن تأیید پی پال انتخاب کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:907
+msgid "Block Downloads"
+msgstr "مسدود کردن دانلودها"
+
+#: anti-fraud-core/class-wc-af-settings.php:911
+msgid "Prevent digital downloads if verification failed or still processing"
+msgstr ""
+"در صورتی که تأیید صحت انجام نشد یا همچنان در حال پردازش است، از دانلودهای "
+"دیجیتالی جلوگیری کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:916
+msgid "Verification Retry"
+msgstr "تأیید مجدد تلاش کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:918
+msgid ""
+"Number of days that have to pass before sending another email if the order "
+"is still waiting for verification"
+msgstr ""
+"تعداد روزهایی که باید قبل از ارسال ایمیل دیگر بگذرد اگر سفارش هنوز در انتظار "
+"تأیید است"
+
+#: anti-fraud-core/class-wc-af-settings.php:929
+msgid "Auto Cancellation Days"
+msgstr "روزهای لغو خودکار"
+
+#: anti-fraud-core/class-wc-af-settings.php:931
+msgid ""
+"Orders that are not verified within the given number of days will be "
+"automatically cancelled"
+msgstr ""
+"سفارشاتی که در چند روز معین تایید نشده باشند به طور خودکار لغو خواهند شد"
+
+#: anti-fraud-core/class-wc-af-settings.php:942
+msgid "Paypal verified addresses"
+msgstr "آدرس های تایید شده پی پال"
+
+#: anti-fraud-core/class-wc-af-settings.php:944
+msgid "Verified email addresses"
+msgstr "آدرس های ایمیل تایید شده"
+
+#: anti-fraud-core/class-wc-af-settings.php:954
+msgid "Email Template"
+msgstr "قالب ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:956
+msgid ""
+"Configure the email template below. The following tags can be embedded in "
+"the template fields:<br/><br/><b>{site_title}</b> - replaced with the "
+"Wordpress Site Title<br/><b>{site_email}</b> - replaced with the Wordpress "
+"site admin email address"
+msgstr ""
+"قالب ایمیل زیر را پیکربندی کنید. برچسب‌های زیر را می‌توان در فیلدهای قالب "
+"جاسازی کرد:<br/><br/><b>{site_title}</b> - با عنوان سایت وردپرس جایگزین "
+"می‌شود<br/><b>{site_email}</b> - با آدرس ایمیل مدیر سایت وردپرس جایگزین شد"
+
+#: anti-fraud-core/class-wc-af-settings.php:962
+msgid "Email Type"
+msgstr "نوع ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:968
+msgid "Emails can be sent either as plain text or HTML"
+msgstr "ایمیل ها را می توان به صورت متن ساده یا HTML ارسال کرد"
+
+#: anti-fraud-core/class-wc-af-settings.php:976
+msgid "The subject of the email that will be sent to the purchaser"
+msgstr "موضوع ایمیلی که برای خریدار ارسال می شود"
+
+#: anti-fraud-core/class-wc-af-settings.php:979
+msgid "[{site_title}] Confirm your PayPal email address"
+msgstr "[{site_title}] آدرس ایمیل PayPal خود را تأیید کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:983
+msgid "Email body"
+msgstr "بدنه ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:985
+msgid ""
+"Enter the body of the email to be sent to the purchaser in the text area "
+"below:"
+msgstr "متن ایمیل برای ارسال به خریدار را در قسمت متن زیر وارد کنید:"
+
+#: anti-fraud-core/class-wc-af-settings.php:988
+msgid ""
+"Hi!We have received your order on {site_title}, but to complete we have to "
+"verify your PayPal email address.If you havent made or authorized any "
+"purchase, please, contact PayPal support service immediately,and email us to "
+"{site_email} for having your money back."
+msgstr ""
+"سلام! ما سفارش شما را در {site_title} دریافت کردیم، اما برای تکمیل، باید "
+"آدرس ایمیل PayPal شما را تأیید کنیم. اگر خریدی انجام نداده‌اید یا اجازه خرید "
+"نداده‌اید، لطفاً فوراً با خدمات پشتیبانی PayPal تماس بگیرید و به ما ایمیل بزنید "
+"تا به {site_email} نیاز داشته باشید. پول شما را برگرداند"
+
+#: anti-fraud-core/class-wc-af-settings.php:1005
+msgid ""
+"General behaviours of the Anti Fraud plugin are configured on this page.<hr/>"
+msgstr "رفتارهای کلی افزونه Anti Fraud در این صفحه پیکربندی شده است.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1011
+msgid "Set Risk Thresholds"
+msgstr "تعیین آستانه ریسک"
+
+#: anti-fraud-core/class-wc-af-settings.php:1013
+msgid ""
+"There are three risk thresholds.  Low, Medium and High.   In this section "
+"you can define where the boundary point between those thresholds.   The "
+"maximum risk score is 100, the minimum is 0.<br/>"
+msgstr ""
+"سه آستانه خطر وجود دارد. کم، متوسط ​​و زیاد. در این بخش می توانید تعیین کنید "
+"که نقطه مرزی بین آن آستانه ها کجا باشد. حداکثر امتیاز ریسک 100 و حداقل آن 0 "
+"است.<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1014
+msgid ""
+"There are three risk thresholds: Low, Medium and High. In this section, you "
+"can define where the boundary point between those thresholds. The maximum "
+"risk score is 100, the minimum is 0. Orders are considered Low, Medium, and "
+"High Risk Orders based on these values."
+msgstr ""
+"سه آستانه خطر وجود دارد: کم، متوسط ​​و زیاد. در این قسمت می توانید تعیین کنید "
+"که نقطه مرزی بین آن آستانه ها کجا باشد. حداکثر امتیاز ریسک 100 و حداقل آن 0 "
+"است. سفارشات بر اساس این مقادیر، سفارشات با ریسک پایین، متوسط ​​و بالا در نظر "
+"گرفته می شوند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1020
+msgid "Medium Risk threshold"
+msgstr "آستانه ریسک متوسط"
+
+#: anti-fraud-core/class-wc-af-settings.php:1025
+msgid ""
+"The threshold between Low and Medium Risk Score. Move the left handle on "
+"slider or update the value in text field to set the boundary between Low and "
+"Medium-Risk orders. Risk Score less than this value is Low-Risk order and a "
+"greater value is the starting point of Medium Risk Orders."
+msgstr ""
+"آستانه بین امتیاز ریسک پایین و متوسط. دستگیره سمت چپ را روی نوار لغزنده حرکت "
+"دهید یا مقدار را در قسمت متن به‌روزرسانی کنید تا مرز بین سفارشات با ریسک "
+"پایین و متوسط ​​تعیین شود. امتیاز ریسک کمتر از این مقدار، سفارش کم ریسک و "
+"مقدار بیشتر، نقطه شروع سفارشات با ریسک متوسط ​​است."
+
+#: anti-fraud-core/class-wc-af-settings.php:1034
+msgid "High Risk threshold"
+msgstr "آستانه ریسک بالا"
+
+#: anti-fraud-core/class-wc-af-settings.php:1037
+msgid ""
+"This is a threshold between Medium and High-Risk Score. Slide the right "
+"handle on slider or update the value in text field to set the boundary "
+"between Medium and High-Risk orders. Risk Score less than this value is the "
+"end point of Medium-Risk order and a greater value is High-Risk order."
+msgstr ""
+"این یک آستانه بین امتیاز متوسط ​​و پرخطر است. دستگیره سمت راست را روی نوار "
+"لغزنده بلغزانید یا مقدار را در قسمت متن به‌روزرسانی کنید تا مرز بین سفارش‌های "
+"متوسط ​​و پرخطر را تعیین کنید. امتیاز ریسک کمتر از این مقدار، نقطه پایان سفارش "
+"با ریسک متوسط ​​و مقدار بیشتر، سفارش با ریسک بالا است."
+
+#: anti-fraud-core/class-wc-af-settings.php:1048
+msgid "Enable debug logging"
+msgstr "ثبت اشکال زدایی را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1060
+msgid "Pre-Purchase Assessment"
+msgstr "ارزیابی قبل از خرید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1063
+msgid ""
+"Evaluate customers before making the actual payment.  If the fraud score "
+"reaches a high-risk order range before making payment, the customer order "
+"will be denied in advance, and a custom message appears on the checkout page "
+"explaining buyer the reason for denial."
+msgstr ""
+"مشتریان را قبل از پرداخت واقعی ارزیابی کنید. اگر امتیاز کلاهبرداری قبل از "
+"پرداخت به محدوده سفارش پرخطر برسد، سفارش مشتری از قبل رد می شود و یک پیام "
+"سفارشی در صفحه پرداخت ظاهر می شود که دلیل انکار خریدار را توضیح می دهد."
+
+#: anti-fraud-core/class-wc-af-settings.php:1069
+msgid "Pre-Payment Checking"
+msgstr "بررسی پیش پرداخت"
+
+#: anti-fraud-core/class-wc-af-settings.php:1074
+msgid ""
+"Enable pre-payment checking to assess fraud before making payment and block "
+"buyers with high fraud risk from placing any order and notify them via alert "
+"message."
+msgstr ""
+"بررسی پیش پرداخت را برای ارزیابی تقلب قبل از پرداخت فعال کنید و خریداران با "
+"ریسک کلاهبرداری بالا را از ثبت هر گونه سفارش مسدود کنید و از طریق پیام هشدار "
+"به آنها اطلاع دهید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1079
+msgid "Notification message for Blocked users"
+msgstr "پیام اعلان برای کاربران مسدود شده"
+
+#: anti-fraud-core/class-wc-af-settings.php:1083
+#: woocommerce-anti-fraud.php:1362
+msgid ""
+"Website Administrator does not allow you to place this order. Please contact "
+"our support team. Sorry for any inconvenience."
+msgstr ""
+"مدیر وب سایت به شما اجازه ثبت این سفارش را نمی دهد. لطفا با تیم پشتیبانی ما "
+"تماس بگیرید. با عرض پوزش برای هر گونه ناراحتی."
+
+#: anti-fraud-core/class-wc-af-settings.php:1085
+msgid ""
+"Adds a custom alert message for blocked users on Pre-Payment Check. This "
+"message will be shown to the user on the checkout page while they attempt to "
+"pay."
+msgstr ""
+"یک پیام هشدار سفارشی برای کاربران مسدود شده در بررسی پیش پرداخت اضافه می "
+"کند. در حالی که کاربر اقدام به پرداخت می کند، این پیام در صفحه پرداخت نشان "
+"داده می شود."
+
+#: anti-fraud-core/class-wc-af-settings.php:1095
+msgid "Change Order Status based on Risk Score"
+msgstr "وضعیت سفارش را بر اساس امتیاز ریسک تغییر دهید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1098
+msgid ""
+"Updates order status to cancel and/or on-hold when order passes a certain "
+"Risk Score threshold."
+msgstr ""
+"وضعیت سفارش را به‌روزرسانی می‌کند تا زمانی که سفارش از آستانه امتیاز ریسک خاصی "
+"عبور می‌کند، لغو و/یا در حالت تعلیق باشد."
+
+#: anti-fraud-core/class-wc-af-settings.php:1104
+msgid "Update Order Status based on Fraud Score"
+msgstr "به روز رسانی وضعیت سفارش بر اساس امتیاز تقلب"
+
+#: anti-fraud-core/class-wc-af-settings.php:1109
+msgid "Enable to cancel and/or put orders on hold based on Risk Score."
+msgstr "لغو و/یا قرار دادن سفارشات بر اساس امتیاز ریسک را فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1113
+msgid "Weighting to Cancel Order"
+msgstr "وزن برای لغو سفارش"
+
+#: anti-fraud-core/class-wc-af-settings.php:1118
+msgid ""
+"Orders with a score equal to or greater than this value will be "
+"automatically cancelled. <br/> To disable it, slide the slider to the "
+"extreme left or Select 0."
+msgstr ""
+"سفارشات با امتیاز مساوی یا بیشتر از این مقدار به طور خودکار لغو می شوند. <br/"
+"> برای غیرفعال کردن آن، نوار لغزنده را به سمت چپ بکشید یا 0 را انتخاب کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1124
+msgid "Weighting to put Order On-hold"
+msgstr "وزن دهی برای قرار دادن سفارش در حالت تعلیق"
+
+#: anti-fraud-core/class-wc-af-settings.php:1128
+msgid ""
+"Orders with a score equal to or greater than this number will be "
+"automatically set on hold. <br/> To disable it, slide the slider to the "
+"extreme left or Select 0."
+msgstr ""
+"سفارش‌هایی که امتیازی برابر یا بیشتر از این عدد دارند، به‌طور خودکار در حالت "
+"انتظار قرار می‌گیرند. <br/> برای غیرفعال کردن آن، نوار لغزنده را به سمت چپ "
+"بکشید یا 0 را انتخاب کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1139
+msgid "Whitelist Payment Methods"
+msgstr "روش های پرداخت لیست سفید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1142
+msgid ""
+"Payments made via the whitelisted payment methods will bypass anti-fraud’s "
+"rule to change order status based on risk score."
+msgstr ""
+"پرداخت‌هایی که از طریق روش‌های پرداخت در لیست سفید انجام می‌شود، قانون ضد "
+"کلاهبرداری را برای تغییر وضعیت سفارش بر اساس امتیاز ریسک دور می‌زند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1148
+msgid "Enable Whitelisting of Payment Methods"
+msgstr "فهرست سفید روش‌های پرداخت را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1152
+msgid "Enable to add payment methods to the whitelist."
+msgstr "برای افزودن روش‌های پرداخت به لیست سفید فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1157
+msgid "Select Payment Methods to be Whitelisted"
+msgstr "روش های پرداخت را برای قرار گرفتن در لیست سفید انتخاب کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1161
+msgid ""
+"Press “Ctrl” or “Command” key and click multiple payment methods to "
+"whitelist and scroll down to select more payment methods"
+msgstr ""
+"کلید «Ctrl» یا «Command» را فشار دهید و روی چند روش پرداخت کلیک کنید تا در "
+"لیست سفید قرار بگیرید و برای انتخاب روش‌های پرداخت بیشتر به پایین بروید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1171
+msgid "User Roles Whitelisting"
+msgstr "فهرست سفید نقش های کاربر"
+
+#: anti-fraud-core/class-wc-af-settings.php:1174
+msgid ""
+"Filter accounts with different user roles to bypass Anti-fraud scoring "
+"system."
+msgstr ""
+"برای دور زدن سیستم امتیازدهی ضد تقلب، حساب‌ها را با نقش‌های کاربری مختلف فیلتر "
+"کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1180
+msgid "Enable Whitelisting of User Roles"
+msgstr "لیست سفید نقش های کاربر را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1184
+msgid "Enable it to activate whitelisting of User Roles."
+msgstr "آن را فعال کنید تا لیست سفید نقش های کاربر فعال شود."
+
+#: anti-fraud-core/class-wc-af-settings.php:1189
+msgid "Select User Roles to be Whitelisted"
+msgstr "نقش های کاربر را برای قرار گرفتن در لیست سفید انتخاب کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1193
+msgid ""
+"Press “Ctrl” or “Command” key and click one or multiple user roles to "
+"whitelist. Scroll up/down to select and see more user roles if any."
+msgstr ""
+"کلید \"Ctrl\" یا \"Command\" را فشار دهید و روی یک یا چند نقش کاربر برای "
+"لیست سفید کلیک کنید. برای انتخاب و مشاهده نقش های کاربر بیشتر در صورت وجود، "
+"به بالا/پایین بروید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1195
+msgid "Select roles"
+msgstr "نقش ها را انتخاب کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1204
+msgid "Whitelisted Emails"
+msgstr "ایمیل های در لیست سفید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1207
+msgid ""
+"List of Emails whitelitsted. Add emails manullay to make whitlist. Unblocked "
+"emails also added to this list."
+msgstr ""
+"لیست ایمیل هایی که در لیست سفید قرار گرفته اند. اضافه کردن ایمیل manully "
+"برای ایجاد لیست مجاز. ایمیل های رفع انسداد نیز به این لیست اضافه شده است."
+
+#: anti-fraud-core/class-wc-af-settings.php:1213
+msgid "Email Whitelist"
+msgstr "لیست سفید ایمیل"
+
+#: anti-fraud-core/class-wc-af-settings.php:1216
+msgid ""
+"Enter any email you want to be whitelisted. Press “Tab” or “Comma” after "
+"entering any new email. Please add emails in bulk separating them by either "
+"comma or space."
+msgstr ""
+"هر ایمیلی را که می خواهید در لیست سفید قرار بگیرید وارد کنید. پس از وارد "
+"کردن هر ایمیل جدید، \"Tab\" یا \"Comma\" را فشار دهید. لطفاً ایمیل ها را به "
+"صورت انبوه اضافه کنید و آنها را با کاما یا فاصله از هم جدا کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1230
+msgid "Whitelisted IPs"
+msgstr "IP های لیست سفید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1233
+msgid ""
+"List of IPs whitelitsted. Add IPs manullay to make whitlist. Unblocked IPs "
+"also added to this list."
+msgstr ""
+"لیست IP هایی که در لیست سفید قرار گرفته اند. اضافه کردن IPs manully برای "
+"ایجاد لیست مجاز. IP های رفع انسداد نیز به این لیست اضافه شده است."
+
+#: anti-fraud-core/class-wc-af-settings.php:1239
+msgid "IPs Whitelist"
+msgstr "لیست سفید IP ها"
+
+#: anti-fraud-core/class-wc-af-settings.php:1242
+msgid ""
+"Enter any IPs you want to be whitelisted. Press “Tab” or “Comma” after "
+"entering any new IPs. Please add emails in bulk separating them by either "
+"comma or space."
+msgstr ""
+"هر IP را که می خواهید در لیست سفید قرار دهید وارد کنید. پس از وارد کردن IP "
+"های جدید، \"Tab\" یا \"Comma\" را فشار دهید. لطفاً ایمیل ها را به صورت انبوه "
+"اضافه کنید و آنها را با کاما یا فاصله از هم جدا کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1257
+msgid "Auto Fraud Check For Existing Orders"
+msgstr "بررسی تقلب خودکار برای سفارشات موجود"
+
+#: anti-fraud-core/class-wc-af-settings.php:1260
+msgid ""
+"In this section, customers can enable this setting to check fraud for a "
+"previous order, when the Anti Fraud plugin is not installed and an order was "
+"placed within 7 days old."
+msgstr ""
+"در این بخش، مشتریان می توانند این تنظیمات را برای بررسی تقلب در سفارش قبلی "
+"فعال کنند، زمانی که افزونه Anti Fraud نصب نشده است و سفارشی در 7 روز گذشته "
+"ثبت شده است."
+
+#: anti-fraud-core/class-wc-af-settings.php:1266
+msgid "Enable Auto Fraud Check"
+msgstr "فعال کردن Auto Fraud Check"
+
+#: anti-fraud-core/class-wc-af-settings.php:1270
+msgid ""
+"Enable it to check fraud for a previous order, that orders, when the "
+"Antifraud plugin was not installed."
+msgstr ""
+"برای بررسی تقلب برای سفارش قبلی، آن را فعال کنید، زمانی که افزونه Antifraud "
+"نصب نشده باشد، سفارش می دهد."
+
+#: anti-fraud-core/class-wc-af-settings.php:1276
+msgid "No Of Days For Historical Orders Checks"
+msgstr "تعداد روزهای برای چک سفارشات تاریخی"
+
+#: anti-fraud-core/class-wc-af-settings.php:1279
+msgid ""
+"The Merchant can enter the number of days for historical orders check. The "
+"default number of days is 7 days."
+msgstr ""
+"تاجر می تواند تعداد روزهای بررسی سفارشات تاریخی را وارد کند. تعداد روزهای "
+"پیش فرض 7 روز است."
+
+#: anti-fraud-core/class-wc-af-settings.php:1298
+msgid "Enable Debug Logging"
+msgstr "Debug Logging را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1301
+msgid ""
+"In this section, customers can enable this setting to create log file and it "
+"can seen from WooCommerce >> Status >> Log."
+msgstr ""
+"در این بخش، مشتریان می توانند این تنظیمات را برای ایجاد فایل log فعال کنند و "
+"می توانند از WooCommerce >> Status >> Log مشاهده کنند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1307
+msgid "Enable Debug Log"
+msgstr "Debug Log را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1311
+msgid "Enable it to record the debugging data."
+msgstr "آن را برای ضبط داده های اشکال زدایی فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1350
+#: anti-fraud-core/tamplate-admin-settings-page.php:401
+msgid "General Rules"
+msgstr "قوانین عمومی"
+
+#: anti-fraud-core/class-wc-af-settings.php:1352
+msgid ""
+"Each rule that is matched will add the configured &quot;Rule Weight&quot; "
+"value to the overall fraud score.  In this section you can configure general "
+"fraud detection rules.<hr/>"
+msgstr ""
+"هر قاعده ای که مطابقت داشته باشد، \"وزن قانون\" پیکربندی شده را اضافه می "
+"کند. ارزش برای نمره کلی تقلب در این بخش می توانید قوانین عمومی تشخیص تقلب را "
+"پیکربندی کنید.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1357
+msgid "First Time Purchase Rules"
+msgstr "قوانین خرید برای اولین بار"
+
+#: anti-fraud-core/class-wc-af-settings.php:1359
+#: anti-fraud-core/class-wc-af-settings.php:1360
+msgid ""
+"Rule set for Buyers who are purchasing from your website for the first time."
+msgstr ""
+"مجموعه قوانین برای خریدارانی که برای اولین بار از وب سایت شما خرید می کنند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1367
+msgid "First Purchase on Website"
+msgstr "اولین خرید در سایت"
+
+#: anti-fraud-core/class-wc-af-settings.php:1372
+msgid ""
+"Enable it to identify customers purchasing from your website for the first "
+"time."
+msgstr ""
+"برای شناسایی مشتریانی که برای اولین بار از وب سایت شما خرید می کنند، آن را "
+"فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1376
+msgid "First Purchase Rule Weight"
+msgstr "وزن قانون خرید اول"
+
+#: anti-fraud-core/class-wc-af-settings.php:1389
+msgid "Re-Check First Orders in Processing State?"
+msgstr "اولین سفارشات را در حالت پردازش مجدد بررسی کنید؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1394
+msgid ""
+"Enable it to perform first-order re-check on orders in processing state."
+msgstr ""
+"برای انجام بررسی مجدد مرتبه اول سفارشات در حالت پردازش، آن را فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1417
+msgid "IP, Billing and Shipping Address-based Rules"
+msgstr "قوانین مبتنی بر آدرس IP، صورتحساب و حمل و نقل"
+
+#: anti-fraud-core/class-wc-af-settings.php:1420
+msgid ""
+"Rules set for identifying fraudulent orders triggering risks based on IP, "
+"billing and shipping addresses."
+msgstr ""
+"قوانین تعیین شده برای شناسایی سفارشات تقلبی که باعث ایجاد خطر می شوند بر "
+"اساس آدرس IP، صورتحساب و حمل و نقل."
+
+#: anti-fraud-core/class-wc-af-settings.php:1428
+msgid "Does Geo Location Match?"
+msgstr "آیا موقعیت جغرافیایی مطابقت دارد؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1433
+msgid ""
+"Enable it to identify that customer's shipping/billing state matches the "
+"state provided by Geo Location."
+msgstr ""
+"آن را فعال کنید تا مشخص کند وضعیت ارسال/صورت‌حساب مشتری با وضعیت ارائه‌شده "
+"توسط Geo Location مطابقت دارد."
+
+#: anti-fraud-core/class-wc-af-settings.php:1451
+msgid "API Key for bigdatacloud.com"
+msgstr "کلید API برای bigdatacloud.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1453
+msgid ""
+"Don't have bigdatacloud.com account? <a href=\"https://www.bigdatacloud.com/"
+"\" target=\"_blank\">Signup here</a><br/>Get 50K requests per month for "
+"free. Upgrade for more."
+msgstr ""
+"حساب bigdatacloud.com ندارید؟ <a href=\"https://www.bigdatacloud.com/\" "
+"target=\"_blank\">اینجا ثبت نام کنید</a><br/>50 هزار درخواست در ماه به صورت "
+"رایگان دریافت کنید. برای بیشتر ارتقا دهید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1454
+msgid ""
+"You can use bigdatacloud.com to get accurate address via customer Lat and "
+"Long and its required to use geo location rule."
+msgstr ""
+"می‌توانید از bigdatacloud.com برای دریافت آدرس دقیق از طریق Lat و Long مشتری "
+"استفاده کنید و برای استفاده از قانون موقعیت جغرافیایی لازم است."
+
+#: anti-fraud-core/class-wc-af-settings.php:1460
+msgid "Are Billing and Shipping Addresses Same?"
+msgstr "آیا آدرس صورتحساب و حمل و نقل یکسان است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1465
+msgid "Enable to identify difference between billing and shipping addresses."
+msgstr "برای شناسایی تفاوت بین آدرس های صورتحساب و حمل و نقل فعال کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1482
+msgid "Enable Phone Number and Billing Country Check"
+msgstr "شماره تلفن و بررسی کشور صورتحساب را فعال کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1487
+msgid ""
+"If you enable this rule, then it is highly recommended that you use a "
+"separate Phone Number Validation plugin to make sure your customers specify "
+"a correct international phone number format on the checkout page. Else, this "
+"rule will treat an invalid phone number as a risk."
+msgstr ""
+"اگر این قانون را فعال کردید، به شدت توصیه می‌شود که از یک افزونه جداگانه "
+"تأیید شماره تلفن استفاده کنید تا مطمئن شوید که مشتریان شما یک قالب شماره "
+"تلفن بین‌المللی صحیح را در صفحه پرداخت مشخص می‌کنند. در غیر این صورت، این "
+"قانون یک شماره تلفن نامعتبر را به عنوان یک خطر تلقی می کند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1496
+msgid "Weight of the single rule in the total calculation of risk."
+msgstr "وزن قاعده واحد در محاسبه کل ریسک."
+
+#: anti-fraud-core/class-wc-af-settings.php:1506
+msgid "Is Customer behind Proxy or VPN?"
+msgstr "آیا مشتری پشت پراکسی یا VPN است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1511
+msgid "Check if the customer is behind either a proxy or a VPN"
+msgstr "بررسی کنید که آیا مشتری پشت پراکسی یا VPN است"
+
+#: anti-fraud-core/class-wc-af-settings.php:1534
+msgid "Multiple Orders Attempts using Different Addresses from Same IP"
+msgstr "تلاش برای سفارش های متعدد با استفاده از آدرس های مختلف از همان IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:1537
+msgid ""
+"Rule to check buyer is ordering products using different addresses from the "
+"same IP over a certain period from your store."
+msgstr ""
+"قانون بررسی خریدار این است که محصولات را با استفاده از آدرس های مختلف از یک "
+"IP در یک دوره معین از فروشگاه شما سفارش دهد."
+
+#: anti-fraud-core/class-wc-af-settings.php:1543
+msgid ""
+"Purchased from same IP but Different Customer Addresses?\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"از همان IP اما آدرس های مشتری متفاوت خریداری شده اید؟\n"
+"\t\t\t\t\t\t\t"
+
+#: anti-fraud-core/class-wc-af-settings.php:1552
+msgid ""
+"Enable this rule to monitor if multiple orders with different billing or "
+"shipping addresses have originated from the same IP address. Make sure to "
+"set time span of checking."
+msgstr ""
+"این قانون را برای نظارت بر اینکه آیا چندین سفارش با آدرس‌های صورت‌حساب یا حمل "
+"و نقل مختلف از یک آدرس IP منشا گرفته‌اند، فعال کنید. مطمئن شوید که بازه زمانی "
+"بررسی را تنظیم کرده اید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1569
+msgid "Past Number of Days to Check "
+msgstr "تعداد روزهای گذشته برای بررسی"
+
+#: anti-fraud-core/class-wc-af-settings.php:1572
+msgid ""
+"The number of days in the past to check IP addresses and different physical "
+"addresses."
+msgstr "تعداد روزهای گذشته برای بررسی آدرس های IP و آدرس های فیزیکی مختلف."
+
+#: anti-fraud-core/class-wc-af-settings.php:1588
+msgid "Origin Countries"
+msgstr "کشورهای مبدأ"
+
+#: anti-fraud-core/class-wc-af-settings.php:1591
+msgid ""
+"International orders tend to have a higher fraud risk than orders that "
+"originate in your home country. Merchants often find that certain origin "
+"countries have a higher potential for fraud. These Rule sets help manage "
+"such risks."
+msgstr ""
+"سفارش‌های بین‌المللی نسبت به سفارش‌هایی که از کشور شما منشا می‌گیرند، خطر تقلب "
+"بیشتری دارند. بازرگانان اغلب متوجه می شوند که کشورهای مبدأ خاصی پتانسیل "
+"بالاتری برای تقلب دارند. این مجموعه قوانین به مدیریت چنین خطراتی کمک می کند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1597
+msgid "Is it International Order?"
+msgstr "آیا سفارش بین المللی است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1602
+msgid ""
+"Enable to check if the order originates from outside of your store's home "
+"country."
+msgstr ""
+"برای بررسی اینکه آیا سفارش از خارج از کشور فروشگاه شما منشا گرفته است، فعال "
+"کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1619
+msgid "Is Order from High-Risk Country?"
+msgstr "آیا سفارش از کشور پرخطر است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1624
+msgid ""
+"Enable it to check if orders originate from unsafe countries. Select unsafe "
+"countries from the list below."
+msgstr ""
+"آن را فعال کنید تا بررسی کند آیا سفارشات از کشورهای ناامن منشا می گیرند یا "
+"خیر. کشورهای ناامن را از لیست زیر انتخاب کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1641
+msgid "Mark Unsafe Countries"
+msgstr "کشورهای ناامن را علامت گذاری کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1644
+msgid ""
+"Press Ctrl or ⌘ key and select multiple countries that you think are unsafe "
+"for your area of service."
+msgstr ""
+"کلید Ctrl یا ⌘ را فشار دهید و چندین کشور را که فکر می کنید برای منطقه خدمات "
+"شما ناامن هستند انتخاب کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1657
+msgid "High-Risk Email Domains"
+msgstr "دامنه های ایمیل پرخطر"
+
+#: anti-fraud-core/class-wc-af-settings.php:1660
+msgid ""
+"Merchants often find that certain email domains have a higher potential for "
+"fraud. These Rule sets will help you manage High-Risk Email Domains.<br/"
+">Identify High-Risk Domains by manually adding such email domains to High-"
+"Risk Domain section and/or using QuickEmailVerification.com API key to make "
+"this operation automatic."
+msgstr ""
+"بازرگانان اغلب متوجه می شوند که دامنه های ایمیل خاص پتانسیل بالاتری برای "
+"کلاهبرداری دارند. این مجموعه قوانین به شما کمک می‌کند دامنه‌های ایمیل پرخطر را "
+"مدیریت کنید.<br/>با افزودن دستی چنین دامنه‌های ایمیلی به بخش دامنه‌های پرخطر و/"
+"یا با استفاده از کلید QuickEmailVerification.com API برای خودکار کردن این "
+"عملیات، دامنه‌های پرخطر را شناسایی کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1666
+msgid "Is Suspicious / High-Risk Email Domain?"
+msgstr "آیا دامنه ایمیل مشکوک / پرخطر است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1671
+msgid ""
+"Enable it to check if customer's email address originates from any high-risk "
+"domain listed below and/or add API for “quickemailverification. com” for "
+"automatic checking"
+msgstr ""
+"آن را فعال کنید تا بررسی کند که آیا آدرس ایمیل مشتری از دامنه‌های پرخطری که "
+"در زیر فهرست شده است منشا می‌گیرد یا خیر و/یا API را برای «تأیید ایمیل سریع» "
+"اضافه کنید. com” برای بررسی خودکار"
+
+#: anti-fraud-core/class-wc-af-settings.php:1688
+msgid "High-Risk Domains"
+msgstr "دامنه های پرخطر"
+
+#: anti-fraud-core/class-wc-af-settings.php:1691
+msgid ""
+"Enter any email origin domains you consider to be high-risk. Press “Tab” or "
+"“Comma” after entering any new domain."
+msgstr ""
+"دامنه‌های مبدا ایمیلی را که در نظر می‌گیرید پرخطر هستند، وارد کنید. پس از وارد "
+"کردن دامنه جدید، \"Tab\" یا \"Comma\" را فشار دهید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1698
+msgid "API Key for quickemailverification.com"
+msgstr "کلید API برای quickemailverification.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1700
+msgid ""
+"Don't have quickemailverification account? <a href=\"\">Signup here</a><br/"
+">Verify 50 emails for free. Upgrade if you want more"
+msgstr ""
+"حساب تأیید سریع ایمیل ندارید؟ <a href=\"\">اینجا ثبت نام کنید</a><br/>۵۰ "
+"ایمیل را به صورت رایگان تأیید کنید. اگر بیشتر می خواهید ارتقا دهید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1701
+msgid ""
+"You can use quickemailverification.com to get more accurate results for "
+"false email domain-related checks. "
+msgstr ""
+"می‌توانید از quickemailverification.com برای دریافت نتایج دقیق‌تر برای "
+"بررسی‌های نادرست مربوط به دامنه ایمیل استفاده کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1711
+msgid "Order Amounts and Attempts"
+msgstr "مقادیر و تلاش ها را سفارش دهید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1714
+msgid ""
+"The rules in this section are triggered based on defined order amounts and "
+"by counting attempted orders. You can also limit orders within a certain "
+"time frame. Orders with unusually high values, or customers who make an "
+"excessive number of transactions in a short period are more likely to be "
+"fraudulent."
+msgstr ""
+"قوانین موجود در این بخش بر اساس مقدار سفارش های تعریف شده و با شمارش سفارش "
+"های انجام شده فعال می شوند. همچنین می توانید سفارشات را در یک بازه زمانی "
+"مشخص محدود کنید. سفارش‌هایی که ارزش‌های غیرمعمول بالایی دارند یا مشتریانی که "
+"تعداد زیادی تراکنش را در مدت کوتاهی انجام می‌دهند، بیشتر در معرض کلاهبرداری "
+"هستند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1720
+msgid "Order Amount is Above Average?"
+msgstr "مبلغ سفارش بالاتر از میانگین است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1725
+msgid ""
+"Check if order significantly exceeds the average order amount for your site. "
+"Set multiplier value to trigger this rule when order place is value times "
+"greater than an average order."
+msgstr ""
+"بررسی کنید که آیا سفارش به طور قابل توجهی از میانگین مقدار سفارش برای سایت "
+"شما بیشتر است یا خیر. مقدار ضرب‌کننده را تنظیم کنید تا زمانی که مکان سفارش از "
+"یک سفارش متوسط ​​بیشتر است، این قانون را راه‌اندازی کند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1742
+msgid "Average Multiplier"
+msgstr "ضریب میانگین"
+
+#: anti-fraud-core/class-wc-af-settings.php:1745
+msgid ""
+"Enter the multiplier value to check amount over average transaction value "
+"that will trigger the rule (expressed as a multiplier). For example, if you "
+"want to limit orders that are 2 times greater than the average value of "
+"orders, set the multiplier value to 2."
+msgstr ""
+"مقدار ضریب را وارد کنید تا مقدار بیش از میانگین ارزش تراکنش را بررسی کنید که "
+"قانون را راه‌اندازی می‌کند (به عنوان یک ضریب بیان می‌شود). به عنوان مثال، اگر "
+"می خواهید سفارش هایی را که 2 برابر بیشتر از میانگین مقدار سفارشات هستند "
+"محدود کنید، مقدار ضرب کننده را روی 2 تنظیم کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1755
+msgid "Order Exceeds Maximum Amount Limit?"
+msgstr "سفارش از حداکثر مقدار مجاز بیشتر است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1760
+msgid ""
+"Enable this rule to confirm that the total amount of the order does not "
+"exceed maximum configured amount below."
+msgstr ""
+"این قانون را فعال کنید تا تأیید کنید که مبلغ کل سفارش از حداکثر مقدار "
+"پیکربندی شده در زیر تجاوز نمی کند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1777
+msgid "Amount Limit ($)"
+msgstr "محدودیت مقدار ($)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1780
+msgid "Enter the maximum amount of purchase accepted in your store."
+msgstr "حداکثر مقدار خرید پذیرفته شده در فروشگاه خود را وارد کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1787
+msgid "Too many order attempts?"
+msgstr "تعداد تلاش برای سفارش زیاد است؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1792
+msgid ""
+"Enabling this rule allows you to limit number of orders per user within the "
+"time span configured below."
+msgstr ""
+"فعال کردن این قانون به شما امکان می‌دهد تعداد سفارش‌ها را برای هر کاربر در "
+"بازه زمانی پیکربندی شده زیر محدود کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1809
+msgid "Time Span to Check (hours)"
+msgstr "بازه زمانی برای بررسی (ساعت)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1812
+msgid "Enter number of hours you want to check "
+msgstr "تعداد ساعاتی را که می خواهید بررسی کنید وارد کنید"
+
+#: anti-fraud-core/class-wc-af-settings.php:1818
+msgid "Maximum Allowed Number of Orders in Time Span?"
+msgstr "حداکثر تعداد مجاز سفارش در بازه زمانی؟"
+
+#: anti-fraud-core/class-wc-af-settings.php:1821
+msgid ""
+"Enter a total number of orders that a buyer can make in the specified time "
+"span."
+msgstr ""
+"تعداد کل سفارش هایی را که خریدار می تواند در بازه زمانی مشخص شده انجام دهد "
+"وارد کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1832
+msgid "Limit Number of Orders between Time"
+msgstr "محدود کردن تعداد سفارشات بین زمان"
+
+#: anti-fraud-core/class-wc-af-settings.php:1837
+msgid ""
+"Enabling this rule limits the number of orders to be placed within a certain "
+"period of the day."
+msgstr ""
+"فعال کردن این قانون تعداد سفارش‌هایی که باید در یک بازه زمانی مشخص از روز ثبت "
+"شوند را محدود می‌کند."
+
+#: anti-fraud-core/class-wc-af-settings.php:1841
+msgid "Start Time "
+msgstr "زمان شروع"
+
+#: anti-fraud-core/class-wc-af-settings.php:1844
+msgid ""
+"Needs to be as per server time. Check in woo general settings. Accordingly "
+"specify start time."
+msgstr ""
+"باید مطابق با زمان سرور باشد. تنظیمات کلی را بررسی کنید. بر این اساس زمان "
+"شروع را مشخص کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1850
+msgid "End Time "
+msgstr "زمان پایان"
+
+#: anti-fraud-core/class-wc-af-settings.php:1853
+msgid ""
+"Needs to be as per server time. Check in woo general settings. Accordingly "
+"specify end time."
+msgstr ""
+"باید مطابق با زمان سرور باشد. تنظیمات کلی را بررسی کنید. بر این اساس زمان "
+"پایان را مشخص کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:1859
+msgid "Maximum Allowed Number of Orders Between Time"
+msgstr "حداکثر تعداد مجاز سفارشات بین زمان"
+
+#: anti-fraud-core/class-wc-af-settings.php:1862
+msgid ""
+"Enter maximum number of orders that can be placed during specified time span."
+msgstr ""
+"حداکثر تعداد سفارش‌هایی را که می‌توان در بازه زمانی مشخص‌شده ثبت کرد، وارد کنید."
+
+#: anti-fraud-core/class-wc-af-settings.php:2013 assets/js/app.js:253
+msgid "Low Risk Order"
+msgstr "سفارش کم ریسک"
+
+#: anti-fraud-core/class-wc-af-settings.php:2015 assets/js/app.js:255
+msgid "Medium Risk Order"
+msgstr "سفارش با ریسک متوسط"
+
+#: anti-fraud-core/class-wc-af-settings.php:2017 assets/js/app.js:257
+msgid "High Risk Order"
+msgstr "سفارش با ریسک بالا"
+
+#: anti-fraud-core/class-wc-af-settings.php:2019 assets/js/app.js:259
+msgid "Disabled"
+msgstr "معلول"
+
+#: anti-fraud-core/class-wc-af-settings.php:2026
+msgid "No Importance"
+msgstr "بدون اهمیت"
+
+#: anti-fraud-core/class-wc-af-settings.php:2027
+msgid "Moderate"
+msgstr "در حد متوسط"
+
+#: anti-fraud-core/class-wc-af-settings.php:2028
+msgid "High Importance"
+msgstr "اهمیت بالا"
+
+#: anti-fraud-core/class-wc-af-settings.php:2174
+msgid "Your Account Id or License Key could not be authenticated!!"
+msgstr "شناسه حساب یا کلید مجوز شما احراز هویت نشد!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2189
+msgid "Great, authenticated successfully!!"
+msgstr "عالی، با موفقیت احراز هویت شد!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2332
+msgid "Your Quickemailverification API Key could not be authenticated!!"
+msgstr "کلید API Quickemailverification شما احراز هویت نشد!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2347
+msgid "Great, Quickemailverification authenticated successfully!!"
+msgstr "عالی، Quickemailverification با موفقیت تأیید شد!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2362
+msgid ""
+"Great, Quickemailverification authenticated successfully but you don't have "
+"enough credit to use this service."
+msgstr ""
+"عالی، Quickemailverification با موفقیت تأیید شد، اما اعتبار کافی برای "
+"استفاده از این سرویس را ندارید."
+
+#: anti-fraud-core/class-wc-af-settings.php:2429
+msgid "Great, bigdatacloud authenticated successfully!"
+msgstr "عالی، bigdatacloud با موفقیت احراز هویت شد!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2445 woocommerce-anti-fraud.php:397
+msgid ""
+"AntiFraud: Bigdatacloud credentials not authenticate or your quota limit has "
+"been exceeded!"
+msgstr ""
+"AntiFraud: اعتبار Bigdatacloud احراز هویت نمی شود یا از حد سهمیه شما فراتر "
+"رفته است!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2536
+msgid "Your Trust Swiftly API Key could not be authenticated!!"
+msgstr "کلید API Trust Swiftly شما احراز هویت نشد!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2551
+msgid "Your Trust Swiftly Base URL could not be validated!!"
+msgstr "URL Base Trust Swiftly شما تایید نشد!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2566
+msgid "Great, Trust Swiftly authenticated successfully!!"
+msgstr "عالی، اعتماد به سرعت با موفقیت تأیید شد!"
+
+#: anti-fraud-core/class-wc-af-trust-swiftly.php:292
+msgid " Please get verified with Trust Swiftly, and then try again."
+msgstr " لطفاً با Trust Swiftly تأیید شوید و سپس دوباره امتحان کنید."
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:356
+msgid "Sr No"
+msgstr "Sr No"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:357
+#: templates/dashboard.php:362
+msgid "Name"
+msgstr "نام"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:358
+msgid "Date"
+msgstr "تاریخ"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:359
+msgid "Action"
+msgstr "عمل"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:385
+msgid "Download"
+msgstr "دانلود"
+
+#. translators: %s: learn more link
+#: includes/class-wc-af-privacy.php:19
+msgid ""
+"By using this extension, you may be storing personal data or sharing data "
+"with an external service. <a href=\"%s\" target=\"_blank\">Learn more about "
+"how this works, including what you may want to include in your privacy "
+"policy.</a>"
+msgstr ""
+"با استفاده از این برنامه افزودنی، ممکن است داده های شخصی را ذخیره کنید یا "
+"داده ها را با یک سرویس خارجی به اشتراک بگذارید. <a href=\"%s\" target="
+"\"_blank\">درباره نحوه عملکرد این کار، از جمله مواردی که ممکن است بخواهید در "
+"خط‌مشی رازداری خود لحاظ کنید، بیشتر بیاموزید.</a>"
+
+#: rules/class-wc-af-rule-billing-matches-shipping.php:18
+msgid "Billing address does not match shipping address"
+msgstr "آدرس صورتحساب با آدرس حمل و نقل مطابقت ندارد"
+
+#: rules/class-wc-af-rule-billing-method.php:18
+msgid "Ordered from a risk billing_method"
+msgstr "سفارش از روش billing_risk"
+
+#: rules/class-wc-af-rule-billing-phone-matches-billing-country.php:17
+msgid "Billing phone number does not match with Billing country"
+msgstr "شماره تلفن صورت‌حساب با کشور صورت‌حساب مطابقت ندارد"
+
+#: rules/class-wc-af-rule-country.php:18
+msgid "Ordered from a risk country"
+msgstr "از یک کشور در معرض خطر سفارش داده شده است"
+
+#: rules/class-wc-af-rule-detect-proxy.php:16
+msgid "Customer ordered from behind a proxy."
+msgstr "مشتری از پشت پراکسی سفارش داد."
+
+#: rules/class-wc-af-rule-first-order-processing.php:17
+#: rules/class-wc-af-rule-first-order.php:16
+msgid "This is the customer's first order with this billing details."
+msgstr "این اولین سفارش مشتری با این جزئیات صورتحساب است."
+
+#: rules/class-wc-af-rule-free-email.php:20
+msgid "Email is a known free email address."
+msgstr "ایمیل یک آدرس ایمیل رایگان شناخته شده است."
+
+#: rules/class-wc-af-rule-geo-location.php:19
+msgid "Customer order geo location mismatches billing/shipping address."
+msgstr "مکان جغرافیایی سفارش مشتری با آدرس صورتحساب/حمل و نقل مطابقت ندارد."
+
+#: rules/class-wc-af-rule-high-amount.php:17
+msgid "Order exceeds maximum amount."
+msgstr "سفارش از حداکثر مقدار بیشتر است."
+
+#: rules/class-wc-af-rule-international-order.php:17
+msgid "Order is an international order."
+msgstr "نظم یک نظم بین المللی است."
+
+#: rules/class-wc-af-rule-ip-location.php:19
+msgid "Customer IP address did not match given billing country."
+msgstr "آدرس IP مشتری با کشور صورتحساب داده شده مطابقت نداشت."
+
+#: rules/class-wc-af-rule-ip-multiple-order-details.php:20
+msgid "IP address ordered with multiple order details in the past "
+msgstr "آدرس IP با جزئیات سفارش چندگانه در گذشته سفارش داده شده است"
+
+#: rules/class-wc-af-rule-minfraud-factors.php:18
+msgid "Score returned by Minfraud Factors exceeds the allowed value."
+msgstr "امتیاز بازگردانده شده توسط Minfraud Factors از مقدار مجاز بیشتر است."
+
+#: rules/class-wc-af-rule-minfraud-insights.php:18
+msgid "Score returned by Minfraud Insights exceeds the allowed value."
+msgstr "امتیاز ارائه شده توسط Minfraud Insights از مقدار مجاز بیشتر است."
+
+#: rules/class-wc-af-rule-minfraud.php:18
+msgid "Score returned by Minfraud exceeds the allowed value."
+msgstr "امتیاز برگردانده شده توسط Minfraud از مقدار مجاز بیشتر است."
+
+#: rules/class-wc-af-rule-temporary-email.php:17
+msgid "Email address is from a high-risk domain."
+msgstr "آدرس ایمیل از یک دامنه پرخطر است."
+
+#: rules/class-wc-af-rule-velocities.php:20
+msgid "IP address ordered multiple orders in the last "
+msgstr "آدرس IP چندین سفارش را در آخرین سفارش داد"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/af-admin-notice.php:25
+msgid "An order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "سفارشی با شناسه #%1$s امتیاز ریسک %2$s را کسب کرد."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-admin-notice.php:31 templates/plain/af-admin-notice.php:13
+#: templates/plain/af-paypal-notice.php:14
+msgid "%1$sClick here to view the order.%2$s."
+msgstr "%1$sبرای مشاهده سفارش اینجا را کلیک کنید.%2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-paypal-notice.php:26
+msgid "%1$sClick here to verify the order.%2$s."
+msgstr "%1$sبرای تأیید سفارش اینجا را کلیک کنید.%2$s."
+
+#: templates/dashboard.php:189
+msgid "Anti Fraud Dashboard"
+msgstr "داشبورد ضد تقلب"
+
+#: templates/dashboard.php:199
+msgid "Orders Detected"
+msgstr "سفارشات شناسایی شد"
+
+#: templates/dashboard.php:217
+msgid "Needs Attention"
+msgstr "نیاز به توجه دارد"
+
+#: templates/dashboard.php:230
+msgid "Recent Order Data"
+msgstr "داده های سفارش اخیر"
+
+#: templates/dashboard.php:244
+msgid "Last 24 Hours Update"
+msgstr "به روز رسانی 24 ساعت گذشته"
+
+#: templates/dashboard.php:250
+msgid "Total Transaction Amount"
+msgstr "کل مبلغ تراکنش"
+
+#: templates/dashboard.php:262
+msgid "Total Number of Orders"
+msgstr "تعداد کل سفارشات"
+
+#: templates/dashboard.php:274
+msgid "Medium Risk Orders"
+msgstr "سفارشات با ریسک متوسط"
+
+#: templates/dashboard.php:286
+msgid "High-Risk Orders on Hold"
+msgstr "سفارشات پرخطر در انتظار"
+
+#: templates/dashboard.php:298
+msgid "Fraudulent Orders Cancelled"
+msgstr "سفارشات تقلبی لغو شد"
+
+#: templates/dashboard.php:310
+msgid "High-Risk Net Transaction"
+msgstr "تراکنش خالص با ریسک بالا"
+
+#: templates/dashboard.php:322
+msgid "Emails Blocked"
+msgstr "ایمیل ها مسدود شدند"
+
+#: templates/dashboard.php:334
+msgid "Paypal Verification"
+msgstr "تایید پی پال"
+
+#: templates/dashboard.php:364
+msgid "Spent"
+msgstr "صرف کرد"
+
+#: templates/dashboard.php:366
+msgid "Status"
+msgstr "وضعیت"
+
+#: templates/dashboard.php:460
+msgid "Orders Breakdown"
+msgstr "شکست سفارشات"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/plain/af-admin-notice.php:11
+msgid "Hi there. Order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "سلام. سفارش با شناسه #%1$s امتیاز ریسک %2$s را کسب کرد."
+
+#: woocommerce-anti-fraud.php:109
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: woocommerce-anti-fraud.php:110
+msgid "Docs"
+msgstr "اسناد"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:339
+msgid ""
+"In order to continue %1$s\"Geo Location Match\"%2$s service, our provider "
+"Bigdatacloud now requires you to sign up and get the api key. To obtain an "
+"api key you can %3$sregister here%4$s."
+msgstr ""
+"برای ادامه سرویس %1$s\"تطابق موقعیت جغرافیایی\"%2$s، ارائه دهنده "
+"Bigdatacloud ما اکنون از شما می خواهد که ثبت نام کنید و کلید api را دریافت "
+"کنید. برای به دست آوردن یک کلید api می توانید %3$sدر اینجا ثبت نام کنید%4$s."
+
+#: woocommerce-anti-fraud.php:935
+msgid "This email id is blocked."
+msgstr "این شناسه ایمیل مسدود شده است."
+
+#: woocommerce-anti-fraud.php:952
+msgid "This IP Address is blocked."
+msgstr "این آدرس IP مسدود شده است."
+
+#. translators: %s: order time span
+#: woocommerce-anti-fraud.php:1247
+msgid ""
+"You have reached maximum number of allowed orders in %d hours. Please try "
+"again later."
+msgstr ""
+"در %d ساعت به حداکثر تعداد سفارش‌های مجاز رسیده‌اید. لطفاً بعداً دوباره امتحان "
+"کنید."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:1877
+msgid ""
+"Please consider enabling reCaptcha in the Anti Fraud plugin %1$ssettings%2$s "
+"to help prevent Velocity attacks."
+msgstr ""
+"لطفاً برای کمک به جلوگیری از حملات Velocity، reCaptcha را در افزونه Anti "
+"Fraud %1$ssettings%2$s فعال کنید."
+
+#: woocommerce-anti-fraud.php:2223
+msgid "This email id is blocked"
+msgstr "این شناسه ایمیل مسدود شده است"
+
+#: woocommerce-anti-fraud.php:2225
+msgid "Unblock"
+msgstr "رفع انسداد"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:2261
+msgid ""
+"Please install and activate %1$sWooCommerce%2$s in order for the WooCommerce "
+"Anti Fraud extension to work!"
+msgstr ""
+"لطفاً %1$sWooCommerce%2$s را نصب و فعال کنید تا افزونه WooCommerce Anti Fraud "
+"کار کند!"
+
+#: woocommerce-anti-fraud.php:2447 woocommerce-anti-fraud.php:2878
+msgid "Invalid recaptcha."
+msgstr "Recaptcha نامعتبر است."
+
+#: woocommerce-anti-fraud.php:2452
+msgid "You are not a human, please refresh page."
+msgstr "شما یک انسان نیستید، لطفا صفحه را به روز کنید."
+
+#: woocommerce-anti-fraud.php:2461
+msgid "Could not get response from recaptcha server, please refresh page."
+msgstr "پاسخی از سرور recaptcha دریافت نشد، لطفاً صفحه را بازخوانی کنید."
+
+#: woocommerce-anti-fraud.php:2464
+msgid "Recaptcha not responding, please refresh page."
+msgstr "Recaptcha پاسخ نمی دهد، لطفاً صفحه را بازخوانی کنید."
+
+#: woocommerce-anti-fraud.php:2481
+msgid "PayPal Verification Done."
+msgstr "تایید پی پال انجام شد."
+
+#: woocommerce-anti-fraud.php:2773
+msgid "Captcha"
+msgstr "کپچا"
+
+#: woocommerce-anti-fraud.php:2794 woocommerce-anti-fraud.php:2893
+msgid "Recaptcha is a required field."
+msgstr "Recaptcha یک فیلد الزامی است."
+
+#: woocommerce-anti-fraud.php:2889
+msgid "Could not get response from recaptcha server."
+msgstr "پاسخ از سرور recaptcha دریافت نشد."
+
+#: woocommerce-anti-fraud.php:2896
+msgid "Could not verify request."
+msgstr "درخواست تأیید نشد."
+
+#: woocommerce-anti-fraud.php:2972
+msgid "Fraud Action"
+msgstr "اقدام تقلب"
+
+#: woocommerce-anti-fraud.php:2985 woocommerce-anti-fraud.php:3001
+msgid "Fraud Check"
+msgstr "چک تقلب"
+
+#: assets/js/app.js:409
+msgid "Processing.."
+msgstr "در حال پردازش.."

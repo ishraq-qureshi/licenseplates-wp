@@ -1,0 +1,257 @@
+# BEGIN All In One WP Security
+#AIOWPS_BASIC_HTACCESS_RULES_START
+<Files .htaccess>
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order deny,allow
+Deny from all
+</IfModule>
+</Files>
+ServerSignature Off
+LimitRequestBody 104857600
+<Files wp-config.php>
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order deny,allow
+Deny from all
+</IfModule>
+</Files>
+#AIOWPS_BASIC_HTACCESS_RULES_END
+#AIOWPS_DEBUG_LOG_BLOCK_HTACCESS_RULES_START
+<Files debug.log>
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order deny,allow
+Deny from all
+</IfModule>
+</Files>
+#AIOWPS_DEBUG_LOG_BLOCK_HTACCESS_RULES_END
+#AIOWPS_DISABLE_INDEX_VIEWS_START
+Options -Indexes
+#AIOWPS_DISABLE_INDEX_VIEWS_END
+# END All In One WP Security
+
+# BEGIN WP Rocket
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset UTF-8
+# Force UTF-8 for a number of file formats
+<IfModule mod_mime.c>
+AddCharset UTF-8 .atom .css .js .json .rss .vtt .xml
+</IfModule>
+
+# FileETag None is not enough for every server.
+<IfModule mod_headers.c>
+Header unset ETag
+</IfModule>
+
+# Since we’re sending far-future expires, we don’t need ETags for static content.
+# developer.yahoo.com/performance/rules.html#etags
+FileETag None
+
+<IfModule mod_alias.c>
+<FilesMatch "\.(html|htm|rtf|rtx|txt|xsd|xsl|xml)$">
+<IfModule mod_headers.c>
+Header set X-Powered-By "WP Rocket/3.23"
+Header unset Pragma
+Header append Cache-Control "public"
+Header unset Last-Modified
+</IfModule>
+</FilesMatch>
+
+<FilesMatch "\.(css|htc|js|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|eot|exe|gif|gz|gzip|ico|jpg|jpeg|jpe|json|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|svg|svgz|swf|tar|tif|tiff|ttf|ttc|wav|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$">
+<IfModule mod_headers.c>
+Header unset Pragma
+Header append Cache-Control "public"
+</IfModule>
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+	AddType image/avif                                  avif
+    AddType image/avif-sequence                         avifs
+</IfModule>
+# Expires headers (for better cache control)
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresDefault                              "access plus 1 month"
+	# cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
+	ExpiresByType text/cache-manifest           "access plus 0 seconds"
+	# Your document html
+	ExpiresByType text/html                     "access plus 0 seconds"
+	# Data
+	ExpiresByType text/xml                      "access plus 0 seconds"
+	ExpiresByType application/xml               "access plus 0 seconds"
+	ExpiresByType application/json              "access plus 0 seconds"
+	# Feed
+	ExpiresByType application/rss+xml           "access plus 1 hour"
+	ExpiresByType application/atom+xml          "access plus 1 hour"
+	# Favicon (cannot be renamed)
+	ExpiresByType image/x-icon                  "access plus 1 week"
+	# Media: images, video, audio
+	ExpiresByType image/gif                     "access plus 4 months"
+	ExpiresByType image/png                     "access plus 4 months"
+	ExpiresByType image/jpeg                    "access plus 4 months"
+	ExpiresByType image/webp                    "access plus 4 months"
+	ExpiresByType video/ogg                     "access plus 4 months"
+	ExpiresByType audio/ogg                     "access plus 4 months"
+	ExpiresByType video/mp4                     "access plus 4 months"
+	ExpiresByType video/webm                    "access plus 4 months"
+	ExpiresByType image/avif                    "access plus 4 months"
+	ExpiresByType image/avif-sequence           "access plus 4 months"
+	# HTC files  (css3pie)
+	ExpiresByType text/x-component              "access plus 1 month"
+	# Webfonts
+	ExpiresByType font/ttf                      "access plus 4 months"
+	ExpiresByType font/otf                      "access plus 4 months"
+	ExpiresByType font/woff                     "access plus 4 months"
+	ExpiresByType font/woff2                    "access plus 4 months"
+	ExpiresByType image/svg+xml                 "access plus 4 months"
+	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+	# CSS and JavaScript
+	ExpiresByType text/css                      "access plus 1 year"
+	ExpiresByType text/javascript               "access plus 1 year"
+	ExpiresByType application/javascript        "access plus 1 year"
+</IfModule>
+# Gzip compression
+<IfModule mod_deflate.c>
+# Active compression
+SetOutputFilter DEFLATE
+# Force deflate for mangled headers
+<IfModule mod_setenvif.c>
+<IfModule mod_headers.c>
+SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+# Don’t compress images and other uncompressible content
+SetEnvIfNoCase Request_URI \
+\.(?:gif|jpe?g|png|rar|zip|exe|flv|mov|wma|mp3|avi|swf|mp?g|mp4|webm|webp|pdf)$ no-gzip dont-vary
+</IfModule>
+</IfModule>
+
+# Compress all output labeled with one of the following MIME-types
+<IfModule mod_filter.c>
+AddOutputFilterByType DEFLATE application/atom+xml \
+		                          application/javascript \
+		                          application/json \
+		                          application/rss+xml \
+		                          application/vnd.ms-fontobject \
+		                          application/x-font-ttf \
+		                          application/xhtml+xml \
+		                          application/xml \
+		                          font/opentype \
+		                          image/svg+xml \
+		                          image/x-icon \
+		                          text/css \
+		                          text/javascript \
+		                          text/html \
+		                          text/plain \
+		                          text/x-component \
+		                          text/xml
+</IfModule>
+<IfModule mod_headers.c>
+Header append Vary: Accept-Encoding
+</IfModule>
+</IfModule>
+
+
+# END WP Rocket
+
+# BEGIN LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+<IfModule LiteSpeed>
+RewriteEngine on
+CacheLookup on
+RewriteRule .* - [E=Cache-Control:no-autoflush]
+RewriteRule litespeed/debug/.*\.log$ - [F,L]
+RewriteRule \.litespeed_conf\.dat - [F,L]
+
+### marker ASYNC start ###
+RewriteCond %{REQUEST_URI} /wp-admin/admin-ajax\.php
+RewriteCond %{QUERY_STRING} action=async_litespeed
+RewriteRule .* - [E=noabort:1]
+### marker ASYNC end ###
+
+### marker DROPQS start ###
+CacheKeyModify -qs:fbclid
+CacheKeyModify -qs:gclid
+CacheKeyModify -qs:utm*
+CacheKeyModify -qs:_ga
+### marker DROPQS end ###
+
+</IfModule>
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END LSCACHE
+# BEGIN NON_LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END NON_LSCACHE
+
+## Begin SSL Redirection (disabled for local dev - plain HTTP)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+## End SSL Redirection
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# custom redirect for old internal urls @aleksey
+# Auto brand plates
+Redirect 301 /license-plates/auto-brand-plates/gmc/denali https://www.licenseplates.tv/denali
+
+# Canadian plates
+Redirect 301 /license-plates/canadian-license-plates https://www.licenseplates.tv/canadian-license-plates
+
+# International plates
+Redirect 301 /license-plates/international-plates/c-g/congo-democratic-republic https://www.licenseplates.tv/congo-democratic-republic
+Redirect 301 /license-plates/international-plates/m-r/macau https://www.licenseplates.tv/macau
+Redirect 301 /license-plates/international-plates/m-r/mexico/aguascalientes https://www.licenseplates.tv/aguascalientes
+
+# Sport & hobby plates
+Redirect 301 /license-plates/sport-hobby-plates/mlb-baseball-team-plates/chicago-white-sox https://www.licenseplates.tv/chicago-white-sox
+Redirect 301 /license-plates/sport-hobby-plates/nfl-football-team-plates/buffalo-bills https://www.licenseplates.tv/buffalo-bills
+
+# Product-level redirects
+Redirect 301 /license-plates/sport-hobby-plates/nfl-football-team-plates/buffalo-bills/buffalo-bills-nfl-national-football-league-chrome-emblem-3d-black-license-plate https://www.licenseplates.tv/buffalo-bills-nfl-national-football-league-chrome-emblem-3d-black-license-plate
+
+Redirect 301 /license-plates/sport-hobby-plates/nfl-football-team-plates/buffalo-bills/buffalo-bills-nfl-national-football-league-chrome-emblem-3d-mirror-license-plate https://www.licenseplates.tv/buffalo-bills-nfl-national-football-league-chrome-emblem-3d-mirror-license-plate
+
+# USA state plates
+Redirect 301 /license-plates/usa-state-plates/california https://www.licenseplates.tv/california
+# end @aleksey 28/01
+
+# BEGIN Speed Optimizer by 10Web
+# The directives (lines) between "BEGIN Speed Optimizer by 10Web" and "END Speed Optimizer by 10Web" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+
+# END Speed Optimizer by 10Web
+RewriteCond %{HTTP_HOST} ^wp\.licenseplates\.tv$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.wp\.licenseplates\.tv$
+RewriteRule ^/?$ "https\:\/\/licenseplates\.tv\/" [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

@@ -1,0 +1,1520 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Anti Fraud 5.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-anti-fraud\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-06T15:02:46+05:30\n"
+"PO-Revision-Date: 2024-03-18 18:06+0530\n"
+"Language: el\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: woocommerce-anti-fraud\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-anti-fraud.php
+msgid "WooCommerce Anti Fraud"
+msgstr "WooCommerce Anti Fraud"
+
+#. Plugin URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://woocommerce.com/products/woocommerce-anti-fraud/"
+msgstr "https://woocommerce.com/products/woocommerce-anti-fraud/"
+
+#. Description of the plugin
+#: woocommerce-anti-fraud.php
+msgid "Advanced fraud and card attack protection for WooCommerce, with risk scoring, rule-based controls, checkout protection, and tools to help merchants detect, prevent, and respond to suspicious activity."
+msgstr "Βαθμολογήστε κάθε συναλλαγή σας, ελέγχοντας για πιθανή απάτη, χρησιμοποιώντας ένα σύνολο προηγμένων κανόνων βαθμολόγησης."
+
+#. Author of the plugin
+#: woocommerce-anti-fraud.php
+msgid "OPMC Australia Pty Ltd"
+msgstr "OPMC Australia Pty Ltd"
+
+#. Author URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://opmc.biz/"
+msgstr "https://opmc.biz/"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:29
+msgid "Anti Fraud - Admin Notice"
+msgstr "Καταπολέμηση της απάτης - Ανακοίνωση διαχειριστή"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:30
+msgid "Admin notification about an order."
+msgstr "Ειδοποίηση διαχειριστή για μια παραγγελία."
+
+#: anti-fraud-core/class-wc-af-admin-email.php:50
+#: anti-fraud-core/class-wc-af-admin-email.php:51
+msgid "Fraud notification for order #{order_id}"
+msgstr "Ειδοποίηση απάτης για την παραγγελία #{order_id}"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:349
+msgid "Antifraud paypal verification"
+msgstr "Επαλήθευση κατά της απάτης paypal"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:354
+msgid "Check pending order fraud risk score"
+msgstr "Ελέγξτε τη βαθμολογία κινδύνου απάτης εκκρεμών παραγγελιών"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:388
+#: anti-fraud-core/class-wc-af-score-helper.php:490
+#: anti-fraud-core/class-wc-af-score-helper.php:624
+#: anti-fraud-core/class-wc-af-score-helper.php:626
+#: anti-fraud-core/class-wc-af-score-helper.php:629
+#: anti-fraud-core/class-wc-af-score-helper.php:672
+#: anti-fraud-core/class-wc-af-score-helper.php:674
+#: anti-fraud-core/class-wc-af-score-helper.php:677
+msgid "Fraud check done."
+msgstr "Ο έλεγχος απάτης έγινε."
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:19
+msgid "MaxMind Risk Score"
+msgstr "Βαθμολογία κινδύνου Maxmind"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Hide details"
+msgstr "Κρύψε τις λεπτομέρειες"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Show fraud risk details"
+msgstr "Εμφάνιση λεπτομερειών κινδύνου απάτης"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:19
+msgid "Fraud Risk"
+msgstr "Κίνδυνος απάτης"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:135
+msgid "This order is currently in queue for a fraud check."
+msgstr "Αυτή η παραγγελία βρίσκεται αυτή τη στιγμή στην ουρά για έλεγχο απάτης."
+
+#: anti-fraud-core/class-wc-af-meta-box.php:136
+msgid "Cancel fraud check queue"
+msgstr "Ακύρωση ουράς ελέγχου απάτης"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:141
+msgid "Calculate Fraud Risk"
+msgstr "Υπολογίστε τον κίνδυνο απάτης"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:25
+msgid "Anti Fraud - PayPal verification"
+msgstr "Anti Fraud - Επαλήθευση PayPal"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:26
+msgid "Notice about PayPal verification."
+msgstr "Ειδοποίηση σχετικά με την επαλήθευση του PayPal."
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:47
+msgid "PayPal Verification notification of order #{order_id}"
+msgstr "Ειδοποίηση επαλήθευσης PayPal της παραγγελίας #{order_id}"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:28
+msgid "No fraud checking has been done on this order yet."
+msgstr "Δεν έχει γίνει ακόμα έλεγχος απάτης σε αυτήν την παραγγελία."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:33
+#: anti-fraud-core/class-wc-af-settings.php:2006
+#: templates/dashboard.php:37
+#: templates/dashboard.php:210
+#: templates/dashboard.php:500
+msgid "Low Risk"
+msgstr "Χαμηλό ρίσκο"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:43
+#: anti-fraud-core/class-wc-af-settings.php:2007
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "Medium Risk"
+msgstr "Μεσαίου κινδύνου"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:43
+#: anti-fraud-core/class-wc-af-settings.php:2007
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "High Risk"
+msgstr "Υψηλού κινδύνου"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:187
+#: anti-fraud-core/class-wc-af-score-helper.php:229
+#: woocommerce-anti-fraud.php:1280
+msgid "Order fraud checks skipped due to whitelisted email."
+msgstr "Παραγγείλετε ελέγχους απάτης που παραλείπονται λόγω ηλεκτρονικού ταχυδρομείου με λευκόχρυσο."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:197
+#: woocommerce-anti-fraud.php:1300
+msgid "Order fraud checks skipped due to whitelisted customer IPs."
+msgstr "Παραγγείλετε ελέγχους απάτης παραλείπονται λόγω των IPs που έχουν υποστεί λίστα με τις λευκώματα."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:210
+#: woocommerce-anti-fraud.php:1325
+msgid "Order fraud checks skipped due to whitelisted user role."
+msgstr "Οι έλεγχοι παρατάξεων απάτης παραλείπονται λόγω του ρόλου του χρήστη που έχει υποστεί λίστα."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:220
+#: woocommerce-anti-fraud.php:1347
+msgid "Order fraud checks skipped due to whitelisted payment method."
+msgstr "Οι έλεγχοι απάτης παραγγέλθηκαν εξαιτίας της μεθόδου πληρωμής με λίστα με λίστα."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:239
+msgid "Order fraud checks skipped due to user verified from Trust Swiftly."
+msgstr "Παραγγείλετε ελέγχους απάτης που παραλείπονται λόγω του χρήστη που επαληθεύτηκε από την Trust γρήγορα."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:427
+msgid "User Email is Whitelisted."
+msgstr "Το email του χρήστη έχει ληφθεί σε λευκόχρυσο."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:491
+msgid "Payment method "
+msgstr "Μέθοδος πληρωμής "
+
+#: anti-fraud-core/class-wc-af-score-helper.php:548
+msgid "Max order limit reched from same IP."
+msgstr "Το μέγιστο όριο παραγγελίας που επανεξετάζεται από το ίδιο IP."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:588
+msgid "Max Order Limit between time reached."
+msgstr "Μέγιστο όριο παραγγελίας μεταξύ του χρόνου που επιτεύχθηκε."
+
+#: anti-fraud-core/class-wc-af-settings.php:40
+#: includes/class-wc-af-privacy.php:11 woocommerce-anti-fraud.php:54
+#: woocommerce-anti-fraud.php:55
+msgid "Anti Fraud"
+msgstr "Κατά της απάτης"
+
+#: anti-fraud-core/class-wc-af-settings.php:90
+#: anti-fraud-core/class-wc-af-settings.php:1003
+#: anti-fraud-core/tamplate-admin-settings-page.php:15
+msgid "General Settings"
+msgstr "Γενικές Ρυθμίσεις"
+
+#: anti-fraud-core/class-wc-af-settings.php:91
+msgid "Rules"
+msgstr "Κανόνας"
+
+#: anti-fraud-core/class-wc-af-settings.php:92
+msgid "Blacklist Settings"
+msgstr "Ρυθμίσεις μαύρης λίστας"
+
+#: anti-fraud-core/class-wc-af-settings.php:93
+msgid "Email Alerts"
+msgstr "Ειδοποιήσεις email"
+
+#: anti-fraud-core/class-wc-af-settings.php:94
+#: anti-fraud-core/class-wc-af-settings.php:892
+msgid "Paypal Settings"
+msgstr "Ρυθμίσεις PayPal"
+
+#: anti-fraud-core/class-wc-af-settings.php:95
+msgid "MinFraud Settings"
+msgstr "Ρυθμίσεις Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:96
+msgid "MinFraud Insights Settings"
+msgstr "Ρυθμίσεις Insights Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:97
+msgid "MinFraud Factors Settings"
+msgstr "Ρυθμίσεις παραγόντων Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:98
+#: anti-fraud-core/class-wc-af-settings.php:229
+msgid "Trust Swiftly Settings"
+msgstr "Εμπιστευθείτε ταχέως ρυθμίσεις"
+
+#: anti-fraud-core/class-wc-af-settings.php:99
+msgid "reCAPTCHA"
+msgstr "ανάκριση"
+
+#: anti-fraud-core/class-wc-af-settings.php:100
+msgid "Need Support?"
+msgstr "Χρειάζεστε υποστήριξη;"
+
+#: anti-fraud-core/class-wc-af-settings.php:231
+msgid "<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust Swiftly</a> is a paid, external service that uses AI to verify the identity and payment of a customer. By using <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust Swiftly</a> you can decrease fraud by automatically verifying their information and later use the data to win any dispute cases. To sign up for Trust Swiftly, click this link: <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trustswiftly.com</a><hr/>"
+msgstr "<a href=\"https://thrive.zohopublic.com/aref/g4734hgpxd/mbwuiqnh8\" target=\"_blank\"> Trust γρήγορα </a> πελάτης. Χρησιμοποιώντας <a href=\"https://thrive.zohopublic.com/aref/g4734hgpxd/mbwuiqnh8\" target=\"_blank\"> Trust γρήγορα Κερδίστε τυχόν περιπτώσεις διαφωνίας. Για να εγγραφείτε γρήγορα στο Trust, κάντε κλικ σε αυτόν τον σύνδεσμο: <a href=\"https://thrive.zohopublic.com/aref/g4734hgpxd/mbwuiqnh8\" target=\"_blank\"> trustswaftly.com </a> <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:236
+msgid "Trust Swiftly Enable/Disable"
+msgstr "Εμπιστευθείτε ταχέως ενεργοποιήστε/απενεργοποιήστε"
+
+#: anti-fraud-core/class-wc-af-settings.php:239
+msgid "Enable Trust Swiftly"
+msgstr "Ενεργοποιήστε την εμπιστοσύνη γρήγορα"
+
+#: anti-fraud-core/class-wc-af-settings.php:244
+msgid "API Key"
+msgstr "Πλήκτρο API"
+
+#: anti-fraud-core/class-wc-af-settings.php:253
+msgid "Base URL"
+msgstr "Βασική διεύθυνση URL"
+
+#: anti-fraud-core/class-wc-af-settings.php:256
+msgid "Enter in your Trust Swiftly site URL i.e https://example.trustswiftly.com"
+msgstr "Εισαγάγετε την εμπιστοσύνη σας γρήγορα URL ιστότοπου, δηλαδή https://example.trustswaftly.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:262
+msgid "Verification Method"
+msgstr "Μέθοδος επαλήθευσης"
+
+#: anti-fraud-core/class-wc-af-settings.php:273
+msgid "Verification Template"
+msgstr "Πρότυπο επαλήθευσης"
+
+#: anti-fraud-core/class-wc-af-settings.php:278
+msgid "Select a verification method defined such as ID and Selfie. A Verification Template should be set on Trust Swiftly."
+msgstr "Επιλέξτε μια μέθοδο επαλήθευσης που ορίζεται όπως τα ID και το Selfie. Ένα πρότυπο επαλήθευσης θα πρέπει να ρυθμιστεί γρήγορα στο Trust."
+
+#: anti-fraud-core/class-wc-af-settings.php:284
+msgid "When To Verify"
+msgstr "Πότε να επαληθευτεί"
+
+#: anti-fraud-core/class-wc-af-settings.php:289
+msgid "Select when customers should verify their identity."
+msgstr "Επιλέξτε όταν οι πελάτες πρέπει να επαληθεύσουν την ταυτότητά τους."
+
+#: anti-fraud-core/class-wc-af-settings.php:295
+msgid "Select Threshold Weight"
+msgstr "Επιλέξτε βάρος κατωφλίου"
+
+#: anti-fraud-core/class-wc-af-settings.php:300
+msgid "If the risk score exceed threshold value which is set here, then the customer needs to be verified with Trust Swiftly."
+msgstr "Εάν η βαθμολογία κινδύνου υπερβαίνει την τιμή κατωφλίου που έχει οριστεί εδώ, τότε ο πελάτης πρέπει να επαληθευτεί με εμπιστοσύνη γρήγορα."
+
+#: anti-fraud-core/class-wc-af-settings.php:325
+#: anti-fraud-core/class-wc-af-settings.php:446
+#: anti-fraud-core/class-wc-af-settings.php:519
+msgid "MaxMind minFraud Settings"
+msgstr "Ρυθμίσεις Maxmind Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:327
+#: anti-fraud-core/class-wc-af-settings.php:448
+#: anti-fraud-core/class-wc-af-settings.php:521
+msgid "<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind minFraud</a> is a paid, external service that uses machine learning to detect potential fraud transactions. By using <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >minFraud</a> you can potentially detect more fraudulent transactions.<br/>To sign up to MaxMind minFraud, click this link: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a><hr/>"
+msgstr "<a href=\"https://maxmind.pxf.io/qnvxgg\" target=\"_blank\"> maxmind minfraud </a> είναι μια πληρωμένη, εξωτερική υπηρεσία που χρησιμοποιεί μηχανική μάθηση για την ανίχνευση πιθανών συναλλαγών απάτης. Χρησιμοποιώντας <a href=\"https://maxmind.pxf.io/qnvxgg\" target=\"_blank\"> minfraud </a> Μπορείτε ενδεχομένως να ανιχνεύσετε πιο δόλια συναλλαγές. Αυτός ο σύνδεσμος: <a href=\"https://maxmind.pxf.io/qnvxgg\" target=\"_blank\"> https://maxmind.com </a> <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:332
+#: anti-fraud-core/class-wc-af-settings.php:452
+#: anti-fraud-core/class-wc-af-settings.php:525
+#: anti-fraud-core/class-wc-af-settings.php:898
+msgid "Enable/Disable"
+msgstr "Ενεργοποιώ απενεργοποιώ"
+
+#: anti-fraud-core/class-wc-af-settings.php:335
+msgid "Enable MaxMind minFraud Integration"
+msgstr "Ενεργοποιήστε την ενσωμάτωση Maxmind Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:340
+msgid "Device Tracking"
+msgstr "Παρακολούθηση συσκευών"
+
+#: anti-fraud-core/class-wc-af-settings.php:343
+msgid "Detect if a person uses the same device but changes proxies while they are placing multiple orders from your website"
+msgstr "Ανίχνευση εάν ένα άτομο χρησιμοποιεί την ίδια συσκευή, αλλά αλλάζει πληρεξούσια ενώ τοποθετεί πολλαπλές παραγγελίες από τον ιστότοπό σας"
+
+#: anti-fraud-core/class-wc-af-settings.php:349
+msgid "MaxMind Account ID"
+msgstr "Αναγνωριστικό λογαριασμού MaxMind"
+
+#: anti-fraud-core/class-wc-af-settings.php:351
+msgid "Enter your MaxMind account ID here.  If you don&apos;t have an account, please sign up at <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a>."
+msgstr "Εισαγάγετε το αναγνωριστικό λογαριασμού MaxMind εδώ. Εάν δεν έχετε λογαριασμό, εγγραφείτε στο <a href=\"https://maxmind.pxf.io/qnvxgg\" target=\"_blank\"> https://maxmind.com </a>."
+
+#: anti-fraud-core/class-wc-af-settings.php:356
+msgid "MaxMind License Key"
+msgstr "Κλειδί άδειας MaxMind"
+
+#: anti-fraud-core/class-wc-af-settings.php:358
+msgid "Enter the license key provided by MaxMind here."
+msgstr "Εισαγάγετε το κλειδί άδειας που παρέχεται από το Maxmind εδώ."
+
+#: anti-fraud-core/class-wc-af-settings.php:364
+msgid "Does IP Address Match Location?"
+msgstr "Η τοποθεσία αντιστοίχισης διεύθυνσης IP;"
+
+#: anti-fraud-core/class-wc-af-settings.php:369
+msgid "Enable it to identify that customer's physical location matches the location provided by IP address."
+msgstr "Ενεργοποιήστε την προσδιορισμό της φυσικής τοποθεσίας του πελάτη ταιριάζει με τη θέση που παρέχεται από τη διεύθυνση IP."
+
+#: anti-fraud-core/class-wc-af-settings.php:373
+#: anti-fraud-core/class-wc-af-settings.php:1398
+#: anti-fraud-core/class-wc-af-settings.php:1437
+#: anti-fraud-core/class-wc-af-settings.php:1469
+#: anti-fraud-core/class-wc-af-settings.php:1493
+#: anti-fraud-core/class-wc-af-settings.php:1515
+#: anti-fraud-core/class-wc-af-settings.php:1556
+#: anti-fraud-core/class-wc-af-settings.php:1606
+#: anti-fraud-core/class-wc-af-settings.php:1628
+#: anti-fraud-core/class-wc-af-settings.php:1675
+#: anti-fraud-core/class-wc-af-settings.php:1729
+#: anti-fraud-core/class-wc-af-settings.php:1764
+#: anti-fraud-core/class-wc-af-settings.php:1796
+msgid "Rule Weight"
+msgstr "Βάρος του κανόνα"
+
+#: anti-fraud-core/class-wc-af-settings.php:392
+#: anti-fraud-core/class-wc-af-settings.php:465
+#: anti-fraud-core/class-wc-af-settings.php:538
+msgid "Threshold Settings"
+msgstr "Ρυθμίσεις κατωφλίου"
+
+#: anti-fraud-core/class-wc-af-settings.php:399
+msgid "Threshold minFraud Risk Score"
+msgstr "Κατώφλι Minfraud Risk Score"
+
+#: anti-fraud-core/class-wc-af-settings.php:401
+#: anti-fraud-core/class-wc-af-settings.php:474
+#: anti-fraud-core/class-wc-af-settings.php:547
+msgid "If the risk score returned by the minFraud system exceeds this number, the transaction will be considered potentially fraudulent and will contribute to the overall fraud score calculation.  If the risk score from minFraud is lower than this threshold, it will not contribute to the overall fraud score."
+msgstr "Εάν η βαθμολογία κινδύνου που επιστρέφεται από το σύστημα Minfraud υπερβαίνει αυτόν τον αριθμό, η συναλλαγή θα θεωρηθεί δυνητικά δόλια και θα συμβάλει στον συνολικό υπολογισμό της βαθμολογίας απάτης. Εάν η βαθμολογία κινδύνου από το Minfraud είναι χαμηλότερο από αυτό το όριο, δεν θα συμβάλει στη συνολική βαθμολογία απάτης."
+
+#: anti-fraud-core/class-wc-af-settings.php:414
+msgid "minFraud Rule Weight"
+msgstr "Βάρος κανόνα Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:417
+#: anti-fraud-core/class-wc-af-settings.php:490
+#: anti-fraud-core/class-wc-af-settings.php:563
+msgid "If the minFraud risk score exceeds the threshold set above, this weight will be applied to the overall risk score.  By adjusting this, you can balance the minFraud value against the other rules-based calculations in the plugin."
+msgstr "Εάν η βαθμολογία κινδύνου Minfraud υπερβαίνει το όριο που έχει οριστεί παραπάνω, αυτό το βάρος θα εφαρμοστεί στη συνολική βαθμολογία κινδύνου. Προσαρμόζοντας αυτό, μπορείτε να εξισορροπήσετε την τιμή Minfraud έναντι των άλλων υπολογισμών που βασίζονται σε κανόνες στο plugin."
+
+#: anti-fraud-core/class-wc-af-settings.php:455
+msgid "Enable MaxMind minFraud Insights Integration"
+msgstr "Ενεργοποιήστε την ενσωμάτωση Maxmind Minfraud Insights"
+
+#: anti-fraud-core/class-wc-af-settings.php:472
+msgid "Threshold minFraud Insights Risk Score"
+msgstr "Κατώφλι Minfraud Insights Score Risk Score"
+
+#: anti-fraud-core/class-wc-af-settings.php:487
+msgid "minFraud Insights Rule Weight"
+msgstr "Minfraud Insights Κόβασμα Βάρος"
+
+#: anti-fraud-core/class-wc-af-settings.php:528
+msgid "Enable MaxMind minFraud Factors Integration"
+msgstr "Ενεργοποιήστε την ενσωμάτωση παραγόντων Maxmind Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:545
+msgid "Threshold minFraud Factors Risk Score"
+msgstr "Παράγοντες κινδύνου κατωφλίου Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:560
+msgid "minFraud Factors Rule Weight"
+msgstr "Παράγοντες Minfraud Ruc Rule"
+
+#: anti-fraud-core/class-wc-af-settings.php:592
+msgid "Support for the Anti-Fraud Plugin"
+msgstr "Υποστήριξη για το plugin κατά της απάτης"
+
+#: anti-fraud-core/class-wc-af-settings.php:598
+msgid "Facing an Issue with the plugin?"
+msgstr "Αντιμετωπίζοντας ένα πρόβλημα με το plugin;"
+
+#: anti-fraud-core/class-wc-af-settings.php:599
+msgid "Contact Our Support"
+msgstr "Επικοινωνήστε με την υποστήριξή μας"
+
+#: anti-fraud-core/class-wc-af-settings.php:601
+msgid "If you have any issues or feedback about Anti-Fraud plugin, we would love to here from you!"
+msgstr "Εάν έχετε προβλήματα ή ανατροφοδότηση σχετικά με το plugin κατά της απάτης, θα θέλαμε εδώ από εσάς!"
+
+#: anti-fraud-core/class-wc-af-settings.php:607
+msgid "Love our Plugin?"
+msgstr "Λατρεύω το plugin μας;"
+
+#: anti-fraud-core/class-wc-af-settings.php:609
+msgid "Leave Us a Review!"
+msgstr "Αφήστε μας μια κριτική!"
+
+#: anti-fraud-core/class-wc-af-settings.php:611
+msgid "Your positive reviews are always encouraging!"
+msgstr "Οι θετικές κριτικές σας είναι πάντα ενθαρρυντικές!"
+
+#: anti-fraud-core/class-wc-af-settings.php:635
+msgid "Google reCAPTCHA Settings"
+msgstr "Ρυθμίσεις recaptcha Google"
+
+#: anti-fraud-core/class-wc-af-settings.php:637
+msgid ""
+"Click <a href=\"https://www.google.com/recaptcha/admin\" target=\"_blank\">here</a> to register.\n"
+"\t\t\t\t\t\t\t\tActivating reCAPTCHA will enable the service on your Checkout page, which is an effective means of reducing spam orders, particularly from velocity attacks ie. where spammers try multiple credit cards to test their validity.   If you continue to experience a high volume of spam orders after enabling this setting, please contact our Support team (<a href=\"mailto:support@opmc.biz\" target=\"_top\">support@opmc.biz</a>) .<hr/>"
+msgstr ""
+"\"Κάντε κλικ στο <a href=\"\"https://www.google.com/recaptcha/admin\"\" target=\"\"_blank\"\"> εδώ </a> για εγγραφή.\n"
+"\t\t\t\t\t\t\t\tΗ ενεργοποίηση recaptcha θα επιτρέψει την υπηρεσία στη σελίδα πληρωμής σας, η οποία αποτελεί αποτελεσματικό μέσο για τη μείωση των παραγγελιών ανεπιθύμητων μηνυμάτων, ιδιαίτερα από επιθέσεις ταχύτητας, δηλαδή. όπου οι spammers δοκιμάζουν πολλές πιστωτικές κάρτες για να δοκιμάσουν την εγκυρότητά τους. Εάν συνεχίσετε να αντιμετωπίζετε μεγάλο όγκο παραγγελιών ανεπιθύμητων μηνυμάτων μετά την ενεργοποίηση αυτής της ρύθμισης, επικοινωνήστε με την ομάδα υποστήριξής μας (<a href=\"\"mailto:support@opmc.biz\"\" target=\"\"_top\"\"> support@opmc.biz </a> ). <Hr/>\""
+
+#: anti-fraud-core/class-wc-af-settings.php:646
+msgid "Enable reCAPTCHA"
+msgstr "Ενεργοποίηση recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:650
+msgid "Enable reCAPTCHA on checkout page<br/>"
+msgstr "Ενεργοποιήστε το recaptcha στη σελίδα πληρωμής <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:655
+msgid "Enable v2 reCAPTCHA"
+msgstr "Ενεργοποίηση V2 recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:659
+msgid "Enable v2 reCAPTCHA<br/>"
+msgstr "Ενεργοποίηση V2 recaptcha <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:665
+msgid "Enable v3 reCAPTCHA"
+msgstr "Ενεργοποίηση V3 recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:669
+msgid "Enable v3 reCAPTCHA<br/>"
+msgstr "Ενεργοποίηση V3 recaptcha <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:675
+msgid "v2 Site Key"
+msgstr "Κλειδί V2 Site"
+
+#: anti-fraud-core/class-wc-af-settings.php:678
+msgid "Enter v2 Site Key"
+msgstr "Εισαγάγετε το κλειδί ιστότοπου V2"
+
+#: anti-fraud-core/class-wc-af-settings.php:684
+msgid "v2 Secret Key"
+msgstr "V2 μυστικό κλειδί"
+
+#: anti-fraud-core/class-wc-af-settings.php:687
+msgid "Enter v2 Secret Key"
+msgstr "Εισαγάγετε το V2 Secret Key"
+
+#: anti-fraud-core/class-wc-af-settings.php:693
+msgid "v3 Site Key"
+msgstr "Κλειδί V3 Site"
+
+#: anti-fraud-core/class-wc-af-settings.php:696
+msgid "Enter v3 Site Key"
+msgstr "Εισαγάγετε το κλειδί ιστότοπου V3"
+
+#: anti-fraud-core/class-wc-af-settings.php:702
+msgid "v3 Secret Key"
+msgstr "V3 μυστικό κλειδί"
+
+#: anti-fraud-core/class-wc-af-settings.php:705
+msgid "Enter v3 Secret Key"
+msgstr "Εισαγάγετε το μυστικό κλειδί V3"
+
+#: anti-fraud-core/class-wc-af-settings.php:741
+msgid "Alerts"
+msgstr "Ειδοποιήσεις"
+
+#: anti-fraud-core/class-wc-af-settings.php:743
+msgid "Get alerts about suspected fraudulent activities <hr/>"
+msgstr "Λάβετε ειδοποιήσεις σχετικά με τις ύποπτες δόλες δραστηριότητες <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:747
+msgid "Activate Email Alerts for Admin"
+msgstr "Ενεργοποιήστε τις ειδοποιήσεις ηλεκτρονικού ταχυδρομείου για διαχειριστή"
+
+#: anti-fraud-core/class-wc-af-settings.php:752
+msgid "Enable to receive fraud alerts on admin email address when risk-score exceeds value set in Email Notification Score."
+msgstr "Ενεργοποιήστε τις ειδοποιήσεις απάτης σχετικά με τη διεύθυνση ηλεκτρονικού ταχυδρομείου του διαχειριστή όταν η βαθμολογία κινδύνου υπερβαίνει την τιμή που έχει οριστεί σε βαθμολογία ειδοποίησης ηλεκτρονικού ταχυδρομείου."
+
+#: anti-fraud-core/class-wc-af-settings.php:756
+msgid "Additional Address(es) to Notify"
+msgstr "Πρόσθετες διευθύνσεις (ES) για ειδοποίηση"
+
+#: anti-fraud-core/class-wc-af-settings.php:759
+msgid "Add additional email address(es) you want to be notified upon exceeding Risk-score. Press “Comma”, TAB or ENTER button for the next entry."
+msgstr "Προσθέστε πρόσθετες διευθύνσεις ηλεκτρονικού ταχυδρομείου που θέλετε να ειδοποιηθείτε κατά την υπέρβαση της βαθμολογίας κινδύνου. Πατήστε \"Comma\", καρτέλα ή εισαγάγετε το κουμπί για την επόμενη καταχώρηση."
+
+#: anti-fraud-core/class-wc-af-settings.php:766
+msgid "Email Notification Score"
+msgstr "Βαθμολογία ειδοποίησης email"
+
+#: anti-fraud-core/class-wc-af-settings.php:770
+msgid "Risk scores that meet or exceed this value will trigger email alerts to your specified email addresses."
+msgstr "Οι βαθμολογίες κινδύνου που πληρούν ή υπερβαίνουν αυτήν την τιμή θα προκαλέσουν ειδοποιήσεις ηλεκτρονικού ταχυδρομείου στις καθορισμένες διευθύνσεις email σας."
+
+#: anti-fraud-core/class-wc-af-settings.php:795
+msgid "Blacklist"
+msgstr "Προγράφω"
+
+#: anti-fraud-core/class-wc-af-settings.php:797
+msgid "WooCommerce Anti-Fraud allows you to create a list of email addresses as well as a list of IP addresses that will always be marked as potential fraud transactions."
+msgstr "Το WooCommerce Anti-AwaW σας επιτρέπει να δημιουργήσετε μια λίστα διευθύνσεων ηλεκτρονικού ταχυδρομείου καθώς και μια λίστα διευθύνσεων IP που θα επισημαίνονται πάντα ως πιθανές συναλλαγές απάτης."
+
+#: anti-fraud-core/class-wc-af-settings.php:802
+msgid "Email Blacklisting"
+msgstr "Στείλτε email στη μαύρη λίστα"
+
+#: anti-fraud-core/class-wc-af-settings.php:812
+msgid "Email Blacklist"
+msgstr "Email μαύρη λίστα"
+
+#: anti-fraud-core/class-wc-af-settings.php:817
+msgid "Enable the email blacklist function to block emails captured by WooCommerce Anti-fraud rules."
+msgstr "Ενεργοποιήστε τη λειτουργία Blacklist Email για να εμποδίσει τα μηνύματα ηλεκτρονικού ταχυδρομείου που συλλαμβάνονται από τους κανόνες κατά της απάτης WooCommerce."
+
+#: anti-fraud-core/class-wc-af-settings.php:822
+msgid "Automatic Blacklisting"
+msgstr "Αυτόματη μαύρη λίστα"
+
+#: anti-fraud-core/class-wc-af-settings.php:827
+msgid "Add email addresses of orders reported with a high risk of fraud to blacklist automatically."
+msgstr "Προσθέστε τις διευθύνσεις ηλεκτρονικού ταχυδρομείου των παραγγελιών που αναφέρονται με υψηλό κίνδυνο απάτης σε Blacklist αυτόματα."
+
+#: anti-fraud-core/class-wc-af-settings.php:832
+msgid "Blocked Email Addresses"
+msgstr "Αποκλεισμένες διευθύνσεις email"
+
+#: anti-fraud-core/class-wc-af-settings.php:835
+msgid "The email addresses listed in the text area will be considered unsafe. You can also add or remove emails manually here. Type “,” or press TAB/ENTER button for the next entry. Please add emails in bulk separating them by either comma or space."
+msgstr "Οι διευθύνσεις ηλεκτρονικού ταχυδρομείου που αναφέρονται στην περιοχή κειμένου θα θεωρηθούν ανασφαλείς. Μπορείτε επίσης να προσθέσετε ή να καταργήσετε τα μηνύματα ηλεκτρονικού ταχυδρομείου με μη αυτόματο τρόπο εδώ. Πληκτρολογήστε \",\" ή πατήστε το κουμπί CAB/ENTER για την επόμενη καταχώρηση. Προσθέστε τα μηνύματα ηλεκτρονικού ταχυδρομείου χύμα που τα χωρίζουν είτε με κόμμα είτε με χώρο."
+
+#: anti-fraud-core/class-wc-af-settings.php:843
+msgid "IP Blacklisting"
+msgstr "Ασυγκράτηση"
+
+#: anti-fraud-core/class-wc-af-settings.php:853
+msgid "IP Blacklist"
+msgstr "Μαύρη λίστα"
+
+#: anti-fraud-core/class-wc-af-settings.php:857
+msgid "Enable the IP blacklist function"
+msgstr "Ενεργοποιήστε τη λειτουργία Blacklist IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:858
+msgid "Enable the IP blacklist function to block IP addresses with high risk of frauds."
+msgstr "Ενεργοποιήστε τη λειτουργία Blacklist IP για να εμποδίσετε τις διευθύνσεις IP με υψηλό κίνδυνο απάτης."
+
+#: anti-fraud-core/class-wc-af-settings.php:863
+msgid "Blocked IP Addresses"
+msgstr "Μπλοκαρισμένες διευθύνσεις IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:866
+msgid "The IP addresses listed in the text area will be considered unsafe.  You can also add or remove IP addresses manually here. Type “,” or press TAB/ENTER button for the next entry. Please add IPs in bulk separating them by either comma or space."
+msgstr "Οι διευθύνσεις IP που αναφέρονται στην περιοχή κειμένου θα θεωρηθούν ανασφαλείς. Μπορείτε επίσης να προσθέσετε ή να καταργήσετε τις διευθύνσεις IP με μη αυτόματο τρόπο εδώ. Πληκτρολογήστε \",\" ή πατήστε το κουμπί CAB/ENTER για την επόμενη καταχώρηση. Προσθέστε το IPS χύμα που τα χωρίζει είτε με κόμμα είτε με χώρο."
+
+#: anti-fraud-core/class-wc-af-settings.php:894
+msgid "These settings are specific to Paypal Payment Gateway. This means, when the customer use their Paypal account for making payment for their orders, then these rules come into action.<hr/>"
+msgstr "Αυτές οι ρυθμίσεις είναι ειδικές για την πύλη πληρωμής PayPal. Αυτό σημαίνει, όταν ο πελάτης χρησιμοποιεί τον λογαριασμό του PayPal για την πληρωμή για τις παραγγελίες του, τότε αυτοί οι κανόνες τίθενται σε δράση. <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:902
+msgid "Select to enable Paypal verification"
+msgstr "Επιλέξτε για να ενεργοποιήσετε την επαλήθευση PayPal"
+
+#: anti-fraud-core/class-wc-af-settings.php:907
+msgid "Block Downloads"
+msgstr "Λήψεις μπλοκ"
+
+#: anti-fraud-core/class-wc-af-settings.php:911
+msgid "Prevent digital downloads if verification failed or still processing"
+msgstr "Αποτρέψτε τις ψηφιακές λήψεις εάν η επαλήθευση απέτυχε ή εξακολουθεί να επεξεργάζεται"
+
+#: anti-fraud-core/class-wc-af-settings.php:916
+msgid "Verification Retry"
+msgstr "Επαλήθευση"
+
+#: anti-fraud-core/class-wc-af-settings.php:918
+msgid "Number of days that have to pass before sending another email if the order is still waiting for verification"
+msgstr "Αριθμός ημερών που πρέπει να περάσουν πριν στείλετε ένα άλλο μήνυμα ηλεκτρονικού ταχυδρομείου εάν η παραγγελία περιμένει ακόμα επαλήθευση"
+
+#: anti-fraud-core/class-wc-af-settings.php:929
+msgid "Auto Cancellation Days"
+msgstr "Ημέρες ακύρωσης αυτοκινήτων"
+
+#: anti-fraud-core/class-wc-af-settings.php:931
+msgid "Orders that are not verified within the given number of days will be automatically cancelled"
+msgstr "Οι παραγγελίες που δεν επαληθεύονται εντός του δεδομένου αριθμού ημερών θα ακυρωθούν αυτόματα"
+
+#: anti-fraud-core/class-wc-af-settings.php:942
+msgid "Paypal verified addresses"
+msgstr "PayPal επαληθευμένες διευθύνσεις"
+
+#: anti-fraud-core/class-wc-af-settings.php:944
+msgid "Verified email addresses"
+msgstr "Επαληθευμένες διευθύνσεις email"
+
+#: anti-fraud-core/class-wc-af-settings.php:954
+msgid "Email Template"
+msgstr "Πρότυπο email"
+
+#: anti-fraud-core/class-wc-af-settings.php:956
+msgid "Configure the email template below. The following tags can be embedded in the template fields:<br/><br/><b>{site_title}</b> - replaced with the Wordpress Site Title<br/><b>{site_email}</b> - replaced with the Wordpress site admin email address"
+msgstr "Διαμορφώστε το πρότυπο email παρακάτω. Οι παρακάτω ετικέτες μπορούν να ενσωματωθούν στα πεδία προτύπου: <br/> <br/> <b> {site_title} </b> - Αντικαταστάθηκαν με τον τίτλο του ιστότοπου WordPress <br/> <b> {site_email} </b> - Αντικαταστάθηκε με τη διεύθυνση ηλεκτρονικού ταχυδρομείου του διαχειριστή του ιστότοπου WordPress Site"
+
+#: anti-fraud-core/class-wc-af-settings.php:962
+msgid "Email Type"
+msgstr "Τύπος email"
+
+#: anti-fraud-core/class-wc-af-settings.php:968
+msgid "Emails can be sent either as plain text or HTML"
+msgstr "Τα μηνύματα ηλεκτρονικού ταχυδρομείου μπορούν να σταλούν είτε ως απλό κείμενο είτε ως HTML"
+
+#: anti-fraud-core/class-wc-af-settings.php:976
+msgid "The subject of the email that will be sent to the purchaser"
+msgstr "Το θέμα του μηνύματος ηλεκτρονικού ταχυδρομείου που θα σταλεί στον αγοραστή"
+
+#: anti-fraud-core/class-wc-af-settings.php:979
+msgid "[{site_title}] Confirm your PayPal email address"
+msgstr "[{site_title}] επιβεβαιώστε τη διεύθυνση email paypal"
+
+#: anti-fraud-core/class-wc-af-settings.php:983
+msgid "Email body"
+msgstr "Σωφρονίζω"
+
+#: anti-fraud-core/class-wc-af-settings.php:988
+msgid "Hi!We have received your order on {site_title}, but to complete we have to verify your PayPal email address.If you havent made or authorized any purchase, please, contact PayPal support service immediately,and email us to {site_email} for having your money back."
+msgstr "Γεια! Λάβαμε την παραγγελία σας στο {site_title}, αλλά για να ολοκληρώσουμε πρέπει να επαληθεύσουμε τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας στο PayPal. Εάν δεν έχετε πραγματοποιήσει ή εξουσιοδοτήσει οποιαδήποτε αγορά, επικοινωνήστε αμέσως με την υπηρεσία υποστήριξης του PayPal και στείλτε μας email στο {site_email} για τα χρήματά σας πίσω."
+
+#: anti-fraud-core/class-wc-af-settings.php:1005
+msgid "General behaviours of the Anti Fraud plugin are configured on this page.<hr/>"
+msgstr "Οι γενικές συμπεριφορές του προσθέματος κατά της απάτης έχουν ρυθμιστεί σε αυτή τη σελίδα. <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1011
+msgid "Set Risk Thresholds"
+msgstr "Ορίστε όρια κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1013
+msgid "There are three risk thresholds.  Low, Medium and High.   In this section you can define where the boundary point between those thresholds.   The maximum risk score is 100, the minimum is 0.<br/>"
+msgstr "Υπάρχουν τρία όρια κινδύνου. Χαμηλό, μεσαίο και υψηλό. Σε αυτή την ενότητα μπορείτε να ορίσετε πού το όριο σημείων μεταξύ αυτών των κατωφλίων. Η μέγιστη βαθμολογία κινδύνου είναι 100, το ελάχιστο είναι 0. <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1014
+msgid "There are three risk thresholds: Low, Medium and High. In this section, you can define where the boundary point between those thresholds. The maximum risk score is 100, the minimum is 0. Orders are considered Low, Medium, and High Risk Orders based on these values."
+msgstr "Υπάρχουν τρία όρια κινδύνου: χαμηλό, μεσαίο και υψηλό. Σε αυτή την ενότητα, μπορείτε να ορίσετε πού το σημείο του ορίου μεταξύ αυτών των κατωφλίων. Η μέγιστη βαθμολογία κινδύνου είναι 100, το ελάχιστο είναι 0. Οι παραγγελίες θεωρούνται χαμηλές, μεσαίες και υψηλές παραγγελίες κινδύνου που βασίζονται σε αυτές τις τιμές."
+
+#: anti-fraud-core/class-wc-af-settings.php:1020
+msgid "Medium Risk threshold"
+msgstr "Όριο μεσαίου κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1034
+msgid "High Risk threshold"
+msgstr "Όριο υψηλού κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1048
+msgid "Enable debug logging"
+msgstr "Ενεργοποίηση καταγραφής εντοπισμού σφαλμάτων"
+
+#: anti-fraud-core/class-wc-af-settings.php:1060
+msgid "Pre-Purchase Assessment"
+msgstr "Αξιολόγηση πριν από την αγορά"
+
+#: anti-fraud-core/class-wc-af-settings.php:1069
+msgid "Pre-Payment Checking"
+msgstr "Έλεγχος προπληρωμής"
+
+#: anti-fraud-core/class-wc-af-settings.php:1079
+msgid "Notification message for Blocked users"
+msgstr "Μήνυμα ειδοποίησης για αποκλεισμένους χρήστες"
+
+#: anti-fraud-core/class-wc-af-settings.php:1083
+#: woocommerce-anti-fraud.php:1362
+msgid "Website Administrator does not allow you to place this order. Please contact our support team. Sorry for any inconvenience."
+msgstr "Ο διαχειριστής ιστότοπου δεν σας επιτρέπει να τοποθετήσετε αυτήν την παραγγελία. Επικοινωνήστε με την ομάδα υποστήριξης. Συγνώμη για την όποια ταλαιπωρία."
+
+#: anti-fraud-core/class-wc-af-settings.php:1085
+msgid "Adds a custom alert message for blocked users on Pre-Payment Check. This message will be shown to the user on the checkout page while they attempt to pay."
+msgstr "Προσθέτει ένα προσαρμοσμένο μήνυμα ειδοποίησης για αποκλεισμένους χρήστες στον έλεγχο προπληρωμής. Αυτό το μήνυμα θα εμφανιστεί στον χρήστη στη σελίδα πληρωμής ενώ προσπαθούν να πληρώσουν."
+
+#: anti-fraud-core/class-wc-af-settings.php:1095
+msgid "Change Order Status based on Risk Score"
+msgstr "Αλλαγή κατάστασης παραγγελίας βάσει βαθμολογίας κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1104
+msgid "Update Order Status based on Fraud Score"
+msgstr "Ενημέρωση κατάστασης παραγγελίας βάσει βαθμολογίας απάτης"
+
+#: anti-fraud-core/class-wc-af-settings.php:1109
+msgid "Enable to cancel and/or put orders on hold based on Risk Score."
+msgstr "Ενεργοποιήστε την ακύρωση ή/και θέστε τις παραγγελίες σε αναμονή με βάση τη βαθμολογία κινδύνου."
+
+#: anti-fraud-core/class-wc-af-settings.php:1113
+msgid "Weighting to Cancel Order"
+msgstr "Στάθμιση για ακύρωση παραγγελίας"
+
+#: anti-fraud-core/class-wc-af-settings.php:1118
+msgid "Orders with a score equal to or greater than this value will be automatically cancelled. <br/> To disable it, slide the slider to the extreme left or Select 0."
+msgstr "Οι παραγγελίες με βαθμολογία ίσες ή μεγαλύτερες από αυτή την τιμή θα ακυρωθούν αυτόματα. <br/> Για να το απενεργοποιήσετε, σύρετε το ρυθμιστικό στην ακραία αριστερά ή επιλέξτε 0."
+
+#: anti-fraud-core/class-wc-af-settings.php:1124
+msgid "Weighting to put Order On-hold"
+msgstr "Στάθμιση για να βάλετε την παραγγελία"
+
+#: anti-fraud-core/class-wc-af-settings.php:1128
+msgid "Orders with a score equal to or greater than this number will be automatically set on hold. <br/> To disable it, slide the slider to the extreme left or Select 0."
+msgstr "Οι παραγγελίες με βαθμολογία ίσες ή μεγαλύτερες από αυτόν τον αριθμό θα τεθούν αυτόματα σε αναμονή. <br/> Για να το απενεργοποιήσετε, σύρετε το ρυθμιστικό στην ακραία αριστερά ή επιλέξτε 0."
+
+#: anti-fraud-core/class-wc-af-settings.php:1139
+msgid "Whitelist Payment Methods"
+msgstr "Μεθόδους πληρωμής λευκώματος"
+
+#: anti-fraud-core/class-wc-af-settings.php:1148
+msgid "Enable Whitelisting of Payment Methods"
+msgstr "Ενεργοποιήστε τις μεθόδους πληρωμής"
+
+#: anti-fraud-core/class-wc-af-settings.php:1157
+msgid "Select Payment Methods to be Whitelisted"
+msgstr "Επιλέξτε μεθόδους πληρωμής που πρόκειται να ληφθούν σε λευκές"
+
+#: anti-fraud-core/class-wc-af-settings.php:1171
+msgid "User Roles Whitelisting"
+msgstr "Οι λευκές ρόλους χρηστών"
+
+#: anti-fraud-core/class-wc-af-settings.php:1180
+msgid "Enable Whitelisting of User Roles"
+msgstr "Ενεργοποιήστε τη λευκή κατάργηση των ρόλων των χρηστών"
+
+#: anti-fraud-core/class-wc-af-settings.php:1189
+msgid "Select User Roles to be Whitelisted"
+msgstr "Επιλέξτε τους ρόλους των χρηστών που πρέπει να λευκάνονται"
+
+#: anti-fraud-core/class-wc-af-settings.php:1195
+msgid "Select roles"
+msgstr "Επιλέξτε ρόλους"
+
+#: anti-fraud-core/class-wc-af-settings.php:1204
+msgid "Whitelisted Emails"
+msgstr "Τα μηνύματα ηλεκτρονικού ταχυδρομείου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1213
+msgid "Email Whitelist"
+msgstr "Λίστα με ηλεκτρονικό ταχυδρομείο"
+
+#: anti-fraud-core/class-wc-af-settings.php:1230
+msgid "Whitelisted IPs"
+msgstr "IP στη λίστα επιτρεπόμενων"
+
+#: anti-fraud-core/class-wc-af-settings.php:1239
+msgid "IPs Whitelist"
+msgstr "Λίστα λευκής IPS"
+
+#: anti-fraud-core/class-wc-af-settings.php:1257
+msgid "Auto Fraud Check For Existing Orders"
+msgstr "Έλεγχος αυτόματης απάτης για τις υπάρχουσες παραγγελίες"
+
+#: anti-fraud-core/class-wc-af-settings.php:1266
+msgid "Enable Auto Fraud Check"
+msgstr "Ενεργοποίηση ελέγχου αυτόματης απάτης"
+
+#: anti-fraud-core/class-wc-af-settings.php:1276
+msgid "No Of Days For Historical Orders Checks"
+msgstr "Δεν υπάρχουν ημέρες για ιστορικές παραγγελίες"
+
+#: anti-fraud-core/class-wc-af-settings.php:1298
+msgid "Enable Debug Logging"
+msgstr "Ενεργοποίηση καταγραφής εντοπισμού σφαλμάτων"
+
+#: anti-fraud-core/class-wc-af-settings.php:1307
+msgid "Enable Debug Log"
+msgstr "Ενεργοποίηση καταγραφής εντοπισμού σφαλμάτων"
+
+#: anti-fraud-core/class-wc-af-settings.php:1350
+#: anti-fraud-core/tamplate-admin-settings-page.php:401
+msgid "General Rules"
+msgstr "Γενικοί κανόνες"
+
+#: anti-fraud-core/class-wc-af-settings.php:1352
+msgid "Each rule that is matched will add the configured &quot;Rule Weight&quot; value to the overall fraud score.  In this section you can configure general fraud detection rules.<hr/>"
+msgstr "Κάθε κανόνας που αντιστοιχεί θα προσθέσει το διαμορφωμένο \"Βάρος του κανόνα\" Αξία για τη συνολική βαθμολογία απάτης. Σε αυτή την ενότητα μπορείτε να διαμορφώσετε γενικούς κανόνες ανίχνευσης απάτης. <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1357
+msgid "First Time Purchase Rules"
+msgstr "Κανόνες αγοράς πρώτης ώρας"
+
+#: anti-fraud-core/class-wc-af-settings.php:1359
+#: anti-fraud-core/class-wc-af-settings.php:1360
+msgid "Rule set for Buyers who are purchasing from your website for the first time."
+msgstr "Κανόνας που έχει οριστεί για αγοραστές που αγοράζουν από τον ιστότοπό σας για πρώτη φορά."
+
+#: anti-fraud-core/class-wc-af-settings.php:1367
+msgid "First Purchase on Website"
+msgstr "Πρώτη αγορά στον ιστότοπο"
+
+#: anti-fraud-core/class-wc-af-settings.php:1372
+msgid "Enable it to identify customers purchasing from your website for the first time."
+msgstr "Ενεργοποιήστε την εντοπισμό των πελατών που αγοράζουν από τον ιστότοπό σας για πρώτη φορά."
+
+#: anti-fraud-core/class-wc-af-settings.php:1376
+msgid "First Purchase Rule Weight"
+msgstr "Βάρος πρώτου κανόνα αγοράς"
+
+#: anti-fraud-core/class-wc-af-settings.php:1389
+msgid "Re-Check First Orders in Processing State?"
+msgstr "Ελέγξτε ξανά τις πρώτες παραγγελίες στην κατάσταση επεξεργασίας;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1394
+msgid "Enable it to perform first-order re-check on orders in processing state."
+msgstr "Ενεργοποιήστε την εκτέλεση επανεξέτασης της πρώτης τάξης σχετικά με τις παραγγελίες στην κατάσταση επεξεργασίας."
+
+#: anti-fraud-core/class-wc-af-settings.php:1417
+msgid "IP, Billing and Shipping Address-based Rules"
+msgstr "Κανόνες βάσει IP, χρέωσης και αποστολής"
+
+#: anti-fraud-core/class-wc-af-settings.php:1420
+msgid "Rules set for identifying fraudulent orders triggering risks based on IP, billing and shipping addresses."
+msgstr "Οι κανόνες που ορίζονται για τον εντοπισμό δόλιστων παραγγελιών που προκαλούν κινδύνους με βάση τις διευθύνσεις IP, χρέωσης και αποστολής."
+
+#: anti-fraud-core/class-wc-af-settings.php:1428
+msgid "Does Geo Location Match?"
+msgstr "Ταιριάζει η τοποθεσία Geo;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1433
+msgid "Enable it to identify that customer's shipping/billing state matches the state provided by Geo Location."
+msgstr "Ενεργοποιήστε το να προσδιορίσει ότι το κράτος αποστολής/χρέωσης του πελάτη ταιριάζει με το κράτος που παρέχεται από την τοποθεσία GEO."
+
+#: anti-fraud-core/class-wc-af-settings.php:1451
+msgid "API Key for bigdatacloud.com"
+msgstr "API κλειδί για το bigdatacloud.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1453
+msgid "Don't have bigdatacloud.com account? <a href=\"https://www.bigdatacloud.com/\" target=\"_blank\">Signup here</a><br/>Get 50K requests per month for free. Upgrade for more."
+msgstr "Δεν έχετε λογαριασμό bigdatacloud.com; <a href=\"https://www.bigdatacloud.com/\" target=\"_blank\"> εγγραφή εδώ </a> <br/> Πάρτε 50k αιτήματα το μήνα δωρεάν. Αναβάθμιση για περισσότερα."
+
+#: anti-fraud-core/class-wc-af-settings.php:1454
+msgid "You can use bigdatacloud.com to get accurate address via customer Lat and Long and its required to use geo location rule."
+msgstr "Μπορείτε να χρησιμοποιήσετε το BigDatacloud.com για να λάβετε ακριβή διεύθυνση μέσω του πελάτη Lat και Long και απαιτείται να χρησιμοποιήσει τον κανόνα Geo Location."
+
+#: anti-fraud-core/class-wc-af-settings.php:1460
+msgid "Are Billing and Shipping Addresses Same?"
+msgstr "Είναι οι ίδιες οι τιμές και οι διευθύνσεις αποστολής;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1465
+msgid "Enable to identify difference between billing and shipping addresses."
+msgstr "Ενεργοποίηση για τον εντοπισμό διαφοράς μεταξύ των διευθύνσεων χρέωσης και αποστολής."
+
+#: anti-fraud-core/class-wc-af-settings.php:1482
+msgid "Enable Phone Number and Billing Country Check"
+msgstr "Ενεργοποιήστε τον αριθμό τηλεφώνου και τον έλεγχο της χώρας χρέωσης"
+
+#: anti-fraud-core/class-wc-af-settings.php:1487
+msgid "If you enable this rule, then it is highly recommended that you use a separate Phone Number Validation plugin to make sure your customers specify a correct international phone number format on the checkout page. Else, this rule will treat an invalid phone number as a risk."
+msgstr "Εάν ενεργοποιήσετε αυτόν τον κανόνα, τότε συνιστάται ιδιαίτερα να χρησιμοποιήσετε ένα ξεχωριστό plugin επικύρωσης αριθμού τηλεφώνου για να βεβαιωθείτε ότι οι πελάτες σας καθορίζουν μια σωστή διεθνή μορφή αριθμού τηλεφώνου στη σελίδα checkout. Αλλιώς, αυτός ο κανόνας θα αντιμετωπίσει έναν μη έγκυρο αριθμό τηλεφώνου ως κίνδυνο."
+
+#: anti-fraud-core/class-wc-af-settings.php:1496
+msgid "Weight of the single rule in the total calculation of risk."
+msgstr "Βάρος του ενιαίου κανόνα στον συνολικό υπολογισμό του κινδύνου."
+
+#: anti-fraud-core/class-wc-af-settings.php:1506
+msgid "Is Customer behind Proxy or VPN?"
+msgstr "Είναι ο πελάτης πίσω από το Proxy ή το VPN;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1511
+msgid "Check if the customer is behind either a proxy or a VPN"
+msgstr "Ελέγξτε εάν ο πελάτης είναι πίσω από ένα πληρεξούσιο ή ένα VPN"
+
+#: anti-fraud-core/class-wc-af-settings.php:1534
+msgid "Multiple Orders Attempts using Different Addresses from Same IP"
+msgstr "Προσπάθειες πολλαπλών παραγγελιών χρησιμοποιώντας διαφορετικές διευθύνσεις από την ίδια IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:1537
+msgid "Rule to check buyer is ordering products using different addresses from the same IP over a certain period from your store."
+msgstr "Ο κανόνας για τον έλεγχο του αγοραστή παραγγέλνει προϊόντα χρησιμοποιώντας διαφορετικές διευθύνσεις από την ίδια IP σε μια συγκεκριμένη περίοδο από το κατάστημά σας."
+
+#: anti-fraud-core/class-wc-af-settings.php:1543
+msgid ""
+"Purchased from same IP but Different Customer Addresses?\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"Αγοράστε από την ίδια IP αλλά διαφορετικές διευθύνσεις πελατών;\n"
+"\t\t\t\t\t\t\t"
+
+#: anti-fraud-core/class-wc-af-settings.php:1552
+msgid "Enable this rule to monitor if multiple orders with different billing or shipping addresses have originated from the same IP address. Make sure to set time span of checking."
+msgstr "Ενεργοποιήστε αυτόν τον κανόνα να παρακολουθείτε εάν προέρχονται πολλαπλές παραγγελίες με διαφορετικές διευθύνσεις χρέωσης ή αποστολής από την ίδια διεύθυνση IP. Βεβαιωθείτε ότι έχετε ρυθμίσει το χρονικό διάστημα του ελέγχου."
+
+#: anti-fraud-core/class-wc-af-settings.php:1569
+msgid "Past Number of Days to Check "
+msgstr "Προηγούμενος αριθμός ημερών για έλεγχο "
+
+#: anti-fraud-core/class-wc-af-settings.php:1572
+msgid "The number of days in the past to check IP addresses and different physical addresses."
+msgstr "Ο αριθμός των ημερών στο παρελθόν για να ελέγξετε τις διευθύνσεις IP και τις διαφορετικές φυσικές διευθύνσεις."
+
+#: anti-fraud-core/class-wc-af-settings.php:1588
+msgid "Origin Countries"
+msgstr "Χώρες προέλευσης"
+
+#: anti-fraud-core/class-wc-af-settings.php:1591
+msgid "International orders tend to have a higher fraud risk than orders that originate in your home country. Merchants often find that certain origin countries have a higher potential for fraud. These Rule sets help manage such risks."
+msgstr "Οι διεθνείς παραγγελίες τείνουν να έχουν υψηλότερο κίνδυνο απάτης από τις παραγγελίες που προέρχονται από τη χώρα σας. Οι έμποροι συχνά διαπιστώνουν ότι ορισμένες χώρες προέλευσης έχουν υψηλότερες δυνατότητες απάτης. Αυτά τα σύνολα κανόνων βοηθούν στη διαχείριση τέτοιων κινδύνων."
+
+#: anti-fraud-core/class-wc-af-settings.php:1597
+msgid "Is it International Order?"
+msgstr "Είναι διεθνής εντολή;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1602
+msgid "Enable to check if the order originates from outside of your store's home country."
+msgstr "Ενεργοποιήστε να ελέγξετε εάν η παραγγελία προέρχεται από το εξωτερικό της χώρας καταγωγής του καταστήματός σας."
+
+#: anti-fraud-core/class-wc-af-settings.php:1619
+msgid "Is Order from High-Risk Country?"
+msgstr "Είναι η παραγγελία από τη χώρα υψηλού κινδύνου;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1624
+msgid "Enable it to check if orders originate from unsafe countries. Select unsafe countries from the list below."
+msgstr "Ενεργοποιήστε το να ελέγξετε εάν οι παραγγελίες προέρχονται από μη ασφαλείς χώρες. Επιλέξτε μη ασφαλείς χώρες από τον παρακάτω κατάλογο."
+
+#: anti-fraud-core/class-wc-af-settings.php:1641
+msgid "Mark Unsafe Countries"
+msgstr "Σημειώστε τις μη ασφαλείς χώρες"
+
+#: anti-fraud-core/class-wc-af-settings.php:1657
+msgid "High-Risk Email Domains"
+msgstr "Ιδακοί ηλεκτρονικού ταχυδρομείου υψηλού κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1660
+msgid "Merchants often find that certain email domains have a higher potential for fraud. These Rule sets will help you manage High-Risk Email Domains.<br/>Identify High-Risk Domains by manually adding such email domains to High-Risk Domain section and/or using QuickEmailVerification.com API key to make this operation automatic."
+msgstr "Οι έμποροι συχνά διαπιστώνουν ότι ορισμένοι τομείς ηλεκτρονικού ταχυδρομείου έχουν μεγαλύτερη πιθανότητα απάτης. Αυτά τα σύνολα κανόνων θα σας βοηθήσουν να διαχειριστείτε Τομείς ηλεκτρονικού ταχυδρομείου υψηλού κινδύνου.<br/>Προσδιορίστε Τομείς υψηλού κινδύνου προσθέτοντας με μη αυτόματο τρόπο τέτοιους τομείς ηλεκτρονικού ταχυδρομείου στην ενότητα Τομέας υψηλού κινδύνου ή/και χρησιμοποιώντας το κλειδί API QuickEmailVerification.com για να κάνετε αυτήν τη λειτουργία αυτόματη."
+
+#: anti-fraud-core/class-wc-af-settings.php:1666
+msgid "Is Suspicious / High-Risk Email Domain?"
+msgstr "Είναι ο ύποπτος τομέας email / υψηλού κινδύνου;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1671
+msgid "Enable it to check if customer's email address originates from any high-risk domain listed below and/or add API for “quickemailverification. com” for automatic checking"
+msgstr "Ενεργοποιήστε τη διεύθυνση ηλεκτρονικού ταχυδρομείου του πελάτη προέρχεται από οποιοδήποτε τομέα υψηλού κινδύνου που αναφέρεται παρακάτω και/ή προσθέτει API για \"QuickEmailverification. com \"για αυτόματο έλεγχο"
+
+#: anti-fraud-core/class-wc-af-settings.php:1688
+msgid "High-Risk Domains"
+msgstr "Τομείς υψηλού κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1698
+msgid "API Key for quickemailverification.com"
+msgstr "Key API για το QuickEmailverification.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1700
+msgid "Don't have quickemailverification account? <a href=\"\">Signup here</a><br/>Verify 50 emails for free. Upgrade if you want more"
+msgstr "Δεν έχετε λογαριασμό QuickEmailverification; <a href=\"> εγγραφή εδώ </a> <br/> επαληθεύστε 50 μηνύματα ηλεκτρονικού ταχυδρομείου δωρεάν. Αναβάθμιση εάν θέλετε περισσότερα"
+
+#: anti-fraud-core/class-wc-af-settings.php:1701
+msgid "You can use quickemailverification.com to get more accurate results for false email domain-related checks. "
+msgstr "Μπορείτε να χρησιμοποιήσετε το QuickEmailverification.com για να έχετε ακριβέστερα αποτελέσματα για ψευδείς ελέγχους που σχετίζονται με τον τομέα ηλεκτρονικού ταχυδρομείου. "
+
+#: anti-fraud-core/class-wc-af-settings.php:1711
+msgid "Order Amounts and Attempts"
+msgstr "Ποσό και προσπάθειες παραγγελίας"
+
+#: anti-fraud-core/class-wc-af-settings.php:1714
+msgid "The rules in this section are triggered based on defined order amounts and by counting attempted orders. You can also limit orders within a certain time frame. Orders with unusually high values, or customers who make an excessive number of transactions in a short period are more likely to be fraudulent."
+msgstr "Οι κανόνες αυτής της ενότητας ενεργοποιούνται με βάση τα καθορισμένα ποσά παραγγελίας και με την καταμέτρηση των απόπειρων παραγγελιών. Μπορείτε επίσης να περιορίσετε τις παραγγελίες εντός ενός συγκεκριμένου χρονικού πλαισίου. Οι παραγγελίες με ασυνήθιστα υψηλές τιμές ή πελάτες που κάνουν υπερβολικό αριθμό συναλλαγών σε σύντομο χρονικό διάστημα είναι πιο πιθανό να είναι δόλια."
+
+#: anti-fraud-core/class-wc-af-settings.php:1720
+msgid "Order Amount is Above Average?"
+msgstr "Το ποσό της παραγγελίας είναι πάνω από το μέσο όρο;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1725
+msgid "Check if order significantly exceeds the average order amount for your site. Set multiplier value to trigger this rule when order place is value times greater than an average order."
+msgstr "Ελέγξτε εάν η παραγγελία υπερβαίνει σημαντικά το μέσο ποσό παραγγελίας για τον ιστότοπό σας. Ορίστε την τιμή πολλαπλασιαστή για να ενεργοποιήσετε αυτόν τον κανόνα όταν η θέση παραγγελίας είναι αξία φορές μεγαλύτερη από μια μέση σειρά."
+
+#: anti-fraud-core/class-wc-af-settings.php:1742
+msgid "Average Multiplier"
+msgstr "Μέσος πολλαπλασιαστής"
+
+#: anti-fraud-core/class-wc-af-settings.php:1745
+msgid "Enter the multiplier value to check amount over average transaction value that will trigger the rule (expressed as a multiplier). For example, if you want to limit orders that are 2 times greater than the average value of orders, set the multiplier value to 2."
+msgstr "Εισαγάγετε την τιμή πολλαπλασιαστή για να ελέγξετε το ποσό της μέσης τιμής συναλλαγής που θα ενεργοποιήσει τον κανόνα (που εκφράζεται ως πολλαπλασιαστής). Για παράδειγμα, εάν θέλετε να περιορίσετε τις παραγγελίες που είναι 2 φορές μεγαλύτερες από τη μέση τιμή των παραγγελιών, ρυθμίστε την τιμή πολλαπλασιαστή σε 2."
+
+#: anti-fraud-core/class-wc-af-settings.php:1755
+msgid "Order Exceeds Maximum Amount Limit?"
+msgstr "Η παραγγελία υπερβαίνει το μέγιστο όριο ποσού;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1760
+msgid "Enable this rule to confirm that the total amount of the order does not exceed maximum configured amount below."
+msgstr "Ενεργοποιήστε αυτόν τον κανόνα για να επιβεβαιώσετε ότι το συνολικό ποσό της παραγγελίας δεν υπερβαίνει το μέγιστο διαμορφωμένο ποσό παρακάτω."
+
+#: anti-fraud-core/class-wc-af-settings.php:1777
+msgid "Amount Limit ($)"
+msgstr "Όριο ποσότητας ($)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1780
+msgid "Enter the maximum amount of purchase accepted in your store."
+msgstr "Εισαγάγετε το μέγιστο ποσό αγοράς αποδεκτό στο κατάστημά σας."
+
+#: anti-fraud-core/class-wc-af-settings.php:1787
+msgid "Too many order attempts?"
+msgstr "Πάρα πολλές προσπάθειες παραγγελίας;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1792
+msgid "Enabling this rule allows you to limit number of orders per user within the time span configured below."
+msgstr "Η ενεργοποίηση αυτού του κανόνα σας επιτρέπει να περιορίσετε τον αριθμό των παραγγελιών ανά χρήστη εντός του χρονικού διαστήματος που έχει ρυθμιστεί παρακάτω."
+
+#: anti-fraud-core/class-wc-af-settings.php:1809
+msgid "Time Span to Check (hours)"
+msgstr "Χρονικό διάστημα για έλεγχο (ώρες)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1812
+msgid "Enter number of hours you want to check "
+msgstr "Εισαγάγετε τον αριθμό ωρών που θέλετε να ελέγξετε "
+
+#: anti-fraud-core/class-wc-af-settings.php:1818
+msgid "Maximum Allowed Number of Orders in Time Span?"
+msgstr "Μέγιστο επιτρεπόμενο αριθμό παραγγελιών σε χρονικό διάστημα;"
+
+#: anti-fraud-core/class-wc-af-settings.php:1821
+msgid "Enter a total number of orders that a buyer can make in the specified time span."
+msgstr "Εισαγάγετε ένα συνολικό αριθμό παραγγελιών που μπορεί να κάνει ένας αγοραστής στο καθορισμένο χρονικό διάστημα."
+
+#: anti-fraud-core/class-wc-af-settings.php:1832
+msgid "Limit Number of Orders between Time"
+msgstr "Περιορίστε τον αριθμό παραγγελιών μεταξύ του χρόνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1837
+msgid "Enabling this rule limits the number of orders to be placed within a certain period of the day."
+msgstr "Η ενεργοποίηση αυτού του κανόνα περιορίζει τον αριθμό των παραγγελιών που πρέπει να τοποθετηθούν εντός μιας συγκεκριμένης περιόδου της ημέρας."
+
+#: anti-fraud-core/class-wc-af-settings.php:1841
+msgid "Start Time "
+msgstr "Ωρα έναρξης "
+
+#: anti-fraud-core/class-wc-af-settings.php:1844
+msgid "Needs to be as per server time. Check in woo general settings. Accordingly specify start time."
+msgstr "Πρέπει να είναι σύμφωνα με το χρόνο του διακομιστή. Ελέγξτε τις γενικές ρυθμίσεις WOO. Επομένως, καθορίστε την ώρα έναρξης."
+
+#: anti-fraud-core/class-wc-af-settings.php:1850
+msgid "End Time "
+msgstr "Τέλος χρόνου "
+
+#: anti-fraud-core/class-wc-af-settings.php:1853
+msgid "Needs to be as per server time. Check in woo general settings. Accordingly specify end time."
+msgstr "Πρέπει να είναι σύμφωνα με το χρόνο του διακομιστή. Ελέγξτε τις γενικές ρυθμίσεις WOO. Επομένως, καθορίστε την ώρα λήξης."
+
+#: anti-fraud-core/class-wc-af-settings.php:1859
+msgid "Maximum Allowed Number of Orders Between Time"
+msgstr "Μέγιστος επιτρεπόμενος αριθμός παραγγελιών μεταξύ του χρόνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:1862
+msgid "Enter maximum number of orders that can be placed during specified time span."
+msgstr "Εισαγάγετε τον μέγιστο αριθμό παραγγελιών που μπορούν να τοποθετηθούν κατά τη διάρκεια του συγκεκριμένου χρονικού διαστήματος."
+
+#: anti-fraud-core/class-wc-af-settings.php:2013 assets/js/app.js:227
+msgid "Low Risk Order"
+msgstr "Εντολή χαμηλού κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:2015 assets/js/app.js:229
+msgid "Medium Risk Order"
+msgstr "Εντολή μεσαίου κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:2017 assets/js/app.js:231
+msgid "High Risk Order"
+msgstr "Εντολή υψηλού κινδύνου"
+
+#: anti-fraud-core/class-wc-af-settings.php:2019 assets/js/app.js:233
+msgid "Disabled"
+msgstr "άτομα με ειδικές ανάγκες"
+
+#: anti-fraud-core/class-wc-af-settings.php:2026
+msgid "No Importance"
+msgstr "Δεν υπάρχει σημασία"
+
+#: anti-fraud-core/class-wc-af-settings.php:2027
+msgid "Moderate"
+msgstr "Μέτριος"
+
+#: anti-fraud-core/class-wc-af-settings.php:2028
+msgid "High Importance"
+msgstr "Μεγάλη σημασία"
+
+#: anti-fraud-core/class-wc-af-settings.php:2174
+msgid "Your Account Id or License Key could not be authenticated!!"
+msgstr "Το αναγνωριστικό λογαριασμού ή το κλειδί άδειας χρήσης δεν ήταν δυνατό να πιστοποιηθούν!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2189
+msgid "Great, authenticated successfully!!"
+msgstr "Μεγάλη, πιστοποιημένη με επιτυχία!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2332
+msgid "Your Quickemailverification API Key could not be authenticated!!"
+msgstr "Το πλήκτρο API QuickEmailification δεν μπορούσε να πιστοποιηθεί!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2347
+msgid "Great, Quickemailverification authenticated successfully!!"
+msgstr "Μεγάλη, QuickEmailverification πιστοποιήθηκε με επιτυχία!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2362
+msgid "Great, Quickemailverification authenticated successfully but you don't have enough credit to use this service."
+msgstr "Μεγάλη, QuickEmailverification πιστοποιείται με επιτυχία, αλλά δεν έχετε αρκετή πίστωση για να χρησιμοποιήσετε αυτήν την υπηρεσία."
+
+#: anti-fraud-core/class-wc-af-settings.php:2429
+msgid "Great, bigdatacloud authenticated successfully!"
+msgstr "Μεγάλη, Bigdatacloud πιστοποίησε με επιτυχία!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2445 woocommerce-anti-fraud.php:397
+msgid "AntiFraud: Bigdatacloud credentials not authenticate or your quota limit has been exceeded!"
+msgstr "Antifraud: Τα διαπιστευτήρια bigdatacloud δεν έχουν πιστοποιήσουν ή έχει ξεπεραστεί το όριο ποσοστώσεων σας!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2536
+msgid "Your Trust Swiftly API Key could not be authenticated!!"
+msgstr "Η εμπιστοσύνη σας γρήγορα το κλειδί API δεν μπορούσε να πιστοποιηθεί!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2551
+msgid "Your Trust Swiftly Base URL could not be validated!!"
+msgstr "Η εμπιστοσύνη σας δεν μπορούσε να επικυρωθεί γρήγορα η διεύθυνση URL της βάσης!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2566
+msgid "Great, Trust Swiftly authenticated successfully!!"
+msgstr "Μεγάλη, εμπιστοσύνη γρήγορα επικυρώθηκε με επιτυχία!"
+
+#: anti-fraud-core/class-wc-af-trust-swiftly.php:292
+msgid " Please get verified with Trust Swiftly, and then try again."
+msgstr " Παρακαλούμε να επαληθευτείτε με εμπιστοσύνη γρήγορα και, στη συνέχεια, δοκιμάστε ξανά."
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:356
+msgid "Sr No"
+msgstr "SR Όχι"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:357
+#: templates/dashboard.php:362
+msgid "Name"
+msgstr "Ονομα"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:358
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:359
+msgid "Action"
+msgstr "Δράση"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:385
+msgid "Download"
+msgstr "Κατεβάστε"
+
+#. translators: %s: learn more link
+#: includes/class-wc-af-privacy.php:19
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. <a href=\"%s\" target=\"_blank\">Learn more about how this works, including what you may want to include in your privacy policy.</a>"
+msgstr "Χρησιμοποιώντας αυτήν την επέκταση, ενδέχεται να αποθηκεύετε προσωπικά δεδομένα ή να μοιράζεστε δεδομένα με εξωτερική υπηρεσία. <a href=\"%s\" target=\"_blank\"> μάθετε περισσότερα για το πώς λειτουργεί αυτό, συμπεριλαμβανομένου του τι μπορεί να θέλετε να συμπεριλάβετε στην πολιτική απορρήτου σας. </a>"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/af-admin-notice.php:25
+msgid "An order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Μια παραγγελία με ID # %1$s σημείωσε βαθμολογία κινδύνου %2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-admin-notice.php:31 templates/plain/af-admin-notice.php:13
+#: templates/plain/af-paypal-notice.php:14
+msgid "%1$sClick here to view the order.%2$s."
+msgstr "%1$sclick εδώ για να δείτε την παραγγελία.%2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-paypal-notice.php:26
+msgid "%1$sClick here to verify the order.%2$s."
+msgstr "%1$sclick εδώ για να επαληθεύσει την παραγγελία.%2$s."
+
+#: templates/dashboard.php:189
+msgid "Anti Fraud Dashboard"
+msgstr "Πίνακας ελέγχου κατά της απάτης"
+
+#: templates/dashboard.php:199
+msgid "Orders Detected"
+msgstr "Εντοπίστηκαν παραγγελίες"
+
+#: templates/dashboard.php:217
+msgid "Needs Attention"
+msgstr "Χρειάζεται προσοχή"
+
+#: templates/dashboard.php:230
+msgid "Recent Order Data"
+msgstr "Πρόσφατα δεδομένα παραγγελίας"
+
+#: templates/dashboard.php:244
+msgid "Last 24 Hours Update"
+msgstr "Τελευταία ενημέρωση 24 ωρών"
+
+#: templates/dashboard.php:250
+msgid "Total Transaction Amount"
+msgstr "Συνολικό ποσό συναλλαγής"
+
+#: templates/dashboard.php:262
+msgid "Total Number of Orders"
+msgstr "Συνολικός αριθμός παραγγελιών"
+
+#: templates/dashboard.php:274
+msgid "Medium Risk Orders"
+msgstr "Εντολές μεσαίου κινδύνου"
+
+#: templates/dashboard.php:286
+msgid "High-Risk Orders on Hold"
+msgstr "Εντολές υψηλού κινδύνου σε αναμονή"
+
+#: templates/dashboard.php:298
+msgid "Fraudulent Orders Cancelled"
+msgstr "Εντολές υψηλού κινδύνου σε αναμονή"
+
+#: templates/dashboard.php:310
+msgid "High-Risk Net Transaction"
+msgstr "Καθαρή συναλλαγή υψηλού κινδύνου"
+
+#: templates/dashboard.php:322
+msgid "Emails Blocked"
+msgstr "Αποκλείστηκαν τα email"
+
+#: templates/dashboard.php:334
+msgid "Paypal Verification"
+msgstr "Επαλήθευση PayPal"
+
+#: templates/dashboard.php:364
+msgid "Spent"
+msgstr "Δαπανών"
+
+#: templates/dashboard.php:366
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: templates/dashboard.php:460
+msgid "Orders Breakdown"
+msgstr "Καταστροφή παραγγελιών"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/plain/af-admin-notice.php:11
+msgid "Hi there. Order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Γεια σου. Η παραγγελία με ID # %1$s σημείωσε βαθμολογία κινδύνου %2$s."
+
+#: woocommerce-anti-fraud.php:109
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: woocommerce-anti-fraud.php:110
+msgid "Docs"
+msgstr "Έγγραφα"
+
+#: woocommerce-anti-fraud.php:935
+msgid "This email id is blocked."
+msgstr "Αυτό το αναγνωριστικό email είναι αποκλεισμένο."
+
+#: woocommerce-anti-fraud.php:952
+msgid "This IP Address is blocked."
+msgstr "Αυτή η διεύθυνση IP έχει αποκλειστεί."
+
+#. translators: %s: order time span
+#: woocommerce-anti-fraud.php:1247
+msgid "You have reached maximum number of allowed orders in %d hours. Please try again later."
+msgstr "Έχετε φτάσει στο μέγιστο αριθμό επιτρεπόμενων παραγγελιών σε %d ώρες. Παρακαλώ δοκιμάστε ξανά αργότερα."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:1877
+msgid "Please consider enabling reCaptcha in the Anti Fraud plugin %1$ssettings%2$s to help prevent Velocity attacks."
+msgstr "Σκεφτείτε να ενεργοποιήσετε το Recaptcha στο plugin κατά της απάτης %1$sSETTINGS %2$s για να αποτρέψετε τις επιθέσεις ταχύτητας."
+
+#: woocommerce-anti-fraud.php:2223
+msgid "This email id is blocked"
+msgstr "Αυτό το αναγνωριστικό email είναι αποκλεισμένο"
+
+#: woocommerce-anti-fraud.php:2225
+msgid "Unblock"
+msgstr "Ξεβουλώνω"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:2261
+msgid "Please install and activate %1$sWooCommerce%2$s in order for the WooCommerce Anti Fraud extension to work!"
+msgstr "Εγκαταστήστε και ενεργοποιήστε το %1$swoocommerce %2$s για να εργαστείτε στην επέκταση της κατά της απάτης WooCommerce!"
+
+#: woocommerce-anti-fraud.php:2447 woocommerce-anti-fraud.php:2878
+msgid "Invalid recaptcha."
+msgstr "Μη έγκυρο recaptcha."
+
+#: woocommerce-anti-fraud.php:2452
+msgid "You are not a human, please refresh page."
+msgstr "Δεν είστε άνθρωπος, παρακαλούμε ανανεώστε τη σελίδα."
+
+#: woocommerce-anti-fraud.php:2461
+msgid "Could not get response from recaptcha server, please refresh page."
+msgstr "Δεν ήταν δυνατή η απόκριση από τον διακομιστή Recaptcha, παρακαλούμε ανανεώστε τη σελίδα."
+
+#: woocommerce-anti-fraud.php:2464
+msgid "Recaptcha not responding, please refresh page."
+msgstr "Το Recaptcha δεν ανταποκρίνεται, παρακαλούμε ανανεώστε τη σελίδα."
+
+#: woocommerce-anti-fraud.php:2481
+msgid "PayPal Verification Done."
+msgstr "Η επαλήθευση του PayPal έγινε."
+
+#: woocommerce-anti-fraud.php:2772
+msgid "Captcha"
+msgstr "CAPTCHA"
+
+#: woocommerce-anti-fraud.php:2794 woocommerce-anti-fraud.php:2893
+msgid "Recaptcha is a required field."
+msgstr "Το Recaptcha είναι ένα απαιτούμενο πεδίο."
+
+#: woocommerce-anti-fraud.php:2889
+msgid "Could not get response from recaptcha server."
+msgstr "Δεν ήταν δυνατή η απόκριση από το διακομιστή Recaptcha."
+
+#: woocommerce-anti-fraud.php:2896
+msgid "Could not verify request."
+msgstr "Δεν ήταν δυνατή η επαλήθευση του αιτήματος."
+
+#: anti-fraud-core/class-wc-af-settings.php:1025
+msgid "The threshold between Low and Medium Risk Score. Move the left handle on slider or update the value in text field to set the boundary between Low and Medium-Risk orders. Risk Score less than this value is Low-Risk order and a greater value is the starting point of Medium Risk Orders."
+msgstr "Το όριο μεταξύ βαθμολογίας χαμηλού και μεσαίου κινδύνου. Μετακινήστε την αριστερή λαβή στο ρυθμιστικό ή ενημερώστε την τιμή στο πεδίο κειμένου για να ρυθμίσετε το όριο μεταξύ παραγγελιών χαμηλού και μεσαίου κινδύνου. Η βαθμολογία κινδύνου μικρότερη από αυτή την τιμή είναι σειρά χαμηλού κινδύνου και μεγαλύτερη τιμή είναι το σημείο εκκίνησης των παραγγελιών μεσαίου κινδύνου."
+
+#: anti-fraud-core/class-wc-af-settings.php:1037
+msgid "This is a threshold between Medium and High-Risk Score. Slide the right handle on slider or update the value in text field to set the boundary between Medium and High-Risk orders. Risk Score less than this value is the end point of Medium-Risk order and a greater value is High-Risk order."
+msgstr "Αυτό είναι ένα κατώφλι μεταξύ μέσου και υψηλού κινδύνου. Σύρετε τη δεξιά λαβή στο ρυθμιστικό ή ενημερώστε την τιμή στο πεδίο κειμένου για να ρυθμίσετε το όριο μεταξύ των παραγγελιών μέσου και υψηλού κινδύνου. Η βαθμολογία κινδύνου μικρότερη από αυτή την τιμή είναι το τελικό σημείο της τάξης μεσαίου κινδύνου και η μεγαλύτερη τιμή είναι η σειρά υψηλού κινδύνου."
+
+#: anti-fraud-core/class-wc-af-settings.php:1063
+msgid "Evaluate customers before making the actual payment.  If the fraud score reaches a high-risk order range before making payment, the customer order will be denied in advance, and a custom message appears on the checkout page explaining buyer the reason for denial."
+msgstr "Αξιολογήστε τους πελάτες πριν κάνετε την πραγματική πληρωμή. Εάν η βαθμολογία απάτης φτάσει σε ένα εύρος παραγγελιών υψηλού κινδύνου πριν από την πληρωμή, η παραγγελία πελάτη θα απορριφθεί εκ των προτέρων και εμφανίζεται ένα προσαρμοσμένο μήνυμα στη σελίδα πληρωμής που εξηγεί τον αγοραστή τον λόγο άρνησης."
+
+#: anti-fraud-core/class-wc-af-settings.php:1074
+msgid "Enable pre-payment checking to assess fraud before making payment and block buyers with high fraud risk from placing any order and notify them via alert message."
+msgstr "Ενεργοποιήστε τον έλεγχο προπληρωμής για να αξιολογήσετε την απάτη πριν κάνετε πληρωμές και αποκλείστε τους αγοραστές με υψηλό κίνδυνο απάτης από την τοποθέτηση οποιασδήποτε παραγγελίας και την ειδοποίηση τους μέσω μηνύματος προειδοποίησης."
+
+#: anti-fraud-core/class-wc-af-settings.php:1098
+msgid "Updates order status to cancel and/or on-hold when order passes a certain Risk Score threshold."
+msgstr "Ενημερώσεις Κατάσταση παραγγελίας για ακύρωση ή/και σε hold όταν η παραγγελία περάσει ένα συγκεκριμένο όριο βαθμολογίας κινδύνου."
+
+#: anti-fraud-core/class-wc-af-settings.php:1142
+msgid "Payments made via the whitelisted payment methods will bypass anti-fraud’s rule to change order status based on risk score."
+msgstr "Οι πληρωμές που πραγματοποιούνται μέσω των μεθόδων πληρωμής με λίστα θα παρακάμψουν τον κανόνα της κατά της απάτης για να αλλάξουν την κατάσταση παραγγελίας βάσει της βαθμολογίας κινδύνου."
+
+#: anti-fraud-core/class-wc-af-settings.php:1152
+msgid "Enable to add payment methods to the whitelist."
+msgstr "Ενεργοποιήστε την προσθήκη μεθόδων πληρωμής στον λευκόχρυσο."
+
+#: anti-fraud-core/class-wc-af-settings.php:1174
+msgid "Filter accounts with different user roles to bypass Anti-fraud scoring system."
+msgstr "Λογαριασμοί φίλτρου με διαφορετικούς ρόλους χρηστών για την παράκαμψη του συστήματος βαθμολόγησης κατά της απάτης."
+
+#: anti-fraud-core/class-wc-af-settings.php:1184
+msgid "Enable it to activate whitelisting of User Roles."
+msgstr "Ενεργοποιήστε την ενεργοποίηση των λευκών ρόλων των χρηστών."
+
+#: anti-fraud-core/class-wc-af-settings.php:1193
+msgid "Press “Ctrl” or “Command” key and click one or multiple user roles to whitelist. Scroll up/down to select and see more user roles if any."
+msgstr "Πατήστε το πλήκτρο \"CTRL\" ή \"COMMOND\" και κάντε κλικ σε έναν ή πολλαπλούς ρόλους χρηστών στο Whitelist. Μετακινηθείτε προς τα πάνω/προς τα κάτω για να επιλέξετε και να δείτε περισσότερους ρόλους χρηστών εάν υπάρχουν."
+
+#: anti-fraud-core/class-wc-af-settings.php:1207
+msgid "List of Emails whitelitsted. Add emails manullay to make whitlist. Unblocked emails also added to this list."
+msgstr "Λίστα μηνυμάτων ηλεκτρονικού ταχυδρομείου Whitelitsted. Προσθέστε μηνύματα ηλεκτρονικού ταχυδρομείου Manullay για να φτιάξετε λευκές λίστα. Τα μη αποκλεισμένα μηνύματα ηλεκτρονικού ταχυδρομείου προστέθηκαν επίσης σε αυτήν τη λίστα."
+
+#: anti-fraud-core/class-wc-af-settings.php:1233
+msgid "List of IPs whitelitsted. Add IPs manullay to make whitlist. Unblocked IPs also added to this list."
+msgstr "Κατάλογος του IPS Whitelitsted. Προσθέστε το IPS Manullay για να φτιάξετε Whitlist. Τα μη αποκλειστικά IPs προστέθηκαν επίσης σε αυτόν τον κατάλογο."
+
+#: anti-fraud-core/class-wc-af-settings.php:1260
+msgid "In this section, customers can enable this setting to check fraud for a previous order, when the Anti Fraud plugin is not installed and an order was placed within 7 days old."
+msgstr "Σε αυτή την ενότητα, οι πελάτες μπορούν να επιτρέψουν σε αυτή τη ρύθμιση να ελέγξει την απάτη για προηγούμενη παραγγελία, όταν το plugin κατά της απάτης δεν έχει εγκατασταθεί και τοποθετήθηκε παραγγελία σε ηλικία 7 ημερών."
+
+#: anti-fraud-core/class-wc-af-settings.php:1270
+msgid "Enable it to check fraud for a previous order, that orders, when the Antifraud plugin was not installed."
+msgstr "Ενεργοποιήστε την απάτη για μια προηγούμενη παραγγελία, ότι οι παραγγελίες, όταν δεν έχει εγκατασταθεί το plugin Antifraud."
+
+#: anti-fraud-core/class-wc-af-settings.php:1279
+msgid "The Merchant can enter the number of days for historical orders check. The default number of days is 7 days."
+msgstr "Ο έμπορος μπορεί να εισαγάγει τον αριθμό των ημερών για έλεγχο ιστορικών παραγγελιών. Ο προεπιλεγμένος αριθμός ημερών είναι 7 ημέρες."
+
+#: anti-fraud-core/class-wc-af-settings.php:1301
+msgid "In this section, customers can enable this setting to create log file and it can seen from WooCommerce >> Status >> Log."
+msgstr "Σε αυτή την ενότητα, οι πελάτες μπορούν να επιτρέψουν αυτή τη ρύθμιση για να δημιουργήσει αρχείο καταγραφής και μπορεί να δει από το WooCommerce >> Κατάσταση >> log."
+
+#: anti-fraud-core/class-wc-af-settings.php:1311
+msgid "Enable it to record the debugging data."
+msgstr "Ενεργοποιήστε την καταγραφή των δεδομένων εντοπισμού σφαλμάτων."
+
+#: anti-fraud-core/class-wc-af-settings.php:1644
+msgid "Press Ctrl or ⌘ key and select multiple countries that you think are unsafe for your area of service."
+msgstr "Πατήστε το πλήκτρο CTRL ή ⌘ και επιλέξτε πολλές χώρες που νομίζετε ότι δεν είναι ασφαλείς για την περιοχή υπηρεσίας σας."
+
+#: rules/class-wc-af-rule-billing-matches-shipping.php:18
+msgid "Billing address does not match shipping address"
+msgstr "Η διεύθυνση χρέωσης δεν ταιριάζει με τη διεύθυνση αποστολής"
+
+#: rules/class-wc-af-rule-billing-method.php:18
+msgid "Ordered from a risk billing_method"
+msgstr "Παραγγέλθηκε από ένα κίνδυνο τιμολόγησης_Method"
+
+#: rules/class-wc-af-rule-billing-phone-matches-billing-country.php:17
+msgid "Billing phone number does not match with Billing country"
+msgstr "Ο αριθμός τηλεφώνου χρέωσης δεν ταιριάζει με τη χώρα χρέωσης"
+
+#: rules/class-wc-af-rule-country.php:18
+msgid "Ordered from a risk country"
+msgstr "Παραγγέλθηκε από μια χώρα κινδύνου"
+
+#: rules/class-wc-af-rule-detect-proxy.php:16
+msgid "Customer ordered from behind a proxy."
+msgstr "Ο πελάτης που παραγγέλθηκε πίσω από ένα πληρεξούσιο."
+
+#: rules/class-wc-af-rule-first-order-processing.php:17
+#: rules/class-wc-af-rule-first-order.php:16
+msgid "This is the customer's first order with this billing details."
+msgstr "Αυτή είναι η πρώτη παραγγελία του πελάτη με αυτά τα στοιχεία χρέωσης."
+
+#: rules/class-wc-af-rule-free-email.php:20
+msgid "Email is a known free email address."
+msgstr "Το email είναι μια γνωστή δωρεάν διεύθυνση email."
+
+#: rules/class-wc-af-rule-geo-location.php:19
+msgid "Customer order geo location mismatches billing/shipping address."
+msgstr "Παραγγελία πελατών Geo Τοποθεσία αναντιστοιχία χρέωση/διεύθυνση αποστολής."
+
+#: rules/class-wc-af-rule-high-amount.php:17
+msgid "Order exceeds maximum amount."
+msgstr "Η παραγγελία υπερβαίνει το μέγιστο ποσό."
+
+#: rules/class-wc-af-rule-international-order.php:17
+msgid "Order is an international order."
+msgstr "Η παραγγελία είναι μια διεθνής εντολή."
+
+#: rules/class-wc-af-rule-ip-location.php:19
+msgid "Customer IP address did not match given billing country."
+msgstr "Η διεύθυνση IP του πελάτη δεν ταιριάζει με τη χώρα χρέωσης."
+
+#: rules/class-wc-af-rule-ip-multiple-order-details.php:20
+msgid "IP address ordered with multiple order details in the past "
+msgstr "Διεύθυνση IP που παραγγέλθηκε με πολλαπλά στοιχεία παραγγελίας στο παρελθόν "
+
+#: rules/class-wc-af-rule-minfraud-factors.php:18
+msgid "Score returned by Minfraud Factors exceeds the allowed value."
+msgstr "Η βαθμολογία που επιστρέφεται από τους παράγοντες Minfraud υπερβαίνει την επιτρεπόμενη τιμή."
+
+#: rules/class-wc-af-rule-minfraud-insights.php:18
+msgid "Score returned by Minfraud Insights exceeds the allowed value."
+msgstr "Η βαθμολογία που επέστρεψε από τις Insights Minfraud υπερβαίνει την επιτρεπόμενη τιμή."
+
+#: rules/class-wc-af-rule-minfraud.php:18
+msgid "Score returned by Minfraud exceeds the allowed value."
+msgstr "Η βαθμολογία που επέστρεψε ο Minfraud υπερβαίνει την επιτρεπόμενη τιμή."
+
+#: rules/class-wc-af-rule-temporary-email.php:17
+msgid "Email address is from a high-risk domain."
+msgstr "Η διεύθυνση email είναι από έναν τομέα υψηλού κινδύνου."
+
+#: rules/class-wc-af-rule-velocities.php:20
+msgid "IP address ordered multiple orders in the last "
+msgstr "Η διεύθυνση IP διέταξε πολλές παραγγελίες στο τελευταίο "
+
+#: woocommerce-anti-fraud.php:2972
+msgid "Fraud Action"
+msgstr "Δράση απάτης"
+
+#: woocommerce-anti-fraud.php:2985 woocommerce-anti-fraud.php:3001
+msgid "Fraud Check"
+msgstr "Έλεγχος απάτης"
+
+#: anti-fraud-core/class-wc-af-settings.php:985
+msgid "Enter the body of the email to be sent to the purchaser in the text area below:"
+msgstr "Εισαγάγετε το σώμα του μηνύματος ηλεκτρονικού ταχυδρομείου που θα σταλεί στον αγοραστή στην παρακάτω περιοχή κειμένου:"
+
+#: anti-fraud-core/class-wc-af-settings.php:1161
+msgid "Press “Ctrl” or “Command” key and click multiple payment methods to whitelist and scroll down to select more payment methods"
+msgstr "Πατήστε το πλήκτρο «Ctrl» ή «Command» και κάντε κλικ σε πολλούς τρόπους πληρωμής στη λίστα επιτρεπόμενων και μετακινηθείτε προς τα κάτω για να επιλέξετε περισσότερους τρόπους πληρωμής"
+
+#: anti-fraud-core/class-wc-af-settings.php:1216
+msgid "Enter any email you want to be whitelisted. Press “Tab” or “Comma” after entering any new email. Please add emails in bulk separating them by either comma or space."
+msgstr "Εισαγάγετε οποιοδήποτε email θέλετε να μπείτε στη λίστα επιτρεπόμενων. Πατήστε \"Tab\" ή \"Comma\" αφού εισαγάγετε οποιοδήποτε νέο email. Προσθέστε μαζικά μηνύματα ηλεκτρονικού ταχυδρομείου χωρίζοντάς τα είτε με κόμμα είτε με κενό διάστημα."
+
+#: anti-fraud-core/class-wc-af-settings.php:1242
+msgid "Enter any IPs you want to be whitelisted. Press “Tab” or “Comma” after entering any new IPs. Please add emails in bulk separating them by either comma or space."
+msgstr "Εισαγάγετε τυχόν IP που θέλετε να συμπεριληφθούν στη λίστα επιτρεπόμενων. Πατήστε \"Tab\" ή \"Comma\" αφού εισαγάγετε τυχόν νέες IP. Προσθέστε μαζικά μηνύματα ηλεκτρονικού ταχυδρομείου χωρίζοντάς τα είτε με κόμμα είτε με κενό διάστημα."
+
+#: anti-fraud-core/class-wc-af-settings.php:1691
+msgid "Enter any email origin domains you consider to be high-risk. Press “Tab” or “Comma” after entering any new domain."
+msgstr "Εισαγάγετε τυχόν τομείς προέλευσης email που θεωρείτε ότι είναι υψηλού κινδύνου. Πατήστε \"Tab\" ή \"Comma\" αφού εισαγάγετε οποιονδήποτε νέο τομέα."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:339
+msgid "In order to continue %1$s\"Geo Location Match\"%2$s service, our provider Bigdatacloud now requires you to sign up and get the api key. To obtain an api key you can %3$sregister here%4$s."
+msgstr "Για να συνεχιστεί η υπηρεσία %1$s\"Geo Location Match\"%2$s, ο πάροχος μας Bigdatacloud απαιτεί τώρα να εγγραφείτε και να λάβετε το κλειδί api. Για να αποκτήσετε ένα κλειδί api, μπορείτε να %3$sεγγραφείτε εδώ%4$s."

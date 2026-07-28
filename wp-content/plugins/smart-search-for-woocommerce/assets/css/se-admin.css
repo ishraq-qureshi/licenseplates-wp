@@ -1,0 +1,113 @@
+.se-logo {
+	display: inline-block;
+	flex: 1;
+	position: relative;
+	padding-left: 20px;
+	font-weight: normal;
+	margin-left: 5px;
+}
+
+.se-logo:before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -8px;
+	display: block;
+	content: '';
+	width: 16px;
+	height: 16px;
+	color: #00c558;
+	background: url(../icons/logo.svg);
+}
+
+#snize_container select {
+    min-width: 120px;
+}
+
+#snize_container select,
+.wp-core-ui #snize_container select {
+    appearance: auto;
+    -moz-appearance: auto;
+    -webkit-appearance: auto;
+}
+
+#snize_container input[type="checkbox"]:checked {
+    appearance: checkbox;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+}
+
+#snize_container input[type="checkbox"]:checked:before {
+    display: none;
+}
+
+#snize_container .nav-tabs > li > a:focus,
+#snize_container input[type="checkbox"]:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+#snize_container .checkbox input:before {
+    display: none !important;
+}
+
+#snize_container.snize-optin {
+	margin: 40px auto;
+	max-width: 900px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+#snize_container.snize-optin .title-header {
+	cursor: auto;
+	padding: 8px 12px;
+	border-bottom: 1px solid #c3c4c7;
+}
+
+#snize_container.snize-optin .title-header h2 {
+	margin: 0;
+	padding: 8px 12px;
+}
+
+#snize_container.snize-optin .inside {
+	margin-top: 11px;
+	padding: 0 20px;
+}
+
+#snize_container.snize-optin .snize-optin-footer {
+	padding: 0 20px 20px 20px;
+	text-align: center;
+}
+
+#snize_container .visibility-hidden {
+	visibility: hidden;
+}
+
+#snize_container .snize-optin-submit {
+	position: relative;
+}
+
+#snize_container .snize-optin-submit .button-right {
+	float: right;
+}
+
+#snize_container .snize-optin-submit:after {
+	display: block;
+	clear: both;
+}
+
+#snize_container .snize-optin-submit .button {
+	margin: 0 0.25em;
+	padding: 0.25em 1.5em;
+}
+
+#snize_container .snize-optin-submit .button:first-child {
+	margin-left: 0;
+}
+
+#snize_container .snize-optin-submit .button:last-child {
+	margin-right: 0;
+}

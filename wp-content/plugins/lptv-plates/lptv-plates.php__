@@ -1,0 +1,1089 @@
+<?php
+
+
+
+/**
+
+ * Plugin Name: LPTV-Plates
+
+ * Description: Support custom product type for LPTV
+
+ * Version: 1.02
+
+ */
+
+
+
+add_action('woocommerce_loaded', function () {
+
+    require_once 'includes/class-wc-product-lptvplate.php';
+
+});
+
+
+
+/**
+
+ * 1. Create custom post type
+
+ * template
+
+ * font
+
+ * letter limits
+
+ */
+
+add_filter('product_type_selector', function ($types) {
+
+    $types['lptvplate'] = __('LPTVplate');
+
+
+
+    return $types;
+
+});
+
+add_action('woocommerce_product_options_general_product_data', function () {
+
+    echo '<div class="options_group show_if_lptvplate clear"></div>';
+
+});
+
+
+
+register_activation_hook(__FILE__, function () {
+
+    if (!get_term_by('slug', 'lptvplate', 'product_type')) {
+
+        wp_insert_term('lptvplate', 'product_type');
+
+    }
+
+});
+
+
+
+function lptvplate_add_to_cart()
+
+{
+
+    wc_get_template('single-product/add-to-cart/lptvplate.php');
+
+}
+
+
+
+add_action('woocommerce_lptvplate_add_to_cart', 'lptvplate_add_to_cart');
+
+
+
+
+
+/**
+
+ * Add custom fields to general panel
+
+ * font & template ID
+
+ */
+
+add_action('woocommerce_product_options_pricing', 'add_lptvplate_pricing');
+
+global $fonts, $fields, $extraFields;
+
+
+
+$fonts = ['1', '1a', '2', '2a'];
+
+$fields = ['font', 'minChar', 'maxChar', 'xPos', 'yPos', 'fontSize', 'fontColor'];
+
+$extraFields = ["symbols", "edecal", "saftydecal", "statedecal", 'products_image', 'products_id', 'products_instructions', 'products_parts', 'options_2'];
+
+
+
+function add_lptvplate_pricing()
+
+{
+
+
+
+    global $product_object, $fonts, $fields, $extraFields;
+
+?>
+
+    <div class='options_group show_if_lptvplate'>
+
+        <?php
+
+
+
+        woocommerce_wp_text_input(
+
+            array(
+
+                'id' => '_plate_template_id',
+
+                'label' => __('Plate template ID'),
+
+                'value' => $product_object->get_meta('_plate_template_id', true),
+
+                'default' => '',
+
+                'placeholder' => 'Set plate template ID'
+
+            )
+
+        );
+
+
+
+        foreach ($fonts as $font) {
+
+            echo '<div class="" style="padding-left:20px;"><div style="font-weight: bold;font-size: 14px">Font ' . $font . '</div>';
+
+            echo '<div style="display: flex; flex-direction: row;margin-bottom: 8px;gap:12px;">';
+
+            foreach ($fields as $field) {
+
+                $val = $product_object->get_meta('_plate_' . $field . $font, true);
+
+                echo '<input type="text" placeholder="' . $field . $font . '" name="_plate_' . $field . $font . '" style="width:90px" value="' . $val . '"/>';
+
+            }
+
+            echo '</div></div>';
+
+        }
+
+
+
+
+
+        echo '<div class="" style="padding-left:20px;"><div style="font-weight: bold;font-size: 14px">Extra</div>';
+
+        echo '<div style="display: flex; flex-direction: row;margin-bottom: 8px;gap:12px;">';
+
+        foreach ($extraFields as $field) {
+
+            $val = $product_object->get_meta('_plate_' . $field, true);
+
+            echo '<input type="text" placeholder="' . $field . '" name="_plate_' . $field . '" style="width:90px" value="' . $val . '"/>';
+
+        }
+
+        echo '</div></div>';
+
+
+
+
+
+        echo '<div style="display: flex;flex-direction: row;gap:12px;margin-left: 20px;margin-top:22px;margin-bottom:22px;"><img src="" id="plateSample" style="width:200px;height:auto;"/><img src="" id="plateSampleDemo" style="width:200px;height:auto;margin-left: 20px;"/></div>';
+
+
+
+        ?>
+
+    </div>
+
+<?php
+
+}
+
+
+
+add_action('admin_footer', 'enable_js_on_wc_product');
+
+function enable_js_on_wc_product()
+
+{
+
+    global $post, $product_object;
+
+
+
+    if (!$post || $post->post_type != 'product') {
+
+        return;
+
+    }
+
+
+
+
+
+    $is_lptvplate = $product_object && 'lptvplate' === $product_object->get_type() ? true : false;
+
+
+
+?>
+
+    <script type='text/javascript'>
+
+        jQuery(function($) {
+
+            //for Price tab
+
+            $('#general_product_data .pricing').addClass('show_if_lptvplate');
+
+            $('.inventory_options').addClass('show_if_lptvplate').show();
+
+
+
+            <?php if ($is_lptvplate) { ?>
+
+                $('#general_product_data .pricing').show();
+
+                reloadSample();
+
+
+
+                $('input#_plate_template_id').on('keyup', function() {
+
+                    reloadSample()
+
+                });
+
+
+
+                function reloadSample() {
+
+                    let id = $('input#_plate_template_id').val();
+
+                    $('#plateSample').attr('src', '/wp-content/plugins/lptv-plates/images/pngs/blank' + id + '.png')
+
+                    $('#plateSampleDemo').attr('src', '/wp-content/plugins/lptv-plates/images/' + id + '.gif')
+
+                }
+
+            <?php } ?>
+
+        });
+
+    </script>
+
+<?php
+
+}
+
+
+
+/**
+
+ * Save the product custom data
+
+ */
+
+add_action('woocommerce_process_product_meta_lptvplate', 'save_lptvplate_settings');
+
+function save_lptvplate_settings($post_id)
+
+{
+
+    global $fields, $fonts, $extraFields;
+
+    foreach ($fonts as $font) {
+
+
+
+        foreach ($fields as $field) {
+
+            $val = isset($_POST['_plate_' . $field . $font]) ? sanitize_text_field($_POST['_plate_' . $field . $font]) : '';
+
+            update_post_meta($post_id, '_plate_' . $field . $font, $val);
+
+        }
+
+    }
+
+
+
+    // save extra
+
+    foreach ($extraFields as $field) {
+
+        $val = isset($_POST['_plate_' . $field]) ? sanitize_text_field($_POST['_plate_' . $field]) : '';
+
+        update_post_meta($post_id, '_plate_' . $field, $val);
+
+    }
+
+
+
+    if ($_POST['_plate_template_id']) {
+
+        update_post_meta($post_id, '_plate_template_id', $_POST['_plate_template_id']);
+
+    }
+
+}
+
+
+
+
+
+/**
+
+ * 2. On product page:
+
+ * - show template (cover image)
+
+ * - show generated image
+
+ * - show textfield & regenerate the image
+
+ */
+
+
+
+// print custom data on email
+
+add_action('woocommerce_order_item_meta_end', 'lptvplate_print_metas', 3, 10);
+
+function lptvplate_print_metas($item_id, $item, $order)
+
+{
+
+
+
+    foreach ($item->get_data()['meta_data'] as $data) {
+
+        if ($data->key == '_plate_text1') {
+
+            $text1 = $data->value;
+
+            if ($text1 != '') {
+
+                echo '<br/>text1:' . $text1;
+
+            }
+
+        }
+
+        if ($data->key == '_plate_text2') {
+
+            $text2 = $data->value;
+
+            if ($text2 != '') {
+
+                echo '<br/>text2:' . $text2;
+
+            }
+
+        }
+
+        if ($data->key == '_decal_year') {
+
+            $decal_year = $data->value;
+
+            if ($decal_year != '') {
+
+                echo '<br/>decal year:' . $decal_year;
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+/**
+
+ * 3. On add to cart
+
+ * save plate content
+
+ */
+
+// Add data to cart item
+
+add_filter('woocommerce_add_cart_item_data', 'lptvplate_add_cart_item_data', 25, 2);
+
+function lptvplate_add_cart_item_data($cart_item_data, $product_id)
+
+{
+
+
+
+    $product = wc_get_product($product_id);
+
+    if ($product->get_type() != 'lptvplate') {
+
+        return $cart_item_data;
+
+    }
+
+
+
+    // Set the data for the cart item in cart object
+
+    $data = array();
+
+
+
+    foreach (['_plate_text1', '_plate_text2', '_decal_year'] as $key) {
+
+        if (isset($_POST[$key])) {
+
+            $cart_item_data['custom_data'][$key] = $data[$key] = $_POST[$key];
+
+        }
+
+    }
+
+
+
+    return $cart_item_data;
+
+}
+
+
+
+add_filter('woocommerce_cart_item_thumbnail', 'generateLPTVplateThumbnail', 20, 3);
+
+add_filter('woocommerce_order_item_thumbnail', 'gen_thumb_product_email', 20, 2);
+
+
+
+// generate thumbnail with custom size especially for email
+
+function gen_thumb_product_email($image, $cart_item)
+
+{
+
+
+
+    $product = null;
+
+    $product = wc_get_product($cart_item['product_id']);
+
+    $template_id = $product->get_meta('_plate_template_id', true);
+
+
+
+    if ($product->get_type() == 'lptvplate' && $template_id) {
+
+        $image = generateLPTVplateThumbnail($image, $cart_item);
+
+        $image = str_replace('<img ', '<img width="90px" ', $image);
+
+    }
+
+
+
+    return $image;
+
+}
+
+
+
+function generateLPTVplateThumbnail($image, $cart_item, $cart_item_key = false)
+
+{
+
+
+
+
+
+
+
+    // generate image with model and text
+
+    if (is_admin() && $cart_item_key) {
+
+        $product = $cart_item_key->get_product();
+
+        $template_id = $product->get_meta('_plate_template_id', true);
+
+
+
+        if ($product->get_type() == 'lptvplate' && $template_id) {
+
+            $text1 = '';
+
+            $text2 = '';
+
+            foreach ($cart_item_key->get_data()['meta_data'] as $data) {
+
+                if ($data->key == '_plate_text1') {
+
+                    $text1 = $data->value;
+
+                }
+
+                if ($data->key == '_plate_text2') {
+
+                    $text2 = $data->value;
+
+                }
+
+            }
+
+
+
+            $modelId = $product->get_meta('_plate_template_id', true);
+
+
+
+            if ($modelId) {
+
+                $url = '/wp-content/plugins/lptv-plates/includes/lpgenI.php?productId=' . $modelId . '&text1=' . urlencode($text1) . '&text2=' . urlencode($text2);
+
+
+
+                return '<img src="' . $url . '"/>';
+
+            }
+
+        } else {
+
+            $product = $cart_item_key->get_product();
+
+            if ($product) {
+
+                return $product->get_image('full');
+
+            }
+
+        }
+
+    } else {
+
+        $product = wc_get_product($cart_item['product_id']);
+
+    }
+
+
+
+    if ($product->get_type() == 'lptvplate') {
+
+
+
+        $template_id = $product->get_meta('_plate_template_id', true);
+
+        if ($template_id) {
+
+            $text1 = @$cart_item['custom_data']['_plate_text1'];
+
+            $text2 = @$cart_item['custom_data']['_plate_text2'];
+
+
+
+            if ($cart_item_key == false) {
+
+                $text1 = $cart_item->get_meta('_plate_text1');
+
+                $text2 = $cart_item->get_meta('_plate_text2');
+
+            }
+
+
+
+            $modelId = $product->get_meta('_plate_template_id', true);
+
+            $url = get_site_url() . "/wp-content/plugins/lptv-plates/includes/lpgenI.php?productId=$modelId&text1=$text1&text2=$text2";
+
+
+
+            return '<img src="' . $url . '"/>';
+
+        }
+
+    }
+
+
+
+    return $image;
+
+}
+
+
+
+// admin thumbnail
+
+add_filter('woocommerce_admin_order_item_thumbnail', 'generateLPTVplateThumbnail', 20, 3);
+
+
+
+// Display custom data on cart and checkout page.
+
+add_filter('woocommerce_get_item_data', 'lptvplate_get_item_data', 25, 2);
+
+function lptvplate_get_item_data($cart_data, $cart_item)
+
+{
+
+
+
+    $product = wc_get_product($cart_item['product_id']);
+
+    if ($product->get_type() != 'lptvplate') {
+
+        return $cart_data;
+
+    }
+
+
+
+    if (!empty($cart_item['custom_data'])) {
+
+
+
+        foreach ($cart_item['custom_data'] as $key => $value) {
+
+
+
+            if (str_contains($key, 'plate_')) {
+
+
+
+                $title = str_replace('plate_', '', $key);
+
+                $title = str_replace('_', '', $title);
+
+
+
+                $cart_data[] = array(
+
+                    'name' => $title,
+
+                    'display' => $value
+
+                );
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+    return $cart_data;
+
+}
+
+
+
+// save in order
+
+add_action('woocommerce_add_order_item_meta', 'lptvplate_add_order_item_meta', 10, 3);
+
+function lptvplate_add_order_item_meta($item_id, $cart_item, $cart_item_key)
+
+{
+
+    if (isset($cart_item['custom_data'])) {
+
+        $values = array();
+
+        foreach ($cart_item['custom_data'] as $key => $val) {
+
+            wc_add_order_item_meta($item_id, $key, $val);
+
+        }
+
+    }
+
+}
+
+
+
+// add meta by default to all products that has type lptvplate if we add items from admin
+
+add_action('woocommerce_new_order_item', function ($item_id, $item, $order_id) {
+
+
+
+    if (is_admin()) {
+
+        if ($item->get_product()->is_type('lptvplate')) {
+
+            $data_store = WC_Data_Store::load('order-item');
+
+            $data_store->add_metadata($item_id, "_plate_text1", " ", false);
+
+            $data_store->add_metadata($item_id, "_plate_text2", " ", false);
+
+            $data_store->add_metadata($item_id, "_decal_year", " ", false);
+
+        }
+
+
+
+        if ($item->get_product()->get_sku() == 'onrequestplate' && is_admin()) {
+
+            $data_store = WC_Data_Store::load('order-item');
+
+            $data_store->add_metadata($item_id, "_description", " ", false);
+
+        }
+
+    }
+
+}, 15, 3);
+
+
+
+/**
+
+ * Replace variable in description
+
+ */
+
+add_filter('the_content', function ($content) {
+
+
+
+    global $product;
+
+
+
+    if(! $product instanceof WC_Product) {
+
+        return $content;
+
+    }
+
+
+
+    if ($product && $product->get_type() == 'lptvplate') {
+
+        $modelId = $product->get_meta('_plate_template_id', true);
+
+        if ($modelId) {
+
+            preg_match('/([0-9]{4})/', $modelId, $matches);
+
+
+
+            if (count($matches) > 0) {
+
+                $year = $matches[0];
+
+
+
+                $content = str_replace('**year**', $year, $content);
+
+                $content = str_replace('**model**', $modelId, $content);
+
+
+
+                // remove h2 product id string from the description
+
+                $content = preg_replace('/(<h2>Product ID.*<\/h2>)/', '', $content);
+
+            }
+
+        }
+
+    }
+
+
+
+    return $content;
+
+});
+
+
+
+/**
+
+ * Update product thumbnail when field changed
+
+ */
+
+add_action('admin_footer', function () {
+
+
+
+    // insert js
+
+    global $pagenow;
+
+
+
+    if (($pagenow == 'post.php' || $pagenow == 'post-new.php') && get_post_type() == 'shop_order') {
+
+        wp_enqueue_script('admin-edit-order-lptvplate', plugin_dir_url(__FILE__) . '/js/admin_edit_order.js', [], '1.0');
+
+    }
+
+
+
+    echo '<style type="text/css">';
+
+    echo '#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td.thumb .wc-order-item-thumbnail {width: 150px}';
+
+    echo '#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td.thumb .wc-order-item-thumbnail img {height: auto}';
+
+    echo '</style>';
+
+});
+
+
+
+
+
+/**
+
+ * Attach old order id to order title
+
+ */
+
+add_action('manage_shop_order_posts_custom_column', 'lptvplate_change_order_title');
+
+function lptvplate_change_order_title($column)
+
+{
+
+    global $the_order;
+
+    global $post;
+
+
+
+    if ($column == 'order_number') {
+
+
+
+        $old_order_id = get_post_meta($post->ID, '_old_order_id', true);
+
+        if ($old_order_id) {
+
+            echo '[' . $old_order_id . '] ';
+
+        }
+
+    }
+
+}
+
+
+
+add_action('woocommerce_admin_order_data_after_order_details', function ($order) {
+
+    $old_order_id = get_post_meta($order->get_id(), '_old_order_id', true);
+
+    if ($old_order_id) {
+
+        echo '<p>Old order ID: <strong> ' . $old_order_id . '</strong></p>';
+
+    }
+
+}, 5, 1);
+
+
+
+// hook filter se_get_product_image_post and return product custom image url
+
+add_filter('se_get_product_image_post', function ($image_url, $image_id, $size) {
+
+
+
+    $log_file = __DIR__ . '/lptv-debug.log';
+
+    $log_message = sprintf(
+
+        '[%s] se_get_product_image_post filter - image_url: %s, image_id: %s, size: %s',
+
+        date('Y-m-d H:i:s'),
+
+        $image_url,
+
+        $image_id,
+
+        $size
+
+    );
+
+
+
+//    file_put_contents($log_file, $log_message . PHP_EOL, FILE_APPEND);
+
+
+
+    // check if image id contain lptv model link, use it instead
+
+    if (strpos($image_id, '/wp-content/plugins/lptv-plates/images/') !== false) {
+
+        // add website url
+
+        $image_url = get_bloginfo('url') . '/' . $image_id;
+
+    }
+
+
+
+    return $image_url;
+
+}, 10, 3);
+
+
+
+// hook rank math for og image
+
+add_filter('rank_math/opengraph/facebook/image', 'lptv_rank_math_og_image');
+
+
+
+function lptv_rank_math_og_image($image)
+
+{
+
+    if (is_product()) {
+
+        global $product;
+
+
+
+        // if this is WC_Product_LPTVplate
+
+        if ($product->get_type() == 'lptvplate') {
+
+            $image = $product->get_lptv_image_url();
+
+        }
+
+    }
+
+
+
+    return $image;
+
+}
+
+
+
+
+
+/**
+
+ * Add plate holder to cart when main product is added
+
+ */
+
+function lptv_add_plate_holder_to_cart($cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data) {
+
+
+
+    // prevent infinite loop by checking if this is already a plate holder
+
+    if (isset($cart_item_data['plate_holder_for'])) {
+
+        return;
+
+    }
+
+
+
+    error_log('lptv_add_plate_holder_to_cart');
+
+    error_log(print_r($_POST, true));
+
+
+
+    // check if plate holder was selected
+
+    if (isset($_POST['_plate_holder_id']) && !empty($_POST['_plate_holder_id'])) {
+
+        $plate_holder_id = absint($_POST['_plate_holder_id']);
+
+        
+
+        // add plate holder to cart
+
+        WC()->cart->add_to_cart(
+
+            $plate_holder_id,
+
+            1, // quantity
+
+            0, // variation_id
+
+            array(), // variation
+
+            array(
+
+                'plate_holder_for' => $product_id,
+
+                'plate_holder_for_key' => $cart_item_key
+
+            )
+
+        );
+
+    }
+
+}
+
+add_action('woocommerce_add_to_cart', 'lptv_add_plate_holder_to_cart', 10, 6);
+
+
+
+/**
+
+ * Display plate holder relationship in cart
+
+ */
+
+function lptv_cart_item_name($name, $cart_item, $cart_item_key) {
+
+    if (isset($cart_item['plate_holder_for'])) {
+
+        $product = wc_get_product($cart_item['plate_holder_for']);
+
+        if ($product) {
+
+            $name .= ' (Plate Holder for: ' . $product->get_name() . ')';
+
+        }
+
+    }
+
+    return $name;
+
+}
+
+add_filter('woocommerce_cart_item_name', 'lptv_cart_item_name', 10, 3);
+
+
+
+// include admin custom order
+
+require_once 'includes/admin-custom-order.php';
+
+
+
+/**
+ * Add ability to edit sorting field for products
+ */
+// Add the field to the General tab
+add_action('woocommerce_product_options_general_product_data', 'add_custom_sort_order_field');
+function add_custom_sort_order_field()
+{
+    woocommerce_wp_text_input(array(
+        'id'          => '_plate_products_sort_order',
+        'label'       => __('Custom Sort Order', 'txtdomain'),
+        'description' => __('Set a numerical value. Products with a value set will be sorted by this number first, then alphabetically.', 'txtdomain'),
+        'desc_tip'    => true,
+        'type'        => 'number',
+    ));
+}
+
+// Save the field value
+add_action('woocommerce_process_product_meta', 'save_custom_sort_order_field');
+function save_custom_sort_order_field($product_id)
+{
+    $product = wc_get_product($product_id);
+    $sort_order = isset($_POST['_plate_products_sort_order']) ? absint($_POST['_plate_products_sort_order']) : ''; // Use absint to ensure a positive integer
+    $product->update_meta_data('_plate_products_sort_order', $sort_order);
+    $product->save();
+}

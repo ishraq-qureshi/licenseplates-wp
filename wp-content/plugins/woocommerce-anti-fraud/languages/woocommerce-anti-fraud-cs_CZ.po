@@ -1,0 +1,2031 @@
+# Copyright (C) 2024 OPMC Australia Pty Ltd
+# This file is distributed under the GPL v3.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Anti Fraud 5.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-anti-"
+"fraud\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-12T19:53:45+05:30\n"
+"PO-Revision-Date: 2024-03-27 17:56+0530\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: woocommerce-anti-fraud\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"Language: cs\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-anti-fraud.php
+msgid "WooCommerce Anti Fraud"
+msgstr "WooCommerce proti podvodům"
+
+#. Plugin URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://woocommerce.com/products/woocommerce-anti-fraud/"
+msgstr "https://woocommerce.com/products/woocommerce-anti-fraud/"
+
+#. Description of the plugin
+#: woocommerce-anti-fraud.php
+msgid ""
+"Advanced fraud and card attack protection for WooCommerce, with risk scoring, "
+"rule-based controls, checkout protection, and tools to help merchants detect, "
+"prevent, and respond to suspicious activity."
+msgstr ""
+"Vyhodnoťte každou ze svých transakcí a zkontrolujte, zda nedošlo k podvodu, "
+"pomocí sady pokročilých pravidel hodnocení."
+
+#. Author of the plugin
+#: woocommerce-anti-fraud.php
+msgid "OPMC Australia Pty Ltd"
+msgstr "OPMC Australia Pty Ltd"
+
+#. Author URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://opmc.biz/"
+msgstr "https://opmc.biz/"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:29
+msgid "Anti Fraud - Admin Notice"
+msgstr "Anti Fraud - Upozornění správce"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:30
+msgid "Admin notification about an order."
+msgstr "Upozornění administrátora na objednávku."
+
+#: anti-fraud-core/class-wc-af-admin-email.php:50
+#: anti-fraud-core/class-wc-af-admin-email.php:51
+msgid "Fraud notification for order #{order_id}"
+msgstr "Oznámení o podvodu pro objednávku č. {order_id}"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:349
+msgid "Antifraud paypal verification"
+msgstr "Ověření paypal proti podvodům"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:354
+msgid "Check pending order fraud risk score"
+msgstr "Zkontrolujte skóre rizika podvodu čekajících objednávek"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:388
+#: anti-fraud-core/class-wc-af-score-helper.php:490
+#: anti-fraud-core/class-wc-af-score-helper.php:624
+#: anti-fraud-core/class-wc-af-score-helper.php:626
+#: anti-fraud-core/class-wc-af-score-helper.php:629
+#: anti-fraud-core/class-wc-af-score-helper.php:672
+#: anti-fraud-core/class-wc-af-score-helper.php:674
+#: anti-fraud-core/class-wc-af-score-helper.php:677
+msgid "Fraud check done."
+msgstr "Kontrola podvodu provedena."
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:19
+msgid "MaxMind Risk Score"
+msgstr "Skóre rizika MaxMind"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Hide details"
+msgstr "Skrýt detaily"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Show fraud risk details"
+msgstr "Zobrazit podrobnosti o riziku podvodu"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:19
+msgid "Fraud Risk"
+msgstr "Riziko podvodu"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:135
+msgid "This order is currently in queue for a fraud check."
+msgstr "Tato objednávka je aktuálně ve frontě na kontrolu podvodu."
+
+#: anti-fraud-core/class-wc-af-meta-box.php:136
+msgid "Cancel fraud check queue"
+msgstr "Zrušit frontu kontroly podvodů"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:141
+msgid "Calculate Fraud Risk"
+msgstr "Vypočítat riziko podvodu"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:25
+msgid "Anti Fraud - PayPal verification"
+msgstr "Anti Fraud – ověření přes PayPal"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:26
+msgid "Notice about PayPal verification."
+msgstr "Oznámení o ověření PayPal."
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:47
+msgid "PayPal Verification notification of order #{order_id}"
+msgstr "Oznámení o ověření PayPal objednávky č. {order_id}"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:28
+msgid "No fraud checking has been done on this order yet."
+msgstr "U této objednávky zatím nebyla provedena žádná kontrola podvodu."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:33
+#: anti-fraud-core/class-wc-af-settings.php:2006
+#: templates/dashboard.php:37
+#: templates/dashboard.php:210
+#: templates/dashboard.php:500
+msgid "Low Risk"
+msgstr "Nízké riziko"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:43
+#: anti-fraud-core/class-wc-af-settings.php:2007
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "Medium Risk"
+msgstr "Střední riziko"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:47
+#: anti-fraud-core/class-wc-af-settings.php:2008
+#: templates/dashboard.php:39
+#: templates/dashboard.php:500
+msgid "High Risk"
+msgstr "Vysoké riziko"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:187
+#: anti-fraud-core/class-wc-af-score-helper.php:229
+#: woocommerce-anti-fraud.php:1280
+msgid "Order fraud checks skipped due to whitelisted email."
+msgstr ""
+"Kontroly podvodů objednávek byly přeskočeny kvůli e-mailu na seznamu "
+"povolených."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:197
+#: woocommerce-anti-fraud.php:1300
+msgid "Order fraud checks skipped due to whitelisted customer IPs."
+msgstr ""
+"Kontroly podvodů objednávek byly přeskočeny kvůli IP adresám zákazníků na "
+"seznamu povolených."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:210
+#: woocommerce-anti-fraud.php:1325
+msgid "Order fraud checks skipped due to whitelisted user role."
+msgstr ""
+"Kontroly podvodů s objednávkami byly přeskočeny kvůli roli uživatele na "
+"seznamu povolených."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:220
+#: woocommerce-anti-fraud.php:1347
+msgid "Order fraud checks skipped due to whitelisted payment method."
+msgstr ""
+"Kontroly podvodů objednávek byly přeskočeny kvůli platební metodě na seznamu "
+"povolených."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:239
+msgid "Order fraud checks skipped due to user verified from Trust Swiftly."
+msgstr ""
+"Kontroly podvodů s objednávkami byly přeskočeny, protože uživatel byl ověřen "
+"společností Trust Swiftly."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:427
+msgid "User Email is Whitelisted."
+msgstr "E-mail uživatele je na seznamu povolených."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:491
+msgid "Payment method "
+msgstr "Způsob platby "
+
+#: anti-fraud-core/class-wc-af-score-helper.php:548
+msgid "Max order limit reched from same IP."
+msgstr "Maximální limit objednávky dosažen ze stejné IP."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:588
+msgid "Max Order Limit between time reached."
+msgstr "Maximální limit objednávky mezi dosaženým časem."
+
+#: anti-fraud-core/class-wc-af-settings.php:40
+#: includes/class-wc-af-privacy.php:11 woocommerce-anti-fraud.php:54
+#: woocommerce-anti-fraud.php:55
+msgid "Anti Fraud"
+msgstr "Boj proti podvodům"
+
+#: anti-fraud-core/class-wc-af-settings.php:90
+#: anti-fraud-core/class-wc-af-settings.php:1003
+#: anti-fraud-core/tamplate-admin-settings-page.php:15
+msgid "General Settings"
+msgstr "Obecné nastavení"
+
+#: anti-fraud-core/class-wc-af-settings.php:91
+msgid "Rules"
+msgstr "Pravidla"
+
+#: anti-fraud-core/class-wc-af-settings.php:92
+msgid "Blacklist Settings"
+msgstr "Nastavení černé listiny"
+
+#: anti-fraud-core/class-wc-af-settings.php:93
+msgid "Email Alerts"
+msgstr "Upozornění e-mailem"
+
+#: anti-fraud-core/class-wc-af-settings.php:94
+#: anti-fraud-core/class-wc-af-settings.php:892
+msgid "Paypal Settings"
+msgstr "Nastavení Paypal"
+
+#: anti-fraud-core/class-wc-af-settings.php:95
+msgid "MinFraud Settings"
+msgstr "Nastavení MinFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:96
+msgid "MinFraud Insights Settings"
+msgstr "Nastavení MinFraud Insights"
+
+#: anti-fraud-core/class-wc-af-settings.php:97
+msgid "MinFraud Factors Settings"
+msgstr "Nastavení faktorů MinFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:98
+#: anti-fraud-core/class-wc-af-settings.php:229
+msgid "Trust Swiftly Settings"
+msgstr "Trust Swiftly Settings"
+
+#: anti-fraud-core/class-wc-af-settings.php:99
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:100
+msgid "Need Support?"
+msgstr "Potřebujete podporu?"
+
+#: anti-fraud-core/class-wc-af-settings.php:231
+msgid ""
+"<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target="
+"\"_blank\" >Trust Swiftly</a> is a paid, external service that uses AI to "
+"verify the identity and payment of a customer. By using <a href=\"https://"
+"thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust "
+"Swiftly</a> you can decrease fraud by automatically verifying their "
+"information and later use the data to win any dispute cases. To sign up for "
+"Trust Swiftly, click this link: <a href=\"https://thrive.zohopublic.com/aref/"
+"G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trustswiftly.com</a><hr/>"
+msgstr ""
+"<a hrf=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target="
+"\"_blank\" >Trust Swiftly</a> je placená externí služba, která využívá "
+"umělou inteligenci k ověření identity a platby zákazník. Pomocí <a href="
+"\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank"
+"\" >Důvěřujte rychle</a> můžete omezit podvody automatickým ověřením jejich "
+"informací a později data použít k vyhrát všechny spory. Chcete-li se "
+"zaregistrovat do Trust Swiftly, klikněte na tento odkaz: <a href=\"https://"
+"thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank"
+"\">trustswiftly.com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:236
+msgid "Trust Swiftly Enable/Disable"
+msgstr "Důvěřovat rychle Povolit/Zakázat"
+
+#: anti-fraud-core/class-wc-af-settings.php:239
+msgid "Enable Trust Swiftly"
+msgstr "Aktivujte funkci Trust Swiftly"
+
+#: anti-fraud-core/class-wc-af-settings.php:244
+msgid "API Key"
+msgstr "Klíč API"
+
+#: anti-fraud-core/class-wc-af-settings.php:253
+msgid "Base URL"
+msgstr "Základní URL"
+
+#: anti-fraud-core/class-wc-af-settings.php:256
+msgid ""
+"Enter in your Trust Swiftly site URL i.e https://example.trustswiftly.com"
+msgstr ""
+"Zadejte adresu URL svého webu Trust Swiftly, tj. https://example."
+"trustswiftly.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:262
+msgid "Verification Method"
+msgstr "Metoda ověření"
+
+#: anti-fraud-core/class-wc-af-settings.php:273
+msgid "Verification Template"
+msgstr "Ověřovací šablona"
+
+#: anti-fraud-core/class-wc-af-settings.php:278
+msgid ""
+"Select a verification method defined such as ID and Selfie. A Verification "
+"Template should be set on Trust Swiftly."
+msgstr ""
+"Vyberte definovanou metodu ověření, jako je ID a Selfie. Ověřovací šablona "
+"by měla být nastavena na Trust Swiftly."
+
+#: anti-fraud-core/class-wc-af-settings.php:284
+msgid "When To Verify"
+msgstr "Kdy ověřit"
+
+#: anti-fraud-core/class-wc-af-settings.php:289
+msgid "Select when customers should verify their identity."
+msgstr "Vyberte, kdy mají zákazníci ověřit svou identitu."
+
+#: anti-fraud-core/class-wc-af-settings.php:295
+msgid "Select Threshold Weight"
+msgstr "Vyberte prahovou hmotnost"
+
+#: anti-fraud-core/class-wc-af-settings.php:300
+msgid ""
+"If the risk score exceed threshold value which is set here, then the "
+"customer needs to be verified with Trust Swiftly."
+msgstr ""
+"Pokud skóre rizika překročí prahovou hodnotu, která je zde nastavena, je "
+"třeba zákazníka ověřit pomocí Trust Swiftly."
+
+#: anti-fraud-core/class-wc-af-settings.php:325
+#: anti-fraud-core/class-wc-af-settings.php:446
+#: anti-fraud-core/class-wc-af-settings.php:519
+msgid "MaxMind minFraud Settings"
+msgstr "Nastavení MaxMind minFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:327
+#: anti-fraud-core/class-wc-af-settings.php:448
+#: anti-fraud-core/class-wc-af-settings.php:521
+msgid ""
+"<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind "
+"minFraud</a> is a paid, external service that uses machine learning to "
+"detect potential fraud transactions. By using <a href=\"https://maxmind.pxf."
+"io/qnvxGg\" target=\"_blank\" >minFraud</a> you can potentially detect more "
+"fraudulent transactions.<br/>To sign up to MaxMind minFraud, click this "
+"link: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://"
+"maxmind.com</a><hr/>"
+msgstr ""
+"<a href=\"htts://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind "
+"minFraud</a> je placená externí služba, která pomocí strojového učení "
+"odhaluje potenciální podvodné transakce. Pomocí <a href=\"https://maxmind."
+"pxf.io/qnvxGg\" target=\"_blank\" >minFraud</a> můžete potenciálně odhalit "
+"další podvodné transakce.<br/>Chcete-li se zaregistrovat do MaxMind "
+"minFraud, klikněte tento odkaz: <a href=\"https://maxmind.pxf.io/qnvxGg\" "
+"target=\"_blank\">https://maxmind.com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:332
+#: anti-fraud-core/class-wc-af-settings.php:452
+#: anti-fraud-core/class-wc-af-settings.php:525
+#: anti-fraud-core/class-wc-af-settings.php:898
+msgid "Enable/Disable"
+msgstr "Povolit zakázat"
+
+#: anti-fraud-core/class-wc-af-settings.php:335
+msgid "Enable MaxMind minFraud Integration"
+msgstr "Povolte integraci MaxMind minFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:340
+msgid "Device Tracking"
+msgstr "Sledování zařízení"
+
+#: anti-fraud-core/class-wc-af-settings.php:343
+msgid ""
+"Detect if a person uses the same device but changes proxies while they are "
+"placing multiple orders from your website"
+msgstr ""
+"Zjistěte, zda osoba používá stejné zařízení, ale mění proxy, když zadává "
+"více objednávek z vašeho webu"
+
+#: anti-fraud-core/class-wc-af-settings.php:349
+msgid "MaxMind Account ID"
+msgstr "ID účtu MaxMind"
+
+#: anti-fraud-core/class-wc-af-settings.php:351
+msgid ""
+"Enter your MaxMind account ID here.  If you don&apos;t have an account, "
+"please sign up at <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank"
+"\">https://maxmind.com</a>."
+msgstr ""
+"Zde zadejte ID svého účtu MaxMind. Pokud účet nemáte, zaregistrujte se na "
+"adrese <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://"
+"maxmind.com</a>."
+
+#: anti-fraud-core/class-wc-af-settings.php:356
+msgid "MaxMind License Key"
+msgstr "Licenční klíč MaxMind"
+
+#: anti-fraud-core/class-wc-af-settings.php:358
+msgid "Enter the license key provided by MaxMind here."
+msgstr "Zde zadejte licenční klíč poskytnutý společností MaxMind."
+
+#: anti-fraud-core/class-wc-af-settings.php:364
+msgid "Does IP Address Match Location?"
+msgstr "Odpovídá adresa IP umístění?"
+
+#: anti-fraud-core/class-wc-af-settings.php:369
+msgid ""
+"Enable it to identify that customer's physical location matches the location "
+"provided by IP address."
+msgstr ""
+"Povolte ji, aby bylo možné identifikovat fyzickou polohu zákazníka, která se "
+"shoduje s polohou poskytnutou IP adresou."
+
+#: anti-fraud-core/class-wc-af-settings.php:373
+#: anti-fraud-core/class-wc-af-settings.php:1398
+#: anti-fraud-core/class-wc-af-settings.php:1437
+#: anti-fraud-core/class-wc-af-settings.php:1469
+#: anti-fraud-core/class-wc-af-settings.php:1493
+#: anti-fraud-core/class-wc-af-settings.php:1515
+#: anti-fraud-core/class-wc-af-settings.php:1556
+#: anti-fraud-core/class-wc-af-settings.php:1606
+#: anti-fraud-core/class-wc-af-settings.php:1628
+#: anti-fraud-core/class-wc-af-settings.php:1675
+#: anti-fraud-core/class-wc-af-settings.php:1729
+#: anti-fraud-core/class-wc-af-settings.php:1764
+#: anti-fraud-core/class-wc-af-settings.php:1796
+msgid "Rule Weight"
+msgstr "Hmotnost pravidla"
+
+#: anti-fraud-core/class-wc-af-settings.php:392
+#: anti-fraud-core/class-wc-af-settings.php:465
+#: anti-fraud-core/class-wc-af-settings.php:538
+msgid "Threshold Settings"
+msgstr "Nastavení prahu"
+
+#: anti-fraud-core/class-wc-af-settings.php:399
+msgid "Threshold minFraud Risk Score"
+msgstr "Prahové skóre minFraud rizika"
+
+#: anti-fraud-core/class-wc-af-settings.php:401
+#: anti-fraud-core/class-wc-af-settings.php:474
+#: anti-fraud-core/class-wc-af-settings.php:547
+msgid ""
+"If the risk score returned by the minFraud system exceeds this number, the "
+"transaction will be considered potentially fraudulent and will contribute to "
+"the overall fraud score calculation.  If the risk score from minFraud is "
+"lower than this threshold, it will not contribute to the overall fraud score."
+msgstr ""
+"Pokud skóre rizika vrácené systémem minFraud překročí toto číslo, bude "
+"transakce považována za potenciálně podvodnou a přispěje k výpočtu celkového "
+"skóre podvodu. Pokud je skóre rizika z minFraud nižší než tato prahová "
+"hodnota, nepřispěje to k celkovému skóre podvodu."
+
+#: anti-fraud-core/class-wc-af-settings.php:414
+msgid "minFraud Rule Weight"
+msgstr "Hmotnost pravidla minFraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:417
+#: anti-fraud-core/class-wc-af-settings.php:490
+#: anti-fraud-core/class-wc-af-settings.php:563
+msgid ""
+"If the minFraud risk score exceeds the threshold set above, this weight will "
+"be applied to the overall risk score.  By adjusting this, you can balance "
+"the minFraud value against the other rules-based calculations in the plugin."
+msgstr ""
+"Pokud skóre rizika minFraud překročí hranici stanovenou výše, bude tato váha "
+"použita na celkové skóre rizika. Úpravou této hodnoty můžete vyvážit hodnotu "
+"minFraud proti ostatním výpočtům založeným na pravidlech v pluginu."
+
+#: anti-fraud-core/class-wc-af-settings.php:455
+msgid "Enable MaxMind minFraud Insights Integration"
+msgstr "Povolte integraci MaxMind minFraud Insights"
+
+#: anti-fraud-core/class-wc-af-settings.php:472
+msgid "Threshold minFraud Insights Risk Score"
+msgstr "Prahová hodnota skóre rizika minFraud Insights"
+
+#: anti-fraud-core/class-wc-af-settings.php:487
+msgid "minFraud Insights Rule Weight"
+msgstr "Hmotnost pravidla minFraud Insights"
+
+#: anti-fraud-core/class-wc-af-settings.php:528
+msgid "Enable MaxMind minFraud Factors Integration"
+msgstr "Povolte integraci MaxMind minFraud Factors"
+
+#: anti-fraud-core/class-wc-af-settings.php:545
+msgid "Threshold minFraud Factors Risk Score"
+msgstr "Prahové skóre minFraud Factors Risk"
+
+#: anti-fraud-core/class-wc-af-settings.php:560
+msgid "minFraud Factors Rule Weight"
+msgstr "MinFraud Factors Rule Weight"
+
+#: anti-fraud-core/class-wc-af-settings.php:592
+msgid "Support for the Anti-Fraud Plugin"
+msgstr "Podpora pro Anti-Fraud Plugin"
+
+#: anti-fraud-core/class-wc-af-settings.php:598
+msgid "Facing an Issue with the plugin?"
+msgstr "Čelíte problému s pluginem?"
+
+#: anti-fraud-core/class-wc-af-settings.php:599
+msgid "Contact Our Support"
+msgstr "Kontaktujte naši podporu"
+
+#: anti-fraud-core/class-wc-af-settings.php:601
+msgid ""
+"If you have any issues or feedback about Anti-Fraud plugin, we would love to "
+"here from you!"
+msgstr ""
+"Máte-li jakékoli problémy nebo zpětnou vazbu ohledně pluginu Anti-Fraud, "
+"rádi je zde od vás!"
+
+#: anti-fraud-core/class-wc-af-settings.php:607
+msgid "Love our Plugin?"
+msgstr "Líbí se vám náš plugin?"
+
+#: anti-fraud-core/class-wc-af-settings.php:609
+msgid "Leave Us a Review!"
+msgstr "Napište nám recenzi!"
+
+#: anti-fraud-core/class-wc-af-settings.php:611
+msgid "Your positive reviews are always encouraging!"
+msgstr "Vaše pozitivní recenze jsou vždy povzbudivé!"
+
+#: anti-fraud-core/class-wc-af-settings.php:635
+msgid "Google reCAPTCHA Settings"
+msgstr "Nastavení Google reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:637
+msgid ""
+"Click <a href=\"https://www.google.com/recaptcha/admin\" target=\"_blank"
+"\">here</a> to register.\n"
+"\t\t\t\t\t\t\t\tActivating reCAPTCHA will enable the service on your "
+"Checkout page, which is an effective means of reducing spam orders, "
+"particularly from velocity attacks ie. where spammers try multiple credit "
+"cards to test their validity.   If you continue to experience a high volume "
+"of spam orders after enabling this setting, please contact our Support team "
+"(<a href=\"mailto:support@opmc.biz\" target=\"_top\">support@opmc.biz</a>) ."
+"<hr/>"
+msgstr ""
+"\"Zaregistrujte se kliknutím <a href=\"\"https://www.google.com/recaptcha/"
+"admin\"\" target=\"\"_blank\"\">sem</a>.\n"
+" \t\t\t\t\t\t\t\t Aktivace reCAPTCHA povolí službu na vaší stránce Checkout, "
+"což je účinný prostředek ke snížení spamových objednávek, zejména z "
+"rychlostních útoků, tzn. kde spameři zkoušejí více kreditních karet, aby "
+"otestovali jejich platnost. Pokud i po povolení tohoto nastavení "
+"zaznamenáváte velký objem nevyžádaných objednávek, kontaktujte prosím náš "
+"tým podpory (<a href=\"\"mailto:support@opmc.biz\"\" target=\"\"_top"
+"\"\">support@opmc.biz</a> ).<hr/>\""
+
+#: anti-fraud-core/class-wc-af-settings.php:646
+msgid "Enable reCAPTCHA"
+msgstr "Povolit reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:650
+msgid "Enable reCAPTCHA on checkout page<br/>"
+msgstr "Povolte reCAPTCHA na stránce pokladny<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:655
+msgid "Enable v2 reCAPTCHA"
+msgstr "Povolit v2 reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:659
+msgid "Enable v2 reCAPTCHA<br/>"
+msgstr "Povolit v2 reCAPTCHA<br/"
+
+#: anti-fraud-core/class-wc-af-settings.php:665
+msgid "Enable v3 reCAPTCHA"
+msgstr "Povolit v3 reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:669
+msgid "Enable v3 reCAPTCHA<br/>"
+msgstr "Povolit v3 reCAPTCHA<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:675
+msgid "v2 Site Key"
+msgstr "v2 klíč webu"
+
+#: anti-fraud-core/class-wc-af-settings.php:678
+msgid "Enter v2 Site Key"
+msgstr "Zadejte klíč webu v2"
+
+#: anti-fraud-core/class-wc-af-settings.php:684
+msgid "v2 Secret Key"
+msgstr "v2 tajný klíč"
+
+#: anti-fraud-core/class-wc-af-settings.php:687
+msgid "Enter v2 Secret Key"
+msgstr "Zadejte tajný klíč v2"
+
+#: anti-fraud-core/class-wc-af-settings.php:693
+msgid "v3 Site Key"
+msgstr "v3 klíč webu"
+
+#: anti-fraud-core/class-wc-af-settings.php:696
+msgid "Enter v3 Site Key"
+msgstr "Zadejte klíč webu v3"
+
+#: anti-fraud-core/class-wc-af-settings.php:702
+msgid "v3 Secret Key"
+msgstr "v3 tajný klíč"
+
+#: anti-fraud-core/class-wc-af-settings.php:705
+msgid "Enter v3 Secret Key"
+msgstr "Zadejte tajný klíč v3"
+
+#: anti-fraud-core/class-wc-af-settings.php:741
+msgid "Alerts"
+msgstr "Upozornění"
+
+#: anti-fraud-core/class-wc-af-settings.php:743
+msgid "Get alerts about suspected fraudulent activities <hr/>"
+msgstr "Získejte upozornění na podezření na podvodné aktivity <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:747
+msgid "Activate Email Alerts for Admin"
+msgstr "Aktivujte e-mailová upozornění pro správce"
+
+#: anti-fraud-core/class-wc-af-settings.php:752
+msgid ""
+"Enable to receive fraud alerts on admin email address when risk-score "
+"exceeds value set in Email Notification Score."
+msgstr ""
+"Povolit příjem upozornění na podvody na e-mailovou adresu správce, když "
+"skóre rizika překročí hodnotu nastavenou ve skóre upozornění e-mailem."
+
+#: anti-fraud-core/class-wc-af-settings.php:756
+msgid "Additional Address(es) to Notify"
+msgstr "Další adresy pro oznámení"
+
+#: anti-fraud-core/class-wc-af-settings.php:759
+msgid ""
+"Add additional email address(es) you want to be notified upon exceeding Risk-"
+"score. Press “Comma”, TAB or ENTER button for the next entry."
+msgstr ""
+"Přidejte další e-mailové adresy, na které chcete být upozorněni při "
+"překročení rizikového skóre. Pro další záznam stiskněte tlačítko „Čárka“, "
+"TAB nebo ENTER."
+
+#: anti-fraud-core/class-wc-af-settings.php:766
+msgid "Email Notification Score"
+msgstr "Skóre oznámení e-mailem"
+
+#: anti-fraud-core/class-wc-af-settings.php:770
+msgid ""
+"Risk scores that meet or exceed this value will trigger email alerts to your "
+"specified email addresses."
+msgstr ""
+"Skóre rizik, které splní nebo překročí tuto hodnotu, spustí e-mailová "
+"upozornění na vámi zadané e-mailové adresy."
+
+#: anti-fraud-core/class-wc-af-settings.php:795
+msgid "Blacklist"
+msgstr "Černá listina"
+
+#: anti-fraud-core/class-wc-af-settings.php:797
+msgid ""
+"WooCommerce Anti-Fraud allows you to create a list of email addresses as "
+"well as a list of IP addresses that will always be marked as potential fraud "
+"transactions."
+msgstr ""
+"WooCommerce Anti-Fraud vám umožňuje vytvořit seznam e-mailových adres a také "
+"seznam IP adres, které budou vždy označeny jako potenciální podvodné "
+"transakce."
+
+#: anti-fraud-core/class-wc-af-settings.php:802
+msgid "Email Blacklisting"
+msgstr "Email Blacklisting"
+
+#: anti-fraud-core/class-wc-af-settings.php:812
+msgid "Email Blacklist"
+msgstr "Černá listina e-mailů"
+
+#: anti-fraud-core/class-wc-af-settings.php:817
+msgid ""
+"Enable the email blacklist function to block emails captured by WooCommerce "
+"Anti-fraud rules."
+msgstr ""
+"Povolte funkci e-mailové černé listiny pro blokování e-mailů zachycených "
+"pravidly WooCommerce Anti-fraud."
+
+#: anti-fraud-core/class-wc-af-settings.php:822
+msgid "Automatic Blacklisting"
+msgstr "Automatická černá listina"
+
+#: anti-fraud-core/class-wc-af-settings.php:827
+msgid ""
+"Add email addresses of orders reported with a high risk of fraud to "
+"blacklist automatically."
+msgstr ""
+"Přidávejte e-mailové adresy objednávek hlášených s vysokým rizikem podvodu "
+"na černou listinu automaticky."
+
+#: anti-fraud-core/class-wc-af-settings.php:832
+msgid "Blocked Email Addresses"
+msgstr "Blokované e-mailové adresy"
+
+#: anti-fraud-core/class-wc-af-settings.php:835
+msgid ""
+"The email addresses listed in the text area will be considered unsafe. You "
+"can also add or remove emails manually here. Type “,” or press TAB/ENTER "
+"button for the next entry. Please add emails in bulk separating them by "
+"either comma or space."
+msgstr ""
+"E-mailové adresy uvedené v textové oblasti budou považovány za nebezpečné. "
+"Zde můžete také ručně přidávat nebo odebírat e-maily. Zadejte „,“ nebo "
+"stiskněte tlačítko TAB/ENTER pro další položku. Přidejte e-maily hromadně a "
+"oddělte je čárkou nebo mezerou."
+
+#: anti-fraud-core/class-wc-af-settings.php:843
+msgid "IP Blacklisting"
+msgstr "IP Blacklisting"
+
+#: anti-fraud-core/class-wc-af-settings.php:853
+msgid "IP Blacklist"
+msgstr "IP blacklistu"
+
+#: anti-fraud-core/class-wc-af-settings.php:857
+msgid "Enable the IP blacklist function"
+msgstr "Povolte funkci IP blacklistu"
+
+#: anti-fraud-core/class-wc-af-settings.php:858
+msgid ""
+"Enable the IP blacklist function to block IP addresses with high risk of "
+"frauds."
+msgstr ""
+"Aktivujte funkci IP blacklist pro blokování IP adres s vysokým rizikem "
+"podvodů."
+
+#: anti-fraud-core/class-wc-af-settings.php:863
+msgid "Blocked IP Addresses"
+msgstr "Blokované IP adresy"
+
+#: anti-fraud-core/class-wc-af-settings.php:866
+msgid ""
+"The IP addresses listed in the text area will be considered unsafe.  You can "
+"also add or remove IP addresses manually here. Type “,” or press TAB/ENTER "
+"button for the next entry. Please add IPs in bulk separating them by either "
+"comma or space."
+msgstr ""
+"IP adresy uvedené v textové oblasti budou považovány za nebezpečné. Zde "
+"můžete také ručně přidat nebo odebrat adresy IP. Zadejte „,“ nebo stiskněte "
+"tlačítko TAB/ENTER pro další položku. Přidejte adresy IP hromadně a oddělte "
+"je čárkou nebo mezerou."
+
+#: anti-fraud-core/class-wc-af-settings.php:894
+msgid ""
+"These settings are specific to Paypal Payment Gateway. This means, when the "
+"customer use their Paypal account for making payment for their orders, then "
+"these rules come into action.<hr/>"
+msgstr ""
+"Tato nastavení jsou specifická pro Paypal Payment Gateway. To znamená, že "
+"když zákazník použije svůj Paypal účet k platbě za své objednávky, vstoupí v "
+"platnost tato pravidla.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:902
+msgid "Select to enable Paypal verification"
+msgstr "Vyberte pro povolení ověření Paypal"
+
+#: anti-fraud-core/class-wc-af-settings.php:907
+msgid "Block Downloads"
+msgstr "Blokovat stahování"
+
+#: anti-fraud-core/class-wc-af-settings.php:911
+msgid "Prevent digital downloads if verification failed or still processing"
+msgstr ""
+"Zabraňte digitálnímu stahování, pokud ověření selhalo nebo se stále "
+"zpracovává"
+
+#: anti-fraud-core/class-wc-af-settings.php:916
+msgid "Verification Retry"
+msgstr "Opakovat ověření"
+
+#: anti-fraud-core/class-wc-af-settings.php:918
+msgid ""
+"Number of days that have to pass before sending another email if the order "
+"is still waiting for verification"
+msgstr ""
+"Počet dní, které musí uplynout před odesláním dalšího e-mailu, pokud "
+"objednávka stále čeká na ověření"
+
+#: anti-fraud-core/class-wc-af-settings.php:929
+msgid "Auto Cancellation Days"
+msgstr "Dny automatického zrušení"
+
+#: anti-fraud-core/class-wc-af-settings.php:931
+msgid ""
+"Orders that are not verified within the given number of days will be "
+"automatically cancelled"
+msgstr ""
+"Objednávky, které nebudou ověřeny do daného počtu dnů, budou automaticky "
+"stornovány"
+
+#: anti-fraud-core/class-wc-af-settings.php:942
+msgid "Paypal verified addresses"
+msgstr "Paypal ověřené adresy"
+
+#: anti-fraud-core/class-wc-af-settings.php:944
+msgid "Verified email addresses"
+msgstr "Ověřené e-mailové adresy"
+
+#: anti-fraud-core/class-wc-af-settings.php:954
+msgid "Email Template"
+msgstr "Šablona e-mailu"
+
+#: anti-fraud-core/class-wc-af-settings.php:956
+msgid ""
+"Configure the email template below. The following tags can be embedded in "
+"the template fields:<br/><br/><b>{site_title}</b> - replaced with the "
+"Wordpress Site Title<br/><b>{site_email}</b> - replaced with the Wordpress "
+"site admin email address"
+msgstr ""
+"Níže nakonfigurujte šablonu e-mailu. Do polí šablony lze vložit následující "
+"značky:<br/><br/><b>{site_title}</b> – nahrazeno názvem webu ve "
+"Wordpressu<br/><b>{ site_email}</b> - nahrazeno e-mailovou adresou správce "
+"webu Wordpress"
+
+#: anti-fraud-core/class-wc-af-settings.php:962
+msgid "Email Type"
+msgstr "Typ e-mailu"
+
+#: anti-fraud-core/class-wc-af-settings.php:968
+msgid "Emails can be sent either as plain text or HTML"
+msgstr "E-maily lze odesílat jako prostý text nebo HTML"
+
+#: anti-fraud-core/class-wc-af-settings.php:976
+msgid "The subject of the email that will be sent to the purchaser"
+msgstr "Předmět e-mailu, který bude zaslán kupujícímu"
+
+#: anti-fraud-core/class-wc-af-settings.php:979
+msgid "[{site_title}] Confirm your PayPal email address"
+msgstr "[{site _title}] Potvrďte svou e-mailovou adresu PayPal"
+
+#: anti-fraud-core/class-wc-af-settings.php:983
+msgid "Email body"
+msgstr "Tělo e-mailu"
+
+#: anti-fraud-core/class-wc-af-settings.php:985
+msgid ""
+"Enter the body of the email to be sent to the purchaser in the text area "
+"below:"
+msgstr ""
+"Do textového pole níže zadejte tělo e-mailu, který má být zaslán kupujícímu:"
+
+#: anti-fraud-core/class-wc-af-settings.php:988
+msgid ""
+"Hi!We have received your order on {site_title}, but to complete we have to "
+"verify your PayPal email address.If you havent made or authorized any "
+"purchase, please, contact PayPal support service immediately,and email us to "
+"{site_email} for having your money back."
+msgstr ""
+"Dobrý den! Obdrželi jsme vaši objednávku na {site _title}, ale abychom mohli "
+"dokončit, musíme ověřit vaši e-mailovou adresu PayPal. Pokud jste neprovedli "
+"ani neschválili žádný nákup, okamžitě kontaktujte službu podpory PayPal a "
+"pošlete nám e-mail na adresu {site_email}. vaše peníze zpět."
+
+#: anti-fraud-core/class-wc-af-settings.php:1005
+msgid ""
+"General behaviours of the Anti Fraud plugin are configured on this page.<hr/>"
+msgstr "Obecné chování pluginu Anti Fraud se konfiguruje na této stránce.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1011
+msgid "Set Risk Thresholds"
+msgstr "Nastavte prahové hodnoty rizika"
+
+#: anti-fraud-core/class-wc-af-settings.php:1013
+msgid ""
+"There are three risk thresholds.  Low, Medium and High.   In this section "
+"you can define where the boundary point between those thresholds.   The "
+"maximum risk score is 100, the minimum is 0.<br/>"
+msgstr ""
+"Existují tři rizikové prahy. Nízká, Střední a Vysoká. V této sekci můžete "
+"definovat, kde je hraniční bod mezi těmito prahy. Maximální skóre rizika je "
+"100, minimum je 0.<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1014
+msgid ""
+"There are three risk thresholds: Low, Medium and High. In this section, you "
+"can define where the boundary point between those thresholds. The maximum "
+"risk score is 100, the minimum is 0. Orders are considered Low, Medium, and "
+"High Risk Orders based on these values."
+msgstr ""
+"Existují tři rizikové prahy: nízké, střední a vysoké. V této části můžete "
+"definovat, kde je hraniční bod mezi těmito prahy. Maximální skóre rizika je "
+"100, minimum je 0. Na základě těchto hodnot jsou příkazy považovány za "
+"příkazy s nízkým, středním a vysokým rizikem."
+
+#: anti-fraud-core/class-wc-af-settings.php:1020
+msgid "Medium Risk threshold"
+msgstr "Střední práh rizika"
+
+#: anti-fraud-core/class-wc-af-settings.php:1025
+msgid ""
+"The threshold between Low and Medium Risk Score. Move the left handle on "
+"slider or update the value in text field to set the boundary between Low and "
+"Medium-Risk orders. Risk Score less than this value is Low-Risk order and a "
+"greater value is the starting point of Medium Risk Orders."
+msgstr ""
+"Hranice mezi nízkým a středním rizikovým skóre. Posuňte levou rukojeť na "
+"posuvníku nebo aktualizujte hodnotu v textovém poli a nastavte hranici mezi "
+"příkazy s nízkým a středním rizikem. Skóre rizika nižší než tato hodnota je "
+"příkaz s nízkým rizikem a vyšší hodnota je výchozím bodem příkazů se "
+"středním rizikem."
+
+#: anti-fraud-core/class-wc-af-settings.php:1034
+msgid "High Risk threshold"
+msgstr "Vysoký práh rizika"
+
+#: anti-fraud-core/class-wc-af-settings.php:1037
+msgid ""
+"This is a threshold between Medium and High-Risk Score. Slide the right "
+"handle on slider or update the value in text field to set the boundary "
+"between Medium and High-Risk orders. Risk Score less than this value is the "
+"end point of Medium-Risk order and a greater value is High-Risk order."
+msgstr ""
+"Toto je práh mezi skóre středního a vysokého rizika. Posunutím pravé "
+"rukojeti na posuvníku nebo aktualizací hodnoty v textovém poli nastavte "
+"hranici mezi středně a vysoce rizikovými objednávkami. Skóre rizika nižší "
+"než tato hodnota je koncovým bodem objednávky se středním rizikem a vyšší "
+"hodnota je objednávka s vysokým rizikem."
+
+#: anti-fraud-core/class-wc-af-settings.php:1048
+msgid "Enable debug logging"
+msgstr "Povolit protokolování ladění"
+
+#: anti-fraud-core/class-wc-af-settings.php:1060
+msgid "Pre-Purchase Assessment"
+msgstr "Posouzení před nákupem"
+
+#: anti-fraud-core/class-wc-af-settings.php:1063
+msgid ""
+"Evaluate customers before making the actual payment.  If the fraud score "
+"reaches a high-risk order range before making payment, the customer order "
+"will be denied in advance, and a custom message appears on the checkout page "
+"explaining buyer the reason for denial."
+msgstr ""
+"Vyhodnoťte zákazníky před provedením skutečné platby. Pokud skóre podvodu "
+"před provedením platby dosáhne vysoce rizikového rozsahu objednávky, "
+"zákaznická objednávka bude předem zamítnuta a na stránce pokladny se objeví "
+"vlastní zpráva vysvětlující kupujícímu důvod zamítnutí."
+
+#: anti-fraud-core/class-wc-af-settings.php:1069
+msgid "Pre-Payment Checking"
+msgstr "Předplatební kontrola"
+
+#: anti-fraud-core/class-wc-af-settings.php:1074
+msgid ""
+"Enable pre-payment checking to assess fraud before making payment and block "
+"buyers with high fraud risk from placing any order and notify them via alert "
+"message."
+msgstr ""
+"Povolte kontrolu před platbou k posouzení podvodu před provedením platby a "
+"zablokujte kupující s vysokým rizikem podvodu v zadávání jakékoli objednávky "
+"a informujte je prostřednictvím výstražné zprávy."
+
+#: anti-fraud-core/class-wc-af-settings.php:1079
+msgid "Notification message for Blocked users"
+msgstr "Upozornění pro blokované uživatele"
+
+#: anti-fraud-core/class-wc-af-settings.php:1083
+#: woocommerce-anti-fraud.php:1362
+msgid ""
+"Website Administrator does not allow you to place this order. Please contact "
+"our support team. Sorry for any inconvenience."
+msgstr ""
+"Administrátor webu vám neumožňuje zadat tuto objednávku. Kontaktujte prosím "
+"náš tým podpory. Omlouváme se za případné nepříjemnosti."
+
+#: anti-fraud-core/class-wc-af-settings.php:1085
+msgid ""
+"Adds a custom alert message for blocked users on Pre-Payment Check. This "
+"message will be shown to the user on the checkout page while they attempt to "
+"pay."
+msgstr ""
+"Přidává vlastní výstražnou zprávu pro zablokované uživatele na kontrolu "
+"platby předem. Tato zpráva se uživateli zobrazí na stránce pokladny, když se "
+"pokusí zaplatit."
+
+#: anti-fraud-core/class-wc-af-settings.php:1095
+msgid "Change Order Status based on Risk Score"
+msgstr "Změňte stav objednávky na základě rizikového skóre"
+
+#: anti-fraud-core/class-wc-af-settings.php:1098
+msgid ""
+"Updates order status to cancel and/or on-hold when order passes a certain "
+"Risk Score threshold."
+msgstr ""
+"Aktualizuje stav objednávky, aby byla zrušena a/nebo pozastavena, když "
+"objednávka překročí určitou hranici rizikového skóre."
+
+#: anti-fraud-core/class-wc-af-settings.php:1104
+msgid "Update Order Status based on Fraud Score"
+msgstr "Aktualizujte stav objednávky na základě skóre podvodu"
+
+#: anti-fraud-core/class-wc-af-settings.php:1109
+msgid "Enable to cancel and/or put orders on hold based on Risk Score."
+msgstr "Umožňuje zrušit a/nebo pozastavit příkazy na základě skóre rizika."
+
+#: anti-fraud-core/class-wc-af-settings.php:1113
+msgid "Weighting to Cancel Order"
+msgstr "Vážení pro zrušení objednávky"
+
+#: anti-fraud-core/class-wc-af-settings.php:1118
+msgid ""
+"Orders with a score equal to or greater than this value will be "
+"automatically cancelled. <br/> To disable it, slide the slider to the "
+"extreme left or Select 0."
+msgstr ""
+"Objednávky se skóre rovným nebo vyšším než tato hodnota budou automaticky "
+"zrušeny. < br/> Chcete-li ji deaktivovat, posuňte posuvník úplně doleva nebo "
+"vyberte 0."
+
+#: anti-fraud-core/class-wc-af-settings.php:1124
+msgid "Weighting to put Order On-hold"
+msgstr "Váha pro pozastavení objednávky"
+
+#: anti-fraud-core/class-wc-af-settings.php:1128
+msgid ""
+"Orders with a score equal to or greater than this number will be "
+"automatically set on hold. <br/> To disable it, slide the slider to the "
+"extreme left or Select 0."
+msgstr ""
+"Objednávky se skóre rovným nebo vyšším než toto číslo budou automaticky "
+"pozastaveny. < br/> Chcete-li ji deaktivovat, posuňte posuvník úplně doleva "
+"nebo vyberte 0."
+
+#: anti-fraud-core/class-wc-af-settings.php:1139
+msgid "Whitelist Payment Methods"
+msgstr "Seznam povolených platebních metod"
+
+#: anti-fraud-core/class-wc-af-settings.php:1142
+msgid ""
+"Payments made via the whitelisted payment methods will bypass anti-fraud’s "
+"rule to change order status based on risk score."
+msgstr ""
+"Platby provedené prostřednictvím platebních metod na seznamu povolených "
+"budou obcházet pravidlo boje proti podvodům pro změnu stavu objednávky na "
+"základě skóre rizika."
+
+#: anti-fraud-core/class-wc-af-settings.php:1148
+msgid "Enable Whitelisting of Payment Methods"
+msgstr "Povolit přidávání platebních metod na seznam povolených"
+
+#: anti-fraud-core/class-wc-af-settings.php:1152
+msgid "Enable to add payment methods to the whitelist."
+msgstr "Povolením přidáte platební metody na seznam povolených."
+
+#: anti-fraud-core/class-wc-af-settings.php:1157
+msgid "Select Payment Methods to be Whitelisted"
+msgstr "Vyberte platební metody, které chcete přidat na seznam povolených"
+
+#: anti-fraud-core/class-wc-af-settings.php:1161
+msgid ""
+"Press “Ctrl” or “Command” key and click multiple payment methods to "
+"whitelist and scroll down to select more payment methods"
+msgstr ""
+"Stiskněte klávesu „Ctrl“ nebo „Command“ a kliknutím na více platebních metod "
+"přidejte seznam povolených a přejděte dolů a vyberte další platební metody"
+
+#: anti-fraud-core/class-wc-af-settings.php:1171
+msgid "User Roles Whitelisting"
+msgstr "Seznam povolených rolí uživatelů"
+
+#: anti-fraud-core/class-wc-af-settings.php:1174
+msgid ""
+"Filter accounts with different user roles to bypass Anti-fraud scoring "
+"system."
+msgstr ""
+"Filtrujte účty s různými uživatelskými rolemi, abyste obešli systém "
+"hodnocení proti podvodům."
+
+#: anti-fraud-core/class-wc-af-settings.php:1180
+msgid "Enable Whitelisting of User Roles"
+msgstr "Povolit přidávání uživatelských rolí na seznam povolených"
+
+#: anti-fraud-core/class-wc-af-settings.php:1184
+msgid "Enable it to activate whitelisting of User Roles."
+msgstr ""
+"Povolením aktivujete přidávání uživatelských rolí na seznam povolených."
+
+#: anti-fraud-core/class-wc-af-settings.php:1189
+msgid "Select User Roles to be Whitelisted"
+msgstr "Vyberte uživatelské role, které chcete přidat na seznam povolených"
+
+#: anti-fraud-core/class-wc-af-settings.php:1193
+msgid ""
+"Press “Ctrl” or “Command” key and click one or multiple user roles to "
+"whitelist. Scroll up/down to select and see more user roles if any."
+msgstr ""
+"Stiskněte klávesu „Ctrl“ nebo „Command“ a kliknutím na jednu nebo více "
+"uživatelských rolí přidejte seznam povolených. Posouváním nahoru/dolů "
+"vyberte a zobrazte další uživatelské role, pokud existují."
+
+#: anti-fraud-core/class-wc-af-settings.php:1195
+msgid "Select roles"
+msgstr "Vyberte role"
+
+#: anti-fraud-core/class-wc-af-settings.php:1204
+msgid "Whitelisted Emails"
+msgstr "E-maily na seznamu povolených"
+
+#: anti-fraud-core/class-wc-af-settings.php:1207
+msgid ""
+"List of Emails whitelitsted. Add emails manullay to make whitlist. Unblocked "
+"emails also added to this list."
+msgstr ""
+"Seznam e-mailů označených jako povolený. Přidejte manullay e-mailů a "
+"vytvořte seznam povolených. Do tohoto seznamu byly přidány také odblokované "
+"e-maily."
+
+#: anti-fraud-core/class-wc-af-settings.php:1213
+msgid "Email Whitelist"
+msgstr "Seznam povolených e-mailů"
+
+#: anti-fraud-core/class-wc-af-settings.php:1216
+msgid ""
+"Enter any email you want to be whitelisted. Press “Tab” or “Comma” after "
+"entering any new email. Please add emails in bulk separating them by either "
+"comma or space."
+msgstr ""
+"Zadejte jakýkoli e-mail, který chcete přidat na bílou listinu. Po zadání "
+"jakéhokoli nového e-mailu stiskněte „Tab“ nebo „Čárka“. Přidejte e-maily "
+"hromadně a oddělte je čárkou nebo mezerou."
+
+#: anti-fraud-core/class-wc-af-settings.php:1230
+msgid "Whitelisted IPs"
+msgstr "IP adresy na seznamu povolených"
+
+#: anti-fraud-core/class-wc-af-settings.php:1233
+msgid ""
+"List of IPs whitelitsted. Add IPs manullay to make whitlist. Unblocked IPs "
+"also added to this list."
+msgstr ""
+"Seznam povolených IP adres. Přidejte manullay IPs a vytvořte seznam "
+"povolených. Do tohoto seznamu byly přidány také odblokované adresy IP."
+
+#: anti-fraud-core/class-wc-af-settings.php:1239
+msgid "IPs Whitelist"
+msgstr "Seznam povolených IP adres"
+
+#: anti-fraud-core/class-wc-af-settings.php:1242
+msgid ""
+"Enter any IPs you want to be whitelisted. Press “Tab” or “Comma” after "
+"entering any new IPs. Please add emails in bulk separating them by either "
+"comma or space."
+msgstr ""
+"Zadejte všechny IP adresy, které chcete přidat na bílou listinu. Po zadání "
+"nových IP adres stiskněte „Tab“ nebo „Čárka“. Přidejte e-maily hromadně a "
+"oddělte je čárkou nebo mezerou."
+
+#: anti-fraud-core/class-wc-af-settings.php:1257
+msgid "Auto Fraud Check For Existing Orders"
+msgstr "Automatická kontrola podvodů na existující objednávky"
+
+#: anti-fraud-core/class-wc-af-settings.php:1260
+msgid ""
+"In this section, customers can enable this setting to check fraud for a "
+"previous order, when the Anti Fraud plugin is not installed and an order was "
+"placed within 7 days old."
+msgstr ""
+"V této sekci mohou zákazníci povolit toto nastavení pro kontrolu podvodu u "
+"předchozí objednávky, když není nainstalován plugin Anti Fraud a objednávka "
+"byla zadána do 7 dnů staré."
+
+#: anti-fraud-core/class-wc-af-settings.php:1266
+msgid "Enable Auto Fraud Check"
+msgstr "Povolit automatickou kontrolu podvodů"
+
+#: anti-fraud-core/class-wc-af-settings.php:1270
+msgid ""
+"Enable it to check fraud for a previous order, that orders, when the "
+"Antifraud plugin was not installed."
+msgstr ""
+"Povolte jej pro kontrolu podvodu u předchozí objednávky, která byla "
+"objednána, když nebyl nainstalován plugin Antifraud."
+
+#: anti-fraud-core/class-wc-af-settings.php:1276
+msgid "No Of Days For Historical Orders Checks"
+msgstr "Počet dní pro historické kontroly objednávek"
+
+#: anti-fraud-core/class-wc-af-settings.php:1279
+msgid ""
+"The Merchant can enter the number of days for historical orders check. The "
+"default number of days is 7 days."
+msgstr ""
+"Obchodník může zadat počet dní pro kontrolu historických objednávek. Výchozí "
+"počet dní je 7 dní."
+
+#: anti-fraud-core/class-wc-af-settings.php:1298
+msgid "Enable Debug Logging"
+msgstr "Povolit protokolování ladění"
+
+#: anti-fraud-core/class-wc-af-settings.php:1301
+msgid ""
+"In this section, customers can enable this setting to create log file and it "
+"can seen from WooCommerce >> Status >> Log."
+msgstr ""
+"V této sekci mohou zákazníci povolit toto nastavení pro vytvoření souboru "
+"protokolu a lze jej vidět z WooCommerce >> Stav >> Log."
+
+#: anti-fraud-core/class-wc-af-settings.php:1307
+msgid "Enable Debug Log"
+msgstr "Povolit protokol ladění"
+
+#: anti-fraud-core/class-wc-af-settings.php:1311
+msgid "Enable it to record the debugging data."
+msgstr "Povolte jej, chcete-li zaznamenávat data ladění."
+
+#: anti-fraud-core/class-wc-af-settings.php:1350
+#: anti-fraud-core/tamplate-admin-settings-page.php:401
+msgid "General Rules"
+msgstr "Hlavní pravidla"
+
+#: anti-fraud-core/class-wc-af-settings.php:1352
+msgid ""
+"Each rule that is matched will add the configured &quot;Rule Weight&quot; "
+"value to the overall fraud score.  In this section you can configure general "
+"fraud detection rules.<hr/>"
+msgstr ""
+"Každé pravidlo, které se shoduje, přidá nakonfigurovanou &quot ;Hmotnost "
+"pravidla&quot; hodnotu k celkovému skóre podvodu. V této sekci můžete "
+"nakonfigurovat obecná pravidla pro detekci podvodů.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1357
+msgid "First Time Purchase Rules"
+msgstr "Pravidla pro první nákup"
+
+#: anti-fraud-core/class-wc-af-settings.php:1359
+#: anti-fraud-core/class-wc-af-settings.php:1360
+msgid ""
+"Rule set for Buyers who are purchasing from your website for the first time."
+msgstr "Nastavení pravidel pro kupující, kteří nakupují na vašem webu poprvé."
+
+#: anti-fraud-core/class-wc-af-settings.php:1367
+msgid "First Purchase on Website"
+msgstr "První nákup na webu"
+
+#: anti-fraud-core/class-wc-af-settings.php:1372
+msgid ""
+"Enable it to identify customers purchasing from your website for the first "
+"time."
+msgstr ""
+"Umožněte mu identifikovat zákazníky, kteří nakupují na vašem webu poprvé."
+
+#: anti-fraud-core/class-wc-af-settings.php:1376
+msgid "First Purchase Rule Weight"
+msgstr "Hmotnost pravidla prvního nákupu"
+
+#: anti-fraud-core/class-wc-af-settings.php:1389
+msgid "Re-Check First Orders in Processing State?"
+msgstr "Znovu zkontrolovat první objednávky ve stavu zpracování?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1394
+msgid ""
+"Enable it to perform first-order re-check on orders in processing state."
+msgstr ""
+"Umožněte mu provést opětovnou kontrolu první objednávky u objednávek ve "
+"stavu zpracování."
+
+#: anti-fraud-core/class-wc-af-settings.php:1417
+msgid "IP, Billing and Shipping Address-based Rules"
+msgstr "Pravidla založená na IP, fakturační a dodací adrese"
+
+#: anti-fraud-core/class-wc-af-settings.php:1420
+msgid ""
+"Rules set for identifying fraudulent orders triggering risks based on IP, "
+"billing and shipping addresses."
+msgstr ""
+"Pravidla nastavená pro identifikaci podvodných objednávek spouštějících "
+"rizika na základě IP, fakturační a dodací adresy."
+
+#: anti-fraud-core/class-wc-af-settings.php:1428
+msgid "Does Geo Location Match?"
+msgstr "Shoduje se geografická poloha?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1433
+msgid ""
+"Enable it to identify that customer's shipping/billing state matches the "
+"state provided by Geo Location."
+msgstr ""
+"Povolte jej, aby identifikoval stav dodání/fakturace daného zákazníka, který "
+"odpovídá stavu poskytnutému geografickou polohou."
+
+#: anti-fraud-core/class-wc-af-settings.php:1451
+msgid "API Key for bigdatacloud.com"
+msgstr "Klíč API pro bigdatacloud.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1453
+msgid ""
+"Don't have bigdatacloud.com account? <a href=\"https://www.bigdatacloud.com/"
+"\" target=\"_blank\">Signup here</a><br/>Get 50K requests per month for "
+"free. Upgrade for more."
+msgstr ""
+"Nemáte účet na bigdatacloud.com? <a href=\"https://www.bigdatacloud.com/\" "
+"target=\"_blank\">Zaregistrujte se zde</a><br/>Získejte 50 000 žádostí "
+"měsíčně zdarma. Upgradujte pro více."
+
+#: anti-fraud-core/class-wc-af-settings.php:1454
+msgid ""
+"You can use bigdatacloud.com to get accurate address via customer Lat and "
+"Long and its required to use geo location rule."
+msgstr ""
+"Můžete použít bigdatacloud.com k získání přesné adresy prostřednictvím "
+"zákazníka Lat and Long a jeho požadavek na použití pravidla geografické "
+"polohy."
+
+#: anti-fraud-core/class-wc-af-settings.php:1460
+msgid "Are Billing and Shipping Addresses Same?"
+msgstr "Jsou fakturační a dodací adresy stejné?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1465
+msgid "Enable to identify difference between billing and shipping addresses."
+msgstr "Povolit identifikaci rozdílu mezi fakturační a dodací adresou."
+
+#: anti-fraud-core/class-wc-af-settings.php:1482
+msgid "Enable Phone Number and Billing Country Check"
+msgstr "Povolit kontrolu telefonního čísla a země fakturace"
+
+#: anti-fraud-core/class-wc-af-settings.php:1487
+msgid ""
+"If you enable this rule, then it is highly recommended that you use a "
+"separate Phone Number Validation plugin to make sure your customers specify "
+"a correct international phone number format on the checkout page. Else, this "
+"rule will treat an invalid phone number as a risk."
+msgstr ""
+"Pokud toto pravidlo povolíte, důrazně doporučujeme použít samostatný plugin "
+"pro ověření telefonního čísla, abyste se ujistili, že vaši zákazníci zadají "
+"na stránce pokladny správný formát mezinárodního telefonního čísla. V "
+"opačném případě bude toto pravidlo považovat neplatné telefonní číslo za "
+"riziko."
+
+#: anti-fraud-core/class-wc-af-settings.php:1496
+msgid "Weight of the single rule in the total calculation of risk."
+msgstr "Váha jediného pravidla v celkovém výpočtu rizika."
+
+#: anti-fraud-core/class-wc-af-settings.php:1506
+msgid "Is Customer behind Proxy or VPN?"
+msgstr "Stojí zákazník za proxy nebo VPN?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1511
+msgid "Check if the customer is behind either a proxy or a VPN"
+msgstr "Zkontrolujte, zda zákazník není za proxy nebo VPN"
+
+#: anti-fraud-core/class-wc-af-settings.php:1534
+msgid "Multiple Orders Attempts using Different Addresses from Same IP"
+msgstr "Pokusy o více objednávek pomocí různých adres ze stejné IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:1537
+msgid ""
+"Rule to check buyer is ordering products using different addresses from the "
+"same IP over a certain period from your store."
+msgstr ""
+"Pravidlo pro kontrolu kupujícího objednává produkty pomocí různých adres ze "
+"stejné IP po určitou dobu z vašeho obchodu."
+
+#: anti-fraud-core/class-wc-af-settings.php:1543
+msgid ""
+"Purchased from same IP but Different Customer Addresses?\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"Zakoupeno ze stejné IP, ale různých adres zákazníka?\n"
+"\t\t\t\t\t\t\t"
+
+#: anti-fraud-core/class-wc-af-settings.php:1552
+msgid ""
+"Enable this rule to monitor if multiple orders with different billing or "
+"shipping addresses have originated from the same IP address. Make sure to "
+"set time span of checking."
+msgstr ""
+"Aktivujte toto pravidlo, chcete-li sledovat, zda více objednávek s různými "
+"fakturačními nebo dodacími adresami pochází ze stejné IP adresy. Ujistěte "
+"se, že jste nastavili časové rozpětí kontroly."
+
+#: anti-fraud-core/class-wc-af-settings.php:1569
+msgid "Past Number of Days to Check "
+msgstr "Poslední počet dní ke kontrole "
+
+#: anti-fraud-core/class-wc-af-settings.php:1572
+msgid ""
+"The number of days in the past to check IP addresses and different physical "
+"addresses."
+msgstr "Počet dní v minulosti ke kontrole IP adres a různých fyzických adres."
+
+#: anti-fraud-core/class-wc-af-settings.php:1588
+msgid "Origin Countries"
+msgstr "Země původu"
+
+#: anti-fraud-core/class-wc-af-settings.php:1591
+msgid ""
+"International orders tend to have a higher fraud risk than orders that "
+"originate in your home country. Merchants often find that certain origin "
+"countries have a higher potential for fraud. These Rule sets help manage "
+"such risks."
+msgstr ""
+"Mezinárodní objednávky mívají vyšší riziko podvodu než objednávky "
+"pocházející z vaší domovské země. Obchodníci často zjišťují, že určité země "
+"původu mají vyšší potenciál pro podvody. Tyto sady pravidel pomáhají tato "
+"rizika zvládat."
+
+#: anti-fraud-core/class-wc-af-settings.php:1597
+msgid "Is it International Order?"
+msgstr "Je to mezinárodní řád?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1602
+msgid ""
+"Enable to check if the order originates from outside of your store's home "
+"country."
+msgstr ""
+"Povolte, abyste zkontrolovali, zda objednávka pochází mimo domovskou zemi "
+"vašeho obchodu."
+
+#: anti-fraud-core/class-wc-af-settings.php:1619
+msgid "Is Order from High-Risk Country?"
+msgstr "Je objednávka z vysoce rizikové země?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1624
+msgid ""
+"Enable it to check if orders originate from unsafe countries. Select unsafe "
+"countries from the list below."
+msgstr ""
+"Povolte jej, abyste zkontrolovali, zda objednávky pocházejí z nebezpečných "
+"zemí. Ze seznamu níže vyberte nebezpečné země."
+
+#: anti-fraud-core/class-wc-af-settings.php:1641
+msgid "Mark Unsafe Countries"
+msgstr "Označte nebezpečné země"
+
+#: anti-fraud-core/class-wc-af-settings.php:1644
+msgid ""
+"Press Ctrl or ⌘ key and select multiple countries that you think are unsafe "
+"for your area of service."
+msgstr ""
+"Stiskněte klávesu Ctrl nebo ⌘ a vyberte několik zemí, o kterých si myslíte, "
+"že nejsou pro vaši oblast služby bezpečné."
+
+#: anti-fraud-core/class-wc-af-settings.php:1657
+msgid "High-Risk Email Domains"
+msgstr "Vysoce rizikové e-mailové domény"
+
+#: anti-fraud-core/class-wc-af-settings.php:1660
+msgid ""
+"Merchants often find that certain email domains have a higher potential for "
+"fraud. These Rule sets will help you manage High-Risk Email Domains.<br/"
+">Identify High-Risk Domains by manually adding such email domains to High-"
+"Risk Domain section and/or using QuickEmailVerification.com API key to make "
+"this operation automatic."
+msgstr ""
+"Obchodníci často zjišťují, že určité e-mailové domény mají vyšší potenciál "
+"pro podvody. Tyto sady pravidel vám pomohou spravovat vysoce rizikové e-"
+"mailové domény.<br/>Identifikujte vysoce rizikové domény ručním přidáním "
+"takových e-mailových domén do sekce Vysoce rizikové domény a/nebo pomocí "
+"klíče API QuickEmailVerification.com, aby byla tato operace automatická."
+
+#: anti-fraud-core/class-wc-af-settings.php:1666
+msgid "Is Suspicious / High-Risk Email Domain?"
+msgstr "Je podezřelá / vysoce riziková e-mailová doména?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1671
+msgid ""
+"Enable it to check if customer's email address originates from any high-risk "
+"domain listed below and/or add API for “quickemailverification. com” for "
+"automatic checking"
+msgstr ""
+"Povolte jej, abyste zkontrolovali, zda e-mailová adresa zákazníka pochází z "
+"nějaké vysoce rizikové domény uvedené níže, a/nebo přidejte API pro "
+"„quickemailverification. com“ pro automatickou kontrolu"
+
+#: anti-fraud-core/class-wc-af-settings.php:1688
+msgid "High-Risk Domains"
+msgstr "Vysoce rizikové domény"
+
+#: anti-fraud-core/class-wc-af-settings.php:1691
+msgid ""
+"Enter any email origin domains you consider to be high-risk. Press “Tab” or "
+"“Comma” after entering any new domain."
+msgstr ""
+"Zadejte jakékoli domény původu e-mailu, které považujete za vysoce rizikové. "
+"Po zadání jakékoli nové domény stiskněte „Tab“ nebo „Čárka“."
+
+#: anti-fraud-core/class-wc-af-settings.php:1698
+msgid "API Key for quickemailverification.com"
+msgstr "Klíč API pro quickemailverification.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1700
+msgid ""
+"Don't have quickemailverification account? <a href=\"\">Signup here</a><br/"
+">Verify 50 emails for free. Upgrade if you want more"
+msgstr ""
+"Nemáte účet quickemailverification? <a href=\"\"> Zaregistrujte se zde</"
+"a><br/>Ověřte 50 e-mailů zdarma. Upgradujte, pokud chcete více"
+
+#: anti-fraud-core/class-wc-af-settings.php:1701
+msgid ""
+"You can use quickemailverification.com to get more accurate results for "
+"false email domain-related checks. "
+msgstr ""
+"K získání přesnějších výsledků pro falešné kontroly e-mailové domény můžete "
+"použít quickemailverification.com. "
+
+#: anti-fraud-core/class-wc-af-settings.php:1711
+msgid "Order Amounts and Attempts"
+msgstr "Částky objednávky a pokusy"
+
+#: anti-fraud-core/class-wc-af-settings.php:1714
+msgid ""
+"The rules in this section are triggered based on defined order amounts and "
+"by counting attempted orders. You can also limit orders within a certain "
+"time frame. Orders with unusually high values, or customers who make an "
+"excessive number of transactions in a short period are more likely to be "
+"fraudulent."
+msgstr ""
+"Pravidla v této části se spouštějí na základě definovaných částek příkazů a "
+"počítáním pokusů o příkazy. Můžete také omezit objednávky v určitém časovém "
+"rámci. U objednávek s neobvykle vysokou hodnotou nebo u zákazníků, kteří "
+"provedou nadměrné množství transakcí v krátkém období, je větší "
+"pravděpodobnost, že budou podvodné."
+
+#: anti-fraud-core/class-wc-af-settings.php:1720
+msgid "Order Amount is Above Average?"
+msgstr "Je částka objednávky nadprůměrná?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1725
+msgid ""
+"Check if order significantly exceeds the average order amount for your site. "
+"Set multiplier value to trigger this rule when order place is value times "
+"greater than an average order."
+msgstr ""
+"Zkontrolujte, zda objednávka výrazně nepřevyšuje průměrnou částku objednávky "
+"pro váš web. Nastavte hodnotu multiplikátoru, aby se toto pravidlo spustilo, "
+"když je hodnota místa objednávky krát větší než průměrná objednávka."
+
+#: anti-fraud-core/class-wc-af-settings.php:1742
+msgid "Average Multiplier"
+msgstr "Průměrný multiplikátor"
+
+#: anti-fraud-core/class-wc-af-settings.php:1745
+msgid ""
+"Enter the multiplier value to check amount over average transaction value "
+"that will trigger the rule (expressed as a multiplier). For example, if you "
+"want to limit orders that are 2 times greater than the average value of "
+"orders, set the multiplier value to 2."
+msgstr ""
+"Zadejte hodnotu multiplikátoru pro kontrolu částky nad průměrnou hodnotou "
+"transakce, která spustí pravidlo (vyjádřeno jako multiplikátor). Pokud "
+"například chcete omezit objednávky, které jsou 2krát vyšší než průměrná "
+"hodnota objednávek, nastavte hodnotu násobitele na 2."
+
+#: anti-fraud-core/class-wc-af-settings.php:1755
+msgid "Order Exceeds Maximum Amount Limit?"
+msgstr "Objednávka překračuje limit maximální částky?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1760
+msgid ""
+"Enable this rule to confirm that the total amount of the order does not "
+"exceed maximum configured amount below."
+msgstr ""
+"Povolením tohoto pravidla potvrdíte, že celková částka objednávky "
+"nepřesahuje maximální nakonfigurovanou částku níže."
+
+#: anti-fraud-core/class-wc-af-settings.php:1777
+msgid "Amount Limit ($)"
+msgstr "Limit částky ($)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1780
+msgid "Enter the maximum amount of purchase accepted in your store."
+msgstr "Zadejte maximální částku nákupu akceptovanou ve vašem obchodě."
+
+#: anti-fraud-core/class-wc-af-settings.php:1787
+msgid "Too many order attempts?"
+msgstr "Příliš mnoho pokusů o objednávku?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1792
+msgid ""
+"Enabling this rule allows you to limit number of orders per user within the "
+"time span configured below."
+msgstr ""
+"Povolení tohoto pravidla vám umožní omezit počet objednávek na uživatele v "
+"časovém rozmezí nakonfigurovaném níže."
+
+#: anti-fraud-core/class-wc-af-settings.php:1809
+msgid "Time Span to Check (hours)"
+msgstr "Časové rozpětí ke kontrole (hodiny)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1812
+msgid "Enter number of hours you want to check "
+msgstr "Zadejte počet hodin, které chcete zkontrolovat "
+
+#: anti-fraud-core/class-wc-af-settings.php:1818
+msgid "Maximum Allowed Number of Orders in Time Span?"
+msgstr "Maximální povolený počet objednávek v časovém rozpětí?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1821
+msgid ""
+"Enter a total number of orders that a buyer can make in the specified time "
+"span."
+msgstr ""
+"Zadejte celkový počet objednávek, které může kupující provést v určeném "
+"časovém období."
+
+#: anti-fraud-core/class-wc-af-settings.php:1832
+msgid "Limit Number of Orders between Time"
+msgstr "Limit počtu objednávek mezi časem"
+
+#: anti-fraud-core/class-wc-af-settings.php:1837
+msgid ""
+"Enabling this rule limits the number of orders to be placed within a certain "
+"period of the day."
+msgstr ""
+"Povolení tohoto pravidla omezuje počet objednávek, které mají být zadány "
+"během určitého období dne."
+
+#: anti-fraud-core/class-wc-af-settings.php:1841
+msgid "Start Time "
+msgstr "Doba spuštění "
+
+#: anti-fraud-core/class-wc-af-settings.php:1844
+msgid ""
+"Needs to be as per server time. Check in woo general settings. Accordingly "
+"specify start time."
+msgstr ""
+"Musí být podle času serveru. Zkontrolujte obecná nastavení. Podle toho "
+"určete čas zahájení."
+
+#: anti-fraud-core/class-wc-af-settings.php:1850
+msgid "End Time "
+msgstr "Čas ukončení "
+
+#: anti-fraud-core/class-wc-af-settings.php:1853
+msgid ""
+"Needs to be as per server time. Check in woo general settings. Accordingly "
+"specify end time."
+msgstr ""
+"Musí být podle času serveru. Zkontrolujte obecná nastavení. Podle toho "
+"určete čas ukončení."
+
+#: anti-fraud-core/class-wc-af-settings.php:1859
+msgid "Maximum Allowed Number of Orders Between Time"
+msgstr "Maximální povolený počet objednávek mezi časem"
+
+#: anti-fraud-core/class-wc-af-settings.php:1862
+msgid ""
+"Enter maximum number of orders that can be placed during specified time span."
+msgstr ""
+"Zadejte maximální počet objednávek, které lze zadat během stanoveného "
+"časového období."
+
+#: anti-fraud-core/class-wc-af-settings.php:2013 assets/js/app.js:253
+msgid "Low Risk Order"
+msgstr "Příkaz s nízkým rizikem"
+
+#: anti-fraud-core/class-wc-af-settings.php:2015 assets/js/app.js:255
+msgid "Medium Risk Order"
+msgstr "Objednávka se středním rizikem"
+
+#: anti-fraud-core/class-wc-af-settings.php:2017 assets/js/app.js:257
+msgid "High Risk Order"
+msgstr "Příkaz s vysokým rizikem"
+
+#: anti-fraud-core/class-wc-af-settings.php:2019 assets/js/app.js:259
+msgid "Disabled"
+msgstr "Zakázáno"
+
+#: anti-fraud-core/class-wc-af-settings.php:2026
+msgid "No Importance"
+msgstr "Žádná důležitost"
+
+#: anti-fraud-core/class-wc-af-settings.php:2027
+msgid "Moderate"
+msgstr "Mírný"
+
+#: anti-fraud-core/class-wc-af-settings.php:2028
+msgid "High Importance"
+msgstr "Vysoká důležitost"
+
+#: anti-fraud-core/class-wc-af-settings.php:2174
+msgid "Your Account Id or License Key could not be authenticated!!"
+msgstr "Vaše ID účtu nebo licenční klíč nelze ověřit!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2189
+msgid "Great, authenticated successfully!!"
+msgstr "Skvělé, úspěšně ověřeno!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2332
+msgid "Your Quickemailverification API Key could not be authenticated!!"
+msgstr "Váš klíč API Quickemailverification nelze ověřit!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2347
+msgid "Great, Quickemailverification authenticated successfully!!"
+msgstr "Skvělé, Quickemailverification byla úspěšně ověřena!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2362
+msgid ""
+"Great, Quickemailverification authenticated successfully but you don't have "
+"enough credit to use this service."
+msgstr ""
+"Skvělé, Quickemailverification bylo úspěšně ověřeno, ale nemáte dostatek "
+"kreditu k používání této služby."
+
+#: anti-fraud-core/class-wc-af-settings.php:2429
+msgid "Great, bigdatacloud authenticated successfully!"
+msgstr "Skvělé, bigdatacloud úspěšně ověřen!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2445 woocommerce-anti-fraud.php:397
+msgid ""
+"AntiFraud: Bigdatacloud credentials not authenticate or your quota limit has "
+"been exceeded!"
+msgstr ""
+"AntiFraud: Přihlašovací údaje Bigdatacloud nebyly ověřeny nebo byl překročen "
+"limit vaší kvóty!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2536
+msgid "Your Trust Swiftly API Key could not be authenticated!!"
+msgstr "Váš klíč API Trust Swiftly nelze ověřit!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2551
+msgid "Your Trust Swiftly Base URL could not be validated!!"
+msgstr "Vaši základní adresu URL Trust Swiftly nelze ověřit!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2566
+msgid "Great, Trust Swiftly authenticated successfully!!"
+msgstr "Skvělé, Trust Swiftly byla úspěšně ověřena!!"
+
+#: anti-fraud-core/class-wc-af-trust-swiftly.php:292
+msgid " Please get verified with Trust Swiftly, and then try again."
+msgstr " Nechte se ověřit u Trust Swiftly a zkuste to znovu."
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:356
+msgid "Sr No"
+msgstr "Sr No"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:357
+#: templates/dashboard.php:362
+msgid "Name"
+msgstr "název"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:358
+msgid "Date"
+msgstr "datum"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:359
+msgid "Action"
+msgstr "Akce"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:385
+msgid "Download"
+msgstr "Stažení"
+
+#. translators: %s: learn more link
+#: includes/class-wc-af-privacy.php:19
+msgid ""
+"By using this extension, you may be storing personal data or sharing data "
+"with an external service. <a href=\"%s\" target=\"_blank\">Learn more about "
+"how this works, including what you may want to include in your privacy "
+"policy.</a>"
+msgstr ""
+"Pomocí tohoto rozšíření můžete ukládat osobní údaje nebo sdílet data s "
+"externí službou. <a href=\"%s\" target=\"_blank\">Další informace o tom, jak "
+"to funguje, včetně toho, co byste mohli chtít zahrnout do svých zásad "
+"ochrany osobních údajů.</a>"
+
+#: rules/class-wc-af-rule-billing-matches-shipping.php:18
+msgid "Billing address does not match shipping address"
+msgstr "Fakturační adresa neodpovídá dodací adrese"
+
+#: rules/class-wc-af-rule-billing-method.php:18
+msgid "Ordered from a risk billing_method"
+msgstr "Objednáno z rizikového způsobu fakturace"
+
+#: rules/class-wc-af-rule-billing-phone-matches-billing-country.php:17
+msgid "Billing phone number does not match with Billing country"
+msgstr "Fakturační telefonní číslo se neshoduje s fakturační zemí"
+
+#: rules/class-wc-af-rule-country.php:18
+msgid "Ordered from a risk country"
+msgstr "Objednáno z rizikové země"
+
+#: rules/class-wc-af-rule-detect-proxy.php:16
+msgid "Customer ordered from behind a proxy."
+msgstr "Zákazník objednal zpoza proxy."
+
+#: rules/class-wc-af-rule-first-order-processing.php:17
+#: rules/class-wc-af-rule-first-order.php:16
+msgid "This is the customer's first order with this billing details."
+msgstr "Toto je první objednávka zákazníka s těmito fakturačními údaji."
+
+#: rules/class-wc-af-rule-free-email.php:20
+msgid "Email is a known free email address."
+msgstr "E-mail je známá bezplatná e-mailová adresa."
+
+#: rules/class-wc-af-rule-geo-location.php:19
+msgid "Customer order geo location mismatches billing/shipping address."
+msgstr ""
+"Geografické umístění objednávky zákazníka se neshoduje s fakturační/dodací "
+"adresou."
+
+#: rules/class-wc-af-rule-high-amount.php:17
+msgid "Order exceeds maximum amount."
+msgstr "Objednávka přesahuje maximální částku."
+
+#: rules/class-wc-af-rule-international-order.php:17
+msgid "Order is an international order."
+msgstr "Řád je mezinárodní řád."
+
+#: rules/class-wc-af-rule-ip-location.php:19
+msgid "Customer IP address did not match given billing country."
+msgstr "IP adresa zákazníka neodpovídá dané fakturační zemi."
+
+#: rules/class-wc-af-rule-ip-multiple-order-details.php:20
+msgid "IP address ordered with multiple order details in the past "
+msgstr "IP adresa objednaná s více podrobnostmi objednávky v minulosti "
+
+#: rules/class-wc-af-rule-minfraud-factors.php:18
+msgid "Score returned by Minfraud Factors exceeds the allowed value."
+msgstr "Skóre vrácené Minfraud Factors překračuje povolenou hodnotu."
+
+#: rules/class-wc-af-rule-minfraud-insights.php:18
+msgid "Score returned by Minfraud Insights exceeds the allowed value."
+msgstr "Skóre vrácené Minfraud Insights překračuje povolenou hodnotu."
+
+#: rules/class-wc-af-rule-minfraud.php:18
+msgid "Score returned by Minfraud exceeds the allowed value."
+msgstr "Skóre vrácené Minfraudem překračuje povolenou hodnotu."
+
+#: rules/class-wc-af-rule-temporary-email.php:17
+msgid "Email address is from a high-risk domain."
+msgstr "E-mailová adresa pochází z vysoce rizikové domény."
+
+#: rules/class-wc-af-rule-velocities.php:20
+msgid "IP address ordered multiple orders in the last "
+msgstr "IP adresa objednala více objednávek v poslední "
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/af-admin-notice.php:25
+msgid "An order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Objednávka s ID #%1$s dosáhla skóre rizika %2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-admin-notice.php:31 templates/plain/af-admin-notice.php:13
+#: templates/plain/af-paypal-notice.php:14
+msgid "%1$sClick here to view the order.%2$s."
+msgstr "%1$sKliknutím sem zobrazíte objednávku.%2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-paypal-notice.php:26
+msgid "%1$sClick here to verify the order.%2$s."
+msgstr "%1$sKliknutím sem ověřte objednávku.%2$s."
+
+#: templates/dashboard.php:189
+msgid "Anti Fraud Dashboard"
+msgstr "Panel proti podvodům"
+
+#: templates/dashboard.php:199
+msgid "Orders Detected"
+msgstr "Objednávky byly zjištěny"
+
+#: templates/dashboard.php:217
+msgid "Needs Attention"
+msgstr "Vyžaduje pozornost"
+
+#: templates/dashboard.php:230
+msgid "Recent Order Data"
+msgstr "Údaje o poslední objednávce"
+
+#: templates/dashboard.php:244
+msgid "Last 24 Hours Update"
+msgstr "Aktualizace posledních 24 hodin"
+
+#: templates/dashboard.php:250
+msgid "Total Transaction Amount"
+msgstr "Celková částka transakce"
+
+#: templates/dashboard.php:262
+msgid "Total Number of Orders"
+msgstr "Celkový počet objednávek"
+
+#: templates/dashboard.php:274
+msgid "Medium Risk Orders"
+msgstr "Příkazy se středním rizikem"
+
+#: templates/dashboard.php:286
+msgid "High-Risk Orders on Hold"
+msgstr "Zadržené vysoce rizikové příkazy"
+
+#: templates/dashboard.php:298
+msgid "Fraudulent Orders Cancelled"
+msgstr "Podvodné objednávky zrušeny"
+
+#: templates/dashboard.php:310
+msgid "High-Risk Net Transaction"
+msgstr "Vysoce riziková čistá transakce"
+
+#: templates/dashboard.php:322
+msgid "Emails Blocked"
+msgstr "E-maily blokovány"
+
+#: templates/dashboard.php:334
+msgid "Paypal Verification"
+msgstr "Ověření Paypal"
+
+#: templates/dashboard.php:364
+msgid "Spent"
+msgstr "Utracené"
+
+#: templates/dashboard.php:366
+msgid "Status"
+msgstr "Postavení"
+
+#: templates/dashboard.php:460
+msgid "Orders Breakdown"
+msgstr "Rozpis objednávek"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/plain/af-admin-notice.php:11
+msgid "Hi there. Order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Ahoj. Objednávka s ID #%1$s dosáhla skóre rizika %2$s."
+
+#: woocommerce-anti-fraud.php:109
+msgid "Settings"
+msgstr "Nastavení"
+
+#: woocommerce-anti-fraud.php:110
+msgid "Docs"
+msgstr "Docs"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:339
+msgid ""
+"In order to continue %1$s\"Geo Location Match\"%2$s service, our provider "
+"Bigdatacloud now requires you to sign up and get the api key. To obtain an "
+"api key you can %3$sregister here%4$s."
+msgstr ""
+"Aby bylo možné pokračovat ve službě %1$s\"Geo Location Match\"%2$s, náš "
+"poskytovatel Bigdatacloud nyní vyžaduje, abyste se zaregistrovali a získali "
+"klíč API. Chcete-li získat klíč API, můžete se %3$sregistrovat zde%4$s."
+
+#: woocommerce-anti-fraud.php:935
+msgid "This email id is blocked."
+msgstr "Toto ID e-mailu je zablokováno."
+
+#: woocommerce-anti-fraud.php:952
+msgid "This IP Address is blocked."
+msgstr "Tato IP adresa je blokována."
+
+#. translators: %s: order time span
+#: woocommerce-anti-fraud.php:1247
+msgid ""
+"You have reached maximum number of allowed orders in %d hours. Please try "
+"again later."
+msgstr ""
+"Dosáhli jste maximálního povoleného počtu objednávek za %d hodin. Prosím "
+"zkuste to znovu později."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:1877
+msgid ""
+"Please consider enabling reCaptcha in the Anti Fraud plugin %1$ssettings%2$s "
+"to help prevent Velocity attacks."
+msgstr ""
+"Zvažte prosím povolení reCaptcha v pluginu Anti Fraud %1$settings%2$s, "
+"abyste zabránili útokům Velocity."
+
+#: woocommerce-anti-fraud.php:2223
+msgid "This email id is blocked"
+msgstr "Toto ID e-mailu je zablokováno"
+
+#: woocommerce-anti-fraud.php:2225
+msgid "Unblock"
+msgstr "Odblokovat"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:2261
+msgid ""
+"Please install and activate %1$sWooCommerce%2$s in order for the WooCommerce "
+"Anti Fraud extension to work!"
+msgstr ""
+"Nainstalujte a aktivujte prosím %1$sWooCommerce%2$s, aby rozšíření "
+"WooCommerce Anti Fraud fungovalo!"
+
+#: woocommerce-anti-fraud.php:2447 woocommerce-anti-fraud.php:2878
+msgid "Invalid recaptcha."
+msgstr "Neplatná recaptcha."
+
+#: woocommerce-anti-fraud.php:2452
+msgid "You are not a human, please refresh page."
+msgstr "Nejste člověk, obnovte prosím stránku."
+
+#: woocommerce-anti-fraud.php:2461
+msgid "Could not get response from recaptcha server, please refresh page."
+msgstr "Nelze získat odpověď ze serveru recaptcha, obnovte prosím stránku."
+
+#: woocommerce-anti-fraud.php:2464
+msgid "Recaptcha not responding, please refresh page."
+msgstr "Recaptcha neodpovídá, obnovte stránku."
+
+#: woocommerce-anti-fraud.php:2481
+msgid "PayPal Verification Done."
+msgstr "Ověření PayPal hotovo."
+
+#: woocommerce-anti-fraud.php:2773
+msgid "Captcha"
+msgstr "Captcha"
+
+#: woocommerce-anti-fraud.php:2794 woocommerce-anti-fraud.php:2893
+msgid "Recaptcha is a required field."
+msgstr "Recaptcha je povinné pole."
+
+#: woocommerce-anti-fraud.php:2889
+msgid "Could not get response from recaptcha server."
+msgstr "Nebylo možné získat odpověď ze serveru recaptcha."
+
+#: woocommerce-anti-fraud.php:2896
+msgid "Could not verify request."
+msgstr "Žádost se nepodařilo ověřit."
+
+#: woocommerce-anti-fraud.php:2972
+msgid "Fraud Action"
+msgstr "Podvodné akce"
+
+#: woocommerce-anti-fraud.php:2985 woocommerce-anti-fraud.php:3001
+msgid "Fraud Check"
+msgstr "Kontrola podvodů"
+
+#: assets/js/app.js:409
+msgid "Processing.."
+msgstr "Zpracovává se.."

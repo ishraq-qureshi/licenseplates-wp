@@ -1,0 +1,1971 @@
+# Copyright (C) 2024 OPMC Australia Pty Ltd
+# This file is distributed under the GPL v3.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Anti Fraud 5.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-anti-"
+"fraud\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-12T19:53:45+05:30\n"
+"PO-Revision-Date: 2024-03-28 14:22+0530\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: woocommerce-anti-fraud\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ko\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-anti-fraud.php
+msgid "WooCommerce Anti Fraud"
+msgstr "WooCommerce 사기 방지"
+
+#. Plugin URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://woocommerce.com/products/woocommerce-anti-fraud/"
+msgstr "https://woocommerce.com/products/woocommerce-anti-fraud/"
+
+#. Description of the plugin
+#: woocommerce-anti-fraud.php
+msgid ""
+"Advanced fraud and card attack protection for WooCommerce, with risk scoring, "
+"rule-based controls, checkout protection, and tools to help merchants detect, "
+"prevent, and respond to suspicious activity."
+msgstr ""
+"일련의 고급 점수 규칙을 사용하여 사기 가능성을 확인하고 각 거래에 점수를 매깁"
+"니다."
+
+#. Author of the plugin
+#: woocommerce-anti-fraud.php
+msgid "OPMC Australia Pty Ltd"
+msgstr "OPMC 호주 Pty Ltd"
+
+#. Author URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://opmc.biz/"
+msgstr "https://opmc.biz/"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:29
+msgid "Anti Fraud - Admin Notice"
+msgstr "사기 방지 - 관리자 공지"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:30
+msgid "Admin notification about an order."
+msgstr "주문에 대한 관리자 알림입니다."
+
+#: anti-fraud-core/class-wc-af-admin-email.php:50
+#: anti-fraud-core/class-wc-af-admin-email.php:51
+msgid "Fraud notification for order #{order_id}"
+msgstr "주문 #{order_id}에 대한 사기 알림"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:349
+msgid "Antifraud paypal verification"
+msgstr "사기 방지 페이팔 확인"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:354
+msgid "Check pending order fraud risk score"
+msgstr "보류 주문 사기 위험 점수 확인"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:388
+#: anti-fraud-core/class-wc-af-score-helper.php:490
+#: anti-fraud-core/class-wc-af-score-helper.php:624
+#: anti-fraud-core/class-wc-af-score-helper.php:626
+#: anti-fraud-core/class-wc-af-score-helper.php:629
+#: anti-fraud-core/class-wc-af-score-helper.php:672
+#: anti-fraud-core/class-wc-af-score-helper.php:674
+#: anti-fraud-core/class-wc-af-score-helper.php:677
+msgid "Fraud check done."
+msgstr "사기 확인 완료."
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:19
+msgid "MaxMind Risk Score"
+msgstr "MaxMind 위험 점수"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Hide details"
+msgstr "세부정보 숨기기"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Show fraud risk details"
+msgstr "사기 위험 세부정보 표시"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:19
+msgid "Fraud Risk"
+msgstr "사기 위험"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:135
+msgid "This order is currently in queue for a fraud check."
+msgstr "이 주문은 현재 사기 확인 대기 중입니다."
+
+#: anti-fraud-core/class-wc-af-meta-box.php:136
+msgid "Cancel fraud check queue"
+msgstr "사기 확인 대기열 취소"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:141
+msgid "Calculate Fraud Risk"
+msgstr "사기 위험 계산"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:25
+msgid "Anti Fraud - PayPal verification"
+msgstr "사기 방지 - PayPal 인증"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:26
+msgid "Notice about PayPal verification."
+msgstr "PayPal 인증에 관한 공지입니다."
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:47
+msgid "PayPal Verification notification of order #{order_id}"
+msgstr "주문 #{order_id}에 대한 PayPal 확인 알림"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:28
+msgid "No fraud checking has been done on this order yet."
+msgstr "이 주문에 대해서는 아직 사기 확인이 이루어지지 않았습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:33
+#: anti-fraud-core/class-wc-af-settings.php:2006
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "Low Risk"
+msgstr "낮은 위험"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:43
+#: anti-fraud-core/class-wc-af-settings.php:2007
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "Medium Risk"
+msgstr "중간 위험"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:47
+#: anti-fraud-core/class-wc-af-settings.php:2008
+#: templates/dashboard.php:39
+#: templates/dashboard.php:500
+msgid "High Risk"
+msgstr "위험"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:187
+#: anti-fraud-core/class-wc-af-score-helper.php:229
+#: woocommerce-anti-fraud.php:1280
+msgid "Order fraud checks skipped due to whitelisted email."
+msgstr "화이트리스트 이메일로 인해 주문 사기 확인을 건너뛰었습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:197
+#: woocommerce-anti-fraud.php:1300
+msgid "Order fraud checks skipped due to whitelisted customer IPs."
+msgstr "화이트리스트에 있는 고객 IP로 인해 주문 사기 확인을 건너뛰었습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:210
+#: woocommerce-anti-fraud.php:1325
+msgid "Order fraud checks skipped due to whitelisted user role."
+msgstr ""
+"화이트리스트에 있는 사용자 역할로 인해 주문 사기 확인을 건너뛰었습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:220
+#: woocommerce-anti-fraud.php:1347
+msgid "Order fraud checks skipped due to whitelisted payment method."
+msgstr "허용된 결제 방법으로 인해 주문 사기 확인을 건너뛰었습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:239
+msgid "Order fraud checks skipped due to user verified from Trust Swiftly."
+msgstr ""
+"Trust Swiftly에서 사용자가 확인되었기 때문에 주문 사기 확인을 건너뛰었습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:427
+msgid "User Email is Whitelisted."
+msgstr "사용자 이메일이 허용 목록에 있습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:491
+msgid "Payment method "
+msgstr "결제수단"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:548
+msgid "Max order limit reched from same IP."
+msgstr "동일한 IP에서 최대 주문 한도가 초과되었습니다."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:588
+msgid "Max Order Limit between time reached."
+msgstr "시간 사이의 최대 주문 한도에 도달했습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:40
+#: includes/class-wc-af-privacy.php:11 woocommerce-anti-fraud.php:54
+#: woocommerce-anti-fraud.php:55
+msgid "Anti Fraud"
+msgstr "사기 방지"
+
+#: anti-fraud-core/class-wc-af-settings.php:90
+#: anti-fraud-core/class-wc-af-settings.php:1003
+#: anti-fraud-core/tamplate-admin-settings-page.php:15
+msgid "General Settings"
+msgstr "일반 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:91
+msgid "Rules"
+msgstr "규칙"
+
+#: anti-fraud-core/class-wc-af-settings.php:92
+msgid "Blacklist Settings"
+msgstr "블랙리스트 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:93
+msgid "Email Alerts"
+msgstr "이메일 알림"
+
+#: anti-fraud-core/class-wc-af-settings.php:94
+#: anti-fraud-core/class-wc-af-settings.php:892
+msgid "Paypal Settings"
+msgstr "페이팔 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:95
+msgid "MinFraud Settings"
+msgstr "최소 사기 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:96
+msgid "MinFraud Insights Settings"
+msgstr "MinFraud 통찰력 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:97
+msgid "MinFraud Factors Settings"
+msgstr "최소 사기 요인 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:98
+#: anti-fraud-core/class-wc-af-settings.php:229
+msgid "Trust Swiftly Settings"
+msgstr "신속한 신뢰 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:99
+msgid "reCAPTCHA"
+msgstr "리캡차"
+
+#: anti-fraud-core/class-wc-af-settings.php:100
+msgid "Need Support?"
+msgstr "지원이 필요하신가요?"
+
+#: anti-fraud-core/class-wc-af-settings.php:231
+msgid ""
+"<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target="
+"\"_blank\" >Trust Swiftly</a> is a paid, external service that uses AI to "
+"verify the identity and payment of a customer. By using <a href=\"https://"
+"thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust "
+"Swiftly</a> you can decrease fraud by automatically verifying their "
+"information and later use the data to win any dispute cases. To sign up for "
+"Trust Swiftly, click this link: <a href=\"https://thrive.zohopublic.com/aref/"
+"G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trustswiftly.com</a><hr/>"
+msgstr ""
+"<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target="
+"\"_blank\" >Trust Swiftly</a>는 AI를 사용해 개인의 신원과 결제 금액을 확인하"
+"는 유료 외부 서비스입니다. 고객. <a href=\"https://thrive.zohopublic.com/"
+"aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >신속한 신뢰</a>를 사용하면 정"
+"보를 자동으로 확인하고 나중에 데이터를 사용하여 사기를 줄일 수 있습니다. 분"
+"쟁 사례에서 승리하십시오. Trust Swiftly에 가입하려면 다음 링크를 클릭하세요: "
+"<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target="
+"\"_blank\">trustswiftly.com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:236
+msgid "Trust Swiftly Enable/Disable"
+msgstr "신속한 신뢰 활성화/비활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:239
+msgid "Enable Trust Swiftly"
+msgstr "신속하게 신뢰 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:244
+msgid "API Key"
+msgstr "API 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:253
+msgid "Base URL"
+msgstr "기본 URL"
+
+#: anti-fraud-core/class-wc-af-settings.php:256
+msgid ""
+"Enter in your Trust Swiftly site URL i.e https://example.trustswiftly.com"
+msgstr ""
+"Trust Swiftly 사이트 URL(예: https://example.trustswiftly.com)을 입력하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:262
+msgid "Verification Method"
+msgstr "검증방법"
+
+#: anti-fraud-core/class-wc-af-settings.php:273
+msgid "Verification Template"
+msgstr "검증 템플릿"
+
+#: anti-fraud-core/class-wc-af-settings.php:278
+msgid ""
+"Select a verification method defined such as ID and Selfie. A Verification "
+"Template should be set on Trust Swiftly."
+msgstr ""
+"ID, 셀카 등 정의된 인증 방법을 선택하세요. 검증 템플릿은 Trust Swiftly에 설정"
+"되어야 합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:284
+msgid "When To Verify"
+msgstr "확인 시기"
+
+#: anti-fraud-core/class-wc-af-settings.php:289
+msgid "Select when customers should verify their identity."
+msgstr "고객이 신원을 확인해야 하는 시기를 선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:295
+msgid "Select Threshold Weight"
+msgstr "임계값 가중치 선택"
+
+#: anti-fraud-core/class-wc-af-settings.php:300
+msgid ""
+"If the risk score exceed threshold value which is set here, then the "
+"customer needs to be verified with Trust Swiftly."
+msgstr ""
+"위험 점수가 여기에 설정된 임계값을 초과하는 경우 고객은 Trust Swiftly를 통해 "
+"확인되어야 합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:325
+#: anti-fraud-core/class-wc-af-settings.php:446
+#: anti-fraud-core/class-wc-af-settings.php:519
+msgid "MaxMind minFraud Settings"
+msgstr "MaxMind minFraud 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:327
+#: anti-fraud-core/class-wc-af-settings.php:448
+#: anti-fraud-core/class-wc-af-settings.php:521
+msgid ""
+"<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind "
+"minFraud</a> is a paid, external service that uses machine learning to "
+"detect potential fraud transactions. By using <a href=\"https://maxmind.pxf."
+"io/qnvxGg\" target=\"_blank\" >minFraud</a> you can potentially detect more "
+"fraudulent transactions.<br/>To sign up to MaxMind minFraud, click this "
+"link: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://"
+"maxmind.com</a><hr/>"
+msgstr ""
+"<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind "
+"minFraud</a>는 기계 학습을 사용하여 잠재적인 사기 거래를 감지하는 유료 외부 "
+"서비스입니다. <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" "
+">minFraud</a>를 사용하면 더 많은 사기 거래를 탐지할 수 있습니다.<br/>MaxMind "
+"minFraud에 가입하려면 다음을 클릭하세요. 이 링크: <a href=\"https://maxmind."
+"pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:332
+#: anti-fraud-core/class-wc-af-settings.php:452
+#: anti-fraud-core/class-wc-af-settings.php:525
+#: anti-fraud-core/class-wc-af-settings.php:898
+msgid "Enable/Disable"
+msgstr "켜기 끄기"
+
+#: anti-fraud-core/class-wc-af-settings.php:335
+msgid "Enable MaxMind minFraud Integration"
+msgstr "MaxMind minFraud 통합 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:340
+msgid "Device Tracking"
+msgstr "장치 추적"
+
+#: anti-fraud-core/class-wc-af-settings.php:343
+msgid ""
+"Detect if a person uses the same device but changes proxies while they are "
+"placing multiple orders from your website"
+msgstr ""
+"사용자가 동일한 장치를 사용하지만 웹사이트에서 여러 주문을 하는 동안 프록시"
+"를 변경하는지 감지합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:349
+msgid "MaxMind Account ID"
+msgstr "MaxMind 계정 ID"
+
+#: anti-fraud-core/class-wc-af-settings.php:351
+msgid ""
+"Enter your MaxMind account ID here.  If you don&apos;t have an account, "
+"please sign up at <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank"
+"\">https://maxmind.com</a>."
+msgstr ""
+"여기에 MaxMind 계정 ID를 입력하세요. 계정이 없다면 <a href=\"https://maxmind."
+"pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a>에서 가입하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:356
+msgid "MaxMind License Key"
+msgstr "MaxMind 라이센스 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:358
+msgid "Enter the license key provided by MaxMind here."
+msgstr "여기에 MaxMind에서 제공한 라이센스 키를 입력하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:364
+msgid "Does IP Address Match Location?"
+msgstr "IP 주소가 위치와 일치합니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:369
+msgid ""
+"Enable it to identify that customer's physical location matches the location "
+"provided by IP address."
+msgstr ""
+"고객의 실제 위치가 IP 주소에서 제공한 위치와 일치하는지 식별하려면 이를 활성"
+"화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:373
+#: anti-fraud-core/class-wc-af-settings.php:1398
+#: anti-fraud-core/class-wc-af-settings.php:1437
+#: anti-fraud-core/class-wc-af-settings.php:1469
+#: anti-fraud-core/class-wc-af-settings.php:1493
+#: anti-fraud-core/class-wc-af-settings.php:1515
+#: anti-fraud-core/class-wc-af-settings.php:1556
+#: anti-fraud-core/class-wc-af-settings.php:1606
+#: anti-fraud-core/class-wc-af-settings.php:1628
+#: anti-fraud-core/class-wc-af-settings.php:1675
+#: anti-fraud-core/class-wc-af-settings.php:1729
+#: anti-fraud-core/class-wc-af-settings.php:1764
+#: anti-fraud-core/class-wc-af-settings.php:1796
+msgid "Rule Weight"
+msgstr "규칙 가중치"
+
+#: anti-fraud-core/class-wc-af-settings.php:392
+#: anti-fraud-core/class-wc-af-settings.php:465
+#: anti-fraud-core/class-wc-af-settings.php:538
+msgid "Threshold Settings"
+msgstr "임계값 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:399
+msgid "Threshold minFraud Risk Score"
+msgstr "최소 사기 위험 점수 임계값"
+
+#: anti-fraud-core/class-wc-af-settings.php:401
+#: anti-fraud-core/class-wc-af-settings.php:474
+#: anti-fraud-core/class-wc-af-settings.php:547
+msgid ""
+"If the risk score returned by the minFraud system exceeds this number, the "
+"transaction will be considered potentially fraudulent and will contribute to "
+"the overall fraud score calculation.  If the risk score from minFraud is "
+"lower than this threshold, it will not contribute to the overall fraud score."
+msgstr ""
+"minFraud 시스템에서 반환된 위험 점수가 이 숫자를 초과하는 경우 해당 거래는 잠"
+"재적인 사기로 간주되어 전체 사기 점수 계산에 반영됩니다. minFraud의 위험 점수"
+"가 이 임계값보다 낮으면 전체 사기 점수에 영향을 미치지 않습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:414
+msgid "minFraud Rule Weight"
+msgstr "minFraud 규칙 가중치"
+
+#: anti-fraud-core/class-wc-af-settings.php:417
+#: anti-fraud-core/class-wc-af-settings.php:490
+#: anti-fraud-core/class-wc-af-settings.php:563
+msgid ""
+"If the minFraud risk score exceeds the threshold set above, this weight will "
+"be applied to the overall risk score.  By adjusting this, you can balance "
+"the minFraud value against the other rules-based calculations in the plugin."
+msgstr ""
+"minFraud 위험 점수가 위에 설정된 임계값을 초과하는 경우 이 가중치가 전체 위"
+"험 점수에 적용됩니다. 이를 조정하면 플러그인의 다른 규칙 기반 계산과 "
+"minFraud 값의 균형을 맞출 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:455
+msgid "Enable MaxMind minFraud Insights Integration"
+msgstr "MaxMind minFraud Insights 통합 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:472
+msgid "Threshold minFraud Insights Risk Score"
+msgstr "임계값 minFraud Insights 위험 점수"
+
+#: anti-fraud-core/class-wc-af-settings.php:487
+msgid "minFraud Insights Rule Weight"
+msgstr "minFraud Insights 규칙 가중치"
+
+#: anti-fraud-core/class-wc-af-settings.php:528
+msgid "Enable MaxMind minFraud Factors Integration"
+msgstr "MaxMind minFraud 요소 통합 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:545
+msgid "Threshold minFraud Factors Risk Score"
+msgstr "임계값 minFraud 요인 위험 점수"
+
+#: anti-fraud-core/class-wc-af-settings.php:560
+msgid "minFraud Factors Rule Weight"
+msgstr "minFraud 요인 규칙 가중치"
+
+#: anti-fraud-core/class-wc-af-settings.php:592
+msgid "Support for the Anti-Fraud Plugin"
+msgstr "사기 방지 플러그인 지원"
+
+#: anti-fraud-core/class-wc-af-settings.php:598
+msgid "Facing an Issue with the plugin?"
+msgstr "플러그인에 문제가 있습니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:599
+msgid "Contact Our Support"
+msgstr "지원팀에 문의하세요"
+
+#: anti-fraud-core/class-wc-af-settings.php:601
+msgid ""
+"If you have any issues or feedback about Anti-Fraud plugin, we would love to "
+"here from you!"
+msgstr ""
+"Anti-Fraud 플러그인에 대한 문제나 피드백이 있는 경우 여기로 알려주시기 바랍니"
+"다!"
+
+#: anti-fraud-core/class-wc-af-settings.php:607
+msgid "Love our Plugin?"
+msgstr "우리 플러그인이 마음에 드시나요?"
+
+#: anti-fraud-core/class-wc-af-settings.php:609
+msgid "Leave Us a Review!"
+msgstr "리뷰를 남겨주세요!"
+
+#: anti-fraud-core/class-wc-af-settings.php:611
+msgid "Your positive reviews are always encouraging!"
+msgstr "고객님의 긍정적인 리뷰는 언제나 힘이 됩니다!"
+
+#: anti-fraud-core/class-wc-af-settings.php:635
+msgid "Google reCAPTCHA Settings"
+msgstr "구글 reCAPTCHA 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:637
+msgid ""
+"Click <a href=\"https://www.google.com/recaptcha/admin\" target=\"_blank"
+"\">here</a> to register.\n"
+"\t\t\t\t\t\t\t\tActivating reCAPTCHA will enable the service on your "
+"Checkout page, which is an effective means of reducing spam orders, "
+"particularly from velocity attacks ie. where spammers try multiple credit "
+"cards to test their validity.   If you continue to experience a high volume "
+"of spam orders after enabling this setting, please contact our Support team "
+"(<a href=\"mailto:support@opmc.biz\" target=\"_top\">support@opmc.biz</a>) ."
+"<hr/>"
+msgstr ""
+"\"등록하려면 <a href=\"\"https://www.google.com/recaptcha/admin\"\" target="
+"\"\"_blank\"\">여기</a>를 클릭하세요.\n"
+"\t\t\t\t\t\t\t\treCAPTCHA를 활성화하면 결제 페이지에서 서비스가 활성화됩니"
+"다. 이는 특히 신속 공격으로부터 스팸 주문을 줄이는 효과적인 수단입니다. 스패"
+"머는 유효성을 테스트하기 위해 여러 개의 신용 카드를 시도합니다. 이 설정을 활"
+"성화한 후에도 계속해서 대량의 스팸 주문이 발생하는 경우 지원팀(<a href="
+"\"\"mailto:support@opmc.biz\"\" target=\"\"_top\"\">support@opmc.biz</a>)에 "
+"문의하세요. ) .<hr/>\""
+
+#: anti-fraud-core/class-wc-af-settings.php:646
+msgid "Enable reCAPTCHA"
+msgstr "reCAPTCHA 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:650
+msgid "Enable reCAPTCHA on checkout page<br/>"
+msgstr "결제 페이지에서 reCAPTCHA 활성화<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:655
+msgid "Enable v2 reCAPTCHA"
+msgstr "v2 reCAPTCHA 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:659
+msgid "Enable v2 reCAPTCHA<br/>"
+msgstr "v2 reCAPTCHA 활성화<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:665
+msgid "Enable v3 reCAPTCHA"
+msgstr "v3 reCAPTCHA 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:669
+msgid "Enable v3 reCAPTCHA<br/>"
+msgstr "v3 reCAPTCHA 활성화<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:675
+msgid "v2 Site Key"
+msgstr "v2 사이트 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:678
+msgid "Enter v2 Site Key"
+msgstr "v2 사이트 키 입력"
+
+#: anti-fraud-core/class-wc-af-settings.php:684
+msgid "v2 Secret Key"
+msgstr "v2 비밀 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:687
+msgid "Enter v2 Secret Key"
+msgstr "v2 비밀 키 입력"
+
+#: anti-fraud-core/class-wc-af-settings.php:693
+msgid "v3 Site Key"
+msgstr "v3 사이트 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:696
+msgid "Enter v3 Site Key"
+msgstr "v3 사이트 키 입력"
+
+#: anti-fraud-core/class-wc-af-settings.php:702
+msgid "v3 Secret Key"
+msgstr "v3 비밀 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:705
+msgid "Enter v3 Secret Key"
+msgstr "v3 비밀 키 입력"
+
+#: anti-fraud-core/class-wc-af-settings.php:741
+msgid "Alerts"
+msgstr "경고"
+
+#: anti-fraud-core/class-wc-af-settings.php:743
+msgid "Get alerts about suspected fraudulent activities <hr/>"
+msgstr "의심되는 사기 활동에 대한 알림 받기 <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:747
+msgid "Activate Email Alerts for Admin"
+msgstr "관리자를 위한 이메일 알림 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:752
+msgid ""
+"Enable to receive fraud alerts on admin email address when risk-score "
+"exceeds value set in Email Notification Score."
+msgstr ""
+"위험 점수가 이메일 알림 점수에 설정된 값을 초과하는 경우 관리자 이메일 주소"
+"로 사기 경고를 수신하도록 활성화합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:756
+msgid "Additional Address(es) to Notify"
+msgstr "통지할 추가 주소"
+
+#: anti-fraud-core/class-wc-af-settings.php:759
+msgid ""
+"Add additional email address(es) you want to be notified upon exceeding Risk-"
+"score. Press “Comma”, TAB or ENTER button for the next entry."
+msgstr ""
+"위험 점수 초과 시 알림을 받을 이메일 주소를 추가하세요. 다음 항목을 입력하려"
+"면 “쉼표”, TAB 또는 ENTER 버튼을 누르세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:766
+msgid "Email Notification Score"
+msgstr "이메일 알림 점수"
+
+#: anti-fraud-core/class-wc-af-settings.php:770
+msgid ""
+"Risk scores that meet or exceed this value will trigger email alerts to your "
+"specified email addresses."
+msgstr ""
+"이 값을 충족하거나 초과하는 위험 점수는 지정된 이메일 주소로 이메일 경고를 트"
+"리거합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:795
+msgid "Blacklist"
+msgstr "블랙리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:797
+msgid ""
+"WooCommerce Anti-Fraud allows you to create a list of email addresses as "
+"well as a list of IP addresses that will always be marked as potential fraud "
+"transactions."
+msgstr ""
+"WooCommerce Anti-Fraud를 사용하면 잠재적인 사기 거래로 항상 표시되는 IP 주소 "
+"목록은 물론 이메일 주소 목록도 생성할 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:802
+msgid "Email Blacklisting"
+msgstr "이메일 블랙리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:812
+msgid "Email Blacklist"
+msgstr "이메일 블랙리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:817
+msgid ""
+"Enable the email blacklist function to block emails captured by WooCommerce "
+"Anti-fraud rules."
+msgstr ""
+"WooCommerce 사기 방지 규칙에 의해 캡처된 이메일을 차단하려면 이메일 블랙리스"
+"트 기능을 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:822
+msgid "Automatic Blacklisting"
+msgstr "자동 블랙리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:827
+msgid ""
+"Add email addresses of orders reported with a high risk of fraud to "
+"blacklist automatically."
+msgstr ""
+"사기 위험이 높은 것으로 보고된 주문의 이메일 주소를 자동으로 블랙리스트에 추"
+"가합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:832
+msgid "Blocked Email Addresses"
+msgstr "차단된 이메일 주소"
+
+#: anti-fraud-core/class-wc-af-settings.php:835
+msgid ""
+"The email addresses listed in the text area will be considered unsafe. You "
+"can also add or remove emails manually here. Type “,” or press TAB/ENTER "
+"button for the next entry. Please add emails in bulk separating them by "
+"either comma or space."
+msgstr ""
+"텍스트 영역에 나열된 이메일 주소는 안전하지 않은 것으로 간주됩니다. 여기에서 "
+"수동으로 이메일을 추가하거나 제거할 수도 있습니다. 다음 항목을 입력하려면 \","
+"\"를 입력하거나 TAB/ENTER 버튼을 누르세요. 이메일을 쉼표나 공백으로 구분하여 "
+"대량으로 추가하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:843
+msgid "IP Blacklisting"
+msgstr "IP 블랙리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:853
+msgid "IP Blacklist"
+msgstr "IP 블랙리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:857
+msgid "Enable the IP blacklist function"
+msgstr "IP 블랙리스트 기능 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:858
+msgid ""
+"Enable the IP blacklist function to block IP addresses with high risk of "
+"frauds."
+msgstr ""
+"사기 위험이 높은 IP 주소를 차단하려면 IP 블랙리스트 기능을 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:863
+msgid "Blocked IP Addresses"
+msgstr "차단된 IP 주소"
+
+#: anti-fraud-core/class-wc-af-settings.php:866
+msgid ""
+"The IP addresses listed in the text area will be considered unsafe.  You can "
+"also add or remove IP addresses manually here. Type “,” or press TAB/ENTER "
+"button for the next entry. Please add IPs in bulk separating them by either "
+"comma or space."
+msgstr ""
+"텍스트 영역에 나열된 IP 주소는 안전하지 않은 것으로 간주됩니다. 여기에서 IP "
+"주소를 수동으로 추가하거나 제거할 수도 있습니다. 다음 항목을 입력하려면 \","
+"\"를 입력하거나 TAB/ENTER 버튼을 누르세요. IP를 쉼표나 공백으로 구분하여 대량"
+"으로 추가하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:894
+msgid ""
+"These settings are specific to Paypal Payment Gateway. This means, when the "
+"customer use their Paypal account for making payment for their orders, then "
+"these rules come into action.<hr/>"
+msgstr ""
+"이러한 설정은 Paypal Payment Gateway에만 적용됩니다. 즉, 고객이 주문 결제를 "
+"위해 PayPal 계정을 사용하면 이러한 규칙이 적용됩니다.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:902
+msgid "Select to enable Paypal verification"
+msgstr "PayPal 확인을 활성화하려면 선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:907
+msgid "Block Downloads"
+msgstr "다운로드 차단"
+
+#: anti-fraud-core/class-wc-af-settings.php:911
+msgid "Prevent digital downloads if verification failed or still processing"
+msgstr "확인에 실패했거나 아직 처리 중인 경우 디지털 다운로드 방지"
+
+#: anti-fraud-core/class-wc-af-settings.php:916
+msgid "Verification Retry"
+msgstr "확인 재시도"
+
+#: anti-fraud-core/class-wc-af-settings.php:918
+msgid ""
+"Number of days that have to pass before sending another email if the order "
+"is still waiting for verification"
+msgstr ""
+"주문이 아직 확인 대기 중인 경우 다른 이메일을 보내기 전에 경과해야 하는 일수"
+
+#: anti-fraud-core/class-wc-af-settings.php:929
+msgid "Auto Cancellation Days"
+msgstr "자동 취소일"
+
+#: anti-fraud-core/class-wc-af-settings.php:931
+msgid ""
+"Orders that are not verified within the given number of days will be "
+"automatically cancelled"
+msgstr "지정된 일수 이내에 확인되지 않은 주문은 자동으로 취소됩니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:942
+msgid "Paypal verified addresses"
+msgstr "페이팔 인증 주소"
+
+#: anti-fraud-core/class-wc-af-settings.php:944
+msgid "Verified email addresses"
+msgstr "확인된 이메일 주소"
+
+#: anti-fraud-core/class-wc-af-settings.php:954
+msgid "Email Template"
+msgstr "이메일 템플릿"
+
+#: anti-fraud-core/class-wc-af-settings.php:956
+msgid ""
+"Configure the email template below. The following tags can be embedded in "
+"the template fields:<br/><br/><b>{site_title}</b> - replaced with the "
+"Wordpress Site Title<br/><b>{site_email}</b> - replaced with the Wordpress "
+"site admin email address"
+msgstr ""
+"아래 이메일 템플릿을 구성하세요. 템플릿 필드에 다음 태그를 삽입할 수 있습니"
+"다.<br/><br/><b>{site_title}</b> - Wordpress 사이트 제목으로 대체됨<br/"
+"><b>{site_email}</b> - WordPress 사이트 관리자 이메일 주소로 대체됨"
+
+#: anti-fraud-core/class-wc-af-settings.php:962
+msgid "Email Type"
+msgstr "이메일 유형"
+
+#: anti-fraud-core/class-wc-af-settings.php:968
+msgid "Emails can be sent either as plain text or HTML"
+msgstr "이메일은 일반 텍스트 또는 HTML로 보낼 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:976
+msgid "The subject of the email that will be sent to the purchaser"
+msgstr "구매자에게 발송될 이메일의 제목"
+
+#: anti-fraud-core/class-wc-af-settings.php:979
+msgid "[{site_title}] Confirm your PayPal email address"
+msgstr "[{site_title}] PayPal 이메일 주소를 확인하세요"
+
+#: anti-fraud-core/class-wc-af-settings.php:983
+msgid "Email body"
+msgstr "이메일 본문"
+
+#: anti-fraud-core/class-wc-af-settings.php:985
+msgid ""
+"Enter the body of the email to be sent to the purchaser in the text area "
+"below:"
+msgstr "아래 텍스트 영역에 구매자에게 보낼 이메일 본문을 입력하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:988
+msgid ""
+"Hi!We have received your order on {site_title}, but to complete we have to "
+"verify your PayPal email address.If you havent made or authorized any "
+"purchase, please, contact PayPal support service immediately,and email us to "
+"{site_email} for having your money back."
+msgstr ""
+"안녕하세요!{site_title}에서 주문을 받았지만 완료하려면 PayPal 이메일 주소를 "
+"확인해야 합니다. 구매를 하지 않았거나 구매를 승인하지 않은 경우 즉시 PayPal "
+"지원 서비스에 문의하고 {site_email}로 이메일을 보내 문의해 주세요. 돈을 돌려"
+"주세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1005
+msgid ""
+"General behaviours of the Anti Fraud plugin are configured on this page.<hr/>"
+msgstr "Anti Fraud 플러그인의 일반적인 동작은 이 페이지에서 구성됩니다.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1011
+msgid "Set Risk Thresholds"
+msgstr "위험 임계값 설정"
+
+#: anti-fraud-core/class-wc-af-settings.php:1013
+msgid ""
+"There are three risk thresholds.  Low, Medium and High.   In this section "
+"you can define where the boundary point between those thresholds.   The "
+"maximum risk score is 100, the minimum is 0.<br/>"
+msgstr ""
+"세 가지 위험 임계값이 있습니다. 낮음, 중간, 높음. 이 섹션에서는 해당 임계값 "
+"사이의 경계 지점을 정의할 수 있습니다. 최대 위험 점수는 100이고 최소 위험 점"
+"수는 0입니다.<br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1014
+msgid ""
+"There are three risk thresholds: Low, Medium and High. In this section, you "
+"can define where the boundary point between those thresholds. The maximum "
+"risk score is 100, the minimum is 0. Orders are considered Low, Medium, and "
+"High Risk Orders based on these values."
+msgstr ""
+"위험 임계값에는 낮음, 중간, 높음의 세 가지가 있습니다. 이 섹션에서는 해당 임"
+"계값 사이의 경계 지점을 정의할 수 있습니다. 최대 위험 점수는 100이고 최소 위"
+"험 점수는 0입니다. 주문은 이러한 값을 기준으로 낮음, 중간, 높음 위험 주문으"
+"로 간주됩니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1020
+msgid "Medium Risk threshold"
+msgstr "중간 위험 임계값"
+
+#: anti-fraud-core/class-wc-af-settings.php:1025
+msgid ""
+"The threshold between Low and Medium Risk Score. Move the left handle on "
+"slider or update the value in text field to set the boundary between Low and "
+"Medium-Risk orders. Risk Score less than this value is Low-Risk order and a "
+"greater value is the starting point of Medium Risk Orders."
+msgstr ""
+"낮음과 중간 위험 점수 사이의 임계값입니다. 슬라이더의 왼쪽 핸들을 이동하거나 "
+"텍스트 필드의 값을 업데이트하여 낮음 및 중간 위험 주문 사이의 경계를 설정하세"
+"요. 이 값보다 낮은 위험 점수는 저위험 주문이고 더 큰 값은 중간 위험 주문의 시"
+"작점입니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1034
+msgid "High Risk threshold"
+msgstr "고위험 임계값"
+
+#: anti-fraud-core/class-wc-af-settings.php:1037
+msgid ""
+"This is a threshold between Medium and High-Risk Score. Slide the right "
+"handle on slider or update the value in text field to set the boundary "
+"between Medium and High-Risk orders. Risk Score less than this value is the "
+"end point of Medium-Risk order and a greater value is High-Risk order."
+msgstr ""
+"이는 중간 위험 점수와 고위험 점수 사이의 임계값입니다. 슬라이더의 오른쪽 핸들"
+"을 밀거나 텍스트 필드의 값을 업데이트하여 중간 위험 주문과 고위험 주문 사이"
+"의 경계를 설정하세요. 이 값보다 작은 위험 점수는 중간 위험 주문의 종료 지점이"
+"고 더 큰 값은 고위험 주문입니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1048
+msgid "Enable debug logging"
+msgstr "디버그 로깅 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:1060
+msgid "Pre-Purchase Assessment"
+msgstr "구매 전 평가"
+
+#: anti-fraud-core/class-wc-af-settings.php:1063
+msgid ""
+"Evaluate customers before making the actual payment.  If the fraud score "
+"reaches a high-risk order range before making payment, the customer order "
+"will be denied in advance, and a custom message appears on the checkout page "
+"explaining buyer the reason for denial."
+msgstr ""
+"실제 결제를 하기 전에 고객을 평가하세요. 결제 전 사기 점수가 고위험 주문 범위"
+"에 도달할 경우 고객 주문이 사전 거부되며, 결제 페이지에 구매자에게 거부 사유"
+"를 설명하는 맞춤 메시지가 표시됩니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1069
+msgid "Pre-Payment Checking"
+msgstr "선불 확인"
+
+#: anti-fraud-core/class-wc-af-settings.php:1074
+msgid ""
+"Enable pre-payment checking to assess fraud before making payment and block "
+"buyers with high fraud risk from placing any order and notify them via alert "
+"message."
+msgstr ""
+"선불 확인을 활성화하여 결제하기 전에 사기를 평가하고 사기 위험이 높은 구매자"
+"가 주문을 하지 못하도록 차단하고 경고 메시지를 통해 알립니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1079
+msgid "Notification message for Blocked users"
+msgstr "차단된 사용자에 대한 알림 메시지"
+
+#: anti-fraud-core/class-wc-af-settings.php:1083
+#: woocommerce-anti-fraud.php:1362
+msgid ""
+"Website Administrator does not allow you to place this order. Please contact "
+"our support team. Sorry for any inconvenience."
+msgstr ""
+"웹사이트 관리자는 귀하가 이 주문을 하는 것을 허용하지 않습니다. 지원팀에 문의"
+"하세요. 불편을 끼쳐 드려 죄송합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1085
+msgid ""
+"Adds a custom alert message for blocked users on Pre-Payment Check. This "
+"message will be shown to the user on the checkout page while they attempt to "
+"pay."
+msgstr ""
+"선불수표 차단 사용자에 대한 맞춤 알림 메시지를 추가합니다. 이 메시지는 사용자"
+"가 결제를 시도하는 동안 결제 페이지에서 사용자에게 표시됩니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1095
+msgid "Change Order Status based on Risk Score"
+msgstr "위험 점수에 따른 변경 주문 상태"
+
+#: anti-fraud-core/class-wc-af-settings.php:1098
+msgid ""
+"Updates order status to cancel and/or on-hold when order passes a certain "
+"Risk Score threshold."
+msgstr ""
+"주문이 특정 위험 점수 임계값을 통과할 경우 취소 및/또는 보류되도록 주문 상태"
+"를 업데이트합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1104
+msgid "Update Order Status based on Fraud Score"
+msgstr "사기 점수를 기준으로 주문 상태 업데이트"
+
+#: anti-fraud-core/class-wc-af-settings.php:1109
+msgid "Enable to cancel and/or put orders on hold based on Risk Score."
+msgstr "위험 점수에 따라 주문을 취소 및/또는 보류할 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1113
+msgid "Weighting to Cancel Order"
+msgstr "주문 취소에 대한 가중치"
+
+#: anti-fraud-core/class-wc-af-settings.php:1118
+msgid ""
+"Orders with a score equal to or greater than this value will be "
+"automatically cancelled. <br/> To disable it, slide the slider to the "
+"extreme left or Select 0."
+msgstr ""
+"이 값보다 점수가 높은 주문은 자동으로 취소됩니다. <br/> 비활성화하려면 슬라이"
+"더를 맨 왼쪽으로 밀거나 0을 선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1124
+msgid "Weighting to put Order On-hold"
+msgstr "주문 보류에 대한 가중치"
+
+#: anti-fraud-core/class-wc-af-settings.php:1128
+msgid ""
+"Orders with a score equal to or greater than this number will be "
+"automatically set on hold. <br/> To disable it, slide the slider to the "
+"extreme left or Select 0."
+msgstr ""
+"점수가 이 숫자 이상인 주문은 자동으로 보류 상태로 설정됩니다. <br/> 비활성화"
+"하려면 슬라이더를 맨 왼쪽으로 밀거나 0을 선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1139
+msgid "Whitelist Payment Methods"
+msgstr "화이트리스트 결제 방법"
+
+#: anti-fraud-core/class-wc-af-settings.php:1142
+msgid ""
+"Payments made via the whitelisted payment methods will bypass anti-fraud’s "
+"rule to change order status based on risk score."
+msgstr ""
+"화이트리스트에 등록된 결제 방법을 통해 이루어진 결제는 사기 방지 규칙을 우회"
+"하여 위험 점수에 따라 주문 상태를 변경합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1148
+msgid "Enable Whitelisting of Payment Methods"
+msgstr "결제 수단 화이트리스트 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:1152
+msgid "Enable to add payment methods to the whitelist."
+msgstr "화이트리스트에 결제 수단을 추가하려면 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1157
+msgid "Select Payment Methods to be Whitelisted"
+msgstr "화이트리스트에 추가할 결제 방법을 선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1161
+msgid ""
+"Press “Ctrl” or “Command” key and click multiple payment methods to "
+"whitelist and scroll down to select more payment methods"
+msgstr ""
+"\"Ctrl\" 또는 \"Command\" 키를 누르고 여러 결제 방법을 클릭하여 허용 목록에 "
+"추가한 다음 아래로 스크롤하여 추가 결제 방법을 선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1171
+msgid "User Roles Whitelisting"
+msgstr "사용자 역할 화이트리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:1174
+msgid ""
+"Filter accounts with different user roles to bypass Anti-fraud scoring "
+"system."
+msgstr ""
+"사기 방지 점수 시스템을 우회하기 위해 다양한 사용자 역할을 가진 계정을 필터링"
+"합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1180
+msgid "Enable Whitelisting of User Roles"
+msgstr "사용자 역할 화이트리스트 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:1184
+msgid "Enable it to activate whitelisting of User Roles."
+msgstr "사용자 역할의 화이트리스트를 활성화하려면 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1189
+msgid "Select User Roles to be Whitelisted"
+msgstr "화이트리스트에 추가할 사용자 역할 선택"
+
+#: anti-fraud-core/class-wc-af-settings.php:1193
+msgid ""
+"Press “Ctrl” or “Command” key and click one or multiple user roles to "
+"whitelist. Scroll up/down to select and see more user roles if any."
+msgstr ""
+"\"Ctrl\" 또는 \"Command\" 키를 누르고 화이트리스트에 추가할 사용자 역할을 하"
+"나 이상 클릭하세요. 위/아래로 스크롤하여 선택하고 더 많은 사용자 역할이 있는 "
+"경우 확인하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1195
+msgid "Select roles"
+msgstr "역할 선택"
+
+#: anti-fraud-core/class-wc-af-settings.php:1204
+msgid "Whitelisted Emails"
+msgstr "화이트리스트에 포함된 이메일"
+
+#: anti-fraud-core/class-wc-af-settings.php:1207
+msgid ""
+"List of Emails whitelitsted. Add emails manullay to make whitlist. Unblocked "
+"emails also added to this list."
+msgstr ""
+"허용된 이메일 목록입니다. 화이트리스트를 만들려면 이메일 manullay를 추가하세"
+"요. 차단 해제된 이메일도 이 목록에 추가되었습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1213
+msgid "Email Whitelist"
+msgstr "이메일 허용 목록"
+
+#: anti-fraud-core/class-wc-af-settings.php:1216
+msgid ""
+"Enter any email you want to be whitelisted. Press “Tab” or “Comma” after "
+"entering any new email. Please add emails in bulk separating them by either "
+"comma or space."
+msgstr ""
+"화이트리스트에 추가하려는 이메일을 입력하세요. 새 이메일을 입력한 후 “Tab” 또"
+"는 “쉼표”를 누르세요. 이메일을 쉼표나 공백으로 구분하여 대량으로 추가하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1230
+msgid "Whitelisted IPs"
+msgstr "화이트리스트에 있는 IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:1233
+msgid ""
+"List of IPs whitelitsted. Add IPs manullay to make whitlist. Unblocked IPs "
+"also added to this list."
+msgstr ""
+"허용된 IP 목록입니다. 화이트리스트를 만들려면 IP manullay를 추가하세요. 차단 "
+"해제된 IP도 이 목록에 추가되었습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1239
+msgid "IPs Whitelist"
+msgstr "IP 화이트리스트"
+
+#: anti-fraud-core/class-wc-af-settings.php:1242
+msgid ""
+"Enter any IPs you want to be whitelisted. Press “Tab” or “Comma” after "
+"entering any new IPs. Please add emails in bulk separating them by either "
+"comma or space."
+msgstr ""
+"화이트리스트에 추가할 IP를 입력하세요. 새 IP를 입력한 후 “Tab” 또는 "
+"“Comma”를 누르세요. 이메일을 쉼표나 공백으로 구분하여 대량으로 추가하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1257
+msgid "Auto Fraud Check For Existing Orders"
+msgstr "기존 주문에 대한 자동 사기 검사"
+
+#: anti-fraud-core/class-wc-af-settings.php:1260
+msgid ""
+"In this section, customers can enable this setting to check fraud for a "
+"previous order, when the Anti Fraud plugin is not installed and an order was "
+"placed within 7 days old."
+msgstr ""
+"이 섹션에서 고객은 사기 방지 플러그인이 설치되지 않았고 주문이 7일 이내에 접"
+"수된 경우 이 설정을 활성화하여 이전 주문에 대한 사기를 확인할 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1266
+msgid "Enable Auto Fraud Check"
+msgstr "자동 사기 검사 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:1270
+msgid ""
+"Enable it to check fraud for a previous order, that orders, when the "
+"Antifraud plugin was not installed."
+msgstr ""
+"Antifraud 플러그인이 설치되지 않은 경우 이전 주문, 해당 주문에 대한 사기를 확"
+"인하려면 이 기능을 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1276
+msgid "No Of Days For Historical Orders Checks"
+msgstr "과거 주문 확인 일수"
+
+#: anti-fraud-core/class-wc-af-settings.php:1279
+msgid ""
+"The Merchant can enter the number of days for historical orders check. The "
+"default number of days is 7 days."
+msgstr ""
+"판매자는 과거 주문 확인을 위한 일수를 입력할 수 있습니다. 기본 일 수는 7일입"
+"니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1298
+msgid "Enable Debug Logging"
+msgstr "디버그 로깅 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:1301
+msgid ""
+"In this section, customers can enable this setting to create log file and it "
+"can seen from WooCommerce >> Status >> Log."
+msgstr ""
+"이 섹션에서 고객은 이 설정을 활성화하여 로그 파일을 생성할 수 있으며 "
+"WooCommerce >> 상태 >> 로그에서 볼 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1307
+msgid "Enable Debug Log"
+msgstr "디버그 로그 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:1311
+msgid "Enable it to record the debugging data."
+msgstr "디버깅 데이터를 기록하려면 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1350
+#: anti-fraud-core/tamplate-admin-settings-page.php:401
+msgid "General Rules"
+msgstr "일반 규칙"
+
+#: anti-fraud-core/class-wc-af-settings.php:1352
+msgid ""
+"Each rule that is matched will add the configured &quot;Rule Weight&quot; "
+"value to the overall fraud score.  In this section you can configure general "
+"fraud detection rules.<hr/>"
+msgstr ""
+"일치하는 각 규칙은 구성된 &quot;규칙 가중치&quot;를 추가합니다. 전체 사기 점"
+"수에 대한 가치입니다. 이 섹션에서는 일반 사기 탐지 규칙을 구성할 수 있습니다."
+"<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1357
+msgid "First Time Purchase Rules"
+msgstr "최초 구매 규칙"
+
+#: anti-fraud-core/class-wc-af-settings.php:1359
+#: anti-fraud-core/class-wc-af-settings.php:1360
+msgid ""
+"Rule set for Buyers who are purchasing from your website for the first time."
+msgstr "귀하의 웹사이트에서 처음으로 구매하는 구매자를 위한 규칙입니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1367
+msgid "First Purchase on Website"
+msgstr "웹사이트에서 첫 구매"
+
+#: anti-fraud-core/class-wc-af-settings.php:1372
+msgid ""
+"Enable it to identify customers purchasing from your website for the first "
+"time."
+msgstr "처음으로 웹사이트에서 구매하는 고객을 식별하려면 이를 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1376
+msgid "First Purchase Rule Weight"
+msgstr "첫 번째 구매 규칙 가중치"
+
+#: anti-fraud-core/class-wc-af-settings.php:1389
+msgid "Re-Check First Orders in Processing State?"
+msgstr "처리 상태에서 첫 번째 주문을 다시 확인하시겠습니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1394
+msgid ""
+"Enable it to perform first-order re-check on orders in processing state."
+msgstr "처리 중인 주문에 대해 1차 재확인을 수행하려면 이 기능을 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1417
+msgid "IP, Billing and Shipping Address-based Rules"
+msgstr "IP, 청구서 수신 및 배송 주소 기반 규칙"
+
+#: anti-fraud-core/class-wc-af-settings.php:1420
+msgid ""
+"Rules set for identifying fraudulent orders triggering risks based on IP, "
+"billing and shipping addresses."
+msgstr ""
+"IP, 청구서 수신 및 배송 주소를 기반으로 위험을 유발하는 사기 주문을 식별하기 "
+"위해 설정된 규칙입니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1428
+msgid "Does Geo Location Match?"
+msgstr "지리적 위치가 일치합니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1433
+msgid ""
+"Enable it to identify that customer's shipping/billing state matches the "
+"state provided by Geo Location."
+msgstr ""
+"고객의 배송/청구 상태가 지리적 위치에서 제공한 상태와 일치하는지 식별하려면 "
+"이를 활성화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1451
+msgid "API Key for bigdatacloud.com"
+msgstr "bigdatacloud.com용 API 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:1453
+msgid ""
+"Don't have bigdatacloud.com account? <a href=\"https://www.bigdatacloud.com/"
+"\" target=\"_blank\">Signup here</a><br/>Get 50K requests per month for "
+"free. Upgrade for more."
+msgstr ""
+"bigdatacloud.com 계정이 없나요? <a href=\"https://www.bigdatacloud.com/\" "
+"target=\"_blank\">여기에서 가입</a><br/>월 50,000개의 요청을 무료로 받으세"
+"요. 더 많은 것을 원하시면 업그레이드하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1454
+msgid ""
+"You can use bigdatacloud.com to get accurate address via customer Lat and "
+"Long and its required to use geo location rule."
+msgstr ""
+"bigdatacloud.com을 사용하면 고객 위도 및 경도를 통해 정확한 주소를 얻을 수 있"
+"으며 지리적 위치 규칙을 사용해야 합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1460
+msgid "Are Billing and Shipping Addresses Same?"
+msgstr "청구서 수신 주소와 배송 주소가 동일합니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1465
+msgid "Enable to identify difference between billing and shipping addresses."
+msgstr "청구서 수신 주소와 배송 주소 간의 차이를 식별할 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1482
+msgid "Enable Phone Number and Billing Country Check"
+msgstr "전화번호 및 청구지 국가 확인 활성화"
+
+#: anti-fraud-core/class-wc-af-settings.php:1487
+msgid ""
+"If you enable this rule, then it is highly recommended that you use a "
+"separate Phone Number Validation plugin to make sure your customers specify "
+"a correct international phone number format on the checkout page. Else, this "
+"rule will treat an invalid phone number as a risk."
+msgstr ""
+"이 규칙을 활성화하는 경우 별도의 전화번호 확인 플러그인을 사용하여 고객이 결"
+"제 페이지에서 올바른 국제 전화번호 형식을 지정했는지 확인하는 것이 좋습니다. "
+"그렇지 않으면 이 규칙은 잘못된 전화번호를 위험으로 간주합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1496
+msgid "Weight of the single rule in the total calculation of risk."
+msgstr "전체 위험 계산에서 단일 규칙의 가중치입니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1506
+msgid "Is Customer behind Proxy or VPN?"
+msgstr "고객이 프록시 또는 VPN을 사용하고 있습니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1511
+msgid "Check if the customer is behind either a proxy or a VPN"
+msgstr "고객이 프록시나 VPN 뒤에 있는지 확인하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1534
+msgid "Multiple Orders Attempts using Different Addresses from Same IP"
+msgstr "동일한 IP의 다른 주소를 사용하여 여러 번 주문 시도"
+
+#: anti-fraud-core/class-wc-af-settings.php:1537
+msgid ""
+"Rule to check buyer is ordering products using different addresses from the "
+"same IP over a certain period from your store."
+msgstr ""
+"구매자를 확인하는 규칙은 귀하의 매장에서 일정 기간 동안 동일한 IP의 다른 주소"
+"를 사용하여 제품을 주문하는 것입니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1543
+msgid ""
+"Purchased from same IP but Different Customer Addresses?\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"동일한 IP에서 구매했지만 고객 주소가 다른가요?\n"
+"\t\t\t\t\t\t\t"
+
+#: anti-fraud-core/class-wc-af-settings.php:1552
+msgid ""
+"Enable this rule to monitor if multiple orders with different billing or "
+"shipping addresses have originated from the same IP address. Make sure to "
+"set time span of checking."
+msgstr ""
+"청구서 수신 주소나 배송 주소가 서로 다른 여러 주문이 동일한 IP 주소에서 시작"
+"되었는지 모니터링하려면 이 규칙을 활성화하세요. 확인 기간을 반드시 설정하세"
+"요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1569
+msgid "Past Number of Days to Check "
+msgstr "지난 확인 일수"
+
+#: anti-fraud-core/class-wc-af-settings.php:1572
+msgid ""
+"The number of days in the past to check IP addresses and different physical "
+"addresses."
+msgstr "IP 주소와 다른 물리적 주소를 확인하기 위해 지난 일수입니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1588
+msgid "Origin Countries"
+msgstr "원산지 국가"
+
+#: anti-fraud-core/class-wc-af-settings.php:1591
+msgid ""
+"International orders tend to have a higher fraud risk than orders that "
+"originate in your home country. Merchants often find that certain origin "
+"countries have a higher potential for fraud. These Rule sets help manage "
+"such risks."
+msgstr ""
+"해외 주문은 본국에서 주문한 것보다 사기 위험이 더 높은 경향이 있습니다. 판매"
+"자는 종종 특정 원산지 국가에서 사기 가능성이 더 높다는 사실을 발견합니다. 이"
+"러한 규칙 세트는 그러한 위험을 관리하는 데 도움이 됩니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1597
+msgid "Is it International Order?"
+msgstr "국제질서인가?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1602
+msgid ""
+"Enable to check if the order originates from outside of your store's home "
+"country."
+msgstr ""
+"매장이 위치한 국가가 아닌 곳에서 주문이 이루어졌는지 확인할 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1619
+msgid "Is Order from High-Risk Country?"
+msgstr "고위험 국가의 주문인가요?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1624
+msgid ""
+"Enable it to check if orders originate from unsafe countries. Select unsafe "
+"countries from the list below."
+msgstr ""
+"안전하지 않은 국가에서 주문이 이루어졌는지 확인하려면 이 기능을 활성화하세"
+"요. 아래 목록에서 안전하지 않은 국가를 선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1641
+msgid "Mark Unsafe Countries"
+msgstr "안전하지 않은 국가로 표시"
+
+#: anti-fraud-core/class-wc-af-settings.php:1644
+msgid ""
+"Press Ctrl or ⌘ key and select multiple countries that you think are unsafe "
+"for your area of service."
+msgstr ""
+"Ctrl 또는 ⌘ 키를 누르고 서비스 지역에서 안전하지 않다고 생각되는 여러 국가를 "
+"선택하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1657
+msgid "High-Risk Email Domains"
+msgstr "고위험 이메일 도메인"
+
+#: anti-fraud-core/class-wc-af-settings.php:1660
+msgid ""
+"Merchants often find that certain email domains have a higher potential for "
+"fraud. These Rule sets will help you manage High-Risk Email Domains.<br/"
+">Identify High-Risk Domains by manually adding such email domains to High-"
+"Risk Domain section and/or using QuickEmailVerification.com API key to make "
+"this operation automatic."
+msgstr ""
+"판매자는 종종 특정 이메일 도메인이 사기 가능성이 더 높다는 사실을 발견합니"
+"다. 이러한 규칙 세트는 고위험 이메일 도메인을 관리하는 데 도움이 됩니다.<br/>"
+"이러한 이메일 도메인을 고위험 도메인 섹션에 수동으로 추가하거나 "
+"QuickEmailVerification.com API 키를 사용하여 이 작업을 자동으로 수행하여 고위"
+"험 도메인을 식별합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1666
+msgid "Is Suspicious / High-Risk Email Domain?"
+msgstr "의심스럽거나 위험성이 높은 이메일 도메인인가요?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1671
+msgid ""
+"Enable it to check if customer's email address originates from any high-risk "
+"domain listed below and/or add API for “quickemailverification. com” for "
+"automatic checking"
+msgstr ""
+"고객의 이메일 주소가 아래 나열된 고위험 도메인에서 유래했는지 확인하거나 '빠"
+"른 메일 확인'을 위한 API를 추가하려면 활성화하세요. com” 자동 검사"
+
+#: anti-fraud-core/class-wc-af-settings.php:1688
+msgid "High-Risk Domains"
+msgstr "고위험 도메인"
+
+#: anti-fraud-core/class-wc-af-settings.php:1691
+msgid ""
+"Enter any email origin domains you consider to be high-risk. Press “Tab” or "
+"“Comma” after entering any new domain."
+msgstr ""
+"위험도가 높다고 생각되는 이메일 원본 도메인을 입력하세요. 새 도메인을 입력한 "
+"후 “Tab” 또는 “쉼표”를 누르세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1698
+msgid "API Key for quickemailverification.com"
+msgstr "Quickemailverification.com용 API 키"
+
+#: anti-fraud-core/class-wc-af-settings.php:1700
+msgid ""
+"Don't have quickemailverification account? <a href=\"\">Signup here</a><br/"
+">Verify 50 emails for free. Upgrade if you want more"
+msgstr ""
+"빠른 이메일 확인 계정이 없나요? <a href=\"\">여기에서 가입하세요</a><br/>50개"
+"의 이메일을 무료로 확인하세요. 더 원하시면 업그레이드하세요"
+
+#: anti-fraud-core/class-wc-af-settings.php:1701
+msgid ""
+"You can use quickemailverification.com to get more accurate results for "
+"false email domain-related checks. "
+msgstr ""
+"Quickemailverification.com을 사용하면 허위 이메일 도메인 관련 검사에 대한 보"
+"다 정확한 결과를 얻을 수 있습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1711
+msgid "Order Amounts and Attempts"
+msgstr "주문 금액 및 시도 횟수"
+
+#: anti-fraud-core/class-wc-af-settings.php:1714
+msgid ""
+"The rules in this section are triggered based on defined order amounts and "
+"by counting attempted orders. You can also limit orders within a certain "
+"time frame. Orders with unusually high values, or customers who make an "
+"excessive number of transactions in a short period are more likely to be "
+"fraudulent."
+msgstr ""
+"이 섹션의 규칙은 정의된 주문 금액을 기반으로 하고 시도된 주문을 계산하여 트리"
+"거됩니다. 특정 기간 내에 주문을 제한할 수도 있습니다. 비정상적으로 높은 금액"
+"의 주문이나 단기간에 과도한 거래를 하는 고객은 사기일 가능성이 더 높습니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1720
+msgid "Order Amount is Above Average?"
+msgstr "주문 금액이 평균 이상인가요?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1725
+msgid ""
+"Check if order significantly exceeds the average order amount for your site. "
+"Set multiplier value to trigger this rule when order place is value times "
+"greater than an average order."
+msgstr ""
+"주문이 사이트의 평균 주문 금액을 크게 초과하는지 확인하세요. 주문 장소가 평"
+"균 주문보다 가치 배 더 큰 경우 이 규칙을 트리거하려면 승수 값을 설정하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1742
+msgid "Average Multiplier"
+msgstr "평균 승수"
+
+#: anti-fraud-core/class-wc-af-settings.php:1745
+msgid ""
+"Enter the multiplier value to check amount over average transaction value "
+"that will trigger the rule (expressed as a multiplier). For example, if you "
+"want to limit orders that are 2 times greater than the average value of "
+"orders, set the multiplier value to 2."
+msgstr ""
+"규칙을 적용할 평균 거래 금액 대비 금액을 확인하려면 승수 값을 입력합니다(승수"
+"로 표시). 예를 들어 평균 주문 금액의 2배로 주문을 제한하려면 승수 값을 2로 설"
+"정하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1755
+msgid "Order Exceeds Maximum Amount Limit?"
+msgstr "주문이 최대 금액 한도를 초과합니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1760
+msgid ""
+"Enable this rule to confirm that the total amount of the order does not "
+"exceed maximum configured amount below."
+msgstr ""
+"주문 총액이 아래 구성된 최대 금액을 초과하지 않는지 확인하려면 이 규칙을 활성"
+"화하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1777
+msgid "Amount Limit ($)"
+msgstr "금액 한도($)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1780
+msgid "Enter the maximum amount of purchase accepted in your store."
+msgstr "매장에서 허용되는 최대 구매 금액을 입력하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:1787
+msgid "Too many order attempts?"
+msgstr "주문 시도 횟수가 너무 많나요?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1792
+msgid ""
+"Enabling this rule allows you to limit number of orders per user within the "
+"time span configured below."
+msgstr ""
+"이 규칙을 활성화하면 아래 구성된 기간 내에 사용자당 주문 수를 제한할 수 있습"
+"니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1809
+msgid "Time Span to Check (hours)"
+msgstr "확인할 시간 범위(시간)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1812
+msgid "Enter number of hours you want to check "
+msgstr "확인하고 싶은 시간을 입력하세요"
+
+#: anti-fraud-core/class-wc-af-settings.php:1818
+msgid "Maximum Allowed Number of Orders in Time Span?"
+msgstr "시간 범위 내 최대 허용 주문 수는 무엇입니까?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1821
+msgid ""
+"Enter a total number of orders that a buyer can make in the specified time "
+"span."
+msgstr "지정된 기간 동안 구매자가 할 수 있는 총 주문 수를 입력합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1832
+msgid "Limit Number of Orders between Time"
+msgstr "시간 간 주문 수 제한"
+
+#: anti-fraud-core/class-wc-af-settings.php:1837
+msgid ""
+"Enabling this rule limits the number of orders to be placed within a certain "
+"period of the day."
+msgstr ""
+"이 규칙을 활성화하면 하루 중 특정 기간 내에 접수되는 주문 수가 제한됩니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:1841
+msgid "Start Time "
+msgstr "시작 시간"
+
+#: anti-fraud-core/class-wc-af-settings.php:1844
+msgid ""
+"Needs to be as per server time. Check in woo general settings. Accordingly "
+"specify start time."
+msgstr ""
+"서버 시간에 따라야 합니다. 우 일반 설정을 확인하세요. 따라서 시작 시간을 지정"
+"하십시오."
+
+#: anti-fraud-core/class-wc-af-settings.php:1850
+msgid "End Time "
+msgstr "종료 시간"
+
+#: anti-fraud-core/class-wc-af-settings.php:1853
+msgid ""
+"Needs to be as per server time. Check in woo general settings. Accordingly "
+"specify end time."
+msgstr ""
+"서버 시간에 따라야 합니다. 우 일반 설정을 확인하세요. 따라서 종료 시간을 지정"
+"하십시오."
+
+#: anti-fraud-core/class-wc-af-settings.php:1859
+msgid "Maximum Allowed Number of Orders Between Time"
+msgstr "시간 사이에 허용되는 최대 주문 수"
+
+#: anti-fraud-core/class-wc-af-settings.php:1862
+msgid ""
+"Enter maximum number of orders that can be placed during specified time span."
+msgstr "지정된 기간 동안 접수할 수 있는 최대 주문 수를 입력하세요."
+
+#: anti-fraud-core/class-wc-af-settings.php:2013 assets/js/app.js:253
+msgid "Low Risk Order"
+msgstr "저위험 주문"
+
+#: anti-fraud-core/class-wc-af-settings.php:2015 assets/js/app.js:255
+msgid "Medium Risk Order"
+msgstr "중간 위험 주문"
+
+#: anti-fraud-core/class-wc-af-settings.php:2017 assets/js/app.js:257
+msgid "High Risk Order"
+msgstr "고위험 주문"
+
+#: anti-fraud-core/class-wc-af-settings.php:2019 assets/js/app.js:259
+msgid "Disabled"
+msgstr "장애가 있는"
+
+#: anti-fraud-core/class-wc-af-settings.php:2026
+msgid "No Importance"
+msgstr "중요하지 않음"
+
+#: anti-fraud-core/class-wc-af-settings.php:2027
+msgid "Moderate"
+msgstr "보통의"
+
+#: anti-fraud-core/class-wc-af-settings.php:2028
+msgid "High Importance"
+msgstr "높은 중요성"
+
+#: anti-fraud-core/class-wc-af-settings.php:2174
+msgid "Your Account Id or License Key could not be authenticated!!"
+msgstr "귀하의 계정 ID 또는 라이센스 키를 인증할 수 없습니다!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2189
+msgid "Great, authenticated successfully!!"
+msgstr "좋습니다. 성공적으로 인증되었습니다!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2332
+msgid "Your Quickemailverification API Key could not be authenticated!!"
+msgstr "Quickemailverification API 키를 인증할 수 없습니다!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2347
+msgid "Great, Quickemailverification authenticated successfully!!"
+msgstr "좋습니다. 빠른 이메일 확인이 성공적으로 인증되었습니다!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2362
+msgid ""
+"Great, Quickemailverification authenticated successfully but you don't have "
+"enough credit to use this service."
+msgstr ""
+"좋습니다. Quickemailverification이 성공적으로 인증되었지만 이 서비스를 사용하"
+"기에는 크레딧이 부족합니다."
+
+#: anti-fraud-core/class-wc-af-settings.php:2429
+msgid "Great, bigdatacloud authenticated successfully!"
+msgstr "좋습니다. bigdatacloud가 성공적으로 인증되었습니다!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2445 woocommerce-anti-fraud.php:397
+msgid ""
+"AntiFraud: Bigdatacloud credentials not authenticate or your quota limit has "
+"been exceeded!"
+msgstr ""
+"사기 방지: Bigdatacloud 자격 증명이 인증되지 않았거나 할당량 한도가 초과되었"
+"습니다!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2536
+msgid "Your Trust Swiftly API Key could not be authenticated!!"
+msgstr "Trust Swiftly API 키를 인증할 수 없습니다!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2551
+msgid "Your Trust Swiftly Base URL could not be validated!!"
+msgstr "귀하의 Trust Swiftly 기본 URL을 검증할 수 없습니다!!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2566
+msgid "Great, Trust Swiftly authenticated successfully!!"
+msgstr "좋습니다. Trust Swiftly가 성공적으로 인증되었습니다!!"
+
+#: anti-fraud-core/class-wc-af-trust-swiftly.php:292
+msgid " Please get verified with Trust Swiftly, and then try again."
+msgstr " Trust Swiftly로 인증을 받은 후 다시 시도해 보세요."
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:356
+msgid "Sr No"
+msgstr "아니요"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:357
+#: templates/dashboard.php:362
+msgid "Name"
+msgstr "이름"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:358
+msgid "Date"
+msgstr "날짜"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:359
+msgid "Action"
+msgstr "행동"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:385
+msgid "Download"
+msgstr "다운로드"
+
+#. translators: %s: learn more link
+#: includes/class-wc-af-privacy.php:19
+msgid ""
+"By using this extension, you may be storing personal data or sharing data "
+"with an external service. <a href=\"%s\" target=\"_blank\">Learn more about "
+"how this works, including what you may want to include in your privacy "
+"policy.</a>"
+msgstr ""
+"이 확장 프로그램을 사용하면 개인 데이터를 저장하거나 외부 서비스와 데이터를 "
+"공유할 수 있습니다. <a href=\"%s\" target=\"_blank\">개인정보 보호정책에 포함"
+"할 수 있는 내용을 포함하여 이것이 어떻게 작동하는지 자세히 알아보세요.</a>"
+
+#: rules/class-wc-af-rule-billing-matches-shipping.php:18
+msgid "Billing address does not match shipping address"
+msgstr "청구서 수신 주소가 배송 주소와 일치하지 않습니다."
+
+#: rules/class-wc-af-rule-billing-method.php:18
+msgid "Ordered from a risk billing_method"
+msgstr "위험 billing_method에서 주문됨"
+
+#: rules/class-wc-af-rule-billing-phone-matches-billing-country.php:17
+msgid "Billing phone number does not match with Billing country"
+msgstr "청구서 수신 전화번호가 청구서 수신 국가와 일치하지 않습니다."
+
+#: rules/class-wc-af-rule-country.php:18
+msgid "Ordered from a risk country"
+msgstr "위험 국가에서 주문됨"
+
+#: rules/class-wc-af-rule-detect-proxy.php:16
+msgid "Customer ordered from behind a proxy."
+msgstr "고객이 프록시 뒤에서 주문했습니다."
+
+#: rules/class-wc-af-rule-first-order-processing.php:17
+#: rules/class-wc-af-rule-first-order.php:16
+msgid "This is the customer's first order with this billing details."
+msgstr "이 청구 세부정보를 사용한 고객의 첫 번째 주문입니다."
+
+#: rules/class-wc-af-rule-free-email.php:20
+msgid "Email is a known free email address."
+msgstr "이메일은 알려진 무료 이메일 주소입니다."
+
+#: rules/class-wc-af-rule-geo-location.php:19
+msgid "Customer order geo location mismatches billing/shipping address."
+msgstr "고객 주문의 지리적 위치가 청구서 수신/배송 주소와 일치하지 않습니다."
+
+#: rules/class-wc-af-rule-high-amount.php:17
+msgid "Order exceeds maximum amount."
+msgstr "주문이 최대 금액을 초과했습니다."
+
+#: rules/class-wc-af-rule-international-order.php:17
+msgid "Order is an international order."
+msgstr "주문은 국제 주문입니다."
+
+#: rules/class-wc-af-rule-ip-location.php:19
+msgid "Customer IP address did not match given billing country."
+msgstr "고객 IP 주소가 지정된 청구서 수신 국가와 일치하지 않습니다."
+
+#: rules/class-wc-af-rule-ip-multiple-order-details.php:20
+msgid "IP address ordered with multiple order details in the past "
+msgstr "과거에 여러 주문 세부정보로 주문한 IP 주소"
+
+#: rules/class-wc-af-rule-minfraud-factors.php:18
+msgid "Score returned by Minfraud Factors exceeds the allowed value."
+msgstr "Minfraud Factors에서 반환된 점수가 허용된 값을 초과합니다."
+
+#: rules/class-wc-af-rule-minfraud-insights.php:18
+msgid "Score returned by Minfraud Insights exceeds the allowed value."
+msgstr "Minfraud Insights에서 반환된 점수가 허용된 값을 초과합니다."
+
+#: rules/class-wc-af-rule-minfraud.php:18
+msgid "Score returned by Minfraud exceeds the allowed value."
+msgstr "Minfraud에서 반환된 점수가 허용된 값을 초과합니다."
+
+#: rules/class-wc-af-rule-temporary-email.php:17
+msgid "Email address is from a high-risk domain."
+msgstr "이메일 주소가 고위험 도메인에서 왔습니다."
+
+#: rules/class-wc-af-rule-velocities.php:20
+msgid "IP address ordered multiple orders in the last "
+msgstr "IP 주소로 지난번에 여러 주문을 주문했습니다"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/af-admin-notice.php:25
+msgid "An order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "ID #%1$s 주문의 위험 점수는 %2$s입니다."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-admin-notice.php:31 templates/plain/af-admin-notice.php:13
+#: templates/plain/af-paypal-notice.php:14
+msgid "%1$sClick here to view the order.%2$s."
+msgstr "%1$s주문을 보려면 여기를 클릭하세요.%2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-paypal-notice.php:26
+msgid "%1$sClick here to verify the order.%2$s."
+msgstr "%1$s주문을 확인하려면 여기를 클릭하세요.%2$s."
+
+#: templates/dashboard.php:189
+msgid "Anti Fraud Dashboard"
+msgstr "사기 방지 대시보드"
+
+#: templates/dashboard.php:199
+msgid "Orders Detected"
+msgstr "감지된 주문"
+
+#: templates/dashboard.php:217
+msgid "Needs Attention"
+msgstr "주의가 필요함"
+
+#: templates/dashboard.php:230
+msgid "Recent Order Data"
+msgstr "최근 주문 데이터"
+
+#: templates/dashboard.php:244
+msgid "Last 24 Hours Update"
+msgstr "지난 24시간 업데이트"
+
+#: templates/dashboard.php:250
+msgid "Total Transaction Amount"
+msgstr "총 거래 금액"
+
+#: templates/dashboard.php:262
+msgid "Total Number of Orders"
+msgstr "총 주문 수"
+
+#: templates/dashboard.php:274
+msgid "Medium Risk Orders"
+msgstr "중간 위험 주문"
+
+#: templates/dashboard.php:286
+msgid "High-Risk Orders on Hold"
+msgstr "고위험 주문 보류"
+
+#: templates/dashboard.php:298
+msgid "Fraudulent Orders Cancelled"
+msgstr "사기 주문 취소"
+
+#: templates/dashboard.php:310
+msgid "High-Risk Net Transaction"
+msgstr "고위험 순거래"
+
+#: templates/dashboard.php:322
+msgid "Emails Blocked"
+msgstr "이메일이 차단되었습니다"
+
+#: templates/dashboard.php:334
+msgid "Paypal Verification"
+msgstr "페이팔 인증"
+
+#: templates/dashboard.php:364
+msgid "Spent"
+msgstr "지출"
+
+#: templates/dashboard.php:366
+msgid "Status"
+msgstr "상태"
+
+#: templates/dashboard.php:460
+msgid "Orders Breakdown"
+msgstr "주문 내역"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/plain/af-admin-notice.php:11
+msgid "Hi there. Order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "안녕하세요. ID #%1$s의 주문은 %2$s의 위험 점수를 받았습니다."
+
+#: woocommerce-anti-fraud.php:109
+msgid "Settings"
+msgstr "설정"
+
+#: woocommerce-anti-fraud.php:110
+msgid "Docs"
+msgstr "문서"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:339
+msgid ""
+"In order to continue %1$s\"Geo Location Match\"%2$s service, our provider "
+"Bigdatacloud now requires you to sign up and get the api key. To obtain an "
+"api key you can %3$sregister here%4$s."
+msgstr ""
+"%1$s'Geo Location Match'%2$s 서비스를 계속하려면 이제 당사 제공업체인 "
+"Bigdatacloud에서 가입하고 API 키를 받아야 합니다. API 키를 얻으려면 %3$s여기"
+"에 등록%4$s하세요."
+
+#: woocommerce-anti-fraud.php:935
+msgid "This email id is blocked."
+msgstr "이 이메일 ID는 차단되었습니다."
+
+#: woocommerce-anti-fraud.php:952
+msgid "This IP Address is blocked."
+msgstr "이 IP 주소는 차단되었습니다."
+
+#. translators: %s: order time span
+#: woocommerce-anti-fraud.php:1247
+msgid ""
+"You have reached maximum number of allowed orders in %d hours. Please try "
+"again later."
+msgstr ""
+"%d시간 안에 최대 허용 주문 수에 도달했습니다. 나중에 다시 시도 해주십시오."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:1877
+msgid ""
+"Please consider enabling reCaptcha in the Anti Fraud plugin %1$ssettings%2$s "
+"to help prevent Velocity attacks."
+msgstr ""
+"Velocity 공격을 방지하려면 Anti Fraud 플러그인 %1$ssettings%2$s에서 reCaptcha"
+"를 활성화하는 것이 좋습니다."
+
+#: woocommerce-anti-fraud.php:2223
+msgid "This email id is blocked"
+msgstr "이 이메일 ID는 차단되었습니다"
+
+#: woocommerce-anti-fraud.php:2225
+msgid "Unblock"
+msgstr "차단 해제"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:2261
+msgid ""
+"Please install and activate %1$sWooCommerce%2$s in order for the WooCommerce "
+"Anti Fraud extension to work!"
+msgstr ""
+"WooCommerce Anti Fraud 확장 프로그램이 작동하려면 %1$sWooCommerce%2$s를 설치"
+"하고 활성화하세요!"
+
+#: woocommerce-anti-fraud.php:2447 woocommerce-anti-fraud.php:2878
+msgid "Invalid recaptcha."
+msgstr "잘못된 재보안 문자입니다."
+
+#: woocommerce-anti-fraud.php:2452
+msgid "You are not a human, please refresh page."
+msgstr "당신은 인간이 아닙니다. 페이지를 새로고침하세요."
+
+#: woocommerce-anti-fraud.php:2461
+msgid "Could not get response from recaptcha server, please refresh page."
+msgstr "recaptcha 서버에서 응답을 받을 수 없습니다. 페이지를 새로고침하세요."
+
+#: woocommerce-anti-fraud.php:2464
+msgid "Recaptcha not responding, please refresh page."
+msgstr "Recaptcha가 응답하지 않습니다. 페이지를 새로고침하세요."
+
+#: woocommerce-anti-fraud.php:2481
+msgid "PayPal Verification Done."
+msgstr "PayPal 인증이 완료되었습니다."
+
+#: woocommerce-anti-fraud.php:2773
+msgid "Captcha"
+msgstr "보안 문자"
+
+#: woocommerce-anti-fraud.php:2794 woocommerce-anti-fraud.php:2893
+msgid "Recaptcha is a required field."
+msgstr "Recaptcha는 필수 항목입니다."
+
+#: woocommerce-anti-fraud.php:2889
+msgid "Could not get response from recaptcha server."
+msgstr "recaptcha 서버로부터 응답을 받을 수 없습니다."
+
+#: woocommerce-anti-fraud.php:2896
+msgid "Could not verify request."
+msgstr "요청을 확인할 수 없습니다."
+
+#: woocommerce-anti-fraud.php:2972
+msgid "Fraud Action"
+msgstr "사기 행위"
+
+#: woocommerce-anti-fraud.php:2985 woocommerce-anti-fraud.php:3001
+msgid "Fraud Check"
+msgstr "사기체크"
+
+#: assets/js/app.js:409
+msgid "Processing.."
+msgstr "처리.."

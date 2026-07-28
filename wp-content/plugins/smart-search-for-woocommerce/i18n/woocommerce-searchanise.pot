@@ -1,0 +1,863 @@
+# Copyright (C) 2026 Searchanise
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart Search & Product Filter for WooCommerce - Searchanise 1.0.20\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/smart_search_for_woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-23T06:03:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: smart-search-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-searchanise.php
+msgid "Smart Search & Product Filter for WooCommerce - Searchanise"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: woocommerce-searchanise.php
+msgid "https://searchanise.io/"
+msgstr ""
+
+#. Description of the plugin
+#: woocommerce-searchanise.php
+msgid "Searchanise shows product previews, relevant categories, pages, and search suggestions as you type."
+msgstr ""
+
+#. Author of the plugin
+#: woocommerce-searchanise.php
+#: includes/admin/class-admin-setting.php:176
+#: includes/admin/class-admin.php:278
+#: includes/admin/class-admin.php:279
+msgid "Searchanise"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:48
+msgid "Smart Search Analytics by <span class=\"se-logo\">Searchanise</span>"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:222
+msgid "This week"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:223
+msgid "Last week"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:224
+msgid "This month"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:225
+msgid "Last month"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:226
+msgid "This year"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:227
+msgid "Last year"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:300
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:301
+msgid "Total searches"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:302
+msgid "Product Clicks"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:303
+msgid "Category Clicks"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:304
+msgid "Suggestion Clicks"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:305
+msgid "Go to Dashboard"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:306
+msgid "Sorry, nothing to report"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:307
+msgid "Top search queries"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:308
+msgid "Top search with no results"
+msgstr ""
+
+#: includes/admin/class-admin-dashboard.php:309
+msgid "Something went wrong"
+msgstr ""
+
+#. translators: %s: support email
+#: includes/admin/class-admin-dashboard.php:311
+msgid "We couldn’t get the data, please try to check it later or contact <a href=\"mailto:%s\" target=\"blank\">Searchanise support</a>"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:92
+msgid "The product catalog is queued for syncing with Searchanise"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:208
+msgid "General"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:226
+msgid "Search input jQuery selector"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:229
+msgid "Important: Edit only if your custom theme changes the default search input ID!"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:234
+msgid "Search results page"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:241
+msgid "Use Searchanise for Full-text search"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:243
+msgid "Disable in case of invalid search operation. The instant search widget will <b>remain active</b>."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:251
+msgid "Use WordPress integrated jQuery version"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:253
+msgid "Select \"Yes\" to use WordPress integrated jQuery version instead of Searchanise CDN version on the frontend of your website. It reduces the traffic and makes the website a little faster."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:271
+msgid "Synchronisation settings"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:277
+msgid "Sync catalog"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:279
+msgid "Select <strong>When catalog updates</strong> to keep track of catalog changes and index them automatically.<br>Select <strong>Periodically via cron</strong> to index catalog changes according to \"Cron resync interval\" setting.<br>Select <strong>Manually</strong> to index catalog changes manually by clicking <i>FORCE RE-INDEXATION</i> button in the Searchanise control panel(<i>Products → Searchanise</i>)."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:282
+msgid "When catalog updates"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:283
+msgid "Periodically via cron"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:284
+msgid "Manually"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:295
+msgid "Cron resync interval"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:297
+msgid "Valid only if \"Sync catalog\" is set to \"Periodically via cron\"!"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:300
+msgid "Hourly"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:301
+msgid "Twice in day"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:302
+msgid "Daily"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:313
+msgid "Use direct images links"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:315
+msgid "Note: Catalog reindexation will start automatically when value changed."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:323
+msgid "Import blog posts"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:325
+msgid "Select \"Yes\" if you want Searchanise search by block posts as pages.</br>Note: Catalog reindexation will start automatically when value changed.."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:333
+msgid "Color attribute"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:340
+msgid "Size attribute"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:351
+msgid "Advanced synchronisation settings"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:367
+msgid "Custom taxonomies for Indexation"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:370
+msgid "Insert the slug name of the custom product taxonomies separated by commas.</br>New filters will be created for them."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:383
+msgid "Custom taxonomies"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:386
+msgid "Select custom product taxonomies to import. Selected taxonomies data will be imported and new filters will be created for them.</br>Note: Catalog reindexation will start automatically when value changed."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:399
+msgid "Custom product meta fields"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:414
+msgid "Exclude products with these tags"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:422
+msgid "Exclude these pages"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:425
+msgid "These pages will be excluded from indexation and will not be displayed in search results.<br />Note: Catalog reindexation will start automatically when value changed."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:430
+msgid "Exclude these categories"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:433
+msgid "These categories will be excluded from indexation and will not be displayed in search results.<br />Note: Catalog reindexation will start automatically when value changed."
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:443
+msgid "Admin settings"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:449
+msgid "Show Smart Search dashboard widget"
+msgstr ""
+
+#: includes/admin/class-admin-setting.php:451
+msgid "Select \"Yes\" to display \"Smart Search Analytics\" widget on dashboard page."
+msgstr ""
+
+#: includes/admin/class-admin.php:51
+msgid "<a href=\"https://wordpress.org/plugins/woocommerce\">WooCommerce</a> plugin should be enabled to work correctly."
+msgstr ""
+
+#: includes/admin/class-admin.php:63
+msgid "Plugin was deactivated."
+msgstr ""
+
+#. translators: %s: admin panel
+#: includes/admin/class-admin.php:139
+msgid "Plugin was successfully updated. Catalog indexation in process. <a href=\"%s\">Admin Panel</a>."
+msgstr ""
+
+#. translators: %s: admin panel
+#: includes/admin/class-admin.php:147
+msgid "In the new version 1.0.12 of the plugin, the settings moved from <b>Settings → Searchanise</b> to the <b><a href=\"%1$s\">WooCommerce → Settings → Searchanise</a></b> and <br />admin panel moved from <b>Products → Searchanise</b> to <b><a href=\"%2$s\"> Woocommerce → Searchanise</a></b>."
+msgstr ""
+
+#. translators: %s: admin panel
+#: includes/admin/class-admin.php:159
+#: includes/admin/class-admin.php:536
+msgid "Plugin was successfully installed. Catalog indexation in process. <a href=\"%s\">Admin Panel</a>."
+msgstr ""
+
+#. translators: %s: admin panel
+#: includes/admin/class-admin.php:167
+msgid "Plugin was successfully activated. Catalog indexation in process. <a href=\"%s\">Admin Panel</a>."
+msgstr ""
+
+#. translators: %s: support email
+#: includes/admin/class-admin.php:207
+msgid "Something is wrong in plugin registration. Please contact Searchanise <a href=\"mailto:%1$s\">%2$s</a> technical support"
+msgstr ""
+
+#: includes/admin/class-admin.php:266
+msgid "Admin Panel"
+msgstr ""
+
+#: includes/admin/class-admin.php:267
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-admin.php:287
+#: includes/admin/class-admin.php:288
+msgid "Searchanise opt-in"
+msgstr ""
+
+#. translators: %s: review link
+#: includes/admin/class-admin.php:341
+msgid "If you like %1$s please leave us a %2$s rating. A huge thanks in advance!"
+msgstr ""
+
+#: includes/admin/class-admin.php:343
+msgid "Thanks :)"
+msgstr ""
+
+#: includes/admin/class-admin.php:360
+msgid "Thank you for using"
+msgstr ""
+
+#: includes/admin/class-admin.php:479
+#: includes/admin/class-admin.php:526
+#: includes/admin/class-admin.php:609
+msgid "Access denied."
+msgstr ""
+
+#: includes/admin/class-admin.php:485
+#: includes/admin/class-admin.php:613
+msgid "Security check failed."
+msgstr ""
+
+#: includes/admin/class-admin.php:495
+msgid "Invalid mode."
+msgstr ""
+
+#: includes/class-fulltext-search.php:421
+msgid "Did you mean:"
+msgstr ""
+
+#. translators: %s: request error
+#: includes/class-fulltext-search.php:1097
+#: includes/class-fulltext-search.php:1113
+msgid "Error occurs during request %s"
+msgstr ""
+
+#: includes/class-fulltext-search.php:1200
+msgid "No products were found matching your selection."
+msgstr ""
+
+#. translators: version
+#: includes/class-hooks.php:154
+msgid "Plugin is compatible with WordPress version %1$s or higher. Plugin may work incorrectly. Please upgrade your WordPress to %2$s version or highter"
+msgstr ""
+
+#. translators: version
+#: includes/class-hooks.php:162
+msgid "The plugin is compatible with WooCommerce version %1$s or higher. The plugin may work incorrectly. Please upgrade your WooCommerce to %2$s version or highter"
+msgstr ""
+
+#. translators: link
+#: includes/class-hooks.php:972
+msgid "Catalog should be re-indexed to display correct data in storefront. Please <a href=\"%s\">force re-indexation</a>"
+msgstr ""
+
+#. translators: title
+#: includes/class-hooks.php:1067
+msgid "Page \"%s\" is used to display Searchanise search results and cannot be deleted. Page was restored from trash."
+msgstr ""
+
+#. translators: %s: lang code
+#: includes/extensions/class-wcweglot.php:181
+msgid "New search engine for %s created. Catalog import started"
+msgstr ""
+
+#: includes/extensions/class-wcweglot.php:191
+msgid "Language settings updated. The product catalog is queued for syncing with Searchanise."
+msgstr ""
+
+#. translators: service url
+#: includes/helpers/class-api.php:1335
+msgid "Searchanise: There is no connection to Searchanise server! For Searchanise to work properly, the store server must be able to access %s. Please contact Searchanise <a href=\"mailto: feedback@searchanise.com\">feedback@searchanise.com</a> technical support or your system administrator."
+msgstr ""
+
+#: includes/helpers/class-api.php:1339
+msgid "Searchanise: We found an issue with the export of changes in your store catalog. To resolve the issue please contact Searchanise <a href=\"mailto:feedback@searchanise.com\">feedback@searchanise.com</a> technical support."
+msgstr ""
+
+#. translators: error message
+#: includes/helpers/class-api.php:1589
+msgid "Error occurs during http request: %s"
+msgstr ""
+
+#: includes/helpers/class-api.php:1603
+msgid "Empty private key"
+msgstr ""
+
+#: includes/helpers/class-api.php:1769
+msgid "Congratulations, you've just connected to Searchanise"
+msgstr ""
+
+#: includes/helpers/class-api.php:1804
+msgid "The product catalog is queued for syncing"
+msgstr ""
+
+#. translators: admin url
+#: includes/helpers/class-api.php:1828
+msgid "Catalog indexation is complete. Use <a href=\"%s\">Admin Panel</a> for configuration."
+msgstr ""
+
+#: includes/install/class-installer.php:129
+msgid "Search results"
+msgstr ""
+
+#: includes/queue/class-async.php:438
+msgid "Unknown queue action"
+msgstr ""
+
+#: includes/queue/class-async.php:443
+msgid "SQL Error"
+msgstr ""
+
+#: includes/queue/class-async.php:872
+#: includes/queue/class-async.php:1356
+msgid "Price"
+msgstr ""
+
+#: includes/queue/class-async.php:879
+#: includes/queue/class-async.php:1945
+msgid "Stock status"
+msgstr ""
+
+#: includes/queue/class-async.php:887
+#: includes/queue/class-async.php:895
+#: includes/queue/class-async.php:903
+#: includes/queue/class-async.php:911
+#: includes/queue/class-async.php:2022
+#: includes/queue/class-async.php:2031
+msgid "Categories"
+msgstr ""
+
+#: includes/queue/class-async.php:920
+#: includes/queue/class-async.php:1997
+msgid "Product tags"
+msgstr ""
+
+#: includes/queue/class-async.php:1361
+msgid "Regular price"
+msgstr ""
+
+#: includes/queue/class-async.php:1366
+msgid "Sale price"
+msgstr ""
+
+#: includes/queue/class-async.php:1371
+msgid "Max price"
+msgstr ""
+
+#: includes/queue/class-async.php:1378
+msgid "Discount"
+msgstr ""
+
+#: includes/queue/class-async.php:1392
+msgid "Price for "
+msgstr ""
+
+#: includes/queue/class-async.php:1398
+msgid "Max price for "
+msgstr ""
+
+#: includes/queue/class-async.php:1404
+msgid "Regular price "
+msgstr ""
+
+#: includes/queue/class-async.php:1689
+msgid "product Id"
+msgstr ""
+
+#: includes/queue/class-async.php:1693
+msgid "Product Title"
+msgstr ""
+
+#: includes/queue/class-async.php:1698
+msgid "Slug"
+msgstr ""
+
+#: includes/queue/class-async.php:1702
+msgid "Summary"
+msgstr ""
+
+#: includes/queue/class-async.php:1706
+msgid "Product Type"
+msgstr ""
+
+#: includes/queue/class-async.php:1710
+msgid "Product URL"
+msgstr ""
+
+#: includes/queue/class-async.php:1714
+#: includes/queue/class-async.php:1829
+#: includes/queue/class-async.php:1857
+msgid "SKU"
+msgstr ""
+
+#: includes/queue/class-async.php:1719
+msgid "Visibility"
+msgstr ""
+
+#: includes/queue/class-async.php:1723
+msgid "Status"
+msgstr ""
+
+#: includes/queue/class-async.php:1726
+msgid "Image link"
+msgstr ""
+
+#: includes/queue/class-async.php:1730
+msgid "Free shipping"
+msgstr ""
+
+#: includes/queue/class-async.php:1734
+msgid "Sold individually"
+msgstr ""
+
+#: includes/queue/class-async.php:1738
+msgid "Virutal"
+msgstr ""
+
+#: includes/queue/class-async.php:1742
+msgid "Downloadable"
+msgstr ""
+
+#: includes/queue/class-async.php:1746
+msgid "Menu order"
+msgstr ""
+
+#: includes/queue/class-async.php:1751
+msgid "Weight"
+msgstr ""
+
+#: includes/queue/class-async.php:1756
+msgid "Length"
+msgstr ""
+
+#: includes/queue/class-async.php:1761
+msgid "Width"
+msgstr ""
+
+#: includes/queue/class-async.php:1766
+msgid "Height"
+msgstr ""
+
+#: includes/queue/class-async.php:1821
+msgid "WooCommerce variants"
+msgstr ""
+
+#: includes/queue/class-async.php:1838
+#: includes/queue/class-async.php:1866
+msgid "Product short description"
+msgstr ""
+
+#: includes/queue/class-async.php:1875
+#: includes/queue/class-async.php:1930
+msgid "Product description"
+msgstr ""
+
+#: includes/queue/class-async.php:1920
+msgid "Product images"
+msgstr ""
+
+#: includes/queue/class-async.php:1940
+msgid "Stock quantity"
+msgstr ""
+
+#: includes/queue/class-async.php:1980
+msgid "Created at"
+msgstr ""
+
+#: includes/queue/class-async.php:1988
+msgid "Updated at"
+msgstr ""
+
+#: includes/queue/class-async.php:2009
+msgid "Total reviews"
+msgstr ""
+
+#: includes/queue/class-async.php:2013
+msgid "Average reviews score"
+msgstr ""
+
+#: includes/queue/class-async.php:2041
+msgid "Sales amount"
+msgstr ""
+
+#: includes/queue/class-async.php:2053
+msgid "User role"
+msgstr ""
+
+#: includes/queue/class-async.php:2065
+msgid "Add to cart url"
+msgstr ""
+
+#: includes/queue/class-async.php:2076
+msgid "Cross-Sell Products"
+msgstr ""
+
+#: includes/queue/class-async.php:2083
+msgid "Up-Sell Products"
+msgstr ""
+
+#: includes/queue/class-async.php:2090
+msgid "Related Products"
+msgstr ""
+
+#: includes/queue/class-async.php:2098
+msgid "Also bought product"
+msgstr ""
+
+#: includes/queue/class-async.php:2299
+msgid "Meta title"
+msgstr ""
+
+#: includes/queue/class-async.php:2308
+msgid "Meta description"
+msgstr ""
+
+#: includes/queue/class-async.php:2317
+msgid "Meta keywords"
+msgstr ""
+
+#: includes/queue/class-async.php:2915
+msgid "Searchanise module not enabled"
+msgstr ""
+
+#: includes/queue/class-async.php:2921
+msgid "Invalid private key"
+msgstr ""
+
+#. translators: status
+#: includes/queue/class-async.php:2931
+msgid "Searchanise status sync: %s"
+msgstr ""
+
+#: init.php:80
+msgid "Searchanise:"
+msgstr ""
+
+#. translators: %s: file name with path
+#: init.php:84
+msgid "File \"%s\"  was not loaded. Please check file and it's permissions."
+msgstr ""
+
+#: templates/searchanise_optin.php:13
+msgid "Connect Searchanise to your store"
+msgstr ""
+
+#: templates/searchanise_optin.php:14
+msgid "Searchanise needs your permission to connect this WooCommerce store to our service. By clicking “Connect”, you allow Searchanise to receive and process your store data, including admin email, store URL, and plugin information, in order to activate the service."
+msgstr ""
+
+#: templates/searchanise_optin.php:17
+msgid "Skip"
+msgstr ""
+
+#: templates/searchanise_optin.php:18
+msgid "Connect"
+msgstr ""
+
+#: templates/searchanise_optin.php:22
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:12
+msgid "Searchanise Info"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:17
+msgid "Searchanise enviroment"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:21
+msgid "Plugin version"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:22
+msgid "Searchanise plugin version."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:26
+msgid "API Keys"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:27
+msgid "Registered API keys."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:35
+msgid "Export status"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:36
+msgid "Searchanise engine export statuses."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:44
+msgid "Search input selector"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:45
+msgid "Search input CSS selector."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:49
+msgid "Sync mode"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:50
+msgid "Searchanise synchronization mode."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:54
+msgid "Plugin enabled"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:55
+msgid "Searchanise plugin status."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:59
+msgid "Search enabled"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:60
+msgid "Enable search with Searchanise"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:64
+msgid "Cron async enabled"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:65
+msgid "Enable synchronization via Cron"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:69
+msgid "Ajax async enabled"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:70
+msgid "Enable synchronization via Ajax calls"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:74
+msgid "Log directory"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:75
+msgid "Searchanise log directory"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:85
+msgid "Server environment"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:89
+msgid "Max execution time"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:90
+msgid "Default maximum execution script time"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:94
+msgid "Max execution time after"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:95
+msgid "Maximum execution script time for Searchanise"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:99
+msgid "Ignore user abort"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:100
+msgid "Default value of ignore_user_abort PHP setting."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:104
+msgid "Ignore user abort after"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:105
+msgid "value of ignore_user_abort PHP setting for Searchanise."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:109
+msgid "Memory limit"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:110
+msgid "Default memory limit for scripts."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:114
+msgid "Memory limit after"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:115
+msgid "Memory limit for Searchanise."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:125
+msgid "Searchanise queue"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:129
+msgid "Queue status"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:130
+msgid "Common queue status."
+msgstr ""
+
+#: templates/searchanise_settings_info.php:131
+msgid "Something is wrong in queue processing. Please contact Searchanise <a href=\"mailto:feedback@searchnise.com\">feedback@searchnise.com</a> technical support"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:134
+msgid "Total items"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:135
+msgid "Total items in Searchanise queue"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:139
+msgid "Next queue"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:140
+msgid "Next item in queue"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:151
+msgid "Active plugins"
+msgstr ""
+
+#: templates/searchanise_settings_info.php:156
+msgid "Visit plugin page"
+msgstr ""

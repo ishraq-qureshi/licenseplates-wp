@@ -1,0 +1,33 @@
+{
+    "name": "soflyy/wp-all-import",
+    "type": "wordpress-plugin",
+    "description": "The most powerful solution for importing XML and CSV files to WordPress. Import to Posts, Pages, and Custom Post Types.",
+    "keywords": ["wordpress", "plugin", "import", "wp all import"],
+    "homepage": "https://www.wpallimport.com",
+    "authors": [
+        {
+            "name": "WP All Import",
+            "homepage": "https://www.wpallimport.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://www.wpallimport.com/support"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/soflyy/wpai-test-harness" }
+    ],
+    "require": {
+        "php": "^7.4 | ^8.0",
+        "enshrined/svg-sanitize": "^0.22.0",
+        "phpoffice/phpspreadsheet": "^1.30"
+    },
+    "require-dev": {
+        "soflyy/wpai-test-harness": "dev-master",
+        "phpunit/phpunit": "^9.0"
+    }
+}

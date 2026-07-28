@@ -1,0 +1,19 @@
+# LicensePlates.tv
+
+> LicensePlates.tv is an e-commerce website offering a variety of custom and specialty license plates, accessories, and related automotive products for personal and gift use.
+
+This file provides structured guidance for LLMs to understand the main resources, policies, and key documentation available on the website. It is intended to help with content interpretation, navigation, and safe usage of site data.
+
+## Core Documentation
+
+* [Privacy Policy](https://www.licenseplates.tv/privacy-policy/) : Official privacy practices, data handling, and user information guidelines.
+* [Sitemap](https://www.licenseplates.tv/sitemap.xml) : Full index of all publicly available pages for crawling and discovery.
+
+## Examples
+
+* [Product Pages](https://www.licenseplates.tv/) : Browse example product listings and category pages to understand how items are structured and presented on the site.
+
+## Optional
+
+* [llms.txt](https://www.licenseplates.tv/llms.txt) : Machine-readable access policy and usage rules for automated systems and LLMs.
+* [Public Content Directory](https://www.licenseplates.tv/wp-content/uploads/public/) : Publicly accessible media assets such as images and downloadable resources.

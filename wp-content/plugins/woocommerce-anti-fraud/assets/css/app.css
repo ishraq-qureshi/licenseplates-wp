@@ -1,0 +1,6493 @@
+.wc-af-settings-page .subsubsub,
+.wc-af-settings-page .wc-af-primary-nav__list,
+.wc-af-settings-page .wc-af-secondary-nav__list {
+    font-size: 15px;
+}
+
+/* Subsection titles — only on Anti-Fraud settings (avoid global Options UI look) */
+body.wc-af-settings-page .wc_af_sub-section-title {
+    width: 100%;
+    margin: 1.75rem 0 0.65rem;
+    padding: 0;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc_af_sub-section-title .wc_af_sub-section {
+    margin: 0;
+    padding: 0 0 0.5rem;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--wc-af-text, #1d2327);
+    border-bottom: 1px solid var(--wc-af-line, #f0f0f1);
+}
+
+body.wc-af-settings-page .wc_af_sub-section-title .wc_af_sub-section .woocommerce-help-tip {
+    vertical-align: middle;
+    margin-left: 0.25rem;
+}
+
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 0 1.25rem 0;
+}
+
+/* Desktop: preserve WooCommerce field layout inside table cells. */
+@media screen and (min-width: 783px) {
+    body.wc-af-settings-page .woocommerce table.form-table .forminp {
+        display: revert !important;
+    }
+}
+
+body.wc-af-settings-page .woocommerce table.form-table th label {
+    cursor: pointer;
+}
+
+body.wc-af-settings-page .woocommerce .opmc_wc_af_table tr > th,
+body.wc-af-settings-page .woocommerce .opmc_wc_af_table tr > td {
+    padding: 1rem 1.15rem;
+    vertical-align: top;
+}
+
+body.wc-af-settings-page .woocommerce .opmc_wc_af_table th {
+    width: 240px;
+    max-width: 40%;
+}
+
+body.wc-af-settings-page .opmc_wc_af_table td.forminp-slider {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Defensive (all Anti-Fraud tabs): keep wide fields from overflowing their table cell.
+   max-width only caps overflow, so fields with a fixed width (e.g. 5em selects) are unchanged. */
+body.wc-af-settings-page .opmc_wc_af_table td.forminp textarea,
+body.wc-af-settings-page .opmc_wc_af_table td.forminp select,
+body.wc-af-settings-page .opmc_wc_af_table td.forminp .tagsinput {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .forminp-multiselect select[multiple] option:checked,
+body.wc-af-settings-page .forminp-multiselect select[multiple]:focus option:checked {
+    background-color: #2a8ff7 !important;
+    color: rgb(255, 255, 255) !important;
+    background: linear-gradient(#2a8ff7, #2a8ff7);
+}
+
+body.wc-af-settings-page .forminp-multiselect select[multiple]:disabled option:checked {
+    background-color: rgb(208, 208, 208) !important;
+    background: linear-gradient(rgb(208, 208, 208), rgb(208, 208, 208));
+    color: gray !important;
+}
+
+/* switch checkbox — scoped to Anti-Fraud settings only */
+body.wc-af-settings-page .form-table label.opmc-toggle-control {
+    display: inline-block !important;
+    position: relative;
+    width: 136px;
+    min-height: 25px;
+    margin: 0 !important;
+    cursor: pointer;
+    font-size: 22px;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body.wc-af-settings-page .opmc-toggle-control input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+body.wc-af-settings-page .opmc-toggle-control input:checked ~ .opmc-control {
+background-color: dodgerblue;
+}
+body.wc-af-settings-page .opmc-toggle-control input:checked ~ .opmc-control:after {
+left: 35px;
+}
+body.wc-af-settings-page .opmc-toggle-control input:checked ~ .opmc-control:before {
+content: "Enabled";
+color: green;
+transition: all 0.15s ease-in-out;
+
+}
+body.wc-af-settings-page .opmc-toggle-control .opmc-control {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 58px;
+border-radius: 25px;
+background-color: darkgray;
+transition: background-color 0.15s ease-in;
+}
+body.wc-af-settings-page .opmc-toggle-control .opmc-control:after {
+content: "";
+position: absolute;
+left: 3px;
+top: 50%;
+width: 20px;
+height: 20.5px;
+border-radius: 25px;
+background: white;
+transition: left 0.15s ease-in;
+transform: translateY(-50%);
+}
+body.wc-af-settings-page .opmc-toggle-control .opmc-control:before{
+content: "Disabled";
+position: absolute;
+left: calc(100% + 10px);
+top: 50%;
+transform: translateY(-50%);
+color: gray;
+transition: all 0.15s ease-in-out;
+font-size: 12px;
+line-height: 1;
+pointer-events: none;
+}
+/* score-slider — scoped to Anti-Fraud settings only */
+body.wc-af-settings-page .score-slider {
+position: relative;
+width: 100%;
+max-width: 100%;
+}
+body.wc-af-settings-page .score-bar {
+background: rgb(90,198,125);
+background: linear-gradient(90deg, rgba(90,198,125,1) 0%, rgba(205,119,57,1) 50%, rgba(185,74,72,1) 100%);
+height: 1rem;
+width: 80%;
+max-width: 100%;
+margin: 0 auto;
+position: relative;
+border-radius: 3rem;
+}
+body.wc-af-settings-page .score-bar-label{
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 0 0;
+}
+body.wc-af-settings-page .score-value{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border: .5rem solid rgba(90,198,125,1);
+    border-radius: 5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+body.wc-af-settings-page .score-value .score-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+/*Related to debug log */
+
+table#debug_t,tr#debug_tr,th#debug_th,td#debug_td{
+  border:1px solid #dddddd;
+  border-collapse:collapse;
+  text-align: center;
+}
+.tbl-header{
+  width:calc(100% - 17px);
+  width:-webkit-calc(100% - 17px);
+  width:-moz-calc(100% - 17px);
+}
+
+.no-display{
+    display: none;
+}
+
+.card-attack {
+    position: relative;
+    padding-left: 4%;
+}
+
+.wc-af-input-wrapper {
+    display: inline-flex;    /* aligns input and message horizontally */
+    align-items: center;     /* vertical alignment */
+    gap: 8px;                /* spacing between input and message */
+}
+
+.wc-af-input-wrapper input {
+    width: 5em;              /* keep your input width */
+}
+
+.wc-af-inline-msg {
+    color: red;          /* red warning color */
+}
+
+td.forminpss.forminp-checkbox {
+    width: 40%;
+}
+
+
+.tooltips {
+    cursor: pointer;
+    margin-left: 4px;
+    color: red; /* red icon */
+    font-weight: bold;
+    position: relative;
+    font-size: 16px; /* adjust size */
+}
+
+.tooltip-box {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 150px;
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 100;
+    line-height: 1.4;
+}
+.tooltips img.emoji {
+    display: none;      /* hide SVG emoji */
+}
+
+.tooltips::before {
+    content: '⚠';      /* show ⚠ as plain text */
+    color: red;
+}
+
+input#wc_af_paypal_acp_enabled_recaptcha {
+    color: black;
+    border: 1px solid;
+}
+
+input#wc_af_paypal_acp_enabled_card_attack {
+    color: black;
+    border: 1px solid;
+}
+
+input#wc_af_paypal_acp_enabled {
+    color: black;
+    border: 1px solid;
+}
+
+body.wc-af-settings-page .wc-af-help-msg {
+    display: block;
+    margin: 0.5rem 0 0;
+    font-size: 13px;
+    line-height: 1.45;
+    max-width: 36rem;
+}
+
+body.wc-af-settings-page .wc-af-ca-paypal-acp-row .wc-af-help-msg {
+    margin-top: 0.35rem;
+}
+
+.chargeback_text p {
+    font-size: 14px;
+}
+
+.cleanup-section {
+    margin: 1% 0% 0% 4%;
+}
+
+.cleanup-section p {
+    /* font-weight: 600; */
+    font-style: italic;
+}
+
+span#description-cleanup {
+    font-weight: 600;
+    font-size: 14px;
+    color: red;
+    vertical-align: middle;
+}
+
+.cleanup-section p.description {
+    margin: 1% 14% 0% 25%;
+}
+a#cleanup_order_btn {
+    margin: 0% 4% 0% 4%;
+}
+
+.wc_af_sub-section-title p span {
+    /* position: absolute; */
+    padding: 0 0 0 1.3%;
+    line-height: 0;
+    position: absolute;
+    margin-top: -0.7%;
+    color: red;
+}
+
+body.wc-af-settings-page td.forminp.forminp-number {
+    padding-left: 5%;
+}
+
+/* Rules tab: keep switches, weight inputs, and score bars in separate lanes.
+   Selectors use the doubled panel class (.wc-af-settings-panel.wc-af-settings-panel--rules)
+   plus the full table chain so they win over the generic 260px title column without
+   needing !important — that keeps the 782px mobile-stacking rules in charge on small screens. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--rules table.form-table.opmc_wc_af_table {
+    width: 100%;
+    max-width: 1180px;
+    table-layout: auto;
+}
+
+/* Label lane: compact enough to leave room for a wide slider. Two-line labels are fine. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--rules table.form-table.opmc_wc_af_table th.titledesc {
+    width: 30%;
+    max-width: 340px;
+    padding-right: 0.75rem;
+    line-height: 1.4;
+}
+
+/* Toggle lane: only as wide as the switch + Enabled/Disabled label. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--rules table.form-table.opmc_wc_af_table td.forminp-checkbox {
+    width: 128px;
+    padding-right: 0;
+    white-space: nowrap;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--rules .form-table label.opmc-toggle-control {
+    width: 120px;
+}
+
+/* Weight input sits right next to the toggle — trim the surrounding white space. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--rules table.form-table.opmc_wc_af_table td.forminp-number {
+    width: 60px;
+    padding-left: 0.35rem;
+    padding-right: 0;
+}
+
+/* Standalone number/text rows (label + input only, no toggle in between) must NOT
+   inherit the tight weight-lane spacing above, otherwise the input hugs the help
+   tooltip at the end of the label. The `th + td` adjacency scopes this to those
+   rows only — the toggle-row weight inputs are preceded by the checkbox cell, so
+   they stay untouched. */
+body.wc-af-settings-page .wc-af-settings-panel--rules table.form-table.opmc_wc_af_table th.titledesc + td.forminp-number,
+body.wc-af-settings-page .wc-af-settings-panel--rules table.form-table.opmc_wc_af_table th.titledesc + td.forminp-text {
+    width: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.15rem;
+    white-space: nowrap;
+}
+
+/* Slider lane takes all remaining width so it fills the empty space next to the weight box. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--rules table.form-table.opmc_wc_af_table td.forminp-slider {
+    width: auto;
+    min-width: 300px;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--rules .score-slider {
+    width: 100%;
+    min-width: 280px;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--rules .score-bar,
+body.wc-af-settings-page .wc-af-settings-panel--rules .score-bar-label {
+    width: calc(100% - 2.2rem);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--rules .score-bar-label {
+    gap: 0.6rem;
+    white-space: nowrap;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--rules .score-bar-label span {
+    font-size: 12px;
+}
+
+/* Full-width fields (textarea, multiselect, dropdown, tag input) must stay inside the panel. */
+body.wc-af-settings-page .wc-af-settings-panel--rules td.forminp textarea,
+body.wc-af-settings-page .wc-af-settings-panel--rules td.forminp select,
+body.wc-af-settings-page .wc-af-settings-panel--rules td.forminp input[type="text"],
+body.wc-af-settings-page .wc-af-settings-panel--rules td.forminp .tagsinput {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--rules td.forminp-textarea textarea,
+body.wc-af-settings-page .wc-af-settings-panel--rules td.forminp .tagsinput {
+    width: 100% !important;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--rules td.forminp .description {
+    max-width: 720px;
+}
+
+/* Mid-width (desktop menu open, narrow viewport): keep the slider usable and let the
+   label take a little less room before the 782px breakpoint stacks each field vertically. */
+@media screen and (min-width: 783px) and (max-width: 1000px) {
+    body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--rules table.form-table.opmc_wc_af_table th.titledesc {
+        width: 28%;
+        max-width: 260px;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--rules table.form-table.opmc_wc_af_table td.forminp-slider {
+        min-width: 220px;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel--rules .score-slider {
+        min-width: 200px;
+    }
+}
+
+/* General (Core protection) tab: same balanced label + slider lanes as Rules.
+   Its rows are th + number + slider (thresholds) and th + select + slider (cancel/hold score).
+   Doubled panel class beats the generic 260px title column without !important. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--general table.form-table.opmc_wc_af_table {
+    width: 100%;
+    max-width: 1180px;
+    table-layout: auto;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--general table.form-table.opmc_wc_af_table th.titledesc {
+    width: 30%;
+    max-width: 340px;
+    line-height: 1.4;
+}
+
+/* Trim the large default padding so the weight/select value sits close to its label. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--general table.form-table.opmc_wc_af_table td.forminp-number,
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--general table.form-table.opmc_wc_af_table td.forminp-select {
+    width: 92px;
+    padding-left: 0.75rem;
+}
+
+/* Let the score slider claim ALL the leftover width (not the 500px cap and not
+   `auto`, which in auto table layout lets the label column swallow the slack and
+   leaves the slider narrow). width:100% makes this the stretch column so it fills
+   the empty space next to the select, matching the Rules tab sliders. */
+body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--general table.form-table.opmc_wc_af_table td.forminp-slider {
+    width: 100%;
+    min-width: 300px;
+    max-width: none;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--general .score-slider {
+    width: 100%;
+    min-width: 280px;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--general .score-bar,
+body.wc-af-settings-page .wc-af-settings-panel--general .score-bar-label {
+    width: calc(100% - 2.2rem);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--general .score-bar-label {
+    gap: 0.6rem;
+    white-space: nowrap;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--general .score-bar-label span {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 783px) and (max-width: 1000px) {
+    body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--general table.form-table.opmc_wc_af_table th.titledesc {
+        width: 28%;
+        max-width: 260px;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel.wc-af-settings-panel--general table.form-table.opmc_wc_af_table td.forminp-slider {
+        min-width: 220px;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel--general .score-slider {
+        min-width: 200px;
+    }
+}
+
+/* Fix label/sub-label overlap in sub-section headings: a legacy rule
+   (.wc_af_sub-section-title p span) forced description spans to position:absolute,
+   line-height:0 and red, so they collapsed onto the heading. Reset that here. */
+body.wc-af-settings-page .wc-af-settings-panel .wc-af-subsection-desc span,
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title .wc-af-subsection-desc span {
+    position: static;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+
+/* -------------------------------------------------------------------------
+   Anti-Fraud — WooCommerce settings "Home" control center (Phase 1)
+   Scoped to WooCommerce Anti-Fraud settings tab via body.wc-af-settings-page
+   ------------------------------------------------------------------------- */
+
+body.wc-af-settings-page .wc-af-home-settings-anchor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body.wc-af-settings-page .wc-af-control-center {
+    max-width: 1100px;
+    margin: 0 0 1.5rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-muted {
+    color: #646970;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0.35rem 0 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.15rem;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+body.wc-af-settings-page .wc-af-cc-title {
+    margin: 0 0 0.3rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+body.wc-af-settings-page .wc-af-cc-lead {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.5;
+    max-width: 38rem;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-cc-intro {
+    margin-top: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-hero__text {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-hero__status {
+    flex: 0 1 280px;
+    width: 100%;
+    max-width: 320px;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card {
+    padding: 1rem 1.1rem;
+    border-radius: 4px;
+    border: 1px solid #c3c4c7;
+    background: #f6f7f7;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card--strong {
+    border-color: #68a57b;
+    background: #edfaef;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card--moderate {
+    border-color: #dba617;
+    background: #fcf9e8;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card--needs_attention {
+    border-color: #d63638;
+    background: #fcf0f1;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card__eyebrow {
+    margin: 0 0 0.2rem;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card__label {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card__summary {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #2c3338;
+}
+
+/* Overview: single quiet line — action (dashboard) + hint; not a second nav. */
+body.wc-af-settings-page .wc-af-cc-overview-extras {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.5rem;
+    margin: 0 0 0.85rem;
+    padding: 0.5rem 0 0;
+    border-top: 1px solid var(--wc-af-line, #f0f0f1);
+    font-size: 13px;
+    line-height: 1.5;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-cc-overview-extras__link {
+    font-weight: 600;
+    color: #2271b1;
+    text-decoration: none;
+}
+
+body.wc-af-settings-page .wc-af-cc-overview-extras__link:hover,
+body.wc-af-settings-page .wc-af-cc-overview-extras__link:focus {
+    color: #135e96;
+    text-decoration: underline;
+    outline: none;
+}
+
+body.wc-af-settings-page .wc-af-cc-overview-extras__meta {
+    font-size: 12.5px;
+    color: #8c8f94;
+}
+
+/* Recommended setup (lightweight first-run helper) */
+body.wc-af-settings-page .wc-af-recommended-setup {
+    margin: 0 0 1rem;
+    padding: 0.85rem 1rem 1rem;
+    max-width: 1100px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+body.wc-af-settings-page .wc-af-recommended-setup--incomplete {
+    border-left: 4px solid #2271b1;
+}
+
+body.wc-af-settings-page .wc-af-recommended-setup--complete {
+    border-left: 4px solid #00a32a;
+    background: linear-gradient(180deg, #f6fcf7 0%, #fff 48%);
+}
+
+body.wc-af-settings-page .wc-af-rs__head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-rs__head-text {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+body.wc-af-settings-page .wc-af-rs__title {
+    margin: 0 0 0.35rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-rs__intro {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #50575e;
+    max-width: 40rem;
+}
+
+body.wc-af-settings-page .wc-af-rs__progress-wrap {
+    flex: 0 1 200px;
+    width: 100%;
+    max-width: 240px;
+}
+
+body.wc-af-settings-page .wc-af-rs__progress-label {
+    margin: 0 0 0.35rem;
+    font-size: 12px;
+    font-weight: 600;
+    color: #50575e;
+    text-align: right;
+}
+
+body.wc-af-settings-page .wc-af-rs__bar {
+    height: 8px;
+    border-radius: 4px;
+    background: #dcdcde;
+    overflow: hidden;
+}
+
+body.wc-af-settings-page .wc-af-rs__bar-fill {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #2271b1, #135e96);
+    border-radius: 4px;
+    transition: width 0.25s ease;
+}
+
+body.wc-af-settings-page .wc-af-recommended-setup--complete .wc-af-rs__bar-fill {
+    background: linear-gradient(90deg, #00a32a, #17823b);
+}
+
+body.wc-af-settings-page .wc-af-rs__success {
+    margin: 0 0 0.85rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #1e4620;
+    background: #edfaef;
+    border: 1px solid #68a57b;
+    border-radius: 4px;
+}
+
+body.wc-af-settings-page .wc-af-rs__steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: wc-af-rs;
+}
+
+body.wc-af-settings-page .wc-af-rs__step {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+body.wc-af-settings-page .wc-af-rs__step:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-rs__step-marker {
+    flex: 0 0 1.5rem;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #787c82;
+    text-align: center;
+}
+
+body.wc-af-settings-page .wc-af-rs__step--done .wc-af-rs__step-marker {
+    color: #00a32a;
+    font-weight: 700;
+}
+
+body.wc-af-settings-page .wc-af-rs__step-body {
+    flex: 1;
+    min-width: 0;
+}
+
+body.wc-af-settings-page .wc-af-rs__step-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 0.2rem;
+}
+
+body.wc-af-settings-page .wc-af-rs__step-desc {
+    margin: 0 0 0.5rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-rs__step-actions {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+}
+
+body.wc-af-settings-page .wc-af-rs__optional {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #dcdcde;
+}
+
+body.wc-af-settings-page .wc-af-rs__optional-note {
+    margin: 0 0 0.35rem;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-rs__optional-links {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+body.wc-af-settings-page .wc-af-rs__optional-links a {
+    text-decoration: none;
+}
+
+body.wc-af-settings-page .wc-af-rs__optional-links a:hover {
+    text-decoration: underline;
+}
+
+/* Overview — single recommended next step */
+body.wc-af-settings-page .wc-af-rs__next {
+    margin: 1rem 0 1.25rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid #c3d9ed;
+    border-radius: var(--wc-af-r, 4px);
+    background: linear-gradient(180deg, #f4f9fd 0%, #fff 55%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+body.wc-af-settings-page .wc-af-rs__next-title {
+    margin: 0 0 0.5rem;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #135e96;
+}
+
+body.wc-af-settings-page .wc-af-rs__next-lead {
+    margin: 0 0 0.35rem;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-rs__next-desc {
+    margin: 0 0 0.75rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-rs__next-action {
+    margin: 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-section-lead {
+    margin: 0.2rem 0 0.85rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #646970;
+    max-width: 48rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+body.wc-af-settings-page .wc-af-cc-card {
+    margin: 0;
+    padding: 1rem 1.15rem;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+body.wc-af-settings-page .wc-af-cc-card--wide {
+    grid-column: 1 / -1;
+}
+
+body.wc-af-settings-page .wc-af-cc-card--emergency {
+    border-color: #f0b849;
+    background: linear-gradient(135deg, #fffdf7 0%, #fff 40%);
+}
+
+body.wc-af-settings-page .wc-af-cc-card--card-attack-calm {
+    border-color: #dcdcde;
+    background: #fbfbfc;
+}
+
+body.wc-af-settings-page .wc-af-cc-grid--simplified {
+    gap: 1.15rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-card--help {
+    background: #f6f7f7;
+}
+
+body.wc-af-settings-page .wc-af-cc-card__title {
+    margin: 0 0 0.65rem;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-cc-card__text {
+    margin: 0 0 0.85rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .wc-af-cc-card__foot {
+    margin: 0.65rem 0 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 13px;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__label {
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__detail {
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item--ok .wc-af-cc-checklist__label::before {
+    content: "✓ ";
+    color: #008a20;
+    font-weight: 700;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item--warn .wc-af-cc-checklist__label::before {
+    content: "! ";
+    color: #d63638;
+    font-weight: 700;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item--info .wc-af-cc-checklist__label::before {
+    content: "· ";
+    color: #646970;
+    font-weight: 700;
+}
+
+body.wc-af-settings-page .wc-af-cc-steps {
+    margin: 0;
+    padding-left: 1.15rem;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .wc-af-cc-steps__item {
+    margin: 0 0 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+body.wc-af-settings-page .wc-af-cc-links li {
+    margin: 0 0 0.25rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-links--inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-links--inline li {
+    margin: 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-integrations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-int {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.5rem;
+    padding: 0.5rem 0.65rem;
+    text-decoration: none;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    background: #fcfcfc;
+    color: #2c3338;
+    transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+body.wc-af-settings-page .wc-af-cc-int:hover,
+body.wc-af-settings-page .wc-af-cc-int:focus {
+    border-color: #2271b1;
+    background: #f0f6fc;
+    color: #1d2327;
+    box-shadow: none;
+}
+
+body.wc-af-settings-page .wc-af-cc-int__name {
+    flex: 1 1 auto;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+body.wc-af-settings-page .wc-af-cc-int__badge {
+    flex: 0 0 auto;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+}
+
+body.wc-af-settings-page .wc-af-cc-int--on .wc-af-cc-int__badge {
+    background: #edfaef;
+    color: #1e4620;
+    border: 1px solid #68a57b;
+}
+
+body.wc-af-settings-page .wc-af-cc-int--off .wc-af-cc-int__badge {
+    background: #f6f7f7;
+    color: #50575e;
+    border: 1px solid #c3c4c7;
+}
+
+body.wc-af-settings-page .wc-af-cc-int__note {
+    flex: 1 0 100%;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--wc-af-muted, #646970);
+}
+
+body.wc-af-settings-page .wc-af-cc-details {
+    margin-top: 1.25rem;
+    padding: 0.85rem 1rem;
+    background: var(--wc-af-surface-2, #f6f7f7);
+    border: 1px solid var(--wc-af-border, #dcdcde);
+    border-radius: var(--wc-af-r-lg, 12px);
+    box-shadow: var(--wc-af-shadow, 0 1px 2px rgba(0, 0, 0, 0.06));
+}
+
+body.wc-af-settings-page .wc-af-cc-details__summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    outline: none;
+}
+
+body.wc-af-settings-page .wc-af-cc-details__body {
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid #f0f0f1;
+}
+
+body.wc-af-settings-page .wc-af-cc-video-list {
+    margin: 0 0 0.5rem;
+    padding-left: 1.15rem;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-cc-hero__status {
+        max-width: none;
+    }
+}
+
+/* Semantic color system refresh (brand-aware + meaning-preserving) */
+body.wc-af-settings-page,
+body.wc-af-dashboard-page {
+    --wc-af-sem-neutral-bg: #f6f7f7;
+    --wc-af-sem-neutral-bd: #dcdcde;
+    --wc-af-sem-success-bg: #f0f9f2;
+    --wc-af-sem-success-bd: #1f8f4e;
+    --wc-af-sem-info-bg: #eef6ff;
+    --wc-af-sem-info-bd: #2271b1;
+    --wc-af-sem-recommended-bg: #f2f7ff;
+    --wc-af-sem-recommended-bd: #3858e9;
+    --wc-af-sem-warning-bg: #fff8e6;
+    --wc-af-sem-warning-bd: #b98900;
+    --wc-af-sem-danger-bg: #fff1f1;
+    --wc-af-sem-danger-bd: #b32d2e;
+}
+
+body.wc-af-settings-page .wc-af-badge--neutral {
+    background: var(--wc-af-sem-neutral-bg);
+    border-color: var(--wc-af-sem-neutral-bd);
+    color: #3c434a;
+}
+
+body.wc-af-settings-page .wc-af-badge--info {
+    background: var(--wc-af-sem-info-bg);
+    border-color: #b3d4fc;
+    color: #0b4f85;
+}
+
+body.wc-af-settings-page .wc-af-badge--support {
+    background: #f4f0ff;
+    border-color: #cab9ff;
+    color: #4b3f8f;
+}
+
+body.wc-af-settings-page .wc-af-badge--recommended {
+    background: var(--wc-af-sem-recommended-bg);
+    border-color: #c7d2fe;
+    color: #2d3a8c;
+}
+
+body.wc-af-settings-page .wc-af-badge--warning,
+body.wc-af-settings-page .wc-af-badge--needs-config {
+    background: var(--wc-af-sem-warning-bg);
+    border-color: #f0d88f;
+    color: #73510b;
+}
+
+body.wc-af-settings-page .wc-af-badge--emergency,
+body.wc-af-settings-page .wc-af-badge--disconnected {
+    background: var(--wc-af-sem-danger-bg);
+    border-color: #efc2c3;
+    color: #7a1617;
+}
+
+body.wc-af-settings-page .wc-af-badge--active-protection,
+body.wc-af-settings-page .wc-af-badge--connected {
+    background: var(--wc-af-sem-success-bg);
+    border-color: #b8e7c7;
+    color: #185d35;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--ok {
+    background: var(--wc-af-sem-success-bg);
+    border-color: #b8e7c7;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--warn {
+    background: var(--wc-af-sem-warning-bg);
+    border-color: #f0d88f;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--muted {
+    background: var(--wc-af-sem-neutral-bg);
+    border-color: var(--wc-af-sem-neutral-bd);
+}
+
+/* Dashboard "Start here" cards on settings home */
+body.wc-af-settings-page .wc-af-start-here {
+    border: 1px solid #dcdcde;
+    border-radius: var(--wc-af-r);
+    background: #fff;
+    padding: 0.85rem 0.95rem;
+}
+
+body.wc-af-settings-page .wc-af-start-here__grid {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+body.wc-af-settings-page .wc-af-start-here__card {
+    display: grid;
+    gap: 0.35rem;
+    align-content: start;
+    text-decoration: none;
+    border: 1px solid #dcdcde;
+    border-radius: var(--wc-af-r);
+    background: #fff;
+    padding: 0.7rem 0.75rem;
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-start-here__card--recommended {
+    border-left: 4px solid var(--wc-af-sem-recommended-bd);
+    background: var(--wc-af-sem-recommended-bg);
+}
+
+body.wc-af-settings-page .wc-af-start-here__card--info {
+    border-left: 4px solid var(--wc-af-sem-info-bd);
+    background: var(--wc-af-sem-info-bg);
+}
+
+body.wc-af-settings-page .wc-af-start-here__card--neutral {
+    border-left: 4px solid var(--wc-af-sem-neutral-bd);
+    background: var(--wc-af-sem-neutral-bg);
+}
+
+body.wc-af-settings-page .wc-af-start-here__card--warning {
+    border-left: 4px solid var(--wc-af-sem-warning-bd);
+    background: var(--wc-af-sem-warning-bg);
+}
+
+body.wc-af-settings-page .wc-af-start-here__card--support {
+    border-left: 4px solid #6a50d6;
+    background: #f7f4ff;
+}
+
+body.wc-af-settings-page .wc-af-start-here__title {
+    color: #1d2327;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-start-here__desc {
+    color: #50575e;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+/* Card attacks readability and hierarchy */
+body.wc-af-settings-page .wc-af-card-attacks__learn-more {
+    margin: 0 0 0.85rem;
+    border: 1px solid #dcdcde;
+    border-radius: var(--wc-af-r);
+    background: #fff;
+    padding: 0.65rem 0.8rem;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__learn-more > summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__zone-title {
+    margin-bottom: 0.25rem;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__zone-lead,
+body.wc-af-settings-page .wc-af-card-attacks__advanced-lead {
+    max-width: 72ch;
+    line-height: 1.5;
+}
+
+/* Dashboard page — collapsed resources + action wrap */
+body.wc-af-dashboard-page .wc-af-dashboard-details.wc-af-dashboard-start-here {
+    margin-bottom: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+    background: #fff;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-details__summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #1d2327;
+    list-style: none;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-details__summary::-webkit-details-marker {
+    display: none;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-start-here__actions--wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid #f0f0f1;
+}
+
+@media screen and (max-width: 1100px) {
+    body.wc-af-settings-page .wc-af-start-here__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-start-here__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -------------------------------------------------------------------------
+   Settings navigation — primary tabs + contextual secondary (two-tier)
+   ------------------------------------------------------------------------- */
+
+body.wc-af-settings-page .wc-af-settings-nav-shell {
+    margin: 0 0 1rem;
+    padding: 0;
+    border: 1px solid var(--wc-af-border, #dcdcde);
+    border-radius: var(--wc-af-r-lg, 8px);
+    background: linear-gradient(180deg, #fdfdfd 0%, #f8f9f9 100%);
+    box-shadow: var(--wc-af-shadow, 0 1px 3px rgba(0, 0, 0, 0.08));
+    /* Do not clip children: focus rings, hover outlines, and scrollable tab rows need visible overflow. */
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+/* Inner panels clip their own backgrounds to the card radius so the shell stays visually rounded. */
+body.wc-af-settings-page .wc-af-primary-nav {
+    padding: 0.5rem 0.75rem 0.55rem;
+    background: linear-gradient(180deg, #fcfcfd 0%, #eef0f2 100%);
+    border-bottom: 1px solid var(--wc-af-border, #dcdcde);
+    border-radius: calc(var(--wc-af-r-lg, 8px) - 1px) calc(var(--wc-af-r-lg, 8px) - 1px) 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-settings-nav-shell--primary-only .wc-af-primary-nav {
+    border-bottom: none;
+    border-radius: calc(var(--wc-af-r-lg, 8px) - 1px);
+}
+
+body.wc-af-settings-page .wc-af-primary-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0.25rem 0.35rem;
+    margin: 0;
+    /* Inset keeps the first/last tabs off the clipped inner edge and clears focus rings. */
+    padding: 0.125rem 0.25rem;
+    list-style: none;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-primary-nav__item {
+    margin: 0;
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+body.wc-af-settings-page .wc-af-primary-nav__link {
+    display: block;
+    padding: 0.45rem 0.7rem;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #50575e;
+    text-decoration: none;
+    border-radius: var(--wc-af-r-sm, 4px);
+    border: 1px solid transparent;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-primary-nav__item.is-active .wc-af-primary-nav__link {
+    color: #135e96;
+    font-weight: 600;
+    background: rgba(34, 113, 177, 0.14);
+    border-color: rgba(34, 113, 177, 0.4);
+}
+
+body.wc-af-settings-page .wc-af-primary-nav__item:not(.is-active) .wc-af-primary-nav__link:hover,
+body.wc-af-settings-page .wc-af-primary-nav__item:not(.is-active) .wc-af-primary-nav__link:focus {
+    color: #135e96;
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #c3d9ed;
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(34, 113, 177, 0.15);
+}
+
+body.wc-af-settings-page .wc-af-primary-nav__link:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+body.wc-af-settings-page .wc-af-secondary-nav {
+    padding: 0.45rem 0.75rem 0.55rem;
+    background: #f3f4f5;
+    border-top: 1px solid var(--wc-af-line, #e8e8e8);
+    border-radius: 0 0 calc(var(--wc-af-r-lg, 8px) - 1px) calc(var(--wc-af-r-lg, 8px) - 1px);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-secondary-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.45rem;
+    margin: 0;
+    padding: 0.1rem 0.15rem 0.05rem;
+    list-style: none;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-secondary-nav__item {
+    margin: 0;
+}
+
+body.wc-af-settings-page .wc-af-secondary-nav__link {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #646970;
+    text-decoration: none;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+body.wc-af-settings-page .wc-af-secondary-nav__item.is-current .wc-af-secondary-nav__link {
+    color: #135e96;
+    font-weight: 600;
+    background: #fff;
+    border-color: #c3d9ed;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+body.wc-af-settings-page .wc-af-secondary-nav__item:not(.is-current) .wc-af-secondary-nav__link:hover,
+body.wc-af-settings-page .wc-af-secondary-nav__item:not(.is-current) .wc-af-secondary-nav__link:focus {
+    color: #135e96;
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #dcdcde;
+    outline: none;
+}
+
+body.wc-af-settings-page .wc-af-secondary-nav__link:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+/* WordPress admin collapses the menu at 782px — match that breakpoint for navigation. */
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-primary-nav,
+    body.wc-af-settings-page .wc-af-secondary-nav {
+        overflow: visible;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    body.wc-af-settings-page .wc-af-primary-nav__list,
+    body.wc-af-settings-page .wc-af-secondary-nav__list {
+        flex-wrap: wrap;
+        overflow: visible;
+        gap: 0.35rem;
+        padding: 0.15rem 0.2rem 0.3rem;
+    }
+
+    body.wc-af-settings-page .wc-af-primary-nav__item {
+        flex: 1 1 calc(50% - 0.35rem);
+        min-width: 0;
+    }
+
+    body.wc-af-settings-page .wc-af-primary-nav__link,
+    body.wc-af-settings-page .wc-af-secondary-nav__link {
+        white-space: normal;
+        text-align: center;
+        hyphens: auto;
+        word-break: break-word;
+    }
+
+    body.wc-af-settings-page .wc-af-primary-nav__link {
+        min-height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+body.wc-af-settings-page .wc-af-section-intro {
+    margin: 0 0 1.1rem;
+    padding: 0;
+}
+
+/* Lead blurb only—panel <h2> is the section title (no duplicate heading). */
+body.wc-af-settings-page .wc-af-section-intro--premium.wc-af-section-intro--compact .wc-af-section-intro__inner {
+    padding: 0.75rem 1rem 0.85rem;
+}
+
+body.wc-af-settings-page .wc-af-section-intro--premium.wc-af-section-intro--compact .wc-af-section-intro__body {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #2c3338;
+}
+
+/* Section intro card styles: see “Section intro callouts” + Premium UX blocks below. */
+
+body.wc-af-settings-page .wc-af-settings-panel {
+    margin-top: 0.35rem;
+}
+
+/* Panel intro + core hint: see consolidated rules under “Panel intros” / “Core hint” below. */
+
+body.wc-af-settings-page .wc-af-advanced-wrap {
+    margin: 1.25rem 0 1.5rem;
+    padding: 0;
+    clear: both;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap__hint {
+    margin: 0 0 0.5rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap .wc-af-advanced-toggle {
+    margin-bottom: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap--open .wc-af-advanced-wrap__hint,
+body.wc-af-settings-page .wc-af-advanced-wrap--open .wc-af-advanced-wrap__lead {
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-advanced-panel {
+    margin-top: 0.75rem;
+    padding: 0.75rem 0 0;
+    border-top: 1px solid #dcdcde;
+}
+
+body.wc-af-settings-page .wc-af-advanced-panel[hidden] {
+    display: none;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap--open .wc-af-advanced-panel:not([hidden]) {
+    display: block;
+}
+
+/* Phase 4 — Card attacks (panel chrome consolidated below under “Incident / emergency panel”) */
+
+body.wc-af-settings-page .wc-af-incident-panel__header {
+    margin-bottom: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__title {
+    margin: 0 0 0.35rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__lead {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0 0.65rem;
+}
+
+body.wc-af-settings-page .wc-af-status-pill {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 12px;
+    line-height: 1.35;
+    border-radius: var(--wc-af-r-sm, 4px);
+    border: 1px solid #dcdcde;
+    background: #fff;
+}
+
+body.wc-af-settings-page .wc-af-status-pill__label {
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-status-pill__value {
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--ok {
+    border-color: #00a32a;
+    background: #edfaef;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--ok .wc-af-status-pill__value {
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--warn {
+    border-color: #dba617;
+    background: #fcf9e8;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--warn .wc-af-status-pill__value {
+    color: #614200;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--muted {
+    border-color: #c3c4c7;
+    background: #f6f7f7;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__metric {
+    margin: 0.35rem 0 0.75rem;
+    font-size: 13px;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__metric--muted {
+    color: #646970;
+    font-style: italic;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__quick-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #50575e;
+    margin-right: 0.15rem;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection {
+    margin: 0 0 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e8e0d5;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection-title {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0 0 0.2rem;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.15rem;
+    height: 1.15rem;
+    font-size: 8px;
+    font-weight: 800;
+    line-height: 1;
+    border-radius: 3px;
+    background: #e8e8e8;
+    color: #3c434a;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection-hint {
+    margin: 0 0 0.55rem;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection .wc-af-incident-panel__status {
+    margin-top: 0.25rem;
+    margin-bottom: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection .wc-af-incident-panel__metric {
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection--guidance {
+    padding: 0.75rem 0.85rem;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__subsection--guidance .wc-af-incident-panel__recommended-list {
+    margin-top: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended {
+    padding: 0.65rem 0.75rem;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended-title {
+    margin: 0 0 0.5rem;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8a2424;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended-list li {
+    margin-bottom: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended-list a {
+    text-decoration: underline;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__intro-desc {
+    margin: 0 0 1rem;
+    max-width: 820px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__zone {
+    margin: 0 0 1.25rem;
+    padding: 0 0 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__zone--protect {
+    padding: 0.85rem 1rem 0.25rem;
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__zone-title {
+    margin: 0 0 0.35rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__zone-lead {
+    margin: 0 0 0.85rem;
+    max-width: 820px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__checkout-steps {
+    padding: 0.75rem 0.5rem !important;
+    vertical-align: top;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__steps-title {
+    margin: 0 0 0.5rem;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__steps-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__steps-list a {
+    font-weight: 500;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__advanced-lead {
+    margin: 0 0 0.75rem;
+    padding: 0.5rem 0.65rem;
+    max-width: 820px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #50575e;
+    background: #f6f7f7;
+    border-left: 3px solid #2271b1;
+    border-radius: 0 3px 3px 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc_af_sub-section-title h3 {
+    margin-top: 0.5rem;
+}
+
+/* =============================================================================
+   Anti-Fraud admin UI refresh — design tokens, density, hierarchy (2026)
+   ============================================================================= */
+body.wc-af-settings-page {
+    --wc-af-r: 8px;
+    --wc-af-r-sm: 4px;
+    --wc-af-r-lg: 12px;
+    --wc-af-r-xl: 16px;
+    --wc-af-line: #f0f0f1;
+    --wc-af-border: #dcdcde;
+    --wc-af-surface: #fff;
+    --wc-af-surface-2: #f6f7f7;
+    --wc-af-surface-3: #f0f6fc;
+    --wc-af-page-tint: #f0f2f4;
+    --wc-af-accent: #2271b1;
+    --wc-af-text: #1d2327;
+    --wc-af-muted: #646970;
+    --wc-af-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    --wc-af-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07);
+    --wc-af-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.05), 0 8px 28px rgba(0, 0, 0, 0.06);
+    --wc-af-success: #00a32a;
+    --wc-af-success-bg: #edfaef;
+    --wc-af-warn: #dba617;
+    --wc-af-warn-bg: #fcf9e8;
+    --wc-af-danger: #d63638;
+    --wc-af-danger-bg: #fcf0f1;
+}
+
+body.wc-af-settings-page .wc-af-ui {
+    max-width: 1180px;
+}
+
+/* Aligns all Anti-Fraud settings sections (overview, custom templates, list/captcha renderers). */
+body.wc-af-settings-page .wc-af-settings-main.wc-af-ui {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.35rem;
+}
+
+/* Landing / overview hero */
+body.wc-af-settings-page .wc-af-control-center .wc-af-cc-hero {
+    position: relative;
+    padding: 1.05rem 1.2rem 1.15rem;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(145deg, #ffffff 0%, #f9fafb 55%, #f3f4f5 100%);
+    box-shadow: var(--wc-af-shadow-md);
+    overflow: hidden;
+}
+
+body.wc-af-settings-page .wc-af-control-center .wc-af-cc-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2271b1, #135e96, #00a0d2);
+    opacity: 0.95;
+}
+
+body.wc-af-settings-page .wc-af-cc-title {
+    font-size: 1.28rem;
+    letter-spacing: -0.02em;
+}
+
+body.wc-af-settings-page .wc-af-cc-lead {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card {
+    border-radius: var(--wc-af-r);
+    box-shadow: var(--wc-af-shadow);
+    border: 1px solid var(--wc-af-border);
+    padding: 1.15rem 1.2rem;
+}
+
+/* Recommended setup */
+body.wc-af-settings-page .wc-af-recommended-setup {
+    padding: 1.25rem 1.35rem 1.35rem;
+    border-radius: var(--wc-af-r);
+    box-shadow: var(--wc-af-shadow-md);
+    border: 1px solid var(--wc-af-border);
+}
+
+body.wc-af-settings-page .wc-af-rs__title {
+    font-size: 16px;
+    letter-spacing: -0.01em;
+}
+
+body.wc-af-settings-page .wc-af-rs__step {
+    padding: 0.85rem 0;
+    border-radius: var(--wc-af-r-sm);
+}
+
+body.wc-af-settings-page .wc-af-rs__step:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+body.wc-af-settings-page .wc-af-rs__step-marker {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--wc-af-surface-2);
+    border: 1px solid var(--wc-af-border);
+    font-size: 12px;
+}
+
+body.wc-af-settings-page .wc-af-rs__step--done .wc-af-rs__step-marker {
+    background: #edfaef;
+    border-color: #68a57b;
+    color: #008a20;
+}
+
+/* Card grid */
+body.wc-af-settings-page .wc-af-cc-grid {
+    gap: 1.15rem;
+    margin-top: 0.25rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-card {
+    padding: 1.2rem 1.3rem 1.3rem;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    box-shadow: var(--wc-af-shadow);
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+body.wc-af-settings-page .wc-af-cc-card:not(.wc-af-cc-card--emergency):hover {
+    border-color: #c3c4c7;
+    box-shadow: var(--wc-af-shadow-md);
+}
+
+body.wc-af-settings-page .wc-af-cc-card__title {
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #f0f0f1;
+    margin-bottom: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-card--emergency {
+    border-color: #dba617;
+    box-shadow: var(--wc-af-shadow-md);
+    background: linear-gradient(160deg, #fffdf7 0%, #fff 45%);
+}
+
+body.wc-af-settings-page .wc-af-cc-card--emergency .button.button-primary {
+    box-shadow: 0 1px 0 #b8860b;
+}
+
+body.wc-af-settings-page .wc-af-cc-int {
+    border-radius: var(--wc-af-r-sm);
+    padding: 0.65rem 0.85rem;
+}
+
+/* Section intro callouts */
+body.wc-af-settings-page .wc-af-section-intro__inner {
+    max-width: 920px;
+    padding: 1.1rem 1.2rem;
+    border-radius: var(--wc-af-r-lg);
+    background: var(--wc-af-surface);
+    border: 1px solid var(--wc-af-border);
+    border-left: 4px solid var(--wc-af-accent);
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-section-intro__body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #2c3338;
+}
+
+/* Panel intros (HTML from settings) */
+body.wc-af-settings-page .wc-af-panel-intro {
+    margin: 0 0 1.15rem;
+    padding: 1.1rem 1.2rem;
+    max-width: 920px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #2c3338;
+    background: var(--wc-af-surface-2);
+    border: 1px solid var(--wc-af-border);
+    border-radius: var(--wc-af-r-lg);
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-panel-intro p {
+    margin-bottom: 0.6rem;
+}
+
+body.wc-af-settings-page .wc-af-panel-intro p:last-child {
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel > h2 {
+    margin: 0 0 0.75rem;
+    padding: 0 0 0.65rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--wc-af-text);
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+/* Core hint — matches panel / section intro surfaces */
+body.wc-af-settings-page .wc-af-core-hint {
+    margin: 0.75rem 0 1.1rem;
+    max-width: 920px;
+    padding: 0.85rem 1.1rem;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #2c3338;
+    background: var(--wc-af-surface-3);
+    border: 1px solid #c3d9ed;
+    border-radius: var(--wc-af-r-lg);
+    border-left: 4px solid var(--wc-af-accent);
+    box-shadow: var(--wc-af-shadow);
+}
+
+/* Advanced disclosure — full panel chrome in Premium UX block */
+body.wc-af-settings-page .wc-af-advanced-wrap__hint {
+    margin-bottom: 0.65rem;
+    padding-left: 0.15rem;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap--open {
+    border-style: solid;
+    border-color: var(--wc-af-border);
+    background: var(--wc-af-surface);
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-advanced-panel {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e8e8e8;
+}
+
+/* Incident / emergency panel — single definition */
+body.wc-af-settings-page .wc-af-incident-panel {
+    margin: 0 0 1.35rem;
+    max-width: 960px;
+    padding: 1.25rem 1.35rem 1.4rem;
+    border-radius: var(--wc-af-r-lg, 12px);
+    background: linear-gradient(180deg, #fffdfb 0%, #fffaf6 38%, #fff 100%);
+    border: 1px solid #e8d5c4;
+    border-left: 4px solid #c05621;
+    box-shadow: var(--wc-af-shadow-md);
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended {
+    margin-top: 0.5rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: var(--wc-af-r-sm, 4px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid var(--wc-af-border, #dcdcde);
+    box-shadow: none;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended-title {
+    color: var(--wc-af-text, #1d2327);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Subsection heading strips (settings tables) */
+body.wc-af-settings-page .wc-af-settings-subheading-wrap {
+    margin: 1.5rem 0 0;
+    border-radius: var(--wc-af-r);
+    overflow: hidden;
+    box-shadow: var(--wc-af-shadow);
+    border: 1px solid var(--wc-af-border);
+    background: var(--wc-af-surface);
+}
+
+body.wc-af-settings-page .wc-af-settings-subheading-wrap--cleanup {
+    border-left: 4px solid #00a32a;
+}
+
+body.wc-af-settings-page .wc-af-settings-subheading-wrap--card {
+    border-left: 4px solid var(--wc-af-accent);
+}
+
+body.wc-af-settings-page .wc-af-settings-subheading-wrap--section {
+    border-left: 4px solid #787c82;
+}
+
+body.wc-af-settings-page .wc-af-settings-subheading {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--wc-af-text) !important;
+    background: linear-gradient(180deg, #fafbfc 0%, var(--wc-af-surface-2) 100%) !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-subheading-status {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--wc-af-r-sm);
+    border: 1px solid var(--wc-af-border);
+    background: var(--wc-af-surface);
+    color: var(--wc-af-muted);
+}
+
+body.wc-af-settings-page .wc-af-settings-subheading-wrap > p {
+    margin: 0;
+    padding: 0.65rem 1rem 0.9rem;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--wc-af-muted);
+    background: var(--wc-af-surface);
+    border-top: 1px solid #f0f0f1;
+}
+
+/* Form tables — card-like container on Anti-Fraud tab */
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 0 1.5rem 0;
+    background: var(--wc-af-surface);
+    border: 1px solid var(--wc-af-border);
+    border-radius: var(--wc-af-r);
+    box-shadow: var(--wc-af-shadow);
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+body.wc-af-settings-page .wc-af-settings-subheading-wrap + table.form-table.opmc_wc_af_table {
+    border-top: none;
+    margin-top: -1px;
+    border-radius: 0 0 var(--wc-af-r) var(--wc-af-r);
+}
+
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table tr:last-child th,
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table tr:last-child td {
+    border-bottom: none;
+}
+
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table th,
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table td {
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table th {
+    width: 240px;
+    font-weight: 600;
+    color: var(--wc-af-text);
+}
+
+/* Card attacks zones */
+body.wc-af-settings-page .wc-af-card-attacks__zone--protect {
+    border-radius: var(--wc-af-r);
+    box-shadow: var(--wc-af-shadow);
+    border: 1px solid var(--wc-af-border);
+    padding: 1rem 1.15rem 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-card-attacks__advanced-lead {
+    border-radius: var(--wc-af-r-sm);
+}
+
+/* Details / collapsible help */
+body.wc-af-settings-page .wc-af-cc-details {
+    border-radius: var(--wc-af-r);
+    box-shadow: var(--wc-af-shadow);
+    padding: 1rem 1.15rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-details__summary {
+    font-size: 13.5px;
+    color: var(--wc-af-accent);
+}
+
+body.wc-af-settings-page .wc-af-cc-details__summary:hover {
+    color: #135e96;
+}
+
+/* WooCommerce admin notices inside our tab — calmer edges */
+body.wc-af-settings-page .woocommerce .notice {
+    border-radius: var(--wc-af-r-sm);
+}
+
+/* =============================================================================
+   Fraud dashboard (Anti-Fraud admin menu page)
+   ============================================================================= */
+body.wc-af-dashboard-page .wc-af-dashboard-shell {
+    max-width: 1460px;
+    margin: 0 auto;
+    padding: 6px 14px 32px;
+    box-sizing: border-box;
+}
+
+body.wc-af-dashboard-page #wpcontent {
+    background: #f1f3f5;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-header-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem 1.25rem;
+    flex-wrap: wrap;
+    margin: 0 0 1rem;
+    padding: 1.2rem 1.35rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-header-main {
+    flex: 1 1 520px;
+    min-width: 280px;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-eyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #646970;
+    font-weight: 600;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-hero {
+    margin: 0;
+    font-size: clamp(1.45rem, 2.8vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1d2327;
+    line-height: 1.2;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-subtitle {
+    margin: 0.45rem 0 0;
+    max-width: 700px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #50575e;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-header-actions .button {
+    border-radius: 6px;
+}
+
+body.wc-af-dashboard-page .dash-row {
+    display: flex;
+    gap: 1rem;
+    max-width: 100%;
+    margin: 0 0 1rem;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-card,
+body.wc-af-dashboard-page .dash-section-50 {
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.045);
+}
+
+body.wc-af-dashboard-page .wc-af-date-filter-container {
+    padding: 1rem 1.15rem;
+}
+
+body.wc-af-dashboard-page .wc-af-date-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+body.wc-af-dashboard-page .wc-af-date-controls-label,
+body.wc-af-dashboard-page .wc-af-custom-picker-label {
+    color: #1d2327;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body.wc-af-dashboard-page .wc-af-date-select,
+body.wc-af-dashboard-page .wc-af-date-input {
+    min-height: 34px;
+    padding: 0 0.65rem;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    background: #fff;
+    color: #2c3338;
+}
+
+body.wc-af-dashboard-page .wc-af-date-select {
+    min-width: 250px;
+    max-width: 100%;
+}
+
+body.wc-af-dashboard-page .wc-af-custom-picker {
+    margin-top: 0.75rem;
+}
+
+body.wc-af-dashboard-page .wc-af-current-range {
+    margin-top: 0.75rem;
+    color: #646970;
+    font-size: 13px;
+}
+
+body.wc-af-dashboard-page .wc-af-current-range strong {
+    color: #1d2327;
+}
+
+body.wc-af-dashboard-page .wc-af-metric-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+body.wc-af-dashboard-page .metric-box {
+    padding: 1rem 1.05rem;
+    text-align: left;
+    min-height: 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 12px;
+    margin: 0;
+}
+
+body.wc-af-dashboard-page .metric-box img {
+    width: 34px;
+    height: 34px;
+    margin: 0 0 0.8rem;
+}
+
+body.wc-af-dashboard-page .wc-af-metric-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.95;
+}
+
+body.wc-af-dashboard-page .metric-box h2 {
+    margin: 0.45rem 0 0;
+    font-size: 1.8rem;
+    line-height: 1.15;
+}
+
+body.wc-af-dashboard-page .metric-box,
+body.wc-af-dashboard-page .metric-box h2,
+body.wc-af-dashboard-page .metric-box p {
+    color: #fff;
+}
+
+body.wc-af-dashboard-page .metric-box.metric-style1 { background: linear-gradient(180deg, #4361d5 0%, #3652bd 100%); }
+body.wc-af-dashboard-page .metric-box.metric-style2 { background: linear-gradient(180deg, #2f9d5d 0%, #22884f 100%); }
+body.wc-af-dashboard-page .metric-box.metric-style3 { background: linear-gradient(180deg, #cf9b18 0%, #b5840f 100%); }
+body.wc-af-dashboard-page .metric-box.metric-style4 { background: linear-gradient(180deg, #cb4b61 0%, #b93d52 100%); }
+
+body.wc-af-dashboard-page .dash-section-50 {
+    flex: 1;
+    padding: 1rem 1.15rem;
+}
+
+body.wc-af-dashboard-page .bar-chart,
+body.wc-af-dashboard-page .dash-stats,
+body.wc-af-dashboard-page .recent-orders,
+body.wc-af-dashboard-page .pie-chart {
+    width: 50%;
+}
+
+body.wc-af-dashboard-page .wc-af-section-title {
+    margin: 0 0 0.85rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-dashboard-page .chart-wrapper {
+    height: 340px;
+}
+
+body.wc-af-dashboard-page .dash-stats .blurb {
+    border-bottom: 1px solid #f0f0f1;
+    padding: 0.55rem 0;
+}
+
+body.wc-af-dashboard-page .dash-stats .blurb-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+body.wc-af-dashboard-page .dash-stats .blurb:last-child {
+    border-bottom: none;
+}
+
+body.wc-af-dashboard-page .blurb img {
+    width: 18px;
+    margin-right: 0.55rem;
+    transform: translateY(2px);
+}
+
+body.wc-af-dashboard-page .blurb h3 {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    color: #2c3338;
+    display: inline-block;
+}
+
+body.wc-af-dashboard-page .blurb-content {
+    font-weight: 600;
+    color: #1d2327;
+    float: none;
+}
+
+body.wc-af-dashboard-page .recent-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body.wc-af-dashboard-page .dash-section-50.recent-orders {
+    overflow-x: auto;
+}
+
+body.wc-af-dashboard-page .recent-orders th,
+body.wc-af-dashboard-page .recent-orders td {
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 13px;
+    color: #2c3338;
+    text-align: left;
+}
+
+body.wc-af-dashboard-page .recent-orders th {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #646970;
+}
+
+body.wc-af-dashboard-page .table-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+}
+
+body.wc-af-dashboard-page .low-risk-icon { background: #2f9d5d; }
+body.wc-af-dashboard-page .med-risk-icon { background: #cf9b18; }
+body.wc-af-dashboard-page .high-risk-icon { background: #cb4b61; }
+
+body.wc-af-dashboard-page .wc-af-order-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid #dcdcde;
+    background: #f6f7f7;
+    font-size: 11px;
+    font-weight: 600;
+    color: #3c434a;
+}
+
+body.wc-af-dashboard-page .wc-af-order-status-badge.is-on-hold,
+body.wc-af-dashboard-page .wc-af-order-status-badge.is-pending {
+    border-color: #dba617;
+    background: #fcf9e8;
+    color: #614200;
+}
+
+body.wc-af-dashboard-page .wc-af-order-status-badge.is-completed {
+    border-color: #68a57b;
+    background: #edfaef;
+    color: #1e4620;
+}
+
+body.wc-af-dashboard-page .wc-af-order-status-badge.is-cancelled,
+body.wc-af-dashboard-page .wc-af-order-status-badge.is-failed {
+    border-color: #d63638;
+    background: #fcf0f1;
+    color: #8a2424;
+}
+
+body.wc-af-dashboard-page .wc-af-notice {
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+    margin-bottom: 0.85rem;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+body.wc-af-dashboard-page .wc-af-notice-info {
+    background: var(--wc-af-sem-info-bg, #eef6ff);
+    border-left: 4px solid var(--wc-af-sem-info-bd, #2271b1);
+    color: #1d2327;
+}
+
+body.wc-af-dashboard-page .wc-af-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.wc-af-dashboard-page .wc-af-modal-content {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    color: #1d2327;
+}
+
+body.wc-af-dashboard-page .wc-af-modal-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+body.wc-af-dashboard-page .wc-af-modal-body {
+    padding: 1rem 1.25rem;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+body.wc-af-dashboard-page .wc-af-modal-footer {
+    padding: 0.85rem 1.25rem 1rem;
+    border-top: 1px solid #f0f0f1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+body.wc-af-dashboard-page .wc-af-modal-title {
+    margin: 0;
+    color: #b32d2e;
+}
+
+body.wc-af-dashboard-page .wc-af-modal-checkbox {
+    display: block;
+    margin: 1rem 0;
+}
+
+body.wc-af-dashboard-page #wc-af-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body.wc-af-dashboard-page .wc-af-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.25);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    animation: wc-af-spin 0.9s linear infinite;
+}
+
+@keyframes wc-af-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body.wc-af-dashboard-page .wc-af-loading-text {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 0.8rem;
+}
+
+@media screen and (max-width: 1200px) {
+    body.wc-af-dashboard-page .wc-af-metric-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.wc-af-dashboard-page .dash-row {
+        flex-wrap: wrap;
+    }
+
+    body.wc-af-dashboard-page .bar-chart,
+    body.wc-af-dashboard-page .dash-stats,
+    body.wc-af-dashboard-page .recent-orders,
+    body.wc-af-dashboard-page .pie-chart {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-dashboard-page .wc-af-dashboard-header-card {
+        padding: 1rem;
+    }
+
+    body.wc-af-dashboard-page .wc-af-metric-row {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-dashboard-page .chart-wrapper {
+        height: 280px;
+    }
+}
+
+/* =============================================================================
+   Premium UX — SaaS-style control panel (scoped to Anti-Fraud admin)
+   WordPress-compatible: subtle depth, calm palette, no heavy chrome.
+   ============================================================================= */
+/* Page rhythm: breathing room inside WooCommerce settings content */
+body.wc-af-settings-page #wpbody-content .woocommerce {
+    padding-top: 0.25rem;
+}
+
+/* Calmer top stack: page title → area nav → body (WooCommerce puts h1 in .wrap, not inside .woocommerce). */
+body.wc-af-settings-page .wrap > h1:first-of-type {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    line-height: 1.25;
+}
+
+body.wc-af-settings-page .woocommerce .wc-af-settings-nav-shell {
+    margin-bottom: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-main {
+    padding-bottom: 2rem;
+}
+
+/* --- Semantic badges (Recommended / Advanced / Optional / Warning / status) --- */
+body.wc-af-settings-page .wc-af-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.2rem 0.5rem;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: var(--wc-af-r-sm);
+    border: 1px solid var(--wc-af-border);
+    background: var(--wc-af-surface-2);
+    color: var(--wc-af-muted);
+}
+
+body.wc-af-settings-page .wc-af-badge--sm {
+    font-size: 10px;
+    padding: 0.15rem 0.4rem;
+}
+
+body.wc-af-settings-page .wc-af-badge--recommended {
+    border-color: #68a57b;
+    background: #edfaef;
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-badge--advanced {
+    border-color: #8c8f94;
+    background: #f0f0f1;
+    color: #3c434a;
+}
+
+body.wc-af-settings-page .wc-af-badge--optional {
+    border-color: #c3c4c7;
+    background: #fafafa;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-badge--warning {
+    border-color: #dba617;
+    background: var(--wc-af-warn-bg);
+    color: #614200;
+}
+
+body.wc-af-settings-page .wc-af-badge--active-protection {
+    border-color: var(--wc-af-success);
+    background: var(--wc-af-success-bg);
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-badge--needs-config {
+    border-color: #dba617;
+    background: #fff8e5;
+    color: #614200;
+}
+
+body.wc-af-settings-page .wc-af-badge--emergency {
+    border-color: #c05621;
+    background: linear-gradient(180deg, #fff4ec 0%, #ffe8d9 100%);
+    color: #7a2e0e;
+}
+
+body.wc-af-settings-page .wc-af-badge--connected {
+    border-color: #68a57b;
+    background: #edfaef;
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-badge--disconnected {
+    border-color: #c3c4c7;
+    background: #f6f7f7;
+    color: #50575e;
+}
+
+/* Section guide kicker (subsection intros) */
+body.wc-af-settings-page .wc-af-ux-kicker {
+    display: block;
+    margin: 0 0 0.5rem;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--wc-af-muted);
+}
+
+/* Control center — eyebrow + hero */
+body.wc-af-settings-page .wc-af-cc-eyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--wc-af-muted);
+}
+
+body.wc-af-settings-page .wc-af-control-center .wc-af-cc-hero {
+    display: grid;
+    grid-template-columns: 1fr minmax(220px, 300px);
+    gap: 1.5rem 2rem;
+    align-items: start;
+    padding: 1.65rem 1.65rem 1.75rem;
+    border-radius: var(--wc-af-r-lg);
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-control-center .wc-af-cc-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.wc-af-settings-page .wc-af-cc-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--wc-af-text);
+}
+
+body.wc-af-settings-page .wc-af-cc-lead {
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Status card — level accents */
+body.wc-af-settings-page .wc-af-cc-status-card {
+    position: relative;
+    padding: 1.2rem 1.25rem 1.3rem;
+    border-radius: var(--wc-af-r-lg);
+    border-left-width: 4px;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card--strong {
+    border-left-color: var(--wc-af-success);
+    background: linear-gradient(180deg, #fafffb 0%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card--moderate {
+    border-left-color: #72aee6;
+    background: linear-gradient(180deg, #f8fbff 0%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card--needs_attention {
+    border-left-color: var(--wc-af-warn);
+    background: linear-gradient(180deg, #fffdf7 0%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card__label {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card__summary {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ux-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--wc-af-muted);
+}
+
+/* Recommended setup block */
+body.wc-af-settings-page .wc-af-recommended-setup {
+    padding: 1.35rem 1.45rem 1.5rem;
+    border-radius: var(--wc-af-r-lg);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(180deg, #fafbfc 0%, #fff 55%);
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-rs__title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    margin-bottom: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-rs__title {
+    margin: 0;
+    font-size: 17px;
+}
+
+body.wc-af-settings-page .wc-af-rs__intro {
+    margin: 0.35rem 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-rs__bar {
+    height: 6px;
+    border-radius: 999px;
+    background: #e8e8e8;
+    overflow: hidden;
+}
+
+body.wc-af-settings-page .wc-af-rs__bar-fill {
+    border-radius: inherit;
+    background: linear-gradient(90deg, #68a57b, #00a32a);
+}
+
+body.wc-af-settings-page .wc-af-rs__optional {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: var(--wc-af-r);
+    border: 1px dashed #c3c4c7;
+    background: #fafafa;
+}
+
+body.wc-af-settings-page .wc-af-rs__optional-kicker {
+    margin: 0 0 0.35rem;
+}
+
+/* Card grid — premium tiles */
+body.wc-af-settings-page .wc-af-cc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-card--wide {
+    grid-column: 1 / -1;
+}
+
+body.wc-af-settings-page .wc-af-cc-card {
+    padding: 1.35rem 1.4rem 1.45rem;
+    border-radius: var(--wc-af-r-lg);
+    border: 1px solid var(--wc-af-border);
+    background: var(--wc-af-surface);
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-cc-card__title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem 0.75rem;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-cc-card__title-row .wc-af-cc-card__title {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-card__title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 0.65rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-cc-card__title-row + .wc-af-cc-card__text,
+body.wc-af-settings-page .wc-af-cc-card__title-row ~ p {
+    margin-top: 0;
+}
+
+body.wc-af-settings-page .wc-af-cc-card--emergency {
+    border-color: #e0b32a;
+    box-shadow: var(--wc-af-shadow-md);
+    background: linear-gradient(165deg, #fffef9 0%, #fff 50%);
+}
+
+body.wc-af-settings-page .wc-af-cc-card--help {
+    background: linear-gradient(180deg, #f8fbff 0%, #fff 100%);
+    border-color: #c3d9ed;
+}
+
+/* Checklist states */
+body.wc-af-settings-page .wc-af-cc-checklist__item {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--wc-af-line);
+    font-size: 13px;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item:last-child {
+    border-bottom: none;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item--ok .wc-af-cc-checklist__detail {
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item--warn .wc-af-cc-checklist__detail {
+    color: #614200;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__label {
+    font-weight: 600;
+    color: var(--wc-af-text);
+}
+
+/* Integrations */
+body.wc-af-settings-page .wc-af-cc-integrations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.65rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-int {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 0.85rem 1rem;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    background: var(--wc-af-surface-2);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+body.wc-af-settings-page .wc-af-cc-int:hover {
+    border-color: #c3d9ed;
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-cc-int--on {
+    border-color: #9dd8a4;
+    background: #f6fcf7;
+}
+
+body.wc-af-settings-page .wc-af-cc-int__badge {
+    font-size: 10px;
+    padding: 0.2rem 0.45rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-int__note {
+    font-size: 12px;
+    color: var(--wc-af-muted);
+    line-height: 1.45;
+}
+
+/* Learn more / details */
+body.wc-af-settings-page .wc-af-cc-details--learn {
+    margin-top: 1.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--wc-af-border);
+    border-radius: var(--wc-af-r-lg);
+    background: var(--wc-af-surface-2);
+}
+
+body.wc-af-settings-page .wc-af-cc-details--learn .wc-af-cc-details__summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.65rem;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+body.wc-af-settings-page .wc-af-cc-details--learn .wc-af-cc-details__summary::-webkit-details-marker {
+    display: none;
+}
+
+body.wc-af-settings-page .wc-af-cc-details__summary-text {
+    color: var(--wc-af-text);
+}
+
+/* Form fields — description hierarchy */
+body.wc-af-settings-page .woocommerce table.form-table td p.description,
+body.wc-af-settings-page .woocommerce table.form-table .forminp p.description {
+    margin-top: 0.5rem;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #646970;
+    max-width: 52em;
+}
+
+body.wc-af-settings-page .woocommerce table.form-table th.titledesc {
+    vertical-align: top;
+    padding-top: 1.1rem;
+}
+
+/* Advanced region — premium disclosure */
+body.wc-af-settings-page .wc-af-advanced-wrap--panel {
+    margin: 1.75rem 0 2rem;
+    padding: 1.2rem 1.35rem 1.35rem;
+    max-width: 960px;
+    border-radius: var(--wc-af-r-lg);
+    border: 1px dashed #a7aaad;
+    background: linear-gradient(165deg, #f4f5f6 0%, #eceff1 45%, #e8eaeb 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.75),
+        0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap__head {
+    margin-bottom: 0.85rem;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap__head-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-width: 52em;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap__head .wc-af-advanced-wrap__hint,
+body.wc-af-settings-page .wc-af-advanced-wrap__head .wc-af-advanced-wrap__lead {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #3c434a;
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap--open {
+    border-style: solid;
+    border-color: #c3c4c7;
+    background: linear-gradient(180deg, #fafbfc 0%, #f3f4f5 100%);
+    box-shadow: var(--wc-af-shadow-md);
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap--panel .wc-af-advanced-panel:not([hidden]) {
+    margin-top: 0.85rem;
+    padding: 1rem 1.15rem 1.15rem;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    border-top: 1px solid var(--wc-af-border);
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+body.wc-af-settings-page .wc-af-advanced-wrap--panel.wc-af-advanced-wrap--open .wc-af-advanced-panel:not([hidden]) {
+    border-color: #c3d9ed;
+}
+
+body.wc-af-settings-page .wc-af-advanced-toggle.button-secondary {
+    font-weight: 500;
+}
+
+/* Incident panel — title row + recommended heading */
+body.wc-af-settings-page .wc-af-incident-panel__title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__title {
+    margin: 0;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.65rem;
+    margin: 0 0 0.65rem;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wc-af-text);
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel__recommended-heading-text {
+    line-height: 1.4;
+}
+
+/* Notices inside tab */
+body.wc-af-settings-page .woocommerce .notice,
+body.wc-af-settings-page .woocommerce .notice-error,
+body.wc-af-settings-page .woocommerce .notice-success,
+body.wc-af-settings-page .woocommerce .notice-warning,
+body.wc-af-settings-page .woocommerce .notice-info {
+    border-radius: var(--wc-af-r);
+    box-shadow: var(--wc-af-shadow);
+    border-left-width: 4px;
+}
+
+body.wc-af-settings-page .woocommerce .notice.notice-info {
+    border-left-color: #72aee6;
+}
+
+/* -------------------------------------------------------------------------
+   Consistency pass — save row, buttons, nav → intro rhythm
+   ------------------------------------------------------------------------- */
+body.wc-af-settings-page .woocommerce p.submit {
+    margin-top: 1.5rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .woocommerce .button,
+body.wc-af-settings-page .woocommerce .button-secondary,
+body.wc-af-settings-page .woocommerce input.button {
+    border-radius: var(--wc-af-r-sm);
+    min-height: 32px;
+    line-height: 2.45;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+body.wc-af-settings-page .woocommerce .button-primary {
+    box-shadow: 0 1px 0 #135e96;
+}
+
+body.wc-af-settings-page .wc-af-settings-nav-shell + .wc-af-section-intro {
+    margin-top: 0.15rem;
+}
+
+/* =============================================================================
+   Premium admin refinement — control center, badges, nav, incident (2026 pass)
+   ============================================================================= */
+
+/* Page shell — rhythm between hero, actions, and grid */
+body.wc-af-settings-page .wc-af-cc-page.wc-af-control-center {
+    margin-bottom: 0.25rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-page .wc-af-recommended-setup {
+    margin-top: 0.75rem;
+}
+
+/* Section divider before operations grid (title only — intro lives in hero / cards). */
+body.wc-af-settings-page .wc-af-cc-grid-head {
+    margin: 1.35rem 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-cc-section-title {
+    margin: 0;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--wc-af-text);
+}
+
+body.wc-af-settings-page .wc-af-cc-section-lead {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #50575e;
+    max-width: 52em;
+}
+
+/* Protection status — visual indicator + copy */
+body.wc-af-settings-page .wc-af-cc-status-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem 1.15rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card__visual {
+    flex: 0 0 auto;
+    padding-top: 0.2rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-status-card__copy {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+body.wc-af-settings-page .wc-af-status-indicator {
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-status-indicator--strong {
+    background: radial-gradient(circle at 32% 28%, #e8f8ec 0%, #00a32a 42%, #007017 100%);
+    box-shadow:
+        0 0 0 1px rgba(0, 80, 30, 0.2),
+        0 0 0 5px rgba(0, 163, 42, 0.12),
+        0 4px 12px rgba(0, 100, 40, 0.12);
+}
+
+body.wc-af-settings-page .wc-af-status-indicator--moderate {
+    background: radial-gradient(circle at 32% 28%, #e8f2fc 0%, #2271b1 42%, #135e96 100%);
+    box-shadow:
+        0 0 0 1px rgba(19, 94, 150, 0.25),
+        0 0 0 5px rgba(34, 113, 177, 0.12),
+        0 4px 12px rgba(19, 94, 150, 0.12);
+}
+
+body.wc-af-settings-page .wc-af-status-indicator--needs_attention {
+    background: radial-gradient(circle at 32% 28%, #fff6e5 0%, #dba617 45%, #996800 100%);
+    box-shadow:
+        0 0 0 1px rgba(153, 104, 0, 0.28),
+        0 0 0 5px rgba(219, 166, 23, 0.15),
+        0 4px 12px rgba(153, 104, 0, 0.14);
+}
+
+/* Recommended setup — step title row + micro status */
+body.wc-af-settings-page .wc-af-rs__step-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.35rem 0.65rem;
+    margin-bottom: 0.2rem;
+}
+
+body.wc-af-settings-page .wc-af-rs__step-head .wc-af-rs__step-title {
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-micro-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.12rem 0.5rem;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.25;
+    border-radius: 999px;
+    border: 1px solid var(--wc-af-border);
+    background: var(--wc-af-surface-2);
+    color: var(--wc-af-muted);
+}
+
+body.wc-af-settings-page .wc-af-micro-badge--active {
+    border-color: #68a57b;
+    background: #edfaef;
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-micro-badge--attention {
+    border-color: #dba617;
+    background: #fff8e5;
+    color: #614200;
+}
+
+/* Next steps — primary callout row */
+body.wc-af-settings-page .wc-af-cc-steps__item--primary a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.7rem;
+    margin: -0.15rem 0 0 -0.15rem;
+    border-radius: var(--wc-af-r);
+    border: 1px solid #c3d9ed;
+    background: linear-gradient(180deg, #f4f9fd 0%, #e8f2fb 100%);
+    font-weight: 600;
+    text-decoration: none;
+    color: #135e96;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset;
+}
+
+body.wc-af-settings-page .wc-af-cc-steps__item--primary a:hover,
+body.wc-af-settings-page .wc-af-cc-steps__item--primary a:focus {
+    border-color: #2271b1;
+    background: linear-gradient(180deg, #f0f6fc 0%, #deebf7 100%);
+    color: #0a4b78;
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(34, 113, 177, 0.25);
+}
+
+body.wc-af-settings-page .wc-af-cc-steps__item--primary a:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: 1px;
+}
+
+body.wc-af-settings-page .wc-af-cc-steps__item--primary a::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2271b1;
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.2);
+}
+
+/* Integration tiles — semantic badges override legacy tint */
+body.wc-af-settings-page .wc-af-cc-int .wc-af-badge--connected {
+    border-color: #68a57b;
+    background: #edfaef;
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-cc-int .wc-af-badge--disconnected {
+    border-color: #c3c4c7;
+    background: #f0f0f1;
+    color: #50575e;
+}
+
+/* Incident / card attack — elevated panel */
+body.wc-af-settings-page .wc-af-incident-panel.wc-af-incident-panel--premium {
+    position: relative;
+    border-left-width: 5px;
+    border-left-color: #b54708;
+    background: linear-gradient(145deg, #fff9f4 0%, #fff5eb 35%, #fffdfb 100%);
+    box-shadow:
+        var(--wc-af-shadow-md),
+        0 0 0 1px rgba(192, 86, 33, 0.08);
+}
+
+body.wc-af-settings-page .wc-af-incident-panel.wc-af-incident-panel--premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: var(--wc-af-r-lg) var(--wc-af-r-lg) 0 0;
+    background: linear-gradient(90deg, #c05621, #dba617, #c05621);
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+body.wc-af-settings-page .wc-af-incident-panel.wc-af-incident-panel--premium .wc-af-incident-panel__recommended,
+body.wc-af-settings-page .wc-af-incident-panel.wc-af-incident-panel--premium .wc-af-incident-panel__subsection--guidance {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: #e8d5c4;
+    box-shadow: 0 1px 2px rgba(176, 90, 40, 0.06);
+}
+
+/* =============================================================================
+   Premium pass 2 — extension shell, panel cards, form scanability, callouts
+   ============================================================================= */
+
+/* Page backdrop: separates Anti-Fraud from generic WP options */
+body.wc-af-settings-page #wpbody-content .woocommerce {
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    background: linear-gradient(180deg, var(--wc-af-page-tint) 0%, #f7f8f9 22%, #fafafa 100%);
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-app-shell {
+    padding-top: 0.35rem;
+    padding-bottom: 2.5rem;
+}
+
+/* Overview / control center surface */
+body.wc-af-settings-page .wc-af-app-surface.wc-af-control-center {
+    position: relative;
+}
+
+/* Section intro — title + guide (matches premium WC extension patterns) */
+body.wc-af-settings-page .wc-af-section-intro--premium {
+    margin: 0 0 1.5rem;
+}
+
+body.wc-af-settings-page .wc-af-section-intro--premium .wc-af-section-intro__inner {
+    position: relative;
+    max-width: 100%;
+    padding: 1.25rem 1.35rem 1.35rem;
+    border-radius: var(--wc-af-r-lg);
+    background: linear-gradient(165deg, #ffffff 0%, #fafbfc 50%, #f3f5f6 100%);
+    border: 1px solid var(--wc-af-border);
+    border-left: 4px solid var(--wc-af-accent);
+    box-shadow: var(--wc-af-shadow-card);
+    overflow: hidden;
+}
+
+body.wc-af-settings-page .wc-af-section-intro--premium .wc-af-section-intro__inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2271b1, #135e96, #00a32a);
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+body.wc-af-settings-page .wc-af-section-intro__mast {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-section-intro__title {
+    margin: 0;
+    font-size: 1.1875rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.3;
+    color: var(--wc-af-text);
+}
+
+body.wc-af-settings-page .wc-af-section-intro--premium .wc-af-section-intro__body {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #2c3338;
+}
+
+/* Settings sections as stacked “cards” (not flat option dumps) */
+body.wc-af-settings-page .wc-af-settings-panel {
+    margin: 0 0 1.75rem;
+    padding: 0;
+    background: var(--wc-af-surface);
+    border: 1px solid var(--wc-af-border);
+    border-radius: var(--wc-af-r-lg);
+    box-shadow: var(--wc-af-shadow-card);
+    overflow: hidden;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel > h2 {
+    margin: 0;
+    padding: 1rem 1.35rem 0.95rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--wc-af-text);
+    background: linear-gradient(180deg, #fcfcfd 0%, #f6f7f7 100%);
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc-af-panel-intro {
+    margin: 1.1rem 1.35rem 1.15rem;
+    max-width: none;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(180deg, #fafbfc 0%, #f3f4f5 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* Subsection stacks: heading strip + table = one scannable module */
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap {
+    margin: 1.5rem 1rem 0;
+    width: auto;
+    max-width: none;
+    padding: 0;
+    overflow: visible;
+    border-radius: var(--wc-af-r) var(--wc-af-r) 0 0;
+    border: 1px solid var(--wc-af-border);
+    border-bottom: 1px solid var(--wc-af-line);
+    background: linear-gradient(180deg, #fbfbfc 0%, #f0f2f4 100%);
+    box-shadow: none;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap--section {
+    border-left: 4px solid #787c82;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap--card {
+    border-left: 4px solid var(--wc-af-accent);
+}
+
+/* Card attacks: when a section's protection is enabled (status "Active"), tint its
+   whole heading bar green; inactive sections keep the default neutral look. */
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap--card.is-active {
+    border-left-color: #00a32a;
+    background: linear-gradient(180deg, #f2fbf4 0%, #dff3e4 100%);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap--card.is-active .wc-af-subheading-status {
+    background: #00a32a;
+    border-color: #00a32a;
+    color: #fff;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap--cleanup {
+    border-left: 4px solid #00a32a;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap .wc-af-settings-subheading {
+    margin: 0;
+    padding: 0.75rem 1rem 0.55rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent !important;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap .wc-af-subsection-desc {
+    margin: 0;
+    padding: 0 1rem 0.85rem;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #50575e;
+    border-top: 1px solid var(--wc-af-line);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap + table.form-table.opmc_wc_af_table {
+    margin: 0 1rem 1.65rem !important;
+    max-width: none;
+    border-top: none;
+    border-radius: 0 0 var(--wc-af-r) var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    border-top: 1px solid var(--wc-af-line);
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.045);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table {
+    margin: 0 0 0;
+    max-width: none;
+    border-top: 1px solid var(--wc-af-line);
+    background: var(--wc-af-surface);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table:first-of-type {
+    border-top: none;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tr > th,
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tr > td {
+    padding: 1.15rem 1.35rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tbody tr {
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tbody tr:last-child {
+    border-bottom: none;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc-af-core-hint {
+    margin: 1rem 1.35rem 1.25rem;
+    max-width: none;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc-af-advanced-wrap {
+    margin: 1rem 1.35rem 1.5rem;
+}
+
+/* Form scanability — all AF tables in tab */
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table tbody tr {
+    transition: background-color 0.12s ease;
+}
+
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table tbody tr:hover {
+    background-color: rgba(240, 246, 252, 0.55);
+}
+
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table th label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--wc-af-text);
+}
+
+body.wc-af-settings-page .woocommerce table.form-table td p.description,
+body.wc-af-settings-page .woocommerce table.form-table .forminp p.description {
+    margin-top: 0.55rem;
+    padding: 0.5rem 0.65rem;
+    border-radius: var(--wc-af-r-sm);
+    border-left: 3px solid #c3d9ed;
+    background: rgba(240, 246, 252, 0.65);
+    font-size: 13px;
+    line-height: 1.55;
+    color: #50575e;
+}
+
+/* Unified callout surfaces */
+body.wc-af-settings-page .wc-af-panel-intro,
+body.wc-af-settings-page .wc-af-core-hint {
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-core-hint {
+    border-left: 4px solid var(--wc-af-accent);
+    background: linear-gradient(180deg, #f4f9fd 0%, #eef4fb 100%);
+}
+
+/* Badges — slightly richer */
+body.wc-af-settings-page .wc-af-badge {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset;
+}
+
+/* Status pills — clearer affordance */
+body.wc-af-settings-page .wc-af-status-pill {
+    border-radius: var(--wc-af-r);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+body.wc-af-settings-page .wc-af-status-pill--ok {
+    border-color: #68a57b;
+}
+
+body.wc-af-settings-page .wc-af-status-pill--warn {
+    border-color: #dba617;
+}
+
+/* Control center — elevate tiles & integrations */
+body.wc-af-settings-page .wc-af-cc-grid {
+    gap: 1.35rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-card {
+    border-radius: var(--wc-af-r-lg);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+    box-shadow: var(--wc-af-shadow-card);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.12s ease;
+}
+
+body.wc-af-settings-page .wc-af-cc-card:hover {
+    border-color: #c3c4c7;
+    box-shadow: var(--wc-af-shadow-md);
+}
+
+body.wc-af-settings-page .wc-af-cc-card--emergency {
+    border-color: #e0b32a;
+    background: linear-gradient(165deg, #fffef8 0%, #fffdfa 45%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-cc-integrations {
+    gap: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-int {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 3.5rem;
+    padding: 0.95rem 1.1rem;
+    border-radius: var(--wc-af-r-lg);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    gap: 0.5rem 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-int::before {
+    content: "";
+    flex: 1 0 100%;
+    order: -1;
+    height: 3px;
+    margin: -0.95rem -1.1rem 0.35rem;
+    border-radius: var(--wc-af-r-lg) var(--wc-af-r-lg) 0 0;
+    background: linear-gradient(90deg, #c3c4c7, #dcdcde);
+    opacity: 0.9;
+}
+
+body.wc-af-settings-page .wc-af-cc-int--on::before {
+    background: linear-gradient(90deg, #68a57b, #00a32a);
+}
+
+body.wc-af-settings-page .wc-af-cc-int--off::before {
+    background: linear-gradient(90deg, #8c8f94, #a7aaad);
+}
+
+body.wc-af-settings-page .wc-af-cc-int__name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-cc-int__badge {
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    padding: 0.22rem 0.5rem;
+    border-radius: 999px;
+}
+
+body.wc-af-settings-page .wc-af-cc-int__note {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 0.15rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-int:hover {
+    border-color: #2271b1;
+    box-shadow: var(--wc-af-shadow-md);
+}
+
+body.wc-af-settings-page .wc-af-cc-int--on {
+    border-color: #9dd8a4;
+    background: linear-gradient(180deg, #f9fdf9 0%, #f4fbf5 100%);
+}
+
+/* Recommended setup block — stronger separation */
+body.wc-af-settings-page .wc-af-recommended-setup {
+    border: 1px solid var(--wc-af-border);
+    box-shadow: var(--wc-af-shadow-card);
+}
+
+body.wc-af-settings-page .wc-af-settings-nav-shell.wc-af-section-nav-shell {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-nav-shell + .wc-af-section-intro {
+    margin-top: 0.25rem;
+}
+
+/* WooCommerce notices — crisper */
+body.wc-af-settings-page .woocommerce .notice {
+    border-radius: var(--wc-af-r);
+    box-shadow: var(--wc-af-shadow-md);
+}
+
+/* =============================================================================
+   Settings forms — grouping, scanability, less scroll fatigue
+   ============================================================================= */
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tbody tr:nth-child(even) {
+    background-color: rgba(247, 248, 249, 0.75);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tbody tr:nth-child(even):hover {
+    background-color: rgba(232, 242, 252, 0.92);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .woocommerce table.form-table.opmc_wc_af_table th.titledesc,
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table th.titledesc {
+    width: 260px;
+    max-width: 40%;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table td[colspan="2"] hr {
+    border: 0;
+    height: 1px;
+    margin: 0.85rem 0;
+    background: linear-gradient(90deg, transparent, var(--wc-af-line), transparent);
+}
+
+body.wc-af-settings-page .wc_af_sub-section-title.wc-af-settings-subheading-wrap {
+    scroll-margin-top: 1.5rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc-af-panel-intro p {
+    margin: 0 0 0.65rem;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc-af-panel-intro p:last-child {
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel .wc-af-advanced-wrap--panel {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: none;
+}
+
+/* Card attacks + cleanup layout polish */
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__intro-desc,
+body.wc-af-settings-page .wc-af-settings-panel--cleanup .wc-af-panel-intro {
+    margin: 1.1rem 1.35rem 1.2rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__zone--protect {
+    margin: 0 1.35rem 1.35rem;
+    padding: 1.1rem 1.2rem 0.6rem;
+    border-radius: var(--wc-af-r-lg);
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+    border-color: #cfe1f2;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__zone-title {
+    font-size: 15px;
+    letter-spacing: -0.01em;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__zone-lead {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__advanced-lead {
+    margin: 0 0 1rem;
+    padding: 0.7rem 0.9rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--cleanup .cleanup-section {
+    margin: 0 1.35rem 1.25rem;
+    padding: 0.85rem 1rem;
+    background: #f8fbff;
+    border: 1px solid #c3d9ed;
+    border-radius: var(--wc-af-r);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--cleanup #description-cleanup {
+    color: #1d2327;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--cleanup .cleanup-section p.description {
+    margin: 0.7rem 0 0;
+    font-size: 12.5px;
+    color: #50575e;
+    font-style: normal;
+}
+
+/* =============================================================================
+   Overview control center layout refresh
+   ============================================================================= */
+body.wc-af-settings-page .wc-af-ov2-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.85rem 1.1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--wc-af-border);
+    border-radius: var(--wc-af-r-lg);
+    background: linear-gradient(180deg, #fff 0%, #f8f9fa 100%);
+    box-shadow: var(--wc-af-shadow-card);
+}
+
+body.wc-af-settings-page .wc-af-ov2-top__main {
+    flex: 1 1 520px;
+}
+
+body.wc-af-settings-page .wc-af-ov2-title {
+    margin: 0 0 0.4rem;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+body.wc-af-settings-page .wc-af-ov2-lead {
+    margin: 0;
+    max-width: 760px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-top__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card {
+    min-height: 128px;
+    padding: 0.85rem 0.95rem;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    background: #fff;
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--status {
+    border-left-width: 4px;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--strong {
+    border-left-color: var(--wc-af-success);
+    background: linear-gradient(180deg, #fbfefb 0%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--moderate {
+    border-left-color: #72aee6;
+    background: linear-gradient(180deg, #f8fbff 0%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--needs_attention {
+    border-left-color: #dba617;
+    background: linear-gradient(180deg, #fffdf7 0%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__label {
+    margin: 0 0 0.4rem;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__value {
+    margin: 0;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__meta {
+    margin: 0.4rem 0 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-main-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 0.9rem;
+    align-items: start;
+}
+
+body.wc-af-settings-page .wc-af-ov2-card {
+    padding: 1rem 1.1rem 1.1rem;
+    border-radius: var(--wc-af-r-lg);
+    border: 1px solid var(--wc-af-border);
+    background: #fff;
+    box-shadow: var(--wc-af-shadow-card);
+}
+
+body.wc-af-settings-page .wc-af-ov2-card--setup {
+    grid-row: span 2;
+}
+
+body.wc-af-settings-page .wc-af-ov2-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-ov2-card__title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-ov2-next {
+    margin: 0.75rem 0 0.45rem;
+    font-size: 13px;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .wc-af-ov2-next-action,
+body.wc-af-settings-page .wc-af-ov2-actions {
+    margin: 0.4rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-steps {
+    margin-top: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-secondary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-top: 0.9rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-card--secondary .wc-af-cc-links--inline {
+    gap: 0.45rem 0.85rem;
+}
+
+@media screen and (max-width: 1100px) {
+    body.wc-af-settings-page .wc-af-ov2-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.wc-af-settings-page .wc-af-ov2-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-ov2-card--setup {
+        grid-row: auto;
+    }
+}
+
+/* Dashboard top: Start here only (hero removed — status cards carry state + actions) */
+body.wc-af-settings-page .wc-af-dashboard-top {
+    margin-bottom: 1.15rem;
+}
+
+body.wc-af-settings-page .wc-af-dashboard-home-intro {
+    margin: 0 0 1rem;
+    max-width: 52rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-start-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-start-card__title {
+    margin: 0 0 0.35rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-start-card__intro {
+    margin: 0 0 0.75rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-start-here__grid--start-card {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.55rem;
+    align-items: stretch;
+}
+
+body.wc-af-settings-page .wc-af-start-here__grid--start-card .wc-af-start-here__card {
+    min-height: 100%;
+}
+
+body.wc-af-settings-page .wc-af-start-here__grid--compact .wc-af-start-here__card--with-desc .wc-af-start-here__desc {
+    display: block;
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-start-here__grid--start-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-ov2-summary-grid,
+    body.wc-af-settings-page .wc-af-ov2-secondary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================================================
+   Anti-Fraud admin design system foundation
+   ============================================================================= */
+body.wc-af-settings-page {
+    --wc-af-space-1: 0.35rem;
+    --wc-af-space-2: 0.55rem;
+    --wc-af-space-3: 0.8rem;
+    --wc-af-space-4: 1rem;
+    --wc-af-space-5: 1.25rem;
+    --wc-af-space-6: 1.5rem;
+}
+
+/* 1) Section containers: main cards, sub-cards, panels, groups */
+body.wc-af-settings-page .wc-af-settings-panel,
+body.wc-af-settings-page .wc-af-cc-card,
+body.wc-af-settings-page .wc-af-ov2-card,
+body.wc-af-settings-page .wc-af-advanced-wrap--panel,
+body.wc-af-settings-page .wc-af-incident-panel,
+body.wc-af-settings-page .wc-af-card-attacks__zone--protect {
+    border-radius: var(--wc-af-r-lg);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(180deg, #fff 0%, #fafbfc 100%);
+    box-shadow: var(--wc-af-shadow-card);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel > h2,
+body.wc-af-settings-page .wc-af-cc-card__title,
+body.wc-af-settings-page .wc-af-ov2-card__title,
+body.wc-af-settings-page .wc-af-card-attacks__zone-title {
+    letter-spacing: -0.015em;
+    color: var(--wc-af-text);
+}
+
+/* 2) Summary/status cards */
+body.wc-af-settings-page .wc-af-ov2-summary-card,
+body.wc-af-settings-page .wc-af-cc-status-card,
+body.wc-af-settings-page .wc-af-status-pill {
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    box-shadow: var(--wc-af-shadow);
+    background: #fff;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__label,
+body.wc-af-settings-page .wc-af-cc-status-card__eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #646970;
+}
+
+/* 3) Status badges/chips */
+body.wc-af-settings-page .wc-af-badge,
+body.wc-af-settings-page .wc-af-micro-badge,
+body.wc-af-settings-page .wc-af-order-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid var(--wc-af-border);
+    background: #f6f7f7;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-badge {
+    font-size: 10.5px;
+    padding: 0.16rem 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-micro-badge {
+    font-size: 9.5px;
+    padding: 0.12rem 0.45rem;
+}
+
+body.wc-af-settings-page .wc-af-badge--active-protection,
+body.wc-af-settings-page .wc-af-micro-badge--active {
+    border-color: #68a57b;
+    background: #edfaef;
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-badge--needs-config,
+body.wc-af-settings-page .wc-af-micro-badge--attention {
+    border-color: #dba617;
+    background: #fff8e5;
+    color: #614200;
+}
+
+body.wc-af-settings-page .wc-af-badge--optional {
+    border-color: #c3c4c7;
+    background: #f6f7f7;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-badge--recommended {
+    border-color: #72aee6;
+    background: #eef6fc;
+    color: #135e96;
+}
+
+body.wc-af-settings-page .wc-af-badge--connected {
+    border-color: #68a57b;
+    background: #edfaef;
+    color: #1e4620;
+}
+
+body.wc-af-settings-page .wc-af-badge--disconnected {
+    border-color: #c3c4c7;
+    background: #f0f0f1;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-badge--warning {
+    border-color: #dba617;
+    background: #fcf9e8;
+    color: #614200;
+}
+
+body.wc-af-settings-page .wc-af-badge--advanced {
+    border-color: #8c8f94;
+    background: #f0f0f1;
+    color: #3c434a;
+}
+
+/* 4) Buttons/actions */
+body.wc-af-settings-page .wc-af-btn {
+    border-radius: var(--wc-af-r-sm);
+    min-height: 32px;
+    line-height: 30px;
+    padding: 0 0.75rem;
+    font-weight: 500;
+}
+
+body.wc-af-settings-page .wc-af-btn--primary.button-primary {
+    box-shadow: 0 1px 0 #135e96;
+}
+
+body.wc-af-settings-page .wc-af-btn--secondary.button-secondary,
+body.wc-af-settings-page .wc-af-btn--secondary.button {
+    border-color: #c3c4c7;
+    background: #f6f7f7;
+    color: #2c3338;
+}
+
+body.wc-af-settings-page .forminp-help_cards {
+    padding-top: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-help-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+body.wc-af-settings-page .wc-af-help-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-height: 100%;
+    padding: 1rem 1.05rem;
+    border: 1px solid var(--wc-af-border);
+    border-radius: var(--wc-af-r);
+    background: #fff;
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-help-card__title {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--wc-af-text);
+}
+
+body.wc-af-settings-page .wc-af-help-card__text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-help-card__action-wrap {
+    margin: auto 0 0;
+}
+
+body.wc-af-settings-page .wc-af-help-card__action.button,
+body.wc-af-settings-page .wc-af-help-card__action.button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 0.95rem;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-help-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.wc-af-dashboard-page .wc-af-status-key,
+body.wc-af-settings-page .wc-af-status-key {
+    margin: 0 0 0.85rem;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--wc-af-border, #dcdcde);
+    border-radius: var(--wc-af-r, 12px);
+    background: #fff;
+    box-shadow: var(--wc-af-shadow, 0 1px 2px rgba(0, 0, 0, 0.045));
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__title,
+body.wc-af-settings-page .wc-af-status-key__title {
+    margin: 0 0 0.65rem;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d2327;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__groups,
+body.wc-af-settings-page .wc-af-status-key__groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem 1rem;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__group,
+body.wc-af-settings-page .wc-af-status-key__group {
+    min-width: 0;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__group-title,
+body.wc-af-settings-page .wc-af-status-key__group-title {
+    margin: 0 0 0.45rem;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #646970;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__list,
+body.wc-af-settings-page .wc-af-status-key__list {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__list--compact,
+body.wc-af-settings-page .wc-af-status-key__list--compact {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.55rem 0.75rem;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__item,
+body.wc-af-settings-page .wc-af-status-key__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    min-width: 0;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__visual,
+body.wc-af-settings-page .wc-af-status-key__visual {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-height: 1.5rem;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__badge-stack,
+body.wc-af-settings-page .wc-af-status-key__badge-stack {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__copy,
+body.wc-af-settings-page .wc-af-status-key__copy {
+    display: grid;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__term,
+body.wc-af-settings-page .wc-af-status-key__term {
+    font-size: 12.5px;
+    line-height: 1.35;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-dashboard-page .wc-af-status-key__desc,
+body.wc-af-settings-page .wc-af-status-key__desc {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-status-key--overview {
+    margin-bottom: 0.75rem;
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-dashboard-page .wc-af-status-key__groups,
+    body.wc-af-settings-page .wc-af-status-key__groups,
+    body.wc-af-dashboard-page .wc-af-status-key__list--compact,
+    body.wc-af-settings-page .wc-af-status-key__list--compact {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.wc-af-settings-page .wc-af-action-link {
+    color: #135e96;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.wc-af-settings-page .wc-af-action-link:hover,
+body.wc-af-settings-page .wc-af-action-link:focus {
+    color: #0a4b78;
+    text-decoration: underline;
+}
+
+body.wc-af-settings-page .wc-af-inline-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 12.5px;
+    color: #135e96;
+}
+
+/* 5) Headings/intros */
+body.wc-af-settings-page .wc-af-cc-title,
+body.wc-af-settings-page .wc-af-ov2-title {
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    line-height: 1.3;
+    margin: 0 0 0.4rem;
+}
+
+body.wc-af-settings-page .wc-af-cc-section-title,
+body.wc-af-settings-page .wc-af-settings-panel > h2 {
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-cc-lead,
+body.wc-af-settings-page .wc-af-ov2-lead,
+body.wc-af-settings-page .wc-af-panel-intro,
+body.wc-af-settings-page .wc-af-card-attacks__zone-lead {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+/* 6) Informational boxes */
+body.wc-af-settings-page .wc-af-rs__next,
+body.wc-af-settings-page .wc-af-core-hint,
+body.wc-af-settings-page .wc-af-card-attacks__advanced-lead,
+body.wc-af-settings-page .cleanup-section {
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    box-shadow: var(--wc-af-shadow);
+    padding: 0.75rem 0.95rem;
+}
+
+/* Recommendation */
+body.wc-af-settings-page .wc-af-rs__next {
+    border-left: 4px solid #2271b1;
+    background: linear-gradient(180deg, #f4f9fd 0%, #fff 100%);
+}
+
+/* Warning */
+body.wc-af-settings-page .cleanup-section {
+    border-left: 4px solid #dba617;
+    background: linear-gradient(180deg, #fffcf2 0%, #fff 100%);
+}
+
+/* Neutral guidance */
+body.wc-af-settings-page .wc-af-core-hint,
+body.wc-af-settings-page .wc-af-card-attacks__advanced-lead {
+    border-left: 4px solid #72aee6;
+    background: linear-gradient(180deg, #f8fbff 0%, #fff 100%);
+}
+
+/* Incident / urgent */
+body.wc-af-settings-page .wc-af-incident-panel,
+body.wc-af-settings-page .wc-af-cc-card--emergency {
+    border-left: 4px solid #c05621;
+    background: linear-gradient(180deg, #fff9f4 0%, #fff 100%);
+}
+
+/* Card attack page structure clarity */
+body.wc-af-settings-page .wc-af-ca-page-intro {
+    margin: 0.9rem 1.35rem 1rem;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel {
+    margin: 0 1.35rem 1.1rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-ca-header {
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--wc-af-line);
+}
+
+body.wc-af-settings-page .wc-af-ca-header__action {
+    margin: 0.75rem 0 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel__subsection {
+    margin-bottom: 0.8rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #ececec;
+    border-radius: var(--wc-af-r);
+    background: rgba(255, 255, 255, 0.82);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel__subsection:last-child {
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-ca-status .wc-af-incident-panel__status {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-status-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.12rem;
+    min-height: 64px;
+    padding: 0.5rem 0.6rem;
+    border-radius: var(--wc-af-r);
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-status-pill__label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-status-pill__value {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-ca-actions .wc-af-incident-panel__quick-links {
+    gap: 0.5rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-ca-guidance {
+    border-left: 4px solid #72aee6;
+    background: linear-gradient(180deg, #f8fbff 0%, #fff 100%);
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-ca-status .wc-af-incident-panel__status {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================================================
+   QA / layout hardening pass
+   ============================================================================= */
+body.wc-af-settings-page .wc-af-settings-main {
+    max-width: 1220px;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel > h2 {
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks > .wc-af-ca-page-intro,
+body.wc-af-settings-page .wc-af-settings-panel--cleanup > .wc-af-panel-intro {
+    margin-top: 0.95rem;
+}
+
+/* Keep cards visually aligned in rows */
+body.wc-af-settings-page .wc-af-ov2-summary-grid,
+body.wc-af-settings-page .wc-af-ov2-main-grid,
+body.wc-af-settings-page .wc-af-ov2-secondary-grid {
+    align-items: stretch;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-grid {
+    grid-auto-rows: 1fr;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.25rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-main-grid .wc-af-ov2-card,
+body.wc-af-settings-page .wc-af-ov2-secondary-grid .wc-af-ov2-card {
+    height: 100%;
+}
+
+/* Cleaner top controls and less noisy chrome */
+body.wc-af-settings-page .wc-af-ov2-top,
+body.wc-af-settings-page .wc-af-incident-panel,
+body.wc-af-settings-page .wc-af-settings-panel,
+body.wc-af-settings-page .wc-af-ov2-card,
+body.wc-af-settings-page .wc-af-cc-card {
+    background: #fff;
+}
+
+/* Button consistency */
+body.wc-af-settings-page .wc-af-btn.button,
+body.wc-af-settings-page .wc-af-btn.button-secondary,
+body.wc-af-settings-page .wc-af-btn.button-primary {
+    min-height: 32px;
+    line-height: 30px;
+    font-size: 12.5px;
+    padding: 0 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-btn.button-small {
+    min-height: 28px;
+    line-height: 26px;
+    padding: 0 0.6rem;
+}
+
+/* Quick links and action rows wrap cleanly */
+body.wc-af-settings-page .wc-af-incident-panel__quick-links,
+body.wc-af-settings-page .wc-af-ov2-actions,
+body.wc-af-settings-page .wc-af-ov2-top__actions {
+    row-gap: 0.45rem;
+}
+
+/* Form controls: avoid clipping and keep widths predictable */
+body.wc-af-settings-page .wc-af-field-select-wide {
+    min-width: 320px;
+    max-width: 100%;
+}
+
+body.wc-af-settings-page .wc-af-ca-paypal-acp-row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Table rhythm and heading alignment */
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table th.titledesc {
+    vertical-align: top;
+    padding-top: 1.05rem;
+}
+
+body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table td .description {
+    margin-bottom: 0;
+}
+
+/* Reduced border noise inside dense card-attack panel */
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel__subsection {
+    border-color: #e6e7e8;
+    background: #fff;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-ca-guidance {
+    background: #f8fbff;
+}
+
+/* WP admin common mid-width hardening */
+@media screen and (max-width: 1100px) {
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap,
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap + table.form-table.opmc_wc_af_table,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-advanced-wrap--panel,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__zone--protect,
+    body.wc-af-settings-page .wc-af-settings-panel--cleanup .cleanup-section {
+        margin-left: 0.8rem !important;
+        margin-right: 0.8rem !important;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tr > th,
+    body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tr > td {
+        padding: 0.95rem 1rem;
+    }
+}
+
+/* WooCommerce admin pattern: stack form tables when the WP menu collapses (782px). */
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-field-select-wide,
+    body.wc-af-settings-page .wc-af-date-select,
+    body.wc-af-settings-page .wc-af-date-input {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .woocommerce table.form-table th,
+    body.wc-af-settings-page .woocommerce table.form-table td,
+    body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table th,
+    body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table td {
+        display: block;
+        width: auto !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .woocommerce table.form-table th,
+    body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table th.titledesc {
+        width: auto !important;
+        max-width: 100%;
+        padding-bottom: 0.35rem;
+    }
+
+    body.wc-af-settings-page .woocommerce table.form-table td,
+    body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table td {
+        padding-top: 0.35rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.wc-af-settings-page .woocommerce table.form-table .forminp {
+        display: block !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body.wc-af-settings-page .woocommerce table.form-table input[type="text"],
+    body.wc-af-settings-page .woocommerce table.form-table input[type="number"],
+    body.wc-af-settings-page .woocommerce table.form-table input[type="email"],
+    body.wc-af-settings-page .woocommerce table.form-table input[type="url"],
+    body.wc-af-settings-page .woocommerce table.form-table input[type="password"],
+    body.wc-af-settings-page .woocommerce table.form-table select,
+    body.wc-af-settings-page .woocommerce table.form-table textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .opmc_wc_af_table td.forminp-slider {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    body.wc-af-settings-page .opmc_wc_af_table td.forminp-slider[rowspan] {
+        display: block;
+    }
+}
+
+/* =============================================================================
+   Final premium benchmark refinement
+   ============================================================================= */
+body.wc-af-settings-page .wrap > h1:first-of-type {
+    margin-bottom: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-nav-shell {
+    margin-bottom: 0.9rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-main {
+    padding-bottom: 2.35rem;
+}
+
+/* Harmonized page shell rhythm */
+body.wc-af-settings-page .wc-af-settings-panel {
+    margin-bottom: 1.55rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel > h2 {
+    padding: 0.95rem 1.25rem 0.9rem;
+}
+
+body.wc-af-settings-page .wc-af-panel-intro,
+body.wc-af-settings-page .wc-af-core-hint,
+body.wc-af-settings-page .wc-af-card-attacks__advanced-lead,
+body.wc-af-settings-page .wc-af-incident-panel__subsection--guidance,
+body.wc-af-settings-page .cleanup-section {
+    border-width: 1px;
+}
+
+/* Overview card/list polish */
+body.wc-af-settings-page .wc-af-ov2-top {
+    padding: 1.05rem 1.15rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card {
+    min-height: 118px;
+    padding: 0.8rem 0.9rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__value {
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-cc-checklist__item {
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+}
+
+/* Integrations grid consistency */
+body.wc-af-settings-page .wc-af-cc-integrations {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    align-items: stretch;
+}
+
+body.wc-af-settings-page .wc-af-cc-int {
+    min-height: 92px;
+    align-content: start;
+}
+
+/* Card attacks section hierarchy */
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel__title {
+    font-size: 16px;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel__lead {
+    max-width: 72ch;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel__subsection-title {
+    font-size: 13px;
+}
+
+/* Settings table visual noise reduction */
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+body.wc-af-settings-page .wc-af-settings-panel table.form-table.opmc_wc_af_table tbody tr:hover {
+    background-color: #f3f7fb;
+}
+
+body.wc-af-settings-page .woocommerce table.form-table td p.description,
+body.wc-af-settings-page .woocommerce table.form-table .forminp p.description {
+    background: #f6f9fc;
+    border-left-color: #72aee6;
+}
+
+/* Dashboard: premium but WP-native refinement */
+body.wc-af-dashboard-page .wc-af-dashboard-shell {
+    max-width: 1420px;
+    padding: 8px 16px 32px;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-header-card {
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+}
+
+body.wc-af-dashboard-page .wc-af-dashboard-header-actions .wc-af-btn {
+    min-height: 32px;
+    line-height: 30px;
+}
+
+body.wc-af-dashboard-page .wc-af-date-filter-container {
+    border-radius: 14px;
+}
+
+body.wc-af-dashboard-page .dash-row {
+    margin-bottom: 0.9rem;
+}
+
+body.wc-af-dashboard-page .wc-af-metric-row {
+    gap: 0.8rem;
+}
+
+body.wc-af-dashboard-page .metric-box {
+    border-radius: 14px;
+    min-height: 124px;
+}
+
+body.wc-af-dashboard-page .dash-section-50 {
+    border-radius: 14px;
+    padding: 0.95rem 1.05rem;
+}
+
+body.wc-af-dashboard-page .recent-orders th,
+body.wc-af-dashboard-page .recent-orders td {
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1100px) {
+    body.wc-af-settings-page .wc-af-ov2-top {
+        padding: 0.95rem 1rem;
+    }
+
+    body.wc-af-dashboard-page .wc-af-dashboard-header-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-settings-panel > h2 {
+        padding: 0.9rem 0.95rem 0.85rem;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-panel-intro,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-core-hint,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-advanced-wrap,
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap,
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap + table.form-table.opmc_wc_af_table {
+        margin-left: 0.6rem !important;
+        margin-right: 0.6rem !important;
+    }
+
+    body.wc-af-dashboard-page .wc-af-dashboard-shell {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Merchant insight-focused home refinements */
+body.wc-af-settings-page .wc-af-ov2-block {
+    margin-bottom: 1rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-block__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.35rem 0.75rem;
+    margin: 0 0 0.55rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-block__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-block__lead {
+    margin: 0;
+    font-size: 12.5px;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-grid--insights {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--clickable {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--clickable:not(.wc-af-ov2-summary-card--insight) {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--clickable:hover,
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--clickable:focus {
+    transform: translateY(-2px);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-critical.wc-af-ov2-summary-card--clickable:hover,
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-critical.wc-af-ov2-summary-card--clickable:focus {
+    box-shadow: 0 10px 28px rgba(180, 40, 40, 0.22);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-warning.wc-af-ov2-summary-card--clickable:hover,
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-warning.wc-af-ov2-summary-card--clickable:focus {
+    box-shadow: 0 10px 28px rgba(200, 120, 30, 0.2);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-healthy.wc-af-ov2-summary-card--clickable:hover,
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-healthy.wc-af-ov2-summary-card--clickable:focus {
+    box-shadow: 0 10px 28px rgba(45, 110, 70, 0.18);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-neutral.wc-af-ov2-summary-card--clickable:hover,
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-neutral.wc-af-ov2-summary-card--clickable:focus {
+    box-shadow: 0 8px 22px rgba(60, 67, 74, 0.12);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-info.wc-af-ov2-summary-card--clickable:hover,
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-info.wc-af-ov2-summary-card--clickable:focus {
+    box-shadow: 0 8px 22px rgba(30, 100, 160, 0.16);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--clickable:not(.wc-af-ov2-summary-card--insight):hover,
+body.wc-af-settings-page .wc-af-ov2-summary-card--clickable:not(.wc-af-ov2-summary-card--insight):focus {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(12, 36, 56, 0.08);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__link {
+    display: inline-block;
+    margin-top: 0.45rem;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2271b1;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--ok {
+    border-left: 4px solid #68a57b;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--warn {
+    border-left: 4px solid #dba617;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--muted {
+    border-left: 4px solid #a7aaad;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention {
+    display: grid;
+    gap: 0.6rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__item {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #dcdcde;
+    border-radius: var(--wc-af-r);
+    background: #fff;
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__item--urgent {
+    border-left: 4px solid #d63638;
+    background: #fcf0f1;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__item--high {
+    border-left: 4px solid #dba617;
+    background: #fff9ee;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__item--medium {
+    border-left: 4px solid #72aee6;
+    background: #f8fbff;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__item--ok {
+    border-left: 4px solid #68a57b;
+    background: #f6fcf7;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__title {
+    margin: 0 0 0.25rem;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #3c434a;
+}
+
+body.wc-af-settings-page .wc-af-ov2-attention__action {
+    margin: 0.5rem 0 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-main-grid--insights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body.wc-af-settings-page .wc-af-ov2-next-best {
+    padding: 0.95rem 1.05rem;
+    border: 1px solid #c3d9ed;
+    border-left: 4px solid #2271b1;
+    border-radius: var(--wc-af-r);
+    background: #f4f9fd;
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-ov2-next-best__title {
+    margin: 0;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-next-best__desc {
+    margin: 0.35rem 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-next-best__action {
+    margin: 0.6rem 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-ov2-main-grid--insights,
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dashboard frame cleanup: align nav band and content shell */
+body.wc-af-settings-page .woocommerce > .wc-af-settings-nav-shell.wc-af-section-nav-shell {
+    max-width: 1220px;
+    margin: 0 0 0.35rem;
+    border-radius: 12px 12px 0 0;
+    border: 1px solid var(--wc-af-border);
+    border-bottom: 0;
+    background: #fff;
+    box-shadow: none;
+}
+
+body.wc-af-settings-page .woocommerce > .wc-af-settings-nav-shell .wc-af-primary-nav {
+    background: #fff;
+    border-bottom: 1px solid #e8eaec;
+    border-radius: 11px 11px 0 0;
+}
+
+body.wc-af-settings-page .woocommerce > .wc-af-settings-nav-shell .wc-af-secondary-nav {
+    background: #f6f7f7;
+    border-top: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-main.wc-af-settings-main--dashboard {
+    max-width: 1220px;
+    margin-top: 0;
+    padding: 0.9rem 1rem 2rem;
+    border: 1px solid var(--wc-af-border);
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-settings-main.wc-af-settings-main--dashboard .wc-af-control-center {
+    margin-top: 0;
+}
+
+/* License tab — separate from overview dashboard */
+body.wc-af-settings-page.wc-af-license-section .woocommerce-save-button,
+body.wc-af-settings-page.wc-af-license-section .wrap.woocommerce .submit button[name="save"] {
+    display: none !important;
+}
+
+body.wc-af-settings-page .wc-af-settings-main.wc-af-settings-main--license {
+    max-width: 1220px;
+    margin-top: 0;
+    padding: 0.9rem 1rem 2rem;
+    border: 1px solid var(--wc-af-border);
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+body.wc-af-settings-page .wc-af-settings-nav-shell + .wc-af-settings-main.wc-af-settings-main--license {
+    border-top: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .anti-fraud-license-section {
+    margin: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-content-wrapper {
+    background: transparent;
+    padding: 0;
+    border: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-unified-section {
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-deactivation-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-content-wrapper h2 {
+    margin-top: 0;
+    color: #23282d;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-content-wrapper h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1d2327;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-key-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-key-input[readonly],
+body.wc-af-settings-page .wc-af-settings-main--license .license-key-input[disabled] {
+    background-color: #f0f0f1;
+    border-color: #c3c4c7;
+    color: #50575e;
+    cursor: not-allowed;
+    opacity: 0.8;
+    box-shadow: none;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-status-display {
+    padding: 15px;
+    background: #f7f7f7;
+    border-left: 4px solid #ccd0d4;
+    border-radius: 3px;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-status-active {
+    color: #008a20;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-status-inactive {
+    color: #dc3232;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-instance-info {
+    margin-top: 10px;
+    color: #666;
+    font-size: 13px;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-instance-info code {
+    background: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    font-family: monospace;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-form .submit {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-form .submit .button-primary {
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+body.wc-af-settings-page .wc-af-settings-main--license .license-form .spinner {
+    float: none;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* When license is the only visible tab, content shell still aligns with nav band */
+body.wc-af-settings-page .woocommerce > .wc-af-settings-main.wc-af-settings-main--license:not(.wc-af-settings-nav-shell + *) {
+    border-top: 1px solid var(--wc-af-border);
+    border-radius: 12px;
+    margin-top: 0.35rem;
+}
+
+/* Sticky save bar for long Anti-Fraud settings pages */
+body.wc-af-settings-page.wc-af-has-sticky-save {
+    padding-bottom: 92px;
+}
+
+body.wc-af-settings-page .wc-af-sticky-save {
+    position: fixed;
+    left: 160px;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    background: linear-gradient(to top, rgba(246, 247, 247, 0.98), rgba(246, 247, 247, 0.92));
+    border-top: 1px solid #dcdcde;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+body.wc-af-settings-page .wc-af-sticky-save.is-hidden {
+    transform: translateY(110%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.wc-af-settings-page .wc-af-sticky-save__inner {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+body.wc-af-settings-page .wc-af-sticky-save__btn.button.button-primary {
+    min-height: 36px;
+    line-height: 34px;
+    padding: 0 14px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 960px) {
+    body.wc-af-settings-page .wc-af-sticky-save {
+        left: 36px;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-sticky-save {
+        left: 0;
+        padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    }
+}
+
+/* -------------------------------------------------------------------------
+   Anti-Fraud home dashboard — merchant jobs, allow/block, semantic cards
+   ------------------------------------------------------------------------- */
+
+body.wc-af-settings-page .wc-af-ov2-block--jobs {
+    margin-bottom: 1.1rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-block__head--tight {
+    margin-bottom: 0.45rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-job-card {
+    padding: 0.85rem 0.95rem;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(180deg, #fdfefe 0%, #fff 100%);
+    box-shadow: var(--wc-af-shadow);
+}
+
+body.wc-af-settings-page .wc-af-ov2-job-card__title {
+    margin: 0 0 0.35rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-job-card__text {
+    margin: 0 0 0.65rem;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-block--allow-block {
+    margin-bottom: 1.15rem;
+}
+
+/* Allow / Block — two-panel suite (scannable, low text density) */
+body.wc-af-settings-page .wc-af-ov2-ab-suite {
+    padding: 0.85rem 1rem 0.95rem;
+    border-radius: var(--wc-af-r-lg);
+    border: 1px solid var(--wc-af-border);
+    background: linear-gradient(180deg, #fcfdfc 0%, #fff 42%);
+    box-shadow: var(--wc-af-shadow-card);
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-suite__head {
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--wc-af-line, #f0f0f1);
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-suite__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panels {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel {
+    display: flex;
+    min-height: 0;
+    border-radius: var(--wc-af-r);
+    border: 1px solid var(--wc-af-border);
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(12, 36, 56, 0.04);
+    overflow: hidden;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__accent {
+    width: 5px;
+    flex-shrink: 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel--allow .wc-af-ov2-ab-panel__accent {
+    background: linear-gradient(180deg, #5a8f6c, #7cb890);
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel--block .wc-af-ov2-ab-panel__accent {
+    background: linear-gradient(180deg, #a84832, #c05640);
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__content {
+    flex: 1 1 auto;
+    padding: 0.75rem 0.85rem 0.85rem 0.75rem;
+    min-width: 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__title {
+    margin: 0 0 0.35rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__purpose {
+    margin: 0 0 0.5rem;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__examples {
+    margin: 0 0 0.75rem;
+    padding: 0.45rem 0 0.45rem 1.1rem;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #2c3338;
+    border-radius: 6px;
+    background: #f6f7f7;
+    list-style: disc;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__examples li {
+    margin: 0.15rem 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__cta-wrap {
+    margin: 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__cta {
+    display: inline-block;
+    min-height: 32px;
+    line-height: 30px;
+    padding: 0 14px;
+    font-weight: 600;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__cta--block {
+    background: #fff;
+    border: 1px solid #c05640;
+    color: #8a3324;
+    box-shadow: none;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-panel__cta--block:hover,
+body.wc-af-settings-page .wc-af-ov2-ab-panel__cta--block:focus {
+    background: #fff8f6;
+    border-color: #a84832;
+    color: #6d291d;
+}
+
+body.wc-af-settings-page .wc-af-ov2-ab-suite__hint {
+    margin: 0.75rem 0 0;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--wc-af-line, #f0f0f1);
+    font-size: 12px;
+    line-height: 1.5;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-ov2-details {
+    margin-bottom: 1rem;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #dcdcde;
+    border-radius: var(--wc-af-r);
+    background: #fafbfc;
+}
+
+body.wc-af-settings-page .wc-af-ov2-details__summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: #1d2327;
+    list-style: none;
+}
+
+body.wc-af-settings-page .wc-af-ov2-details__summary::-webkit-details-marker {
+    display: none;
+}
+
+body.wc-af-settings-page .wc-af-ov2-details__body {
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid #f0f0f1;
+}
+
+body.wc-af-settings-page .wc-af-ov2-details__hint {
+    margin: 0 0 0.55rem;
+    font-size: 12.5px;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-start-here__grid--compact .wc-af-start-here__card {
+    min-height: auto;
+}
+
+body.wc-af-settings-page .wc-af-start-here__grid--compact .wc-af-start-here__desc {
+    display: none;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-width: 1px;
+    border-style: solid;
+    min-height: 118px;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__headband {
+    height: 6px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-critical .wc-af-ov2-summary-card__headband {
+    height: 8px;
+}
+
+/* Protection status — top bar + full-card tint (scan-first, not text-first) */
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-critical .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #6b1c1c, #d63638);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-warning .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #a85a12, #e0781a);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-healthy .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #2d5c3f, #5a8f6c);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-neutral .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #6d7278, #a7aaad);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-info .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #135e96, #4a90c8);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-critical {
+    border-color: #d86363;
+    background: linear-gradient(180deg, #fdeaea 0%, #fff5f5 38%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-warning {
+    border-color: #e0a050;
+    background: linear-gradient(180deg, #fff3e4 0%, #fffaf3 40%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-healthy {
+    border-color: #7cbd93;
+    background: linear-gradient(180deg, #e8f6ed 0%, #f4fbf7 42%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-neutral {
+    border-color: #c3c4c7;
+    background: linear-gradient(180deg, #ececed 0%, #f6f7f7 45%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-info {
+    border-color: #72aee6;
+    background: linear-gradient(180deg, #e2f0fb 0%, #f4f9fc 42%, #fff 100%);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight .wc-af-ov2-summary-card__header {
+    padding: 0.55rem 0.9rem 0.6rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-critical .wc-af-ov2-summary-card__header {
+    background: rgba(214, 54, 56, 0.1);
+    border-bottom-color: rgba(180, 40, 40, 0.22);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-warning .wc-af-ov2-summary-card__header {
+    background: rgba(224, 120, 26, 0.12);
+    border-bottom-color: rgba(200, 120, 30, 0.28);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-healthy .wc-af-ov2-summary-card__header {
+    background: rgba(74, 138, 98, 0.11);
+    border-bottom-color: rgba(60, 120, 80, 0.22);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-neutral .wc-af-ov2-summary-card__header {
+    background: rgba(110, 115, 120, 0.09);
+    border-bottom-color: rgba(100, 105, 110, 0.2);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-info .wc-af-ov2-summary-card__header {
+    background: rgba(19, 94, 150, 0.08);
+    border-bottom-color: rgba(30, 100, 160, 0.2);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight .wc-af-ov2-summary-card__title-row {
+    margin-bottom: 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight .wc-af-ov2-summary-card__label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #1d2327;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-critical .wc-af-ov2-summary-card__value {
+    color: #5c1012;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-warning .wc-af-ov2-summary-card__value {
+    color: #6b3408;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-healthy .wc-af-ov2-summary-card__value {
+    color: #174228;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-neutral .wc-af-ov2-summary-card__value {
+    color: #2c3338;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--level-info .wc-af-ov2-summary-card__value {
+    color: #0a4b78;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* Legacy sem-* (non-dashboard); keep neutral gradients for any older markup */
+body.wc-af-settings-page .wc-af-ov2-summary-card--sem-healthy .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #5a8f6c, #7cb890);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--sem-attention .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #c08a2a, #e0a84a);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--sem-optional .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #a7aaad, #c3c4c7);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--sem-info .wc-af-ov2-summary-card__headband {
+    background: linear-gradient(90deg, #4f8cc9, #72aee6);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__body {
+    padding: 0.75rem 0.9rem 0.85rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight .wc-af-ov2-summary-card__body {
+    padding-top: 0.65rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.45rem 0.6rem;
+    margin-bottom: 0.35rem;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__title-row .wc-af-ov2-summary-card__label {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__badge {
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 0.28rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 2px rgba(12, 36, 56, 0.06);
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__badge--critical {
+    background: linear-gradient(180deg, #ffd6d6 0%, #fecaca 100%);
+    border-color: #c94a4a;
+    color: #4a0e10;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__badge--warning {
+    background: linear-gradient(180deg, #ffe8cc 0%, #ffd69c 100%);
+    border-color: #d48b2c;
+    color: #5c2e00;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__badge--healthy {
+    background: linear-gradient(180deg, #d4f0de 0%, #b8e7c8 100%);
+    border-color: #3d7a52;
+    color: #143822;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__badge--neutral {
+    background: linear-gradient(180deg, #f3f4f5 0%, #e2e4e7 100%);
+    border-color: #8c8f94;
+    color: #3c434a;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__badge--info {
+    background: linear-gradient(180deg, #dbeafe 0%, #bfdbfe 100%);
+    border-color: #2271b1;
+    color: #0a4b78;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card__chev {
+    opacity: 0.65;
+    font-weight: 600;
+}
+
+/* Insight cards: thick left rail = fastest scan signal */
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight[class*="wc-af-ov2-summary-card--level-"] {
+    border-left-width: 6px;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-critical {
+    border-left-color: #b32d2e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-warning {
+    border-left-color: #c6781a;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-healthy {
+    border-left-color: #2f6b45;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-neutral {
+    border-left-color: #787c82;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-info {
+    border-left-color: #135e96;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight .wc-af-ov2-summary-card__meta {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-critical .wc-af-ov2-summary-card__link {
+    color: #8a1114;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-warning .wc-af-ov2-summary-card__link {
+    color: #9a5300;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-healthy .wc-af-ov2-summary-card__link {
+    color: #1e4d2f;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-neutral .wc-af-ov2-summary-card__link {
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--level-info .wc-af-ov2-summary-card__link {
+    color: #135e96;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--clickable:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--ok:not([class*="level-"]),
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--warn:not([class*="level-"]),
+body.wc-af-settings-page .wc-af-ov2-summary-card--insight.wc-af-ov2-summary-card--muted:not([class*="level-"]) {
+    border-left-width: 1px;
+    border-left-color: var(--wc-af-border);
+}
+
+body.wc-af-settings-page .wc-af-ov2-integrations-footnote {
+    margin: 0.5rem 0 0;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #646970;
+}
+
+body.wc-af-settings-page .wc-af-ov2-integrations-footnote a {
+    font-weight: 600;
+    margin-left: 0.25rem;
+}
+
+body.wc-af-settings-page .wc-af-settings-list--basic {
+    margin-bottom: 0.75rem;
+    padding: 0.65rem 0.85rem 0.85rem;
+    border: 1px solid var(--wc-af-border, #dcdcde);
+    border-radius: var(--wc-af-r, 8px);
+    background: linear-gradient(180deg, #fff 0%, #fafbfc 100%);
+}
+
+body.wc-af-settings-page .wc-af-settings-list__intro {
+    margin: 0 0 0.75rem;
+    max-width: 72ch;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #50575e;
+}
+
+body.wc-af-settings-page .wc-af-settings-advanced {
+    margin: 0.5rem 0 1rem;
+    padding: 0;
+    border: 1px solid #dcdcde;
+    border-radius: var(--wc-af-r, 8px);
+    background: #fff;
+}
+
+body.wc-af-settings-page .wc-af-settings-advanced__summary {
+    padding: 0.65rem 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: #1d2327;
+    list-style: none;
+    background: #f6f7f7;
+    border-radius: var(--wc-af-r, 8px);
+}
+
+body.wc-af-settings-page .wc-af-settings-advanced__summary::-webkit-details-marker {
+    display: none;
+}
+
+body.wc-af-settings-page .wc-af-settings-advanced__inner {
+    padding: 0.5rem 0.65rem 0.85rem;
+    border-top: 1px solid #f0f0f1;
+}
+
+@media screen and (max-width: 1100px) {
+    body.wc-af-settings-page .wc-af-ov2-jobs-grid,
+    body.wc-af-settings-page .wc-af-ov2-ab-panels {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-3 {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================================================
+   WordPress / WooCommerce admin responsive (782px menu breakpoint)
+   Matches WP admin mobile behaviour and WooCommerce settings form patterns.
+   ============================================================================= */
+@media screen and (max-width: 782px) {
+    /* WP admin content padding when the menu is collapsed. */
+    body.wc-af-settings-page #wpcontent,
+    body.wc-af-settings-page #wpbody-content,
+    body.wc-af-dashboard-page #wpcontent,
+    body.wc-af-dashboard-page #wpbody-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    body.wc-af-settings-page .wrap,
+    body.wc-af-dashboard-page .wrap {
+        margin: 10px 0 0;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-main,
+    body.wc-af-settings-page .wc-af-control-center,
+    body.wc-af-settings-page .wc-af-app-shell {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-nav-shell {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body.wc-af-settings-page .wc-af-secondary-nav__item {
+        flex: 0 1 auto;
+    }
+
+    body.wc-af-settings-page .wc-af-section-intro--premium .wc-af-section-intro__inner,
+    body.wc-af-settings-page .wc-af-ov2-top,
+    body.wc-af-settings-page .wc-af-ov2-ab-suite,
+    body.wc-af-settings-page .wc-af-settings-panel > h2,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-panel-intro,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-core-hint,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-advanced-wrap,
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap,
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap + table.form-table.opmc_wc_af_table,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__zone--protect {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    body.wc-af-settings-page .wc-af-cc-integrations,
+    body.wc-af-settings-page .wc-af-start-here__grid,
+    body.wc-af-settings-page .wc-af-start-here__grid--compact,
+    body.wc-af-settings-page .wc-af-help-grid,
+    body.wc-af-settings-page .wc-af-ov2-jobs-grid,
+    body.wc-af-settings-page .wc-af-ov2-ab-panels,
+    body.wc-af-settings-page .wc-af-ov2-summary-grid,
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights,
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-3,
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-4,
+    body.wc-af-settings-page .wc-af-ov2-secondary-grid,
+    body.wc-af-settings-page .wc-af-ov2-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-status-key__list--compact,
+    body.wc-af-dashboard-page .wc-af-status-key__list--compact {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-sticky-save {
+        left: 0;
+        right: 0;
+        padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+    }
+
+    body.wc-af-settings-page.wc-af-has-sticky-save .wc-af-settings-main {
+        padding-bottom: calc(2.5rem + 52px);
+    }
+
+    /* Dashboard */
+    body.wc-af-dashboard-page .wc-af-dashboard-shell {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.wc-af-dashboard-page .wc-af-dashboard-header-main {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    body.wc-af-dashboard-page .wc-af-dashboard-header-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.wc-af-dashboard-page .wc-af-dashboard-header-actions .button,
+    body.wc-af-dashboard-page .wc-af-dashboard-header-actions .wc-af-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    body.wc-af-dashboard-page .wc-af-date-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    body.wc-af-dashboard-page .wc-af-date-select,
+    body.wc-af-dashboard-page .wc-af-date-input {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-dashboard-page .wc-af-date-controls .button {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    body.wc-af-dashboard-page .wc-af-metric-row {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-dashboard-page .dash-row {
+        flex-direction: column;
+    }
+
+    body.wc-af-dashboard-page .bar-chart,
+    body.wc-af-dashboard-page .dash-stats,
+    body.wc-af-dashboard-page .recent-orders,
+    body.wc-af-dashboard-page .pie-chart,
+    body.wc-af-dashboard-page .dash-section-50 {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    body.wc-af-dashboard-page .chart-wrapper {
+        height: auto;
+        min-height: 220px;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 600px) {
+    body.wc-af-settings-page .wc-af-primary-nav__item {
+        flex: 1 1 100%;
+    }
+
+    body.wc-af-settings-page .wc-af-dashboard-top,
+    body.wc-af-settings-page .wc-af-ov2-block,
+    body.wc-af-settings-page .wc-af-control-center {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* =============================================================================
+   Anti-Fraud settings — full responsive layer (tablet + mobile)
+   Scoped to body.wc-af-settings-page only. Breakpoints match WP admin (782px)
+   and common tablet widths (1024px). Covers all tabs + advanced sections.
+   ============================================================================= */
+
+/* Tablet: sidebar still visible, content area narrows */
+@media screen and (max-width: 1024px) {
+    body.wc-af-settings-page .wc-af-settings-main,
+    body.wc-af-settings-page .wc-af-control-center,
+    body.wc-af-settings-page .wc-af-app-shell,
+    body.wc-af-settings-page .woocommerce table.form-table.opmc_wc_af_table,
+    body.wc-af-settings-page .wc-af-advanced-wrap--panel,
+    body.wc-af-settings-page .wc-af-incident-panel,
+    body.wc-af-settings-page .wc-af-settings-panel {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap,
+    body.wc-af-settings-page .wc-af-settings-panel .wc_af_sub-section-title.wc-af-settings-subheading-wrap + table.form-table.opmc_wc_af_table,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-advanced-wrap,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-advanced-wrap--panel,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-card-attacks__zone--protect,
+    body.wc-af-settings-page .wc-af-settings-panel--cleanup .cleanup-section,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-panel-intro,
+    body.wc-af-settings-page .wc-af-settings-panel .wc-af-core-hint {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    body.wc-af-settings-page .wc-af-cc-integrations,
+    body.wc-af-settings-page .wc-af-start-here__grid,
+    body.wc-af-settings-page .wc-af-start-here__grid--compact,
+    body.wc-af-settings-page .wc-af-start-here__grid--start-card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.wc-af-settings-page .wc-af-ov2-summary-grid--insights-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.wc-af-settings-page .wc-af-field-select-wide {
+        min-width: 0;
+        width: 100%;
+    }
+
+    body.wc-af-settings-page .woocommerce .opmc_wc_af_table th {
+        width: 200px;
+        max-width: 35%;
+    }
+}
+
+/* Mobile + narrow tablet: WP admin menu collapsed (782px) */
+@media screen and (max-width: 782px) {
+    /* Contain layout without clipping focus rings */
+    body.wc-af-settings-page #wpbody-content > .woocommerce {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel,
+    body.wc-af-settings-page .wc-af-settings-panel--general,
+    body.wc-af-settings-page .wc-af-settings-panel--rules,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks,
+    body.wc-af-settings-page .wc-af-settings-panel--cleanup,
+    body.wc-af-settings-page .wc-af-settings-list,
+    body.wc-af-settings-page .wc-af-settings-advanced,
+    body.wc-af-settings-page .wc-af-settings-advanced__inner {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- Advanced options (all tabs) --- */
+    body.wc-af-settings-page .wc-af-advanced-wrap,
+    body.wc-af-settings-page .wc-af-advanced-wrap--panel {
+        margin: 0.85rem 0 1.15rem !important;
+        padding: 0.85rem 0.75rem 1rem !important;
+        max-width: 100% !important;
+    }
+
+    body.wc-af-settings-page .wc-af-advanced-wrap__head-main {
+        max-width: 100%;
+    }
+
+    body.wc-af-settings-page .wc-af-advanced-toggle.button,
+    body.wc-af-settings-page .wc-af-advanced-toggle.button-secondary {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        white-space: normal;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .wc-af-advanced-panel {
+        margin-top: 0.65rem;
+        padding-top: 0.65rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-advanced {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-advanced__summary {
+        padding: 0.75rem 0.85rem;
+        line-height: 1.45;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-advanced__inner {
+        padding: 0.5rem 0.35rem 0.75rem;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-list__intro {
+        max-width: 100%;
+    }
+
+    /* --- Toggle switches (rules, allow/block, integrations) --- */
+    body.wc-af-settings-page .form-table label.opmc-toggle-control {
+        padding-left: 64px;
+        padding-bottom: 1.35rem;
+        margin-bottom: 0.5rem !important;
+        min-height: 2rem;
+        font-size: inherit;
+    }
+
+    body.wc-af-settings-page .opmc-toggle-control .opmc-control:before {
+        left: 0;
+        top: calc(100% + 4px);
+        transform: none;
+        white-space: nowrap;
+    }
+
+    body.wc-af-settings-page .opmc-toggle-control input:checked ~ .opmc-control:before {
+        top: calc(100% + 4px);
+        transform: none;
+    }
+
+    /* --- Score sliders (core protection + fraud rules) --- */
+    body.wc-af-settings-page td.forminp.forminp-number {
+        padding-left: 0;
+    }
+
+    body.wc-af-settings-page .score-bar,
+    body.wc-af-settings-page .score-bar-label {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body.wc-af-settings-page td.forminp.forminp-slider,
+    body.wc-af-settings-page .opmc_wc_af_table td.forminp-slider {
+        width: 100% !important;
+        max-width: 100%;
+        padding-top: 0.75rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--wc-af-line, #f0f0f1);
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel--rules tr > td.forminp-checkbox,
+    body.wc-af-settings-page .wc-af-settings-panel--rules tr > td.forminp-number {
+        padding-bottom: 0.5rem;
+    }
+
+    /* --- Inline-sized inputs from templates --- */
+    body.wc-af-settings-page .woocommerce table.form-table input[style*="width: 5em"],
+    body.wc-af-settings-page .woocommerce table.form-table select[style*="width: 5em"],
+    body.wc-af-settings-page .woocommerce table.form-table select[style*="width: 12em"],
+    body.wc-af-settings-page .woocommerce table.form-table select[style*="width: 18em"],
+    body.wc-af-settings-page .wc-af-input-wrapper input {
+        width: 100% !important;
+        max-width: 12rem;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .woocommerce table.form-table textarea[style*="width:100%"],
+    body.wc-af-settings-page .woocommerce table.form-table textarea {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .woocommerce table.form-table select[multiple] {
+        width: 100% !important;
+        max-width: 100%;
+        min-height: 8rem;
+    }
+
+    body.wc-af-settings-page .wc-af-input-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* --- Card testing tab --- */
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-incident-panel__status,
+    body.wc-af-settings-page .wc-af-settings-panel--card-attacks .wc-af-ca-status .wc-af-incident-panel__status {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-incident-panel__quick-links,
+    body.wc-af-settings-page .wc-af-incident-panel__status {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.wc-af-settings-page .wc-af-status-pill {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .card-attack {
+        padding-left: 0;
+    }
+
+    /* --- Cleanup tab --- */
+    body.wc-af-settings-page .cleanup-section {
+        margin: 0.75rem 0 1rem !important;
+        padding: 0 0.35rem;
+    }
+
+    body.wc-af-settings-page span#description-cleanup {
+        display: block;
+        line-height: 1.55;
+    }
+
+    body.wc-af-settings-page span#description-cleanup .button,
+    body.wc-af-settings-page span#description-cleanup .wc-af-inline-action {
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* --- Debug log (general advanced) --- */
+    body.wc-af-settings-page .main-debug-log-tbl {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* --- Marketplace test tool (marketplace orders) --- */
+    body.wc-af-settings-page #wc-af-marketplace-test-tool > div {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.5rem !important;
+    }
+
+    body.wc-af-settings-page #wc-af-marketplace-test-tool select,
+    body.wc-af-settings-page #wc-af-marketplace-test-tool .button {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- Help & support tab --- */
+    body.wc-af-settings-page .wc-af-help-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-help-card__action.button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- Section intro + panel chrome --- */
+    body.wc-af-settings-page .wc-af-section-intro--premium .wc-af-section-intro__inner {
+        padding: 1rem 0.85rem 1.1rem;
+    }
+
+    body.wc-af-settings-page .wc-af-settings-panel > h2 {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+        font-size: 1.05rem;
+        line-height: 1.35;
+    }
+
+    body.wc-af-settings-page .wc-af-panel-intro,
+    body.wc-af-settings-page .wc-af-core-hint,
+    body.wc-af-settings-page .wc-af-card-attacks__intro-desc {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+    /* --- Integration cards on overview --- */
+    body.wc-af-settings-page .wc-af-cc-int {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    body.wc-af-settings-page .wc-af-cc-int__note {
+        order: 2;
+    }
+}
+
+/* Small phones: single-column everything */
+@media screen and (max-width: 600px) {
+    body.wc-af-settings-page .wc-af-start-here__grid,
+    body.wc-af-settings-page .wc-af-start-here__grid--compact,
+    body.wc-af-settings-page .wc-af-start-here__grid--start-card,
+    body.wc-af-settings-page .wc-af-cc-integrations {
+        grid-template-columns: 1fr;
+    }
+
+    body.wc-af-settings-page .wc-af-primary-nav__item,
+    body.wc-af-settings-page .wc-af-secondary-nav__item {
+        flex: 1 1 100%;
+    }
+
+    body.wc-af-settings-page .wc-af-secondary-nav__link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    body.wc-af-settings-page .wc-af-ov2-summary-card--clickable {
+        min-height: 0;
+    }
+}

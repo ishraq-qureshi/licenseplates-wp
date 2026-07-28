@@ -1,0 +1,15 @@
+# llm.txt for https://www.licenseplates.tv/
+# Last updated: 2026-02-20
+
+User-Agent: *
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-content/uploads/private/
+
+Allow: /
+Allow: /wp-content/uploads/public/
+
+
+Policy: https://www.licenseplates.tv/privacy-policy/
+Usage: Content cannot be used for AI/LLM training or dataset creation without explicit written consent.
+Sitemap: https://www.licenseplates.tv/sitemap.xml

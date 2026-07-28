@@ -1,0 +1,72 @@
+{
+    "packages": [
+        {
+            "name": "skyverge/wc-plugin-framework",
+            "version": "6.1.2",
+            "version_normalized": "6.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/godaddy-wordpress/wc-plugin-framework.git",
+                "reference": "e144ea9511b0712e8d195444fd5ab3225483a705"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godaddy-wordpress/wc-plugin-framework/zipball/e144ea9511b0712e8d195444fd5ab3225483a705",
+                "reference": "e144ea9511b0712e8d195444fd5ab3225483a705",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4 <9.0"
+            },
+            "require-dev": {
+                "10up/wp_mock": "^1.0",
+                "codeception/module-asserts": "^1.3",
+                "codeception/module-db": "^1.0",
+                "codeception/module-phpbrowser": "^1.0",
+                "lucatume/wp-browser": "3.0.5",
+                "phpcompatibility/php-compatibility": "9.3.5"
+            },
+            "time": "2026-03-25T09:43:04+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "woocommerce/admin",
+                    "woocommerce/api",
+                    "woocommerce/compatibility",
+                    "woocommerce/payment-gateway",
+                    "woocommerce/rest-api",
+                    "woocommerce/utilities",
+                    "woocommerce/class-sv-wc-admin-notice-handler.php",
+                    "woocommerce/class-sv-wc-framework-bootstrap.php",
+                    "woocommerce/class-sv-wc-helper.php",
+                    "woocommerce/class-sv-wc-hook-deprecator.php",
+                    "woocommerce/class-sv-wc-plugin.php",
+                    "woocommerce/class-sv-wc-plugin-compatibility.php",
+                    "woocommerce/class-sv-wc-plugin-dependencies.php",
+                    "woocommerce/class-sv-wc-plugin-exception.php",
+                    "woocommerce/class-sv-wp-admin-message-handler.php"
+                ],
+                "psr-4": {
+                    "SkyVerge\\WooCommerce\\PluginFramework\\v6_1_2\\": "woocommerce/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SkyVerge\\WooCommerce\\PluginFramework\\v6_1_2\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "The official SkyVerge WooCommerce plugin framework",
+            "support": {
+                "source": "https://github.com/godaddy-wordpress/wc-plugin-framework/tree/6.1.2",
+                "issues": "https://github.com/godaddy-wordpress/wc-plugin-framework/issues"
+            },
+            "install-path": "../skyverge/wc-plugin-framework"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

@@ -1,0 +1,589 @@
+*** WooCommerce Anti Fraud ***
+
+2026-07-07- Version 8.0.0
+Update: ANTIFRAUD-246 - Anti-Fraud UI/UX Updates Review
+
+2026-06-18 - Version 7.2.8
+Fix: ANTIFRAUD-221 - Prevent PHP 8.4 undefined variable warnings in whitelist settings rendering
+Fix: ANTIFRAUD-222 - [SECURITY] Anti-Fraud trust bypass via spoofable signals (email domain + Referer-based Store API detection)
+Fix: ANTIFRAUD-235 - Fatal error in HPOS helper when processing PayPal callbacks with invalid order object
+Update: ANTIFRAUD-237 - The “Card Attacks” tab is showing a red status with “Enable Checkout Protection: Not Active”, even though CAPTCHA is enabled on the site.
+Fix: ANTIFRAUD-238 - Turnstile checkout protection not rendering correctly and “Checkout Protection is not active” warning shown incorrectly
+Fix: ANTIFRAUD-249 - [SECURITY] Unauthenticated AJAX Endpoint Allows Fraud Blacklist Manipulation. (PATCHSTACK)
+
+2026-06-03 - Version 7.2.7
+Fix: ANTIFRAUD-239 - Resolved an issue where checkout fraud validation could still attempt reCAPTCHA verification even when reCAPTCHA was disabled.
+Fix: ANTI-FRAUD-242 - Improved reCAPTCHA token handling within checkout blocks to ensure more reliable fraud validation during checkout.
+Fix: ANTI-FRAUD-243 - Enhanced reCAPTCHA integration and payment compatibility to provide a more stable checkout experience across supported payment methods.
+Update: ANTI-FRAUD-244 - Unified CAPTCHA validation processes and improved logging to provide more consistent fraud checks and better diagnostic visibility.
+
+2026-05-06 - version 7.2.6
+Fix: ANTI-FRAUD-214 - Improved location matching by supporting both abbreviated and full state names.
+Fix: ANTI-FRAUD-215 - Improved browser location handling so country details are retained more reliably during fraud checks.
+Update: ANTI-FRAUD-217 - Added postcode support to browser location validation for more accurate fraud checks.
+Fix: ANTI-FRAUD-218 - Improved how browser location data is stored so order checks use the correct location details.
+Update: ANTI-FRAUD-219 - Improved consistency between IP-based and browser-based location checks.
+Update: ANTI-FRAUD-220 - Improved location comparison logic to better balance IP and browser location signals.
+Fix: ANTI-FRAUD-206 - Improved GeoIP country and state handling in location-based fraud rules.
+Fix: ANTI-FRAUD-207 - Improved GeoIP rule scoring to reduce false positives caused by city-level location matching.
+Fix: ANTI-FRAUD-208 - Improved GeoIP data handling so each order check uses the correct location data.
+New: ANTI-FRAUD-216 - Added support for saving browser location postcodes for improved location validation.
+Update: ANTI-FRAUD-209 - Expanded MaxMind MinFraud support to use additional fraud signals, including proxy, VPN, TOR, and risk score checks.
+
+2026-04-22 - version 7.2.5
+* Fix: ANTI-FRAUD-169 - Improved how manual overrides and whitelisting are applied, ensuring approved customers and actions are recognized more consistently, including in cases where rules are updated after earlier fraud checks.
+* Fix: ANTI-FRAUD-171 - Improved plugin package handling and validation, strengthening file permission checks to help ensure more reliable and secure installation behavior.
+* Fix: ANTI-FRAUD-172 - Improved performance during high-load and bot attack scenarios, reducing unnecessary database delays and helping stores remain more stable under heavy traffic or abusive activity.
+* Fix: ANTI-FRAUD-192 - Improved compatibility with PayPal reCAPTCHA checks when Anti-Fraud is enabled, reducing misleading compliance warnings and ensuring smoother integration behavior.
+* Fix: ANTI-FRAUD-233 - Strengthened request validation and marketplace detection logic, improving protection against spoofing attempts and bypass techniques.
+
+2026-03-25  - version 7.2.4
+* Update: ANTI-FRAUD-194 - Improved handling of “New Order” email notifications. Adds the ability to delay or suppress new order emails until fraud checks are completed, helping prevent premature notifications for potentially fraudulent orders.
+* Update: ANTI-FRAUD-195 - Improved control over Anti-Fraud email notifications, Introduces new configuration options to reduce excessive email alerts, giving store owners better control over when and how notifications are sent.
+* Update: ANTI-FRAUD-210 - Improved protection against high-volume payment attempts, Enhances detection of rapid or repeated payment attempts across different sessions, helping protect stores against advanced card testing and velocity attacks.*
+
+2026-03-13  - version 7.2.3
+* Fix: ANTI-FRAUD-196 - AF - Improved handling of reCAPTCHA conflict warnings when Turnstile is used:
+This resolves an issue where the plugin could incorrectly display a reCAPTCHA conflict warning in the admin area when Cloudflare Turnstile was being used. The warning has been corrected and can now also be dismissed, helping keep the admin interface cleaner and reducing unnecessary alerts.
+* Update: ANTI-FRAUD-184 - AF - Configurable Checkout reCAPTCHA placement:
+This update introduces a new option that allows store owners to configure where the reCAPTCHA appears on the WooCommerce checkout page. By selecting the appropriate hook or location, merchants can better control the checkout layout and ensure compatibility with different themes and custom checkout setups.
+* Update: ANTI-FRAUD-188 - AF - Improved IP Multiple Order detection with proxy and relay services:
+This update improves the IP Multiple Order Details rule to better account for services such as iCloud Private Relay and Cloudflare proxy networks. This helps reduce false fraud flags and improves the accuracy of IP-based checks when customers are using privacy or proxy services.
+* Update: ANTI-FRAUD-190 - AF - Marketplace-aware order source handling:
+This update improves how the plugin identifies and handles orders originating from major marketplaces. By better recognising marketplace-generated orders, the plugin can apply fraud checks more appropriately and avoid unnecessary flags on legitimate marketplace transactions.
+
+
+2026-02-18  - version 7.2.2
+* Update: ANTI-FRAUD-179 - AF - Improved accuracy for US order verification:
+This update improves how US phone numbers are formatted and how country and state information is interpreted, helping reduce false fraud flags and ensuring legitimate US orders are processed more smoothly.
+* Update: ANTI-FRAUD-186 - AF - Dashboard date filter and performance improvement:
+This update adds a date range filter to the dashboard and remembers your selected default view, preventing large stores from automatically loading all historical orders at once and improving overall page speed and performance.
+* Update: ANTI-FRAUD-191 - AF - Improved performance for Anti-Fraud whitelist management:
+This update improves how the Anti-Fraud whitelist is loaded in the background, preventing slowdowns on stores with large whitelist data and ensuring smoother performance across the site.
+* Update: ANTI-FRAUD-197 - AF - dashboard improvements and better handling of critical errors:
+This update adds new management options to the Anti-Fraud dashboard and improves how the plugin responds to critical or memory-related errors, helping keep the dashboard more stable and reducing interruptions when issues occur.
+
+2026-02-12  - version 7.2.1
+* New: ANTI-FRAUD-124 - AF - Enhanced visibility for plugin configurations in status reports.
+* Fix: ANTI-FRAUD-170 - AF - Improved accuracy for order verification and fraud detection.
+* Fix: ANTI-FRUAD-187 - AF - Resolved display issues within Anti-Fraud admin settings.
+* Fix: ANTI-FRAUD-180 - AF - Enhanced transparency for fraud alerts and order flagging.
+
+2026-01-23  - version 7.2.0
+* New: ANTI-FRAUD-178 - AF - Enhanced Fraud Visibility: View Related Orders for Shared IP Alerts.
+* New: ANTI-FRAUD-177 - AF - One-Click Blocking: Instantly Restrict Suspicious IPs and Emails.
+* Fix: ANTI-FRAUD-176 - AF - Continuous Risk Monitoring: Automatic Re-evaluation of Completed Orders.
+* Fix: ANTI-FRAUD-181 - AF - Improved Reliability for MinFraud Settings and IP Geolocation Accuracy.
+
+2025-12-25  - version 7.1.9
+* New: ANTI-FRAUD-116 - AF - Whitelist Name field.
+* New: ANTI-FRAUD-118 - AF - New City & County Whitelist Section.
+* New: ANTI-FRAUD-119 - AF - New Address Whitelist Section.
+* New: ANTI-FRAUD-120 - AF - New section - Zip/Postal code Whitelist.
+* Fix: ANTI-FRAUD-174 - AF - Memory Exhaustion on Large Stores.
+
+2025-12-15  - version 7.1.8
+* New: ANTI-FRAUD-115 - AF – Added Country Whitelist Controls.
+* New: ANTI-FRAUD-117 - AF – Added State Whitelist Controls.
+* New: ANTI-FRAUD-124 - AF – Anti-Fraud Settings Included in Status Report.
+* Fix: ANTI-FRAUD-159 - AF – Improvements to reCAPTCHA on Checkout.
+* Fix: ANTI-FRAUD-161 - AF – PHP 8 Compatibility Improvements.
+* Fix: ANTI-FRAUD-162 - AF – Checkout Flow Review & Improvements.
+* Fix: ANTI-FRAUD-173 - AF – Improvements to Whitelisting & Fraud Notifications.
+
+
+
+2025-12-13  - version 7.1.7
+* New: ANTI-FRAUD-126 - AF - API-Based Order Blocking & Throttling on Accepted API Orders
+* New: ANTI-FRAUD-149 - AF - ChatGPT-5 Support for AI Fraud Detection.
+* New: ANTI-FRAUD-16  - AF - Add Note for SMS Verification Feature.
+* Fix: ANTI-FRAUD-148 - AF - IP Whitelisting Bug When No IP Addresses Are Entered.
+* Fix: ANTI-FRAUD-153 - AF - Email Whitelist Parsing Bug (Comma vs Newline Handling Fixed).
+* Fix: ANTI-FRAUD-159 - AF - Reported reCAPTCHA Issues at Checkout.
+
+2025-11-13  - version 7.1.6
+* New: ANTI-FRAUD-144 - AF – Add Kount Chargeback Management Tab.
+* FIX: ANTI-FRAUD-147 - AF – Add Basic Card-Attack Cleanup Feature.
+
+2025-11-13  - version 7.1.5
+* FIX: ANTI-FRAUD-142 - Save Button Now Works Properly on MaxMind Settings Tab.
+* Update: ANTI-FRAUD-143 - Enhanced user interface and dashboard experience in the Anti-Fraud plugin.
+
+2025-11-06  - version 7.1.4
+* FIX: ANTI-FRAUD-129 - Anti-Fraud Compatibility Issue with Custom Checkout Pages.
+* FIX: ANTI-FRAUD-135 - Anti-Fraud Processing Loop Causing Checkout Timeouts.
+* FIX: ANTI-FRAUD-137 - Anti-Fraud Dashboard Performance Fix and reCAPTCHA Compatibility Improvement.
+
+2025-10-18  - version 7.1.3
+* UPDATE: ANTI_FRAUD-121 - AF - Improved PayPal Card Attack Detection and Protection – strengthens security logic to better identify and block high-volume fraudulent PayPal card attempts.
+* UPDATE: ANTI-FRAUD-132 - AF - Card Attack and PayPal settings tabs for clearer configuration and smoother setup of payment-related fraud protection.
+* FIX: ANTI-FRAUD-136 - AF- Critical Fixes and Performance Improvements.
+
+2025-09-30  - version 7.1.2
+* NEW: ANTI_FRAUD-107 - AF - Blacklist Feature - New section - State blacklist option.
+* NEW: ANTI-FRAUD-108 - AF - Blacklist Feature - New section - City/county blacklist.
+* NEW: ANTI-FRAUD-109 - AF - Blacklist Feature - New section - Address blacklist.
+* NEW: ANTI-FRAUD-110 - AF - Blacklist Feature - New section - Zip/Postal code blacklist. 
+* NEW: ANTI-FRAUD-114 - Add a new tab - Home - with below mentioned content.
+
+2025-09-23  - version 7.1.1
+* NEW: ANTI_FRAUD-105 - AF - Blacklist Feature - New section - Country Blacklist.
+* NEW: ANTI-FRAUD-106 - AF - Blacklist Feature - New section - Blacklist Name First name.
+* FIX: ANTI-FRAUD-111 - IPV6 lockout fix pending confirmation.
+
+2025-09-10  - version 7.1.0
+* FIX: ANTI_FRAUD-98 - Anti-Fraud Plugin: Fraud Check Bypassed – Possible IP Whitelist Bug (PayPal & ACP Impacted).
+
+2025-09-02  - version 7.0.9
+* FIX: ANTI_FRAUD-99 - QIT compatibilty fix.
+
+2025-08-13  - version 7.0.8
+* FIX: ANTI_FRAUD-87 - Setting Reset: 'Update Order Status Based on Fraud Score' After Plugin Update
+* FIX: ANTI-FRAUD-93 - Anti-Fraud Plugin Incorrectly Keeps Orders in 'On Hold' Status.
+* NEW: ANTI-FRAUD-95 - Option to Disable Automatic IP Blacklisting.
+
+2025-07-24  - version 7.0.6
+* FIX: ANT_FRAUD-89 - Anti-Fraud Several performance issues in the Anti-Fraud plugin
+
+2025-07-11  - version 7.0.5
+* NEW: ANT_FRAUD-61 - Whitelisting and Blacking functionality for the mobile number verification.
+
+2025-07-02  - version 7.0.4
+* NEW: ANT_FRAUD-71 -  First Time Installation Default Settings.
+
+2025-06-26  - version 7.0.3
+* NEW: ANTI-FRAUD-9 - ChatGPT integration.
+
+2025-05-22  - version 7.0.2
+* NEW: PLUGINS-2991 - New dedicated whitelisting page.
+* Update: PLUGINS-2990 - Various text improvements.
+* Fix: PLUGINS-2973 - Orders with "Unknown" Origin are not Blocked by Default.
+* Fix: PLUGINS-3013 - atal error in Anti-Fraud plugin due to null array.
+
+2025-04-30  - version 7.0.1
+* NEW: PLUGINS-2767 - Support for IPv6 address whitelisting and blacklisting fields.
+* Fix: PUGINS-2837 - Duplicated settings under Card Attacks tab.
+* Fix: PLUGINS-2971 - Geolocation popup triggered despite BigDataCloud key being unset.
+
+2025-04-26 - version 7.0.0
+* NEW: PLUGINS-2124 - SMS Verification of Phone Number.
+* NEW: PLUGINS-2344 - Batch processing for historical orders.
+* UPDATE: PLUGINS-2779 - Legacy Code Refactoring.
+* Fix: PLUGINS-2960 - IP Whitelist Functionality Issue.
+* FIX: PLUGINS-2734 - Pop up message on deactivation.
+* FIX: PLUGINS-2771 - Duplicate Settings Field.
+
+2025-04-2 - version 6.1.2
+* Fix: PLUGINS-2955 - POS Plugin Transactions Blocked by API Protection.
+
+2025-04-2 - version 6.1.1
+* Fix: PLUGINS-2957 - Support bulk whitelisting of emails.
+
+2025-03-25 - version 6.1.0
+* Fix: PLUGINS-2854 - Checkout Button Freezing or Failing.
+* Update: PLUGINS-2951 - Google Recaptcha updates. 
+
+2025-03-22 - version 6.0.9
+* Fix: PLUGINS-2863 - Checkout Issue when reCAPTCHA is enabled.
+* Fix: PLUGINS-2860 - Add clear button for tags input fields.
+
+2025-03-20 - version 6.0.8
+* Fix: PLUGINS-2839 - Incorrect whitelisting of emails.
+
+2025-03-08 - version 6.0.7
+* Fix: PLUGINS-2853 - ReCaptcha: Timeout or Speed Issues.
+
+2025-01-31 - version 6.0.6
+* Fix: PLUGINS-2875 - Critical error upon adding manual orders.
+
+2025-01-23 - version 6.0.5
+* Update: PLUGINS-2851 - ReCaptcha: Check Iframe Blocking Compatibility.
+
+2024-12-29 - version 6.0.4
+* Update: PLUGINS-2844 - Velocity attack prevention.
+
+2024-12-16 - version 6.0.3
+* Fix: PLUGINS-2787 - Duplicate reCAPTCHA initialization error on checkout with Braintree and Paypal.
+* Fix: PLUGINS-2815 - ReCaptcha console error and by-pass issues.
+
+2024-11-27 - version 6.0.2
+* Update: Check plugin against latest WP and Woo.
+
+2024-10-22- version 6.0.1
+* Fix: PLUGINS-1209 - Fix minor bug related to user.
+* Fix: PLUGINS-1986 - "Deprecated Feature Used" warning on Chrome Dev Tools Console.
+* Fix: PLUGINS-2737 - reCaptcha incompatibility with Woo Checkout Blocks.
+
+2024-10-18 - version 6.0.0
+* Update:  PLUGINS-2730 - Protection for card Attacks via API.
+* Update: PLUGINS-2681 - Velocity Attack Order Processing Delay setting.
+
+2024-10-03 - version 5.9.4
+* Fix: PLUGINS-2746 - Type E_ERROR | Uncaught TypeError: array_unique() on line 365.
+
+2024-09-30 - version 5.9.3
+* Fix: PLUGINS-2699 - Unauthorized email whitelisting vulnerability.
+* Update: PLUGINS-2707 - Settings Improvements.
+* Fix: PLUGINS-2705 - MaxMind settings are not working properly.
+
+2024-09-13 - version 5.9.2
+* Add: PLUGINS-1358 - Check orders once only.
+* Fix: PLUGINS-2085 - Updates for the dashboard page.
+
+2024-09-05 - version 5.9.1
+* Add: PLUGINS-2041 - Email address validation in settings.
+
+2024-08-12 - version 5.9.0
+* Update: PLUGINS-2657 - Velocity attacks reCaptcha issues.
+* New: PLUGINS-2675 - Create a Velocity attack settings tab.
+
+2024-07-08 - version 5.8.9
+* Update: PLUGINS-2636 - Update international order rule for U.S. Minor Outlying Islands.
+
+2024-06-24 - version 5.8.8
+* Fix: PLUGINS-2276 - Woo Security Scan issues from automated QIT tool.
+* Update: PLUGINS-2362 - Setting data validation for input fields.
+
+2024-05-31 - version 5.8.7
+* Fix: PLUGINS-2511 - Fix WC_Geolocation usage and update whitelist IP feature to have a notice to merchant about using of Geolocation.
+
+2024-05-10 - version 5.8.6
+* Fix: PLUGINS-2521 - Admin notice error displaying despite correct API credentials with Bigdata.
+
+2024-05-08 - version 5.8.5
+* Fix: PLUGINS-2489 - Overhaul PayPal email verification logic and add flag to prevent duplicate notifications.
+* Update: PLUGINS-2516 - Adjust MaxMind link to a deep link.
+* Add: PLUGINS-2517 - Add text to General settings.
+* Fix: PLUGINS-2545 - Fix email blacklisting feature still blocking email address when email blacklist option is disabled.
+* Fix: PLUGINS-2546 - Bug in handling multiple whitelisted emails.
+
+2024-04-26 - version 5.8.4
+* Add: PLUGINS-2524 - Further multilingual support for NO, VI, RO, HE, FI, BG, UK, JA, CA, ID, SK, TH, CS, SR, KO, FA.
+
+2024-03-28 - version 5.8.3
+* Fix: PLUGINS-2154 - Hook "wp_af_my_hourly_event" causing server to run out of memory.
+* Fix: PLUGINS-2356 - Anti Fraud Dashboard not showing 24 hours update for orders with fraud check.
+
+2024-03-20 - version 5.8.2
+* Add: PLUGINS-1063 - Multilingual support for ES, FR, PT, NL, DE, ZH, IT, PL, RU, TR, AR, SV, EL, HU, DA.
+
+2024-03-04 - version 5.8.1
+* Fix: PLUGINS-2195 - Change 'theme-option' slug for the Anti Fraud dashboard menu.
+* Fix: PLUGINS-2346 - Fix Anti Fraud dashboard points to incorrect URL.
+* Add: PLUGINS-2377 - Geolocation rule now requires Bigdatacloud API key.
+
+2024-02-21 - version 5.8.0
+* Add: PLUGINS-2373 - Button at Order level to Manually check the Order.
+* New: PLUGINS-2411 - Record MaxMind Data points in Woo Orders.
+
+2024-01-17 - version 5.7.7
+* Fix: PLUGINS-2386 - Anti Fraud - Woo QI Test Issues.
+
+2024-01-15 - version 5.7.6
+* Fix: PLUGINS-2381 - Fix reCAPTCHA to be revalidated everytime the Place Order button has been submitted on the Checkout page.
+* Update: PLUGINS-2382 - Verify further relevant information on orders to minFraud transactions.
+* Update: PLUGINS-2417 - Update "Does IP Address Match Location?" rule to be independent from MaxMind in plugin.
+
+2023-12-18 - version 5.7.5
+* Remove: PLUGINS-2430 - Remove malfunctioning notification recommending MaxMind and Trust Swiftly.
+
+2023-12-13 - version 5.7.4
+* Fix: PLUGINS-2338 - Resolve lost settings on plugin deactivation.
+* Add: PLUGINS-2358 - MaxMind and Trust Swiftly recommendation message.
+* Fix: PLUGINS-2352 - Missing Fraud Risk meta box on order page with HPOS enabled.
+
+2023-12-04 - version 5.7.3
+* Fix: PLUGINS-1589 - Paypal email verification not sending verification emails.
+* Fix: PLUGINS-1931 - Stop running PayPal cron checks when settings are disabled.
+* Fix: PLUGINS-2137 - Activate Email Alerts for Admin option still sending emails even disabled.
+* Fix: PLUGINS-2318 - Potential Order Status Set to Processing Without Approval.
+
+2023-11-23 - version 5.7.2
+* Add: PLUGINS-2375 - Trust Swiftly text updates.
+
+2023-11-16 - version 5.7.1
+* Fix: PLUGINS-2299 - Fix code that is causing memory limit in the Anti Fraud dashboard page.
+
+2023-11-10 - version 5.7.0
+* New: PLUGINS-2242 - Support bulk blacklisting of emails.
+* New: PLUGINS-2267 - Add whitelisting of IP addresses.
+* Fix: PLUGINS-2266 - Limit Number of Orders between Time fatal error.
+
+2023-10-19 - version 5.6.0
+* New: PLUGINS-2289 - Trust Swiftly Integration.
+
+2023-09-26 - version 5.5.3
+* Fix: PLUGINS-2193 - Saved settings are being reset after plugin deactivation and update.
+
+2023-08-22 - version 5.5.2
+* Fix: PLUGINS-2241 - Fatal error when doing a checkout.
+* Fix: PLUGINS-1978 - Inaccurate result for the rule Billing and Shipping not matched.
+* Fix: PLUGINS-2134 - Email blacklisting not working properly on 5.4.0 version.
+
+2023-07-13 - version 5.5.1
+* Upgrade: PLUGINS-1902 - Woo HPOS Compatibility Audit/Upgrade.
+
+2023-05-08 - version 5.5.0
+* Fix: PLUGINS-2093 - Fix bug on the rule Limit Number of Orders between Time about proper time format.
+* Fix: PLUGINS-2105 - Fix whitelist features to be not being dependent on each other to skip specific rule fraud check.
+* Fix: PLUGINS-2106 - Fix whitelist role not checking multiple roles.
+
+2023-03-28 - version 5.4.0
+* Feature: PLUGINS-2022 - Historical Order settings.
+* Fix: PLUGINS-2029 - Fix whitelisting of payment, email not properly working.
+
+2023-03-14 - version 5.3.0
+* New: PLUGINS-2037 - Wildcards for Email Blacklist and Whitelist.
+* Update: PLUGINS-2039 - Spelling mistakes in Settings.
+* Update: PLUGINS-2043 - reCAPTCHA settings page wording update.
+* Fix: PLUGINS-2064 - Investigate issue about orders being cancelled.
+
+2023-03-08 - version 5.2.0
+* New: PLUGINS-2013 - Detailed Logging of Orders.
+
+2023-02-15 - version 5.1.0
+* Update: PLUGINS-1938 - Improve Too Many Order Attempts rule by checking other customer order details.
+* Add: PLUGINS-2003 - Add support for reCAPTCHA v3.
+
+2023-01-12 - version 5.0.0
+* Fix: PLUGINS-1954 - Large number of orders on website cause fatal error (memory limit).
+* New: PLUGINS-1971 - Check new orders only.
+
+2022-12-16 - version 4.9.0
+* PLUGINS-1951 - Dash message recommending recaptcha activation.
+
+2022-12-08 - version 4.8.0
+* PLUGINS-1949 - PHP8 Compatibility adjustments.
+
+2022-10-24 - version 4.7.1
+* Fix plugin update causing loss of setting values.
+
+2022-10-11 - version 4.7.0
+* PLUGINS-1615 - Improve Blacklist Settings Layout.
+* PLUGINS-1617 - Introducing HTML5 Geolocation (Rules).
+
+2022-09-13 - version 4.6.0
+* PLUGINS-1598 - Fix check for customer's first purchase rule.
+* PLUGINS-1614 - Fix issue in formatting after whitelisting an email using the 'Unblock' button.
+* PLUGINS-1593 - Improve settings layout.
+* PLUGINS-1590 - New Alerts tab for email notification.
+* PLUGINS-1595 - Update Settings Rules layout.
+
+2022-08-02 - version 4.5.0
+* PLUGINS-1657 - Update minFraud links.
+
+2022-07-26 - version 4.4.0
+* PLUGINS-1582 - Add cancel fraud queue check and reschedule.
+* PLUGINS-1279 - Fix JavaScript files still being loaded even the reCaptcha option is disabled.
+* PLUGINS-934 - Exception on subscription orders.
+* PLUGINS-1116 - Preserve saved settings on plugin deactivation and update.
+* PLUGINS-1515 - Advise customers GeoIP Location is using Maxmind.
+
+2022-05-11 - version 4.3.1
+* PLUGINS-1559 - Emogrifier package reference removal.
+
+2022-04-11 - version 4.3.0
+* PLUGINS-1283 - Fix issue Maxmind are getting twice request per order.
+* PLUGINS-1165 - Order number restriction option during certain timeframe.
+* PLUGINS-1492 - Need Support and leave feedback options.
+* PLUGINS-1436 - Disable fraud checking whitelisted emails.
+
+2022-01-14 - version 4.2.0
+* PLUGINS-1362 - Proxycheck.io enhancement to track usage.
+
+2021-12-20 - version 4.1.0
+* PLUGINS-1255 - Correct settings for proxy/vpn, multiple attempts and mismatch address.
+
+2021-11-04 - version 4.0.0
+* PLUGINS-1121 - Customer IP address did not match given billing country not working correctly.
+* PLUGINS-1203 - Support better minFraud Score Outputs.
+* PLUGINS-1181 - Correct settings not working.
+* PLUGINS-1188 - Minor code changes relating to paypal and Cron.
+
+2021-09-08 - version 3.9.0
+* PLUGINS-850 - Fix IP Address Blacklist checkbox to toggle functionality not working.
+* PLUGINS-1005 - EFT orders set to processing.
+* PLUGINS-1164 - Limit Orders over 24 hours based on IP Address.
+
+2021-08-17 - version 3.8.0
+* PLUGINS-995 - Add reCaptcha option for Checkout.
+
+2021-06-24 - version 3.7.0
+* PLUGINS-1090 - Fix - Causing some JavaScript conflict with WP Bakery Page Builder
+* PLUGINS-802 - Whitelist blacklisted email on frontend
+* PLUGINS-1064 - MINFRAUD WOO - geoip 2 function
+
+2021-04-19 - version 3.6.0
+* PLUGINS-949	- Code new dashboard
+* PLUGINS-908	- Insights
+* PLUGINS-879	- Add filter to change Admin Text if Fraud is blocked on Pre Payment Check
+* PLUGINS-663	- Put Log code for the cron scheduler, and wherever else required
+
+2021-03-02 - version 3.5.0
+* PLUGINS-879 - Add filter to change Admin Text if Fraud is blocked on Pre Payment Check.
+* PLUGINS-851 - Fix whitelisted payment methods not working.
+
+2020-12-17 - version 3.4.0
+* PLUGINS-837 - Bug fixed: Filter on settings cause notice errors in Woocommerce Admin plugin
+
+2020-11-23 - version 3.3.0
+* PLUGINS-809 - Bug fixed: Changes order status from completed to processing.
+
+2020-11-03 - version 3.2.0
+* PLUGINS-752 - jQuery-ui conflict with other plugins (jQuery-Knob)
+
+2020-10-30 - version 3.1.0
+* PLUGINS-746 - Per-Payment fraud check issue fixed.
+* PLUGINS-758 - Updated the logic for checking of billing phone with Billing country rule.
+
+2020-10-06 - version 3.0.0
+* PLUGINS-640 - Replaced the checkbox with the switch button in the "Minfraud settings" section.
+* PLUGINS-709 - Added feature to bypass the "On-hold" and "Cancel" order rules.
+* PLUGINS-710 - Added new rule to check billing phone with Billing country.
+* PLUGINS-694 - Add quick links to Installed Plugins Screen.
+* PLUGINS-667 - Paypal Email address issues fixed and added a feature to starts supporting Paypal Express checkout process.
+* PLUGINS-671 - Add feature - added option Enable Fraud Check Before Payment.
+* PLUGINS-696 - Admin screen improvements
+
+2020-09-25 - version 2.9.1
+* PLUGINS-712 - Fixed the Cron tasks issue.
+
+2020-09-11 - version 2.9.0
+* PLUGINS-643 - Added cron scheduler that runs once every hour, for past 7 days orders which has not been checked, or orders which has, for some reason, been missed out.
+* PLUGINS-638 - Added description for "Device Tracking" settings option.
+* PLUGINS-637 - Update label for "Cancel Score" settings field.
+* PLUGINS-657 - Fixed enable first-order check for processing orders issue.
+* PLUGINS-646 - Fixed the visible graphics of risk score circle.
+
+2020-09-02 - version 2.8.0
+* PLUGINS-554 - Added feature to support Minfraud scoring system.
+
+2020-07-16 - version 2.7.5
+* PLUGINS-482 - Add Block IP address feature
+
+2020-07-16 - version 2.7.4
+* PLUGINS-516 - Fixed cancelled order bug.
+
+2020-07-10 - version 2.7.3
+* PLUGINS-421 PLUGINS-339 Fixed Email and order status function for WC 4.0
+* PLUGINs-405 Fixed First Order Message Changed.
+* PLUGINS-348 Fixed Whitelist function issue.
+* PLUGINS-406 Paypal email verification issue.
+
+2020-05-25 - version 2.7.2
+* PLUGINS-124 - Fixed verify froud email or generated email
+* PLUGINS-339 - version check and alternative strategy for WC 4.0
+
+2020-02-14 - version 2.7.1
+* PLUGINS-258 - Fixed automatic blacklist of email
+
+2019-12-28 - version 2.7.0
+* Fixed the paypal verify email issue.
+
+2019-11-06 - version 2.6.0
+* fixed the issue in rule ip geolocation check getting error usage_limit_reached.
+
+2019-10-21 - version 2.5.0
+* Added feature customer cannot place an order from blacklisted email.
+
+2019-10-15 - version 2.4.0
+* Added option to send score notification via email to multiple emails.
+* Added option for first order check for processing order.
+* fixed proxy detect issue.
+* fixed international order issue.
+* Fixed score calculations Issue when risk score more then 100.
+* Fixed Geo location issue.
+
+2019-08-20 - version 2.3.0
+* New Feature Added — User can update verification email content.
+* Added option HTML br tag for message formating.
+
+2019-08-05 - version 2.2.0
+* Fix international order issue
+
+2019-06-18 - version 2.1.0
+* Fix Proxy Check issue
+
+2019-05-29 - version 2.0.0
+* Major release that adds many new features.
+* Add Rule Weight.
+* Add Rule enable & disabled check.
+* Add Email blacklist.
+* Add Paypal Address Verification
+
+2019-04-30 - version 1.0.20
+* Fix - ipstack Api upgrade.
+
+2019-04-17 - version 1.0.19
+* Fix - further adjustment to On Hold issue with Cheque payments.
+
+2019-03-04 - version 1.0.18
+* Fix - Bug Order status changes from On Hold to Processing after the fraud check completes on Cheque payment.
+
+2018-11-14 - version 1.0.17
+* Fix - Bug causing all orders to be set to On Hold.
+
+2018-09-25 - version 1.0.16
+* Fix    - Manually created orders should be set to `Processing` status after fraud check.
+* Fix    - Usage of deprecated Geo IP API.
+* Fix    - Only compare billing and shipping details if there is a shipping address set.
+* Update - WC 3.5 compatibility.
+
+2018-05-23 - version 1.0.15
+* Update - Privacy policy notification.
+* Update - Export/erasure hooks added.
+* Update - WC 3.4 compatibility.
+
+2017-12-12 - version 1.0.14
+* Update - WC tested up to version.
+
+2017-12-05 - version 1.0.13
+* Fix - Disabling email notification had no affect.
+* Fix - On-hold and Cancelled were incorrectly set.
+
+2017-07-05 - version 1.0.12
+* Fix - Blank order sreen when order completed.
+
+2017-06-13 - version 1.0.11
+* Fix - Order status should not change to processing for cancelled orders.
+
+2017-06-01 - version 1.0.10
+* Fix - Additional updates for WC 3.0 compatibility.
+
+2017-05-31 - version 1.0.9
+* Fix - Rules not being triggered.
+* Fix - Additional updates for WC 3.0 compatibility.
+
+2017-04-03 - version 1.0.8
+* Fix - Update for WC 3.0 compatibility.
+
+2016-11-24 - version 1.0.7
+* Fix - When scores become negative number, cancel and on-hold is not disabled.
+* Fix - Ensure get ip address is checking for proxies.
+
+2016-10-28 - version 1.0.6
+* Fix - Use order number instead of id as 3rd party plugins adds their own filters.
+
+2016-07-21 - version 1.0.5
+* Fix - Setting 0 to disable order status change was not working.
+
+2016-03-31 - version 1.0.4
+* Fix - Help text specification should be equal to or greater than
+
+2015-08-18 - version 1.0.3
+* Remove order status tweaking since it was causing twice completed.
+
+2015-07-31 - version 1.0.2
+* Replaced call to deprecated get_billing_address with get_formatted_billing_address
+* Replaced call to deprecated get_shipping_address with get_formatted_shipping_address
+* Fixed fatal error when viewing orders in wp-admin with proxy rule violations
+* Use order IP, not server IP, when comparing orders for same ip, multiple details rule
+* Replaced call to deprecated get_billing_address with get_formatted_billing_address
+* Replaced call to deprecated get_shipping_address with get_formatted_shipping_address
+* Fixed fatal error when generating fraud notification emails for WC 2.3+
+
+2014-10-14 - version 1.0.1
+* Registered waiting post status in wc_order_statuses.
+
+2014-09-11 - version 1.0.0
+* First Release

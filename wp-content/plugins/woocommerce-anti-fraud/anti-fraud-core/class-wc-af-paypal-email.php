@@ -1,0 +1,212 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+} // Exit if accessed directly
+
+/**
+ * Class WC_AF_Paypal_Email
+ */
+class WC_AF_Paypal_Email extends WC_Email {
+
+	/**
+	 * Array containing all Report Rows
+	 *
+	 * @var array<WC_SRE_Report_Row>
+	 */
+	private $rows = array();
+
+	/**
+	 * Function construct().
+	 */
+	public function __construct( $order, $score ) {
+		// WC_Email basic properties.
+		$this->id          = 'anti_fraud_paypal_verification';
+		$this->title       = __( 'Anti Fraud - PayPal verification', 'woocommerce-anti-fraud' );
+		$this->description = __( 'Notice about PayPal verification.', 'woocommerce-anti-fraud' );
+
+		$this->order = $order;
+		$this->order_id = version_compare( WC_VERSION, '3.0', '<' ) ? $order->id : $order->get_id();
+
+		$this->score = $score;
+		$this->email_template = get_option( 'wc_settings_anti_fraud_paypal_email_format' );
+		$this->verification_url = site_url() . '/?order_id=' . base64_encode( $this->order_id ) . '&paypal_verification=true';
+		parent::__construct();
+
+	}
+
+	/**
+	 * Initialize the class via this init method instead of the constructor to enhance performance.
+	 *
+	 * @since  1.0.0
+	 */
+	private function init() {
+
+		// Subject & heading.
+		$this->subject = get_option( 'wc_settings_anti_fraud_paypal_email_subject' );
+		$this->heading = __( 'PayPal Verification notification of order #{order_id}', 'woocommerce-anti-fraud' );
+
+		// Set the template base path.
+		$this->template_base = plugin_dir_path( WooCommerce_Anti_Fraud::get_plugin_file() ) . 'templates/';
+
+		// Set the templates.
+		$this->template_html  = 'af-paypal-notice.php';
+		$this->template_plain = 'plain/af-paypal-notice.php';
+
+		// Find & Replace vars.
+		$this->find['order-id']    = '{order_id}';
+		$this->replace['order-id'] = $this->order->get_order_number();
+
+	}
+
+	/**
+	 * This method is triggered on WP Cron.
+	 *
+	 * @since  1.0.0
+	 */
+	public function send_notification() {
+
+		if ( ! $this->order || ! is_a( $this->order, 'WC_Order' ) || ! $this->order_id ) {
+			if ( class_exists( 'Af_Logger' ) ) {
+				Af_Logger::debug( 'WC_AF_Paypal_Email::send_notification: invalid order, skipping.' );
+			}
+			return false;
+		}
+
+		// All checks are done, initialize the object.
+		$this->init();
+
+		$order_id       = $this->order_id;
+		$payment_method = opmc_hpos_get_post_meta( $order_id, '_payment_method', true );
+		// Set recipients.
+		if ( 'ppec_paypal' == $payment_method ) {
+
+			$this->recipient = opmc_hpos_get_post_meta( $order_id, '_paypal_express_payer_email', true );
+
+		} else {
+
+			$this->recipient = opmc_hpos_get_post_meta( $order_id, '_paypal_payer_email', true );
+		}
+
+		// Add the 'woocommerce_locate_template' filter so we can load our plugin template file.
+		add_filter( 'woocommerce_locate_template', array( $this, 'load_plugin_template' ), 10, 3 );
+
+		// Add email header and footer.
+		if ( ! has_action( 'woocommerce_email_header' ) ) {
+			add_action( 'woocommerce_email_header', array( $this, 'email_header' ) );
+			add_action( 'woocommerce_email_footer', array( $this, 'email_footer' ) );
+		}
+
+		// Send the emails when verification is enabled and status meta has been initialised.
+		if ( get_option( 'wc_af_paypal_verification' ) == 'yes' && $this->order->meta_exists( 'wc_af_paypal_email_status' ) ) {
+			$this->send( $this->get_recipient(), $this->get_subject(), $this->get_content(), $this->get_headers(), $this->get_attachments() );
+		}
+		opmc_hpos_update_post_meta( $order_id, 'wc_af_paypal_email_status', true );
+		// Remove the woocommerce_locate_template filter.
+		remove_filter( 'woocommerce_locate_template', array( $this, 'load_plugin_templates' ), 10 );
+
+		// Remove the header and footer actions.
+		remove_action( 'woocommerce_email_header', array( $this, 'email_header' ) );
+		remove_action( 'woocommerce_email_footer', array( $this, 'email_footer' ) );
+
+	}
+
+	/**
+	 * Load template files of this plugin
+	 *
+	 * @param String $template
+	 * @param String $template_name
+	 * @param String $template_path
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return String
+	 */
+	public function load_plugin_template( $template, $template_name, $template_path ) {
+
+		if ( 'af-paypal-notice.php' == $template_name || 'plain/af-paypal-notice.php' == $template_name ) {
+			$template = $template_path . $template_name;
+		}
+
+		return $template;
+	}
+
+	/**
+	 * Get the email header.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @param mixed $email_heading heading for the email
+	 *
+	 * @return void
+	 */
+	public function email_header( $email_heading ) {
+		wc_get_template( 'emails/email-header.php', array( 'email_heading' => $email_heading ) );
+	}
+
+	/**
+	 * Get the email footer.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return void
+	 */
+	public function email_footer() {
+		wc_get_template( 'emails/email-footer.php' );
+	}
+
+	/**
+	 * Get_content_html function.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return string
+	 */
+	public function get_content_html() {
+		ob_start();
+		$template_name = $this->template_html;
+		$plain_text    = false;
+		if ( 'text' == $this->email_template ) {
+			$template_name = $this->template_plain;
+			$plain_text    = true;
+		}
+		wc_get_template(
+			$template_name,
+			array(
+				'email_heading' => $this->get_heading(),
+				'order_id'      => $this->order->get_order_number(),
+				'score'         => $this->score,
+				'url'           => $this->verification_url,
+				'plain_text'    => $plain_text,
+			),
+			$this->template_base
+		);
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get_content_plain function.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return string
+	 */
+	public function get_content_plain() {
+		ob_start();
+		wc_get_template(
+			$this->template_plain,
+			array(
+				'email_heading' => $this->get_heading(),
+				'order_id'      => $this->order->get_order_number(),
+				'score'         => $this->score,
+				'url'           => $this->verification_url,
+				'plain_text'    => true,
+			),
+			$this->template_base
+		);
+
+		return ob_get_clean();
+	}
+
+}

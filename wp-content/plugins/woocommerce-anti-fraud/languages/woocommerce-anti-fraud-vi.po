@@ -1,0 +1,1523 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Anti Fraud 5.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-anti-fraud\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-06T15:02:46+05:30\n"
+"PO-Revision-Date: 2024-03-21 18:35+0530\n"
+"Language: vi\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: woocommerce-anti-fraud\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-anti-fraud.php
+msgid "WooCommerce Anti Fraud"
+msgstr "WooC Commerce chống gian lận"
+
+#. Plugin URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://woocommerce.com/products/woocommerce-anti-fraud/"
+msgstr "https://woocommerce.com/products/woocommerce-anti-fraud/"
+
+#. Description of the plugin
+#: woocommerce-anti-fraud.php
+msgid "Advanced fraud and card attack protection for WooCommerce, with risk scoring, rule-based controls, checkout protection, and tools to help merchants detect, prevent, and respond to suspicious activity."
+msgstr "Chấm điểm từng giao dịch của bạn, kiểm tra khả năng gian lận có thể xảy ra, sử dụng bộ quy tắc tính điểm nâng cao."
+
+#. Author of the plugin
+#: woocommerce-anti-fraud.php
+msgid "OPMC Australia Pty Ltd"
+msgstr "Công ty TNHH OPMC Úc"
+
+#. Author URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://opmc.biz/"
+msgstr "https://opmc.biz/"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:29
+msgid "Anti Fraud - Admin Notice"
+msgstr "Chống gian lận - Thông báo của quản trị viên"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:30
+msgid "Admin notification about an order."
+msgstr "Thông báo của quản trị viên về một đơn đặt hàng."
+
+#: anti-fraud-core/class-wc-af-admin-email.php:50
+#: anti-fraud-core/class-wc-af-admin-email.php:51
+msgid "Fraud notification for order #{order_id}"
+msgstr "Thông báo gian lận cho đơn hàng số{order_id}"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:349
+msgid "Antifraud paypal verification"
+msgstr "Xác minh paypal chống lừa đảo"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:354
+msgid "Check pending order fraud risk score"
+msgstr "Kiểm tra điểm rủi ro gian lận đơn đặt hàng đang chờ xử lý"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:388
+#: anti-fraud-core/class-wc-af-score-helper.php:490
+#: anti-fraud-core/class-wc-af-score-helper.php:624
+#: anti-fraud-core/class-wc-af-score-helper.php:626
+#: anti-fraud-core/class-wc-af-score-helper.php:629
+#: anti-fraud-core/class-wc-af-score-helper.php:672
+#: anti-fraud-core/class-wc-af-score-helper.php:674
+#: anti-fraud-core/class-wc-af-score-helper.php:677
+msgid "Fraud check done."
+msgstr "Kiểm tra gian lận được thực hiện."
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:19
+msgid "MaxMind Risk Score"
+msgstr "Điểm rủi ro MAXMIND"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Hide details"
+msgstr "Ẩn chi tiết"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Show fraud risk details"
+msgstr "Hiển thị chi tiết rủi ro gian lận"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:19
+msgid "Fraud Risk"
+msgstr "Nguy cơ gian lận"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:135
+msgid "This order is currently in queue for a fraud check."
+msgstr "Lệnh này hiện đang xếp hàng để kiểm tra gian lận."
+
+#: anti-fraud-core/class-wc-af-meta-box.php:136
+msgid "Cancel fraud check queue"
+msgstr "Hủy hàng kiểm tra gian lận"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:141
+msgid "Calculate Fraud Risk"
+msgstr "Tính toán rủi ro gian lận"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:25
+msgid "Anti Fraud - PayPal verification"
+msgstr "Chống gian lận - Xác minh PayPal"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:26
+msgid "Notice about PayPal verification."
+msgstr "Thông báo về Xác minh PayPal."
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:47
+msgid "PayPal Verification notification of order #{order_id}"
+msgstr "Thông báo xác minh PayPal của đơn hàng #{order_id}"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:28
+msgid "No fraud checking has been done on this order yet."
+msgstr "Chưa có kiểm tra gian lận nào được thực hiện theo đơn đặt hàng này."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:33
+#: anti-fraud-core/class-wc-af-settings.php:2006
+#: templates/dashboard.php:37
+#: templates/dashboard.php:210
+#: templates/dashboard.php:500
+msgid "Low Risk"
+msgstr "Nguy cơ thấp"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:43
+#: anti-fraud-core/class-wc-af-settings.php:2007
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "Medium Risk"
+msgstr "Rủi ro trung bình"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:47
+#: anti-fraud-core/class-wc-af-settings.php:2008
+#: templates/dashboard.php:39
+#: templates/dashboard.php:500
+msgid "High Risk"
+msgstr "Rủi ro cao"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:187
+#: anti-fraud-core/class-wc-af-score-helper.php:229
+#: woocommerce-anti-fraud.php:1280
+msgid "Order fraud checks skipped due to whitelisted email."
+msgstr "Kiểm tra gian lận đặt hàng bị bỏ qua do email bị danh sách trắng."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:197
+#: woocommerce-anti-fraud.php:1300
+msgid "Order fraud checks skipped due to whitelisted customer IPs."
+msgstr "Kiểm tra gian lận đặt hàng bị bỏ qua do IPS khách hàng trong danh sách trắng."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:210
+#: woocommerce-anti-fraud.php:1325
+msgid "Order fraud checks skipped due to whitelisted user role."
+msgstr "Kiểm tra gian lận đặt hàng bị bỏ qua do vai trò người dùng danh sách trắng."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:220
+#: woocommerce-anti-fraud.php:1347
+msgid "Order fraud checks skipped due to whitelisted payment method."
+msgstr "Kiểm tra gian lận đặt hàng bị bỏ qua do phương thức thanh toán danh sách trắng."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:239
+msgid "Order fraud checks skipped due to user verified from Trust Swiftly."
+msgstr "Kiểm tra gian lận đặt hàng bị bỏ qua do người dùng được xác minh từ niềm tin nhanh chóng."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:427
+msgid "User Email is Whitelisted."
+msgstr "Email người dùng được liệt kê trong danh sách trắng."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:491
+msgid "Payment method "
+msgstr "Phương thức thanh toán "
+
+#: anti-fraud-core/class-wc-af-score-helper.php:548
+msgid "Max order limit reched from same IP."
+msgstr "Giới hạn đơn hàng tối đa được sạc từ cùng một IP."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:588
+msgid "Max Order Limit between time reached."
+msgstr "Giới hạn đơn hàng tối đa giữa thời gian đạt được."
+
+#: anti-fraud-core/class-wc-af-settings.php:40
+#: includes/class-wc-af-privacy.php:11 woocommerce-anti-fraud.php:54
+#: woocommerce-anti-fraud.php:55
+msgid "Anti Fraud"
+msgstr "Chống gian lận"
+
+#: anti-fraud-core/class-wc-af-settings.php:90
+#: anti-fraud-core/class-wc-af-settings.php:1003
+#: anti-fraud-core/tamplate-admin-settings-page.php:15
+msgid "General Settings"
+msgstr "Cài đặt chung"
+
+#: anti-fraud-core/class-wc-af-settings.php:91
+msgid "Rules"
+msgstr "Quy tắc"
+
+#: anti-fraud-core/class-wc-af-settings.php:92
+msgid "Blacklist Settings"
+msgstr "Cài đặt danh sách đen"
+
+#: anti-fraud-core/class-wc-af-settings.php:93
+msgid "Email Alerts"
+msgstr "Thông báo qua email"
+
+#: anti-fraud-core/class-wc-af-settings.php:94
+#: anti-fraud-core/class-wc-af-settings.php:892
+msgid "Paypal Settings"
+msgstr "Cài đặt PayPal"
+
+#: anti-fraud-core/class-wc-af-settings.php:95
+msgid "MinFraud Settings"
+msgstr "Cài đặt Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:96
+msgid "MinFraud Insights Settings"
+msgstr "Cài đặt hiểu biết Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:97
+msgid "MinFraud Factors Settings"
+msgstr "Cài đặt yếu tố Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:98
+#: anti-fraud-core/class-wc-af-settings.php:229
+msgid "Trust Swiftly Settings"
+msgstr "Tin tưởng cài đặt nhanh chóng"
+
+#: anti-fraud-core/class-wc-af-settings.php:99
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: anti-fraud-core/class-wc-af-settings.php:100
+msgid "Need Support?"
+msgstr "Cần sự ủng hộ?"
+
+#: anti-fraud-core/class-wc-af-settings.php:231
+msgid "<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust Swiftly</a> is a paid, external service that uses AI to verify the identity and payment of a customer. By using <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust Swiftly</a> you can decrease fraud by automatically verifying their information and later use the data to win any dispute cases. To sign up for Trust Swiftly, click this link: <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trustswiftly.com</a><hr/>"
+msgstr "<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust Swiftly</a> là một dịch vụ bên ngoài có tính phí, sử dụng AI để xác minh danh tính và khoản thanh toán của một khách hàng. Bằng cách sử dụng <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Tin cậy nhanh chóng</a>, bạn có thể giảm gian lận bằng cách tự động xác minh thông tin của họ và sau đó sử dụng dữ liệu để thắng mọi vụ tranh chấp. Để đăng ký Trust Swiftly, hãy nhấp vào liên kết này: <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trustswiftly.com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:236
+msgid "Trust Swiftly Enable/Disable"
+msgstr "Tin tưởng nhanh chóng bật/tắt"
+
+#: anti-fraud-core/class-wc-af-settings.php:239
+msgid "Enable Trust Swiftly"
+msgstr "Kích hoạt niềm tin nhanh chóng"
+
+#: anti-fraud-core/class-wc-af-settings.php:244
+msgid "API Key"
+msgstr "Mã API"
+
+#: anti-fraud-core/class-wc-af-settings.php:253
+msgid "Base URL"
+msgstr "URL cơ sở"
+
+#: anti-fraud-core/class-wc-af-settings.php:256
+msgid "Enter in your Trust Swiftly site URL i.e https://example.trustswiftly.com"
+msgstr "Nhập URL trang web nhanh chóng của bạn I.E https://example.trustswiftly.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:262
+msgid "Verification Method"
+msgstr "Phương thức xác minh"
+
+#: anti-fraud-core/class-wc-af-settings.php:273
+msgid "Verification Template"
+msgstr "Mẫu xác minh"
+
+#: anti-fraud-core/class-wc-af-settings.php:278
+msgid "Select a verification method defined such as ID and Selfie. A Verification Template should be set on Trust Swiftly."
+msgstr "Chọn một phương thức xác minh được xác định như ID và selfie. Một mẫu xác minh nên được đặt trên niềm tin nhanh chóng."
+
+#: anti-fraud-core/class-wc-af-settings.php:284
+msgid "When To Verify"
+msgstr "Khi nào cần xác minh"
+
+#: anti-fraud-core/class-wc-af-settings.php:289
+msgid "Select when customers should verify their identity."
+msgstr "Chọn khi khách hàng nên xác minh danh tính của họ."
+
+#: anti-fraud-core/class-wc-af-settings.php:295
+msgid "Select Threshold Weight"
+msgstr "Chọn Trọng lượng ngưỡng"
+
+#: anti-fraud-core/class-wc-af-settings.php:300
+msgid "If the risk score exceed threshold value which is set here, then the customer needs to be verified with Trust Swiftly."
+msgstr "Nếu điểm rủi ro vượt quá giá trị ngưỡng được đặt ở đây, thì khách hàng cần được xác minh với niềm tin nhanh chóng."
+
+#: anti-fraud-core/class-wc-af-settings.php:325
+#: anti-fraud-core/class-wc-af-settings.php:446
+#: anti-fraud-core/class-wc-af-settings.php:519
+msgid "MaxMind minFraud Settings"
+msgstr "Cài đặt MaxMind Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:327
+#: anti-fraud-core/class-wc-af-settings.php:448
+#: anti-fraud-core/class-wc-af-settings.php:521
+msgid "<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind minFraud</a> is a paid, external service that uses machine learning to detect potential fraud transactions. By using <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >minFraud</a> you can potentially detect more fraudulent transactions.<br/>To sign up to MaxMind minFraud, click this link: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a><hr/>"
+msgstr "<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind minFraud</a> là một dịch vụ bên ngoài có tính phí, sử dụng công nghệ máy học để phát hiện các giao dịch gian lận tiềm ẩn. Bằng cách sử dụng <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >minFraud</a>, bạn có thể phát hiện nhiều giao dịch gian lận hơn.<br/>Để đăng ký MaxMind minFraud, hãy nhấp vào liên kết này: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a><hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:332
+#: anti-fraud-core/class-wc-af-settings.php:452
+#: anti-fraud-core/class-wc-af-settings.php:525
+#: anti-fraud-core/class-wc-af-settings.php:898
+msgid "Enable/Disable"
+msgstr "Cho phép vô hiệu hóa"
+
+#: anti-fraud-core/class-wc-af-settings.php:335
+msgid "Enable MaxMind minFraud Integration"
+msgstr "Bật tích hợp MaxMind Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:340
+msgid "Device Tracking"
+msgstr "Theo dõi thiết bị"
+
+#: anti-fraud-core/class-wc-af-settings.php:343
+msgid "Detect if a person uses the same device but changes proxies while they are placing multiple orders from your website"
+msgstr "Phát hiện nếu một người sử dụng cùng một thiết bị nhưng thay đổi proxy trong khi họ đang đặt nhiều đơn đặt hàng từ trang web của bạn"
+
+#: anti-fraud-core/class-wc-af-settings.php:349
+msgid "MaxMind Account ID"
+msgstr "ID tài khoản MaxMind"
+
+#: anti-fraud-core/class-wc-af-settings.php:351
+msgid "Enter your MaxMind account ID here.  If you don&apos;t have an account, please sign up at <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a>."
+msgstr "Nhập ID tài khoản MaxMind của bạn tại đây. Nếu bạn không có tài khoản, vui lòng đăng ký tại <a href=\"https://maxmind.pxf.io/qnvxgg\" target=\"_Blank\"> https://maxmind.com </a>."
+
+#: anti-fraud-core/class-wc-af-settings.php:356
+msgid "MaxMind License Key"
+msgstr "Khóa giấy phép MAXMIND"
+
+#: anti-fraud-core/class-wc-af-settings.php:358
+msgid "Enter the license key provided by MaxMind here."
+msgstr "Nhập khóa cấp phép được cung cấp bởi MaxMind tại đây."
+
+#: anti-fraud-core/class-wc-af-settings.php:364
+msgid "Does IP Address Match Location?"
+msgstr "Địa chỉ IP có vị trí khớp không?"
+
+#: anti-fraud-core/class-wc-af-settings.php:369
+msgid "Enable it to identify that customer's physical location matches the location provided by IP address."
+msgstr "Cho phép nó xác định vị trí thực tế của khách hàng phù hợp với vị trí được cung cấp bởi địa chỉ IP."
+
+#: anti-fraud-core/class-wc-af-settings.php:373
+#: anti-fraud-core/class-wc-af-settings.php:1398
+#: anti-fraud-core/class-wc-af-settings.php:1437
+#: anti-fraud-core/class-wc-af-settings.php:1469
+#: anti-fraud-core/class-wc-af-settings.php:1493
+#: anti-fraud-core/class-wc-af-settings.php:1515
+#: anti-fraud-core/class-wc-af-settings.php:1556
+#: anti-fraud-core/class-wc-af-settings.php:1606
+#: anti-fraud-core/class-wc-af-settings.php:1628
+#: anti-fraud-core/class-wc-af-settings.php:1675
+#: anti-fraud-core/class-wc-af-settings.php:1729
+#: anti-fraud-core/class-wc-af-settings.php:1764
+#: anti-fraud-core/class-wc-af-settings.php:1796
+msgid "Rule Weight"
+msgstr "Trọng lượng quy tắc"
+
+#: anti-fraud-core/class-wc-af-settings.php:392
+#: anti-fraud-core/class-wc-af-settings.php:465
+#: anti-fraud-core/class-wc-af-settings.php:538
+msgid "Threshold Settings"
+msgstr "Cài đặt ngưỡng"
+
+#: anti-fraud-core/class-wc-af-settings.php:399
+msgid "Threshold minFraud Risk Score"
+msgstr "Tỷ lệ điểm rủi ro Minfraud ngưỡng"
+
+#: anti-fraud-core/class-wc-af-settings.php:401
+#: anti-fraud-core/class-wc-af-settings.php:474
+#: anti-fraud-core/class-wc-af-settings.php:547
+msgid "If the risk score returned by the minFraud system exceeds this number, the transaction will be considered potentially fraudulent and will contribute to the overall fraud score calculation.  If the risk score from minFraud is lower than this threshold, it will not contribute to the overall fraud score."
+msgstr "Nếu điểm rủi ro được trả về bởi hệ thống Minfraud vượt quá con số này, giao dịch sẽ được coi là có khả năng lừa đảo và sẽ đóng góp cho tính toán điểm gian lận tổng thể. Nếu điểm rủi ro từ Minfraud thấp hơn ngưỡng này, nó sẽ không đóng góp vào điểm số gian lận tổng thể."
+
+#: anti-fraud-core/class-wc-af-settings.php:414
+msgid "minFraud Rule Weight"
+msgstr "Trọng lượng quy tắc Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:417
+#: anti-fraud-core/class-wc-af-settings.php:490
+#: anti-fraud-core/class-wc-af-settings.php:563
+msgid "If the minFraud risk score exceeds the threshold set above, this weight will be applied to the overall risk score.  By adjusting this, you can balance the minFraud value against the other rules-based calculations in the plugin."
+msgstr "Nếu điểm rủi ro Minfraud vượt quá ngưỡng được đặt ở trên, trọng lượng này sẽ được áp dụng cho điểm số rủi ro tổng thể. Bằng cách điều chỉnh điều này, bạn có thể cân bằng giá trị Minfraud so với các tính toán dựa trên quy tắc khác trong plugin."
+
+#: anti-fraud-core/class-wc-af-settings.php:455
+msgid "Enable MaxMind minFraud Insights Integration"
+msgstr "Kích hoạt tích hợp MaxMind Minfraud Insights"
+
+#: anti-fraud-core/class-wc-af-settings.php:472
+msgid "Threshold minFraud Insights Risk Score"
+msgstr "Ngưỡng Minfraud Insights Điểm rủi ro"
+
+#: anti-fraud-core/class-wc-af-settings.php:487
+msgid "minFraud Insights Rule Weight"
+msgstr "Minfraud Insights Quy tắc trọng lượng"
+
+#: anti-fraud-core/class-wc-af-settings.php:528
+msgid "Enable MaxMind minFraud Factors Integration"
+msgstr "Bật tích hợp các yếu tố MaxMind Minfraud"
+
+#: anti-fraud-core/class-wc-af-settings.php:545
+msgid "Threshold minFraud Factors Risk Score"
+msgstr "Ngưỡng các yếu tố minfraud điểm số rủi ro"
+
+#: anti-fraud-core/class-wc-af-settings.php:560
+msgid "minFraud Factors Rule Weight"
+msgstr "yếu tố minfraud trọng lượng quy tắc"
+
+#: anti-fraud-core/class-wc-af-settings.php:592
+msgid "Support for the Anti-Fraud Plugin"
+msgstr "Hỗ trợ cho plugin chống gian lận"
+
+#: anti-fraud-core/class-wc-af-settings.php:598
+msgid "Facing an Issue with the plugin?"
+msgstr "Đối mặt với một vấn đề với plugin?"
+
+#: anti-fraud-core/class-wc-af-settings.php:599
+msgid "Contact Our Support"
+msgstr "Liên hệ với sự hỗ trợ của chúng tôi"
+
+#: anti-fraud-core/class-wc-af-settings.php:601
+msgid "If you have any issues or feedback about Anti-Fraud plugin, we would love to here from you!"
+msgstr "Nếu bạn có bất kỳ vấn đề hoặc phản hồi nào về plugin chống gian lận, chúng tôi rất thích ở đây từ bạn!"
+
+#: anti-fraud-core/class-wc-af-settings.php:607
+msgid "Love our Plugin?"
+msgstr "Yêu plugin của chúng tôi?"
+
+#: anti-fraud-core/class-wc-af-settings.php:609
+msgid "Leave Us a Review!"
+msgstr "Để lại cho chúng tôi một đánh giá!"
+
+#: anti-fraud-core/class-wc-af-settings.php:611
+msgid "Your positive reviews are always encouraging!"
+msgstr "Đánh giá tích cực của bạn luôn luôn đáng khích lệ!"
+
+#: anti-fraud-core/class-wc-af-settings.php:635
+msgid "Google reCAPTCHA Settings"
+msgstr "Cài đặt Google Recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:637
+msgid ""
+"Click <a href=\"https://www.google.com/recaptcha/admin\" target=\"_blank\">here</a> to register.\n"
+"\t\t\t\t\t\t\t\tActivating reCAPTCHA will enable the service on your Checkout page, which is an effective means of reducing spam orders, particularly from velocity attacks ie. where spammers try multiple credit cards to test their validity.   If you continue to experience a high volume of spam orders after enabling this setting, please contact our Support team (<a href=\"mailto:support@opmc.biz\" target=\"_top\">support@opmc.biz</a>) .<hr/>"
+msgstr ""
+"\"Nhấp vào <a href=\"\"https://www.google.com/recaptcha/admin\"\" Target=\"\"_Blank\"\"> tại đây </a> để đăng ký.\n"
+"\t\t\t\t\t\t\t\tKích hoạt recaptcha sẽ cho phép dịch vụ trên trang thanh toán của bạn, đây là một phương tiện hiệu quả để giảm các đơn đặt hàng thư rác, đặc biệt là từ các cuộc tấn công vận tốc IE. Trường hợp những người gửi thư rác thử nhiều thẻ tín dụng để kiểm tra tính hợp lệ của chúng. Nếu bạn tiếp tục trải nghiệm khối lượng lớn các đơn đặt hàng spam sau khi bật cài đặt này, vui lòng liên hệ với nhóm hỗ trợ của chúng tôi ( ). <Hr/>\""
+
+#: anti-fraud-core/class-wc-af-settings.php:646
+msgid "Enable reCAPTCHA"
+msgstr "Bật recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:650
+msgid "Enable reCAPTCHA on checkout page<br/>"
+msgstr "Bật recaptcha trên trang thanh toán <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:655
+msgid "Enable v2 reCAPTCHA"
+msgstr "Bật v2 recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:659
+msgid "Enable v2 reCAPTCHA<br/>"
+msgstr "Bật v2 recaptcha <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:665
+msgid "Enable v3 reCAPTCHA"
+msgstr "Bật V3 Recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:669
+msgid "Enable v3 reCAPTCHA<br/>"
+msgstr "Bật v3 recaptcha <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:675
+msgid "v2 Site Key"
+msgstr "Khóa trang web V2"
+
+#: anti-fraud-core/class-wc-af-settings.php:678
+msgid "Enter v2 Site Key"
+msgstr "Nhập khóa trang V2"
+
+#: anti-fraud-core/class-wc-af-settings.php:684
+msgid "v2 Secret Key"
+msgstr "Khóa bí mật v2"
+
+#: anti-fraud-core/class-wc-af-settings.php:687
+msgid "Enter v2 Secret Key"
+msgstr "Nhập khóa bí mật v2"
+
+#: anti-fraud-core/class-wc-af-settings.php:693
+msgid "v3 Site Key"
+msgstr "Khóa trang web V3"
+
+#: anti-fraud-core/class-wc-af-settings.php:696
+msgid "Enter v3 Site Key"
+msgstr "Nhập khóa trang V3"
+
+#: anti-fraud-core/class-wc-af-settings.php:702
+msgid "v3 Secret Key"
+msgstr "Khóa bí mật v3"
+
+#: anti-fraud-core/class-wc-af-settings.php:705
+msgid "Enter v3 Secret Key"
+msgstr "Nhập khóa bí mật v3"
+
+#: anti-fraud-core/class-wc-af-settings.php:741
+msgid "Alerts"
+msgstr "Cảnh báo"
+
+#: anti-fraud-core/class-wc-af-settings.php:743
+msgid "Get alerts about suspected fraudulent activities <hr/>"
+msgstr "Nhận thông báo về các hoạt động gian lận bị nghi ngờ <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:747
+msgid "Activate Email Alerts for Admin"
+msgstr "Kích hoạt cảnh báo email cho quản trị viên"
+
+#: anti-fraud-core/class-wc-af-settings.php:752
+msgid "Enable to receive fraud alerts on admin email address when risk-score exceeds value set in Email Notification Score."
+msgstr "Cho phép nhận thông báo gian lận trên địa chỉ email của quản trị viên khi điểm số rủi ro vượt quá giá trị được đặt trong điểm thông báo email."
+
+#: anti-fraud-core/class-wc-af-settings.php:756
+msgid "Additional Address(es) to Notify"
+msgstr "Địa chỉ bổ sung để thông báo"
+
+#: anti-fraud-core/class-wc-af-settings.php:759
+msgid "Add additional email address(es) you want to be notified upon exceeding Risk-score. Press “Comma”, TAB or ENTER button for the next entry."
+msgstr "Thêm (ES) địa chỉ email bạn muốn được thông báo khi vượt quá điểm số rủi ro. Nhấn vào dấu phẩy, tab hoặc nút nhập cho mục tiếp theo."
+
+#: anti-fraud-core/class-wc-af-settings.php:766
+msgid "Email Notification Score"
+msgstr "Điểm thông báo email"
+
+#: anti-fraud-core/class-wc-af-settings.php:770
+msgid "Risk scores that meet or exceed this value will trigger email alerts to your specified email addresses."
+msgstr "Điểm số rủi ro đáp ứng hoặc vượt quá giá trị này sẽ kích hoạt thông báo email đến địa chỉ email được chỉ định của bạn."
+
+#: anti-fraud-core/class-wc-af-settings.php:795
+msgid "Blacklist"
+msgstr "Danh sách đen"
+
+#: anti-fraud-core/class-wc-af-settings.php:797
+msgid "WooCommerce Anti-Fraud allows you to create a list of email addresses as well as a list of IP addresses that will always be marked as potential fraud transactions."
+msgstr "WooC Commerce Anti-Fraud cho phép bạn tạo một danh sách các địa chỉ email cũng như danh sách các địa chỉ IP sẽ luôn được đánh dấu là các giao dịch gian lận tiềm năng."
+
+#: anti-fraud-core/class-wc-af-settings.php:802
+msgid "Email Blacklisting"
+msgstr "Gửi email cho danh sách đen"
+
+#: anti-fraud-core/class-wc-af-settings.php:812
+msgid "Email Blacklist"
+msgstr "Email Danh sách đen"
+
+#: anti-fraud-core/class-wc-af-settings.php:817
+msgid "Enable the email blacklist function to block emails captured by WooCommerce Anti-fraud rules."
+msgstr "Cho phép chức năng Danh sách đen email để chặn các email được ghi lại bởi các quy tắc chống gian lận của WooC Commerce."
+
+#: anti-fraud-core/class-wc-af-settings.php:822
+msgid "Automatic Blacklisting"
+msgstr "Danh sách đen tự động"
+
+#: anti-fraud-core/class-wc-af-settings.php:827
+msgid "Add email addresses of orders reported with a high risk of fraud to blacklist automatically."
+msgstr "Thêm địa chỉ email của các đơn đặt hàng được báo cáo với nguy cơ gian lận cao vào danh sách đen."
+
+#: anti-fraud-core/class-wc-af-settings.php:832
+msgid "Blocked Email Addresses"
+msgstr "Địa chỉ email bị chặn"
+
+#: anti-fraud-core/class-wc-af-settings.php:835
+msgid "The email addresses listed in the text area will be considered unsafe. You can also add or remove emails manually here. Type “,” or press TAB/ENTER button for the next entry. Please add emails in bulk separating them by either comma or space."
+msgstr "Các địa chỉ email được liệt kê trong khu vực văn bản sẽ được coi là không an toàn. Bạn cũng có thể thêm hoặc xóa email theo cách thủ công tại đây. Nhập nút, hoặc nhấn Tab/ENTER cho mục tiếp theo. Vui lòng thêm email với số lượng lớn phân tách chúng bằng dấu phẩy hoặc không gian."
+
+#: anti-fraud-core/class-wc-af-settings.php:843
+msgid "IP Blacklisting"
+msgstr "Danh sách đen IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:853
+msgid "IP Blacklist"
+msgstr "Danh sách đen IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:857
+msgid "Enable the IP blacklist function"
+msgstr "Bật hàm Danh sách đen IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:858
+msgid "Enable the IP blacklist function to block IP addresses with high risk of frauds."
+msgstr "Bật hàm Danh sách đen IP để chặn địa chỉ IP có nguy cơ gian lận cao."
+
+#: anti-fraud-core/class-wc-af-settings.php:863
+msgid "Blocked IP Addresses"
+msgstr "Địa chỉ IP bị chặn"
+
+#: anti-fraud-core/class-wc-af-settings.php:866
+msgid "The IP addresses listed in the text area will be considered unsafe.  You can also add or remove IP addresses manually here. Type “,” or press TAB/ENTER button for the next entry. Please add IPs in bulk separating them by either comma or space."
+msgstr "Các địa chỉ IP được liệt kê trong khu vực văn bản sẽ được coi là không an toàn. Bạn cũng có thể thêm hoặc xóa địa chỉ IP theo cách thủ công tại đây. Nhập nút, hoặc nhấn Tab/ENTER cho mục tiếp theo. Vui lòng thêm IP trong số lượng lớn phân tách chúng bằng dấu phẩy hoặc không gian."
+
+#: anti-fraud-core/class-wc-af-settings.php:894
+msgid "These settings are specific to Paypal Payment Gateway. This means, when the customer use their Paypal account for making payment for their orders, then these rules come into action.<hr/>"
+msgstr "Các cài đặt này dành riêng cho Cổng thanh toán Paypal. Điều này có nghĩa là khi khách hàng sử dụng tài khoản Paypal để thanh toán cho đơn hàng của mình thì các quy tắc này sẽ có hiệu lực.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:902
+msgid "Select to enable Paypal verification"
+msgstr "Chọn để cho phép xác minh PayPal"
+
+#: anti-fraud-core/class-wc-af-settings.php:907
+msgid "Block Downloads"
+msgstr "Khối tải xuống"
+
+#: anti-fraud-core/class-wc-af-settings.php:911
+msgid "Prevent digital downloads if verification failed or still processing"
+msgstr "Ngăn chặn tải xuống kỹ thuật số nếu xác minh không thành công hoặc vẫn xử lý"
+
+#: anti-fraud-core/class-wc-af-settings.php:916
+msgid "Verification Retry"
+msgstr "Xác minh thử lại"
+
+#: anti-fraud-core/class-wc-af-settings.php:918
+msgid "Number of days that have to pass before sending another email if the order is still waiting for verification"
+msgstr "Số ngày phải trôi qua trước khi gửi email khác nếu đơn hàng vẫn đang chờ xác minh"
+
+#: anti-fraud-core/class-wc-af-settings.php:929
+msgid "Auto Cancellation Days"
+msgstr "Ngày hủy tự động"
+
+#: anti-fraud-core/class-wc-af-settings.php:931
+msgid "Orders that are not verified within the given number of days will be automatically cancelled"
+msgstr "Đơn đặt hàng không được xác minh trong số ngày nhất định sẽ bị hủy tự động"
+
+#: anti-fraud-core/class-wc-af-settings.php:942
+msgid "Paypal verified addresses"
+msgstr "Địa chỉ xác minh PayPal"
+
+#: anti-fraud-core/class-wc-af-settings.php:944
+msgid "Verified email addresses"
+msgstr "Địa chỉ email được xác minh"
+
+#: anti-fraud-core/class-wc-af-settings.php:954
+msgid "Email Template"
+msgstr "Mẫu email"
+
+#: anti-fraud-core/class-wc-af-settings.php:956
+msgid "Configure the email template below. The following tags can be embedded in the template fields:<br/><br/><b>{site_title}</b> - replaced with the Wordpress Site Title<br/><b>{site_email}</b> - replaced with the Wordpress site admin email address"
+msgstr "Định cấu hình mẫu email bên dưới. Các thẻ sau có thể được nhúng trong các trường mẫu: <br/> <br/> <b> {site_title} </b> - được thay thế bằng tiêu đề trang web WordPress <br/> <b> {site_email} </b> - Thay thế bằng địa chỉ email của Quản trị viên WordPress"
+
+#: anti-fraud-core/class-wc-af-settings.php:962
+msgid "Email Type"
+msgstr "Loại email"
+
+#: anti-fraud-core/class-wc-af-settings.php:968
+msgid "Emails can be sent either as plain text or HTML"
+msgstr "Email có thể được gửi dưới dạng văn bản đơn giản hoặc HTML"
+
+#: anti-fraud-core/class-wc-af-settings.php:976
+msgid "The subject of the email that will be sent to the purchaser"
+msgstr "Chủ đề của email sẽ được gửi đến người mua"
+
+#: anti-fraud-core/class-wc-af-settings.php:979
+msgid "[{site_title}] Confirm your PayPal email address"
+msgstr "[{site_title}] xác nhận địa chỉ email PayPal của bạn"
+
+#: anti-fraud-core/class-wc-af-settings.php:983
+msgid "Email body"
+msgstr "Cơ quan email"
+
+#: anti-fraud-core/class-wc-af-settings.php:988
+msgid "Hi!We have received your order on {site_title}, but to complete we have to verify your PayPal email address.If you havent made or authorized any purchase, please, contact PayPal support service immediately,and email us to {site_email} for having your money back."
+msgstr "Xin chào! Chúng tôi đã nhận được đơn đặt hàng của bạn trên {site_title}, nhưng để hoàn tất, chúng tôi phải xác minh địa chỉ email PayPal của bạn. Nếu bạn chưa thực hiện hoặc ủy quyền bất kỳ giao dịch mua hàng nào, vui lòng liên hệ ngay với dịch vụ hỗ trợ PayPal và gửi email cho chúng tôi tới {site_email} để yêu cầu tiền của bạn trở lại."
+
+#: anti-fraud-core/class-wc-af-settings.php:1005
+msgid "General behaviours of the Anti Fraud plugin are configured on this page.<hr/>"
+msgstr "Hành vi chung của plugin chống gian lận được cấu hình trên trang này. <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1011
+msgid "Set Risk Thresholds"
+msgstr "Đặt ngưỡng rủi ro"
+
+#: anti-fraud-core/class-wc-af-settings.php:1013
+msgid "There are three risk thresholds.  Low, Medium and High.   In this section you can define where the boundary point between those thresholds.   The maximum risk score is 100, the minimum is 0.<br/>"
+msgstr "Có ba ngưỡng rủi ro. Thấp, trung bình và cao. Trong phần này, bạn có thể xác định vị trí điểm ranh giới giữa các ngưỡng đó. Điểm rủi ro tối đa là 100, tối thiểu là 0. <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1014
+msgid "There are three risk thresholds: Low, Medium and High. In this section, you can define where the boundary point between those thresholds. The maximum risk score is 100, the minimum is 0. Orders are considered Low, Medium, and High Risk Orders based on these values."
+msgstr "Có ba ngưỡng rủi ro: thấp, trung bình và cao. Trong phần này, bạn có thể xác định vị trí điểm ranh giới giữa các ngưỡng đó. Điểm rủi ro tối đa là 100, tối thiểu là 0. Các đơn đặt hàng được coi là đơn đặt hàng thấp, trung bình và cao dựa trên các giá trị này."
+
+#: anti-fraud-core/class-wc-af-settings.php:1020
+msgid "Medium Risk threshold"
+msgstr "Ngưỡng rủi ro trung bình"
+
+#: anti-fraud-core/class-wc-af-settings.php:1034
+msgid "High Risk threshold"
+msgstr "Ngưỡng rủi ro cao"
+
+#: anti-fraud-core/class-wc-af-settings.php:1048
+msgid "Enable debug logging"
+msgstr "Cho phép ghi nhật ký gỡ lỗi"
+
+#: anti-fraud-core/class-wc-af-settings.php:1060
+msgid "Pre-Purchase Assessment"
+msgstr "Đánh giá trước khi mua"
+
+#: anti-fraud-core/class-wc-af-settings.php:1069
+msgid "Pre-Payment Checking"
+msgstr "Kiểm tra trả trước"
+
+#: anti-fraud-core/class-wc-af-settings.php:1079
+msgid "Notification message for Blocked users"
+msgstr "Thông báo thông báo cho người dùng bị chặn"
+
+#: anti-fraud-core/class-wc-af-settings.php:1083
+#: woocommerce-anti-fraud.php:1362
+msgid "Website Administrator does not allow you to place this order. Please contact our support team. Sorry for any inconvenience."
+msgstr "Quản trị viên trang web không cho phép bạn đặt hàng này. Vui lòng liên hệ với nhóm hỗ trợ của chúng tôi. Xin lỗi đã làm phiền."
+
+#: anti-fraud-core/class-wc-af-settings.php:1085
+msgid "Adds a custom alert message for blocked users on Pre-Payment Check. This message will be shown to the user on the checkout page while they attempt to pay."
+msgstr "Thêm một thông báo cảnh báo tùy chỉnh cho người dùng bị chặn khi kiểm tra tiền thanh toán. Thông báo này sẽ được hiển thị cho người dùng trên trang thanh toán trong khi họ cố gắng trả tiền."
+
+#: anti-fraud-core/class-wc-af-settings.php:1095
+msgid "Change Order Status based on Risk Score"
+msgstr "Thay đổi trạng thái đặt hàng dựa trên điểm rủi ro"
+
+#: anti-fraud-core/class-wc-af-settings.php:1104
+msgid "Update Order Status based on Fraud Score"
+msgstr "Cập nhật trạng thái đặt hàng dựa trên điểm gian lận"
+
+#: anti-fraud-core/class-wc-af-settings.php:1109
+msgid "Enable to cancel and/or put orders on hold based on Risk Score."
+msgstr "Bật hủy và/hoặc đặt đơn đặt hàng dựa trên điểm rủi ro."
+
+#: anti-fraud-core/class-wc-af-settings.php:1113
+msgid "Weighting to Cancel Order"
+msgstr "Trọng số để hủy đơn hàng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1118
+msgid "Orders with a score equal to or greater than this value will be automatically cancelled. <br/> To disable it, slide the slider to the extreme left or Select 0."
+msgstr "Các đơn đặt hàng có điểm bằng hoặc lớn hơn giá trị này sẽ được tự động hủy. <br/> Để vô hiệu hóa nó, trượt thanh trượt sang bên trái hoặc chọn 0."
+
+#: anti-fraud-core/class-wc-af-settings.php:1124
+msgid "Weighting to put Order On-hold"
+msgstr "Trọng số để đặt hàng trên giữ"
+
+#: anti-fraud-core/class-wc-af-settings.php:1128
+msgid "Orders with a score equal to or greater than this number will be automatically set on hold. <br/> To disable it, slide the slider to the extreme left or Select 0."
+msgstr "Các đơn đặt hàng có điểm bằng hoặc lớn hơn số này sẽ được tự động đặt. <br/> Để vô hiệu hóa nó, trượt thanh trượt sang bên trái hoặc chọn 0."
+
+#: anti-fraud-core/class-wc-af-settings.php:1139
+msgid "Whitelist Payment Methods"
+msgstr "Phương thức thanh toán danh sách trắng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1148
+msgid "Enable Whitelisting of Payment Methods"
+msgstr "Bật danh sách trắng của các phương thức thanh toán"
+
+#: anti-fraud-core/class-wc-af-settings.php:1157
+msgid "Select Payment Methods to be Whitelisted"
+msgstr "Chọn Phương thức thanh toán được liệt kê trong danh sách trắng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1171
+msgid "User Roles Whitelisting"
+msgstr "Vai trò người dùng danh sách trắng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1180
+msgid "Enable Whitelisting of User Roles"
+msgstr "Bật danh sách trắng của vai trò người dùng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1189
+msgid "Select User Roles to be Whitelisted"
+msgstr "Chọn Vai trò của người dùng được liệt kê trong danh sách trắng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1195
+msgid "Select roles"
+msgstr "Chọn vai trò"
+
+#: anti-fraud-core/class-wc-af-settings.php:1204
+msgid "Whitelisted Emails"
+msgstr "Email trong danh sách trắng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1213
+msgid "Email Whitelist"
+msgstr "Danh sách trắng gửi email"
+
+#: anti-fraud-core/class-wc-af-settings.php:1230
+msgid "Whitelisted IPs"
+msgstr "IPS trong danh sách trắng"
+
+#: anti-fraud-core/class-wc-af-settings.php:1239
+msgid "IPs Whitelist"
+msgstr "Danh sách trắng IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:1257
+msgid "Auto Fraud Check For Existing Orders"
+msgstr "Kiểm tra gian lận tự động cho các đơn đặt hàng hiện có"
+
+#: anti-fraud-core/class-wc-af-settings.php:1266
+msgid "Enable Auto Fraud Check"
+msgstr "Bật kiểm tra gian lận tự động"
+
+#: anti-fraud-core/class-wc-af-settings.php:1276
+msgid "No Of Days For Historical Orders Checks"
+msgstr "Không có ngày nào để kiểm tra đơn đặt hàng lịch sử"
+
+#: anti-fraud-core/class-wc-af-settings.php:1298
+msgid "Enable Debug Logging"
+msgstr "Cho phép ghi nhật ký gỡ lỗi"
+
+#: anti-fraud-core/class-wc-af-settings.php:1307
+msgid "Enable Debug Log"
+msgstr "Bật nhật ký gỡ lỗi"
+
+#: anti-fraud-core/class-wc-af-settings.php:1350
+#: anti-fraud-core/tamplate-admin-settings-page.php:401
+msgid "General Rules"
+msgstr "Quy tắc chung"
+
+#: anti-fraud-core/class-wc-af-settings.php:1352
+msgid "Each rule that is matched will add the configured &quot;Rule Weight&quot; value to the overall fraud score.  In this section you can configure general fraud detection rules.<hr/>"
+msgstr "Mỗi quy tắc được khớp sẽ thêm cấu hình &quot; trọng lượng quy tắc &quot; Giá trị cho điểm gian lận tổng thể. Trong phần này, bạn có thể định cấu hình các quy tắc phát hiện gian lận chung. <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1357
+msgid "First Time Purchase Rules"
+msgstr "Quy tắc mua hàng lần đầu tiên"
+
+#: anti-fraud-core/class-wc-af-settings.php:1359
+#: anti-fraud-core/class-wc-af-settings.php:1360
+msgid "Rule set for Buyers who are purchasing from your website for the first time."
+msgstr "Quy tắc đặt cho người mua lần đầu tiên mua từ trang web của bạn."
+
+#: anti-fraud-core/class-wc-af-settings.php:1367
+msgid "First Purchase on Website"
+msgstr "Mua đầu tiên trên trang web"
+
+#: anti-fraud-core/class-wc-af-settings.php:1372
+msgid "Enable it to identify customers purchasing from your website for the first time."
+msgstr "Cho phép nó xác định khách hàng mua từ trang web của bạn lần đầu tiên."
+
+#: anti-fraud-core/class-wc-af-settings.php:1376
+msgid "First Purchase Rule Weight"
+msgstr "Trọng lượng quy tắc mua đầu tiên"
+
+#: anti-fraud-core/class-wc-af-settings.php:1389
+msgid "Re-Check First Orders in Processing State?"
+msgstr "Kiểm tra lại các đơn đặt hàng đầu tiên trong trạng thái xử lý?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1394
+msgid "Enable it to perform first-order re-check on orders in processing state."
+msgstr "Cho phép nó thực hiện kiểm tra lại bậc nhất trên các đơn đặt hàng ở trạng thái xử lý."
+
+#: anti-fraud-core/class-wc-af-settings.php:1417
+msgid "IP, Billing and Shipping Address-based Rules"
+msgstr "IP, thanh toán và các quy tắc dựa trên địa chỉ"
+
+#: anti-fraud-core/class-wc-af-settings.php:1420
+msgid "Rules set for identifying fraudulent orders triggering risks based on IP, billing and shipping addresses."
+msgstr "Các quy tắc được đặt để xác định các đơn đặt hàng gian lận kích hoạt rủi ro dựa trên địa chỉ IP, thanh toán và vận chuyển."
+
+#: anti-fraud-core/class-wc-af-settings.php:1428
+msgid "Does Geo Location Match?"
+msgstr "Vị trí địa lý có khớp không?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1433
+msgid "Enable it to identify that customer's shipping/billing state matches the state provided by Geo Location."
+msgstr "Cho phép nó xác định rằng trạng thái vận chuyển/thanh toán của khách hàng phù hợp với tiểu bang được cung cấp bởi địa điểm địa lý."
+
+#: anti-fraud-core/class-wc-af-settings.php:1451
+msgid "API Key for bigdatacloud.com"
+msgstr "Khóa API cho BigDatacloud.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1453
+msgid "Don't have bigdatacloud.com account? <a href=\"https://www.bigdatacloud.com/\" target=\"_blank\">Signup here</a><br/>Get 50K requests per month for free. Upgrade for more."
+msgstr "Không có tài khoản BigDatacloud.com? <a href=\"https://www.bigdatacloud.com/\" target=\"_blank\"> Đăng ký tại đây </a> <br/> Nhận yêu cầu 50k mỗi tháng miễn phí. Nâng cấp để biết thêm."
+
+#: anti-fraud-core/class-wc-af-settings.php:1454
+msgid "You can use bigdatacloud.com to get accurate address via customer Lat and Long and its required to use geo location rule."
+msgstr "Bạn có thể sử dụng BigDatacloud.com để có được địa chỉ chính xác thông qua khách hàng LAT và Long và cần thiết để sử dụng quy tắc vị trí địa lý."
+
+#: anti-fraud-core/class-wc-af-settings.php:1460
+msgid "Are Billing and Shipping Addresses Same?"
+msgstr "Là thanh toán và địa chỉ vận chuyển giống nhau?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1465
+msgid "Enable to identify difference between billing and shipping addresses."
+msgstr "Cho phép xác định sự khác biệt giữa thanh toán và địa chỉ vận chuyển."
+
+#: anti-fraud-core/class-wc-af-settings.php:1482
+msgid "Enable Phone Number and Billing Country Check"
+msgstr "Bật số điện thoại và kiểm tra quốc gia thanh toán"
+
+#: anti-fraud-core/class-wc-af-settings.php:1487
+msgid "If you enable this rule, then it is highly recommended that you use a separate Phone Number Validation plugin to make sure your customers specify a correct international phone number format on the checkout page. Else, this rule will treat an invalid phone number as a risk."
+msgstr "Nếu bạn bật quy tắc này, thì rất khuyến khích bạn sử dụng plugin xác thực số điện thoại riêng để đảm bảo khách hàng của bạn chỉ định định dạng số điện thoại quốc tế chính xác trên trang thanh toán. Khác, quy tắc này sẽ coi một số điện thoại không hợp lệ là một rủi ro."
+
+#: anti-fraud-core/class-wc-af-settings.php:1496
+msgid "Weight of the single rule in the total calculation of risk."
+msgstr "Trọng lượng của quy tắc duy nhất trong tổng số tính toán rủi ro."
+
+#: anti-fraud-core/class-wc-af-settings.php:1506
+msgid "Is Customer behind Proxy or VPN?"
+msgstr "Khách hàng đằng sau proxy hay VPN?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1511
+msgid "Check if the customer is behind either a proxy or a VPN"
+msgstr "Kiểm tra xem khách hàng có đứng sau proxy hay VPN không"
+
+#: anti-fraud-core/class-wc-af-settings.php:1534
+msgid "Multiple Orders Attempts using Different Addresses from Same IP"
+msgstr "Nhiều lần thử đơn hàng bằng cách sử dụng các địa chỉ khác nhau từ cùng một IP"
+
+#: anti-fraud-core/class-wc-af-settings.php:1537
+msgid "Rule to check buyer is ordering products using different addresses from the same IP over a certain period from your store."
+msgstr "Quy tắc để kiểm tra người mua đang đặt hàng các sản phẩm bằng các địa chỉ khác nhau từ cùng một IP trong một khoảng thời gian nhất định từ cửa hàng của bạn."
+
+#: anti-fraud-core/class-wc-af-settings.php:1543
+msgid ""
+"Purchased from same IP but Different Customer Addresses?\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"Mua từ cùng một IP nhưng địa chỉ khách hàng khác nhau?\n"
+"\t\t\t\t\t\t\t"
+
+#: anti-fraud-core/class-wc-af-settings.php:1552
+msgid "Enable this rule to monitor if multiple orders with different billing or shipping addresses have originated from the same IP address. Make sure to set time span of checking."
+msgstr "Cho phép quy tắc này để giám sát nếu nhiều đơn đặt hàng có địa chỉ thanh toán hoặc vận chuyển khác nhau có nguồn gốc từ cùng một địa chỉ IP. Đảm bảo đặt khoảng thời gian kiểm tra."
+
+#: anti-fraud-core/class-wc-af-settings.php:1569
+msgid "Past Number of Days to Check "
+msgstr "Số ngày qua để kiểm tra "
+
+#: anti-fraud-core/class-wc-af-settings.php:1572
+msgid "The number of days in the past to check IP addresses and different physical addresses."
+msgstr "Số ngày trong quá khứ để kiểm tra địa chỉ IP và các địa chỉ vật lý khác nhau."
+
+#: anti-fraud-core/class-wc-af-settings.php:1588
+msgid "Origin Countries"
+msgstr "Các quốc gia xuất xứ"
+
+#: anti-fraud-core/class-wc-af-settings.php:1591
+msgid "International orders tend to have a higher fraud risk than orders that originate in your home country. Merchants often find that certain origin countries have a higher potential for fraud. These Rule sets help manage such risks."
+msgstr "Các đơn đặt hàng quốc tế có xu hướng có rủi ro gian lận cao hơn các đơn đặt hàng có nguồn gốc ở nước bạn. Các thương nhân thường thấy rằng một số quốc gia xuất xứ có tiềm năng gian lận cao hơn. Các bộ quy tắc này giúp quản lý rủi ro như vậy."
+
+#: anti-fraud-core/class-wc-af-settings.php:1597
+msgid "Is it International Order?"
+msgstr "Có phải là thứ tự quốc tế?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1602
+msgid "Enable to check if the order originates from outside of your store's home country."
+msgstr "Kích hoạt để kiểm tra xem đơn đặt hàng có bắt nguồn từ bên ngoài nước của cửa hàng của bạn không."
+
+#: anti-fraud-core/class-wc-af-settings.php:1619
+msgid "Is Order from High-Risk Country?"
+msgstr "Trật tự có phải từ quốc gia có nguy cơ cao không?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1624
+msgid "Enable it to check if orders originate from unsafe countries. Select unsafe countries from the list below."
+msgstr "Cho phép nó kiểm tra xem các đơn đặt hàng có bắt nguồn từ các quốc gia không an toàn không. Chọn các quốc gia không an toàn từ danh sách dưới đây."
+
+#: anti-fraud-core/class-wc-af-settings.php:1641
+msgid "Mark Unsafe Countries"
+msgstr "Đánh dấu các quốc gia không an toàn"
+
+#: anti-fraud-core/class-wc-af-settings.php:1657
+msgid "High-Risk Email Domains"
+msgstr "Miền email rủi ro cao"
+
+#: anti-fraud-core/class-wc-af-settings.php:1660
+msgid "Merchants often find that certain email domains have a higher potential for fraud. These Rule sets will help you manage High-Risk Email Domains.<br/>Identify High-Risk Domains by manually adding such email domains to High-Risk Domain section and/or using QuickEmailVerification.com API key to make this operation automatic."
+msgstr "Người bán thường nhận thấy rằng một số miền email nhất định có khả năng lừa đảo cao hơn. Các bộ quy tắc này sẽ giúp bạn quản lý Miền email có rủi ro cao.<br/>Xác định miền có rủi ro cao bằng cách thêm thủ công các miền email đó vào phần Miền có rủi ro cao và/hoặc sử dụng khóa API QuickEmailVerification.com để thực hiện thao tác này tự động."
+
+#: anti-fraud-core/class-wc-af-settings.php:1666
+msgid "Is Suspicious / High-Risk Email Domain?"
+msgstr "Miền email đáng ngờ / có nguy cơ cao có phải là không?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1671
+msgid "Enable it to check if customer's email address originates from any high-risk domain listed below and/or add API for “quickemailverification. com” for automatic checking"
+msgstr "Cho phép kiểm tra xem địa chỉ email của khách hàng có bắt nguồn từ bất kỳ miền có rủi ro cao nào được liệt kê bên dưới và/hoặc thêm API cho QuickeMailVerification hay không. com ”để kiểm tra tự động"
+
+#: anti-fraud-core/class-wc-af-settings.php:1688
+msgid "High-Risk Domains"
+msgstr "Miền có nguy cơ cao"
+
+#: anti-fraud-core/class-wc-af-settings.php:1698
+msgid "API Key for quickemailverification.com"
+msgstr "Khóa API cho QuickEmailverification.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:1700
+msgid "Don't have quickemailverification account? <a href=\"\">Signup here</a><br/>Verify 50 emails for free. Upgrade if you want more"
+msgstr "Không có tài khoản nhanh chóng? <a href=\"\"> Đăng ký tại đây </a> <br/> Xác minh 50 email miễn phí. Nâng cấp nếu bạn muốn nhiều hơn"
+
+#: anti-fraud-core/class-wc-af-settings.php:1701
+msgid "You can use quickemailverification.com to get more accurate results for false email domain-related checks. "
+msgstr "Bạn có thể sử dụng QuickEmailverification.com để có kết quả chính xác hơn cho các kiểm tra liên quan đến tên miền email sai. "
+
+#: anti-fraud-core/class-wc-af-settings.php:1711
+msgid "Order Amounts and Attempts"
+msgstr "Số tiền đặt hàng và các nỗ lực"
+
+#: anti-fraud-core/class-wc-af-settings.php:1714
+msgid "The rules in this section are triggered based on defined order amounts and by counting attempted orders. You can also limit orders within a certain time frame. Orders with unusually high values, or customers who make an excessive number of transactions in a short period are more likely to be fraudulent."
+msgstr "Các quy tắc trong phần này được kích hoạt dựa trên số tiền đặt hàng được xác định và bằng cách đếm các đơn đặt hàng đã cố gắng. Bạn cũng có thể giới hạn các đơn đặt hàng trong một khung thời gian nhất định. Các đơn đặt hàng có giá trị cao bất thường hoặc khách hàng thực hiện số lượng giao dịch quá mức trong một thời gian ngắn có nhiều khả năng bị lừa đảo."
+
+#: anti-fraud-core/class-wc-af-settings.php:1720
+msgid "Order Amount is Above Average?"
+msgstr "Số tiền đặt hàng là trên trung bình?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1725
+msgid "Check if order significantly exceeds the average order amount for your site. Set multiplier value to trigger this rule when order place is value times greater than an average order."
+msgstr "Kiểm tra nếu đơn hàng vượt quá đáng kể số tiền đặt hàng trung bình cho trang web của bạn. Đặt giá trị số nhân để kích hoạt quy tắc này khi vị trí đặt hàng là thời gian giá trị lớn hơn một thứ tự trung bình."
+
+#: anti-fraud-core/class-wc-af-settings.php:1742
+msgid "Average Multiplier"
+msgstr "Số nhân trung bình"
+
+#: anti-fraud-core/class-wc-af-settings.php:1745
+msgid "Enter the multiplier value to check amount over average transaction value that will trigger the rule (expressed as a multiplier). For example, if you want to limit orders that are 2 times greater than the average value of orders, set the multiplier value to 2."
+msgstr "Nhập giá trị nhân để kiểm tra số tiền qua giá trị giao dịch trung bình sẽ kích hoạt quy tắc (được biểu thị dưới dạng hệ số nhân). Ví dụ: nếu bạn muốn giới hạn các đơn đặt hàng lớn hơn 2 lần so với giá trị trung bình của các đơn đặt hàng, hãy đặt giá trị số nhân thành 2."
+
+#: anti-fraud-core/class-wc-af-settings.php:1755
+msgid "Order Exceeds Maximum Amount Limit?"
+msgstr "Đặt hàng vượt quá giới hạn số tiền tối đa?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1760
+msgid "Enable this rule to confirm that the total amount of the order does not exceed maximum configured amount below."
+msgstr "Kích hoạt quy tắc này để xác nhận rằng tổng số lượng đơn đặt hàng không vượt quá số tiền được cấu hình tối đa bên dưới."
+
+#: anti-fraud-core/class-wc-af-settings.php:1777
+msgid "Amount Limit ($)"
+msgstr "Giới hạn số tiền ($)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1780
+msgid "Enter the maximum amount of purchase accepted in your store."
+msgstr "Nhập số lượng mua tối đa được chấp nhận trong cửa hàng của bạn."
+
+#: anti-fraud-core/class-wc-af-settings.php:1787
+msgid "Too many order attempts?"
+msgstr "Quá nhiều nỗ lực đặt hàng?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1792
+msgid "Enabling this rule allows you to limit number of orders per user within the time span configured below."
+msgstr "Kích hoạt quy tắc này cho phép bạn giới hạn số lượng đơn đặt hàng trên mỗi người dùng trong khoảng thời gian được định cấu hình bên dưới."
+
+#: anti-fraud-core/class-wc-af-settings.php:1809
+msgid "Time Span to Check (hours)"
+msgstr "Khoảng thời gian để kiểm tra (giờ)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1812
+msgid "Enter number of hours you want to check "
+msgstr "Nhập số giờ bạn muốn kiểm tra "
+
+#: anti-fraud-core/class-wc-af-settings.php:1818
+msgid "Maximum Allowed Number of Orders in Time Span?"
+msgstr "Số lượng đơn đặt hàng tối đa được phép trong khoảng thời gian?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1821
+msgid "Enter a total number of orders that a buyer can make in the specified time span."
+msgstr "Nhập tổng số đơn đặt hàng mà người mua có thể thực hiện trong khoảng thời gian được chỉ định."
+
+#: anti-fraud-core/class-wc-af-settings.php:1832
+msgid "Limit Number of Orders between Time"
+msgstr "Giới hạn số lượng đơn đặt hàng giữa thời gian"
+
+#: anti-fraud-core/class-wc-af-settings.php:1837
+msgid "Enabling this rule limits the number of orders to be placed within a certain period of the day."
+msgstr "Cho phép quy tắc này giới hạn số lượng đơn đặt hàng được đặt trong một khoảng thời gian nhất định trong ngày."
+
+#: anti-fraud-core/class-wc-af-settings.php:1841
+msgid "Start Time "
+msgstr "Thời gian bắt đầu "
+
+#: anti-fraud-core/class-wc-af-settings.php:1844
+msgid "Needs to be as per server time. Check in woo general settings. Accordingly specify start time."
+msgstr "Cần phải theo thời gian của máy chủ. Kiểm tra các cài đặt chung của Woo. Theo đó chỉ định thời gian bắt đầu."
+
+#: anti-fraud-core/class-wc-af-settings.php:1850
+msgid "End Time "
+msgstr "Thời gian kết thúc "
+
+#: anti-fraud-core/class-wc-af-settings.php:1853
+msgid "Needs to be as per server time. Check in woo general settings. Accordingly specify end time."
+msgstr "Cần phải theo thời gian của máy chủ. Kiểm tra các cài đặt chung của Woo. Theo đó chỉ định thời gian cuối."
+
+#: anti-fraud-core/class-wc-af-settings.php:1859
+msgid "Maximum Allowed Number of Orders Between Time"
+msgstr "Số đơn hàng được phép tối đa giữa thời gian"
+
+#: anti-fraud-core/class-wc-af-settings.php:1862
+msgid "Enter maximum number of orders that can be placed during specified time span."
+msgstr "Nhập số lượng đơn đặt hàng tối đa có thể được đặt trong khoảng thời gian quy định."
+
+#: anti-fraud-core/class-wc-af-settings.php:2013 assets/js/app.js:227
+msgid "Low Risk Order"
+msgstr "Lệnh rủi ro thấp"
+
+#: anti-fraud-core/class-wc-af-settings.php:2015 assets/js/app.js:229
+msgid "Medium Risk Order"
+msgstr "Lệnh rủi ro trung bình"
+
+#: anti-fraud-core/class-wc-af-settings.php:2017 assets/js/app.js:231
+msgid "High Risk Order"
+msgstr "Lệnh rủi ro cao"
+
+#: anti-fraud-core/class-wc-af-settings.php:2019 assets/js/app.js:233
+msgid "Disabled"
+msgstr "Tàn tật"
+
+#: anti-fraud-core/class-wc-af-settings.php:2026
+msgid "No Importance"
+msgstr "Không quan trọng"
+
+#: anti-fraud-core/class-wc-af-settings.php:2027
+msgid "Moderate"
+msgstr "Vừa phải"
+
+#: anti-fraud-core/class-wc-af-settings.php:2028
+msgid "High Importance"
+msgstr "Tầm quan trọng cao"
+
+#: anti-fraud-core/class-wc-af-settings.php:2174
+msgid "Your Account Id or License Key could not be authenticated!!"
+msgstr "ID tài khoản hoặc khóa cấp phép của bạn không thể được xác thực !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2189
+msgid "Great, authenticated successfully!!"
+msgstr "Tuyệt vời, được xác thực thành công !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2332
+msgid "Your Quickemailverification API Key could not be authenticated!!"
+msgstr "Khóa API nhanh chóng của bạn không thể được xác thực !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2347
+msgid "Great, Quickemailverification authenticated successfully!!"
+msgstr "Tuyệt vời, QuickEmailverification được xác thực thành công !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2362
+msgid "Great, Quickemailverification authenticated successfully but you don't have enough credit to use this service."
+msgstr "Tuyệt vời, nhanh chóng được xác thực thành công nhưng bạn không có đủ tín dụng để sử dụng dịch vụ này."
+
+#: anti-fraud-core/class-wc-af-settings.php:2429
+msgid "Great, bigdatacloud authenticated successfully!"
+msgstr "Tuyệt vời, BigDatacloud được xác thực thành công!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2445 woocommerce-anti-fraud.php:397
+msgid "AntiFraud: Bigdatacloud credentials not authenticate or your quota limit has been exceeded!"
+msgstr "Antifraud: Thông tin BigDatacloud không xác thực hoặc giới hạn hạn ngạch của bạn đã bị vượt quá!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2536
+msgid "Your Trust Swiftly API Key could not be authenticated!!"
+msgstr "Khóa API tin cậy nhanh chóng của bạn không thể được xác thực !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2551
+msgid "Your Trust Swiftly Base URL could not be validated!!"
+msgstr "URL tin cậy của bạn nhanh chóng không thể được xác thực !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2566
+msgid "Great, Trust Swiftly authenticated successfully!!"
+msgstr "Tuyệt vời, tin tưởng nhanh chóng xác thực thành công !!"
+
+#: anti-fraud-core/class-wc-af-trust-swiftly.php:292
+msgid " Please get verified with Trust Swiftly, and then try again."
+msgstr " Vui lòng được xác minh với niềm tin nhanh chóng, và sau đó thử lại."
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:356
+msgid "Sr No"
+msgstr "Sr không"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:357
+#: templates/dashboard.php:362
+msgid "Name"
+msgstr "Tên"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:358
+msgid "Date"
+msgstr "Ngày"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:359
+msgid "Action"
+msgstr "Hoạt động"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:385
+msgid "Download"
+msgstr "Tải xuống"
+
+#. translators: %s: learn more link
+#: includes/class-wc-af-privacy.php:19
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. <a href=\"%s\" target=\"_blank\">Learn more about how this works, including what you may want to include in your privacy policy.</a>"
+msgstr "Bằng cách sử dụng tiện ích mở rộng này, bạn có thể lưu trữ dữ liệu cá nhân hoặc chia sẻ dữ liệu với một dịch vụ bên ngoài. <a href=\"%s\" target=\"_blank\">Tìm hiểu thêm về cách thức hoạt động của tính năng này, bao gồm cả những nội dung bạn có thể muốn đưa vào chính sách quyền riêng tư của mình.</a>"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/af-admin-notice.php:25
+msgid "An order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Đơn đặt hàng có ID #%1$s đã ghi được Điểm rủi ro là %2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-admin-notice.php:31 templates/plain/af-admin-notice.php:13
+#: templates/plain/af-paypal-notice.php:14
+msgid "%1$sClick here to view the order.%2$s."
+msgstr "%1$sNhấp vào đây để xem đơn hàng.%2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-paypal-notice.php:26
+msgid "%1$sClick here to verify the order.%2$s."
+msgstr "%1$sNhấp vào đây để xác minh đơn hàng.%2$s."
+
+#: templates/dashboard.php:189
+msgid "Anti Fraud Dashboard"
+msgstr "Bảng điều khiển chống gian lận"
+
+#: templates/dashboard.php:199
+msgid "Orders Detected"
+msgstr "Đơn đặt hàng được phát hiện"
+
+#: templates/dashboard.php:217
+msgid "Needs Attention"
+msgstr "Cần chú ý"
+
+#: templates/dashboard.php:230
+msgid "Recent Order Data"
+msgstr "Dữ liệu đặt hàng gần đây"
+
+#: templates/dashboard.php:244
+msgid "Last 24 Hours Update"
+msgstr "Cập nhật 24 giờ qua"
+
+#: templates/dashboard.php:250
+msgid "Total Transaction Amount"
+msgstr "Tổng số tiền giao dịch"
+
+#: templates/dashboard.php:262
+msgid "Total Number of Orders"
+msgstr "Tổng số đơn đặt hàng"
+
+#: templates/dashboard.php:274
+msgid "Medium Risk Orders"
+msgstr "Đơn đặt hàng rủi ro trung bình"
+
+#: templates/dashboard.php:286
+msgid "High-Risk Orders on Hold"
+msgstr "Đơn đặt hàng có nguy cơ cao bị giữ"
+
+#: templates/dashboard.php:298
+msgid "Fraudulent Orders Cancelled"
+msgstr "Đơn đặt hàng gian lận bị hủy bỏ"
+
+#: templates/dashboard.php:310
+msgid "High-Risk Net Transaction"
+msgstr "Giao dịch ròng rủi ro cao"
+
+#: templates/dashboard.php:322
+msgid "Emails Blocked"
+msgstr "Email bị chặn"
+
+#: templates/dashboard.php:334
+msgid "Paypal Verification"
+msgstr "Xác minh PayPal"
+
+#: templates/dashboard.php:364
+msgid "Spent"
+msgstr "Đã tiêu"
+
+#: templates/dashboard.php:366
+msgid "Status"
+msgstr "Trạng thái"
+
+#: templates/dashboard.php:460
+msgid "Orders Breakdown"
+msgstr "Đơn đặt hàng phá vỡ"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/plain/af-admin-notice.php:11
+msgid "Hi there. Order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Chào bạn. Đơn đặt hàng có ID #%1$s đã ghi được Điểm rủi ro là %2$s."
+
+#: woocommerce-anti-fraud.php:109
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: woocommerce-anti-fraud.php:110
+msgid "Docs"
+msgstr "Tài liệu"
+
+#: woocommerce-anti-fraud.php:935
+msgid "This email id is blocked."
+msgstr "ID email này bị chặn."
+
+#: woocommerce-anti-fraud.php:952
+msgid "This IP Address is blocked."
+msgstr "Địa chỉ IP này bị chặn."
+
+#. translators: %s: order time span
+#: woocommerce-anti-fraud.php:1247
+msgid "You have reached maximum number of allowed orders in %d hours. Please try again later."
+msgstr "Bạn đã đạt được số lượng tối đa các đơn đặt hàng được phép trong %d giờ. Vui lòng thử lại sau."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:1877
+msgid "Please consider enabling reCaptcha in the Anti Fraud plugin %1$ssettings%2$s to help prevent Velocity attacks."
+msgstr "Vui lòng xem xét bật reCaptcha trong plugin Chống gian lận %1$ssettings%2$s để giúp ngăn chặn các cuộc tấn công Velocity."
+
+#: woocommerce-anti-fraud.php:2223
+msgid "This email id is blocked"
+msgstr "ID email này bị chặn"
+
+#: woocommerce-anti-fraud.php:2225
+msgid "Unblock"
+msgstr "Mở khóa"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:2261
+msgid "Please install and activate %1$sWooCommerce%2$s in order for the WooCommerce Anti Fraud extension to work!"
+msgstr "Vui lòng cài đặt và kích hoạt %1$sWooCommerce%2$s để tiện ích mở rộng Chống gian lận WooC Commerce hoạt động!"
+
+#: woocommerce-anti-fraud.php:2447 woocommerce-anti-fraud.php:2878
+msgid "Invalid recaptcha."
+msgstr "Recaptcha không hợp lệ."
+
+#: woocommerce-anti-fraud.php:2452
+msgid "You are not a human, please refresh page."
+msgstr "Bạn không phải là một con người, xin vui lòng làm mới trang."
+
+#: woocommerce-anti-fraud.php:2461
+msgid "Could not get response from recaptcha server, please refresh page."
+msgstr "Không thể nhận được phản hồi từ máy chủ recaptcha, vui lòng làm mới trang."
+
+#: woocommerce-anti-fraud.php:2464
+msgid "Recaptcha not responding, please refresh page."
+msgstr "Recaptcha không trả lời, xin vui lòng làm mới trang."
+
+#: woocommerce-anti-fraud.php:2481
+msgid "PayPal Verification Done."
+msgstr "Xác minh PayPal được thực hiện."
+
+#: woocommerce-anti-fraud.php:2772
+msgid "Captcha"
+msgstr "mã ngẫu nhiên"
+
+#: woocommerce-anti-fraud.php:2793 woocommerce-anti-fraud.php:2892
+msgid "Recaptcha is a required field."
+msgstr "Recaptcha là một lĩnh vực bắt buộc."
+
+#: woocommerce-anti-fraud.php:2888
+msgid "Could not get response from recaptcha server."
+msgstr "Không thể nhận được phản hồi từ máy chủ recaptcha."
+
+#: woocommerce-anti-fraud.php:2895
+msgid "Could not verify request."
+msgstr "Không thể xác minh yêu cầu."
+
+#: anti-fraud-core/class-wc-af-settings.php:1025
+msgid "The threshold between Low and Medium Risk Score. Move the left handle on slider or update the value in text field to set the boundary between Low and Medium-Risk orders. Risk Score less than this value is Low-Risk order and a greater value is the starting point of Medium Risk Orders."
+msgstr "Ngưỡng giữa Điểm Rủi ro Thấp và Trung bình. Di chuyển tay cầm bên trái trên thanh trượt hoặc cập nhật giá trị trong trường văn bản để đặt ranh giới giữa các lệnh Rủi ro Thấp và Trung bình. Điểm rủi ro nhỏ hơn giá trị này là lệnh Rủi ro thấp và giá trị lớn hơn là điểm bắt đầu của Lệnh rủi ro trung bình."
+
+#: anti-fraud-core/class-wc-af-settings.php:1037
+msgid "This is a threshold between Medium and High-Risk Score. Slide the right handle on slider or update the value in text field to set the boundary between Medium and High-Risk orders. Risk Score less than this value is the end point of Medium-Risk order and a greater value is High-Risk order."
+msgstr "Đây là ngưỡng giữa Điểm rủi ro trung bình và rủi ro cao. Trượt tay cầm bên phải trên thanh trượt hoặc cập nhật giá trị trong trường văn bản để đặt ranh giới giữa các lệnh Rủi ro Trung bình và Rủi ro Cao. Điểm Rủi ro nhỏ hơn giá trị này là điểm cuối của lệnh Rủi ro Trung bình và giá trị lớn hơn là lệnh Rủi ro Cao."
+
+#: anti-fraud-core/class-wc-af-settings.php:1063
+msgid "Evaluate customers before making the actual payment.  If the fraud score reaches a high-risk order range before making payment, the customer order will be denied in advance, and a custom message appears on the checkout page explaining buyer the reason for denial."
+msgstr "Đánh giá khách hàng trước khi thực hiện thanh toán thực tế. Nếu điểm gian lận đạt đến phạm vi đặt hàng có rủi ro cao trước khi thực hiện thanh toán, đơn đặt hàng của khách hàng sẽ bị từ chối trước và một thông báo tùy chỉnh sẽ xuất hiện trên trang thanh toán giải thích lý do từ chối cho người mua."
+
+#: anti-fraud-core/class-wc-af-settings.php:1074
+msgid "Enable pre-payment checking to assess fraud before making payment and block buyers with high fraud risk from placing any order and notify them via alert message."
+msgstr "Cho phép kiểm tra thanh toán trước để đánh giá gian lận trước khi thanh toán và chặn người mua có nguy cơ gian lận cao đặt bất kỳ đơn hàng nào và thông báo cho họ qua tin nhắn cảnh báo."
+
+#: anti-fraud-core/class-wc-af-settings.php:1098
+msgid "Updates order status to cancel and/or on-hold when order passes a certain Risk Score threshold."
+msgstr "Cập nhật trạng thái đơn hàng để hủy và/hoặc tạm dừng khi đơn hàng vượt qua ngưỡng Điểm Rủi ro nhất định."
+
+#: anti-fraud-core/class-wc-af-settings.php:1142
+msgid "Payments made via the whitelisted payment methods will bypass anti-fraud’s rule to change order status based on risk score."
+msgstr "Các khoản thanh toán được thực hiện thông qua các phương thức thanh toán được đưa vào danh sách cho phép sẽ bỏ qua quy tắc chống gian lận để thay đổi trạng thái đơn hàng dựa trên điểm rủi ro."
+
+#: anti-fraud-core/class-wc-af-settings.php:1152
+msgid "Enable to add payment methods to the whitelist."
+msgstr "Cho phép thêm phương thức thanh toán vào danh sách trắng."
+
+#: anti-fraud-core/class-wc-af-settings.php:1174
+msgid "Filter accounts with different user roles to bypass Anti-fraud scoring system."
+msgstr "Lọc các tài khoản có vai trò người dùng khác nhau để vượt qua hệ thống tính điểm Chống gian lận."
+
+#: anti-fraud-core/class-wc-af-settings.php:1184
+msgid "Enable it to activate whitelisting of User Roles."
+msgstr "Kích hoạt nó để kích hoạt danh sách trắng các Vai trò của Người dùng."
+
+#: anti-fraud-core/class-wc-af-settings.php:1193
+msgid "Press “Ctrl” or “Command” key and click one or multiple user roles to whitelist. Scroll up/down to select and see more user roles if any."
+msgstr "Nhấn phím “Ctrl” hoặc “Command” và nhấp vào một hoặc nhiều vai trò người dùng để đưa vào danh sách trắng. Cuộn lên/xuống để chọn và xem thêm vai trò của người dùng nếu có."
+
+#: anti-fraud-core/class-wc-af-settings.php:1207
+msgid "List of Emails whitelitsted. Add emails manullay to make whitlist. Unblocked emails also added to this list."
+msgstr "Danh sách Email được đưa vào danh sách trắng. Thêm email manullay để tạo danh sách trắng. Các email không bị chặn cũng được thêm vào danh sách này."
+
+#: anti-fraud-core/class-wc-af-settings.php:1233
+msgid "List of IPs whitelitsted. Add IPs manullay to make whitlist. Unblocked IPs also added to this list."
+msgstr "Danh sách IP được đưa vào danh sách trắng. Thêm manullay IP để tạo danh sách trắng. IP không bị chặn cũng được thêm vào danh sách này."
+
+#: anti-fraud-core/class-wc-af-settings.php:1260
+msgid "In this section, customers can enable this setting to check fraud for a previous order, when the Anti Fraud plugin is not installed and an order was placed within 7 days old."
+msgstr "Trong phần này, khách hàng có thể bật cài đặt này để kiểm tra gian lận cho đơn hàng trước đó, khi plugin Chống gian lận chưa được cài đặt và đơn hàng được đặt trong vòng 7 ngày trước."
+
+#: anti-fraud-core/class-wc-af-settings.php:1270
+msgid "Enable it to check fraud for a previous order, that orders, when the Antifraud plugin was not installed."
+msgstr "Kích hoạt tính năng này để kiểm tra gian lận đối với đơn hàng trước đó, đơn hàng đó khi plugin Chống gian lận chưa được cài đặt."
+
+#: anti-fraud-core/class-wc-af-settings.php:1279
+msgid "The Merchant can enter the number of days for historical orders check. The default number of days is 7 days."
+msgstr "Người bán có thể nhập số ngày để kiểm tra lịch sử đơn hàng. Số ngày mặc định là 7 ngày."
+
+#: anti-fraud-core/class-wc-af-settings.php:1301
+msgid "In this section, customers can enable this setting to create log file and it can seen from WooCommerce >> Status >> Log."
+msgstr "Trong phần này, khách hàng có thể bật cài đặt này để tạo tệp nhật ký và có thể xem tệp này từ WooC Commerce >> Trạng thái >> Nhật ký."
+
+#: anti-fraud-core/class-wc-af-settings.php:1311
+msgid "Enable it to record the debugging data."
+msgstr "Cho phép nó ghi lại dữ liệu gỡ lỗi."
+
+#: anti-fraud-core/class-wc-af-settings.php:1644
+msgid "Press Ctrl or ⌘ key and select multiple countries that you think are unsafe for your area of service."
+msgstr "Nhấn phím Ctrl hoặc ⌘ và chọn nhiều quốc gia mà bạn cho rằng không an toàn đối với khu vực dịch vụ của mình."
+
+#: rules/class-wc-af-rule-billing-matches-shipping.php:18
+msgid "Billing address does not match shipping address"
+msgstr "Địa chỉ thanh toán không khớp với địa chỉ giao hàng"
+
+#: rules/class-wc-af-rule-billing-method.php:18
+msgid "Ordered from a risk billing_method"
+msgstr "Đặt hàng từ phương thức_thanh toán rủi ro"
+
+#: rules/class-wc-af-rule-billing-phone-matches-billing-country.php:17
+msgid "Billing phone number does not match with Billing country"
+msgstr "Số điện thoại thanh toán không khớp với quốc gia thanh toán"
+
+#: rules/class-wc-af-rule-country.php:18
+msgid "Ordered from a risk country"
+msgstr "Đặt hàng từ một quốc gia có nguy cơ"
+
+#: rules/class-wc-af-rule-detect-proxy.php:16
+msgid "Customer ordered from behind a proxy."
+msgstr "Khách hàng đặt hàng từ phía sau một proxy."
+
+#: rules/class-wc-af-rule-first-order-processing.php:17
+#: rules/class-wc-af-rule-first-order.php:16
+msgid "This is the customer's first order with this billing details."
+msgstr "Đây là đơn đặt hàng đầu tiên của khách hàng với chi tiết thanh toán này."
+
+#: rules/class-wc-af-rule-free-email.php:20
+msgid "Email is a known free email address."
+msgstr "Email là một địa chỉ email miễn phí được biết đến."
+
+#: rules/class-wc-af-rule-geo-location.php:19
+msgid "Customer order geo location mismatches billing/shipping address."
+msgstr "Vị trí địa lý đặt hàng của khách hàng không khớp với địa chỉ thanh toán/giao hàng."
+
+#: rules/class-wc-af-rule-high-amount.php:17
+msgid "Order exceeds maximum amount."
+msgstr "Đơn hàng vượt quá số lượng tối đa."
+
+#: rules/class-wc-af-rule-international-order.php:17
+msgid "Order is an international order."
+msgstr "Trật tự là trật tự quốc tế."
+
+#: rules/class-wc-af-rule-ip-location.php:19
+msgid "Customer IP address did not match given billing country."
+msgstr "Địa chỉ IP của khách hàng không khớp với quốc gia thanh toán cụ thể."
+
+#: rules/class-wc-af-rule-ip-multiple-order-details.php:20
+msgid "IP address ordered with multiple order details in the past "
+msgstr "Địa chỉ IP đã đặt hàng với nhiều chi tiết đơn hàng trong quá khứ"
+
+#: rules/class-wc-af-rule-minfraud-factors.php:18
+msgid "Score returned by Minfraud Factors exceeds the allowed value."
+msgstr "Điểm do Yếu tố gian lận trả về vượt quá giá trị cho phép."
+
+#: rules/class-wc-af-rule-minfraud-insights.php:18
+msgid "Score returned by Minfraud Insights exceeds the allowed value."
+msgstr "Điểm do Minfraud Insights trả về vượt quá giá trị cho phép."
+
+#: rules/class-wc-af-rule-minfraud.php:18
+msgid "Score returned by Minfraud exceeds the allowed value."
+msgstr "Điểm do Minfraud trả về vượt quá giá trị cho phép."
+
+#: rules/class-wc-af-rule-temporary-email.php:17
+msgid "Email address is from a high-risk domain."
+msgstr "Địa chỉ email đến từ một miền có nguy cơ cao."
+
+#: rules/class-wc-af-rule-velocities.php:20
+msgid "IP address ordered multiple orders in the last "
+msgstr "Địa chỉ IP đã đặt hàng nhiều đơn hàng trong lần cuối cùng "
+
+#: woocommerce-anti-fraud.php:2972
+msgid "Fraud Action"
+msgstr "Hành động lừa đảo"
+
+#: woocommerce-anti-fraud.php:2985 woocommerce-anti-fraud.php:3001
+msgid "Fraud Check"
+msgstr "Kiểm tra gian lận"
+
+#: assets/js/app.js:409
+msgid "Processing.."
+msgstr "Xử lý.."
+
+#: anti-fraud-core/class-wc-af-settings.php:985
+msgid "Enter the body of the email to be sent to the purchaser in the text area below:"
+msgstr "Nhập nội dung email sẽ gửi cho người mua vào vùng văn bản bên dưới:"
+
+#: anti-fraud-core/class-wc-af-settings.php:1161
+msgid "Press “Ctrl” or “Command” key and click multiple payment methods to whitelist and scroll down to select more payment methods"
+msgstr "Nhấn phím “Ctrl” hoặc “Command” và nhấp vào nhiều phương thức thanh toán để đưa vào danh sách trắng và cuộn xuống để chọn thêm phương thức thanh toán"
+
+#: anti-fraud-core/class-wc-af-settings.php:1216
+msgid "Enter any email you want to be whitelisted. Press “Tab” or “Comma” after entering any new email. Please add emails in bulk separating them by either comma or space."
+msgstr "Nhập bất kỳ email nào bạn muốn được đưa vào danh sách trắng. Nhấn “Tab” hoặc “Dấu phẩy” sau khi nhập bất kỳ email mới nào. Vui lòng thêm hàng loạt email, phân tách chúng bằng dấu phẩy hoặc dấu cách."
+
+#: anti-fraud-core/class-wc-af-settings.php:1242
+msgid "Enter any IPs you want to be whitelisted. Press “Tab” or “Comma” after entering any new IPs. Please add emails in bulk separating them by either comma or space."
+msgstr "Nhập bất kỳ IP nào bạn muốn đưa vào danh sách trắng. Nhấn “Tab” hoặc “Dấu phẩy” sau khi nhập bất kỳ IP mới nào. Vui lòng thêm hàng loạt email, phân tách chúng bằng dấu phẩy hoặc dấu cách."
+
+#: anti-fraud-core/class-wc-af-settings.php:1691
+msgid "Enter any email origin domains you consider to be high-risk. Press “Tab” or “Comma” after entering any new domain."
+msgstr "Nhập bất kỳ miền gốc email nào mà bạn cho là có rủi ro cao. Nhấn “Tab” hoặc “Dấu phẩy” sau khi nhập bất kỳ tên miền mới nào."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:339
+msgid "In order to continue %1$s\"Geo Location Match\"%2$s service, our provider Bigdatacloud now requires you to sign up and get the api key. To obtain an api key you can %3$sregister here%4$s."
+msgstr "Để tiếp tục dịch vụ %1$s\"Geo Location Match\"%2$s, nhà cung cấp Bigdatacloud của chúng tôi hiện yêu cầu bạn đăng ký và lấy khóa api. Để lấy khóa api, bạn có thể %3$sđăng ký tại đây%4$s."

@@ -1,0 +1,1519 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Anti Fraud 5.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-anti-fraud\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-06T15:02:46+05:30\n"
+"PO-Revision-Date: 2024-03-18 18:09+0530\n"
+"Language: hu\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: woocommerce-anti-fraud\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-anti-fraud.php
+msgid "WooCommerce Anti Fraud"
+msgstr "WooCommerce csalás elleni védelem"
+
+#. Plugin URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://woocommerce.com/products/woocommerce-anti-fraud/"
+msgstr "https://woocommerce.com/products/woocommerce-anti-fraud/"
+
+#. Description of the plugin
+#: woocommerce-anti-fraud.php
+msgid "Advanced fraud and card attack protection for WooCommerce, with risk scoring, rule-based controls, checkout protection, and tools to help merchants detect, prevent, and respond to suspicious activity."
+msgstr "Pontozza az egyes tranzakciókat, ellenőrizve az esetleges csalást, fejlett pontozási szabályok segítségével."
+
+#. Author of the plugin
+#: woocommerce-anti-fraud.php
+msgid "OPMC Australia Pty Ltd"
+msgstr "OPMC Australia Pty Ltd"
+
+#. Author URI of the plugin
+#: woocommerce-anti-fraud.php
+msgid "https://opmc.biz/"
+msgstr "https://opmc.biz/"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:29
+msgid "Anti Fraud - Admin Notice"
+msgstr "Csalás elleni küzdelem - Admin Notice"
+
+#: anti-fraud-core/class-wc-af-admin-email.php:30
+msgid "Admin notification about an order."
+msgstr "Admin értesítés egy rendelésről."
+
+#: anti-fraud-core/class-wc-af-admin-email.php:50
+#: anti-fraud-core/class-wc-af-admin-email.php:51
+msgid "Fraud notification for order #{order_id}"
+msgstr "Csalási értesítés a #{order_id} rendeléshez"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:349
+msgid "Antifraud paypal verification"
+msgstr "Csalás elleni paypal ellenőrzés"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:354
+msgid "Check pending order fraud risk score"
+msgstr "Ellenőrizze a függőben lévő megrendelések csalási kockázati pontszámát"
+
+#: anti-fraud-core/class-wc-af-hook-manager.php:388
+#: anti-fraud-core/class-wc-af-score-helper.php:490
+#: anti-fraud-core/class-wc-af-score-helper.php:624
+#: anti-fraud-core/class-wc-af-score-helper.php:626
+#: anti-fraud-core/class-wc-af-score-helper.php:629
+#: anti-fraud-core/class-wc-af-score-helper.php:672
+#: anti-fraud-core/class-wc-af-score-helper.php:674
+#: anti-fraud-core/class-wc-af-score-helper.php:677
+msgid "Fraud check done."
+msgstr "Csalásellenőrzés megtörtént."
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:19
+msgid "MaxMind Risk Score"
+msgstr "Maxmind kockázati pontszám"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Hide details"
+msgstr "Rejtett részletek"
+
+#: anti-fraud-core/class-wc-af-maxmind-meta-box.php:110
+#: anti-fraud-core/class-wc-af-meta-box.php:102
+msgid "Show fraud risk details"
+msgstr "Mutasd meg a csalás kockázatának részleteit"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:19
+msgid "Fraud Risk"
+msgstr "Csalás kockázata"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:135
+msgid "This order is currently in queue for a fraud check."
+msgstr "Ez a megrendelés jelenleg sorban van a csalás ellenőrzéséhez."
+
+#: anti-fraud-core/class-wc-af-meta-box.php:136
+msgid "Cancel fraud check queue"
+msgstr "Ha a csalás ellenőrzési sorát törölje, törölje"
+
+#: anti-fraud-core/class-wc-af-meta-box.php:141
+msgid "Calculate Fraud Risk"
+msgstr "Számítsa ki a csalás kockázatát"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:25
+msgid "Anti Fraud - PayPal verification"
+msgstr "Csalások elleni - PayPal ellenőrzés"
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:26
+msgid "Notice about PayPal verification."
+msgstr "Figyelem a PayPal ellenőrzéséről."
+
+#: anti-fraud-core/class-wc-af-paypal-email.php:47
+msgid "PayPal Verification notification of order #{order_id}"
+msgstr "PayPal ellenőrzési értesítése #{order_id}"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:28
+msgid "No fraud checking has been done on this order yet."
+msgstr "Még nem történt csalás ellenőrzése ezen a megrendelésen."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:33
+#: anti-fraud-core/class-wc-af-settings.php:2006
+#: templates/dashboard.php:37
+#: templates/dashboard.php:210
+#: templates/dashboard.php:500
+msgid "Low Risk"
+msgstr "Alacsony kockázatú"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:43
+#: anti-fraud-core/class-wc-af-settings.php:2007
+#: templates/dashboard.php:38
+#: templates/dashboard.php:216
+#: templates/dashboard.php:500
+msgid "Medium Risk"
+msgstr "Közepes kockázat"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:47
+#: anti-fraud-core/class-wc-af-settings.php:2008
+#: templates/dashboard.php:39
+#: templates/dashboard.php:500
+msgid "High Risk"
+msgstr "Nagy kockázat"
+
+#: anti-fraud-core/class-wc-af-score-helper.php:187
+#: anti-fraud-core/class-wc-af-score-helper.php:229
+#: woocommerce-anti-fraud.php:1280
+msgid "Order fraud checks skipped due to whitelisted email."
+msgstr "A megrendelési csalások ellenőrzése kihagyott a wisteries e -mail miatt."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:197
+#: woocommerce-anti-fraud.php:1300
+msgid "Order fraud checks skipped due to whitelisted customer IPs."
+msgstr "A megrendelési csalások ellenőrzése átugorott a wisteries vevői IP -k miatt."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:210
+#: woocommerce-anti-fraud.php:1325
+msgid "Order fraud checks skipped due to whitelisted user role."
+msgstr "A megrendelési csalások ellenőrzése kihagyott a hirdetett felhasználói szerep miatt."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:220
+#: woocommerce-anti-fraud.php:1347
+msgid "Order fraud checks skipped due to whitelisted payment method."
+msgstr "A megrendelési csalások ellenőrzése kihagyott a wisteristed fizetési módszer miatt."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:239
+msgid "Order fraud checks skipped due to user verified from Trust Swiftly."
+msgstr "A megrendelési csalások ellenőrzése átugorott, mivel a felhasználót gyorsan ellenőrizték a bizalomtól."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:427
+msgid "User Email is Whitelisted."
+msgstr "A felhasználói e -mailt a bisterezve van."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:491
+msgid "Payment method "
+msgstr "Fizetési mód "
+
+#: anti-fraud-core/class-wc-af-score-helper.php:548
+msgid "Max order limit reched from same IP."
+msgstr "A maximális rendelési limit ugyanabból az IP -ből származik."
+
+#: anti-fraud-core/class-wc-af-score-helper.php:588
+msgid "Max Order Limit between time reached."
+msgstr "A maximális rendelési határérték az elért idő között."
+
+#: anti-fraud-core/class-wc-af-settings.php:40
+#: includes/class-wc-af-privacy.php:11 woocommerce-anti-fraud.php:54
+#: woocommerce-anti-fraud.php:55
+msgid "Anti Fraud"
+msgstr "Csalás elleni"
+
+#: anti-fraud-core/class-wc-af-settings.php:90
+#: anti-fraud-core/class-wc-af-settings.php:1003
+#: anti-fraud-core/tamplate-admin-settings-page.php:15
+msgid "General Settings"
+msgstr "Általános beállítások"
+
+#: anti-fraud-core/class-wc-af-settings.php:91
+msgid "Rules"
+msgstr "Szabályok"
+
+#: anti-fraud-core/class-wc-af-settings.php:92
+msgid "Blacklist Settings"
+msgstr "Feketelisták beállításai"
+
+#: anti-fraud-core/class-wc-af-settings.php:93
+msgid "Email Alerts"
+msgstr "E -mail figyelmeztetések"
+
+#: anti-fraud-core/class-wc-af-settings.php:94
+#: anti-fraud-core/class-wc-af-settings.php:892
+msgid "Paypal Settings"
+msgstr "PayPal beállítások"
+
+#: anti-fraud-core/class-wc-af-settings.php:95
+msgid "MinFraud Settings"
+msgstr "MinFraud beállítások"
+
+#: anti-fraud-core/class-wc-af-settings.php:96
+msgid "MinFraud Insights Settings"
+msgstr "MinFraud Insights beállítások"
+
+#: anti-fraud-core/class-wc-af-settings.php:97
+msgid "MinFraud Factors Settings"
+msgstr "MinFraud tényezők beállításai"
+
+#: anti-fraud-core/class-wc-af-settings.php:98
+#: anti-fraud-core/class-wc-af-settings.php:229
+msgid "Trust Swiftly Settings"
+msgstr "Bízzon a gyors beállításokba"
+
+#: anti-fraud-core/class-wc-af-settings.php:99
+msgid "reCAPTCHA"
+msgstr "recaptcha"
+
+#: anti-fraud-core/class-wc-af-settings.php:100
+msgid "Need Support?"
+msgstr "Szüksége van támogatásra?"
+
+#: anti-fraud-core/class-wc-af-settings.php:231
+msgid "<a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust Swiftly</a> is a paid, external service that uses AI to verify the identity and payment of a customer. By using <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\" >Trust Swiftly</a> you can decrease fraud by automatically verifying their information and later use the data to win any dispute cases. To sign up for Trust Swiftly, click this link: <a href=\"https://thrive.zohopublic.com/aref/G4734hGpxD/mBWuIqNh8\" target=\"_blank\">trustswiftly.com</a><hr/>"
+msgstr "<a href=\"https://thrive.zohopublic.com/aref/g4734hgpxd/mbwuiqnh8\" célzási=\"_blank\"> A bizalom gyorsan bizalma </a> Egy fizetett, külső szolgáltatás, amely az AI -t használja a személyazonosság és fizetések igazolására a vevő. A <a href=\"https://thrive.zohopublic.com/aref/g4734hgpxd/mbwuiqnh8\" célzási=\"_blank\"> bizalom gyorsan csökkentheti a csalásokat, ha automatikusan igazolja az információkat, és később felhasználja az adatokat, felhasználja az adatokat, felhasználja az adatokat. Nyerjen minden vita esetét. A gyors bizalomra való regisztrációhoz kattintson erre a linkre: <a href=\"https://thrive.zohopublic.com/aref/g4734hgpxd/mbwuiqnh8\" target=\"_blank\"> bizalomswiftly.com </a> <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:236
+msgid "Trust Swiftly Enable/Disable"
+msgstr "A bizalom gyorsan engedélyezze/tiltsa be"
+
+#: anti-fraud-core/class-wc-af-settings.php:239
+msgid "Enable Trust Swiftly"
+msgstr "A bizalom gyors engedélyezése gyorsan"
+
+#: anti-fraud-core/class-wc-af-settings.php:244
+msgid "API Key"
+msgstr "API kulcs"
+
+#: anti-fraud-core/class-wc-af-settings.php:253
+msgid "Base URL"
+msgstr "Bázis URL"
+
+#: anti-fraud-core/class-wc-af-settings.php:256
+msgid "Enter in your Trust Swiftly site URL i.e https://example.trustswiftly.com"
+msgstr "Írja be a bizalmát gyorsan a webhely URL -be, azaz https://example.trustswiftly.com"
+
+#: anti-fraud-core/class-wc-af-settings.php:262
+msgid "Verification Method"
+msgstr "Igazolási módszer"
+
+#: anti-fraud-core/class-wc-af-settings.php:273
+msgid "Verification Template"
+msgstr "Ellenőrző sablon"
+
+#: anti-fraud-core/class-wc-af-settings.php:278
+msgid "Select a verification method defined such as ID and Selfie. A Verification Template should be set on Trust Swiftly."
+msgstr "Válassza ki a meghatározott ellenőrzési módszert, mint például az azonosító és a szelfi. Az ellenőrző sablont gyorsan be kell állítani a bizalomra."
+
+#: anti-fraud-core/class-wc-af-settings.php:284
+msgid "When To Verify"
+msgstr "Mikor kell ellenőrizni"
+
+#: anti-fraud-core/class-wc-af-settings.php:289
+msgid "Select when customers should verify their identity."
+msgstr "Válassza ki, mikor kell az ügyfeleknek ellenőrizniük személyazonosságukat."
+
+#: anti-fraud-core/class-wc-af-settings.php:295
+msgid "Select Threshold Weight"
+msgstr "Válassza ki a küszöb súlyát"
+
+#: anti-fraud-core/class-wc-af-settings.php:300
+msgid "If the risk score exceed threshold value which is set here, then the customer needs to be verified with Trust Swiftly."
+msgstr "Ha a kockázati pontszám meghaladja a küszöbértéket, amelyet itt állítanak be, akkor az ügyfelet gyorsan kell igazolni."
+
+#: anti-fraud-core/class-wc-af-settings.php:325
+#: anti-fraud-core/class-wc-af-settings.php:446
+#: anti-fraud-core/class-wc-af-settings.php:519
+msgid "MaxMind minFraud Settings"
+msgstr "Maxmind MinFraud beállítások"
+
+#: anti-fraud-core/class-wc-af-settings.php:327
+#: anti-fraud-core/class-wc-af-settings.php:448
+#: anti-fraud-core/class-wc-af-settings.php:521
+msgid "<a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >MaxMind minFraud</a> is a paid, external service that uses machine learning to detect potential fraud transactions. By using <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\" >minFraud</a> you can potentially detect more fraudulent transactions.<br/>To sign up to MaxMind minFraud, click this link: <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a><hr/>"
+msgstr "<a href=\"https://maxmind.pxf.io/qnvxggugg\" target=\"_blank\"> Maxmind MinFraud </a> egy fizetett, külső szolgáltatás, amely gépi tanulást használ a lehetséges csalás tranzakciók észlelésére. A <a href=\"https://maxmind.pxf.io/qnvxggugg\" célzási=\"_blank\"> minfraud </a> felhasználásával potenciálisan több csalárd tranzakciót észlelhet. Ez a link: <a href=\"https://maxmind.pxf.io/qnvxgg\" target=\"_blank\"> https://maxmind.com </a> <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:332
+#: anti-fraud-core/class-wc-af-settings.php:452
+#: anti-fraud-core/class-wc-af-settings.php:525
+#: anti-fraud-core/class-wc-af-settings.php:898
+msgid "Enable/Disable"
+msgstr "Bekapcsolni kikapcsolni"
+
+#: anti-fraud-core/class-wc-af-settings.php:335
+msgid "Enable MaxMind minFraud Integration"
+msgstr "Engedélyezze a MaxMind MinFraud integrációját"
+
+#: anti-fraud-core/class-wc-af-settings.php:340
+msgid "Device Tracking"
+msgstr "Eszközkövetés"
+
+#: anti-fraud-core/class-wc-af-settings.php:343
+msgid "Detect if a person uses the same device but changes proxies while they are placing multiple orders from your website"
+msgstr "Észlelje, ha valaki ugyanazt az eszközt használja -e, de megváltoztatja a proxyt, miközben több megrendelést helyez el az Ön webhelyéről"
+
+#: anti-fraud-core/class-wc-af-settings.php:349
+msgid "MaxMind Account ID"
+msgstr "Maxmind fiók azonosítója"
+
+#: anti-fraud-core/class-wc-af-settings.php:351
+msgid "Enter your MaxMind account ID here.  If you don&apos;t have an account, please sign up at <a href=\"https://maxmind.pxf.io/qnvxGg\" target=\"_blank\">https://maxmind.com</a>."
+msgstr "Írja be a MaxMind fiók azonosítóját. Ha nem rendelkezik fiókkal, kérjük, jelentkezzen be a <a href=\"https://maxmind.pxf.io/qnvxgg\" célzási=\"_blank\"> https://maxmind.com </a> címen."
+
+#: anti-fraud-core/class-wc-af-settings.php:356
+msgid "MaxMind License Key"
+msgstr "Maxmind licenc kulcs"
+
+#: anti-fraud-core/class-wc-af-settings.php:358
+msgid "Enter the license key provided by MaxMind here."
+msgstr "Írja be a MaxMind által biztosított licencgombot."
+
+#: anti-fraud-core/class-wc-af-settings.php:364
+msgid "Does IP Address Match Location?"
+msgstr "Megfelel -e az IP -cím helye?"
+
+#: anti-fraud-core/class-wc-af-settings.php:369
+msgid "Enable it to identify that customer's physical location matches the location provided by IP address."
+msgstr "Engedélyezze, hogy azonosítsa, hogy az ügyfél fizikai helye megegyezik az IP -cím által biztosított helyével."
+
+#: anti-fraud-core/class-wc-af-settings.php:373
+#: anti-fraud-core/class-wc-af-settings.php:1398
+#: anti-fraud-core/class-wc-af-settings.php:1437
+#: anti-fraud-core/class-wc-af-settings.php:1469
+#: anti-fraud-core/class-wc-af-settings.php:1493
+#: anti-fraud-core/class-wc-af-settings.php:1515
+#: anti-fraud-core/class-wc-af-settings.php:1556
+#: anti-fraud-core/class-wc-af-settings.php:1606
+#: anti-fraud-core/class-wc-af-settings.php:1628
+#: anti-fraud-core/class-wc-af-settings.php:1675
+#: anti-fraud-core/class-wc-af-settings.php:1729
+#: anti-fraud-core/class-wc-af-settings.php:1764
+#: anti-fraud-core/class-wc-af-settings.php:1796
+msgid "Rule Weight"
+msgstr "Szabálytömeg"
+
+#: anti-fraud-core/class-wc-af-settings.php:392
+#: anti-fraud-core/class-wc-af-settings.php:465
+#: anti-fraud-core/class-wc-af-settings.php:538
+msgid "Threshold Settings"
+msgstr "Küszöb beállítások"
+
+#: anti-fraud-core/class-wc-af-settings.php:399
+msgid "Threshold minFraud Risk Score"
+msgstr "Küszöbérték MinFraud kockázati pontszám"
+
+#: anti-fraud-core/class-wc-af-settings.php:401
+#: anti-fraud-core/class-wc-af-settings.php:474
+#: anti-fraud-core/class-wc-af-settings.php:547
+msgid "If the risk score returned by the minFraud system exceeds this number, the transaction will be considered potentially fraudulent and will contribute to the overall fraud score calculation.  If the risk score from minFraud is lower than this threshold, it will not contribute to the overall fraud score."
+msgstr "Ha a MinFraud rendszer által visszaadott kockázati pontszám meghaladja ezt a számot, akkor a tranzakciót potenciálisan csalárdnak tekintik, és hozzájárul a csalás teljes számításához. Ha a MinFraud kockázati pontszáma alacsonyabb, mint ez a küszöb, akkor nem járul hozzá a teljes csalás pontszámához."
+
+#: anti-fraud-core/class-wc-af-settings.php:414
+msgid "minFraud Rule Weight"
+msgstr "MinFraud szabály súlya"
+
+#: anti-fraud-core/class-wc-af-settings.php:417
+#: anti-fraud-core/class-wc-af-settings.php:490
+#: anti-fraud-core/class-wc-af-settings.php:563
+msgid "If the minFraud risk score exceeds the threshold set above, this weight will be applied to the overall risk score.  By adjusting this, you can balance the minFraud value against the other rules-based calculations in the plugin."
+msgstr "Ha a MinFraud kockázati pontszáma meghaladja a fenti küszöbértéket, akkor ezt a súlyt a teljes kockázati pontszámra kell alkalmazni. Ennek kiigazításával kiegyensúlyozhatja a MinFraud értéket a plugin többi szabály-alapú számításával."
+
+#: anti-fraud-core/class-wc-af-settings.php:455
+msgid "Enable MaxMind minFraud Insights Integration"
+msgstr "Engedélyezze a MaxMind MinFraud Insights integrációját"
+
+#: anti-fraud-core/class-wc-af-settings.php:472
+msgid "Threshold minFraud Insights Risk Score"
+msgstr "Küszöbérték MinFraud betekintés kockázati pontszáma"
+
+#: anti-fraud-core/class-wc-af-settings.php:487
+msgid "minFraud Insights Rule Weight"
+msgstr "MinFraud betekintés szabályok súlya"
+
+#: anti-fraud-core/class-wc-af-settings.php:528
+msgid "Enable MaxMind minFraud Factors Integration"
+msgstr "Engedélyezze a MaxMind MinFraud Faktorok integrációját"
+
+#: anti-fraud-core/class-wc-af-settings.php:545
+msgid "Threshold minFraud Factors Risk Score"
+msgstr "Küszöb minFraud tényezők kockázati pontszáma"
+
+#: anti-fraud-core/class-wc-af-settings.php:560
+msgid "minFraud Factors Rule Weight"
+msgstr "MinFraud tényezők szabályozzák a súlyt"
+
+#: anti-fraud-core/class-wc-af-settings.php:592
+msgid "Support for the Anti-Fraud Plugin"
+msgstr "A csalás elleni plugin támogatása"
+
+#: anti-fraud-core/class-wc-af-settings.php:598
+msgid "Facing an Issue with the plugin?"
+msgstr "Szembesül egy problémával a pluginnal?"
+
+#: anti-fraud-core/class-wc-af-settings.php:599
+msgid "Contact Our Support"
+msgstr "Vegye fel a kapcsolatot a támogatásunkkal"
+
+#: anti-fraud-core/class-wc-af-settings.php:601
+msgid "If you have any issues or feedback about Anti-Fraud plugin, we would love to here from you!"
+msgstr "Ha bármilyen problémája vagy visszajelzése van a csalás elleni bővítményről, szeretnénk itt tőled!"
+
+#: anti-fraud-core/class-wc-af-settings.php:607
+msgid "Love our Plugin?"
+msgstr "Szeretem a pluginunkat?"
+
+#: anti-fraud-core/class-wc-af-settings.php:609
+msgid "Leave Us a Review!"
+msgstr "Hagyjon nekünk egy áttekintést!"
+
+#: anti-fraud-core/class-wc-af-settings.php:611
+msgid "Your positive reviews are always encouraging!"
+msgstr "Pozitív véleményei mindig bátorítóak!"
+
+#: anti-fraud-core/class-wc-af-settings.php:635
+msgid "Google reCAPTCHA Settings"
+msgstr "Google Recaptcha beállítások"
+
+#: anti-fraud-core/class-wc-af-settings.php:637
+msgid ""
+"Click <a href=\"https://www.google.com/recaptcha/admin\" target=\"_blank\">here</a> to register.\n"
+"\t\t\t\t\t\t\t\tActivating reCAPTCHA will enable the service on your Checkout page, which is an effective means of reducing spam orders, particularly from velocity attacks ie. where spammers try multiple credit cards to test their validity.   If you continue to experience a high volume of spam orders after enabling this setting, please contact our Support team (<a href=\"mailto:support@opmc.biz\" target=\"_top\">support@opmc.biz</a>) .<hr/>"
+msgstr ""
+"\"Kattintson a <a href=\"\"https://www.google.com/recaptcha/admin\"\"clection=\"\"_blank\"\"> itt </a> regisztrációhoz.\n"
+"\t\t\t\t\t\t\t\tA Recaptcha aktiválása lehetővé teszi a szolgáltatást a pénztár oldalán, amely hatékony eszköz a spam -megrendelések csökkentésére, különösen a sebesség támadásokból, azaz. Ahol a spamelők több hitelkártyát próbálnak ki az érvényességük tesztelésére. Ha továbbra is nagy mennyiségű spam megrendelést tapasztal, miután engedélyezte ezt a beállítást, kérjük, vegye fel a kapcsolatot a támogatási csapatunkkal (<a href=\"\"mailto:support@opmc.biz\"\" célzási=\"\"_top\"\"> support@opmc.biz </a> ). <hr/>\""
+
+#: anti-fraud-core/class-wc-af-settings.php:646
+msgid "Enable reCAPTCHA"
+msgstr "Engedélyezze a Recaptcha -t"
+
+#: anti-fraud-core/class-wc-af-settings.php:650
+msgid "Enable reCAPTCHA on checkout page<br/>"
+msgstr "Engedélyezze a Recaptcha -t a pénztár oldalon <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:655
+msgid "Enable v2 reCAPTCHA"
+msgstr "Engedélyezze a V2 Recaptcha -t"
+
+#: anti-fraud-core/class-wc-af-settings.php:659
+msgid "Enable v2 reCAPTCHA<br/>"
+msgstr "Engedélyezze a V2 Recaptcha <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:665
+msgid "Enable v3 reCAPTCHA"
+msgstr "Engedélyezze a V3 Recaptcha -t"
+
+#: anti-fraud-core/class-wc-af-settings.php:669
+msgid "Enable v3 reCAPTCHA<br/>"
+msgstr "Engedélyezze a V3 Recaptcha <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:675
+msgid "v2 Site Key"
+msgstr "v2 webhelykulcs"
+
+#: anti-fraud-core/class-wc-af-settings.php:678
+msgid "Enter v2 Site Key"
+msgstr "Írja be a V2 Site gombot"
+
+#: anti-fraud-core/class-wc-af-settings.php:684
+msgid "v2 Secret Key"
+msgstr "v2 titkos kulcs"
+
+#: anti-fraud-core/class-wc-af-settings.php:687
+msgid "Enter v2 Secret Key"
+msgstr "Írja be a V2 Secret gombot"
+
+#: anti-fraud-core/class-wc-af-settings.php:693
+msgid "v3 Site Key"
+msgstr "v3 webhelykulcs"
+
+#: anti-fraud-core/class-wc-af-settings.php:696
+msgid "Enter v3 Site Key"
+msgstr "Írja be a V3 Site gombot"
+
+#: anti-fraud-core/class-wc-af-settings.php:702
+msgid "v3 Secret Key"
+msgstr "v3 titkos kulcs"
+
+#: anti-fraud-core/class-wc-af-settings.php:705
+msgid "Enter v3 Secret Key"
+msgstr "Írja be a V3 Secret gombot"
+
+#: anti-fraud-core/class-wc-af-settings.php:741
+msgid "Alerts"
+msgstr "Riasztások"
+
+#: anti-fraud-core/class-wc-af-settings.php:743
+msgid "Get alerts about suspected fraudulent activities <hr/>"
+msgstr "Figyelmeztetéseket kapjon a gyanúsított csalárd tevékenységekről <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:747
+msgid "Activate Email Alerts for Admin"
+msgstr "Aktiválja az e -mail figyelmeztetéseket a rendszergazda számára"
+
+#: anti-fraud-core/class-wc-af-settings.php:752
+msgid "Enable to receive fraud alerts on admin email address when risk-score exceeds value set in Email Notification Score."
+msgstr "Engedélyezze a csalás riasztások fogadását az admin e-mail címen, ha a kockázat-pontszám meghaladja az e-mail értesítési pontszámban beállított értéket."
+
+#: anti-fraud-core/class-wc-af-settings.php:756
+msgid "Additional Address(es) to Notify"
+msgstr "Kiegészítő cím (ES) Az értesítéshez"
+
+#: anti-fraud-core/class-wc-af-settings.php:759
+msgid "Add additional email address(es) you want to be notified upon exceeding Risk-score. Press “Comma”, TAB or ENTER button for the next entry."
+msgstr "Adjon hozzá további e-mail címet (ES), amelyet értesíteni szeretne a kockázat-pontszám túllépésekor. A következő bejegyzéshez nyomja meg a „Vessző”, a fül vagy az Enter billentyűt."
+
+#: anti-fraud-core/class-wc-af-settings.php:766
+msgid "Email Notification Score"
+msgstr "E -mail értesítési pontszám"
+
+#: anti-fraud-core/class-wc-af-settings.php:770
+msgid "Risk scores that meet or exceed this value will trigger email alerts to your specified email addresses."
+msgstr "Az ezt az értéket megfelelõ vagy meghaladó kockázati pontszámok e -mail figyelmeztetéseket váltanak ki a megadott e -mail címekhez."
+
+#: anti-fraud-core/class-wc-af-settings.php:795
+msgid "Blacklist"
+msgstr "Feketelistán"
+
+#: anti-fraud-core/class-wc-af-settings.php:797
+msgid "WooCommerce Anti-Fraud allows you to create a list of email addresses as well as a list of IP addresses that will always be marked as potential fraud transactions."
+msgstr "A WooCommerce-csalás az e-mail címek listájának, valamint az IP-címek listájának létrehozását lehetővé teszi, amelyeket mindig potenciális csalás tranzakciókként jelölnek meg."
+
+#: anti-fraud-core/class-wc-af-settings.php:802
+msgid "Email Blacklisting"
+msgstr "E -mail feketelistán"
+
+#: anti-fraud-core/class-wc-af-settings.php:812
+msgid "Email Blacklist"
+msgstr "E -mailben a feketelistát"
+
+#: anti-fraud-core/class-wc-af-settings.php:817
+msgid "Enable the email blacklist function to block emails captured by WooCommerce Anti-fraud rules."
+msgstr "Engedélyezze, hogy az e-mail feketelisták funkció blokkolja a WooCommerce-csalás elleni szabályok által rögzített e-maileket."
+
+#: anti-fraud-core/class-wc-af-settings.php:822
+msgid "Automatic Blacklisting"
+msgstr "Automatikus feketelistán"
+
+#: anti-fraud-core/class-wc-af-settings.php:827
+msgid "Add email addresses of orders reported with a high risk of fraud to blacklist automatically."
+msgstr "Adjon hozzá e -mail címeket, amelyek beszámolnak a csalások magas kockázatával, hogy automatikusan a feketelistát."
+
+#: anti-fraud-core/class-wc-af-settings.php:832
+msgid "Blocked Email Addresses"
+msgstr "Blokkolt e -mail címek"
+
+#: anti-fraud-core/class-wc-af-settings.php:835
+msgid "The email addresses listed in the text area will be considered unsafe. You can also add or remove emails manually here. Type “,” or press TAB/ENTER button for the next entry. Please add emails in bulk separating them by either comma or space."
+msgstr "A szöveges területen felsorolt ​​e -mail címeket nem biztonságosnak tekintik. Az e -maileket itt is hozzáadhatja vagy eltávolíthatja. Írja be a „,” vagy nyomja meg a fül/Enter gombot a következő bejegyzéshez. Kérjük, adjon hozzá e -maileket ömlesztve, elválasztva őket vesszővel vagy téren."
+
+#: anti-fraud-core/class-wc-af-settings.php:843
+msgid "IP Blacklisting"
+msgstr "IP feketelistán"
+
+#: anti-fraud-core/class-wc-af-settings.php:853
+msgid "IP Blacklist"
+msgstr "IP feketelistán"
+
+#: anti-fraud-core/class-wc-af-settings.php:857
+msgid "Enable the IP blacklist function"
+msgstr "Engedélyezze az IP Blacklist funkciót"
+
+#: anti-fraud-core/class-wc-af-settings.php:858
+msgid "Enable the IP blacklist function to block IP addresses with high risk of frauds."
+msgstr "Engedélyezze, hogy az IP Blacklist funkció blokkolja az IP -címeket a csalások magas kockázatával."
+
+#: anti-fraud-core/class-wc-af-settings.php:863
+msgid "Blocked IP Addresses"
+msgstr "Blokkolt IP -címek"
+
+#: anti-fraud-core/class-wc-af-settings.php:866
+msgid "The IP addresses listed in the text area will be considered unsafe.  You can also add or remove IP addresses manually here. Type “,” or press TAB/ENTER button for the next entry. Please add IPs in bulk separating them by either comma or space."
+msgstr "A szöveges területen felsorolt ​​IP -címeket nem biztonságosnak tekintik. Az IP -címeket itt is hozzáadhatja vagy eltávolíthatja. Írja be a „,” vagy nyomja meg a fül/Enter gombot a következő bejegyzéshez. Kérjük, adjon hozzá IPS -t ömlesztve, elválasztva őket vesszővel vagy téren."
+
+#: anti-fraud-core/class-wc-af-settings.php:894
+msgid "These settings are specific to Paypal Payment Gateway. This means, when the customer use their Paypal account for making payment for their orders, then these rules come into action.<hr/>"
+msgstr "Ezek a beállítások a PayPal fizetési átjáróra vonatkoznak. Ez azt jelenti, hogy amikor az ügyfél használja a PayPal -számlájukat a megrendelések kifizetéséhez, akkor ezek a szabályok működnek. <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:902
+msgid "Select to enable Paypal verification"
+msgstr "Válassza ki a PayPal ellenőrzés engedélyezését"
+
+#: anti-fraud-core/class-wc-af-settings.php:907
+msgid "Block Downloads"
+msgstr "Blokk letöltések"
+
+#: anti-fraud-core/class-wc-af-settings.php:911
+msgid "Prevent digital downloads if verification failed or still processing"
+msgstr "Megakadályozzák a digitális letöltéseket, ha az ellenőrzés sikertelen vagy továbbra is feldolgozás"
+
+#: anti-fraud-core/class-wc-af-settings.php:916
+msgid "Verification Retry"
+msgstr "Ellenőrzés újragondolása"
+
+#: anti-fraud-core/class-wc-af-settings.php:918
+msgid "Number of days that have to pass before sending another email if the order is still waiting for verification"
+msgstr "Egy újabb e -mail elküldése előtt el kell mennie a napok száma, ha a megrendelés továbbra is ellenőrzésre vár"
+
+#: anti-fraud-core/class-wc-af-settings.php:929
+msgid "Auto Cancellation Days"
+msgstr "Automatikus lemondási napok"
+
+#: anti-fraud-core/class-wc-af-settings.php:931
+msgid "Orders that are not verified within the given number of days will be automatically cancelled"
+msgstr "Az adott napok számán belül nem ellenőrzött megrendeléseket automatikusan lemondják"
+
+#: anti-fraud-core/class-wc-af-settings.php:942
+msgid "Paypal verified addresses"
+msgstr "PayPal által ellenőrzött címek"
+
+#: anti-fraud-core/class-wc-af-settings.php:944
+msgid "Verified email addresses"
+msgstr "Ellenőrzött e -mail címek"
+
+#: anti-fraud-core/class-wc-af-settings.php:954
+msgid "Email Template"
+msgstr "E -mail sablon"
+
+#: anti-fraud-core/class-wc-af-settings.php:956
+msgid "Configure the email template below. The following tags can be embedded in the template fields:<br/><br/><b>{site_title}</b> - replaced with the Wordpress Site Title<br/><b>{site_email}</b> - replaced with the Wordpress site admin email address"
+msgstr "Konfigurálja az alábbi e -mail sablont. A következő címkék beágyazhatók a sablonmezőkbe: <br/> <br/> <b> {site_title} </b> - A WordPress webhely címével cserélve <br/> <b> {site_email} </b> - Cserélve a WordPress webhely adminisztrátori e -mail címével"
+
+#: anti-fraud-core/class-wc-af-settings.php:962
+msgid "Email Type"
+msgstr "E -mail típus"
+
+#: anti-fraud-core/class-wc-af-settings.php:968
+msgid "Emails can be sent either as plain text or HTML"
+msgstr "Az e -maileket egyszerű szövegként vagy HTML -ként lehet elküldeni"
+
+#: anti-fraud-core/class-wc-af-settings.php:976
+msgid "The subject of the email that will be sent to the purchaser"
+msgstr "Az e -mail témája, amelyet elküldik a vevőnek"
+
+#: anti-fraud-core/class-wc-af-settings.php:979
+msgid "[{site_title}] Confirm your PayPal email address"
+msgstr "[{site_title}] Erősítse meg a PayPal e -mail címét"
+
+#: anti-fraud-core/class-wc-af-settings.php:983
+msgid "Email body"
+msgstr "E -mail test"
+
+#: anti-fraud-core/class-wc-af-settings.php:988
+msgid "Hi!We have received your order on {site_title}, but to complete we have to verify your PayPal email address.If you havent made or authorized any purchase, please, contact PayPal support service immediately,and email us to {site_email} for having your money back."
+msgstr "Szia!Megkaptuk megrendelését a(z) {site_title} webhelyen, de a befejezéshez igazolnunk kell PayPal e-mail címét.Ha még nem vásárolt vagy engedélyezett vásárlást, kérjük, azonnal lépjen kapcsolatba a PayPal ügyfélszolgálatával, és küldjön e-mailt a {site_email} címre. vissza a pénzét."
+
+#: anti-fraud-core/class-wc-af-settings.php:1005
+msgid "General behaviours of the Anti Fraud plugin are configured on this page.<hr/>"
+msgstr "A csalás elleni plugin általános viselkedése ezen az oldalon van konfigurálva. <hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1011
+msgid "Set Risk Thresholds"
+msgstr "Állítsa be a kockázati küszöbértékeket"
+
+#: anti-fraud-core/class-wc-af-settings.php:1013
+msgid "There are three risk thresholds.  Low, Medium and High.   In this section you can define where the boundary point between those thresholds.   The maximum risk score is 100, the minimum is 0.<br/>"
+msgstr "Három kockázati küszöb van. Alacsony, közepes és magas. Ebben a szakaszban meghatározhatja, hogy a küszöbértékek között hol a határpont. A maximális kockázati pontszám 100, a minimum 0. <br/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1014
+msgid "There are three risk thresholds: Low, Medium and High. In this section, you can define where the boundary point between those thresholds. The maximum risk score is 100, the minimum is 0. Orders are considered Low, Medium, and High Risk Orders based on these values."
+msgstr "Három kockázati küszöb van: alacsony, közepes és magas. Ebben a szakaszban meghatározhatja, hogy a küszöbértékek közötti határpont hol. A maximális kockázati pontszám 100, a minimum 0. A megrendeléseket ezen értékek alapján alacsony, közepes és magas kockázati megrendelések tekintik."
+
+#: anti-fraud-core/class-wc-af-settings.php:1020
+msgid "Medium Risk threshold"
+msgstr "Közepes kockázatú küszöbérték"
+
+#: anti-fraud-core/class-wc-af-settings.php:1034
+msgid "High Risk threshold"
+msgstr "Magas kockázatú küszöbérték"
+
+#: anti-fraud-core/class-wc-af-settings.php:1048
+msgid "Enable debug logging"
+msgstr "Engedélyezze a hibakeresési naplózást"
+
+#: anti-fraud-core/class-wc-af-settings.php:1060
+msgid "Pre-Purchase Assessment"
+msgstr "Vásárlás előtti értékelés"
+
+#: anti-fraud-core/class-wc-af-settings.php:1069
+msgid "Pre-Payment Checking"
+msgstr "Fizetés előzetes ellenőrzése"
+
+#: anti-fraud-core/class-wc-af-settings.php:1079
+msgid "Notification message for Blocked users"
+msgstr "Értesítési üzenet a blokkolt felhasználók számára"
+
+#: anti-fraud-core/class-wc-af-settings.php:1083
+#: woocommerce-anti-fraud.php:1362
+msgid "Website Administrator does not allow you to place this order. Please contact our support team. Sorry for any inconvenience."
+msgstr "A weboldal adminisztrátora nem engedi, hogy ezt a megrendelést elhelyezze. Kérjük, vegye fel a kapcsolatot a támogató csapatunkkal. Elnézést a kellemetlenségért."
+
+#: anti-fraud-core/class-wc-af-settings.php:1085
+msgid "Adds a custom alert message for blocked users on Pre-Payment Check. This message will be shown to the user on the checkout page while they attempt to pay."
+msgstr "Egyéni riasztási üzenetet ad hozzá a blokkolt felhasználók számára az előfizetési ellenőrzés során. Ez az üzenet megjelenik a felhasználó számára a pénztár oldalán, miközben megpróbálnak fizetni."
+
+#: anti-fraud-core/class-wc-af-settings.php:1095
+msgid "Change Order Status based on Risk Score"
+msgstr "Változtassa meg a megrendelés állapotát a kockázati pontszám alapján"
+
+#: anti-fraud-core/class-wc-af-settings.php:1104
+msgid "Update Order Status based on Fraud Score"
+msgstr "Frissítse a megrendelés állapotát a csalás pontszáma alapján"
+
+#: anti-fraud-core/class-wc-af-settings.php:1109
+msgid "Enable to cancel and/or put orders on hold based on Risk Score."
+msgstr "Engedélyezze, hogy törölje és/vagy a megrendeléseket a kockázati pontszám alapján tartsa be."
+
+#: anti-fraud-core/class-wc-af-settings.php:1113
+msgid "Weighting to Cancel Order"
+msgstr "Súlyozás a megrendelés törléséhez"
+
+#: anti-fraud-core/class-wc-af-settings.php:1118
+msgid "Orders with a score equal to or greater than this value will be automatically cancelled. <br/> To disable it, slide the slider to the extreme left or Select 0."
+msgstr "A megrendelések, amelyek pontszáma megegyezik, vagy annál nagyobb, akkor automatikusan töröljük. <br/> A letiltáshoz csúsztassa a csúszkát a bal szélsőre, vagy válassza a 0 lehetőséget."
+
+#: anti-fraud-core/class-wc-af-settings.php:1124
+msgid "Weighting to put Order On-hold"
+msgstr "Súlyozás, hogy a megrendelést megőrizze"
+
+#: anti-fraud-core/class-wc-af-settings.php:1128
+msgid "Orders with a score equal to or greater than this number will be automatically set on hold. <br/> To disable it, slide the slider to the extreme left or Select 0."
+msgstr "Az e számnál nagyobb pontszámmal vagy nagyobb pontszámmal rendelkező megrendelések automatikusan a tartásba kerülnek. <br/> A letiltáshoz csúsztassa a csúszkát a bal szélsőre, vagy válassza a 0 lehetőséget."
+
+#: anti-fraud-core/class-wc-af-settings.php:1139
+msgid "Whitelist Payment Methods"
+msgstr "Teljetlista fizetési módszerek"
+
+#: anti-fraud-core/class-wc-af-settings.php:1148
+msgid "Enable Whitelisting of Payment Methods"
+msgstr "Engedélyezze a fizetési módszerek wallistálását"
+
+#: anti-fraud-core/class-wc-af-settings.php:1157
+msgid "Select Payment Methods to be Whitelisted"
+msgstr "Válassza ki a fizetési módszereket, hogy a wistristsishes legyen"
+
+#: anti-fraud-core/class-wc-af-settings.php:1171
+msgid "User Roles Whitelisting"
+msgstr "A felhasználói szerepek a wisteristing"
+
+#: anti-fraud-core/class-wc-af-settings.php:1180
+msgid "Enable Whitelisting of User Roles"
+msgstr "Engedélyezze a felhasználói szerepek wallisting -jét"
+
+#: anti-fraud-core/class-wc-af-settings.php:1189
+msgid "Select User Roles to be Whitelisted"
+msgstr "Válassza ki az engedélyezési listára felvenni kívánt felhasználói szerepköröket"
+
+#: anti-fraud-core/class-wc-af-settings.php:1195
+msgid "Select roles"
+msgstr "Válassza ki a szerepeket"
+
+#: anti-fraud-core/class-wc-af-settings.php:1204
+msgid "Whitelisted Emails"
+msgstr "Engedélyezett e-mailek"
+
+#: anti-fraud-core/class-wc-af-settings.php:1213
+msgid "Email Whitelist"
+msgstr "E-mail engedélyezési lista"
+
+#: anti-fraud-core/class-wc-af-settings.php:1230
+msgid "Whitelisted IPs"
+msgstr "Engedélyezett IP-címek"
+
+#: anti-fraud-core/class-wc-af-settings.php:1239
+msgid "IPs Whitelist"
+msgstr "IP-címek engedélyezési listája"
+
+#: anti-fraud-core/class-wc-af-settings.php:1257
+msgid "Auto Fraud Check For Existing Orders"
+msgstr "Automatikus csalás ellenőrzése a meglévő megrendeléseknél"
+
+#: anti-fraud-core/class-wc-af-settings.php:1266
+msgid "Enable Auto Fraud Check"
+msgstr "Engedélyezze az automatikus csalás ellenőrzését"
+
+#: anti-fraud-core/class-wc-af-settings.php:1276
+msgid "No Of Days For Historical Orders Checks"
+msgstr "A történelmi megrendelések ellenőrzésének napjai száma"
+
+#: anti-fraud-core/class-wc-af-settings.php:1298
+msgid "Enable Debug Logging"
+msgstr "Engedélyezze a hibakeresési naplózást"
+
+#: anti-fraud-core/class-wc-af-settings.php:1307
+msgid "Enable Debug Log"
+msgstr "Engedélyezze a hibakeresési naplót"
+
+#: anti-fraud-core/class-wc-af-settings.php:1350
+#: anti-fraud-core/tamplate-admin-settings-page.php:401
+msgid "General Rules"
+msgstr "Általános szabályok"
+
+#: anti-fraud-core/class-wc-af-settings.php:1352
+msgid "Each rule that is matched will add the configured &quot;Rule Weight&quot; value to the overall fraud score.  In this section you can configure general fraud detection rules.<hr/>"
+msgstr "Minden egyező szabály hozzáadja a konfigurált &quot;Szabály súlyát&quot; értéket az általános csalási pontszámhoz. Ebben a részben konfigurálhatja az általános csalásészlelési szabályokat.<hr/>"
+
+#: anti-fraud-core/class-wc-af-settings.php:1357
+msgid "First Time Purchase Rules"
+msgstr "Első vásárlási szabályok"
+
+#: anti-fraud-core/class-wc-af-settings.php:1359
+#: anti-fraud-core/class-wc-af-settings.php:1360
+msgid "Rule set for Buyers who are purchasing from your website for the first time."
+msgstr "Szabálykészlet azoknak a vásárlóknak, akik először vásárolnak webhelyéről."
+
+#: anti-fraud-core/class-wc-af-settings.php:1367
+msgid "First Purchase on Website"
+msgstr "Első vásárlási szabályok"
+
+#: anti-fraud-core/class-wc-af-settings.php:1372
+msgid "Enable it to identify customers purchasing from your website for the first time."
+msgstr "Szabálykészlet azoknak a vásárlóknak, akik először vásárolnak webhelyéről."
+
+#: anti-fraud-core/class-wc-af-settings.php:1376
+msgid "First Purchase Rule Weight"
+msgstr "Első vásárlási szabály súlya"
+
+#: anti-fraud-core/class-wc-af-settings.php:1389
+msgid "Re-Check First Orders in Processing State?"
+msgstr "Ellenőrizze újra az első megrendeléseket a feldolgozási állapotban?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1394
+msgid "Enable it to perform first-order re-check on orders in processing state."
+msgstr "Engedélyezze, hogy az elsőrendű újbóli ellenőrzést végezze a feldolgozási állapotban."
+
+#: anti-fraud-core/class-wc-af-settings.php:1417
+msgid "IP, Billing and Shipping Address-based Rules"
+msgstr "IP, számlázás és szállítási cím alapú szabályok"
+
+#: anti-fraud-core/class-wc-af-settings.php:1420
+msgid "Rules set for identifying fraudulent orders triggering risks based on IP, billing and shipping addresses."
+msgstr "Szabályok a csalárd megrendelések azonosítására, amelyek az IP, a számlázási és a szállítási címek alapján kockázatokkal járnak."
+
+#: anti-fraud-core/class-wc-af-settings.php:1428
+msgid "Does Geo Location Match?"
+msgstr "A GEO helymeghatározója megegyezik?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1433
+msgid "Enable it to identify that customer's shipping/billing state matches the state provided by Geo Location."
+msgstr "Engedélyezze, hogy azonosítsa, hogy az ügyfél szállítási/számlázási állama megegyezik a Geo Location által biztosított állammal."
+
+#: anti-fraud-core/class-wc-af-settings.php:1451
+msgid "API Key for bigdatacloud.com"
+msgstr "API kulcs a bigDatacloud.com webhelyhez"
+
+#: anti-fraud-core/class-wc-af-settings.php:1453
+msgid "Don't have bigdatacloud.com account? <a href=\"https://www.bigdatacloud.com/\" target=\"_blank\">Signup here</a><br/>Get 50K requests per month for free. Upgrade for more."
+msgstr "Nincs bigdatacloud.com fiókja? <a href=\"https://www.bigdatacloud.com/\" target=\"_blank\"> regisztráció itt </a> <br/> Havonta 50 ezer kérést kap. Frissítse a további információkat."
+
+#: anti-fraud-core/class-wc-af-settings.php:1454
+msgid "You can use bigdatacloud.com to get accurate address via customer Lat and Long and its required to use geo location rule."
+msgstr "A BigDataCloud.com segítségével pontos címet kaphat az ügyfél LAT és a Long oldalon keresztül, és a GEO helymeghatározási szabály használatához szükséges."
+
+#: anti-fraud-core/class-wc-af-settings.php:1460
+msgid "Are Billing and Shipping Addresses Same?"
+msgstr "A számlázási és szállítási címek megegyeznek?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1465
+msgid "Enable to identify difference between billing and shipping addresses."
+msgstr "Engedélyezze a számlázási és a szállítási címek közötti különbséget."
+
+#: anti-fraud-core/class-wc-af-settings.php:1482
+msgid "Enable Phone Number and Billing Country Check"
+msgstr "Engedélyezze a telefonszámot és a számlázási ország ellenőrzését"
+
+#: anti-fraud-core/class-wc-af-settings.php:1487
+msgid "If you enable this rule, then it is highly recommended that you use a separate Phone Number Validation plugin to make sure your customers specify a correct international phone number format on the checkout page. Else, this rule will treat an invalid phone number as a risk."
+msgstr "Ha engedélyezi ezt a szabályt, akkor nagyon ajánlott, hogy külön telefonszám -validációs plugint használjon, hogy megbizonyosodjon arról, hogy az ügyfelek megadják a megfelelő nemzetközi telefonszám formátumát a pénztár oldalon. Másrészt ez a szabály kockázatot fog kezelni az érvénytelen telefonszámot."
+
+#: anti-fraud-core/class-wc-af-settings.php:1496
+msgid "Weight of the single rule in the total calculation of risk."
+msgstr "Az egyetlen szabály súlya a kockázat teljes kiszámításában."
+
+#: anti-fraud-core/class-wc-af-settings.php:1506
+msgid "Is Customer behind Proxy or VPN?"
+msgstr "Az ügyfél a proxy vagy a VPN mögött van?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1511
+msgid "Check if the customer is behind either a proxy or a VPN"
+msgstr "Ellenőrizze, hogy az ügyfél proxy vagy VPN mögött van -e"
+
+#: anti-fraud-core/class-wc-af-settings.php:1534
+msgid "Multiple Orders Attempts using Different Addresses from Same IP"
+msgstr "Több megrendelés megkísérli ugyanazon IP -től származó különböző címeket használni"
+
+#: anti-fraud-core/class-wc-af-settings.php:1537
+msgid "Rule to check buyer is ordering products using different addresses from the same IP over a certain period from your store."
+msgstr "A Vevő ellenőrzésére irányuló szabály, amely egy bizonyos időszakon keresztül különféle címek felhasználásával rendel el termékeket egy adott időszakban az áruházból."
+
+#: anti-fraud-core/class-wc-af-settings.php:1543
+msgid ""
+"Purchased from same IP but Different Customer Addresses?\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"Ugyanazon IP -től vásárolt, de különböző vevői címekből vásárolt?\n"
+"\t\t\t\t\t\t\t"
+
+#: anti-fraud-core/class-wc-af-settings.php:1552
+msgid "Enable this rule to monitor if multiple orders with different billing or shipping addresses have originated from the same IP address. Make sure to set time span of checking."
+msgstr "Engedélyezze ezt a szabályt, hogy megfigyelje, hogy a különféle számlázási vagy szállítási címekkel rendelkező több megrendelés ugyanabból az IP -címből származik. Ügyeljen arra, hogy beállítsa az ellenőrzés időtartamát."
+
+#: anti-fraud-core/class-wc-af-settings.php:1569
+msgid "Past Number of Days to Check "
+msgstr "Az ellenőrzési napok elmúlt száma "
+
+#: anti-fraud-core/class-wc-af-settings.php:1572
+msgid "The number of days in the past to check IP addresses and different physical addresses."
+msgstr "A múltbeli napok száma az IP -címek és a különböző fizikai címek ellenőrzésére."
+
+#: anti-fraud-core/class-wc-af-settings.php:1588
+msgid "Origin Countries"
+msgstr "Származó országok"
+
+#: anti-fraud-core/class-wc-af-settings.php:1591
+msgid "International orders tend to have a higher fraud risk than orders that originate in your home country. Merchants often find that certain origin countries have a higher potential for fraud. These Rule sets help manage such risks."
+msgstr "A nemzetközi megrendelések általában magasabb csalás kockázatot jelentenek, mint a szülőföldjéből származó megrendelések. A kereskedők gyakran úgy találják, hogy bizonyos származási országok nagyobb csalással járnak. Ezek a szabálykészletek segítik az ilyen kockázatok kezelését."
+
+#: anti-fraud-core/class-wc-af-settings.php:1597
+msgid "Is it International Order?"
+msgstr "Nemzetközi rend?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1602
+msgid "Enable to check if the order originates from outside of your store's home country."
+msgstr "Engedélyezze, hogy a megrendelés az üzlet szülőföldjén kívülről származik -e."
+
+#: anti-fraud-core/class-wc-af-settings.php:1619
+msgid "Is Order from High-Risk Country?"
+msgstr "A rendelés a magas kockázatú országból származik?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1624
+msgid "Enable it to check if orders originate from unsafe countries. Select unsafe countries from the list below."
+msgstr "Engedélyezze, hogy ellenőrizze, hogy a megrendelések nem biztonságos országokból származnak -e. Válassza az alábbi listából a nem biztonságos országokat."
+
+#: anti-fraud-core/class-wc-af-settings.php:1641
+msgid "Mark Unsafe Countries"
+msgstr "Jelölje meg a nem biztonságos országokat"
+
+#: anti-fraud-core/class-wc-af-settings.php:1657
+msgid "High-Risk Email Domains"
+msgstr "Magas kockázatú e-mail tartományok"
+
+#: anti-fraud-core/class-wc-af-settings.php:1660
+msgid "Merchants often find that certain email domains have a higher potential for fraud. These Rule sets will help you manage High-Risk Email Domains.<br/>Identify High-Risk Domains by manually adding such email domains to High-Risk Domain section and/or using QuickEmailVerification.com API key to make this operation automatic."
+msgstr "A kereskedők gyakran tapasztalják, hogy bizonyos e-mail-domaineknél nagyobb a csalási lehetőség. Ezek a szabálykészletek segítenek a nagy kockázatú e-mail tartományok kezelésében.<br/>A nagy kockázatú tartományok azonosítása az ilyen e-mail tartományok manuális hozzáadásával a magas kockázatú tartományok szakaszhoz és/vagy a QuickEmailVerification.com API-kulcs használatával a művelet automatikussá tételéhez."
+
+#: anti-fraud-core/class-wc-af-settings.php:1666
+msgid "Is Suspicious / High-Risk Email Domain?"
+msgstr "Gyanús / magas kockázatú e-mail tartomány?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1671
+msgid "Enable it to check if customer's email address originates from any high-risk domain listed below and/or add API for “quickemailverification. com” for automatic checking"
+msgstr "Engedélyezze, hogy ellenőrizze, hogy az ügyfél e-mail címe az alább felsorolt ​​magas kockázatú domainből származik-e, és/vagy hozzáadja az API-t a „QuickeMailverification” című részhez. com ”az automatikus ellenőrzéshez"
+
+#: anti-fraud-core/class-wc-af-settings.php:1688
+msgid "High-Risk Domains"
+msgstr "Magas kockázatú tartományok"
+
+#: anti-fraud-core/class-wc-af-settings.php:1698
+msgid "API Key for quickemailverification.com"
+msgstr "API kulcs a Quickemailverification.com webhelyhez"
+
+#: anti-fraud-core/class-wc-af-settings.php:1700
+msgid "Don't have quickemailverification account? <a href=\"\">Signup here</a><br/>Verify 50 emails for free. Upgrade if you want more"
+msgstr "Nincs QuickemailVerification fiókja? <a href=\"\"> regisztráció itt </a> <br/> Ellenőrizze az 50 e -mailt ingyen. Frissítsen, ha többet szeretne"
+
+#: anti-fraud-core/class-wc-af-settings.php:1701
+msgid "You can use quickemailverification.com to get more accurate results for false email domain-related checks. "
+msgstr "A Quickemailverification.com segítségével pontosabb eredményeket kaphat a hamis e-mail tartományhoz kapcsolódó ellenőrzésekhez. "
+
+#: anti-fraud-core/class-wc-af-settings.php:1711
+msgid "Order Amounts and Attempts"
+msgstr "Megrendelési összegeket és kísérleteket"
+
+#: anti-fraud-core/class-wc-af-settings.php:1714
+msgid "The rules in this section are triggered based on defined order amounts and by counting attempted orders. You can also limit orders within a certain time frame. Orders with unusually high values, or customers who make an excessive number of transactions in a short period are more likely to be fraudulent."
+msgstr "Az ebben a szakaszban szereplő szabályok a meghatározott rendelési összegek és a megrendelések megszámlálása alapján kezdődnek. Egy bizonyos időkereten belül korlátozhatja a megrendeléseket is. A szokatlanul magas értékekkel rendelkező megrendelések, vagy azok az ügyfelek, akik rövid idő alatt túlzott számú tranzakciót hajtanak végre, valószínűleg csalók."
+
+#: anti-fraud-core/class-wc-af-settings.php:1720
+msgid "Order Amount is Above Average?"
+msgstr "A rendelési összeg átlag felett van?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1725
+msgid "Check if order significantly exceeds the average order amount for your site. Set multiplier value to trigger this rule when order place is value times greater than an average order."
+msgstr "Ellenőrizze, hogy a megrendelés jelentősen meghaladja -e a webhely átlagos megrendelési összegét. Állítsa be a szorzó értékét a szabály kiváltásához, ha a rendelési hely az átlagos sorrendnél nagyobb."
+
+#: anti-fraud-core/class-wc-af-settings.php:1742
+msgid "Average Multiplier"
+msgstr "Átlagos szorzó"
+
+#: anti-fraud-core/class-wc-af-settings.php:1745
+msgid "Enter the multiplier value to check amount over average transaction value that will trigger the rule (expressed as a multiplier). For example, if you want to limit orders that are 2 times greater than the average value of orders, set the multiplier value to 2."
+msgstr "Írja be a szorzó értéket, hogy ellenőrizze az átlagos tranzakciós értéket, amely kiváltja a szabályt (multiplikátorként kifejezve). Például, ha korlátozni szeretné azokat a megrendeléseket, amelyek kétszer nagyobbak, mint a megrendelések átlagos értéke, állítsa a szorzó értékét 2 -re."
+
+#: anti-fraud-core/class-wc-af-settings.php:1755
+msgid "Order Exceeds Maximum Amount Limit?"
+msgstr "A megrendelés meghaladja a maximális összegkorlátot?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1760
+msgid "Enable this rule to confirm that the total amount of the order does not exceed maximum configured amount below."
+msgstr "Engedélyezze ezt a szabályt, hogy megerősítse, hogy a megrendelés teljes összege nem haladja meg a maximális konfigurált összeget az alábbiakban."
+
+#: anti-fraud-core/class-wc-af-settings.php:1777
+msgid "Amount Limit ($)"
+msgstr "Összegkorlát ($)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1780
+msgid "Enter the maximum amount of purchase accepted in your store."
+msgstr "Írja be a boltjában elfogadott maximális vásárlási összeget."
+
+#: anti-fraud-core/class-wc-af-settings.php:1787
+msgid "Too many order attempts?"
+msgstr "Túl sok rendelési kísérlet?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1792
+msgid "Enabling this rule allows you to limit number of orders per user within the time span configured below."
+msgstr "Ennek a szabálynak a engedélyezése lehetővé teszi, hogy az alábbiakban konfigurált időtartamon belül korlátozza a felhasználónkénti megrendelések számát."
+
+#: anti-fraud-core/class-wc-af-settings.php:1809
+msgid "Time Span to Check (hours)"
+msgstr "Az ellenőrzés időtartama (órák)"
+
+#: anti-fraud-core/class-wc-af-settings.php:1812
+msgid "Enter number of hours you want to check "
+msgstr "Írja be az ellenőrizni kívánt órák számát "
+
+#: anti-fraud-core/class-wc-af-settings.php:1818
+msgid "Maximum Allowed Number of Orders in Time Span?"
+msgstr "A maximális megengedett megrendelések száma időtartamban?"
+
+#: anti-fraud-core/class-wc-af-settings.php:1821
+msgid "Enter a total number of orders that a buyer can make in the specified time span."
+msgstr "Írja be az összes megrendelés számát, amelyet a vevő a megadott időtartamon belül megtehet."
+
+#: anti-fraud-core/class-wc-af-settings.php:1832
+msgid "Limit Number of Orders between Time"
+msgstr "Korlátozzák az idő közötti megrendelések számát"
+
+#: anti-fraud-core/class-wc-af-settings.php:1837
+msgid "Enabling this rule limits the number of orders to be placed within a certain period of the day."
+msgstr "Ennek a szabálynak a lehetővé tétele korlátozza a megrendelések számát a nap egy bizonyos időszakán belül."
+
+#: anti-fraud-core/class-wc-af-settings.php:1841
+msgid "Start Time "
+msgstr "Kezdési idő "
+
+#: anti-fraud-core/class-wc-af-settings.php:1844
+msgid "Needs to be as per server time. Check in woo general settings. Accordingly specify start time."
+msgstr "A szerver időnként kell lennie. Jelölje be a WOO általános beállításait. Ennek megfelelően adja meg a kezdési időt."
+
+#: anti-fraud-core/class-wc-af-settings.php:1850
+msgid "End Time "
+msgstr "Idő vége "
+
+#: anti-fraud-core/class-wc-af-settings.php:1853
+msgid "Needs to be as per server time. Check in woo general settings. Accordingly specify end time."
+msgstr "A szerver időnként kell lennie. Jelölje be a WOO általános beállításait. Ennek megfelelően adja meg a végidőt."
+
+#: anti-fraud-core/class-wc-af-settings.php:1859
+msgid "Maximum Allowed Number of Orders Between Time"
+msgstr "Az idő közötti maximális megengedett megrendelések száma"
+
+#: anti-fraud-core/class-wc-af-settings.php:1862
+msgid "Enter maximum number of orders that can be placed during specified time span."
+msgstr "Írja be a megadott időtartam alatt elhelyezett megrendelések maximális számát."
+
+#: anti-fraud-core/class-wc-af-settings.php:2013 assets/js/app.js:227
+msgid "Low Risk Order"
+msgstr "Alacsony kockázatú végzés"
+
+#: anti-fraud-core/class-wc-af-settings.php:2015 assets/js/app.js:229
+msgid "Medium Risk Order"
+msgstr "Közepes kockázatú"
+
+#: anti-fraud-core/class-wc-af-settings.php:2017 assets/js/app.js:231
+msgid "High Risk Order"
+msgstr "Magas kockázatú megrendelés"
+
+#: anti-fraud-core/class-wc-af-settings.php:2019 assets/js/app.js:233
+msgid "Disabled"
+msgstr "Tiltva"
+
+#: anti-fraud-core/class-wc-af-settings.php:2026
+msgid "No Importance"
+msgstr "Nincs jelentőség"
+
+#: anti-fraud-core/class-wc-af-settings.php:2027
+msgid "Moderate"
+msgstr "Mérsékelt"
+
+#: anti-fraud-core/class-wc-af-settings.php:2028
+msgid "High Importance"
+msgstr "Nagy jelentőségű"
+
+#: anti-fraud-core/class-wc-af-settings.php:2174
+msgid "Your Account Id or License Key could not be authenticated!!"
+msgstr "A fiók azonosítóját vagy licenckulcsát nem lehetett hitelesíteni !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2189
+msgid "Great, authenticated successfully!!"
+msgstr "Nagyszerű, sikeresen hitelesített !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2332
+msgid "Your Quickemailverification API Key could not be authenticated!!"
+msgstr "A QuickemailVerification API kulcsát nem lehet hitelesíteni !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2347
+msgid "Great, Quickemailverification authenticated successfully!!"
+msgstr "Remek, QuickemailVerification Sikeresen hitelesített !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2362
+msgid "Great, Quickemailverification authenticated successfully but you don't have enough credit to use this service."
+msgstr "Nagyszerű, QuickemailVerification sikeresen hitelesített, de nincs elég hitelképessége a szolgáltatás igénybevételéhez."
+
+#: anti-fraud-core/class-wc-af-settings.php:2429
+msgid "Great, bigdatacloud authenticated successfully!"
+msgstr "Remek, bigdatacloud sikeresen hitelesítve!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2445 woocommerce-anti-fraud.php:397
+msgid "AntiFraud: Bigdatacloud credentials not authenticate or your quota limit has been exceeded!"
+msgstr "Antifraud: A BigDataCloud hitelesítő adatait nem hitelesítik, vagy a kvótakorlátot túllépték!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2536
+msgid "Your Trust Swiftly API Key could not be authenticated!!"
+msgstr "A bizalmát gyorsan API -kulcs nem lehet hitelesíteni !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2551
+msgid "Your Trust Swiftly Base URL could not be validated!!"
+msgstr "A bizalmát gyorsan nem lehet validálni !!"
+
+#: anti-fraud-core/class-wc-af-settings.php:2566
+msgid "Great, Trust Swiftly authenticated successfully!!"
+msgstr "Remek, bizalom gyorsan hitelesítve sikeresen !!"
+
+#: anti-fraud-core/class-wc-af-trust-swiftly.php:292
+msgid " Please get verified with Trust Swiftly, and then try again."
+msgstr " Kérjük, gyorsan ellenőrizze a bizalmat, majd próbálja újra."
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:356
+msgid "Sr No"
+msgstr "SR nem"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:357
+#: templates/dashboard.php:362
+msgid "Name"
+msgstr "Név"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:358
+msgid "Date"
+msgstr "Dátum"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:359
+msgid "Action"
+msgstr "Akció"
+
+#: anti-fraud-core/tamplate-admin-settings-page.php:385
+msgid "Download"
+msgstr "Letöltés"
+
+#. translators: %s: learn more link
+#: includes/class-wc-af-privacy.php:19
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. <a href=\"%s\" target=\"_blank\">Learn more about how this works, including what you may want to include in your privacy policy.</a>"
+msgstr "Ennek a kiterjesztésnek a használatával személyes adatokat tárolhat, vagy adatokat oszthat meg egy külső szolgáltatással. <a href=\"%s\" targe=\"_blank\"> Tudjon meg többet arról, hogyan működik, beleértve azt is, amit érdemes beilleszteni az adatvédelmi irányelveibe. </a>"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/af-admin-notice.php:25
+msgid "An order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Az ID # %1$s -vel rendelkező megrendelés %2$s kockázati pontszámot kapott."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-admin-notice.php:31 templates/plain/af-admin-notice.php:13
+#: templates/plain/af-paypal-notice.php:14
+msgid "%1$sClick here to view the order.%2$s."
+msgstr "%1$sclick itt a megrendelés megtekintéséhez.%2$s."
+
+#. translators: 1. start of link, 2. end of link.
+#: templates/af-paypal-notice.php:26
+msgid "%1$sClick here to verify the order.%2$s."
+msgstr "%1$sclick itt a megrendelés ellenőrzéséhez.%2$s."
+
+#: templates/dashboard.php:189
+msgid "Anti Fraud Dashboard"
+msgstr "Csalás elleni irányítópult"
+
+#: templates/dashboard.php:199
+msgid "Orders Detected"
+msgstr "Az észlelt megrendelések"
+
+#: templates/dashboard.php:217
+msgid "Needs Attention"
+msgstr "Szüksége van a figyelemre"
+
+#: templates/dashboard.php:230
+msgid "Recent Order Data"
+msgstr "A legfrissebb megrendelési adatok"
+
+#: templates/dashboard.php:244
+msgid "Last 24 Hours Update"
+msgstr "Az utolsó 24 órás frissítés"
+
+#: templates/dashboard.php:250
+msgid "Total Transaction Amount"
+msgstr "Teljes tranzakciós összeg"
+
+#: templates/dashboard.php:262
+msgid "Total Number of Orders"
+msgstr "A megrendelések teljes száma"
+
+#: templates/dashboard.php:274
+msgid "Medium Risk Orders"
+msgstr "Közepes kockázati megrendelések"
+
+#: templates/dashboard.php:286
+msgid "High-Risk Orders on Hold"
+msgstr "Magas kockázatú megrendelések"
+
+#: templates/dashboard.php:298
+msgid "Fraudulent Orders Cancelled"
+msgstr "A csalárd megrendelések töröltek"
+
+#: templates/dashboard.php:310
+msgid "High-Risk Net Transaction"
+msgstr "Nagy kockázatú nettó tranzakció"
+
+#: templates/dashboard.php:322
+msgid "Emails Blocked"
+msgstr "E -mailek blokkolva"
+
+#: templates/dashboard.php:334
+msgid "Paypal Verification"
+msgstr "PayPal ellenőrzés"
+
+#: templates/dashboard.php:364
+msgid "Spent"
+msgstr "Költött"
+
+#: templates/dashboard.php:366
+msgid "Status"
+msgstr "Állapot"
+
+#: templates/dashboard.php:460
+msgid "Orders Breakdown"
+msgstr "Megrendelések bontása"
+
+#. translators: 1. order ID, 2. resik score.
+#: templates/plain/af-admin-notice.php:11
+msgid "Hi there. Order with ID #%1$s scored a Risk Score of %2$s."
+msgstr "Szia. Rendelés ID # %1$s %2$s kockázati pontszámot kapott."
+
+#: woocommerce-anti-fraud.php:109
+msgid "Settings"
+msgstr "Beállítások"
+
+#: woocommerce-anti-fraud.php:110
+msgid "Docs"
+msgstr "Dokumentumok"
+
+#: woocommerce-anti-fraud.php:935
+msgid "This email id is blocked."
+msgstr "Ez az e -mail azonosító blokkolva van."
+
+#: woocommerce-anti-fraud.php:952
+msgid "This IP Address is blocked."
+msgstr "Ez az IP -cím blokkolva van."
+
+#. translators: %s: order time span
+#: woocommerce-anti-fraud.php:1247
+msgid "You have reached maximum number of allowed orders in %d hours. Please try again later."
+msgstr "Elérte a megengedett megrendelések maximális számát %d órán belül. Kérlek, próbáld újra később."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:1877
+msgid "Please consider enabling reCaptcha in the Anti Fraud plugin %1$ssettings%2$s to help prevent Velocity attacks."
+msgstr "Kérjük, fontolja meg a Recaptcha engedélyezését az anti -csalás pluginban, a %1$ssettings %2$s, hogy megakadályozzák a sebesség támadását."
+
+#: woocommerce-anti-fraud.php:2223
+msgid "This email id is blocked"
+msgstr "Ez az e -mail azonosító blokkolva van"
+
+#: woocommerce-anti-fraud.php:2225
+msgid "Unblock"
+msgstr "Felszabadít"
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:2261
+msgid "Please install and activate %1$sWooCommerce%2$s in order for the WooCommerce Anti Fraud extension to work!"
+msgstr "Kérjük, telepítse és aktiválja a %1$swooCommerce %2$s -t, hogy a WooCommerce csalások elleni meghosszabbítás érdekében működjön!"
+
+#: woocommerce-anti-fraud.php:2447 woocommerce-anti-fraud.php:2878
+msgid "Invalid recaptcha."
+msgstr "Érvénytelen Recaptcha."
+
+#: woocommerce-anti-fraud.php:2452
+msgid "You are not a human, please refresh page."
+msgstr "Te nem vagy ember, kérjük, frissítse az oldalt."
+
+#: woocommerce-anti-fraud.php:2461
+msgid "Could not get response from recaptcha server, please refresh page."
+msgstr "Nem tudott választ kapni a Recaptcha Serverről, kérjük, frissítse az oldalt."
+
+#: woocommerce-anti-fraud.php:2464
+msgid "Recaptcha not responding, please refresh page."
+msgstr "Recaptcha nem válaszol, kérjük, frissítse az oldalt."
+
+#: woocommerce-anti-fraud.php:2481
+msgid "PayPal Verification Done."
+msgstr "A PayPal ellenőrzése megtörtént."
+
+#: woocommerce-anti-fraud.php:2772
+msgid "Captcha"
+msgstr "Captcha"
+
+#: woocommerce-anti-fraud.php:2794 woocommerce-anti-fraud.php:2893
+msgid "Recaptcha is a required field."
+msgstr "A Recaptcha egy szükséges mező."
+
+#: woocommerce-anti-fraud.php:2889
+msgid "Could not get response from recaptcha server."
+msgstr "Nem tudott választ kapni a Recaptcha Server -től."
+
+#: woocommerce-anti-fraud.php:2896
+msgid "Could not verify request."
+msgstr "Nem tudta ellenőrizni a kérést."
+
+#: anti-fraud-core/class-wc-af-settings.php:1025
+msgid "The threshold between Low and Medium Risk Score. Move the left handle on slider or update the value in text field to set the boundary between Low and Medium-Risk orders. Risk Score less than this value is Low-Risk order and a greater value is the starting point of Medium Risk Orders."
+msgstr "A küszöb az alacsony és a közepes kockázati pontszám között. Mozgassa a bal oldali fogantyút a csúszkán, vagy frissítse az értéket a szövegmezőben, hogy beállítsa a határot az alacsony és a közepes kockázatú megrendelések között. A kockázati pontszám kevesebb, mint ez az érték alacsony kockázatú sorrend, és a nagyobb érték a közepes kockázatú megrendelések kiindulási pontja."
+
+#: anti-fraud-core/class-wc-af-settings.php:1037
+msgid "This is a threshold between Medium and High-Risk Score. Slide the right handle on slider or update the value in text field to set the boundary between Medium and High-Risk orders. Risk Score less than this value is the end point of Medium-Risk order and a greater value is High-Risk order."
+msgstr "Ez egy küszöbérték a közepes és a magas kockázatú pontszám között. Csúsztassa meg a jobb fogantyút a csúszkán, vagy frissítse az értéket a szövegmezőben, hogy beállítsa a határot a közepes és a magas kockázatú megrendelések között. A kockázati pontszám, mint ez az érték, a közepes kockázatú sorrend végpontja, és a nagyobb érték a magas kockázatú sorrend."
+
+#: anti-fraud-core/class-wc-af-settings.php:1063
+msgid "Evaluate customers before making the actual payment.  If the fraud score reaches a high-risk order range before making payment, the customer order will be denied in advance, and a custom message appears on the checkout page explaining buyer the reason for denial."
+msgstr "A tényleges fizetés elvégzése előtt értékelje az ügyfeleket. Ha a csalás pontszáma a fizetés előtt eléri a magas kockázatú megrendelési tartományt, akkor az ügyfél megrendelését előre megtagadják, és egyéni üzenet jelenik meg a pénztár oldalon, amely elmagyarázza a vevőnek a tagadás okát."
+
+#: anti-fraud-core/class-wc-af-settings.php:1074
+msgid "Enable pre-payment checking to assess fraud before making payment and block buyers with high fraud risk from placing any order and notify them via alert message."
+msgstr "Engedélyezze az előfizetés előzetes ellenőrzését a csalások felmérésére, mielőtt a fizetés elé kerül, és blokkolja a magas csalás kockázatával járó vásárlókat, hogy bármilyen megrendelést tegyenek, és értesítsék őket riasztási üzenettel."
+
+#: anti-fraud-core/class-wc-af-settings.php:1098
+msgid "Updates order status to cancel and/or on-hold when order passes a certain Risk Score threshold."
+msgstr "Frissíti a megrendelési állapotot a törléshez és/vagy a tartáshoz, ha a megrendelés egy bizonyos kockázati pontszám küszöbértékét teljesíti."
+
+#: anti-fraud-core/class-wc-af-settings.php:1142
+msgid "Payments made via the whitelisted payment methods will bypass anti-fraud’s rule to change order status based on risk score."
+msgstr "A besztökelt fizetési módszerekkel történő kifizetések megkerülik az csalás elleni szabályokat, hogy a kockázati pontszám alapján megváltoztassák a megrendelés állapotát."
+
+#: anti-fraud-core/class-wc-af-settings.php:1152
+msgid "Enable to add payment methods to the whitelist."
+msgstr "Engedélyezze a fizetési módszerek hozzáadását a wherlisthez."
+
+#: anti-fraud-core/class-wc-af-settings.php:1174
+msgid "Filter accounts with different user roles to bypass Anti-fraud scoring system."
+msgstr "Szűrő fiókok különböző felhasználói szerepekkel, hogy megkerüljék a csalás elleni pontozási rendszert."
+
+#: anti-fraud-core/class-wc-af-settings.php:1184
+msgid "Enable it to activate whitelisting of User Roles."
+msgstr "Engedélyezze, hogy aktiválja a felhasználói szerepek webisterizálását."
+
+#: anti-fraud-core/class-wc-af-settings.php:1193
+msgid "Press “Ctrl” or “Command” key and click one or multiple user roles to whitelist. Scroll up/down to select and see more user roles if any."
+msgstr "Nyomja meg a „CTRL” vagy a „Command” gombot, majd kattintson az egy vagy több felhasználói szerepre a WherList elemre. Görgessen fel/le, hogy válasszon és látjon több felhasználói szerepet, ha van ilyen."
+
+#: anti-fraud-core/class-wc-af-settings.php:1207
+msgid "List of Emails whitelitsted. Add emails manullay to make whitlist. Unblocked emails also added to this list."
+msgstr "Az e -mailek listája Whitelitsted. Adjon hozzá e -maileket Manullay -nek a Whitlist készítéséhez. A blokk nélküli e -mailek is hozzáadtak ehhez a listához."
+
+#: anti-fraud-core/class-wc-af-settings.php:1233
+msgid "List of IPs whitelitsted. Add IPs manullay to make whitlist. Unblocked IPs also added to this list."
+msgstr "Az IPS Whitelitsted listája. Adja hozzá az IPS Manullay -t a Whitlist készítéséhez. A blokk nélküli IP -k szintén hozzáadtak ehhez a listához."
+
+#: anti-fraud-core/class-wc-af-settings.php:1260
+msgid "In this section, customers can enable this setting to check fraud for a previous order, when the Anti Fraud plugin is not installed and an order was placed within 7 days old."
+msgstr "Ebben a szakaszban az ügyfelek lehetővé teszik, hogy ez a beállítás egy korábbi megrendelés csalásának ellenőrzését, amikor a csalás elleni beépülő modul nem telepítve van, és a megrendelést 7 napos koron belül helyezték el."
+
+#: anti-fraud-core/class-wc-af-settings.php:1270
+msgid "Enable it to check fraud for a previous order, that orders, when the Antifraud plugin was not installed."
+msgstr "Engedélyezze, hogy ellenőrizze a korábbi megrendelés csalását, amely a rendelések, amikor az antifraud -bővítményt nem telepítették."
+
+#: anti-fraud-core/class-wc-af-settings.php:1279
+msgid "The Merchant can enter the number of days for historical orders check. The default number of days is 7 days."
+msgstr "A kereskedő beírhatja a történelmi megrendelések ellenőrzésére szolgáló napok számát. Az alapértelmezett napok száma 7 nap."
+
+#: anti-fraud-core/class-wc-af-settings.php:1301
+msgid "In this section, customers can enable this setting to create log file and it can seen from WooCommerce >> Status >> Log."
+msgstr "Ebben a szakaszban az ügyfelek engedélyezhetik ezt a beállítást a naplófájl létrehozásához, és a WooCommerce >> állapot >> naplóból látható."
+
+#: anti-fraud-core/class-wc-af-settings.php:1311
+msgid "Enable it to record the debugging data."
+msgstr "Engedélyezze a hibakeresési adatok rögzítését."
+
+#: anti-fraud-core/class-wc-af-settings.php:1644
+msgid "Press Ctrl or ⌘ key and select multiple countries that you think are unsafe for your area of service."
+msgstr "Nyomja meg a Ctrl vagy a ⌘ kulcs gombot, és válasszon több olyan országot, amelyek szerinte nem biztonságos az Ön szolgáltatási területén."
+
+#: rules/class-wc-af-rule-billing-matches-shipping.php:18
+msgid "Billing address does not match shipping address"
+msgstr "A számlázási cím nem egyezik a szállítási címre"
+
+#: rules/class-wc-af-rule-billing-method.php:18
+msgid "Ordered from a risk billing_method"
+msgstr "Egy kockázati számlázásból megrendelték"
+
+#: rules/class-wc-af-rule-billing-phone-matches-billing-country.php:17
+msgid "Billing phone number does not match with Billing country"
+msgstr "A számlázási telefonszám nem egyezik a számlázó országgal"
+
+#: rules/class-wc-af-rule-country.php:18
+msgid "Ordered from a risk country"
+msgstr "Egy kockázati országból rendelték el"
+
+#: rules/class-wc-af-rule-detect-proxy.php:16
+msgid "Customer ordered from behind a proxy."
+msgstr "Az ügyfél egy proxy mögül rendelt."
+
+#: rules/class-wc-af-rule-first-order-processing.php:17
+#: rules/class-wc-af-rule-first-order.php:16
+msgid "This is the customer's first order with this billing details."
+msgstr "Ez az ügyfél első megrendelése a számlázási részletekkel."
+
+#: rules/class-wc-af-rule-free-email.php:20
+msgid "Email is a known free email address."
+msgstr "Az e -mail egy ismert ingyenes e -mail cím."
+
+#: rules/class-wc-af-rule-geo-location.php:19
+msgid "Customer order geo location mismatches billing/shipping address."
+msgstr "Ügyfélrendelés A GEO helymeghatározó eltérések számlázási/szállítási címe."
+
+#: rules/class-wc-af-rule-high-amount.php:17
+msgid "Order exceeds maximum amount."
+msgstr "A megrendelés meghaladja a maximális összeget."
+
+#: rules/class-wc-af-rule-international-order.php:17
+msgid "Order is an international order."
+msgstr "A rend egy nemzetközi rend."
+
+#: rules/class-wc-af-rule-ip-location.php:19
+msgid "Customer IP address did not match given billing country."
+msgstr "Az ügyfél IP -címe nem egyezett a megadott számlázási országban."
+
+#: rules/class-wc-af-rule-ip-multiple-order-details.php:20
+msgid "IP address ordered with multiple order details in the past "
+msgstr "A múltban több megrendelés részletével rendelkező IP -címet rendelt"
+
+#: rules/class-wc-af-rule-minfraud-factors.php:18
+msgid "Score returned by Minfraud Factors exceeds the allowed value."
+msgstr "A MinFraud tényezők által visszaadott pontszám meghaladja az engedélyezett értéket."
+
+#: rules/class-wc-af-rule-minfraud-insights.php:18
+msgid "Score returned by Minfraud Insights exceeds the allowed value."
+msgstr "A MinFraud Insights által visszaadott pontszám meghaladja az engedélyezett értéket."
+
+#: rules/class-wc-af-rule-minfraud.php:18
+msgid "Score returned by Minfraud exceeds the allowed value."
+msgstr "A MinFraud által visszaadott pontszám meghaladja az engedélyezett értéket."
+
+#: rules/class-wc-af-rule-temporary-email.php:17
+msgid "Email address is from a high-risk domain."
+msgstr "Az e-mail cím egy magas kockázatú tartományból származik."
+
+#: rules/class-wc-af-rule-velocities.php:20
+msgid "IP address ordered multiple orders in the last "
+msgstr "Az IP -cím több megrendelést rendelt el az utolsóban"
+
+#: woocommerce-anti-fraud.php:2972
+msgid "Fraud Action"
+msgstr "Csalás"
+
+#: woocommerce-anti-fraud.php:2985 woocommerce-anti-fraud.php:3001
+msgid "Fraud Check"
+msgstr "Csalásellenőrzés"
+
+#: anti-fraud-core/class-wc-af-settings.php:985
+msgid "Enter the body of the email to be sent to the purchaser in the text area below:"
+msgstr "Írja be a vásárlónak küldendő e-mail törzsét az alábbi szövegmezőbe:"
+
+#: anti-fraud-core/class-wc-af-settings.php:1161
+msgid "Press “Ctrl” or “Command” key and click multiple payment methods to whitelist and scroll down to select more payment methods"
+msgstr "Nyomja meg a „Ctrl” vagy „Command” billentyűt, és kattintson több fizetési módra az engedélyezési listához, és görgessen le további fizetési módok kiválasztásához"
+
+#: anti-fraud-core/class-wc-af-settings.php:1216
+msgid "Enter any email you want to be whitelisted. Press “Tab” or “Comma” after entering any new email. Please add emails in bulk separating them by either comma or space."
+msgstr "Adja meg az engedélyezőlistára felvenni kívánt e-mail-címet. Bármilyen új e-mail beírása után nyomja meg a „Tab” vagy a „Comma” gombot. Kérjük, tömegesen adja hozzá az e-maileket, vesszővel vagy szóközzel elválasztva."
+
+#: anti-fraud-core/class-wc-af-settings.php:1242
+msgid "Enter any IPs you want to be whitelisted. Press “Tab” or “Comma” after entering any new IPs. Please add emails in bulk separating them by either comma or space."
+msgstr "Adja meg az engedélyezőlistára felvenni kívánt IP-címeket. Az új IP-címek megadása után nyomja meg a „Tab” vagy a „Comma” gombot. Kérjük, tömegesen adja hozzá az e-maileket, vesszővel vagy szóközzel elválasztva."
+
+#: anti-fraud-core/class-wc-af-settings.php:1691
+msgid "Enter any email origin domains you consider to be high-risk. Press “Tab” or “Comma” after entering any new domain."
+msgstr "Adjon meg minden olyan e-mail származási domaint, amelyet magas kockázatúnak tart. Új domain megadása után nyomja meg a „Tab” vagy a „Comma” gombot."
+
+#. translators: 1. start of link, 2. end of link.
+#: woocommerce-anti-fraud.php:339
+msgid "In order to continue %1$s\"Geo Location Match\"%2$s service, our provider Bigdatacloud now requires you to sign up and get the api key. To obtain an api key you can %3$sregister here%4$s."
+msgstr "A %1$s\"Geo Location Match\"%2$s szolgáltatás folytatásához a Bigdatacloud szolgáltatónk most megköveteli, hogy regisztráljon és szerezze be az API-kulcsot. API-kulcs beszerzéséhez %3$sregisztrálhat itt%4$s."

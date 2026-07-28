@@ -1,0 +1,22 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/wpcodefactory/wpfactory-key-manager"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/wpcodefactory/wpfactory-admin-menu"
+    }
+  ],
+  "require": {
+    "wpfactory/wpfactory-key-manager": "*",
+    "wpfactory/wpfactory-admin-menu": "*"
+  },
+  "replace": {
+    "wpfactory/wpfactory-admin-menu": "*"
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
+}

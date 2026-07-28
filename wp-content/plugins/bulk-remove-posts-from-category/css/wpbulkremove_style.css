@@ -1,0 +1,4 @@
+#remcat, #bulk-edit-remcat {display:none;}
+#bulk-edit #remcat, #bulk-edit #bulk-edit-remcat {display:block;}
+ul.cat-checklist.red {border: 1px solid #0073aa;background-color: #f0f0f0}
+#remcat.red .checkbox-title, #bulk-edit-remcat.red .checkbox-title {color:#ff0000;}

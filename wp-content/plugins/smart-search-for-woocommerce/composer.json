@@ -1,0 +1,57 @@
+{
+    "name": "searchanise/smart-woocommerce-search",
+    "description": "Searchanise shows product previews, relevant categories, pages, and search suggestions as you type.",
+    "type": "wordpress-plugin",
+    "version": "1.0.20",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "classmap": [
+            "includes/"
+        ],
+		"files": [
+			"includes/functions.php"
+		]
+    },
+    "authors": [
+        {
+            "name": "Searchanise",
+            "email": "feedback@searchanise.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "composer/installers": "~2.3.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "codeception/c3": true
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "woocommerce/woocommerce-sniffs": "^1.0",
+        "friendsofphp/php-cs-fixer": "3.72.0",
+        "wp-coding-standards/wpcs": "3.1.0",
+        "phpstan/phpstan": "^2.1"
+    },
+    "scripts": {
+        "test": [
+            "@php -d error_reporting=24575 ./vendor/bin/phpcs --standard=WordPress -sp --basepath=. --ignore=vendor,assets,templates,local_conf.php --error-severity=1 --warning-severity=6 ./",
+            "@php -d error_reporting=24575 ./vendor/bin/phpcs --standard=Woocommerce -sp --basepath=. --ignore=vendor,assets,templates,local_conf.php --error-severity=1 --warning-severity=6 ./",
+            "php ./vendor/bin/phpcs --standard=PHPCompatibility --extensions=php --ignore=*/vendor/* --runtime-set testVersion 5.6 ./",
+            "php ./vendor/bin/phpcs --standard=PHPCompatibility --extensions=php --ignore=*/vendor/* --runtime-set testVersion 7.4 ./",
+            "php ./vendor/bin/phpcs --standard=PHPCompatibility --extensions=php --ignore=*/vendor/* --runtime-set testVersion 8.2 ./"
+        ],
+        "test-with-coverage": [
+            "@php -d error_reporting=24575 ./vendor/bin/phpcs --standard=WordPress -sp --basepath=. --ignore=vendor,assets,templates,local_conf.php --error-severity=1 --warning-severity=6 ./",
+            "@php -d error_reporting=24575 ./vendor/bin/phpcs --standard=Woocommerce -sp --basepath=. --ignore=vendor,assets,templates,local_conf.php --error-severity=1 --warning-severity=6 ./"
+        ],
+		"phpstan": [
+			"./vendor/bin/phpstan analyze --memory-limit=2G --error-format=gitlab ./"
+		]
+	}
+}

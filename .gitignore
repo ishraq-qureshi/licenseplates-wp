@@ -1,0 +1,64 @@
+# === Secrets / environment-specific config ===
+.env
+.env.*
+wp-config.php
+
+# === Local database dumps & backups (huge, never belong in git) ===
+*.sql
+*.sql.gz
+*.sql.zip
+*.zip
+.ftpquota
+
+# === Log files ===
+error_log
+*.log
+
+# === WordPress uploads & user-generated media (sync separately, not via git) ===
+wp-content/uploads/
+
+# === WordPress/plugin caches, backups, and generated config (all regenerable) ===
+wp-content/cache/
+wp-content/wp-rocket-config/
+wp-content/litespeed/
+wp-content/wp-cloudflare-super-page-cache/
+wp-content/speedycache-config/
+wp-content/10web-page-cache-config/
+wp-content/backups-dup-pro/
+wp-content/ai1wm-backups/
+wp-content/backuply/
+wp-content/aiowps_backups/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/.ht.object-cache*.sqlite
+wp-content/advanced-cache.php
+wp-content/advanced-cache.php.disabled
+wp-content/advanced-cache.php__
+wp-content/object-cache.php
+
+# === Custom plugin's large binary asset libraries (license plate templates/fonts/decals) ===
+# These are large generated/synced image & font assets, not source code.
+# Track via a separate media-sync process instead of git.
+wp-content/plugins/lptv-plates/images/
+wp-content/plugins/lptv-plates/images_/
+wp-content/plugins/lptv-plates/includes/images/
+wp-content/plugins/lptv-plates/includes/images_/
+wp-content/plugins/lptv-plates/includes/fonts/
+wp-content/plugins/lptv-plates/includes/fonts_/
+wp-content/plugins/lptv-plates/decals/
+wp-content/plugins/lptv-plates/decals_/
+wp-content/plugins/lptv-plates/largedecal/
+wp-content/plugins/lptv-plates/largedecal_/
+
+# === Large "resources" media library (images, zips) ===
+wp-content/resources/images/
+wp-content/resources/images_old/
+wp-content/resources/*.zip
+
+# === File-manager / thumbnail cache cruft ===
+.tmb/
+
+# === OS / editor cruft ===
+.DS_Store
+Thumbs.db
+*.swp

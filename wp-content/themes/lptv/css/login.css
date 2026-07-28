@@ -1,0 +1,551 @@
+#login {
+	padding: 0 !important;
+	flex-direction: column;
+   justify-content: center;
+   display: flex;
+   height: 100%; 
+   z-index: 9;
+   position: relative; 
+
+}
+body.login {
+    position: relative;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #000; 
+}
+body.login:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;  
+    display: block;   
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .1;
+    background-image: url(../images/login-overlay.jpg);
+}
+#login h1 a { 
+	background-image: url(../images/login-logo.svg); 
+	background-size: auto 100%;
+	width: auto;
+	height: 23px;  
+	box-shadow: 0 0 0; 
+    margin-bottom: 20px;
+} 
+
+#login_error,.login .message,.login form {
+	color: #000;    
+	border-radius: 0px 0px;
+    box-shadow: 0 0 0;
+    background: #fff;      
+}
+
+#login_error a,.login .message a {
+    color: #171717 !important; 
+    box-shadow: 0px 0px 0px;
+}
+
+.login #backtoblog,
+.login #nav a {
+	transition: all .5s; 
+}
+
+#backtoblog {
+    margin:3px 0 0;
+}
+
+.wp-core-ui .button-primary {
+    background: #171717 !important;
+    border: none;
+    outline: none!important;
+    font-weight: 700;
+    color: #fff !important;
+    text-shadow: none;
+    box-shadow: none; 
+}
+.login #login_error {
+    margin-bottom: 20px !important; 
+}
+
+.login #backtoblog, .login #nav {
+    text-align :center;  
+    color: #a3bc24;
+}
+
+.login label {
+	color: #171717;   
+    box-shadow: 0 0 0;
+} 
+.login label {
+    font-weight: 500;	 
+}
+
+.login #login_error, .login .message, .login .success {
+	border-left: 4px solid #da222d;   
+	margin: 0;  
+	background: #fff;  
+} 
+
+.login .privacy-policy-page-link a,
+.login #backtoblog a, .login #nav a {
+	color: #fff;
+    box-shadow: none !important;
+    transition: all .5s;
+}
+#login_error a:hover,   
+.login .message a:hover, 
+.login #backtoblog a:hover,  
+.login #nav a:hover,
+.login .privacy-policy-page-link a:hover {
+    color: #da232d; 
+} 
+#login_error, .login .message, .login form {
+	color: #171717;
+}
+
+#login {
+	perspective: 2000px; 
+}
+.login form {
+	padding: 30px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.3);
+	position: relative;
+	max-width: 500px;
+	margin: 0 auto; 
+	overflow: visible;
+	transform: rotateX(-25deg);
+}
+
+
+.login form .user-pass-wrap:before {
+  right: calc(100% - 1px);
+  transform-origin: 100% 100%;
+  transform: skewY(25deg) scaleX(-1);
+}
+.login form .user-pass-wrap:before,
+.login form .user-pass-wrap:after {
+	content: ''; 
+	position: absolute;
+	pointer-events: none;
+	background-color: #fff; 
+	width: 25%;
+	height: 100%;
+	top: 0px;
+	z-index: -1;
+	opacity: .8;
+}
+.login form .user-pass-wrap:after {
+	left: calc(100% - 1px);
+	transform-origin: 0%;
+	transform: skewY(-25deg) scaleX(-1);
+}
+/*.login form:before {
+	content: '';
+	background: rgba(0,0,0,.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+
+}*/
+.login form .user-pass-wrap label,
+.login form p {
+	position: relative;
+	z-index: 1;
+}
+.login .button.wp-hide-pw .dashicons {
+    color: #171717;
+}
+
+
+
+/*Underwater Light Rays login*/
+body.login:before {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .4);
+}
+
+.login .light-rays li {
+	list-style: none;
+	position: relative;
+	--deg: 0;
+    --length: 0rem;
+    --thickness: 20px;
+    --duration: 2s;
+    --delay: 1s;
+    --rotate: 0deg;
+    --degRange: 72.5deg;
+    --spreadRange: 40vw;
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    width: var(--thickness);
+    height: calc(20% + 370px + var(--length));
+    left: 50%;
+    transform: translateX(calc(-50% + var(--deg)* var(--spreadRange)* -1 + 0.5* var(--spreadRange))) translateY(-100px) rotateZ(calc(var(--degRange)* -0.5 + var(--deg)* var(--degRange))) rotateX(0.01deg);
+    transform-origin: center -100px;
+    mix-blend-mode: screen;
+    -webkit-animation: shimmer linear var(--duration) calc(var(--delay)* -1) infinite alternate forwards, rotate ease-in-out calc(var(--duration)* 3.14) calc(var(--delay)* -1) infinite alternate forwards;
+    animation: shimmer linear var(--duration) calc(var(--delay)* -1) infinite alternate forwards, rotate ease-in-out calc(var(--duration)* 3.14) calc(var(--delay)* -1) infinite alternate forwards;
+}
+
+
+@keyframes shimmer {
+	0% {
+	    opacity: 0.33;
+	}
+
+	100% {
+	    opacity: 0.03;
+	}
+}
+
+@keyframes rotate {
+
+	0% {
+	    rotate: 0deg;
+	}
+	100% {
+	    rotate: var(--rotate);
+	}
+}
+
+.login .light-rays {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    filter: blur(0.6rem);
+}
+
+.login .light-rays li:before {
+	content: "";  
+    background: linear-gradient(to bottom, #fff, rgba(166, 255, 248, 0) 100%);
+    transform-origin: top center;
+    transform: rotateX(40deg);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    filter: blur(0.2rem);
+    opacity: .3;
+}
+
+.login .light-rays li:nth-child(1) {
+	--deg: 0.8577213791;
+    --thickness: 19.0326180171px;
+    --length: -11.4924450566px;
+    --duration: 1.2516543526s;
+    --delay: 2.9371184891s;
+    --rotate: -0.3628552501deg;
+}
+
+.login .light-rays li:nth-child(2) {
+	--deg: 0.8257499208;
+    --thickness: 28.8801456633px;
+    --length: -4.8267790425px;
+    --duration: 1.3557437974s;
+    --delay: 2.3778240903s;
+    --rotate: -3.0747249068deg;
+}
+
+.login .light-rays li:nth-child(3) {
+    --deg: 0.5368462257;
+    --thickness: 27.1885322277px;
+    --length: 48.3739233733px;
+    --duration: 1.2138170101s;
+    --delay: 2.9003578694s;
+    --rotate: -1.0563568019deg;
+}
+
+
+.login .light-rays li:nth-child(4) { 
+	--deg: 0.1042145338;
+    --thickness: 14.8061504287px;
+    --length: -24.5098102403px;
+    --duration: 1.3876003477s;
+    --delay: 2.9128259322s;
+    --rotate: 0.8624622228deg;
+}
+
+.login .light-rays li:nth-child(5) {
+	 --deg: 0.5063352785;
+    --thickness: 28.3336952216px;
+    --length: 20.3109261734px;
+    --duration: 1.6141815319s;
+    --delay: 2.5182669607s;
+    --rotate: -3.7097397848deg;
+}
+
+.login .light-rays li:nth-child(6) {
+    --deg: 0.9805074755;
+    --thickness: 24.2718997196px;
+    --length: 23.8152850307px;
+    --duration: 1.253324667s;
+    --delay: 2.9402329212s;
+    --rotate: 3.5801402669deg;
+}
+
+
+.login .light-rays li:nth-child(7) {
+    --deg: 0.3101149265;
+    --thickness: 12.0632056321px;
+    --length: 38.6977376625px;
+    --duration: 1.7317412588s;
+    --delay: 2.4959251736s;
+    --rotate: 1.1040798473deg;
+}
+
+
+.login .light-rays li:nth-child(8) {
+    --deg: 0.8135030567;
+    --thickness: 15.0433761807px;
+    --length: 35.5343021423px;
+    --duration: 1.232735189s;
+    --delay: 2.2361916s;
+    --rotate: 1.6979004651deg;
+}
+
+.login .light-rays li:nth-child(9) {
+    --deg: 0.936088091;
+    --thickness: 26.4028227996px;
+    --length: 27.9276206128px;
+    --duration: 1.8154319479s;
+    --delay: 2.8767284957s;
+    --rotate: -1.3873603614deg;
+}
+
+.login .light-rays li:nth-child(10) {
+    --deg: 0.0653895356;
+    --thickness: 25.1845211832px;
+    --length: 25.1020130607px;
+    --duration: 1.6705149006s;
+    --delay: 2.3013249631s;
+    --rotate: -1.784733319deg;
+}
+
+.login .light-rays li:nth-child(11) {
+    --deg: 0.5095358896;
+    --thickness: 15.1318189276px;
+    --length: -12.6857327388px;
+    --duration: 1.3604461804s;
+    --delay: 2.7746916582s;
+    --rotate: 2.3892213987deg;
+}
+
+.login .light-rays li:nth-child(12) {
+    --deg: 0.351530087;
+    --thickness: 13.3481268496px;
+    --length: 7.2875380492px;
+    --duration: 1.1646022904s;
+    --delay: 2.7894506774s;
+    --rotate: 2.1353932111deg;
+}
+
+.login .light-rays li:nth-child(13) {
+    --deg: 0.8362352199;
+    --thickness: 14.3445547799px;
+    --length: -31.8505433334px;
+    --duration: 1.7131520652s;
+    --delay: 2.3042422655s;
+    --rotate: -3.7692049026deg;
+}
+
+.login .light-rays li:nth-child(14) {
+    --deg: 0.2495128571;
+    --thickness: 13.6342944526px;
+    --length: 13.2824261951px;
+    --duration: 1.3062155777s;
+    --delay: 2.0879939202s;
+    --rotate: 3.1678321645deg;
+}
+
+.login .light-rays li:nth-child(15) {
+    --deg: 0.9255875511;
+    --thickness: 27.3602366278px;
+    --length: 4.7173961297px;
+    --duration: 1.282288732s;
+    --delay: 2.0440474411s;
+    --rotate: -2.3141879491deg;
+}
+
+.login .light-rays li:nth-child(16) {
+    --deg: 0.4780253098;
+    --thickness: 20.0940796263px;
+    --length: 49.4450921133px;
+    --duration: 2.3026801144s;
+    --delay: 2.1818575479s;
+    --rotate: -1.0522006209deg;
+}
+
+.login .light-rays li:nth-child(17) {
+    --deg: 0.3842347774;
+    --thickness: 33.4035288963px;
+    --length: -31.0750883045px;
+    --duration: 2.4095663243s;
+    --delay: 2.3881127405s;
+    --rotate: 3.0229143628deg;
+}
+
+
+.login .light-rays li:nth-child(18) {
+    --deg: 0.198661464;
+    --thickness: 23.9210605094px;
+    --length: -3.8679737596px;
+    --duration: 1.0473842417s;
+    --delay: 2.8218637316s;
+    --rotate: -1.6819652901deg;
+}
+
+.login .light-rays li:nth-child(19) {
+    --deg: 0.2394185337;
+    --thickness: 10.6104161713px;
+    --length: -33.7982767493px;
+    --duration: 1.7551708856s;
+    --delay: 2.7410960291s;
+    --rotate: -3.5774696437deg;
+}
+
+.login .light-rays li:nth-child(20) {
+    --deg: 0.5136314221;
+    --thickness: 22.637986011px;
+    --length: -47.4249948845px;
+    --duration: 2.2739350758s;
+    --delay: 2.2744450093s;
+    --rotate: 2.9121744711deg;
+}
+
+.login .light-rays li:nth-child(21) {
+    --deg: 0.7528879673;
+    --thickness: 15.0233254118px;
+    --length: -11.6223585026px;
+    --duration: 1.1807803915s;
+    --delay: 2.6128311008s;
+    --rotate: -2.7296212516deg;
+}
+
+.login .light-rays li:nth-child(22) {
+    --deg: 0.666810918;
+    --thickness: 29.4170574679px;
+    --length: -9.8921046139px;
+    --duration: 1.7297714563s;
+    --delay: 2.7036671257s;
+    --rotate: -2.3828468507deg;
+}
+
+.login .light-rays li:nth-child(23) {
+    --deg: 0.4557338816;
+    --thickness: 21.4460481325px;
+    --length: -16.1216777537px;
+    --duration: 2.0178038176s;
+    --delay: 2.3554342547s;
+    --rotate: -0.985711488deg;
+}
+
+
+.login .light-rays li:nth-child(24) {
+    --deg: 0.5219985904;
+    --thickness: 8.1893199973px;
+    --length: 14.6254435669px;
+    --duration: 1.2641066897s;
+    --delay: 2.9360948248s;
+    --rotate: -1.8100647754deg;
+}
+
+.login .light-rays li:nth-child(25) {
+    --deg: 0.0542969657;
+    --thickness: 27.8315646005px;
+    --length: 11.5488687161px;
+    --duration: 1.0247269908s;
+    --delay: 2.9619895741s;
+    --rotate: -0.5232280596deg;
+}
+
+.login .light-rays li:nth-child(26) {
+    --deg: 0.3003782412;
+    --thickness: 15.1733504848px;
+    --length: -16.775544021px;
+    --duration: 1.5315897379s;
+    --delay: 2.7030477209s;
+    --rotate: -3.2877817171deg;
+}
+
+.login .light-rays li:nth-child(27) {
+    --deg: 0.7338195468;
+    --thickness: 30.9264398808px;
+    --length: 48.0944708674px;
+    --duration: 1.8118006998s;
+    --delay: 2.9397211676s;
+    --rotate: 3.4122768312deg;
+}
+
+
+.login .light-rays li:nth-child(28) {
+    --deg: 0.0117382759;
+    --thickness: 23.2361723593px;
+    --length: -4.7137272116px;
+    --duration: 2.4605849586s;
+    --delay: 2.233309709s;
+    --rotate: 3.884483571deg;
+}
+
+.login .light-rays li:nth-child(29) {
+    --deg: 0.5295529191;
+    --thickness: 12.3490433436px;
+    --length: 39.9158632116px;
+    --duration: 1.5117453828s;
+    --delay: 2.923448606s;
+    --rotate: 1.4520493346deg;
+}
+
+
+.login .light-rays li:nth-child(30) {
+    --deg: 0.0640740624;
+    --thickness: 31.6880924313px;
+    --length: -14.4182964088px;
+    --duration: 1.8954987826s;
+    --delay: 2.6958401733s;
+    --rotate: -1.6623960725deg;
+}
+
+.login .light-rays li:nth-child(31) {
+    --deg: 0.1301969729;
+    --thickness: 18.000307285px;
+    --length: 47.7371421219px;
+    --duration: 2.0543195314s;
+    --delay: 2.3642516233s;
+    --rotate: -0.2122587267deg;
+}
+
+.login .light-rays li:nth-child(32) {
+    --deg: 0.8286533187;
+    --thickness: 26.7663351833px;
+    --length: -12.988433877px;
+    --duration: 1.9273190336s;
+    --delay: 2.5401778323s;
+    --rotate: 2.4428556939deg;
+}
+
+/*Underwater Light Rays login*/
