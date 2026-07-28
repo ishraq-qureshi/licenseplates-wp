@@ -1,6 +1,7 @@
 # === Secrets / environment-specific config ===
 .env
 .env.*
+!.env.example
 wp-config.php
 
 # === Local database dumps & backups (huge, never belong in git) ===
