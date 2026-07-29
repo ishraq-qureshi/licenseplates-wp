@@ -136,7 +136,7 @@ $isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || $statedecal == 'Y';
                         .replace(/</g, 'TVLTSYMBOL')
                         .replace(/\|/g, 'TVPIPESYMBOL');
                 }
-                
+
                 text1 = sanitizeText(text1);
                 text2 = sanitizeText(text2);
                 let query = {
@@ -144,7 +144,9 @@ $isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || $statedecal == 'Y';
                     'text1': text1,
                     'text2': text2,
                     'font': font,
-                    'font_choose': '<?= $font_choose ?>'
+                    'font_choose': '<?= $font_choose ?>',
+                    'edecal_year': jQuery('#_edecal_year').val() || '',
+                    'sdecal_year': jQuery('#_sdecal_year').val() || ''
                 }
                 let queryString = $.param(query);
                 return '/wp-content/plugins/lptv-plates/includes/lpgenI.php?' + queryString;
@@ -162,6 +164,10 @@ $isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || $statedecal == 'Y';
             $($fontSelect).change(function() {
                 updateImageSrc();
             });
+
+            // decal/state-decal clicks trigger a 'keyup' on the text field themselves
+            // (see appendSymbol() in lptvplate.php) so updateImageSrc() picks up the
+            // newly-set _edecal_year/_sdecal_year hidden field values automatically.
 
             function updateImageSrc() {
                 text1 = $($text1Input).val()

@@ -450,6 +450,8 @@ function generateLPTVplateThumbnail($image, $cart_item, $cart_item_key = false)
             $text1 = '';
             $text2 = '';
             $font = '';
+            $edecalYear = '';
+            $sdecalYear = '';
             foreach ($cart_item_key->get_data()['meta_data'] as $data) {
                 if ($data->key == '_plate_text1') {
                     $text1 = $data->value;
@@ -459,6 +461,12 @@ function generateLPTVplateThumbnail($image, $cart_item, $cart_item_key = false)
                 }
                 if ($data->key == '_plate_font') {
                     $font = $data->value;
+                }
+                if ($data->key == '_edecal_year') {
+                    $edecalYear = $data->value;
+                }
+                if ($data->key == '_sdecal_year') {
+                    $sdecalYear = $data->value;
                 }
             }
 
@@ -473,7 +481,13 @@ function generateLPTVplateThumbnail($image, $cart_item, $cart_item_key = false)
                 );
                 $url = '/wp-content/plugins/lptv-plates/includes/lpgenI.php?productId=' . $modelId . '&text1=' . urlencode($text1) . '&text2=' . urlencode($text2);
 
-                
+                if ($edecalYear) {
+                    $url .= '&edecal_year=' . urlencode($edecalYear);
+                }
+                if ($sdecalYear) {
+                    $url .= '&sdecal_year=' . urlencode($sdecalYear);
+                }
+
                 // Add font parameters if custom font is selected
                 if ($font_choose == 1 && !empty($font) && $font != '0') {
                     $url .= '&font=' . urlencode($font) . '&font_choose=1';
@@ -497,15 +511,19 @@ function generateLPTVplateThumbnail($image, $cart_item, $cart_item_key = false)
             $text1 = @$cart_item['custom_data']['_plate_text1'];
             $text2 = @$cart_item['custom_data']['_plate_text2'];
             $font = @$cart_item['custom_data']['_plate_font'];
+            $edecalYear = @$cart_item['custom_data']['_edecal_year'];
+            $sdecalYear = @$cart_item['custom_data']['_sdecal_year'];
 
             if ($cart_item_key == false) {
                 $text1 = $cart_item->get_meta('_plate_text1');
                 $text2 = $cart_item->get_meta('_plate_text2');
                 $font = $cart_item->get_meta('_plate_font');
+                $edecalYear = $cart_item->get_meta('_edecal_year');
+                $sdecalYear = $cart_item->get_meta('_sdecal_year');
             }
 
             $modelId = $product->get_meta('_plate_template_id', true);
-            
+
             $font_choose = $product->get_meta('_plate_font_choose', true);
             $text1 = str_replace(
                 ['>', '<', '|'],
@@ -513,10 +531,14 @@ function generateLPTVplateThumbnail($image, $cart_item, $cart_item_key = false)
                 $text1
             );
             $url = get_site_url() . "/wp-content/plugins/lptv-plates/includes/lpgenI.php?productId=$modelId&text1=" . urlencode($text1) . "&text2=" . urlencode($text2);
-            
-            // $url = get_site_url() . "/wp-content/plugins/lptv-plates/includes/lpgenI.php?productId=$modelId&text1=$text1&text2=$text2";
 
-            
+            if ($edecalYear) {
+                $url .= '&edecal_year=' . urlencode($edecalYear);
+            }
+            if ($sdecalYear) {
+                $url .= '&sdecal_year=' . urlencode($sdecalYear);
+            }
+
             // Add font parameters if custom font is selected
             if ($font_choose == 1 && !empty($font) && $font != '0') {
                 $url .= '&font=' . urlencode($font) . '&font_choose=1';

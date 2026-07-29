@@ -34,7 +34,7 @@ $saftydecal = $product->get_meta('_plate_saftydecal', true);
 $statedecal = $product->get_meta('_plate_statedecal', true);
 $customFonts = $product->get_meta('_plate_font_choose', true) == 1;
 
-$isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || $statedecal == 'Y';
+$isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || trim((string) $statedecal) !== '';
 // prepare symbols array
 if (strlen($symbols) > 0) {
     $symbols = explode(',', $symbols);
@@ -101,7 +101,7 @@ if ($product->is_in_stock()) : ?>
                 <!--  decals -->
                 <?php
                 include('edecal.php');
-                if ($statedecal == 'Y') {
+                if (trim((string) $statedecal) !== '') {
                     include('state-decals.php');
                 }
 

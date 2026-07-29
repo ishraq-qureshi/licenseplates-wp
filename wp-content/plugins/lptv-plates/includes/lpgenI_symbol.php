@@ -259,6 +259,99 @@ if ($_GET['screenwidth'] == 1600) {
 		$img9y1 = -1600;
 	}
 }
+// --- Decal character resolution -------------------------------------------------
+// Clicking a decal icon on the product page inserts a placeholder character into
+// text1/text2 at the cursor (':' for emission-test decal, ';' for safety-test decal,
+// plus a per-product character for the state decal, e.g. Berlin's `_plate_statedecal`
+// meta is "d1.png;>" - filename + character). The product's custom font draws a
+// single-color glyph for these characters; here we resolve which real colored decal
+// image should be composited in their place instead of relying on the font glyph.
+$decalsBase      = dirname(__DIR__) . '/decals/';
+$themeDecalsBase = dirname(__DIR__, 3) . '/themes/lptv/images/decals/';
+
+$emissionDecalImages = [
+	'2017' => $decalsBase . 'decal2.png',
+	'2018' => $decalsBase . 'decal11.png',
+	'2019' => $decalsBase . 'decal4.png',
+	'2020' => $decalsBase . 'decal5.png',
+	'2021' => $decalsBase . 'decal1.png',
+	'2022' => $themeDecalsBase . 'e_decal_2022.png',
+	'2023' => $themeDecalsBase . 'e_decal_2023.png',
+	'2024' => $themeDecalsBase . 'e_decal_2024.png',
+	'2025' => $themeDecalsBase . 'e_decal_2025.png',
+	'2026' => $themeDecalsBase . 'e_decal_2026.png',
+];
+$safetyDecalImages = [
+	'2017' => $decalsBase . 'decal7.png',
+	'2018' => $decalsBase . 'decal12.png',
+	'2019' => $decalsBase . 'decal9.png',
+	'2020' => $decalsBase . 'decal10.png',
+	'2021' => $decalsBase . 'decal6.png',
+	'2022' => $themeDecalsBase . 's_decal_2022.png',
+	'2023' => $themeDecalsBase . 's_decal_2023.png',
+	'2024' => $themeDecalsBase . 's_decal_2024.png',
+	'2025' => $themeDecalsBase . 's_decal_2025.png',
+	'2026' => $themeDecalsBase . 's_decal_2026.png',
+];
+
+$edecalYear = isset($_GET['edecal_year']) ? preg_replace('/\D/', '', $_GET['edecal_year']) : '';
+$sdecalYear = isset($_GET['sdecal_year']) ? preg_replace('/\D/', '', $_GET['sdecal_year']) : '';
+
+// character => [image path, target width, target height]
+$decalCharImages = [];
+if ($edecalYear && isset($emissionDecalImages[$edecalYear]) && file_exists($emissionDecalImages[$edecalYear])) {
+	$decalCharImages[':'] = [$emissionDecalImages[$edecalYear], 24, 27];
+}
+if ($sdecalYear && isset($safetyDecalImages[$sdecalYear]) && file_exists($safetyDecalImages[$sdecalYear])) {
+	$decalCharImages[';'] = [$safetyDecalImages[$sdecalYear], 26, 27];
+}
+
+// state decal: product meta stores "filename.png;character"
+$stateDecalRaw = isset($r['statedecal']) ? trim($r['statedecal']) : '';
+if ($stateDecalRaw !== '') {
+	$stateDecalParts = explode(';', $stateDecalRaw);
+	$stateDecalFile  = trim($stateDecalParts[0]);
+	$stateDecalChar  = isset($stateDecalParts[1]) ? trim($stateDecalParts[1]) : '';
+	if ($stateDecalChar !== '' && $stateDecalFile !== '') {
+		$stateDecalPath = $decalsBase . $stateDecalFile;
+		if (file_exists($stateDecalPath)) {
+			$decalCharImages[$stateDecalChar] = [$stateDecalPath, 27, 27];
+		}
+	}
+}
+
+/**
+ * Composite a decal PNG (resizing if needed, preserving alpha transparency) onto $dst.
+ */
+function lptv_composite_decal($dst, $src_path, $dst_x, $dst_y, $target_w, $target_h)
+{
+	$src = @imagecreatefrompng($src_path);
+	if (!$src) {
+		return;
+	}
+	imagesavealpha($src, true);
+	imagealphablending($src, false);
+
+	$src_w = imagesx($src);
+	$src_h = imagesy($src);
+
+	if ($src_w === $target_w && $src_h === $target_h) {
+		$resized = $src;
+	} else {
+		$resized = imagecreatetruecolor($target_w, $target_h);
+		imagesavealpha($resized, true);
+		imagealphablending($resized, false);
+		$transparent = imagecolorallocatealpha($resized, 0, 0, 0, 127);
+		imagefill($resized, 0, 0, $transparent);
+		imagecopyresampled($resized, $src, 0, 0, 0, 0, $target_w, $target_h, $src_w, $src_h);
+		imagedestroy($src);
+	}
+
+	imagealphablending($dst, true);
+	imagecopy($dst, $resized, (int) $dst_x, (int) $dst_y, 0, 0, $target_w, $target_h);
+	imagedestroy($resized);
+}
+
 if ($type == 0) {
 
 	// Allocate Font Colors
@@ -372,6 +465,7 @@ function createImg($font, $fontColor, $fontSize, $xPos, $yPos, $text)
 {
 	global $pic;
 	global $fontPath;
+	global $decalCharImages;
 	$textangle = "0";
 	//echo $text; exit();
 	// Build Font Path
@@ -412,11 +506,49 @@ function createImg($font, $fontColor, $fontSize, $xPos, $yPos, $text)
 	//$start_y = ($yPos - $textheight);
 	$start_y = $yPos;
 
-	//die($pic.' | '.ceil($fontSize).' | '.$textangle.' | '.$start_x.' | '.$start_y.' | '.$fontColor.' | '.$font.' | '.$text);
-	// write text to Image
-	$result = imagettftext($pic, floor($fontSize), $textangle, $start_x, $start_y, $fontColor, $font, "$text");
-	if ($result === false) {
-		error_log("lpgenI_symbol.php: imagettftext failed for font: $font, text: $text");
+	// Does this string contain a decal placeholder character (inserted by clicking a
+	// decal icon on the product page)? If not, render exactly as before (unchanged
+	// behavior/kerning for the vast majority of non-decal products). If so, walk the
+	// string character-by-character so we can composite the real colored decal image
+	// in place of that character's (single-color) font glyph.
+	$hasDecalChar = false;
+	if (!empty($decalCharImages)) {
+		foreach (preg_split('//u', $text, -1, PREG_SPLIT_NO_EMPTY) as $ch) {
+			if (isset($decalCharImages[$ch])) {
+				$hasDecalChar = true;
+				break;
+			}
+		}
+	}
+
+	if (!$hasDecalChar) {
+		//die($pic.' | '.ceil($fontSize).' | '.$textangle.' | '.$start_x.' | '.$start_y.' | '.$fontColor.' | '.$font.' | '.$text);
+		// write text to Image
+		$result = imagettftext($pic, floor($fontSize), $textangle, $start_x, $start_y, $fontColor, $font, "$text");
+		if ($result === false) {
+			error_log("lpgenI_symbol.php: imagettftext failed for font: $font, text: $text");
+		}
+	} else {
+		$penX = $start_x;
+		foreach (preg_split('//u', $text, -1, PREG_SPLIT_NO_EMPTY) as $ch) {
+			if (isset($decalCharImages[$ch])) {
+				list($decalPath, $decalW, $decalH) = $decalCharImages[$ch];
+				$decalY = $start_y - $decalH + floor($fontSize * 0.05);
+				lptv_composite_decal($pic, $decalPath, $penX, $decalY, $decalW, $decalH);
+				$penX += $decalW;
+				continue;
+			}
+			$charBbox = imagettfbbox(floor($fontSize), $textangle, $font, $ch);
+			if ($charBbox === false) {
+				continue;
+			}
+			$charWidth = $charBbox[2] - $charBbox[0];
+			$result    = imagettftext($pic, floor($fontSize), $textangle, $penX, $start_y, $fontColor, $font, $ch);
+			if ($result === false) {
+				error_log("lpgenI_symbol.php: imagettftext failed for font: $font, char: $ch");
+			}
+			$penX += $charWidth;
+		}
 	}
 
 	$imgname = rand('111111111', '999999999');

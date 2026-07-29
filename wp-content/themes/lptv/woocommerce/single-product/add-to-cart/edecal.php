@@ -1,7 +1,7 @@
 <?php define('DIR_WS_CATALOG', '/wp-content/plugins/lptv-plates/'); ?>
 
 <?php if ($edecal == 'Y'): ?>
-    <div>
+    <div data-decal-type="emission">
         <div class="decalslabel">Emission Test Decal</div>
         <div style="width:60%;">
             <div class="grid grid-cols-5" style=width:100%;>
@@ -28,19 +28,19 @@
 
             </div>
             <div class="grid grid-cols-5 text-center" style="width:100%;border-top: 1px solid #ccc;">
-                <div id="adecal2" class="decalyear " data-id="2017">
+                <div class="decalyear " data-id="2017">
                     2017
                 </div>
-                <div id="adecal11" class="decalyear " data-id="2018">
+                <div class="decalyear " data-id="2018">
                     2018
                 </div>
-                <div id="adecal4" class="decalyear " data-id="2019">
+                <div class="decalyear " data-id="2019">
                     2019
                 </div>
-                <div id="adecal5" class="decalyear " data-id="2020">
+                <div class="decalyear " data-id="2020">
                     2020
                 </div>
-                <div id="adecal1" class="decalyear " data-id="2021">
+                <div class="decalyear " data-id="2021">
                     2021
                 </div>
             </div>
@@ -70,19 +70,19 @@
             </div>
 
             <div class="grid grid-cols-5 text-center" style="width:100%;border-top: 1px solid #ccc;">
-                <div id="adecal2" class="decalyear " data-id="2022">
+                <div class="decalyear " data-id="2022">
                     2022
                 </div>
-                <div id="adecal11" class="decalyear " data-id="2023">
+                <div class="decalyear " data-id="2023">
                     2023
                 </div>
-                <div id="adecal4" class="decalyear " data-id="2024">
+                <div class="decalyear " data-id="2024">
                     2024
                 </div>
-                <div id="adecal5" class="decalyear " data-id="2025">
+                <div class="decalyear " data-id="2025">
                     2025
                 </div>
-                <div id="adecal1" class="decalyear " data-id="2026">
+                <div class="decalyear " data-id="2026">
                     2026
                 </div>
             </div>
@@ -92,7 +92,7 @@
 <?php endif; ?>
 
 <?php if ($saftydecal == 'Y'): ?>
-    <div class="mt-4">
+    <div class="mt-4" data-decal-type="safety">
         <div class="decalslabel">Safety Test Decal</div>
         <div style="width:60%;">
             <div class="grid grid-cols-5" style="width:100%;">
@@ -118,60 +118,60 @@
                 </div>
             </div>
             <div class="grid grid-cols-5 text-center" style="width:100%;border-top: 1px solid #ccc;">
-                <div id="adecal2" class="decalyear " data-id="2017">
+                <div class="decalyear " data-id="2017">
                     2017
                 </div>
-                <div id="adecal11" class="decalyear " data-id="2018">
+                <div class="decalyear " data-id="2018">
                     2018
                 </div>
-                <div id="adecal4" class="decalyear " data-id="2019">
+                <div class="decalyear " data-id="2019">
                     2019
                 </div>
-                <div id="adecal5" class="decalyear " data-id="2020">
+                <div class="decalyear " data-id="2020">
                     2020
                 </div>
-                <div id="adecal1" class="decalyear " data-id="2021">
+                <div class="decalyear " data-id="2021">
                     2021
                 </div>
             </div>
 
             <div class="grid grid-cols-5" style="width:100%;border-top: 1px solid #ccc;">
-                <div id="s_decal_2022" class="symbolclick  " rel=":" data-id="2022">
+                <div id="s_decal_2022" class="symbolclick  " rel=";" data-id="2022">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2022.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2022.png" alt="Decal 2022" width="110px" /></div>
                 </div>
-                <div id="s_decal_2023" class="symbolclick  " rel=":" data-id="2023">
+                <div id="s_decal_2023" class="symbolclick  " rel=";" data-id="2023">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2023.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2023.png" alt="Decal 2023" width="110px" /></div>
                 </div>
-                <div id="s_decal_2024" class="symbolclick  " rel=":" data-id="2024">
+                <div id="s_decal_2024" class="symbolclick  " rel=";" data-id="2024">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2024.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2024.png" alt="Decal 2024" width="110px" /></div>
                 </div>
-                <div id="s_decal_2025" class="symbolclick  " rel=":" data-id="2025">
+                <div id="s_decal_2025" class="symbolclick  " rel=";" data-id="2025">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2025.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2025.png" alt="Decal 2025" width="110px" /></div>
                 </div>
-                <div id="s_decal_2026" class="symbolclick  " rel=":" data-id="2026">
+                <div id="s_decal_2026" class="symbolclick  " rel=";" data-id="2026">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2026.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2026.png" alt="Decal 2026" width="110px" /></div>
                 </div>
             </div>
 
             <div class="grid grid-cols-5 text-center" style="width:100%;border-top: 1px solid #ccc;">
-                <div id="adecal2" class="decalyear " data-id="2022">
+                <div class="decalyear " data-id="2022">
                     2022
                 </div>
-                <div id="adecal11" class="decalyear " data-id="2023">
+                <div class="decalyear " data-id="2023">
                     2023
                 </div>
-                <div id="adecal4" class="decalyear " data-id="2024">
+                <div class="decalyear " data-id="2024">
                     2024
                 </div>
-                <div id="adecal5" class="decalyear " data-id="2025">
+                <div class="decalyear " data-id="2025">
                     2025
                 </div>
-                <div id="adecal1" class="decalyear " data-id="2026">
+                <div class="decalyear " data-id="2026">
                     2026
                 </div>
             </div>
@@ -180,28 +180,56 @@
     </div>
 <?php endif; ?>
 
+<input type="hidden" name="_edecal_year" id="_edecal_year" />
+<input type="hidden" name="_sdecal_year" id="_sdecal_year" />
 
 <script>
     jQuery(function($) {
 
-        $('.symbolclick, .decalyear').click(function() {
-            let symbol = $(this).attr('rel')
-            if (symbol) {
-                appendSymbol(symbol)
+        $('[data-decal-type] .symbolclick, [data-decal-type] .decalyear').click(function() {
+            let $wrapper = $(this).closest('[data-decal-type]');
+            let type = $wrapper.data('decal-type');
+            let id = $(this).attr('data-id');
+
+            // only insert a placeholder character the first time this decal type is
+            // chosen for the current selection - re-picking a different year for the
+            // same decal type just updates the year, it doesn't insert another symbol.
+            let alreadySelected = $wrapper.find('.selected').length > 0;
+
+            // set the year hidden field BEFORE inserting the symbol, since appendSymbol()
+            // triggers the live-preview refresh (via a 'keyup' on the text field) - the
+            // preview request needs the up-to-date year already in place.
+            if (type === 'emission') {
+                setEdecalYear(id);
+            } else if (type === 'safety') {
+                setSdecalYear(id);
             }
 
-            let id = $(this).attr('data-id');
-            // mark all such symbols as selected
-            $(`.symbolclick, .decalyear`).removeClass('selected');
+            // scope the "selected" highlight to just this decal type's own elements
+            $wrapper.find('.symbolclick, .decalyear').removeClass('selected');
+            $wrapper.find(`[data-id="${id}"]`).addClass('selected');
 
-            $(`.symbolclick[data-id="${id}"]`).addClass('selected');
-            $(`.decalyear[data-id="${id}"]`).addClass('selected');
-
-            setDecalYear(id);
-
+            if (!alreadySelected) {
+                let symbol = $(this).attr('rel') || $wrapper.find('.symbolclick').first().attr('rel');
+                if (symbol) {
+                    appendSymbol(symbol);
+                }
+            } else {
+                // year changed for an already-inserted decal - refresh the preview
+                // even though no new character was inserted (no keyup fires otherwise).
+                $('#plateText1, #plateText2').first().trigger('keyup');
+            }
         });
 
     });
+
+    function setEdecalYear(year) {
+        jQuery('#_edecal_year').val(year);
+    }
+
+    function setSdecalYear(year) {
+        jQuery('#_sdecal_year').val(year);
+    }
 </script>
 
 <style>
