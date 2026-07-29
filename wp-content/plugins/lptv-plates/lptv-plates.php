@@ -318,8 +318,51 @@ function lptvplate_print_metas($item_id, $item, $order)
                 echo '<br/>decal year:' . $decal_year;
             }
         }
-        
+
     }
+}
+
+// show font type + manufacturing instructions on the admin order-edit screen
+add_action('woocommerce_after_order_itemmeta', 'lptvplate_admin_order_item_extra_info', 10, 3);
+function lptvplate_admin_order_item_extra_info($item_id, $item, $product)
+{
+    if (!is_admin() || !$product || $product->get_type() !== 'lptvplate') {
+        return;
+    }
+
+    $font_choose = $product->get_meta('_plate_font_choose', true);
+    $font        = ('1' === (string) $font_choose)
+        ? $item->get_meta('_plate_font')
+        : $product->get_meta('_plate_font1', true);
+
+    $instructions_raw   = (string) $product->get_meta('_plate_products_instructions', true);
+    $instructions_text  = lptvplate_instructions_to_plain_text($instructions_raw);
+
+    echo '<div class="lptv-admin-order-item-extra" style="margin-top:8px;">';
+    if ($font) {
+        echo '<p style="margin:0 0 4px;"><strong>' . esc_html__('Font Type:', 'lptv-plates') . '</strong> ' . esc_html(strtoupper($font)) . '</p>';
+    }
+    if ('' !== $instructions_text) {
+        echo '<p style="margin:0;"><strong>' . esc_html__('Manufacturing Instructions:', 'lptv-plates') . '</strong> ' . esc_html($instructions_text) . '</p>';
+    }
+    echo '</div>';
+}
+
+/**
+ * Convert an HTML manufacturing-instructions field into clean single-line plain text
+ * (strips tags, decodes entities, normalizes <br>/</p> into spaces, collapses whitespace).
+ */
+function lptvplate_instructions_to_plain_text($html)
+{
+    $html = (string) $html;
+    $html = preg_replace('/<br\s*\/?>/i', ' ', $html);
+    $html = preg_replace('/<\/p>/i', ' ', $html);
+    $text = wp_strip_all_tags($html);
+    $text = html_entity_decode($text, ENT_QUOTES, 'UTF-8');
+    $text = str_replace("\xC2\xA0", ' ', $text);
+    $text = preg_replace('/\s+/', ' ', $text);
+
+    return trim($text);
 }
 
 

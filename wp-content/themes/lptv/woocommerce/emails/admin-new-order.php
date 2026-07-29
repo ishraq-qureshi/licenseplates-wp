@@ -75,8 +75,18 @@ foreach ( $order->get_items() as $item_id => $item ) :
 	$text1 = trim( (string) $item->get_meta( '_plate_text1' ) );
 	$text2 = trim( (string) $item->get_meta( '_plate_text2' ) );
 
-	$instructions      = $product ? (string) $product->get_meta( '_plate_products_instructions', true ) : '';
-	$instructions_text = trim( wp_strip_all_tags( html_entity_decode( $instructions, ENT_QUOTES, 'UTF-8' ) ) );
+	$instructions_raw  = $product ? (string) $product->get_meta( '_plate_products_instructions', true ) : '';
+	$instructions_text = function_exists( 'lptvplate_instructions_to_plain_text' )
+		? lptvplate_instructions_to_plain_text( $instructions_raw )
+		: trim( wp_strip_all_tags( $instructions_raw ) );
+
+	$font = '';
+	if ( $product ) {
+		$font_choose = $product->get_meta( '_plate_font_choose', true );
+		$font        = ( '1' === (string) $font_choose )
+			? $item->get_meta( '_plate_font' )
+			: $product->get_meta( '_plate_font1', true );
+	}
 	?>
 
 	<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 25px; border-bottom: 1px solid #dddddd; padding-bottom: 20px;">
@@ -104,7 +114,11 @@ foreach ( $order->get_items() as $item_id => $item ) :
 				</div>
 				<?php if ( '' !== $instructions_text ) : ?>
 					<strong style="display: block; margin-bottom: 4px;"><?php esc_html_e( 'MANUFACTURING INSTRUCTIONS:', 'woocommerce' ); ?></strong>
-					<div><?php echo wp_kses_post( $instructions ); ?></div>
+					<div><?php echo esc_html( $instructions_text ); ?></div>
+				<?php endif; ?>
+				<?php if ( $font ) : ?>
+					<strong style="display: block; margin-top: 8px; margin-bottom: 4px;"><?php esc_html_e( 'FONT TYPE:', 'woocommerce' ); ?></strong>
+					<div><?php echo esc_html( strtoupper( $font ) ); ?></div>
 				<?php endif; ?>
 			</td>
 		</tr>
