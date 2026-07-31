@@ -263,3 +263,16 @@ add_filter( 'woocommerce_email_styles', function ( $css, $email ) {
     }
     return $css;
 }, 10, 2 );
+
+// Remove WooCommerce's default "mobile app" upsell ("Congratulations on the sale...
+// Collect payments easily...") from the footer of the admin "New Order" email only -
+// it's a manufacturing work order sheet, not a stock WC email.
+add_action( 'init', function () {
+    if ( ! function_exists( 'WC' ) ) {
+        return;
+    }
+    $mailer = WC()->mailer();
+    if ( isset( $mailer->emails['WC_Email_New_Order'] ) ) {
+        remove_action( 'woocommerce_email_footer', array( $mailer->emails['WC_Email_New_Order'], 'mobile_messaging' ), 9 );
+    }
+}, 20 );
