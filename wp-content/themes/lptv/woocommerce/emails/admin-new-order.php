@@ -20,10 +20,10 @@ $order_number = $order->get_order_number();
 $order_date   = wc_string_to_datetime( $order->get_date_created() )->date_i18n( 'm/d/Y' );
 ?>
 
-<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 0px; padding-bottom:5px;">
-	<tr>
-		<td align="left" style="padding-bottom: 0px; padding-left: 0px;">
-			<img src="<?php echo $logo_url; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="150px" style="display: block;" />
+<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 0px; padding-bottom:5px; border: 0px;">
+	<tr style="border: 0px;">
+		<td align="left" style="padding-bottom: 0px; padding-left: 0px; border: 0px;">
+			<img style="display:block; width:150px; height:auto;" src="<?php echo $logo_url; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="150px" style="display: block;" />
 		</td>
 	</tr>
 	<tr>
@@ -36,13 +36,16 @@ $order_date   = wc_string_to_datetime( $order->get_date_created() )->date_i18n( 
 			<strong style="font-size: 29px; color: #111111;"><?php echo esc_html( $order_date ); ?></strong>
 		</td>
 	</tr>
-	<tr>
-		<td style="border-top: 2px solid #111111; padding: 0px;"></td>
-		<td style="border-top: 2px solid #111111; padding: 0px;"></td>
-	</tr>
-</table>
 
-<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 0px;">
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style=" border: 0px; margin-bottom: 5px;" style="margin-bottom:25px; border:0 !important; border-collapse:collapse; border-spacing:0;">
+		<tbody style="border:0;">
+			<tr style="border:0;">
+		<td style="border-top: 2px solid #111111; padding: 0px;  mso-line-height-rule:exactly;"></td>
+		<td style="border-top: 2px solid #111111; padding: 0px; mso-line-height-rule:exactly;"></td>
+	</tr>
+	</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 0px; border: 0px;">
 	<tr>
 		<td width="50%" valign="top" style="text-align: center; padding-bottom: 6px; padding-right: 10px;">
 			<strong style="display: block; padding-bottom: 10px; font-size:16px; font-weight:600;"><?php esc_html_e( 'BILLING ADDRESS', 'woocommerce' ); ?></strong>
@@ -61,15 +64,14 @@ $order_date   = wc_string_to_datetime( $order->get_date_created() )->date_i18n( 
 		</td>
 	</tr>
 </table>
-
-	<table cellpadding="0" cellspacing="0" width="100%" style=" border-bottom: 0px solid #dddddd; padding-top: 5px;">
-		<tbody>
-			<tr>
-		<td style="border-top: 2px solid #111111; padding: 0px; padding-bottom: 20px;"></td>
-		<td style="border-top: 2px solid #111111; padding: 0px; padding-bottom: 20px;"></td>
+<table cellpadding="0" cellspacing="0" width="100%" style=" border: 0px; margin-top: 5px;" style="margin-bottom:25px; border:0 !important; border-collapse:collapse; border-spacing:0;">
+		<tbody style="border:0;">
+			<tr style="border:0;">
+		<td style="border-top: 2px solid #111111; padding: 0px; padding-bottom: 20px; mso-line-height-rule:exactly;"></td>
+		<td style="border-top: 2px solid #111111; padding: 0px; padding-bottom: 20px; mso-line-height-rule:exactly;"></td>
 	</tr>
+		</tbody>
 	</table>
-
 <?php
 foreach ( $order->get_items() as $item_id => $item ) :
 	if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
@@ -98,12 +100,11 @@ foreach ( $order->get_items() as $item_id => $item ) :
 			: $product->get_meta( '_plate_font1', true );
 	}
 	?>
-	<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 25px; border-bottom: 0px solid #dddddd; padding-bottom: 20px; padding-top: 5px;">
-
-		<tr>
-			<td width="55%" valign="top" style="padding:0px; padding-right: 15px; font-weight:600; ">
+	<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 25px; border: none; padding-bottom: 20px; padding-top: 5px;  border-collapse:collapse; border-spacing:0;">
+		<tr style="border:0;">
+			<td width="55%" valign="top" style="padding:0px; padding-right: 16px; font-weight:600; ">
 				<?php echo wp_kses_post( $image ); ?>
-				<p style="margin: 10px 0 0; font-size:15px; line-height:120%; text-transform: uppercase;">
+				<p style="margin: 10px 0 0; font-size:15px; line-height:120%; text-transform: uppercase; border:0;">
 					<?php echo wp_kses_post( apply_filters( 'woocommerce_order_item_name', $item->get_name(), $item, false ) ); ?>
 					<?php if ( $sku ) : ?>
 						<span style="color: <?php echo esc_attr( $brand_red ); ?>;">(#<?php echo esc_html( $sku ); ?>)</span>
@@ -140,7 +141,7 @@ foreach ( $order->get_items() as $item_id => $item ) :
 
 <?php if ( $order->get_customer_note() ) : ?>
 	<p style="margin: 0 0 16px;font-size: 16px;margin-bottom: 25px;line-height: 1.1em;">
-		<strong style="display: block; margin-bottom: 4px;"><?php esc_html_e( 'CUSTOMER NOTES:', 'woocommerce' ); ?></strong>
+		<strong style="display: block; margin-bottom: 4px;"><?php esc_html_e( 'CUSTOMER NOTES:', 'woocommerce' ); ?></strong><br>
 		<span style="font-size: 16px;font-weight: 600; color: <?php echo esc_attr( $brand_red ); ?>;"><?php echo wp_kses_post( nl2br( esc_html( $order->get_customer_note() ) ) ); ?></span>
 	</p>
 <?php endif; ?>
