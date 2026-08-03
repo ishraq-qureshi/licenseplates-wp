@@ -260,6 +260,7 @@ add_filter( 'woocommerce_email_styles', function ( $css, $email ) {
         $css .= "\n#template_header { background-color: transparent !important; padding: 0 !important; border: 0 !important; }\n";
         $css .= "#template_header h1, #template_header h1 a { display: none !important; }\n";
         $css .= "#template_header_image { display: none !important; }\n";
+        $css .= "#header_wrapper { padding: 0 !important; display: none !important; }\n";
     }
     return $css;
 }, 10, 2 );
