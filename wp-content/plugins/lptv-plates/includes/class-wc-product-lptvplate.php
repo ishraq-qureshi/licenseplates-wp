@@ -26,8 +26,8 @@ class WC_Product_LPTVplate extends WC_Product_Simple
 		$modelId = $this->get_meta('_plate_template_id', true);
 		$imageFilename = $this->get_meta('_plate_products_image', true);
 		if ($imageFilename) {
-			$src = '/wp-content/plugins/lptv-plates/images/' . $imageFilename;
-			return '<img src="' . $src . '" alt="' . $this->get_title() . '"/>';
+			$src = home_url('/wp-content/plugins/lptv-plates/images/' . $imageFilename);
+			return '<img src="' . esc_url($src) . '" alt="' . esc_attr($this->get_title()) . '"/>';
 		}
 
 		return parent::get_image($size, $attr, $placeholder);

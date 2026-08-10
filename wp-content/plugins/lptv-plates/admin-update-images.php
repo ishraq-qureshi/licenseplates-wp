@@ -331,7 +331,7 @@ function lptv_ajax_process_images() {
         $template_id = $product->get_meta('_plate_template_id', true);
         $products_image = $product->get_meta('_plate_products_image', true);
         
-        if (empty($template_id)) {
+        if (empty($template_id) && empty($products_image)) {
             $skipped++;
             continue;
         }
@@ -450,8 +450,8 @@ function lptv_ajax_check_missing() {
         
         $template_id = $product->get_meta('_plate_template_id', true);
         $products_image = $product->get_meta('_plate_products_image', true);
-        
-        if (empty($template_id)) {
+
+        if (empty($template_id) && empty($products_image)) {
             continue;
         }
         
