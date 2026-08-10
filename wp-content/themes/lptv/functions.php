@@ -1,13 +1,13 @@
 <?php
 /**
-* Begin Include Files 
+* Begin Include Files
 */
 require_once(dirname(__FILE__).'/includes/theme-cpts.php');
 require_once(dirname(__FILE__).'/includes/theme-functions.php');
 require_once(dirname(__FILE__).'/includes/theme-shortcodes.php');
 
-/** 
-* Begin Wordpress Menu 
+/**
+* Begin Wordpress Menu
 */
 add_theme_support('nav-menus');
 
@@ -16,7 +16,7 @@ function lptv_menus_init() {
         'menu-1' => __( 'Main Menu', 'lptv' ),
         'menu-2' => __( 'Footer Menu', 'lptv' ),
         'menu-3' => __( 'Menu', 'lptv' ),
-    ) );            
+    ) );
 }
 add_action('init', 'lptv_menus_init');
 
@@ -33,7 +33,7 @@ function lptv_widgets_init() {
     ) );
     // Footer
     register_sidebar( array(
-        'name'          => __( 'Footer Address', 'lptv' ), 
+        'name'          => __( 'Footer Address', 'lptv' ),
         'id'            => 'address',
         'before_widget' => '<ul>',
         'after_widget'  => '</ul>'
@@ -46,7 +46,7 @@ function restrict_page_deletion($post_ID){
     $user = get_current_user_id();
     $restricted_pageId = 398;
 
-    if($post_ID == $restricted_pageId) {       
+    if($post_ID == $restricted_pageId) {
         echo "You are not authorized to delete this page.";
         exit;
     }
@@ -92,7 +92,7 @@ function post__shortcode( $atts ) {
     }
     return '';
 }
-add_shortcode( 'post', 'post__shortcode' ); 
+add_shortcode( 'post', 'post__shortcode' );
 
 // CATEGORY TEXT EDITOR --- START
 if( is_admin() ) {
@@ -109,7 +109,7 @@ function filter_wordpress_category_editor($tag) {
             <th scope="row" valign="top"><label for="description"><?php _ex('Description', 'Taxonomy Description'); ?></label></th>
             <td>
             <?php
-                $settings = array('wpautop' => true, 'media_buttons' => true, 'quicktags' => true, 'textarea_rows' => '15', 'textarea_name' => 'description' );  
+                $settings = array('wpautop' => true, 'media_buttons' => true, 'quicktags' => true, 'textarea_rows' => '15', 'textarea_name' => 'description' );
           wp_editor(html_entity_decode($tag->description , ENT_QUOTES, 'UTF-8'), 'description1', $settings);
             ?>
             <br />
@@ -150,19 +150,19 @@ add_action('parse_request', 'handle_dotted_product_urls', 5);
 function handle_dotted_product_urls($wp) {
     if (strpos($_SERVER['REQUEST_URI'], '.-') !== false) {
         global $wpdb;
-        
+
         // Extract the slug from URL
         $request_slug = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-        
+
         // Find product by original post_name (with dot)
         $product_id = $wpdb->get_var($wpdb->prepare(
-            "SELECT ID FROM {$wpdb->posts} 
-             WHERE post_name = %s 
-             AND post_type = 'product' 
-             AND post_status = 'publish'", 
+            "SELECT ID FROM {$wpdb->posts}
+             WHERE post_name = %s
+             AND post_type = 'product'
+             AND post_status = 'publish'",
             $request_slug
         ));
-        
+
         if ($product_id) {
             $wp->query_vars = [
                 'post_type' => 'product',
@@ -232,7 +232,7 @@ function remove_block_inline_styles() {
             wp_deregister_style($style_handle);
         }
     }
-    
+
     // remove global styles inline css
     wp_dequeue_style('global-styles');
     wp_dequeue_style('wp-block-library');
@@ -261,7 +261,9 @@ add_filter( 'woocommerce_email_styles', function ( $css, $email ) {
         $css .= "#template_header h1, #template_header h1 a { display: none !important; }\n";
         $css .= "#template_header_image { display: none !important; }\n";
         $css .= "#header_wrapper { padding: 0 !important; display: none !important; }\n";
-    }
+        $css .= "#body_content_inner_cell { padding: 5px 10px 5px 10px !important}\n";
+        $css .= "#template_container { width: 700px !important; max-width: 700px !important;}\n";
+        }
     return $css;
 }, 10, 2 );
 
