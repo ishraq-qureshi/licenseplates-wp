@@ -191,6 +191,23 @@ if (array_intersect($dotDashFonts, $activeFonts)) {
 
 mysqli_close($mysqli);
 
+// build trigger-char -> decal image path map from _plate_statedecal (format: "filename.png;char[,filename2.png;char2,...]")
+$decalMap = [];
+if (!empty($params['statedecal'])) {
+	foreach (explode(',', $params['statedecal']) as $decalEntry) {
+		$decalParts = array_pad(explode(';', trim($decalEntry)), 2, '');
+		$decalFilename = strtolower(trim($decalParts[0]));
+		$decalTrigger  = $decalParts[1];
+		if ($decalFilename === '' || $decalTrigger === '') {
+			continue;
+		}
+		$decalFilePath = __DIR__ . '/../largedecal/' . $decalFilename;
+		if (file_exists($decalFilePath)) {
+			$decalMap[$decalTrigger] = $decalFilePath;
+		}
+	}
+}
+
 $textangle = "0";
 // Build Image Path
 //$pic = strtolower("$imagePath/blank$productId" . ".png");
@@ -206,6 +223,10 @@ if (!file_exists($pic)) {
 try {
 	// create pic
 	$pic = imagecreatefrompng($pic);
+	// blank plate templates are palette (indexed-color) PNGs, which can't alpha-blend a
+	// semi-transparent decal overlay correctly (GD renders a solid box instead of blending it in).
+	// Convert to true color so decal compositing below works; a no-op if already true color.
+	imagepalettetotruecolor($pic);
 	//die(imagesx($pic).' | '.imagesy($pic));
 } catch (Exception $e) {
 	var_dump($e->getMessage());
@@ -280,9 +301,17 @@ if ($type == 0) {
 		//$text =strtoupper($text1);
 		$text = $text1;
 		if (strlen($text1) <= $minChar1) { // use large font
-			createImg($font1a, $fontColor1a, $fontSize1a, $xPos1, $yPos1, $text);
+			if (textContainsDecal($text, $decalMap)) {
+				drawTextWithDecal($font1a, $fontColor1a, $fontSize1a, $xPos1, $yPos1, $text, $decalMap);
+			} else {
+				createImg($font1a, $fontColor1a, $fontSize1a, $xPos1, $yPos1, $text);
+			}
 		} else { // use small font
-			createImg($font1, $fontColor1, $fontSize1, $xPos1, $yPos1, $text);
+			if (textContainsDecal($text, $decalMap)) {
+				drawTextWithDecal($font1, $fontColor1, $fontSize1, $xPos1, $yPos1, $text, $decalMap);
+			} else {
+				createImg($font1, $fontColor1, $fontSize1, $xPos1, $yPos1, $text);
+			}
 		}
 	}
 
@@ -292,9 +321,17 @@ if ($type == 0) {
 		$text = $text2;
 		if (strlen($text2) <= $minChar2) { // use large font
 
-			createImg($font2a, $fontColor2a, $fontSize2a, $xPos2, $yPos2, $text);
+			if (textContainsDecal($text, $decalMap)) {
+				drawTextWithDecal($font2a, $fontColor2a, $fontSize2a, $xPos2, $yPos2, $text, $decalMap);
+			} else {
+				createImg($font2a, $fontColor2a, $fontSize2a, $xPos2, $yPos2, $text);
+			}
 		} else { // use small font
-			createImg($font2, $fontColor2, $fontSize2, $xPos2, $yPos2, $text);
+			if (textContainsDecal($text, $decalMap)) {
+				drawTextWithDecal($font2, $fontColor2, $fontSize2, $xPos2, $yPos2, $text, $decalMap);
+			} else {
+				createImg($font2, $fontColor2, $fontSize2, $xPos2, $yPos2, $text);
+			}
 		}
 	}
 } else { //use images for fonts
@@ -430,6 +467,124 @@ function createImg($font, $fontColor, $fontSize, $xPos, $yPos, $text)
 
 	$_SESSION['image_' . $_GET['productId']] = $orderpath;
 	//    imagettftext($pic, floor($fontSize), $textangle, $start_x, $start_y, $fontColor, $font, "$textwidth");
+}
+
+function textContainsDecal($text, $decalMap)
+{
+	foreach (array_keys($decalMap) as $trigger) {
+		if ($trigger !== '' && strpos($text, $trigger) !== false) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+// Like createImg(), but for text containing a decal trigger character: splits the text into
+// plain-text/decal runs and draws them left-to-right, centered as a whole around $xPos, so a
+// configured decal image (e.g. a state coat-of-arms) renders inline instead of the character
+// being drawn as an (undefined) glyph via imagettftext.
+function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $decalMap)
+{
+	global $pic, $fontPath;
+	$textangle = "0";
+
+	$font = $fontPath . $font . ".ttf";
+	if (!file_exists($font)) {
+		$font = strtolower($font);
+		if (!file_exists($font)) {
+			error_log("lpgenI_symbol.php: Font file not found: $font");
+
+			return;
+		}
+	}
+
+	$fontSizePt = ($fontSize / 96) * 72;
+
+	// split into ordered runs of plain text / single decal characters
+	$runs = [];
+	$buffer = '';
+	foreach (preg_split('//u', $text, -1, PREG_SPLIT_NO_EMPTY) as $char) {
+		if (isset($decalMap[$char])) {
+			if ($buffer !== '') {
+				$runs[] = ['type' => 'text', 'value' => $buffer];
+				$buffer = '';
+			}
+			$runs[] = ['type' => 'decal', 'value' => $decalMap[$char]];
+		} else {
+			$buffer .= $char;
+		}
+	}
+	if ($buffer !== '') {
+		$runs[] = ['type' => 'text', 'value' => $buffer];
+	}
+
+	// measure a representative text run to derive the decal's target height
+	$referenceHeight = floor($fontSizePt);
+	foreach ($runs as $run) {
+		if ($run['type'] === 'text') {
+			$refBbox = imagettfbbox(floor($fontSizePt), $textangle, $font, $run['value']);
+			if ($refBbox !== false) {
+				$referenceHeight = abs($refBbox[1] - $refBbox[7]);
+			}
+			break;
+		}
+	}
+
+	$gap = max(2, (int) floor($fontSizePt * 0.08));
+	$measured = [];
+	$totalWidth = 0;
+	foreach ($runs as $run) {
+		if ($run['type'] === 'text') {
+			$bbox = imagettfbbox(floor($fontSizePt), $textangle, $font, $run['value']);
+			if ($bbox === false) {
+				continue;
+			}
+			$width = $bbox[2] - $bbox[0];
+			$measured[] = ['type' => 'text', 'value' => $run['value'], 'width' => $width];
+			$totalWidth += $width;
+		} else {
+			$decalImg = @imagecreatefrompng($run['value']);
+			if (!$decalImg) {
+				continue;
+			}
+			$scale = $referenceHeight > 0 ? $referenceHeight / imagesy($decalImg) : 1;
+			$width  = (int) round(imagesx($decalImg) * $scale);
+			$height = (int) round(imagesy($decalImg) * $scale);
+			$measured[] = ['type' => 'decal', 'image' => $decalImg, 'width' => $width, 'height' => $height];
+			$totalWidth += $width;
+		}
+	}
+	$totalWidth += max(0, count($measured) - 1) * $gap;
+
+	$cursorX = $xPos - $totalWidth / 2.0;
+	foreach ($measured as $run) {
+		if ($run['type'] === 'text') {
+			imagettftext($pic, floor($fontSizePt), $textangle, (int) round($cursorX), $yPos, $fontColor, $font, $run['value']);
+		} else {
+			imagealphablending($pic, true);
+			imagesavealpha($pic, true);
+			imagecopyresampled(
+				$pic,
+				$run['image'],
+				(int) round($cursorX),
+				(int) round($yPos - $run['height']),
+				0,
+				0,
+				$run['width'],
+				$run['height'],
+				imagesx($run['image']),
+				imagesy($run['image'])
+			);
+			imagedestroy($run['image']);
+		}
+		$cursorX += $run['width'] + $gap;
+	}
+
+	$imgname   = rand('111111111', '999999999');
+	$orderpath = "./images/pngs/test/new_" . $imgname . ".png";
+	imagepng($pic, $orderpath);
+	$_SESSION['image_' . $_GET['productId']] = $orderpath;
 }
 // function createImg($font, $fontColor, $fontSize, $xPos, $yPos, $text)
 // {

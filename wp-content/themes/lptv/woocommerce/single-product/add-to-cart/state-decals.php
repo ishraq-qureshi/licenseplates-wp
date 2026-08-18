@@ -1,22 +1,21 @@
 <div class="decalslabel">State Decal</div>
 <?php
-$statedecals = ['tirol.png'];
+// $statedecal is set by the including template (lptvplate.php) from the product's
+// _plate_statedecal meta, format: "filename.png;triggerchar[,filename2.png;triggerchar2,...]"
+$statedecalEntries = array_filter(array_map('trim', explode(',', (string) $statedecal)));
 
-foreach ($statedecals as $val) {
-    $filename1 = explode(";", strtolower($val));
-    $filename = explode(".", strtolower($filename1[0]));
-    $filetemp = explode(".", strtolower($filename1[0]));
-    $filename = $val[0];
-    if ($filetemp[0] == '') $filetemp[0] = 'd';
-    if ($filename1[1] == '"') {
+foreach ($statedecalEntries as $decalEntry) {
+    $decalParts = array_pad(explode(';', $decalEntry), 2, '');
+    $filename = strtolower(trim($decalParts[0]));
+    $trigger = $decalParts[1];
+    if ($filename === '' || $trigger === '') {
+        continue;
+    }
+    $baseName = pathinfo($filename, PATHINFO_FILENAME);
 ?>
-
-        <div id="<?php echo $filename; ?>" class="symbolclick customizeproductimage imgselector <?php echo $decal20; ?>" onClick="changeimg('<?php echo $filetemp[0]; ?>')" rel='<?php echo $filename1[1]; ?>'>
-        <?php } else { ?>
-            <div id="<?php echo $filename; ?>" class="symbolclick customizeproductimage imgselector <?php echo $decal20; ?>" onClick="changeimg('<?php echo $filetemp[0]; ?>')" rel="<?php echo $filename1[1]; ?>">
-            <?php } ?>
-            <img src="<?php echo DIR_WS_CATALOG; ?>decals/<?php echo $filename1[0]; ?>" alt="Decal" />
-            <div class="largedecal"><img src="<?php echo DIR_WS_CATALOG; ?>largedecal/<?php echo $filename1[0]; ?>" alt="Decal"></div>
-            </div>
-
-        <?php } ?>
+    <!-- click is wired up by the shared '.symbolclick, .decalyear' handler in edecal.php, via the rel attribute -->
+    <div id="<?php echo esc_attr($baseName); ?>" class="symbolclick customizeproductimage imgselector" data-id="<?php echo esc_attr($baseName); ?>" rel="<?php echo esc_attr($trigger); ?>">
+        <img src="<?php echo DIR_WS_CATALOG; ?>decals/<?php echo esc_attr($filename); ?>" alt="Decal" />
+        <div class="largedecal"><img src="<?php echo DIR_WS_CATALOG; ?>largedecal/<?php echo esc_attr($filename); ?>" alt="Decal"></div>
+    </div>
+<?php } ?>
