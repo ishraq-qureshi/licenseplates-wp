@@ -32,6 +32,7 @@ $template_id = $product->get_meta('_plate_template_id', true);
 $edecal = $product->get_meta('_plate_edecal', true);
 $saftydecal = $product->get_meta('_plate_saftydecal', true);
 $statedecal = $product->get_meta('_plate_statedecal', true);
+$syncDecalYears = $product->get_meta('_plate_syncdecalyears', true) === 'Y';
 $customFonts = $product->get_meta('_plate_font_choose', true) == 1;
 
 $isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || !empty($statedecal);
@@ -99,6 +100,7 @@ if ($product->is_in_stock()) : ?>
                 <h4>Select different date decals by clicking on desired<span>Choice below, state decal will be that of the plate that was chosen</span></h4>
 
                 <!--  decals -->
+                <script>window.lptvSyncDecalYears = <?php echo $syncDecalYears ? 'true' : 'false'; ?>;</script>
                 <?php
                 include('edecal.php');
                 if (!empty($statedecal)) {
@@ -128,6 +130,8 @@ if ($product->is_in_stock()) : ?>
         ?>
 
         <input type="hidden" name="_decal_year" id="_decal_year" />
+        <input type="hidden" name="_edecal_year" id="_edecal_year" />
+        <input type="hidden" name="_sdecal_year" id="_sdecal_year" />
         <input type="hidden" name="_plate_holder_id" value="">
 
         <button type="submit" name="add-to-cart"
@@ -174,8 +178,12 @@ if ($product->is_in_stock()) : ?>
         return false;
     }
 
-    function setDecalYear(year) {
-        jQuery('#_decal_year').val(year);
+    function setDecalYear(type, year) {
+        if (type === 'emission' && year) {
+            jQuery('#_edecal_year').val(year);
+        } else if (type === 'safety' && year) {
+            jQuery('#_sdecal_year').val(year);
+        }
     }
 
     // alert

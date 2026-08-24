@@ -1,4 +1,5 @@
 <div class="decalslabel">State Decal</div>
+<div data-decal-type="state">
 <?php
 // $statedecal is set by the including template (lptvplate.php) from the product's
 // _plate_statedecal meta, format: "filename.png;triggerchar[,filename2.png;triggerchar2,...]"
@@ -14,8 +15,9 @@ foreach ($statedecalEntries as $decalEntry) {
     $baseName = pathinfo($filename, PATHINFO_FILENAME);
 ?>
     <!-- click is wired up by the shared '.symbolclick, .decalyear' handler in edecal.php, via the rel attribute -->
-    <div id="<?php echo esc_attr($baseName); ?>" class="symbolclick customizeproductimage imgselector" data-id="<?php echo esc_attr($baseName); ?>" rel="<?php echo esc_attr($trigger); ?>">
+    <div id="<?php echo esc_attr($baseName); ?>" class="symbolclick customizeproductimage imgselector" data-id="<?php echo esc_attr($baseName); ?>" data-symbol="<?php echo esc_attr($trigger); ?>" rel="<?php echo esc_attr($trigger); ?>">
         <img src="<?php echo DIR_WS_CATALOG; ?>decals/<?php echo esc_attr($filename); ?>" alt="Decal" />
         <div class="largedecal"><img src="<?php echo DIR_WS_CATALOG; ?>largedecal/<?php echo esc_attr($filename); ?>" alt="Decal"></div>
     </div>
 <?php } ?>
+</div>

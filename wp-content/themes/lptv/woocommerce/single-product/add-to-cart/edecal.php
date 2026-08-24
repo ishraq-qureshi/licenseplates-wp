@@ -1,7 +1,7 @@
 <?php define('DIR_WS_CATALOG', '/wp-content/plugins/lptv-plates/'); ?>
 
 <?php if ($edecal == 'Y'): ?>
-    <div>
+    <div data-decal-type="emission">
         <div class="decalslabel">Emission Test Decal</div>
         <div style="width:60%;">
             <div class="grid grid-cols-5" style=width:100%;>
@@ -92,7 +92,7 @@
 <?php endif; ?>
 
 <?php if ($saftydecal == 'Y'): ?>
-    <div class="mt-4">
+    <div class="mt-4" data-decal-type="safety">
         <div class="decalslabel">Safety Test Decal</div>
         <div style="width:60%;">
             <div class="grid grid-cols-5" style="width:100%;">
@@ -136,23 +136,23 @@
             </div>
 
             <div class="grid grid-cols-5" style="width:100%;border-top: 1px solid #ccc;">
-                <div id="s_decal_2022" class="symbolclick  " rel=":" data-id="2022">
+                <div id="s_decal_2022" class="symbolclick  " rel=";" data-id="2022">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2022.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2022.png" alt="Decal 2022" width="110px" /></div>
                 </div>
-                <div id="s_decal_2023" class="symbolclick  " rel=":" data-id="2023">
+                <div id="s_decal_2023" class="symbolclick  " rel=";" data-id="2023">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2023.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2023.png" alt="Decal 2023" width="110px" /></div>
                 </div>
-                <div id="s_decal_2024" class="symbolclick  " rel=":" data-id="2024">
+                <div id="s_decal_2024" class="symbolclick  " rel=";" data-id="2024">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2024.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2024.png" alt="Decal 2024" width="110px" /></div>
                 </div>
-                <div id="s_decal_2025" class="symbolclick  " rel=":" data-id="2025">
+                <div id="s_decal_2025" class="symbolclick  " rel=";" data-id="2025">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2025.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2025.png" alt="Decal 2025" width="110px" /></div>
                 </div>
-                <div id="s_decal_2026" class="symbolclick  " rel=":" data-id="2026">
+                <div id="s_decal_2026" class="symbolclick  " rel=";" data-id="2026">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2026.png" alt="Decal" style="width: 28px;" />
                     <div class="largedecal"><img src="<?php echo get_template_directory_uri(); ?>/images/decals/s_decal_2026.png" alt="Decal 2026" width="110px" /></div>
                 </div>
@@ -184,21 +184,75 @@
 <script>
     jQuery(function($) {
 
-        $('.symbolclick, .decalyear').click(function() {
-            let symbol = $(this).attr('rel')
-            if (symbol) {
-                appendSymbol(symbol)
+        // Berlin-style products (window.lptvSyncDecalYears, set in lptvplate.php) show one
+        // combined emission+state badge instead of two independent icons - see eecdber.gif.
+        function isSyncMode() {
+            return window.lptvSyncDecalYears === true
+                && $('[data-decal-type="emission"]').length > 0
+                && $('[data-decal-type="state"]').length > 0;
+        }
+
+        function handleSyncClick($el, clickedType) {
+            let $emissionScope = $('[data-decal-type="emission"]');
+            let $stateScope = $('[data-decal-type="state"]');
+            // the state trigger char is data-driven (from _plate_statedecal), never hardcoded
+            let stateSymbol = $stateScope.find('[data-symbol]').first().attr('data-symbol');
+
+            let year;
+            if (clickedType === 'emission') {
+                year = $el.attr('data-id');
+            } else {
+                year = jQuery('#_edecal_year').val()
+                    || $emissionScope.find('.symbolclick').first().attr('data-id');
             }
 
-            let id = $(this).attr('data-id');
-            // mark all such symbols as selected
-            $(`.symbolclick, .decalyear`).removeClass('selected');
+            // insert the STATE trigger char idempotently - never the emission ':' char
+            let plateText = jQuery(`#${lastFocus}`);
+            let v = plateText.val() || '';
+            if (stateSymbol && v.indexOf(stateSymbol) === -1) {
+                plateText.val(v + stateSymbol);
+                plateText.trigger('keyup');
+            }
 
-            $(`.symbolclick[data-id="${id}"]`).addClass('selected');
-            $(`.decalyear[data-id="${id}"]`).addClass('selected');
+            // record the chosen year under the emission field regardless of which
+            // element was clicked - the server reads this for the stacked badge
+            setDecalYear('emission', year);
 
-            setDecalYear(id);
+            $emissionScope.find('.symbolclick, .decalyear').removeClass('selected');
+            $emissionScope.find(`[data-id="${year}"]`).addClass('selected');
+            $stateScope.find('.symbolclick').addClass('selected');
 
+            $(document).trigger('lptv:decalChanged');
+        }
+
+        $('.symbolclick, .decalyear').click(function() {
+            let $el = $(this);
+            let $scope = $el.closest('[data-decal-type]');
+            let type = $scope.attr('data-decal-type') || 'unknown';
+
+            if (isSyncMode() && (type === 'emission' || type === 'state')) {
+                handleSyncClick($el, type);
+                return;
+            }
+
+            let symbol = $el.attr('rel');
+            let year = $el.attr('data-id');
+            if (symbol) {
+                appendSymbol(symbol);
+            }
+
+            // scope the "selected" highlight to this picker's own section only, so the
+            // emission and safety rows (which reuse the same data-id year labels) never
+            // cross-highlight each other
+            $scope.find('.symbolclick, .decalyear').removeClass('selected');
+            $scope.find(`.symbolclick[data-id="${year}"]`).addClass('selected');
+            $scope.find(`.decalyear[data-id="${year}"]`).addClass('selected');
+
+            setDecalYear(type, year);
+
+            // year-only clicks (e.g. clicking a plain "2019" label) don't insert a new
+            // character, so keyup on the text input never fires; fire our own refresh event
+            $(document).trigger('lptv:decalChanged');
         });
 
     });

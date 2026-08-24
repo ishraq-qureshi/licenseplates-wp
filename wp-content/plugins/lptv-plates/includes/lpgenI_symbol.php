@@ -208,6 +208,101 @@ if (!empty($params['statedecal'])) {
 	}
 }
 
+// Emission ':' / Safety ';' decal year -> file resolution. Years 2017-2021 map to fixed
+// largedecal/decalN.png files (mirrors the hardcoded picker markup in edecal.php - there is no
+// other source of truth for this mapping); 2022-2026 map to the theme's per-year PNGs.
+function lptv_resolve_decal_year_file($year, $isEmission)
+{
+	$legacyMap = $isEmission
+		? ['2017' => 'decal2.png', '2018' => 'decal11.png', '2019' => 'decal4.png', '2020' => 'decal5.png', '2021' => 'decal1.png']
+		: ['2017' => 'decal7.png', '2018' => 'decal12.png', '2019' => 'decal9.png', '2020' => 'decal10.png', '2021' => 'decal6.png'];
+
+	if (isset($legacyMap[$year])) {
+		$path = __DIR__ . '/../largedecal/' . $legacyMap[$year];
+		return file_exists($path) ? $path : null;
+	}
+
+	if (in_array($year, ['2022', '2023', '2024', '2025', '2026'], true)) {
+		$prefix = $isEmission ? 'e_decal_' : 's_decal_';
+		$path = get_template_directory() . '/images/decals/' . $prefix . $year . '.png';
+		return file_exists($path) ? $path : null;
+	}
+
+	return null;
+}
+
+// Composites two source PNGs into one transparent-canvas badge: $topFile scaled into the top
+// half, $bottomFile scaled into the bottom half, both horizontally centered. Used only for the
+// Berlin-style "_plate_syncdecalyears=Y" opt-in, so the existing generic drawTextWithDecal()/
+// textContainsDecal() machinery can treat the combined badge as a single ordinary decal file
+// keyed to the state-decal trigger character - no changes needed to that machinery.
+function lptv_build_stacked_decal($topFile, $bottomFile)
+{
+	$top = @imagecreatefrompng($topFile);
+	$bottom = @imagecreatefrompng($bottomFile);
+	if (!$top || !$bottom) {
+		return null;
+	}
+
+	$targetWidth = max(imagesx($top), imagesx($bottom));
+	$topH = (int) round(imagesy($top) * ($targetWidth / imagesx($top)));
+	$bottomH = (int) round(imagesy($bottom) * ($targetWidth / imagesx($bottom)));
+	$canvasH = $topH + $bottomH;
+
+	$canvas = imagecreatetruecolor($targetWidth, $canvasH);
+	imagesavealpha($canvas, true);
+	imagealphablending($canvas, false);
+	$transparent = imagecolorallocatealpha($canvas, 0, 0, 0, 127);
+	imagefilledrectangle($canvas, 0, 0, $targetWidth, $canvasH, $transparent);
+	imagealphablending($canvas, true);
+
+	imagecopyresampled($canvas, $top, 0, 0, 0, 0, $targetWidth, $topH, imagesx($top), imagesy($top));
+	imagecopyresampled($canvas, $bottom, 0, $topH, 0, 0, $targetWidth, $bottomH, imagesx($bottom), imagesy($bottom));
+	imagedestroy($top);
+	imagedestroy($bottom);
+
+	$outPath = __DIR__ . '/images/pngs/test/stacked_' . rand(111111111, 999999999) . '.png';
+	imagepng($canvas, $outPath);
+	imagedestroy($canvas);
+
+	return $outPath;
+}
+
+$edecalYear = isset($_GET['edecal_year']) && $_GET['edecal_year'] !== '' ? wp_unslash($_GET['edecal_year']) : '2017';
+$sdecalYear = isset($_GET['sdecal_year']) && $_GET['sdecal_year'] !== '' ? wp_unslash($_GET['sdecal_year']) : '2017';
+
+$isSyncedProduct = isset($params['syncdecalyears']) && $params['syncdecalyears'] === 'Y';
+
+if ($isSyncedProduct && !empty($params['edecal']) && $params['edecal'] === 'Y' && !empty($params['statedecal'])) {
+	// Berlin-style: one stacked badge (emission on top, state decal on bottom) replaces the
+	// state trigger character's plain decal entry. No ':' entry is added at all - the
+	// client-side sync logic always inserts the state trigger char, never ':', for this product.
+	$stateParts = array_pad(explode(';', trim(explode(',', $params['statedecal'])[0])), 2, '');
+	$stateFilename = strtolower(trim($stateParts[0]));
+	$stateTrigger  = $stateParts[1];
+	$stateFilePath = __DIR__ . '/../largedecal/' . $stateFilename;
+	$emissionFile  = lptv_resolve_decal_year_file($edecalYear, true);
+
+	if ($stateTrigger !== '' && $emissionFile && file_exists($stateFilePath)) {
+		$stackedFile = lptv_build_stacked_decal($emissionFile, $stateFilePath);
+		if ($stackedFile) {
+			$decalMap[$stateTrigger] = $stackedFile;
+		}
+	}
+} elseif (!empty($params['edecal']) && $params['edecal'] === 'Y') {
+	$emissionFile = lptv_resolve_decal_year_file($edecalYear, true);
+	if ($emissionFile) {
+		$decalMap[':'] = $emissionFile;
+	}
+}
+
+if (!empty($params['saftydecal']) && $params['saftydecal'] === 'Y') {
+	$safetyFile = lptv_resolve_decal_year_file($sdecalYear, false);
+	if ($safetyFile) {
+		$decalMap[';'] = $safetyFile;
+	}
+}
+
 $textangle = "0";
 // Build Image Path
 //$pic = strtolower("$imagePath/blank$productId" . ".png");
@@ -227,6 +322,12 @@ try {
 	// semi-transparent decal overlay correctly (GD renders a solid box instead of blending it in).
 	// Convert to true color so decal compositing below works; a no-op if already true color.
 	imagepalettetotruecolor($pic);
+	// Flatten to a fully opaque canvas (the template has no real transparency anywhere).
+	// Without this, GD's imagettftext() anti-aliases glyph edges as semi-transparent pixels
+	// of the pure text color rather than blending them into the background, which shows up
+	// as a white/light halo around characters once the browser composites the PNG.
+	imagealphablending($pic, true);
+	imagesavealpha($pic, false);
 	//die(imagesx($pic).' | '.imagesy($pic));
 } catch (Exception $e) {
 	var_dump($e->getMessage());
@@ -563,7 +664,6 @@ function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $d
 			imagettftext($pic, floor($fontSizePt), $textangle, (int) round($cursorX), $yPos, $fontColor, $font, $run['value']);
 		} else {
 			imagealphablending($pic, true);
-			imagesavealpha($pic, true);
 			imagecopyresampled(
 				$pic,
 				$run['image'],

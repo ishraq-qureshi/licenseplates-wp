@@ -129,14 +129,14 @@ $isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || !empty($statedecal);
                 text2 = '',
                 font_field = '';
 
-            function getUrl(modelId, text1, text2, font = '') {
+            function getUrl(modelId, text1, text2, font = '', edecalYear = '', sdecalYear = '') {
                 function sanitizeText(text) {
                     return text
                         .replace(/>/g, 'TVGTSYMBOL')
                         .replace(/</g, 'TVLTSYMBOL')
                         .replace(/\|/g, 'TVPIPESYMBOL');
                 }
-                
+
                 text1 = sanitizeText(text1);
                 text2 = sanitizeText(text2);
                 let query = {
@@ -144,7 +144,9 @@ $isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || !empty($statedecal);
                     'text1': text1,
                     'text2': text2,
                     'font': font,
-                    'font_choose': '<?= $font_choose ?>'
+                    'font_choose': '<?= $font_choose ?>',
+                    'edecal_year': edecalYear,
+                    'sdecal_year': sdecalYear
                 }
                 let queryString = $.param(query);
                 return '/wp-content/plugins/lptv-plates/includes/lpgenI.php?' + queryString;
@@ -167,8 +169,14 @@ $isDecalsExists = $saftydecal == 'Y' || $edecal == 'Y' || !empty($statedecal);
                 text1 = $($text1Input).val()
                 text2 = $($text2Input).val() || ''
                 font_field = $($fontSelect).val() || ''
-                $($demo).attr('src', getUrl(modelId, text1, text2, font_field));
+                let edecalYear = $('#_edecal_year').val() || ''
+                let sdecalYear = $('#_sdecal_year').val() || ''
+                $($demo).attr('src', getUrl(modelId, text1, text2, font_field, edecalYear, sdecalYear));
             }
+
+            $(document).on('lptv:decalChanged', function() {
+                updateImageSrc();
+            });
 
         })
     </script>
