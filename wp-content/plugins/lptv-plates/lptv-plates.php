@@ -166,7 +166,7 @@ global $fonts, $fields, $extraFields;
 
 $fonts = ['1', '1a', '2', '2a'];
 $fields = ['font', 'minChar', 'maxChar', 'xPos', 'yPos', 'fontSize', 'fontColor'];
-$extraFields = ["symbols", "edecal", "saftydecal", "statedecal", "syncdecalyears", 'products_image', 'products_id', 'products_instructions', 'products_parts', 'options_2'];
+$extraFields = ["symbols", "edecal", "saftydecal", "statedecal", "syncdecalyears", "decaldivider", 'products_image', 'products_id', 'products_instructions', 'products_parts', 'options_2'];
 
 function add_lptvplate_pricing()
 {

@@ -87,7 +87,7 @@ $ctime           = time();
 $query = "SELECT * FROM " . $table_prefix . "_postmeta AS meta
 JOIN " . $table_prefix . "_postmeta AS meta2 ON meta.post_id=meta2.post_id
  WHERE meta.meta_key='_plate_template_id' and meta.meta_value='$productId'";
- 
+
 try {
 	$rows = $mysqli->query($query);
 } catch (Exception $e) {
@@ -119,7 +119,7 @@ if ($_GET['font1']) {
 
 $slug = isset($params['original_uri']) ? $params['original_uri'] : '';
 // do not convert to lowercase for twoline products
-if (stripos($slug, 'twoline') === false && 
+if (stripos($slug, 'twoline') === false &&
     stripos($slug, 'two-line') === false &&
     stripos($slug, 'his-hers') === false &&
     stripos($slug, 'great-britian-euro-e-6198') === false &&
@@ -129,7 +129,7 @@ if (stripos($slug, 'twoline') === false &&
     stripos($slug, 'britainuk-euro-front-2039') === false &&
     stripos($slug, 'great-britain-euro-eec-rexlex-yellow-motorcycle-license-plate-issued-from-january-1-2007-to-present-embossed-with-your-custom-number') === false &&
     stripos($slug, 'two-line-custom-laser-black-license-plate-mirror-gold-text-personalized-just-for-you-or-for-a-great-gift') === false &&
-    stripos($slug, 'great-britain-euro-eec-motorcycle-6804') === false 
+    stripos($slug, 'great-britain-euro-eec-motorcycle-6804') === false
 	) {
     $text2 = strtolower($text2);
 }
@@ -231,15 +231,53 @@ function lptv_resolve_decal_year_file($year, $isEmission)
 	return null;
 }
 
-// Composites two source PNGs into one transparent-canvas badge: $topFile scaled into the top
+// Decal source images (state/emission/safety) are configured per-product as arbitrary
+// filenames and aren't always PNG (e.g. some state decals are .gif/.jpg) - dispatch to the
+// matching GD loader instead of assuming PNG.
+function lptv_load_decal_image($path)
+{
+	$info = @getimagesize($path);
+	if ($info === false) {
+		return false;
+	}
+	switch ($info[2]) {
+		case IMAGETYPE_PNG:
+			$img = @imagecreatefrompng($path);
+			break;
+		case IMAGETYPE_GIF:
+			$img = @imagecreatefromgif($path);
+			break;
+		case IMAGETYPE_JPEG:
+			$img = @imagecreatefromjpeg($path);
+			break;
+		default:
+			return false;
+	}
+	if (!$img) {
+		return false;
+	}
+	// GIFs (and some PNGs) are palette-based with a single transparent color index rather
+	// than a true alpha channel - imagecopyresampled composites that as a solid box instead
+	// of blending it in unless the source is normalized to true alpha first (same fix already
+	// applied to the main plate canvas below).
+	imagepalettetotruecolor($img);
+	imagealphablending($img, false);
+	imagesavealpha($img, true);
+
+	return $img;
+}
+
+// Composites two source images into one transparent-canvas badge: $topFile scaled into the top
 // half, $bottomFile scaled into the bottom half, both horizontally centered. Used only for the
 // Berlin-style "_plate_syncdecalyears=Y" opt-in, so the existing generic drawTextWithDecal()/
 // textContainsDecal() machinery can treat the combined badge as a single ordinary decal file
 // keyed to the state-decal trigger character - no changes needed to that machinery.
-function lptv_build_stacked_decal($topFile, $bottomFile)
+// $drawDivider is opt-in per product (_plate_decaldivider=Y) - only some reference images
+// (e.g. eud00bw.gif) show a seam line between the two decals, others don't.
+function lptv_build_stacked_decal($topFile, $bottomFile, $drawDivider = false)
 {
-	$top = @imagecreatefrompng($topFile);
-	$bottom = @imagecreatefrompng($bottomFile);
+	$top = lptv_load_decal_image($topFile);
+	$bottom = lptv_load_decal_image($bottomFile);
 	if (!$top || !$bottom) {
 		return null;
 	}
@@ -247,7 +285,13 @@ function lptv_build_stacked_decal($topFile, $bottomFile)
 	$targetWidth = max(imagesx($top), imagesx($bottom));
 	$topH = (int) round(imagesy($top) * ($targetWidth / imagesx($top)));
 	$bottomH = (int) round(imagesy($bottom) * ($targetWidth / imagesx($bottom)));
-	$canvasH = $topH + $bottomH;
+
+	// divider line + a little breathing room above/below it, so it doesn't sit flush against
+	// either decal - opt-in only, see $drawDivider above. Products without a divider keep the
+	// two decals touching directly, matching their own reference images (e.g. eecdber.gif).
+	$lineThickness = $drawDivider ? 25 : 0;
+	$gap = $drawDivider ? 8 : 0;
+	$canvasH = $topH + $gap + $lineThickness + $gap + $bottomH;
 
 	$canvas = imagecreatetruecolor($targetWidth, $canvasH);
 	imagesavealpha($canvas, true);
@@ -257,9 +301,14 @@ function lptv_build_stacked_decal($topFile, $bottomFile)
 	imagealphablending($canvas, true);
 
 	imagecopyresampled($canvas, $top, 0, 0, 0, 0, $targetWidth, $topH, imagesx($top), imagesy($top));
-	imagecopyresampled($canvas, $bottom, 0, $topH, 0, 0, $targetWidth, $bottomH, imagesx($bottom), imagesy($bottom));
+	imagecopyresampled($canvas, $bottom, 0, $topH + $gap + $lineThickness + $gap, 0, 0, $targetWidth, $bottomH, imagesx($bottom), imagesy($bottom));
 	imagedestroy($top);
 	imagedestroy($bottom);
+
+	if ($drawDivider) {
+		$lineColor = imagecolorallocate($canvas, 0, 0, 0);
+		imagefilledrectangle($canvas, 0, $topH + $gap, $targetWidth - 1, $topH + $gap + $lineThickness - 1, $lineColor);
+	}
 
 	$outPath = __DIR__ . '/images/pngs/test/stacked_' . rand(111111111, 999999999) . '.png';
 	imagepng($canvas, $outPath);
@@ -284,7 +333,8 @@ if ($isSyncedProduct && !empty($params['edecal']) && $params['edecal'] === 'Y' &
 	$emissionFile  = lptv_resolve_decal_year_file($edecalYear, true);
 
 	if ($stateTrigger !== '' && $emissionFile && file_exists($stateFilePath)) {
-		$stackedFile = lptv_build_stacked_decal($emissionFile, $stateFilePath);
+		$drawDivider = isset($params['decaldivider']) && $params['decaldivider'] === 'Y';
+		$stackedFile = lptv_build_stacked_decal($emissionFile, $stateFilePath, $drawDivider);
 		if ($stackedFile) {
 			$decalMap[$stateTrigger] = $stackedFile;
 		}
@@ -517,7 +567,7 @@ function createImg($font, $fontColor, $fontSize, $xPos, $yPos, $text)
 	// Build Font Path
 		// Build Font Path
 	$font = $fontPath . $font . ".ttf";
-	
+
 	// check if font file exists
 	if (!file_exists($font)) {
 
@@ -645,7 +695,7 @@ function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $d
 			$measured[] = ['type' => 'text', 'value' => $run['value'], 'width' => $width];
 			$totalWidth += $width;
 		} else {
-			$decalImg = @imagecreatefrompng($run['value']);
+			$decalImg = lptv_load_decal_image($run['value']);
 			if (!$decalImg) {
 				continue;
 			}
@@ -697,9 +747,9 @@ function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $d
 // 	// Build Font Path
 // 		// Build Font Path
 
-    
+
 //     $font = $fontPath . $font . ".ttf";
-    
+
 //     if (!file_exists($font)) {
 //         // try strtolower case
 //         $font = strtolower($font);
@@ -727,20 +777,20 @@ function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $d
 //     $start_y = $yPos;
 //     //die($pic.' | '.ceil($fontSize).' | '.$textangle.' | '.$start_x.' | '.$start_y.' | '.$fontColor.' | '.$font.' | '.$text);
 // 	// write text to Image
-    
 
 
-    
+
+
 //     $segments = explode('-', $text);
-    
+
 //     if (count($segments) == 1) {
-        
+
 //         $result = imagettftext($pic, floor($fontSize), $textangle, $start_x, $start_y, $fontColor, $font, "$text");
 //         if ($result === false) {
 //             error_log("lpgenI_symbol.php: imagettftext failed for font: $font, text: $text");
 //         }
 //     } else {
-        
+
 //         $totalWidth = 0;
 //         $partWidths = [];
 //         $hyphenWidth = floor($fontSize * 0.25);
@@ -771,10 +821,10 @@ function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $d
 //             }
 //         }
 //     }
-    
 
 
-    
+
+
 //     $imgname = rand('111111111', '999999999');
 
 //     $orderpath = "./images/pngs/test/new_" . $imgname . ".png";
