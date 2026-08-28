@@ -810,6 +810,9 @@ add_filter('woocommerce_cart_item_name', 'lptv_cart_item_name', 10, 3);
 // include admin custom order
 require_once 'includes/admin-custom-order.php';
 
+// include manual order entry (non-catalog line items)
+require_once 'includes/manual-order-entry.php';
+
 // include admin update images tool
 require_once 'admin-update-images.php';
 
