@@ -32,9 +32,22 @@ add_filter('template_include', function ($template) {
     return plugin_dir_path(__FILE__) . '../templates/manual-order-entry-page.php';
 });
 
-// Add the admin-only "Manual Order Entry" link to the header nav
+// Add the admin-only "Manual Order Entry" link to the header nav.
+// The visible desktop nav is rendered via the [menu name="menu"] shortcode
+// (wp-content/themes/lptv/includes/theme-functions.php:560-564, used in the
+// "Header" section, post ID 541), which calls wp_nav_menu() by menu slug with
+// no theme_location - the off-canvas mobile menu (nav.php) is the only one
+// using theme_location "menu-3". Both render the same underlying nav menu
+// (slug "menu"), so resolve $args->menu to its term to match either call.
 add_filter('wp_nav_menu_objects', function ($items, $args) {
-    if ($args->theme_location !== 'menu-3' || !current_user_can('manage_woocommerce')) {
+    $is_target_menu = $args->theme_location === 'menu-3';
+
+    if (!$is_target_menu && $args->menu) {
+        $menu_obj = wp_get_nav_menu_object($args->menu);
+        $is_target_menu = $menu_obj && 'menu' === $menu_obj->slug;
+    }
+
+    if (!$is_target_menu || !current_user_can('manage_woocommerce')) {
         return $items;
     }
 
