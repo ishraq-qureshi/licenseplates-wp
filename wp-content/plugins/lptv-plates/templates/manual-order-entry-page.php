@@ -4,39 +4,64 @@ if (!defined('ABSPATH')) exit;
 
 get_header();
 ?>
+<?php
+// Get the Single Post Banner from the Customizer
+$single_post_banner = get_theme_mod( 'lptv_single_post_banner' );
 
-<div class="lptv-manual-order-entry-page" style="max-width:700px;margin:40px auto;padding:0 20px;">
-    <h1>Manual Order Entry</h1>
+// Display the Single Post Banner with the [page-title] shortcode
+if ( $single_post_banner ) {
+    echo '<div class="singleBanner innerBnner" style="background-image: url(' . esc_url( $single_post_banner ) . ');">';
+        echo '<div class="container"><div class="positionBox">';
+            echo '<h2 class="title">' . do_shortcode('[pagetitle]') . '</h2>';
+            echo do_shortcode('[post type="content" id="1599"]');
+        echo '</div></div>';
+    echo '</div>';
+} else {
+    echo '<div class="singleBanner-default">';
+    echo '<div class="container"><div class="positionBox">';
+        echo '<h2 class="title">' . do_shortcode('[pagetitle]') . '</h2>';
+        echo do_shortcode('[post type="content" id="1599"]');
+    echo '</div></div>';
+    echo '</div>';
+}
+?>
+<div class="lptv-manual-order-entry-page" style="max-width:1065px;margin:40px auto;padding:0 20px;">
+    <!-- <h1>Manual Order Entry</h1> -->
 
     <div id="lptv-moe-message" style="display:none;margin-bottom:20px;padding:12px 15px;border-radius:4px;"></div>
 
     <div class="lptv-moe-field">
         <label for="lptv_moe_description"><strong>Description:</strong></label><br>
-        <textarea id="lptv_moe_description" rows="5" style="width:100%;margin-top:8px;"></textarea>
+    <textarea id="lptv_moe_description" rows="6" style="width:100%;margin-top:8px;"></textarea>
     </div>
 
-    <div class="lptv-moe-field" style="margin-top:20px;display:flex;align-items:flex-end;gap:30px;flex-wrap:wrap;">
-        <div>
+    <div class="lptv-moe-field" style="display:flex;align-items:flex-end;gap:30px;flex-wrap:wrap;">
+        <div class="price-field-container">
             <label for="lptv_moe_price"><strong>Enter Cost/Unit:</strong></label><br>
             <div style="display:flex;align-items:center;margin-top:8px;">
-                <span style="margin-right:5px;">$</span>
-                <input type="number" id="lptv_moe_price" min="0" step="0.01" value="0.00" style="width:120px;">
+                <div class="input-container">
+                    <span style="margin-right:5px;">$</span>
+                    <input type="number" id="lptv_moe_price" min="0" step="0.01" placeholder="0.00" style="width:120px;">
+                </div>
             </div>
         </div>
-
-        <div>
-            <label><strong>Quantity:</strong></label><br>
-            <div style="display:flex;align-items:center;margin-top:8px;">
+        <div class="quantity-field-container">
+            <br>
+            <div class="btn-container" style="display:flex;align-items:center;">
                 <button type="button" id="lptv_moe_qty_minus" class="button">&minus;</button>
                 <input type="number" id="lptv_moe_qty" min="1" step="1" value="1" style="width:60px;text-align:center;margin:0 5px;">
                 <button type="button" id="lptv_moe_qty_plus" class="button">+</button>
             </div>
         </div>
-
-        <div style="margin-left:auto;">
+        <div style="margin-left:auto;" class="add-to-cart-container">
             <button type="button" id="lptv_moe_add_to_cart" class="button alt">Add to Cart</button>
         </div>
     </div>
+</div>
+
+<!-- Builder Content -->
+<div class="lptv-manual-order-entry-builder-content">
+    <?php the_content(); ?>
 </div>
 
 <script>
