@@ -320,6 +320,16 @@ function lptv_build_stacked_decal($topFile, $bottomFile, $drawDivider = false)
 $edecalYear = isset($_GET['edecal_year']) && $_GET['edecal_year'] !== '' ? wp_unslash($_GET['edecal_year']) : '2017';
 $sdecalYear = isset($_GET['sdecal_year']) && $_GET['sdecal_year'] !== '' ? wp_unslash($_GET['sdecal_year']) : '2017';
 
+// per-product override for decal size relative to the auto-computed (text-height-matched)
+// size - some decal source images (e.g. d2.png) don't visually match their reference image
+// at the default 1:1 scale. Defaults to no change.
+$decalScale = !empty($params['decalscale']) && is_numeric($params['decalscale']) ? (float) $params['decalscale'] : 1.0;
+
+// per-product manual horizontal nudge (pixels) on top of the auto-centering in
+// drawTextWithDecal() - for final visual tuning once the automatic layout is close but not
+// exact. Defaults to no change.
+$decalOffsetX = !empty($params['decaloffsetx']) && is_numeric($params['decaloffsetx']) ? (float) $params['decaloffsetx'] : 0.0;
+
 $isSyncedProduct = isset($params['syncdecalyears']) && $params['syncdecalyears'] === 'Y';
 
 if ($isSyncedProduct && !empty($params['edecal']) && $params['edecal'] === 'Y' && !empty($params['statedecal'])) {
@@ -453,13 +463,13 @@ if ($type == 0) {
 		$text = $text1;
 		if (strlen($text1) <= $minChar1) { // use large font
 			if (textContainsDecal($text, $decalMap)) {
-				drawTextWithDecal($font1a, $fontColor1a, $fontSize1a, $xPos1, $yPos1, $text, $decalMap);
+				drawTextWithDecal($font1a, $fontColor1a, $fontSize1a, $xPos1, $yPos1, $text, $decalMap, $decalScale, $decalOffsetX);
 			} else {
 				createImg($font1a, $fontColor1a, $fontSize1a, $xPos1, $yPos1, $text);
 			}
 		} else { // use small font
 			if (textContainsDecal($text, $decalMap)) {
-				drawTextWithDecal($font1, $fontColor1, $fontSize1, $xPos1, $yPos1, $text, $decalMap);
+				drawTextWithDecal($font1, $fontColor1, $fontSize1, $xPos1, $yPos1, $text, $decalMap, $decalScale, $decalOffsetX);
 			} else {
 				createImg($font1, $fontColor1, $fontSize1, $xPos1, $yPos1, $text);
 			}
@@ -473,13 +483,13 @@ if ($type == 0) {
 		if (strlen($text2) <= $minChar2) { // use large font
 
 			if (textContainsDecal($text, $decalMap)) {
-				drawTextWithDecal($font2a, $fontColor2a, $fontSize2a, $xPos2, $yPos2, $text, $decalMap);
+				drawTextWithDecal($font2a, $fontColor2a, $fontSize2a, $xPos2, $yPos2, $text, $decalMap, $decalScale, $decalOffsetX);
 			} else {
 				createImg($font2a, $fontColor2a, $fontSize2a, $xPos2, $yPos2, $text);
 			}
 		} else { // use small font
 			if (textContainsDecal($text, $decalMap)) {
-				drawTextWithDecal($font2, $fontColor2, $fontSize2, $xPos2, $yPos2, $text, $decalMap);
+				drawTextWithDecal($font2, $fontColor2, $fontSize2, $xPos2, $yPos2, $text, $decalMap, $decalScale, $decalOffsetX);
 			} else {
 				createImg($font2, $fontColor2, $fontSize2, $xPos2, $yPos2, $text);
 			}
@@ -635,7 +645,7 @@ function textContainsDecal($text, $decalMap)
 // plain-text/decal runs and draws them left-to-right, centered as a whole around $xPos, so a
 // configured decal image (e.g. a state coat-of-arms) renders inline instead of the character
 // being drawn as an (undefined) glyph via imagettftext.
-function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $decalMap)
+function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $decalMap, $decalScale = 1.0, $offsetX = 0)
 {
 	global $pic, $fontPath;
 	$textangle = "0";
@@ -699,7 +709,7 @@ function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $d
 			if (!$decalImg) {
 				continue;
 			}
-			$scale = $referenceHeight > 0 ? $referenceHeight / imagesy($decalImg) : 1;
+			$scale = ($referenceHeight > 0 ? $referenceHeight / imagesy($decalImg) : 1) * $decalScale;
 			$width  = (int) round(imagesx($decalImg) * $scale);
 			$height = (int) round(imagesy($decalImg) * $scale);
 			$measured[] = ['type' => 'decal', 'image' => $decalImg, 'width' => $width, 'height' => $height];
@@ -708,7 +718,22 @@ function drawTextWithDecal($font, $fontColor, $fontSize, $xPos, $yPos, $text, $d
 	}
 	$totalWidth += max(0, count($measured) - 1) * $gap;
 
+	// A run containing large decal images (their real source size, not a single character's
+	// width) can be much wider than the plain text this product's $xPos was originally tuned
+	// for. If centering on $xPos would run the whole thing off the canvas, re-center it within
+	// the full canvas width instead - merely clamping to the nearest edge (a prior version of
+	// this fix) just pins it against that edge with a large empty gap on the other side, which
+	// looks just as wrong as the original overflow.
 	$cursorX = $xPos - $totalWidth / 2.0;
+	$canvasWidth = imagesx($pic);
+	$edgeMargin = 5;
+	$minCursorX = $edgeMargin;
+	$maxCursorX = $canvasWidth - $edgeMargin - $totalWidth;
+	if ($maxCursorX >= $minCursorX && ($cursorX < $minCursorX || $cursorX > $maxCursorX)) {
+		$cursorX = ($canvasWidth - $totalWidth) / 2.0;
+	}
+	// per-product manual nudge on top of the auto-centering above, for final visual tuning
+	$cursorX += $offsetX;
 	foreach ($measured as $run) {
 		if ($run['type'] === 'text') {
 			imagettftext($pic, floor($fontSizePt), $textangle, (int) round($cursorX), $yPos, $fontColor, $font, $run['value']);
